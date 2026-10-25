@@ -1,0 +1,33 @@
+[
+  {
+    "file": "protomotions-installation.rst",
+    "url": "https://raw.githubusercontent.com/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/docs/source/getting_started/installation.rst",
+    "sha256": "fddcef93803962df57153937d07286f96d3da3183b23c5ef95106ce887666091"
+  },
+  {
+    "file": "isaaclab-pyproject.toml",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/pyproject.toml",
+    "sha256": "6b398f8c45f6b78f5e79af2c3b24089ef2aed4dac35a64bd2458dd6db69a0657"
+  },
+  {
+    "file": "isaaclab-uv.lock",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/uv.lock",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "mixar-release.json",
+    "url": "https://api.github.com/repos/Mixar-AI/mixar-app/releases/tags/v4.3.5",
+    "sha256": "903e77d514e08dbc68d15cb35b9246cf70c9c9484b319502a1cf3475da9e589e"
+  },
+  {
+    "file": "uv-release.json",
+    "url": "https://api.github.com/repos/astral-sh/uv/releases/tags/0.11.32",
+    "error": "Remote end closed connection without response"
+  },
+  {
+    "file": "uv-release.json",
+    "url": "https://api.github.com/repos/astral-sh/uv/releases/tags/0.11.32",
+    "sha256": "46950233a631b3aaccef16d952bf124d39cb4c5c531d57ec1f1f9f14cc9a0a28",
+    "note": "Successful retry; earlier failure retained above"
+  }
+]

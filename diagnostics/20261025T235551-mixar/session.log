@@ -1,0 +1,135 @@
+00:00.731  render           | Saved: '/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone0/mixar-20261025T235551/mixar-preview.png'
+[agent_bubble] registered MIXAR_OT_agent_bubble_drag_history
+[agent_bubble] registered MIXAR_OT_agent_bubble_open_window
+[agent_bubble] registered MIXAR_OT_bubble_close
+[agent_bubble] registered MIXAR_OT_bubble_restore_user
+[agent_bubble] registered MIXAR_OT_bubble_toggle_minimise
+[agent_bubble] registered MIXAR_OT_bubble_toggle_expand_tracked
+[agent_bubble] registered MIXAR_OT_bubble_block_context_menu
+[agent_bubble] registered MIXAR_OT_bubble_header_drag
+[agent_bubble] registered MIXIE_CHAT_UL_history
+[agent_bubble] registered MIXIE_CHAT_MT_agent_bubble
+[agent_bubble] registered MIXIE_CHAT_MT_scene_tabs
+[agent_bubble] registered MIXIE_CHAT_MT_send_to_scene_tab
+[agent_bubble] registered AGENT_BUBBLE_HT_header
+[agent_bubble] registered AGENT_BUBBLE_PT_footer
+[agent_bubble] registered AGENT_BUBBLE_PT_history
+register_class(...):
+Info: Registering menu class: 'WM_MT_splash', bl_idname 'WM_MT_splash' has been registered before, unregistering previous
+register_class(...):
+Info: Registering menu class: 'WM_MT_splash_quick_setup', bl_idname 'WM_MT_splash_quick_setup' has been registered before, unregistering previous
+Info: Saved as "milestone0.blend"
+STUDIO_MIXAR_CREATE_PASSED
+Blender 4.3.5 (hash unknown built 2026-10-22 15:38:05)
+
+Blender quit
+00:00.307  blend            | Read mixar: "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone0/mixar-20261025T235551/milestone0.blend"
+[agent_bubble] registered MIXAR_OT_agent_bubble_drag_history
+[agent_bubble] registered MIXAR_OT_agent_bubble_open_window
+[agent_bubble] registered MIXAR_OT_bubble_close
+[agent_bubble] registered MIXAR_OT_bubble_restore_user
+[agent_bubble] registered MIXAR_OT_bubble_toggle_minimise
+[agent_bubble] registered MIXAR_OT_bubble_toggle_expand_tracked
+[agent_bubble] registered MIXAR_OT_bubble_block_context_menu
+[agent_bubble] registered MIXAR_OT_bubble_header_drag
+[agent_bubble] registered MIXIE_CHAT_UL_history
+[agent_bubble] registered MIXIE_CHAT_MT_agent_bubble
+[agent_bubble] registered MIXIE_CHAT_MT_scene_tabs
+[agent_bubble] registered MIXIE_CHAT_MT_send_to_scene_tab
+[agent_bubble] registered AGENT_BUBBLE_HT_header
+[agent_bubble] registered AGENT_BUBBLE_PT_footer
+[agent_bubble] registered AGENT_BUBBLE_PT_history
+register_class(...):
+Info: Registering menu class: 'WM_MT_splash', bl_idname 'WM_MT_splash' has been registered before, unregistering previous
+register_class(...):
+Info: Registering menu class: 'WM_MT_splash_quick_setup', bl_idname 'WM_MT_splash_quick_setup' has been registered before, unregistering previous
+STUDIO_MIXAR_REOPEN_PASSED
+Blender 4.3.5 (hash unknown built 2026-10-22 15:38:05)
+
+Blender quit
+Opening in existing browser session.
+[1:1:0100/000000.514502:ERROR:content/zygote/zygote_main_linux.cc:197] Failed sending zygote boot message: Broken pipe (32)
+[27911:27911:0100/000000.514558:ERROR:content/zygote/zygote_linux.cc:662] write: Broken pipe (32)
+00:00.584  undo.tabs        | WARNING undo push with no context scene: tagged with the shown tab 'Scene'
+00:00.585  blend            | Read mixar: "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone0/mixar-20261025T235551/milestone0.blend"
+00:00.591  undo.tabs        | WARNING undo push with no context scene: tagged with the shown tab 'Scene'
+[agent_bubble] registered MIXAR_OT_agent_bubble_drag_history
+[agent_bubble] registered MIXAR_OT_agent_bubble_open_window
+[agent_bubble] registered MIXAR_OT_bubble_close
+[agent_bubble] registered MIXAR_OT_bubble_restore_user
+[agent_bubble] registered MIXAR_OT_bubble_toggle_minimise
+[agent_bubble] registered MIXAR_OT_bubble_toggle_expand_tracked
+[agent_bubble] registered MIXAR_OT_bubble_block_context_menu
+[agent_bubble] registered MIXAR_OT_bubble_header_drag
+[agent_bubble] registered MIXIE_CHAT_UL_history
+[agent_bubble] registered MIXIE_CHAT_MT_agent_bubble
+[agent_bubble] registered MIXIE_CHAT_MT_scene_tabs
+[agent_bubble] registered MIXIE_CHAT_MT_send_to_scene_tab
+[agent_bubble] registered AGENT_BUBBLE_HT_header
+[agent_bubble] registered AGENT_BUBBLE_PT_footer
+[agent_bubble] registered AGENT_BUBBLE_PT_history
+register_class(...):
+Info: Registering menu class: 'WM_MT_splash', bl_idname 'WM_MT_splash' has been registered before, unregistering previous
+register_class(...):
+Info: Registering menu class: 'WM_MT_splash_quick_setup', bl_idname 'WM_MT_splash_quick_setup' has been registered before, unregistering previous
+STUDIO_MIXAR_DESKTOP_PASSED
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:235
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:235
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:235
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:235
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:235
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+/home/vincent/Repos/DigitalHumanStudio/.runtime/mixar/Mixar-4.3.5-linux-x86_64/5.2/scripts/mixar/modules/workflow/ui/headers/zen_scene_controls.py:184
+00:05.607  blend            | Saved session recovery to "/tmp/quit.blend"
+00:05.607  blend            | Writing user preferences: "/home/vincent/.config/mixar/5.2/config/mixar_userpref.blend" 
+00:05.608  reports          | Preferences saved
+Auth server listening on http://127.0.0.1:51731/
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.director_enter'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.director_enter'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.director_enter'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.director_enter'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.director_enter'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+UILayout.operator(): unknown operator 'mixar.zen_toggle_guides'
+register_class(...):
+Warning: 'TDAddonUVPanel' does not contain '_PT_' with prefix and suffix
+[TD Prefs] No preferences file found at /home/vincent/.config/mixar/5.2/config/texel_density/preferences.json
+register_class(...):
+Info: Registering operator class: 'MIXIE_OT_lookdev360_upload_reference', bl_idname 'mixie.lookdev360_upload_reference' has been registered before, unregistering previous
+register_class(...):
+Info: Registering operator class: 'MIXIE_OT_lookdev360_remove_reference', bl_idname 'mixie.lookdev360_remove_reference' has been registered before, unregistering previous
+register_class(...):
+Info: Registering operator class: 'MIXIE_OT_lookdev360_pick_style_image', bl_idname 'mixie.lookdev360_pick_style_image' has been registered before, unregistering previous
+register_class(...):
+Info: Registering operator class: 'MIXIE_OT_lookdev360_restore_materials', bl_idname 'mixie.lookdev360_restore_materials' has been registered before, unregistering previous
+register_class(...):
+Info: Registering operator class: 'MIXIE_OT_lookdev360_restore', bl_idname 'mixie.lookdev360_restore' has been registered before, unregistering previous
+
+Blender quit
+Mixar save, render, reopen, and desktop checks passed. Evidence: /home/vincent/Repos/DigitalHumanStudio/diagnostics/20261025T235551-mixar

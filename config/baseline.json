@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "requested_not_validated",
+  "container_userspace": "Ubuntu 24.04",
+  "python": "3.12",
+  "isaac_sim": {
+    "version": "6.0.0",
+    "image": "nvcr.io/nvidia/isaac-sim:6.0.0",
+    "digest": null
+  },
+  "isaac_lab": {
+    "repository": "https://github.com/isaac-sim/IsaacLab.git",
+    "revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8"
+  },
+  "protomotions": {
+    "repository": "https://github.com/NVlabs/ProtoMotions.git",
+    "revision": "f69fdcaabff31846b4d2247207417b57dc788828"
+  },
+  "mixar": {
+    "version": "4.3.5",
+    "url": "https://github.com/Mixar-AI/mixar-app/releases/download/v4.3.5/Mixar-4.3.5-linux-x86_64.tar.xz",
+    "sha256": "65230d853e41469270fa2aaf17096f66cac0d754f9f8653ff436e1482a5bdc7c",
+    "status": "installed_smoke_passed",
+    "evidence": "diagnostics/20261025T235551-mixar"
+  },
+  "soma_x": {
+    "version": "0.3.4",
+    "status": "not_downloaded_mapping_deferred_to_milestone_1"
+  },
+  "resolved_package_lock": null,
+  "uv": {
+    "version": "0.11.32",
+    "sha256": "aab924fd522efd06f1c5f3b93a243864fc453132c94b2dc49f1371b528a4b967",
+    "url": "https://github.com/astral-sh/uv/releases/download/0.11.32/uv-x86_64-unknown-linux-gnu.tar.gz",
+    "status": "installed_project_local"
+  },
+  "python_local": {
+    "version": "3.12.13",
+    "path": ".runtime/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12",
+    "installer": "uv 0.11.32",
+    "executable_sha256": "7d43f6e86a6c6dd12005ec77eb2055f1be3f1bb3adedf8afe0a87973fa7371ce"
+  }
+}
