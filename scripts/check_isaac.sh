@@ -44,13 +44,21 @@ for attempt in 1 2; do
     if [[ $result -ne 0 ]]; then
         "$docker_cmd" stop --time 20 "$container_name" || true
     fi
+    logs_copied=true
     "$docker_cmd" cp "$container_name:/isaac-sim/.nvidia-omniverse/logs" \
-        "$evidence/kit-logs-$attempt" || true
+        "$evidence/kit-logs-$attempt" || logs_copied=false
     "$docker_cmd" inspect "$container_name" > "$evidence/container-$attempt.json"
-    "$docker_cmd" rm "$container_name"
     if [[ $result -ne 0 ]] || ! grep -q 'System checking result: PASSED' "$evidence/check-$attempt.log"; then
+        printf '%s\n' "$container_name" > "$evidence/retained-container.txt"
         echo 'STOP: Isaac compatibility was not established. Preserve diagnostics and review before further setup.'
+        echo "Retained container: $container_name"
         exit 4
     fi
+    if [[ "$logs_copied" != true ]]; then
+        printf '%s\n' "$container_name" > "$evidence/retained-container.txt"
+        echo "STOP: checker passed but Kit logs could not be copied; retained container: $container_name"
+        exit 5
+    fi
+    "$docker_cmd" rm "$container_name"
 done
 echo 'Official checker passed twice. Physics, rendered image, and pinned learning-stack checks remain required.'

@@ -29,3 +29,11 @@ User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics
 - Validated shell syntax, Python compilation, source manifest checksums, and project-source Git whitespace. Unmodified upstream snapshots and raw logs retain their original trailing whitespace. Initial Git history uses an explicit bootstrap identity because no user identity was configured.
 
 Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. After host tooling is installed, run the official Isaac checker before building the pinned learning runtime. Stop on compatibility failure. Do not start Milestone 1. No OS, NVIDIA driver, security-policy, or architecture change has been made.
+
+## 2026-10-25 — First continuation / prerequisite recheck
+
+- Previous turn made progress: created committed documentation and diagnostics, installed local tools, and passed Mixar checks.
+- Rechecked authoritative machine state: Docker and `nvidia-ctk` remain absent; `sudo -n true` still requires interactive authentication; no root package installer or Docker daemon was observed running.
+- Fixed the Isaac launcher's diagnostic preservation: unsuccessful checker runs retain their stopped container; a log-copy failure also retains it and stops the launcher. Only successful checks with copied logs remove the container.
+- Exercised checker failure, log-copy failure, and success with an isolated mock Docker command; verified exit codes 4/5/0 and preservation/removal behavior. Shell syntax and whitespace checks passed. These tests do not establish Isaac compatibility.
+- The same authentication prerequisite remains outstanding. Milestone 0 stays incomplete and Isaac remains untested.

@@ -46,6 +46,8 @@ Then capture `python3 scripts/inspect_host.py` and run `scripts/check_isaac.sh`.
 
 After a checker pass, remaining work is to establish the pinned Isaac Lab/ProtoMotions environment using its documented `uv sync --extra isaacsim` procedure inside Ubuntu 24.04, record the resolved lock and image digest, and run physics/render/startup/shutdown/restart checks in that final environment. Use explicit PhysX configuration where required by ProtoMotions; do not infer that a default backend proves the requested physics stack.
 
+The checker launcher retains failed containers and records their names in `retained-container.txt`. It also stops and retains the container if copying Kit logs fails, even when the checker reports PASS. Failure preservation was verified using an isolated mock Docker command; real container behavior still requires validation after installation.
+
 ## Installed local tooling and passed authoring checks
 
 `python3 scripts/install_local_tools.py` verifies the published SHA-256 hashes and installs Mixar 4.3.5 and uv 0.11.32 below `.runtime/`. uv installed CPython 3.12.13 in `.runtime/python/`; system Python remains 3.14.4. Repeating the installer successfully reused the verified archives and existing Python. Exact archive hashes and local Python binary hash are in the configuration records.
