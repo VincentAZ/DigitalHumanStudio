@@ -37,3 +37,10 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Fixed the Isaac launcher's diagnostic preservation: unsuccessful checker runs retain their stopped container; a log-copy failure also retains it and stops the launcher. Only successful checks with copied logs remove the container.
 - Exercised checker failure, log-copy failure, and success with an isolated mock Docker command; verified exit codes 4/5/0 and preservation/removal behavior. Shell syntax and whitespace checks passed. These tests do not establish Isaac compatibility.
 - The same authentication prerequisite remains outstanding. Milestone 0 stays incomplete and Isaac remains untested.
+
+## 2026-10-25 — Second continuation / blocked audit
+
+- Previous turn made progress by correcting and testing diagnostic preservation.
+- Rechecked the machine: Docker and NVIDIA Container Toolkit are still absent, noninteractive sudo still requires authentication, and no host installer or Docker daemon was observed running.
+- The same prerequisite has blocked three consecutive goal turns. Further runtime validation requires the user's local authenticated bootstrap step. Goal marked blocked; Milestone 0 remains incomplete, not failed on compatibility grounds.
+- Resume after `sudo bash scripts/install_host_tools.sh` completes. Preserve the current stack and host OS; run the Isaac compatibility gate next.
