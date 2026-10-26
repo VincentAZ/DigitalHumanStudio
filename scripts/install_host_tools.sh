@@ -18,7 +18,7 @@ fi
 apt-get update
 apt-get install -y --no-install-recommends --no-remove \
     docker.io=29.1.3-0ubuntu4.1 git-lfs=3.7.1-1 \
-    vulkan-tools=1.4.341.0+dfsg1-1 ca-certificates curl gnupg
+    vulkan-tools=1.4.341.0+dfsg1-1 util-linux-extra ca-certificates curl gnupg
 temp_dir=$(mktemp -d)
 trap 'rm -rf "$temp_dir"' EXIT
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey -o "$temp_dir/nvidia.asc"

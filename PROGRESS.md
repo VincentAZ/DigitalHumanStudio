@@ -8,7 +8,7 @@ User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| 0 — Reproducible runtime | Incomplete; prerequisite authentication needed | Host diagnostics and Mixar checks passed; Isaac not yet tested |
+| 0 — Reproducible runtime | Incomplete; Docker installed, session group refresh pending | Host diagnostics and Mixar checks passed; Isaac not yet tested |
 | 1 — Physical human baseline | Not started | Not authorized in current scope |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
@@ -44,3 +44,11 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Rechecked the machine: Docker and NVIDIA Container Toolkit are still absent, noninteractive sudo still requires authentication, and no host installer or Docker daemon was observed running.
 - The same prerequisite has blocked three consecutive goal turns. Further runtime validation requires the user's local authenticated bootstrap step. Goal marked blocked; Milestone 0 remains incomplete, not failed on compatibility grounds.
 - Resume after `sudo bash scripts/install_host_tools.sh` completes. Preserve the current stack and host OS; run the Isaac compatibility gate next.
+
+## 2026-10-26 UTC — User completed host bootstrap
+
+- Verified Docker 29.1.3 and NVIDIA Container Toolkit 1.20.1 packages, Git LFS, and Vulkan tools. Docker service is active and its configuration registers the NVIDIA runtime.
+- The user's account now belongs to `docker`, but the existing agent process retains its old groups. The wrapper's `sg` dependency is absent on this Ubuntu installation; corrected the bootstrap to include `util-linux-extra`, and requested that one-package repair from the user. No repeat installation of Docker is needed.
+- Fresh host and package/group/configuration evidence: `diagnostics/20261026T012503.739621Z/`.
+- Fetched detached source checkouts at both requested revisions into ignored `vendor/IsaacLab` and `vendor/ProtoMotions`. LFS smudging was disabled during fetch; these are source checkouts only, not installed environments or downloaded model assets.
+- Isaac remains untested until this session can access Docker. Continue with `scripts/check_isaac.sh` once `sg` is installed.

@@ -1,0 +1,65 @@
+{
+  "packages": {
+    "command": [
+      "dpkg-query",
+      "-W",
+      "docker.io",
+      "git-lfs",
+      "vulkan-tools",
+      "nvidia-container-toolkit",
+      "nvidia-container-toolkit-base",
+      "libnvidia-container-tools",
+      "libnvidia-container1",
+      "util-linux-extra"
+    ],
+    "exit_code": 0,
+    "stdout": "docker.io\t29.1.3-0ubuntu4.1\ngit-lfs\t3.7.1-1\nlibnvidia-container-tools\t1.20.1-1\nlibnvidia-container1:amd64\t1.20.1-1\nnvidia-container-toolkit\t1.20.1-1\nnvidia-container-toolkit-base\t1.20.1-1\nutil-linux-extra\t\nvulkan-tools\t1.4.341.0+dfsg1-1\n",
+    "stderr": ""
+  },
+  "docker_service": {
+    "command": [
+      "systemctl",
+      "is-active",
+      "docker"
+    ],
+    "exit_code": 0,
+    "stdout": "active\n",
+    "stderr": ""
+  },
+  "docker_runtime": {
+    "command": [
+      "cat",
+      "/etc/docker/daemon.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n    \"runtimes\": {\n        \"nvidia\": {\n            \"args\": [],\n            \"path\": \"nvidia-container-runtime\"\n        }\n    }\n}",
+    "stderr": ""
+  },
+  "group_assignment": {
+    "command": [
+      "id",
+      "vincent"
+    ],
+    "exit_code": 0,
+    "stdout": "uid=1000(vincent) gid=1000(vincent) groups=1000(vincent),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),111(lpadmin),114(lxd),116(docker)\n",
+    "stderr": ""
+  },
+  "current_process_groups": {
+    "command": [
+      "id"
+    ],
+    "exit_code": 0,
+    "stdout": "uid=1000(vincent) gid=1000(vincent) groups=1000(vincent),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),111(lpadmin),114(lxd)\n",
+    "stderr": ""
+  },
+  "sg": {
+    "command": [
+      "sh",
+      "-c",
+      "command -v sg"
+    ],
+    "exit_code": 127,
+    "stdout": "",
+    "stderr": ""
+  }
+}

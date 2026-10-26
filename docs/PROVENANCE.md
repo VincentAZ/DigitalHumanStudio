@@ -10,8 +10,8 @@ The requested versions are in `config/baseline.json`. Null digests and locks mea
 | Mixar | `Mixar-AI/mixar-app`, v4.3.5 Linux binary | Bundled license directory preserved; no account created or paid service used | Archive matched publisher SHA-256; basic authoring checks passed |
 | uv / local Python | Astral uv 0.11.32; managed CPython 3.12.13 | Bundled license notices retained | uv archive verified against GitHub release digest; Python executable SHA-256 recorded |
 | SOMA-X | Proposed 0.3.4 | Review native model license and asset-specific terms before download. Do not substitute separately licensed SMPL assets. | Not downloaded; mapping belongs to later milestones |
-| Docker | Ubuntu `docker.io` package | Distribution package notices | Installation pending authentication |
-| NVIDIA Container Toolkit | NVIDIA stable APT repository, 1.20.1-1 | Package notices | Installation pending authentication |
+| Docker | Ubuntu `docker.io` 29.1.3-0ubuntu4.1 | Distribution package notices | Installed; service active; current-session group refresh pending |
+| NVIDIA Container Toolkit | NVIDIA stable APT repository, 1.20.1-1 | Package notices | Installed; Docker NVIDIA runtime configured; GPU container access untested |
 
 Generated smoke scenes will contain only primitives. Register every downloaded model or motion asset with its URL, revision, SHA-256, license, and local destination before later use. Do not claim asset provenance from a component's name alone.
 

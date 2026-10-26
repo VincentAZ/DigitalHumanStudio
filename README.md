@@ -12,4 +12,4 @@ Only **Milestone 0: reproducible runtime** is currently authorized. Runtime comp
 
 Run `python3 scripts/inspect_host.py` to capture a fresh read-only machine report in `diagnostics/`. See the setup report for installation and validation steps. The original planning document is retained unchanged as `PLAN.md`.
 
-Mixar 4.3.5 and project-local uv/Python 3.12 are installed. `scripts/check_mixar.sh` repeats the authoring smoke checks. Recreate those local tools with `python3 scripts/install_local_tools.py`. Container setup still requires terminal sudo authentication; Isaac remains untested.
+Mixar 4.3.5 and project-local uv/Python 3.12 are installed. `scripts/check_mixar.sh` repeats the authoring smoke checks. Recreate those local tools with `python3 scripts/install_local_tools.py`. Docker and NVIDIA Container Toolkit are installed; current-session Docker access needs the group-refresh utility described in the setup report. Isaac remains untested.

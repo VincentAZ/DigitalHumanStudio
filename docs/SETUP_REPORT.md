@@ -1,6 +1,6 @@
 # Milestone 0 setup report
 
-Status: **Milestone 0 incomplete; container prerequisites blocked on interactive sudo authentication. Isaac compatibility is untested. Mixar smoke checks passed.**
+Status: **Milestone 0 incomplete; Docker and NVIDIA Container Toolkit installed, current-session Docker access awaiting group-refresh utility. Isaac compatibility is untested. Mixar smoke checks passed.**
 
 ## Inspected host — 2026-10-25
 
@@ -33,7 +33,15 @@ The pinned ProtoMotions installation instructions confirm Isaac Lab revision `4e
 
 ## Resume installation
 
-The bootstrap was prepared and syntax checked, but cannot run in this session until local sudo authentication is supplied. In a local terminal:
+The user completed the host bootstrap. Docker 29.1.3 and NVIDIA Container Toolkit 1.20.1 are installed and Docker is active with the NVIDIA runtime configured. Git LFS and Vulkan tools are also installed. Fresh evidence is in `diagnostics/20261026T012503.739621Z/`.
+
+The initial bootstrap omitted `util-linux-extra`, which supplies `sg` on this host. The account has Docker group membership, but the existing agent process does not. Install the missing utility in a local terminal so `scripts/docker.sh` can refresh its group:
+
+```bash
+sudo apt-get install -y util-linux-extra
+```
+
+Alternatively, a full logout/login refreshes membership. The corrected bootstrap now includes this dependency. For a new machine with the same inspected OS (not to repeat on this installed host), the original bootstrap command is:
 
 ```bash
 cd /home/vincent/Repos/DigitalHumanStudio
