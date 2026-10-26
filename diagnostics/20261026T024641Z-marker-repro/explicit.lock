@@ -1,0 +1,31 @@
+version = 1
+revision = 3
+requires-python = "==3.12.*"
+resolution-markers = [
+    "platform_machine == 'x86_64' and sys_platform == 'linux'",
+]
+supported-markers = [
+    "platform_machine == 'x86_64' and sys_platform == 'linux'",
+]
+
+[[package]]
+name = "marker-repro"
+version = "0.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pytetwild" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "pytetwild", marker = "platform_machine == 'AMD64' or platform_machine == 'x86_64'", specifier = "==0.2.3" },
+    { name = "pytetwild", extras = ["all"], marker = "platform_machine == 'aarch64' or platform_machine == 'arm64'", specifier = ">=0.3.0,<0.4" },
+]
+
+[[package]]
+name = "pytetwild"
+version = "0.2.3"
+source = { registry = "/home/vincent/Repos/DigitalHumanStudio/.runtime/marker-repro-20261026T024641Z/wheels" }
+wheels = [
+    { path = "/home/vincent/Repos/DigitalHumanStudio/.runtime/marker-repro-20261026T024641Z/wheels/pytetwild-0.2.3-py3-none-any.whl" },
+]

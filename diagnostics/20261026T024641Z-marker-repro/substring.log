@@ -1,0 +1,9 @@
+Using CPython 3.12.13 interpreter at: /home/vincent/Repos/DigitalHumanStudio/.runtime/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12
+  × No solution found when resolving dependencies for split (markers:
+  │ platform_machine == 'x86_64' and platform_machine in 'aarch64 arm64' and
+  │ platform_machine in 'x86_64 AMD64' and sys_platform == 'linux'):
+  ╰─▶ Because your project depends on pytetwild{platform_machine in 'x86_64
+      AMD64'}==0.2.3 and pytetwild[all]>=0.3.0,<0.4, we can conclude that your
+      project's requirements are unsatisfiable.
+
+hint: The resolution failed for an environment that is not the current one, consider limiting the environments with `tool.uv.environments`.

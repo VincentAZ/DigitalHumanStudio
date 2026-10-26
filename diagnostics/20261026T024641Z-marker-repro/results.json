@@ -1,0 +1,31 @@
+{
+  "substring": {
+    "exit_code": 1,
+    "command": [
+      "/home/vincent/Repos/DigitalHumanStudio/.runtime/tools/uv-x86_64-unknown-linux-gnu/uv",
+      "lock",
+      "--offline",
+      "--no-index",
+      "--find-links",
+      "/home/vincent/Repos/DigitalHumanStudio/.runtime/marker-repro-20261026T024641Z/wheels",
+      "--python",
+      "/home/vincent/Repos/DigitalHumanStudio/.runtime/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12"
+    ],
+    "cwd": "/home/vincent/Repos/DigitalHumanStudio/.runtime/marker-repro-20261026T024641Z/substring"
+  },
+  "explicit": {
+    "exit_code": 0,
+    "command": [
+      "/home/vincent/Repos/DigitalHumanStudio/.runtime/tools/uv-x86_64-unknown-linux-gnu/uv",
+      "lock",
+      "--offline",
+      "--no-index",
+      "--find-links",
+      "/home/vincent/Repos/DigitalHumanStudio/.runtime/marker-repro-20261026T024641Z/wheels",
+      "--python",
+      "/home/vincent/Repos/DigitalHumanStudio/.runtime/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12"
+    ],
+    "cwd": "/home/vincent/Repos/DigitalHumanStudio/.runtime/marker-repro-20261026T024641Z/explicit"
+  },
+  "scope": "Synthetic metadata-only wheels; tests resolver markers, not real pytetwild, installation, or Isaac compatibility."
+}

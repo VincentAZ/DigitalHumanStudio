@@ -77,3 +77,9 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - **Milestone 0 remains incomplete and is stopped at this dependency compatibility barrier.** No final image lock or resolved package lock exists. Final GPU computation, physics, RTX rendering, shutdown, and repeat-run checks were not executed.
 - The official checker pass does not establish full-stack compatibility; the resolver failure also does not demonstrate that the Ubuntu 26.04 host is incompatible. Changing the host OS is not an evidenced remedy for this dependency error.
 - No OS, NVIDIA driver, research source revision, backend, or architecture was changed. Milestones 1–5 remain unstarted. Resume requires a reviewed resolution of the pinned environment failure; do not silently change pins or substitute a backend.
+
+## 2026-10-26 UTC — User asked how to resolve the failure
+
+- Isolated the architecture-marker issue in an offline metadata-only reproduction using uv 0.11.32 and synthetic local wheels. Substring membership markers reproduce the same impossible branch (exit 1); explicit architecture equality alternatives resolve successfully (exit 0).
+- Evidence: `diagnostics/20261026T024641Z-marker-repro/`. This identifies a narrow candidate metadata patch without changing package versions; it does not validate the real dependency graph or runtime.
+- No fix has been applied to the active build recipe. Next is to test a recorded build-time marker patch against the full graph, then review any further conflicts. The pinned Isaac Lab root requests MoviePy 1.x while ProtoMotions requests 2.x; their final combined environment must also be checked before acceptance.
