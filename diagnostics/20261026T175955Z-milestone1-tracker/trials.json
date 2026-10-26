@@ -1,0 +1,2381 @@
+[
+  {
+    "trial_id": 0,
+    "expected_control_steps": 439,
+    "recorded_frames": 439,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 897.0982666015625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.514084098032605,
+    "elapsed_wall_seconds": 25.40057869500015,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.07737867534160614,
+        "maximum": 0.21864809095859528,
+        "steps": 439
+      },
+      "gr_error": {
+        "mean": 0.09687831252813339,
+        "maximum": 0.2089649736881256,
+        "steps": 439
+      },
+      "max_joint_error": {
+        "mean": 0.1171913743019104,
+        "maximum": 0.2592487633228302,
+        "steps": 439
+      }
+    }
+  },
+  {
+    "trial_id": 1,
+    "expected_control_steps": 160,
+    "recorded_frames": 160,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 383.0867614746094,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.9934001119985,
+    "elapsed_wall_seconds": 8.20776671099884,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.0720326378941536,
+        "maximum": 0.11461210250854492,
+        "steps": 160
+      },
+      "gr_error": {
+        "mean": 0.1937553584575653,
+        "maximum": 0.44945886731147766,
+        "steps": 160
+      },
+      "max_joint_error": {
+        "mean": 0.13485880196094513,
+        "maximum": 0.2868746519088745,
+        "steps": 160
+      }
+    }
+  },
+  {
+    "trial_id": 2,
+    "expected_control_steps": 272,
+    "recorded_frames": 272,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 845.3927001953125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.741728645191067,
+    "elapsed_wall_seconds": 13.156400132997078,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06758292764425278,
+        "maximum": 0.12246843427419662,
+        "steps": 272
+      },
+      "gr_error": {
+        "mean": 0.11779424548149109,
+        "maximum": 0.15493683516979218,
+        "steps": 272
+      },
+      "max_joint_error": {
+        "mean": 0.12124878168106079,
+        "maximum": 0.18677794933319092,
+        "steps": 272
+      }
+    }
+  },
+  {
+    "trial_id": 3,
+    "expected_control_steps": 179,
+    "recorded_frames": 179,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1184.0706787109375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.591442801198742,
+    "elapsed_wall_seconds": 8.745908812008565,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.04857610538601875,
+        "maximum": 0.07899989187717438,
+        "steps": 179
+      },
+      "gr_error": {
+        "mean": 0.10234932601451874,
+        "maximum": 0.1260356903076172,
+        "steps": 179
+      },
+      "max_joint_error": {
+        "mean": 0.08157207071781158,
+        "maximum": 0.12379899621009827,
+        "steps": 179
+      }
+    }
+  },
+  {
+    "trial_id": 4,
+    "expected_control_steps": 199,
+    "recorded_frames": 199,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1359.8402099609375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.014739724192996,
+    "elapsed_wall_seconds": 10.019169730003341,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.10099188983440399,
+        "maximum": 0.22885407507419586,
+        "steps": 199
+      },
+      "gr_error": {
+        "mean": 0.14646592736244202,
+        "maximum": 0.2983792722225189,
+        "steps": 199
+      },
+      "max_joint_error": {
+        "mean": 0.15344494581222534,
+        "maximum": 0.3122483193874359,
+        "steps": 199
+      }
+    }
+  },
+  {
+    "trial_id": 5,
+    "expected_control_steps": 194,
+    "recorded_frames": 194,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 884.5332641601562,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.97541404590081,
+    "elapsed_wall_seconds": 9.869083115001558,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06005919352173805,
+        "maximum": 0.09368674457073212,
+        "steps": 194
+      },
+      "gr_error": {
+        "mean": 0.12251118570566177,
+        "maximum": 0.2485901415348053,
+        "steps": 194
+      },
+      "max_joint_error": {
+        "mean": 0.11777250468730927,
+        "maximum": 0.15652333199977875,
+        "steps": 194
+      }
+    }
+  },
+  {
+    "trial_id": 6,
+    "expected_control_steps": 119,
+    "recorded_frames": 119,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 638.0086059570312,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.168302217990266,
+    "elapsed_wall_seconds": 6.057388411005377,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05482875183224678,
+        "maximum": 0.06917573511600494,
+        "steps": 119
+      },
+      "gr_error": {
+        "mean": 0.11976679414510727,
+        "maximum": 0.14237149059772491,
+        "steps": 119
+      },
+      "max_joint_error": {
+        "mean": 0.09198598563671112,
+        "maximum": 0.10345865041017532,
+        "steps": 119
+      }
+    }
+  },
+  {
+    "trial_id": 7,
+    "expected_control_steps": 181,
+    "recorded_frames": 181,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 785.1978149414062,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 21.158328326937696,
+    "elapsed_wall_seconds": 9.160772765011643,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.08445722609758377,
+        "maximum": 0.13611407577991486,
+        "steps": 181
+      },
+      "gr_error": {
+        "mean": 0.12576226890087128,
+        "maximum": 0.16982203722000122,
+        "steps": 181
+      },
+      "max_joint_error": {
+        "mean": 0.14681820571422577,
+        "maximum": 0.199753075838089,
+        "steps": 181
+      }
+    }
+  },
+  {
+    "trial_id": 8,
+    "expected_control_steps": 146,
+    "recorded_frames": 146,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 666.220703125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.624865013268142,
+    "elapsed_wall_seconds": 7.318951602006564,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.048189468681812286,
+        "maximum": 0.06782259047031403,
+        "steps": 146
+      },
+      "gr_error": {
+        "mean": 0.11497119814157486,
+        "maximum": 0.141407310962677,
+        "steps": 146
+      },
+      "max_joint_error": {
+        "mean": 0.08576372265815735,
+        "maximum": 0.12757717072963715,
+        "steps": 146
+      }
+    }
+  },
+  {
+    "trial_id": 9,
+    "expected_control_steps": 184,
+    "recorded_frames": 184,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 536.0174560546875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 21.22392648972276,
+    "elapsed_wall_seconds": 9.232434310993995,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.04395810887217522,
+        "maximum": 0.07664947211742401,
+        "steps": 184
+      },
+      "gr_error": {
+        "mean": 0.08760601282119751,
+        "maximum": 0.10314720869064331,
+        "steps": 184
+      },
+      "max_joint_error": {
+        "mean": 0.08203284442424774,
+        "maximum": 0.1251431405544281,
+        "steps": 184
+      }
+    }
+  },
+  {
+    "trial_id": 10,
+    "expected_control_steps": 111,
+    "recorded_frames": 111,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 396.23406982421875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.342368828164084,
+    "elapsed_wall_seconds": 5.65161314800207,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.04440337419509888,
+        "maximum": 0.05529611557722092,
+        "steps": 111
+      },
+      "gr_error": {
+        "mean": 0.11001075059175491,
+        "maximum": 0.12338294088840485,
+        "steps": 111
+      },
+      "max_joint_error": {
+        "mean": 0.063492052257061,
+        "maximum": 0.07627938687801361,
+        "steps": 111
+      }
+    }
+  },
+  {
+    "trial_id": 11,
+    "expected_control_steps": 141,
+    "recorded_frames": 141,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1014.3190307617188,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.05579030934276,
+    "elapsed_wall_seconds": 7.466009548006696,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.08509983122348785,
+        "maximum": 0.12574057281017303,
+        "steps": 141
+      },
+      "gr_error": {
+        "mean": 0.10634530335664749,
+        "maximum": 0.13313329219818115,
+        "steps": 141
+      },
+      "max_joint_error": {
+        "mean": 0.11994048207998276,
+        "maximum": 0.1501765251159668,
+        "steps": 141
+      }
+    }
+  },
+  {
+    "trial_id": 12,
+    "expected_control_steps": 145,
+    "recorded_frames": 145,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 641.0447998046875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.06536548547723,
+    "elapsed_wall_seconds": 7.456898144999286,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.07457885891199112,
+        "maximum": 0.1371830403804779,
+        "steps": 145
+      },
+      "gr_error": {
+        "mean": 0.13046640157699585,
+        "maximum": 0.18895067274570465,
+        "steps": 145
+      },
+      "max_joint_error": {
+        "mean": 0.1995619833469391,
+        "maximum": 0.23057705163955688,
+        "steps": 145
+      }
+    }
+  },
+  {
+    "trial_id": 13,
+    "expected_control_steps": 81,
+    "recorded_frames": 81,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 534.9178466796875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.1920928955078125e-07,
+    "minimum_image_std": 17.77923432757585,
+    "elapsed_wall_seconds": 4.455213901994284,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.07746260613203049,
+        "maximum": 0.129029780626297,
+        "steps": 81
+      },
+      "gr_error": {
+        "mean": 0.14003214240074158,
+        "maximum": 0.19914484024047852,
+        "steps": 81
+      },
+      "max_joint_error": {
+        "mean": 0.16971272230148315,
+        "maximum": 0.23032419383525848,
+        "steps": 81
+      }
+    }
+  },
+  {
+    "trial_id": 14,
+    "expected_control_steps": 212,
+    "recorded_frames": 212,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 905.56689453125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.870807172036436,
+    "elapsed_wall_seconds": 11.280571295996197,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06020158529281616,
+        "maximum": 0.08871512115001678,
+        "steps": 212
+      },
+      "gr_error": {
+        "mean": 0.16325333714485168,
+        "maximum": 0.19820381700992584,
+        "steps": 212
+      },
+      "max_joint_error": {
+        "mean": 0.09607130289077759,
+        "maximum": 0.1365218460559845,
+        "steps": 212
+      }
+    }
+  },
+  {
+    "trial_id": 15,
+    "expected_control_steps": 115,
+    "recorded_frames": 115,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 2280.671875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.029075763613694,
+    "elapsed_wall_seconds": 5.803604083994287,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.11965575814247131,
+        "maximum": 0.2140132337808609,
+        "steps": 115
+      },
+      "gr_error": {
+        "mean": 0.15974003076553345,
+        "maximum": 0.2637713849544525,
+        "steps": 115
+      },
+      "max_joint_error": {
+        "mean": 0.192387655377388,
+        "maximum": 0.34500953555107117,
+        "steps": 115
+      }
+    }
+  },
+  {
+    "trial_id": 16,
+    "expected_control_steps": 102,
+    "recorded_frames": 102,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 854.6513061523438,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.870193669476503,
+    "elapsed_wall_seconds": 5.207544404998771,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05450822412967682,
+        "maximum": 0.08388479053974152,
+        "steps": 102
+      },
+      "gr_error": {
+        "mean": 0.11210968345403671,
+        "maximum": 0.15251244604587555,
+        "steps": 102
+      },
+      "max_joint_error": {
+        "mean": 0.09542354941368103,
+        "maximum": 0.14187569916248322,
+        "steps": 102
+      }
+    }
+  },
+  {
+    "trial_id": 17,
+    "expected_control_steps": 218,
+    "recorded_frames": 218,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 690.8506469726562,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.274201500277655,
+    "elapsed_wall_seconds": 11.12998289099778,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.11574792116880417,
+        "maximum": 0.22512643039226532,
+        "steps": 218
+      },
+      "gr_error": {
+        "mean": 0.1093464344739914,
+        "maximum": 0.14459040760993958,
+        "steps": 218
+      },
+      "max_joint_error": {
+        "mean": 0.17810580134391785,
+        "maximum": 0.27072954177856445,
+        "steps": 218
+      }
+    }
+  },
+  {
+    "trial_id": 18,
+    "expected_control_steps": 338,
+    "recorded_frames": 338,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 207.3237762451172,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.020882241163314,
+    "elapsed_wall_seconds": 16.24042212399945,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06393629312515259,
+        "maximum": 0.06433963775634766,
+        "steps": 338
+      },
+      "gr_error": {
+        "mean": 0.2120039165019989,
+        "maximum": 0.2136119157075882,
+        "steps": 338
+      },
+      "max_joint_error": {
+        "mean": 0.09572673588991165,
+        "maximum": 0.10520221292972565,
+        "steps": 338
+      }
+    }
+  },
+  {
+    "trial_id": 19,
+    "expected_control_steps": 195,
+    "recorded_frames": 195,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 920.1942138671875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.96655995197959,
+    "elapsed_wall_seconds": 10.012012951992801,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.07368390262126923,
+        "maximum": 0.0926285833120346,
+        "steps": 195
+      },
+      "gr_error": {
+        "mean": 0.159462571144104,
+        "maximum": 0.20906920731067657,
+        "steps": 195
+      },
+      "max_joint_error": {
+        "mean": 0.13180731236934662,
+        "maximum": 0.16210119426250458,
+        "steps": 195
+      }
+    }
+  },
+  {
+    "trial_id": 20,
+    "expected_control_steps": 300,
+    "recorded_frames": 300,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 687.5103759765625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.99109186053238,
+    "elapsed_wall_seconds": 14.802504555002088,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06939803808927536,
+        "maximum": 0.0955943837761879,
+        "steps": 300
+      },
+      "gr_error": {
+        "mean": 0.15558594465255737,
+        "maximum": 0.20587289333343506,
+        "steps": 300
+      },
+      "max_joint_error": {
+        "mean": 0.11358774453401566,
+        "maximum": 0.17604421079158783,
+        "steps": 300
+      }
+    }
+  },
+  {
+    "trial_id": 21,
+    "expected_control_steps": 105,
+    "recorded_frames": 105,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1163.6534423828125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.057242192055845,
+    "elapsed_wall_seconds": 5.478762334998464,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06863138824701309,
+        "maximum": 0.12530231475830078,
+        "steps": 105
+      },
+      "gr_error": {
+        "mean": 0.15335316956043243,
+        "maximum": 0.24312210083007812,
+        "steps": 105
+      },
+      "max_joint_error": {
+        "mean": 0.11379494518041611,
+        "maximum": 0.20944397151470184,
+        "steps": 105
+      }
+    }
+  },
+  {
+    "trial_id": 22,
+    "expected_control_steps": 249,
+    "recorded_frames": 249,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 812.568359375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.52255434847568,
+    "elapsed_wall_seconds": 12.218722001009155,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.0720534473657608,
+        "maximum": 0.21567502617835999,
+        "steps": 249
+      },
+      "gr_error": {
+        "mean": 0.10374122858047485,
+        "maximum": 0.19369448721408844,
+        "steps": 249
+      },
+      "max_joint_error": {
+        "mean": 0.1057111844420433,
+        "maximum": 0.3275620937347412,
+        "steps": 249
+      }
+    }
+  },
+  {
+    "trial_id": 23,
+    "expected_control_steps": 74,
+    "recorded_frames": 74,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 842.722412109375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.950312668965623,
+    "elapsed_wall_seconds": 4.002123364989529,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.061143338680267334,
+        "maximum": 0.11372321844100952,
+        "steps": 74
+      },
+      "gr_error": {
+        "mean": 0.13847434520721436,
+        "maximum": 0.20959632098674774,
+        "steps": 74
+      },
+      "max_joint_error": {
+        "mean": 0.11304645240306854,
+        "maximum": 0.1947944015264511,
+        "steps": 74
+      }
+    }
+  },
+  {
+    "trial_id": 24,
+    "expected_control_steps": 284,
+    "recorded_frames": 284,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 748.9418334960938,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.79050144200758,
+    "elapsed_wall_seconds": 13.915545586001826,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.04656759276986122,
+        "maximum": 0.0630745142698288,
+        "steps": 284
+      },
+      "gr_error": {
+        "mean": 0.09829224646091461,
+        "maximum": 0.1275981366634369,
+        "steps": 284
+      },
+      "max_joint_error": {
+        "mean": 0.08180185407400131,
+        "maximum": 0.10953962802886963,
+        "steps": 284
+      }
+    }
+  },
+  {
+    "trial_id": 25,
+    "expected_control_steps": 441,
+    "recorded_frames": 441,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 419.2320556640625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.878845739161424,
+    "elapsed_wall_seconds": 22.12066770499223,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.0741652175784111,
+        "maximum": 0.12378309667110443,
+        "steps": 441
+      },
+      "gr_error": {
+        "mean": 0.16423778235912323,
+        "maximum": 0.28515949845314026,
+        "steps": 441
+      },
+      "max_joint_error": {
+        "mean": 0.17069976031780243,
+        "maximum": 0.20265476405620575,
+        "steps": 441
+      }
+    }
+  },
+  {
+    "trial_id": 26,
+    "expected_control_steps": 78,
+    "recorded_frames": 78,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 718.0230712890625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.13339471275871,
+    "elapsed_wall_seconds": 4.061565087002236,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06428325921297073,
+        "maximum": 0.08884570747613907,
+        "steps": 78
+      },
+      "gr_error": {
+        "mean": 0.1551305204629898,
+        "maximum": 0.2629548907279968,
+        "steps": 78
+      },
+      "max_joint_error": {
+        "mean": 0.11377324908971786,
+        "maximum": 0.16332972049713135,
+        "steps": 78
+      }
+    }
+  },
+  {
+    "trial_id": 27,
+    "expected_control_steps": 108,
+    "recorded_frames": 108,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1466.2293701171875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.1920928955078125e-07,
+    "minimum_image_std": 17.81643670741201,
+    "elapsed_wall_seconds": 5.549335953997797,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.061548080295324326,
+        "maximum": 0.0974574089050293,
+        "steps": 108
+      },
+      "gr_error": {
+        "mean": 0.14911270141601562,
+        "maximum": 0.2390281856060028,
+        "steps": 108
+      },
+      "max_joint_error": {
+        "mean": 0.11607513576745987,
+        "maximum": 0.17591817677021027,
+        "steps": 108
+      }
+    }
+  },
+  {
+    "trial_id": 28,
+    "expected_control_steps": 316,
+    "recorded_frames": 316,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 833.8355102539062,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.662417394015755,
+    "elapsed_wall_seconds": 15.660865569996531,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05735093727707863,
+        "maximum": 0.10035484284162521,
+        "steps": 316
+      },
+      "gr_error": {
+        "mean": 0.11219096928834915,
+        "maximum": 0.1380525529384613,
+        "steps": 316
+      },
+      "max_joint_error": {
+        "mean": 0.1053747832775116,
+        "maximum": 0.12684285640716553,
+        "steps": 316
+      }
+    }
+  },
+  {
+    "trial_id": 29,
+    "expected_control_steps": 188,
+    "recorded_frames": 188,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 934.2333984375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.938136533850972,
+    "elapsed_wall_seconds": 10.086619278008584,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.11519874632358551,
+        "maximum": 0.17722901701927185,
+        "steps": 188
+      },
+      "gr_error": {
+        "mean": 0.19124957919120789,
+        "maximum": 0.30743324756622314,
+        "steps": 188
+      },
+      "max_joint_error": {
+        "mean": 0.16669782996177673,
+        "maximum": 0.24869659543037415,
+        "steps": 188
+      }
+    }
+  },
+  {
+    "trial_id": 30,
+    "expected_control_steps": 223,
+    "recorded_frames": 223,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 975.2735595703125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.666860854177628,
+    "elapsed_wall_seconds": 11.42699810799968,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.04915352910757065,
+        "maximum": 0.07161068171262741,
+        "steps": 223
+      },
+      "gr_error": {
+        "mean": 0.10710278153419495,
+        "maximum": 0.12651488184928894,
+        "steps": 223
+      },
+      "max_joint_error": {
+        "mean": 0.10646280646324158,
+        "maximum": 0.14563952386379242,
+        "steps": 223
+      }
+    }
+  },
+  {
+    "trial_id": 31,
+    "expected_control_steps": 274,
+    "recorded_frames": 274,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1777.9010009765625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.855635281435752,
+    "elapsed_wall_seconds": 13.304215391995967,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.050545837730169296,
+        "maximum": 0.11224055290222168,
+        "steps": 274
+      },
+      "gr_error": {
+        "mean": 0.11961303651332855,
+        "maximum": 0.15202559530735016,
+        "steps": 274
+      },
+      "max_joint_error": {
+        "mean": 0.08757591247558594,
+        "maximum": 0.1504298448562622,
+        "steps": 274
+      }
+    }
+  },
+  {
+    "trial_id": 32,
+    "expected_control_steps": 103,
+    "recorded_frames": 103,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 336.54669189453125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.531897756110276,
+    "elapsed_wall_seconds": 5.406254440007615,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05750589817762375,
+        "maximum": 0.06824497878551483,
+        "steps": 103
+      },
+      "gr_error": {
+        "mean": 0.1236487478017807,
+        "maximum": 0.1418572962284088,
+        "steps": 103
+      },
+      "max_joint_error": {
+        "mean": 0.13967490196228027,
+        "maximum": 0.15830378234386444,
+        "steps": 103
+      }
+    }
+  },
+  {
+    "trial_id": 33,
+    "expected_control_steps": 102,
+    "recorded_frames": 102,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 912.9324951171875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.1920928955078125e-07,
+    "minimum_image_std": 18.34305260806404,
+    "elapsed_wall_seconds": 5.263716903995373,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.07694824784994125,
+        "maximum": 0.10974719375371933,
+        "steps": 102
+      },
+      "gr_error": {
+        "mean": 0.12596023082733154,
+        "maximum": 0.1737082600593567,
+        "steps": 102
+      },
+      "max_joint_error": {
+        "mean": 0.1073489561676979,
+        "maximum": 0.15593644976615906,
+        "steps": 102
+      }
+    }
+  },
+  {
+    "trial_id": 34,
+    "expected_control_steps": 425,
+    "recorded_frames": 425,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 749.7091674804688,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.033661564176697,
+    "elapsed_wall_seconds": 20.92240606699488,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05369507148861885,
+        "maximum": 0.08352533727884293,
+        "steps": 425
+      },
+      "gr_error": {
+        "mean": 0.10391735285520554,
+        "maximum": 0.13415251672267914,
+        "steps": 425
+      },
+      "max_joint_error": {
+        "mean": 0.08584816753864288,
+        "maximum": 0.12572045624256134,
+        "steps": 425
+      }
+    }
+  },
+  {
+    "trial_id": 35,
+    "expected_control_steps": 608,
+    "recorded_frames": 608,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 133.79080200195312,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.94507800400734,
+    "elapsed_wall_seconds": 29.26411283199559,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.042026545852422714,
+        "maximum": 0.057762715965509415,
+        "steps": 608
+      },
+      "gr_error": {
+        "mean": 0.17431393265724182,
+        "maximum": 0.2072162628173828,
+        "steps": 608
+      },
+      "max_joint_error": {
+        "mean": 0.08395679295063019,
+        "maximum": 0.12111100554466248,
+        "steps": 608
+      }
+    }
+  },
+  {
+    "trial_id": 36,
+    "expected_control_steps": 326,
+    "recorded_frames": 326,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 480.4761047363281,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.047630324813685,
+    "elapsed_wall_seconds": 16.316470318997744,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06623539328575134,
+        "maximum": 0.1149461418390274,
+        "steps": 326
+      },
+      "gr_error": {
+        "mean": 0.12689423561096191,
+        "maximum": 0.2113121598958969,
+        "steps": 326
+      },
+      "max_joint_error": {
+        "mean": 0.13897456228733063,
+        "maximum": 0.21022222936153412,
+        "steps": 326
+      }
+    }
+  },
+  {
+    "trial_id": 37,
+    "expected_control_steps": 180,
+    "recorded_frames": 180,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 606.7239990234375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 20.03368605640654,
+    "elapsed_wall_seconds": 9.304257802999928,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.03840745985507965,
+        "maximum": 0.045790694653987885,
+        "steps": 180
+      },
+      "gr_error": {
+        "mean": 0.09013780206441879,
+        "maximum": 0.10449152439832687,
+        "steps": 180
+      },
+      "max_joint_error": {
+        "mean": 0.10161753743886948,
+        "maximum": 0.10328096896409988,
+        "steps": 180
+      }
+    }
+  },
+  {
+    "trial_id": 38,
+    "expected_control_steps": 320,
+    "recorded_frames": 320,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 768.369384765625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.740971075396033,
+    "elapsed_wall_seconds": 16.748069244989892,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.09818468987941742,
+        "maximum": 0.16529375314712524,
+        "steps": 320
+      },
+      "gr_error": {
+        "mean": 0.09767065197229385,
+        "maximum": 0.15161475539207458,
+        "steps": 320
+      },
+      "max_joint_error": {
+        "mean": 0.1440211683511734,
+        "maximum": 0.20606261491775513,
+        "steps": 320
+      }
+    }
+  },
+  {
+    "trial_id": 39,
+    "expected_control_steps": 142,
+    "recorded_frames": 142,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 365.410400390625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.15682365737892,
+    "elapsed_wall_seconds": 7.267567400995176,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05118076875805855,
+        "maximum": 0.07459922879934311,
+        "steps": 142
+      },
+      "gr_error": {
+        "mean": 0.1359194964170456,
+        "maximum": 0.14885278046131134,
+        "steps": 142
+      },
+      "max_joint_error": {
+        "mean": 0.08136819303035736,
+        "maximum": 0.11163992434740067,
+        "steps": 142
+      }
+    }
+  },
+  {
+    "trial_id": 40,
+    "expected_control_steps": 222,
+    "recorded_frames": 222,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 646.4114990234375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.059488335508465,
+    "elapsed_wall_seconds": 11.009163764989353,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05511616915464401,
+        "maximum": 0.07689063251018524,
+        "steps": 222
+      },
+      "gr_error": {
+        "mean": 0.1299659162759781,
+        "maximum": 0.15269115567207336,
+        "steps": 222
+      },
+      "max_joint_error": {
+        "mean": 0.09574473649263382,
+        "maximum": 0.1318085640668869,
+        "steps": 222
+      }
+    }
+  },
+  {
+    "trial_id": 41,
+    "expected_control_steps": 266,
+    "recorded_frames": 266,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 185.9151153564453,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.34801808772213,
+    "elapsed_wall_seconds": 13.551793769991491,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.12749083340168,
+        "maximum": 0.27029669284820557,
+        "steps": 266
+      },
+      "gr_error": {
+        "mean": 0.19833847880363464,
+        "maximum": 0.27011194825172424,
+        "steps": 266
+      },
+      "max_joint_error": {
+        "mean": 0.20739801228046417,
+        "maximum": 0.37649714946746826,
+        "steps": 266
+      }
+    }
+  },
+  {
+    "trial_id": 42,
+    "expected_control_steps": 295,
+    "recorded_frames": 295,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 835.7402954101562,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.886213455563805,
+    "elapsed_wall_seconds": 14.787042858006316,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.08654984086751938,
+        "maximum": 0.13643978536128998,
+        "steps": 295
+      },
+      "gr_error": {
+        "mean": 0.2114117443561554,
+        "maximum": 0.40384426712989807,
+        "steps": 295
+      },
+      "max_joint_error": {
+        "mean": 0.14433348178863525,
+        "maximum": 0.2106507420539856,
+        "steps": 295
+      }
+    }
+  },
+  {
+    "trial_id": 43,
+    "expected_control_steps": 197,
+    "recorded_frames": 197,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 654.7788696289062,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 20.292201521126625,
+    "elapsed_wall_seconds": 9.820755294989794,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.055191971361637115,
+        "maximum": 0.08375398069620132,
+        "steps": 197
+      },
+      "gr_error": {
+        "mean": 0.10267709195613861,
+        "maximum": 0.1375402957201004,
+        "steps": 197
+      },
+      "max_joint_error": {
+        "mean": 0.08415494114160538,
+        "maximum": 0.14390929043293,
+        "steps": 197
+      }
+    }
+  },
+  {
+    "trial_id": 44,
+    "expected_control_steps": 174,
+    "recorded_frames": 174,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1027.3531494140625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.14652627872099,
+    "elapsed_wall_seconds": 8.98008153300907,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.08606555312871933,
+        "maximum": 0.17414528131484985,
+        "steps": 174
+      },
+      "gr_error": {
+        "mean": 0.1993829756975174,
+        "maximum": 0.31667181849479675,
+        "steps": 174
+      },
+      "max_joint_error": {
+        "mean": 0.16712138056755066,
+        "maximum": 0.30998659133911133,
+        "steps": 174
+      }
+    }
+  },
+  {
+    "trial_id": 45,
+    "expected_control_steps": 182,
+    "recorded_frames": 182,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1046.391357421875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.04460609332304,
+    "elapsed_wall_seconds": 9.721566981999786,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.0975991040468216,
+        "maximum": 0.18041381239891052,
+        "steps": 182
+      },
+      "gr_error": {
+        "mean": 0.13789574801921844,
+        "maximum": 0.18716758489608765,
+        "steps": 182
+      },
+      "max_joint_error": {
+        "mean": 0.1549990475177765,
+        "maximum": 0.2841876149177551,
+        "steps": 182
+      }
+    }
+  },
+  {
+    "trial_id": 46,
+    "expected_control_steps": 122,
+    "recorded_frames": 122,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 677.3680419921875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 20.75888705779598,
+    "elapsed_wall_seconds": 6.450502945997869,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.07048418372869492,
+        "maximum": 0.09372842311859131,
+        "steps": 122
+      },
+      "gr_error": {
+        "mean": 0.1530596762895584,
+        "maximum": 0.21794641017913818,
+        "steps": 122
+      },
+      "max_joint_error": {
+        "mean": 0.15827377140522003,
+        "maximum": 0.21048133075237274,
+        "steps": 122
+      }
+    }
+  },
+  {
+    "trial_id": 47,
+    "expected_control_steps": 153,
+    "recorded_frames": 153,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1051.693359375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.678570289570423,
+    "elapsed_wall_seconds": 7.997032362996833,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.06932338327169418,
+        "maximum": 0.1171950250864029,
+        "steps": 153
+      },
+      "gr_error": {
+        "mean": 0.15252265334129333,
+        "maximum": 0.2663838565349579,
+        "steps": 153
+      },
+      "max_joint_error": {
+        "mean": 0.12454531341791153,
+        "maximum": 0.22426843643188477,
+        "steps": 153
+      }
+    }
+  },
+  {
+    "trial_id": 48,
+    "expected_control_steps": 179,
+    "recorded_frames": 179,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1252.70166015625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.04241631086471,
+    "elapsed_wall_seconds": 8.746231352997711,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.0716586485505104,
+        "maximum": 0.10726926475763321,
+        "steps": 179
+      },
+      "gr_error": {
+        "mean": 0.172860786318779,
+        "maximum": 0.25397124886512756,
+        "steps": 179
+      },
+      "max_joint_error": {
+        "mean": 0.1300704926252365,
+        "maximum": 0.21875812113285065,
+        "steps": 179
+      }
+    }
+  },
+  {
+    "trial_id": 49,
+    "expected_control_steps": 255,
+    "recorded_frames": 255,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 323.2838134765625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.645426389086126,
+    "elapsed_wall_seconds": 13.420314679999137,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05192645639181137,
+        "maximum": 0.058484192937612534,
+        "steps": 255
+      },
+      "gr_error": {
+        "mean": 0.1332845687866211,
+        "maximum": 0.1367894411087036,
+        "steps": 255
+      },
+      "max_joint_error": {
+        "mean": 0.09788022935390472,
+        "maximum": 0.10793402045965195,
+        "steps": 255
+      }
+    }
+  },
+  {
+    "trial_id": 50,
+    "expected_control_steps": 169,
+    "recorded_frames": 169,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 536.9866943359375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.157438738689976,
+    "elapsed_wall_seconds": 8.82083428199985,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.0668138638138771,
+        "maximum": 0.08324549347162247,
+        "steps": 169
+      },
+      "gr_error": {
+        "mean": 0.13663284480571747,
+        "maximum": 0.17135895788669586,
+        "steps": 169
+      },
+      "max_joint_error": {
+        "mean": 0.16001339256763458,
+        "maximum": 0.20115837454795837,
+        "steps": 169
+      }
+    }
+  },
+  {
+    "trial_id": 51,
+    "expected_control_steps": 239,
+    "recorded_frames": 239,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 366.4940185546875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.46730858692945,
+    "elapsed_wall_seconds": 11.903969356004382,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.042231932282447815,
+        "maximum": 0.05817931890487671,
+        "steps": 239
+      },
+      "gr_error": {
+        "mean": 0.11183612048625946,
+        "maximum": 0.1624050736427307,
+        "steps": 239
+      },
+      "max_joint_error": {
+        "mean": 0.07757419347763062,
+        "maximum": 0.1086161881685257,
+        "steps": 239
+      }
+    }
+  },
+  {
+    "trial_id": 52,
+    "expected_control_steps": 265,
+    "recorded_frames": 265,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 401.59088134765625,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.727535240309226,
+    "elapsed_wall_seconds": 13.251620930997888,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.04734722897410393,
+        "maximum": 0.08824336528778076,
+        "steps": 265
+      },
+      "gr_error": {
+        "mean": 0.17204086482524872,
+        "maximum": 0.23425021767616272,
+        "steps": 265
+      },
+      "max_joint_error": {
+        "mean": 0.09161005169153214,
+        "maximum": 0.1466989666223526,
+        "steps": 265
+      }
+    }
+  },
+  {
+    "trial_id": 53,
+    "expected_control_steps": 175,
+    "recorded_frames": 175,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 778.1465454101562,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.29287999891006,
+    "elapsed_wall_seconds": 8.875660674006213,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.04910966753959656,
+        "maximum": 0.06745624542236328,
+        "steps": 175
+      },
+      "gr_error": {
+        "mean": 0.10370874404907227,
+        "maximum": 0.12078061699867249,
+        "steps": 175
+      },
+      "max_joint_error": {
+        "mean": 0.09023145586252213,
+        "maximum": 0.0947352796792984,
+        "steps": 175
+      }
+    }
+  },
+  {
+    "trial_id": 54,
+    "expected_control_steps": 177,
+    "recorded_frames": 177,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 641.371826171875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.48032121035204,
+    "elapsed_wall_seconds": 9.213784145002137,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.07843760401010513,
+        "maximum": 0.12629711627960205,
+        "steps": 177
+      },
+      "gr_error": {
+        "mean": 0.12359604984521866,
+        "maximum": 0.16235484182834625,
+        "steps": 177
+      },
+      "max_joint_error": {
+        "mean": 0.13131080567836761,
+        "maximum": 0.16937318444252014,
+        "steps": 177
+      }
+    }
+  },
+  {
+    "trial_id": 55,
+    "expected_control_steps": 109,
+    "recorded_frames": 109,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1050.4434814453125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.58429788247799,
+    "elapsed_wall_seconds": 5.691927741994732,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.10354690998792648,
+        "maximum": 0.15348999202251434,
+        "steps": 109
+      },
+      "gr_error": {
+        "mean": 0.17701444029808044,
+        "maximum": 0.23076924681663513,
+        "steps": 109
+      },
+      "max_joint_error": {
+        "mean": 0.15487201511859894,
+        "maximum": 0.22114348411560059,
+        "steps": 109
+      }
+    }
+  },
+  {
+    "trial_id": 56,
+    "expected_control_steps": 166,
+    "recorded_frames": 166,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1109.477783203125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.03891915240469,
+    "elapsed_wall_seconds": 8.389937653002562,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.08658572286367416,
+        "maximum": 0.12649762630462646,
+        "steps": 166
+      },
+      "gr_error": {
+        "mean": 0.13573892414569855,
+        "maximum": 0.19741776585578918,
+        "steps": 166
+      },
+      "max_joint_error": {
+        "mean": 0.12844575941562653,
+        "maximum": 0.17796459794044495,
+        "steps": 166
+      }
+    }
+  },
+  {
+    "trial_id": 57,
+    "expected_control_steps": 297,
+    "recorded_frames": 297,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 657.680908203125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 19.553684967883548,
+    "elapsed_wall_seconds": 14.514934353006538,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.2202729433774948,
+        "maximum": 0.3936629891395569,
+        "steps": 297
+      },
+      "gr_error": {
+        "mean": 0.31229501962661743,
+        "maximum": 0.41293758153915405,
+        "steps": 297
+      },
+      "max_joint_error": {
+        "mean": 0.35993492603302,
+        "maximum": 0.5780567526817322,
+        "steps": 297
+      }
+    }
+  },
+  {
+    "trial_id": 58,
+    "expected_control_steps": 72,
+    "recorded_frames": 72,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 580.4735107421875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.1920928955078125e-07,
+    "minimum_image_std": 20.026103446378283,
+    "elapsed_wall_seconds": 3.8364364430017304,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.09756200760602951,
+        "maximum": 0.13262434303760529,
+        "steps": 72
+      },
+      "gr_error": {
+        "mean": 0.14593957364559174,
+        "maximum": 0.17070145905017853,
+        "steps": 72
+      },
+      "max_joint_error": {
+        "mean": 0.14783278107643127,
+        "maximum": 0.2285766452550888,
+        "steps": 72
+      }
+    }
+  },
+  {
+    "trial_id": 59,
+    "expected_control_steps": 174,
+    "recorded_frames": 174,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 901.7952880859375,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.512854158101867,
+    "elapsed_wall_seconds": 8.844469807998394,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.05955091118812561,
+        "maximum": 0.08042361587285995,
+        "steps": 174
+      },
+      "gr_error": {
+        "mean": 0.09760880470275879,
+        "maximum": 0.11627106368541718,
+        "steps": 174
+      },
+      "max_joint_error": {
+        "mean": 0.14206135272979736,
+        "maximum": 0.18300023674964905,
+        "steps": 174
+      }
+    }
+  },
+  {
+    "trial_id": 60,
+    "expected_control_steps": 103,
+    "recorded_frames": 103,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 554.1727294921875,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 18.24177583825297,
+    "elapsed_wall_seconds": 5.453436031995807,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting.",
+    "upstream_tracking_failed": false,
+    "studio_attempt_failed": false,
+    "metrics": {
+      "gt_error": {
+        "mean": 0.04996080696582794,
+        "maximum": 0.07886717468500137,
+        "steps": 103
+      },
+      "gr_error": {
+        "mean": 0.10546630620956421,
+        "maximum": 0.13889360427856445,
+        "steps": 103
+      },
+      "max_joint_error": {
+        "mean": 0.077938012778759,
+        "maximum": 0.11015220731496811,
+        "steps": 103
+      }
+    }
+  }
+]

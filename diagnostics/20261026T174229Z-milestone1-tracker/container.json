@@ -1,0 +1,337 @@
+[
+    {
+        "Id": "bcf2a49dd5d3f8313cbde5eae7795beeaa4b8dd31b89a49c478df41faabbeebd",
+        "Created": "2026-10-26T17:42:30.308569479Z",
+        "Path": "/opt/IsaacLab/.venv/bin/python",
+        "Args": [
+            "/studio/scripts/milestone1_baseline.py",
+            "--output",
+            "/studio/output",
+            "--family",
+            "tracker",
+            "--seed",
+            "0",
+            "--device",
+            "cuda:0",
+            "--enable_cameras",
+            "--viz",
+            "none",
+            "--kit_args",
+            "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-26T17:42:30.344787875Z",
+            "FinishedAt": "2026-10-26T17:53:42.002853806Z"
+        },
+        "Image": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+        "ResolvConfPath": "/var/lib/docker/containers/bcf2a49dd5d3f8313cbde5eae7795beeaa4b8dd31b89a49c478df41faabbeebd/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/bcf2a49dd5d3f8313cbde5eae7795beeaa4b8dd31b89a49c478df41faabbeebd/hostname",
+        "HostsPath": "/var/lib/docker/containers/bcf2a49dd5d3f8313cbde5eae7795beeaa4b8dd31b89a49c478df41faabbeebd/hosts",
+        "LogPath": "/var/lib/docker/containers/bcf2a49dd5d3f8313cbde5eae7795beeaa4b8dd31b89a49c478df41faabbeebd/bcf2a49dd5d3f8313cbde5eae7795beeaa4b8dd31b89a49c478df41faabbeebd-json.log",
+        "Name": "/studio-m1-tracker-20261026T174229Z",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 2147483648,
+            "Runtime": "nvidia",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": [
+                {
+                    "Driver": "",
+                    "Count": -1,
+                    "DeviceIDs": null,
+                    "Capabilities": [
+                        [
+                            "gpu"
+                        ]
+                    ],
+                    "Options": {}
+                }
+            ],
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/isaac-home",
+                    "Target": "/studio-home"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/scripts",
+                    "Target": "/studio/scripts",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/milestone1/assets",
+                    "Target": "/studio/assets",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/config/milestone1-license.json",
+                    "Target": "/studio/license.json",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone1/tracker-20261026T174229Z",
+                    "Target": "/studio/output"
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/scripts",
+                "Destination": "/studio/scripts",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/milestone1/assets",
+                "Destination": "/studio/assets",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/config/milestone1-license.json",
+                "Destination": "/studio/license.json",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone1/tracker-20261026T174229Z",
+                "Destination": "/studio/output",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/isaac-home",
+                "Destination": "/studio-home",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "bcf2a49dd5d3",
+            "Domainname": "",
+            "User": "1000:1000",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "XDG_DATA_HOME=/studio-home/.local/share",
+                "PROTOMOTIONS_ASSET_ROOT=/studio/assets/protomotions/data/assets",
+                "OMP_NUM_THREADS=4",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "XDG_CACHE_HOME=/studio-home/.cache",
+                "XDG_CONFIG_HOME=/studio-home/.config",
+                "HUB__CACHE__PATH=/studio-home/hub-cache",
+                "ACCEPT_EULA=Y",
+                "OMNI_KIT_ACCEPT_EULA=YES",
+                "HOME=/studio-home",
+                "UV_HTTP_TIMEOUT=300",
+                "UV_HTTP_RETRIES=3",
+                "UV_CONCURRENT_DOWNLOADS=4",
+                "PATH=/opt/IsaacLab/.venv/bin:/usr/local/bin:/usr/bin:/bin",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "VK_DRIVER_FILES=/etc/vulkan/icd.d/nvidia_icd.json",
+                "MIN_DRIVER_VERSION=570.169",
+                "HUB__ARGS__DETECT_ONLY=true",
+                "OMNICLIENT_HUB_EXE=/usr/local/bin/hub",
+                "DEBIAN_FRONTEND=noninteractive",
+                "UV_PYTHON_INSTALL_DIR=/opt/python",
+                "UV_CACHE_DIR=/opt/uv-cache",
+                "UV_LINK_MODE=copy"
+            ],
+            "Cmd": [
+                "/studio/scripts/milestone1_baseline.py",
+                "--output",
+                "/studio/output",
+                "--family",
+                "tracker",
+                "--seed",
+                "0",
+                "--device",
+                "cuda:0",
+                "--enable_cameras",
+                "--viz",
+                "none",
+                "--kit_args",
+                "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "NONE"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 180000000000,
+                "Retries": 3
+            },
+            "Image": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+            "Volumes": null,
+            "WorkingDir": "/studio/output",
+            "Entrypoint": [
+                "/opt/IsaacLab/.venv/bin/python"
+            ],
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "cd902e4c66ab44bec23443ca4c1572689b1015358bb8afb3d6d13164fda27870",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+            "size": 7396,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

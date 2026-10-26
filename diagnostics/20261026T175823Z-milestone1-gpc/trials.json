@@ -1,0 +1,22 @@
+[
+  {
+    "trial_id": 0,
+    "expected_control_steps": 600,
+    "recorded_frames": 600,
+    "complete": true,
+    "first_termination_step": null,
+    "first_upstream_tracking_failure_step": null,
+    "maximum_contact_force_newtons": 1486.491455078125,
+    "contact_measurement_sensors": [
+      "RightFoot",
+      "RightToeBase",
+      "LeftFoot",
+      "LeftToeBase"
+    ],
+    "maximum_quaternion_norm_error": 1.7881393432617188e-07,
+    "minimum_image_std": 17.425264166266352,
+    "elapsed_wall_seconds": 35.53549238300184,
+    "resets_inside_trial": 0,
+    "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting."
+  }
+]

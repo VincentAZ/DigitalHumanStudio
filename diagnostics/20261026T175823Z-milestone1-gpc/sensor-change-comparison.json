@@ -1,0 +1,17 @@
+{
+  "frames_compared": 600,
+  "maximum_absolute_differences": {
+    "action_raw": 0.0,
+    "dof_pos": 0.0,
+    "rigid_body_pos": 0.0
+  },
+  "source_contact_bodies": null,
+  "selected_contact_bodies": [
+    "LeftFoot",
+    "LeftToeBase",
+    "RightFoot",
+    "RightToeBase"
+  ],
+  "observe_contacts": false,
+  "interpretation": "Contact reporting was added; model observation settings, weights, gains and timing remained unchanged. This comparison is not a general determinism guarantee."
+}

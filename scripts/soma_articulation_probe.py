@@ -77,6 +77,9 @@ def run_probe():
     assert 'physx' in sim._sim.physics_manager.__module__.lower()
     sim._sim.stage.Export(str(args.output / 'loaded-scene.usda'))
     reset = sim.get_default_robot_reset_state()
+    # Keep the complete body inside the finite flat mesh and above its surface.
+    reset.root_pos[:] = torch.tensor([5.0, 5.0, 1.15], device=device)
+    maximum_contact_force = 0.0
     save('synthetic-reset.json', reset)
     sim.reset_envs(reset)
     # An explicit zero-action asset probe, not a motion-tracking or balance test.
@@ -92,10 +95,15 @@ def run_probe():
                 if isinstance(value, torch.Tensor):
                     assert torch.isfinite(value).all(), (step, field.name)
             assert torch.isfinite(forces).all(), step
+            maximum_contact_force = max(maximum_contact_force, float(torch.linalg.vector_norm(forces, dim=-1).max()))
+    save('contact-summary.json', {'maximum_contact_force_newtons': maximum_contact_force,
+                                 'reset_position': [5.0, 5.0, 1.15]})
+    assert maximum_contact_force > 1.0, 'No measurable foot/toe ground contact'
     sim._sim.stop()
     return {'status': 'checks_passed_shutdown_pending', 'scope': 'articulation_adapter_only',
         'physics_hz': 120, 'control_hz': 30, 'control_steps': 30,
         'bodies': 23, 'joints': 66, 'finite_samples': 30,
+        'maximum_contact_force_newtons': maximum_contact_force,
         'motion_data_loaded': False, 'policy_used': False,
         'tracking_quality_tested': False, 'balance_tested': False,
         'sources': json.loads(Path('/opt/studio/source-revisions.json').read_text())}

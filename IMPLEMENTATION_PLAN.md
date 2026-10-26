@@ -1,6 +1,6 @@
 # Digital Human Research Studio — Implementation Plan
 
-> Execution scope: Milestone 1, authorized after Milestone 0 passed for standalone workers. The workspace was renamed to `/home/vincent/Repos/DigitalHumanStudio`. Historical machine observations below are superseded by `docs/SETUP_REPORT.md`; Milestones 2–5 remain unstarted.
+> Execution scope: Milestone 1 is complete for standalone workers; see `docs/MILESTONE1_REPORT.md`. The workspace was renamed to `/home/vincent/Repos/DigitalHumanStudio`. Historical machine observations below are superseded by `docs/SETUP_REPORT.md`; Milestones 2–5 remain unstarted.
 
 ## 1. Goal, scope, and starting conditions
 

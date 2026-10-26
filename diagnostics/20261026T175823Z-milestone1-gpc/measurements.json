@@ -1,0 +1,10 @@
+{
+  "items": 1,
+  "rollout_seconds": 20,
+  "model_inputs": [
+    "max_coords_obs"
+  ],
+  "embedded_decoder_loaded": true,
+  "task_adaptation": false,
+  "task_success_claimed": false
+}

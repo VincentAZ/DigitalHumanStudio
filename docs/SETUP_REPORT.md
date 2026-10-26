@@ -59,7 +59,7 @@ The final launcher uses [NVIDIA's default standalone shutdown](https://docs.isaa
 
 **Scope:** separate standalone worker processes are validated. The upstream slow/in-process finalization defect remains unresolved; repeated Kit startup in one Python interpreter is not claimed. Known Hub/headless/powersave/IOMMU warnings remain in the logs. GDB was installed only in a disposable diagnostic container. Host OS, NVIDIA driver, pinned source revisions, final image and package lock are unchanged.
 
-**Milestone 1 update:** the user subsequently authorized M1. Pinned physical/model assets are staged and CPU-only model/contract checks passed; physics trials are pending dataset eligibility clarification. See [the M1 report](MILESTONE1_REPORT.md). The historical M0 observations below remain unchanged.
+**Milestone 1 update:** the user subsequently authorized M1. User startup eligibility is recorded. M1 is complete: the SOMA articulation, two full 61-motion tracker runs, corrected GPC inference, complete video/trace validation and standalone shutdown/restart passed. See [the M1 report](MILESTONE1_REPORT.md). The historical M0 observations below remain unchanged.
 
 ## Inspected host — 2026-10-25
 

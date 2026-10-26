@@ -1,0 +1,11 @@
+{
+  "original_max_steps": 600,
+  "selected_max_steps": 608,
+  "components": {
+    "gt_error": "<protomotions.envs.mdp_component.MdpComponent object at 0x725836cabb30>",
+    "gr_error": "<protomotions.envs.mdp_component.MdpComponent object at 0x725836cabb90>",
+    "max_joint_error": "<protomotions.envs.mdp_component.MdpComponent object at 0x725836cabc80>"
+  },
+  "reset_noise_and_push": "disabled by upstream evaluate()",
+  "all_motions": true
+}

@@ -48,7 +48,7 @@ command=("$docker_cmd" run --name "$container_name" --gpus all --runtime=nvidia
     --mount "type=bind,src=$assets/data/pretrained_models/motion_tracker/soma-bones/resolved_configs_inference.pt,dst=/studio/config.pt,readonly"
     --mount "type=bind,src=$output,dst=/studio/output"
     "$image" /studio/scripts/soma_articulation_probe.py --output /studio/output --device cuda:0 --viz none
-    --kit_args "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log")
+    --kit_args "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info")
 { printf '%q' "${command[0]}"; printf ' %q' "${command[@]:1}"; printf '\n'; } > "$evidence/command.txt"
 set +e
 timeout --signal=TERM --kill-after=30s 900 "${command[@]}" 2>&1 | tee "$evidence/run.log"
@@ -57,7 +57,7 @@ set -e
 printf '%s\n' "$result" > "$evidence/process-exit-code.txt"
 if [[ $result -ne 0 ]]; then "$docker_cmd" stop --time 20 "$container_name" || true; fi
 "$docker_cmd" inspect "$container_name" > "$evidence/container.json"
-for record in requested-config.json actual-mapping.json synthetic-reset.json result.json kit.log; do
+for record in requested-config.json actual-mapping.json synthetic-reset.json contact-summary.json result.json kit.log; do
     if [[ -f "$output/$record" ]]; then cp "$output/$record" "$evidence/$record"; fi
 done
 validation=0
@@ -70,7 +70,8 @@ log = (output / 'kit.log').read_text(errors='replace') if (output / 'kit.log').e
 cleanup = all(s in log for s in ['SimulationApp.close: Replicator shutdown finished', 'Simulation App Shutting Down', 'SimulationApp.close: shutting down app'])
 accepted = (code == 0 and report.get('status') == 'checks_passed_shutdown_pending'
     and report.get('scope') == 'articulation_adapter_only' and report.get('finite_samples') == 30
-    and report.get('shutdown', {}).get('stage_closed') is True and cleanup)
+    and report.get('shutdown', {}).get('stage_closed') is True
+    and report.get('maximum_contact_force_newtons', 0) > 1.0 and cleanup)
 artifacts = {}
 for path in output.rglob('*'):
     if path.is_file():

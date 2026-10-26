@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "artifact_directory": "artifacts/milestone1/gpc-20261026T175823Z",
+      "family": "gpc",
+      "seed": 0,
+      "controller_parameters_match": true,
+      "finite_states_actions_contacts": true,
+      "monotonic_trial_clocks": true,
+      "trace_dimensions_and_frame_counts_match": true,
+      "trials": [
+        {
+          "trial_id": 0,
+          "frames": 600,
+          "foot_contact_frames_above_1N": {
+            "RightFoot": 218,
+            "RightToeBase": 341,
+            "LeftFoot": 205,
+            "LeftToeBase": 365
+          },
+          "maximum_body_speed_mps": 7.259075900458552,
+          "minimum_body_origin_z_m": -0.005874209105968475,
+          "root_z_range_m": [
+            0.8161126375198364,
+            1.0374164581298828
+          ],
+          "maximum_rotation_norm_error": 1.7306517086090878e-07
+        }
+      ]
+    }
+  ]
+}

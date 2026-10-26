@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "milestone": 1,
+  "scope": "Pretrained physical SOMA baseline; separate standalone workers; no training or later milestone work",
+  "physics_hz": 120,
+  "control_hz": 30,
+  "body_count": 23,
+  "joint_count": 66,
+  "runtime_image": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+  "asset_lock": "config/milestone1-assets.lock.json",
+  "license_record": "config/milestone1-license.json",
+  "tracker_successes_per_run": [
+    61,
+    61
+  ],
+  "tracker_attempts_per_run": [
+    61,
+    61
+  ],
+  "tracker_mean_body_position_error_m": 0.07171118259429932,
+  "gpc_simulated_seconds": 20,
+  "gpc_maximum_measured_contact_force_newtons": 1486.491455078125,
+  "restart_comparison": {
+    "same_seed_and_inference_contract": true,
+    "same_attempt_outcomes": true,
+    "maximum_absolute_difference_per_trial_mean_metrics": {
+      "gt_error": 0.0,
+      "gr_error": 0.0,
+      "max_joint_error": 0.0
+    },
+    "byte_identical_trace_trials": 61,
+    "total_trials": 61,
+    "note": "Physics reruns need not be bit exact; saved poses are the authoritative replay."
+  },
+  "runs": [
+    {
+      "family": "tracker",
+      "seed": 0,
+      "evidence": "diagnostics/20261026T174229Z-milestone1-tracker",
+      "artifacts": "artifacts/milestone1/tracker-20261026T174229Z",
+      "recorded_frames": 12568,
+      "complete_trials": 61,
+      "process_exit_code": 0,
+      "files_hash_verified": 380
+    },
+    {
+      "family": "gpc",
+      "seed": 0,
+      "evidence": "diagnostics/20261026T175823Z-milestone1-gpc",
+      "artifacts": "artifacts/milestone1/gpc-20261026T175823Z",
+      "recorded_frames": 600,
+      "complete_trials": 1,
+      "process_exit_code": 0,
+      "files_hash_verified": 17
+    },
+    {
+      "family": "tracker",
+      "seed": 0,
+      "evidence": "diagnostics/20261026T175955Z-milestone1-tracker",
+      "artifacts": "artifacts/milestone1/tracker-20261026T175955Z",
+      "recorded_frames": 12568,
+      "complete_trials": 61,
+      "process_exit_code": 0,
+      "files_hash_verified": 380
+    }
+  ],
+  "evidence": "diagnostics/20261026T180942Z-milestone1-acceptance",
+  "report": "docs/MILESTONE1_REPORT.md",
+  "limitations": [
+    "Pretrained reference tracking and prior inference do not establish a newly learned task",
+    "Recorded video is 30 fps in simulation time; full instrumentation processed about 20 frames per wall-clock second",
+    "Accepted lifecycle uses separate standalone workers; native slow/in-process teardown remains unresolved",
+    "Remote Isaac 6.0 sky/material URLs are recorded; rendering from an empty offline cache is untested",
+    "Pinned tracker last.ckpt and last_lab.ckpt have identical publisher LFS hashes"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "checks_passed_shutdown_pending",
+  "scope": "articulation_adapter_only",
+  "physics_hz": 120,
+  "control_hz": 30,
+  "control_steps": 30,
+  "bodies": 23,
+  "joints": 66,
+  "finite_samples": 30,
+  "maximum_contact_force_newtons": 351.6528625488281,
+  "motion_data_loaded": false,
+  "policy_used": false,
+  "tracking_quality_tested": false,
+  "balance_tested": false,
+  "sources": {
+    "IsaacLab": {
+      "revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "repository": "https://github.com/isaac-sim/IsaacLab.git",
+      "archive_sha256": "3059c92d5667dc5250ca1f217edeb3bb5bfb1da7383bc0c1db3cb8146f3fdce2",
+      "lfs_assets": "not_fetched"
+    },
+    "ProtoMotions": {
+      "revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+      "repository": "https://github.com/NVlabs/ProtoMotions.git",
+      "archive_sha256": "71a58d1e140a14b6aeca18bd62135da0dd0d551fe1f3daba818d929fe4f91526",
+      "lfs_assets": "not_fetched"
+    }
+  },
+  "shutdown": {
+    "simulation_context_cleared": true,
+    "stage_closed": true,
+    "fast_shutdown": true,
+    "skip_cleanup": false
+  }
+}

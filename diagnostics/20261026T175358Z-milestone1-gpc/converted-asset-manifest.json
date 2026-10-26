@@ -1,0 +1,46 @@
+{
+  "source_cache": ".runtime/isaac-home/.cache/protomotions/isaaclab_mjcf_usd/soma23_humanoid_cf6b40f5cbf2deeb",
+  "archived_asset_root": "artifacts/milestone1/scene-assets-20261026T175358Z",
+  "used_by": [
+    "tracker-20261026T174229Z",
+    "gpc-20261026T175358Z"
+  ],
+  "files": {
+    "config.yaml": {
+      "bytes": 694,
+      "sha256": "95d5f7e14d64debcf788855619be777718ccdde668905d5486e699f90e9f9ce3"
+    },
+    ".asset_hash": {
+      "bytes": 32,
+      "sha256": "da2fedc6181c3da1166dbf92263c6ab3e509f3b370af5408380ca51a6d2d7305"
+    },
+    "soma23_humanoid/soma23_humanoid.usda": {
+      "bytes": 2836,
+      "sha256": "716f86a0c5bcf7caffceb766a0db33512ba0a9ece4607ff728488b87760f6ca3"
+    },
+    "soma23_humanoid/payloads/base.usda": {
+      "bytes": 46541,
+      "sha256": "e88067b24ccb60408a4267b9eacd230d4cfbe2192e4706631b5f0a87b55b6ca2"
+    },
+    "soma23_humanoid/payloads/materials.usda": {
+      "bytes": 1917,
+      "sha256": "8d71ba23b3f5e5932c470597b73496e8f420ead379218ad46de0f524d7b286f2"
+    },
+    "soma23_humanoid/payloads/robot.usda": {
+      "bytes": 18725,
+      "sha256": "2cb9375376c07f520e481cc290e544554b637ae862ff3cfca13091bd2bad5bcb"
+    },
+    "soma23_humanoid/payloads/Physics/physx.usda": {
+      "bytes": 73508,
+      "sha256": "bcdb982b0fe2471ea867202c2ed81e0a5f1fade3b166cbac49ae4218489456e5"
+    },
+    "soma23_humanoid/payloads/Physics/physics.usda": {
+      "bytes": 88401,
+      "sha256": "7f9785fc4c4951e7cdf97c6281a0cf1d03ba5dc236e7abb55526841fd2a368b6"
+    },
+    "soma23_humanoid/payloads/Physics/mujoco.usda": {
+      "bytes": 60219,
+      "sha256": "002fb1026b61a6ce02d3f420a44ece58955a5ac1ab48d5f253d3895efc4777b3"
+    }
+  }
+}

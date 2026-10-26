@@ -9,7 +9,7 @@ User authorized **Milestone 1** after Milestone 0 completion. Preserve the host 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
 | 0 — Reproducible runtime | Complete for standalone workers | Two full exit-0 runs: `diagnostics/20261026T164452-runtime/`; official checker, Mixar, media and dependency audit passed |
-| 1 — Physical human baseline | Blocked; incomplete, motion eligibility pending and articulation probe stopped | CPU checks passed; probe exit 0 but wrapper exit 4: `diagnostics/20261026T171414Z-soma-articulation/`; see `docs/MILESTONE1_REPORT.md` |
+| 1 — Physical human baseline | Complete for standalone workers | Two 61/61 tracker passes, GPC rollout, video/trace/controller/restart audit: `diagnostics/20261026T180942Z-milestone1-acceptance/`; see `docs/MILESTONE1_REPORT.md` |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
 | 4 — Second skill | Not started | — |
@@ -156,3 +156,26 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - The same unanswered BONES-SEED eligibility question has persisted across the initial M1 turn and two automatic continuations. No user eligibility statement or separate license has arrived. Independent CPU and articulation preparation is already recorded; motion trials cannot proceed on an assumed answer.
 - Further Isaac runs also remain stopped under the explicit project failure rule. M1 still lacks accepted contacts/shutdown evidence, tracker trials, measurements/video, and runtime GPC behavior. No narrower preparation check establishes milestone completion.
 - Goal marked blocked pending user input. All source/image/host constraints and diagnostics remain preserved; no new simulation was launched during this audit.
+
+## 2026-10-26 UTC — User confirmed startup eligibility; continuation
+
+- User answered the pending dataset question: “a startup below $1M annual revenue”. Recorded the statement in `config/milestone1-license.json`; no separate license or paid activation was inferred.
+- Continuing the existing M1 request with the now-resolved prerequisite. Preserved previous failed probe results. Applied the diagnosed launcher/test-setup corrections only: explicit Info-level Kit logs and synthetic reset at (5, 5, 1.15), inside the flat terrain with clearance. Added an observed foot/toe contact force requirement (>1 N); no model/physics setting or source pin changed.
+- Corrected probe validation is pending. A new compatibility failure will again stop execution with evidence.
+
+- Corrected articulation probe passed (`diagnostics/20261026T173639Z-soma-articulation/`): 30 finite steps, 351.65 N maximum contact, child/wrapper exit 0, explicit scene cleanup and all required Kit shutdown records. CPU motion inventory found 61 tracker motions (418.93 s); the CPU inventory estimates up to 607 control frames, beyond the upstream default 600-frame cap. Runtime CUDA division rounds some clip lengths differently: the loaded simulator inventory requires 608 frames for the longest clip and 12,568 frames total; recording follows those runtime lengths. Full tracker recording started with only that cap lifted; frozen model/controller settings and evaluation thresholds remain unchanged.
+
+## 2026-10-26 UTC — First tracker pass; GPC instrumentation stop and authorized correction
+
+- Full tracker run passed in `diagnostics/20261026T174229Z-milestone1-tracker/`: 61/61 attempts successful, 12,568 complete 640×480 video frames at 30 fps, finite physical states/actions, exact joint/gain audit, verified contact measurements, exit 0 and accepted cleanup. Original evaluator mean body-position error: 0.071711 m.
+- GPC executed 600 finite recorded frames, then failed the contact assertion (`diagnostics/20261026T175358Z-milestone1-gpc/`, child 1/wrapper 4). Preserved container, commands, logs, snapshots, video/trace and hashes; stopped further Isaac runs. Saved configuration proves `robot.contact_bodies=None` and an empty actual sensor map. ProtoMotions returns zero-filled force buffers without sensors; this is an unavailable measurement prerequisite, not evidence of absent physical contact or backend incompatibility.
+- Prepared a correction enabling the four foot/toe sensors and checking their presence before inference. GPC has `observe_contacts=false`, so the sensors do not add policy inputs; weights, gains, timing and backend are unchanged. User explicitly authorized: “Resume corrected validation”. Rerunning the corrected GPC test, then the full tracker restart check. Historical failure evidence remains unchanged.
+
+## 2026-10-26 UTC — Milestone 1 accepted
+
+- Corrected GPC run passed (`diagnostics/20261026T175823Z-milestone1-gpc/`): 600 complete finite frames, 1,486.49 N maximum measured contact, video/trace validation and clean standalone shutdown. The added measurement sensors did not change any of the 600 actions, joint positions or body positions relative to the preserved earlier rollout. No task-success claim or training.
+- Second full tracker process passed (`diagnostics/20261026T175955Z-milestone1-tracker/`): 61/61 successful attempts, 12,568 complete video frames, child and parent exit 0, checked scene/context cleanup and all shutdown log markers. All 61 traces are byte-identical to the first process; all per-motion metrics and outcomes match.
+- Independent CPU audit verified finite values, dimensions, monotonic clocks, quaternion norms, complete frame counts and every actual joint gain/armature/effort/velocity limit against the frozen configuration. All 777 accepted-run artifact files rehashed successfully. The exact audit command, source snapshot, exit 0 and aggregate result are in `diagnostics/20261026T180942Z-milestone1-acceptance/`.
+- Recorded acceptance in `config/milestone1.json`; updated README, baseline, setup/provenance records and the full M1 report with commands, measurements, video links, license confirmation, preserved failures and limitations. Python compilation, shell syntax and project whitespace checks passed.
+- No OS, NVIDIA driver, image, package-lock, pinned-source or backend change. Vendor checkouts remain clean; no simulation containers remain running. The accepted mode remains separate standalone workers. Videos are timed at 30 fps; full recording throughput was approximately 20 control frames per wall-clock second, not a realtime UI benchmark.
+- **Milestone 1 is complete.** This reproduces pretrained tracking and prior inference; it is not a newly learned skill. Milestones 2–5 remain unstarted and unauthorized.

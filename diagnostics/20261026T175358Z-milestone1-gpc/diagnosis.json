@@ -1,0 +1,23 @@
+{
+  "classification": "blocked_contact_measurement_prerequisite",
+  "source_robot_contact_bodies": null,
+  "actual_contact_sensors": [],
+  "contact_buffer_semantics": "zeros for bodies without sensors; not measured zero contact",
+  "recorded_frames": 600,
+  "first_root_position": [
+    84.40353393554688,
+    234.09193420410156,
+    0.991992712020874
+  ],
+  "last_root_position": [
+    94.59452056884766,
+    242.75990295410156,
+    0.9443376064300537
+  ],
+  "model_inference_completed": true,
+  "runtime_accepted": false,
+  "repeat_tracker_executed": false,
+  "further_isaac_runs_stopped": true,
+  "prepared_correction": "Enable four foot/toe sensors for measurement and assert availability before model execution. No gain/timing/model changes.",
+  "correction_executed": false
+}

@@ -1,0 +1,676 @@
+{
+  "status": "passed",
+  "trials": [
+    {
+      "trial_id": 0,
+      "decoded_frame_count": 439,
+      "trace_samples": 439,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 1,
+      "decoded_frame_count": 160,
+      "trace_samples": 160,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 2,
+      "decoded_frame_count": 272,
+      "trace_samples": 272,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 3,
+      "decoded_frame_count": 179,
+      "trace_samples": 179,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 4,
+      "decoded_frame_count": 199,
+      "trace_samples": 199,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 5,
+      "decoded_frame_count": 194,
+      "trace_samples": 194,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 6,
+      "decoded_frame_count": 119,
+      "trace_samples": 119,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 7,
+      "decoded_frame_count": 181,
+      "trace_samples": 181,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 8,
+      "decoded_frame_count": 146,
+      "trace_samples": 146,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 9,
+      "decoded_frame_count": 184,
+      "trace_samples": 184,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 10,
+      "decoded_frame_count": 111,
+      "trace_samples": 111,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 11,
+      "decoded_frame_count": 141,
+      "trace_samples": 141,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 12,
+      "decoded_frame_count": 145,
+      "trace_samples": 145,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 13,
+      "decoded_frame_count": 81,
+      "trace_samples": 81,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 14,
+      "decoded_frame_count": 212,
+      "trace_samples": 212,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 15,
+      "decoded_frame_count": 115,
+      "trace_samples": 115,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 16,
+      "decoded_frame_count": 102,
+      "trace_samples": 102,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 17,
+      "decoded_frame_count": 218,
+      "trace_samples": 218,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 18,
+      "decoded_frame_count": 338,
+      "trace_samples": 338,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 19,
+      "decoded_frame_count": 195,
+      "trace_samples": 195,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 20,
+      "decoded_frame_count": 300,
+      "trace_samples": 300,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 21,
+      "decoded_frame_count": 105,
+      "trace_samples": 105,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 22,
+      "decoded_frame_count": 249,
+      "trace_samples": 249,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 23,
+      "decoded_frame_count": 74,
+      "trace_samples": 74,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 24,
+      "decoded_frame_count": 284,
+      "trace_samples": 284,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 25,
+      "decoded_frame_count": 441,
+      "trace_samples": 441,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 26,
+      "decoded_frame_count": 78,
+      "trace_samples": 78,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 27,
+      "decoded_frame_count": 108,
+      "trace_samples": 108,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 28,
+      "decoded_frame_count": 316,
+      "trace_samples": 316,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 29,
+      "decoded_frame_count": 188,
+      "trace_samples": 188,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 30,
+      "decoded_frame_count": 223,
+      "trace_samples": 223,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 31,
+      "decoded_frame_count": 274,
+      "trace_samples": 274,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 32,
+      "decoded_frame_count": 103,
+      "trace_samples": 103,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 33,
+      "decoded_frame_count": 102,
+      "trace_samples": 102,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 34,
+      "decoded_frame_count": 425,
+      "trace_samples": 425,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 35,
+      "decoded_frame_count": 608,
+      "trace_samples": 608,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 36,
+      "decoded_frame_count": 326,
+      "trace_samples": 326,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 37,
+      "decoded_frame_count": 180,
+      "trace_samples": 180,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 38,
+      "decoded_frame_count": 320,
+      "trace_samples": 320,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 39,
+      "decoded_frame_count": 142,
+      "trace_samples": 142,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 40,
+      "decoded_frame_count": 222,
+      "trace_samples": 222,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 41,
+      "decoded_frame_count": 266,
+      "trace_samples": 266,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 42,
+      "decoded_frame_count": 295,
+      "trace_samples": 295,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 43,
+      "decoded_frame_count": 197,
+      "trace_samples": 197,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 44,
+      "decoded_frame_count": 174,
+      "trace_samples": 174,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 45,
+      "decoded_frame_count": 182,
+      "trace_samples": 182,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 46,
+      "decoded_frame_count": 122,
+      "trace_samples": 122,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 47,
+      "decoded_frame_count": 153,
+      "trace_samples": 153,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 48,
+      "decoded_frame_count": 179,
+      "trace_samples": 179,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 49,
+      "decoded_frame_count": 255,
+      "trace_samples": 255,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 50,
+      "decoded_frame_count": 169,
+      "trace_samples": 169,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 51,
+      "decoded_frame_count": 239,
+      "trace_samples": 239,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 52,
+      "decoded_frame_count": 265,
+      "trace_samples": 265,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 53,
+      "decoded_frame_count": 175,
+      "trace_samples": 175,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 54,
+      "decoded_frame_count": 177,
+      "trace_samples": 177,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 55,
+      "decoded_frame_count": 109,
+      "trace_samples": 109,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 56,
+      "decoded_frame_count": 166,
+      "trace_samples": 166,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 57,
+      "decoded_frame_count": 297,
+      "trace_samples": 297,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 58,
+      "decoded_frame_count": 72,
+      "trace_samples": 72,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 59,
+      "decoded_frame_count": 174,
+      "trace_samples": 174,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    },
+    {
+      "trial_id": 60,
+      "decoded_frame_count": 103,
+      "trace_samples": 103,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    }
+  ]
+}

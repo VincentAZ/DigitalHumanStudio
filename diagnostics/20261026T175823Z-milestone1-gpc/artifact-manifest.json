@@ -1,0 +1,73 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone1/gpc-20261026T175823Z",
+  "files": {
+    "media-validation.json": {
+      "bytes": 219,
+      "sha256": "8b6bf412e2f28344990c2aab83531dc21a228e070b325bf3a1c2d71fdcfbd602"
+    },
+    "result.json": {
+      "bytes": 631,
+      "sha256": "f45ad910d4c73cd04f3f2630ca9da426f485367534a6db5922ee668e69c88dcd"
+    },
+    "final-scene.usda": {
+      "bytes": 174472,
+      "sha256": "61cc438499772a25568c7712a9b439a2ac83074e504f9b9d2ed13c691988f674"
+    },
+    "kit.log": {
+      "bytes": 768025,
+      "sha256": "69d3fcb55234e9c4bd028d2a336a0c112598b947f83047db56df56135cca6787"
+    },
+    "initial-scene.usda": {
+      "bytes": 174366,
+      "sha256": "e018eedbd3b0062acbdd5253c3f6c5b3fb02ba6260f06760898c28b0c6165573"
+    },
+    "run-contract.json": {
+      "bytes": 2562,
+      "sha256": "ab78d7a2e4ec5e52373c5f62c293e4f150ac03b8a3bbf9507ebd6da88489f0da"
+    },
+    "measurements.json": {
+      "bytes": 184,
+      "sha256": "44d740d95add83a0fa43dcb49a93da7ce63c9d31117b2d7c95c9db429ecd7a62"
+    },
+    "actual-simulator.json": {
+      "bytes": 49544,
+      "sha256": "b58242d170ce9dc24bc89576cba0e54fb472494eb30edef0dd469006c4493ea2"
+    },
+    "resolved-configs.json": {
+      "bytes": 58101,
+      "sha256": "0404e5315a8b62dcfcb17d3ab8db5b078c4cd565cbfeefdc7e110d1cbcc911f7"
+    },
+    "motion-inventory.json": {
+      "bytes": 144,
+      "sha256": "8b0cc29dd2933153d55a50d6f2990939c04e3fe604a63640c291ea36f71a0386"
+    },
+    "trials.json": {
+      "bytes": 689,
+      "sha256": "50d34fd40f6a35f02ea07a4ff27afd46f6fd2d05bbeae649064fa7a43720e686"
+    },
+    "trial-000/performance.mp4": {
+      "bytes": 4329664,
+      "sha256": "f0979609acf4641d81f82dc6b0a15f557a1799b3e4fccb9760446f013b0f489e"
+    },
+    "trial-000/frame-00599.png": {
+      "bytes": 293578,
+      "sha256": "a2a7412b4d07e0cab11194173aadc8e498f7d9d820543172af6845ee5132771e"
+    },
+    "trial-000/frame-00300.png": {
+      "bytes": 290205,
+      "sha256": "97635b9356c979a839659016254cfb6c3c38a101ac403b785ab247bf47307c29"
+    },
+    "trial-000/summary.json": {
+      "bytes": 645,
+      "sha256": "8dd4cefe54e25cd47e0aaaf0d64d4a2aaa9979ee3a5db81ca3d556c14893960e"
+    },
+    "trial-000/frame-00000.png": {
+      "bytes": 318025,
+      "sha256": "3c3bd061509fde750a348c7956efdc938c7778eb08e5088d813cdb81662208d0"
+    },
+    "trial-000/trace.jsonl": {
+      "bytes": 8911314,
+      "sha256": "a15a9a18bf44654785b3609d72ca1436fe7c30bee9ffe54e1c0f466c77be9462"
+    }
+  }
+}

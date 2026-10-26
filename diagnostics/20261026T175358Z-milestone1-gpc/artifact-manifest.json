@@ -1,0 +1,57 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone1/gpc-20261026T175358Z",
+  "files": {
+    "kit.log": {
+      "bytes": 766790,
+      "sha256": "88a1dfa3f3a35d2c1a74a82d569438c1358edbd57fd7eae4242b796509a601b5"
+    },
+    "initial-scene.usda": {
+      "bytes": 169727,
+      "sha256": "219d7db5c2dc682dba53473ee8f26bd525e4c3188dcd6a4a957e472416e18ed1"
+    },
+    "run-contract.json": {
+      "bytes": 2373,
+      "sha256": "3ed84090aed867b63512f67d7b770a053c8f3ad7795e8aa37a5066053d23f49a"
+    },
+    "actual-simulator.json": {
+      "bytes": 38188,
+      "sha256": "2ddc868687ac7ee0aa7ccecaeaa69ab68db061eb1f2715d7e12083e518937cbe"
+    },
+    "resolved-configs.json": {
+      "bytes": 58019,
+      "sha256": "c392a1ae8e9b84894f04b7c65191851448fe7c966e43fe13de512bca12f10fe8"
+    },
+    "motion-inventory.json": {
+      "bytes": 144,
+      "sha256": "8b0cc29dd2933153d55a50d6f2990939c04e3fe604a63640c291ea36f71a0386"
+    },
+    "trials.json": {
+      "bytes": 553,
+      "sha256": "63bd64a356d4e4b11f4898aa740a2268aa6b6a035f0e5c26a833a755a6cf3b97"
+    },
+    "trial-000/performance.mp4": {
+      "bytes": 4329664,
+      "sha256": "f0979609acf4641d81f82dc6b0a15f557a1799b3e4fccb9760446f013b0f489e"
+    },
+    "trial-000/frame-00599.png": {
+      "bytes": 293578,
+      "sha256": "a2a7412b4d07e0cab11194173aadc8e498f7d9d820543172af6845ee5132771e"
+    },
+    "trial-000/frame-00300.png": {
+      "bytes": 290205,
+      "sha256": "97635b9356c979a839659016254cfb6c3c38a101ac403b785ab247bf47307c29"
+    },
+    "trial-000/summary.json": {
+      "bytes": 521,
+      "sha256": "a73ac9b4f8890b47798ec5c910e209e8d1943d4d8007176a1b84099ce9a42f53"
+    },
+    "trial-000/frame-00000.png": {
+      "bytes": 318025,
+      "sha256": "3c3bd061509fde750a348c7956efdc938c7778eb08e5088d813cdb81662208d0"
+    },
+    "trial-000/trace.jsonl": {
+      "bytes": 8793934,
+      "sha256": "1e4a292223384ff35298680a622ebfbfac31f042dbb87d7d76f3c5ce0c7ad1cf"
+    }
+  }
+}

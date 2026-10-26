@@ -313,5 +313,5 @@
   ],
   "provenance_note": "At this revision last_lab.ckpt and last.ckpt have identical LFS OIDs; no separate fine-tune identity can be established.",
   "motion_data_included": true,
-  "motion_data_eligibility": "pending_user_clarification; downloaded before review, not loaded or executed"
+  "motion_data_eligibility": "confirmed_by_user: startup below $1M annual revenue; config/milestone1-license.json"
 }

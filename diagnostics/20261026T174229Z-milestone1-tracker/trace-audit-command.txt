@@ -1,0 +1,1 @@
+python3 scripts/audit_milestone1.py artifacts/milestone1/tracker-20261026T174229Z --output diagnostics/20261026T174229Z-milestone1-tracker/trace-audit.json

@@ -1,0 +1,44 @@
+{
+  "status": "checks_passed_shutdown_pending",
+  "family": "tracker",
+  "seed": 0,
+  "physics_hz": 120,
+  "control_hz": 30,
+  "trials": 61,
+  "recorded_frames": 12568,
+  "all_trials_complete": true,
+  "all_sampled_states_actions_finite": true,
+  "measurements": {
+    "evaluation_log": {
+      "eval/success_rate": 1.0,
+      "eval/num_evaluated": 61,
+      "eval/gt_error/failure_rate": 0.0,
+      "eval/gt_error/mean": 0.07171118259429932,
+      "eval/gt_error/max": 0.3936629891395569,
+      "eval/gt_error/min": 0.01734137535095215,
+      "eval/gr_error/mean": 0.13885991275310516,
+      "eval/gr_error/max": 0.44945886731147766,
+      "eval/gr_error/min": 0.039905667304992676,
+      "eval/max_joint_error/mean": 0.1258799433708191,
+      "eval/max_joint_error/max": 0.5780567526817322,
+      "eval/max_joint_error/min": 0.03609529510140419,
+      "eval/normalized_jerk_mean": 380.6436767578125,
+      "eval/high_jerk_frame_percentage_mean": 6.7165794190721675,
+      "eval/action_delta_mean_rad": 0.011071273249280105,
+      "eval/action_delta_max_rad": 0.07761931350286745,
+      "eval/action_rate_mean_rad_s": 0.3321381974784032,
+      "eval/action_delta_mean_deg": 0.6343377668220292,
+      "eval/action_delta_max_deg": 4.447262828859317
+    },
+    "upstream_score": 1.0,
+    "items": 61,
+    "studio_failed_attempts": 0
+  },
+  "training_performed": false,
+  "shutdown": {
+    "simulation_context_cleared": true,
+    "stage_closed": true,
+    "fast_shutdown": true,
+    "skip_cleanup": false
+  }
+}

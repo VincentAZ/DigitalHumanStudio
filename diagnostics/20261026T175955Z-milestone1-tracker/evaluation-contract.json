@@ -1,0 +1,33 @@
+{
+  "original_max_steps": 600,
+  "selected_max_steps": 608,
+  "components": {
+    "gt_error": {
+      "compute_func": "mean_body_pos_error",
+      "dynamic_vars": {
+        "current_rigid_body_pos": "current.rigid_body_pos",
+        "ref_rigid_body_pos": "mimic.ref_state.rigid_body_pos"
+      },
+      "compile": true,
+      "threshold": 0.5
+    },
+    "gr_error": {
+      "compute_func": "mean_body_rot_error",
+      "dynamic_vars": {
+        "current_rigid_body_rot": "current.rigid_body_rot",
+        "ref_rigid_body_rot": "mimic.ref_state.rigid_body_rot"
+      },
+      "compile": true
+    },
+    "max_joint_error": {
+      "compute_func": "max_body_pos_error",
+      "dynamic_vars": {
+        "current_rigid_body_pos": "current.rigid_body_pos",
+        "ref_rigid_body_pos": "mimic.ref_state.rigid_body_pos"
+      },
+      "compile": true
+    }
+  },
+  "reset_noise_and_push": "disabled by upstream evaluate()",
+  "all_motions": true
+}

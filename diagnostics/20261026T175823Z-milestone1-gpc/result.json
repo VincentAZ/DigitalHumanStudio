@@ -1,0 +1,28 @@
+{
+  "status": "checks_passed_shutdown_pending",
+  "family": "gpc",
+  "seed": 0,
+  "physics_hz": 120,
+  "control_hz": 30,
+  "trials": 1,
+  "recorded_frames": 600,
+  "all_trials_complete": true,
+  "all_sampled_states_actions_finite": true,
+  "measurements": {
+    "items": 1,
+    "rollout_seconds": 20,
+    "model_inputs": [
+      "max_coords_obs"
+    ],
+    "embedded_decoder_loaded": true,
+    "task_adaptation": false,
+    "task_success_claimed": false
+  },
+  "training_performed": false,
+  "shutdown": {
+    "simulation_context_cleared": true,
+    "stage_closed": true,
+    "fast_shutdown": true,
+    "skip_cleanup": false
+  }
+}

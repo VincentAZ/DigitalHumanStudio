@@ -1,0 +1,199 @@
+All pinned assets verified; user eligibility statement recorded.
+Loading user config located at: '/studio-home/kit/data/Kit/IsaacLab/3.0/user.config.json'
+2026-10-26T17:53:59Z [Info] [carb] Logging to file: /studio/output/kit.log
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_contrib] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_contrib' or '/opt/IsaacLab/source/isaaclab_contrib/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_teleop] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_teleop' or '/opt/IsaacLab/source/isaaclab_teleop/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ovphysx] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ovphysx' or '/opt/IsaacLab/source/isaaclab_ovphysx/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ppisp] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ppisp' or '/opt/IsaacLab/source/isaaclab_ppisp/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_mimic] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_mimic' or '/opt/IsaacLab/source/isaaclab_mimic/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_experimental] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_experimental' or '/opt/IsaacLab/source/isaaclab_experimental/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_newton] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_newton' or '/opt/IsaacLab/source/isaaclab_newton/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_visualizers] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_visualizers' or '/opt/IsaacLab/source/isaaclab_visualizers/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_tasks_experimental] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_tasks_experimental' or '/opt/IsaacLab/source/isaaclab_tasks_experimental/config'
+2026-10-26T17:53:59Z [5ms] [Warning] [omni.ext.plugin] [ext: isaaclab_physx] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_physx' or '/opt/IsaacLab/source/isaaclab_physx/config'
+2026-10-26T17:53:59Z [6ms] [Warning] [omni.ext.plugin] [ext: isaaclab_tasks] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_tasks' or '/opt/IsaacLab/source/isaaclab_tasks/config'
+2026-10-26T17:53:59Z [6ms] [Warning] [omni.ext.plugin] [ext: isaaclab] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab' or '/opt/IsaacLab/source/isaaclab/config'
+2026-10-26T17:53:59Z [6ms] [Warning] [omni.ext.plugin] [ext: isaaclab_rl] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_rl' or '/opt/IsaacLab/source/isaaclab_rl/config'
+2026-10-26T17:53:59Z [6ms] [Warning] [omni.ext.plugin] [ext: isaaclab_assets] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_assets' or '/opt/IsaacLab/source/isaaclab_assets/config'
+2026-10-26T17:53:59Z [6ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ov] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ov' or '/opt/IsaacLab/source/isaaclab_ov/config'
+2026-10-26T17:53:59Z [128ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:53:59Z [199ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:53:59Z [281ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:53:59Z [372ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:53:59Z [474ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:53:59Z [585ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:00Z [706ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:00Z [838ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:00Z [979ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:00Z [1,131ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:00Z [1,292ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:00Z [1,464ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:00Z [1,646ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:01Z [1,837ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:01Z [2,039ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:01Z [2,250ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:01Z [2,471ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:02Z [2,703ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:02Z [2,945ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:02Z [3,197ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:02Z [3,459ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:03Z [3,731ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:03Z [4,013ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:03Z [4,305ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:03Z [4,606ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:04Z [4,917ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:04Z [5,239ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:04Z [5,571ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:05Z [5,913ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:05Z [6,265ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:05Z [6,626ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:06Z [6,996ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:06Z [7,378ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793037249.662093       1 descriptor_database.cc:633] File already exists in database: grpc/health/v1/health.proto
+W0000 00:00:1793037249.662115       1 message.cc:301] Protobuf GeneratedMessageFactory: File is already registered: grpc/health/v1/health.proto
+2026-10-26T17:54:07Z [7,770ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:07Z [8,172ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:07Z [8,584ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:08Z [9,004ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:08Z [9,436ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:09Z [9,878ms] [Warning] [carb.omniclient.plugin]  100: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-456829B4.config.json\\\"\")"
+2026-10-26T17:54:09Z [10,556ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 595.99.02     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX PRO 6000 Blackwell .. | Yes: 0 |     | 97887   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2bb1      | fee22419.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 24.04.3 LTS (Noble Numbat) ubuntu, Version: 24.04.3, Kernel: 7.0.0-38-generic
+| Processor: AMD Ryzen 9 9950X 16-Core Processor
+| Cores: 16 | Logical Cores: 32
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 124087 | Free Memory: 103156
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-10-26T17:54:10Z [11,171ms] [Warning] [omni.rtx] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-10-26T17:54:10Z [11,180ms] [Warning] [omni.rtx] IOMMU is enabled.
+2026-10-26T17:54:11Z [11,899ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-26T17:54:11Z [11,899ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-26T17:54:11Z [11,975ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-26T17:54:11Z [11,975ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+[ISAACLAB] AppLauncher initialization complete
+[ISAACLAB] Kit version: 110.1.1+production.305458.6312fa25.gl
+[ISAACLAB] Kit kernel:  210.1.5+release.12978.b22b555f.gl
+[ISAACLAB] Kit hash:    6312fa25
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+/opt/ProtoMotions/protomotions/utils/rotations.py:199: SyntaxWarning: invalid escape sequence '\*'
+  Combine two set of 3D rotations together using \**\* operator. The shape needs to be
+<unknown>:4: SyntaxWarning: invalid escape sequence '\*'
+INFO: Seed set to 0
+INFO: You are using a CUDA device ('NVIDIA RTX PRO 6000 Blackwell Workstation Edition') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Initial heightfield size: 2800x3100 = 8680000 vertices
+Optimizing mesh by merging flat regions...
+Optimized mesh vertex count: 56
+Loading motions from packaged file which is faster
+Loading motion library from /studio/assets/data/motion_for_trackers/crouch_soma23.pt
+Creating empty SceneLib (no scenes)
+[INFO]: Registered backend 'physx' for factory FrameView.
+[INFO]: Registered backend 'physx' for factory RigidObject.
+[INFO]: Registered backend 'physx' for factory Articulation.
+[INFO]: Physics scene prim path: /physicsScene
+[INFO]: Setup complete...
+Warning: No contacts to smooth (contacts are None, likely all-zero at load time)
+[INFO]: Simulation parameters for joints in /World/envs/env_.*/Robot:
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                   Simulation Joint Information (Prim path: /World/envs/env_.*/Robot)                                                   |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+| Index | Name              | Stiffness | Damping | Armature | Static Friction | Dynamic Friction | Viscous Friction | Position Limits | Velocity Limits | Effort Limits |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+|   0   | Spine1_x:0        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   1   | Spine1_x:1        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   2   | Spine1_x:2        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   3   | RightLeg_x:0      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   4   | RightLeg_x:1      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   5   | RightLeg_x:2      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   6   | LeftLeg_x:0       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   7   | LeftLeg_x:1       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   8   | LeftLeg_x:2       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   9   | Spine2_x:0        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   10  | Spine2_x:1        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   11  | Spine2_x:2        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   12  | RightShin_x:0     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   13  | RightShin_x:1     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   14  | RightShin_x:2     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   15  | LeftShin_x:0      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   16  | LeftShin_x:1      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   17  | LeftShin_x:2      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   18  | Chest_x:0         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   19  | Chest_x:1         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   20  | Chest_x:2         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   21  | RightFoot_x:0     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   22  | RightFoot_x:1     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   23  | RightFoot_x:2     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   24  | LeftFoot_x:0      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   25  | LeftFoot_x:1      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   26  | LeftFoot_x:2      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   27  | Neck1_x:0         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   28  | Neck1_x:1         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   29  | Neck1_x:2         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   30  | RightShoulder_x:0 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   31  | RightShoulder_x:1 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   32  | RightShoulder_x:2 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   33  | LeftShoulder_x:0  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   34  | LeftShoulder_x:1  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   35  | LeftShoulder_x:2  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   36  | RightToeBase_x:0  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   37  | RightToeBase_x:1  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   38  | RightToeBase_x:2  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   39  | LeftToeBase_x:0   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   40  | LeftToeBase_x:1   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   41  | LeftToeBase_x:2   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   42  | Neck2_x:0         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   43  | Neck2_x:1         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   44  | Neck2_x:2         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   45  | RightArm_x:0      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   46  | RightArm_x:1      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   47  | RightArm_x:2      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   48  | LeftArm_x:0       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   49  | LeftArm_x:1       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   50  | LeftArm_x:2       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   51  | Head_x:0          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   52  | Head_x:1          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   53  | Head_x:2          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   54  | RightForeArm_x:0  |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   55  | RightForeArm_x:1  |  300.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   56  | RightForeArm_x:2  |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   57  | LeftForeArm_x:0   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   58  | LeftForeArm_x:1   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   59  | LeftForeArm_x:2   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   60  | RightHand_x:0     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   61  | RightHand_x:1     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   62  | RightHand_x:2     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   63  | LeftHand_x:0      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   64  | LeftHand_x:1      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   65  | LeftHand_x:2      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+[INFO]: Registered backend 'physx' for factory Renderer.
+[INFO]: Created new renderer for simulation: IsaacRtxRenderer
+[INFO]: Using renderer: IsaacRtxRenderer
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/torch/_inductor/compile_fx.py:322: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+Loading model from checkpoint: /studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt
+STUDIO_TRIAL {"trial_id": 0, "expected_control_steps": 600, "recorded_frames": 600, "complete": true, "first_termination_step": null, "first_upstream_tracking_failure_step": null, "maximum_contact_force_newtons": 0.0, "maximum_quaternion_norm_error": 1.7881393432617188e-07, "minimum_image_std": 17.425264166266352, "elapsed_wall_seconds": 34.228124867004226, "resets_inside_trial": 0, "failure_policy": "A termination/failure marks the attempt failed; subsequent frames remain recorded without resetting."}
+Traceback (most recent call last):
+  File "/studio/scripts/milestone1_baseline.py", line 283, in <module>
+    result = run_baseline()
+             ^^^^^^^^^^^^^^
+  File "/studio/scripts/milestone1_baseline.py", line 271, in run_baseline
+    assert max(t['maximum_contact_force_newtons'] for t in trials) > 1.0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+studio-m1-gpc-20261026T175358Z
+STOP: gpc baseline failed its runtime/evidence gate. Evidence: /home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T175358Z-milestone1-gpc

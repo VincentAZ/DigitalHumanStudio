@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "trials": [
+    {
+      "trial_id": 0,
+      "decoded_frame_count": 600,
+      "trace_samples": 600,
+      "fps": 30.0,
+      "shape": [
+        480,
+        640,
+        3
+      ]
+    }
+  ]
+}

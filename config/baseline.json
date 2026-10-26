@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "milestone_0_passed_standalone_workers",
+  "status": "milestone_1_passed_standalone_workers",
   "container_userspace": "Ubuntu 24.04",
   "python": "3.12.13",
   "isaac_sim": {
@@ -27,7 +27,7 @@
   },
   "soma_x": {
     "version": "0.3.4",
-    "status": "not_downloaded_mapping_deferred_to_milestone_1"
+    "status": "not_downloaded_visual_mapping_deferred_to_milestone_2"
   },
   "resolved_package_lock": {
     "path": "config/runtime.uv.lock",
@@ -102,6 +102,11 @@
       "Slow/in-process Python finalization still crashes in native Kit destructors",
       "Cold rebuild from empty cache not validated"
     ],
-    "controller_timing": "No humanoid/controller timing selected; M0 primitive setting only"
+    "controller_timing": "M0 primitive test used 120 Hz; accepted M1 humanoid uses 120 Hz physics and 30 Hz control (config/milestone1.json)."
+  },
+  "milestone1": {
+    "status": "passed",
+    "acceptance": "config/milestone1.json",
+    "report": "docs/MILESTONE1_REPORT.md"
   }
 }

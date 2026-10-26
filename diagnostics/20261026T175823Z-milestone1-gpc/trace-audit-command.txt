@@ -1,0 +1,1 @@
+python3 scripts/audit_milestone1.py artifacts/milestone1/gpc-20261026T175823Z --output diagnostics/20261026T175823Z-milestone1-gpc/trace-audit.json

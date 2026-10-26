@@ -1,0 +1,35 @@
+{
+  "runs": [
+    {
+      "family": "tracker",
+      "seed": 0,
+      "evidence": "diagnostics/20261026T174229Z-milestone1-tracker",
+      "artifacts": "artifacts/milestone1/tracker-20261026T174229Z",
+      "recorded_frames": 12568,
+      "complete_trials": 61,
+      "process_exit_code": 0,
+      "files_hash_verified": 380
+    },
+    {
+      "family": "gpc",
+      "seed": 0,
+      "evidence": "diagnostics/20261026T175823Z-milestone1-gpc",
+      "artifacts": "artifacts/milestone1/gpc-20261026T175823Z",
+      "recorded_frames": 600,
+      "complete_trials": 1,
+      "process_exit_code": 0,
+      "files_hash_verified": 17
+    },
+    {
+      "family": "tracker",
+      "seed": 0,
+      "evidence": "diagnostics/20261026T175955Z-milestone1-tracker",
+      "artifacts": "artifacts/milestone1/tracker-20261026T175955Z",
+      "recorded_frames": 12568,
+      "complete_trials": 61,
+      "process_exit_code": 0,
+      "files_hash_verified": 380
+    }
+  ],
+  "runtime_package_lock_unchanged": true
+}
