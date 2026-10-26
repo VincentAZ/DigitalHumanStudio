@@ -1,0 +1,9 @@
+{
+  "url": "https://pypi.nvidia.com/isaacsim-benchmark/isaacsim_benchmark-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+  "locked_url": "https://pypi.nvidia.com/isaacsim-benchmark/isaacsim_benchmark-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+  "sha256": "96c8a50e45b94ae7b775c3cf2da686c6aa6b7c2cf51ee6080a398f3b7bc7f489",
+  "size": 388332,
+  "chunk_size": 4194304,
+  "status": "verified",
+  "elapsed_seconds": 5.709253123997769
+}

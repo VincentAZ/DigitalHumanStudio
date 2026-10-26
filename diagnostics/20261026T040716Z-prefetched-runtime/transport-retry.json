@@ -1,0 +1,5 @@
+{
+  "reason": "Direct wheel-path installation records a URL origin; uv sync then tries to replace those packages with registry-origin copies. Retry through a local find-links index using the exact package==version requirements, preserving final full locked sync and hashes.",
+  "lock_changed": false,
+  "isaac_runtime_test": false
+}

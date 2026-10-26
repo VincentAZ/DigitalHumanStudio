@@ -13,7 +13,9 @@ import importlib.metadata as metadata
 import json
 import platform
 from pathlib import Path
-expected = {"isaacsim": "6.0.0.1", "isaaclab": "12.0.0", "protomotions": "3.1.0"}
+expected = {"isaacsim": "6.0.0.1", "isaaclab": "12.0.0", "protomotions": "3.1.0",
+            "numpy": "2.3.1", "pillow": "12.1.1", "moviepy": "1.0.3",
+            "torch": "2.11.0+cu128", "torchvision": "0.26.0+cu128", "torchaudio": "2.11.0+cu128"}
 observed = {name: metadata.version(name) for name in expected}
 assert observed == expected, (expected, observed)
 assert platform.python_version() == "3.12.13", platform.python_version()

@@ -1,0 +1,45 @@
+Verified existing cuda_toolkit-12.8.1-py2.py3-none-any.whl
+Verified existing isaacsim-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_benchmark-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_core-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_cortex-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_extscache_kit-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_extscache_kit_sdk-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_rl-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_ros1-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_storage-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_template-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Fetching numpy-2.3.1-cp312-cp312-manylinux_2_28_x86_64.whl: 0.02 GB in 4 resumable ranges
+numpy: 100.0% (0.02/0.02 GB)
+SHA-256 verified: numpy-2.3.1-cp312-cp312-manylinux_2_28_x86_64.whl
+Verified existing nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl
+Fetching nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl: 0.09 GB in 21 resumable ranges
+nvidia-cuda-nvrtc-cu12: 4.8% (0.00/0.09 GB)
+nvidia-cuda-nvrtc-cu12: 90.5% (0.08/0.09 GB)
+nvidia-cuda-nvrtc-cu12: 100.0% (0.09/0.09 GB)
+SHA-256 verified: nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl
+Fetching nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl: 0.00 GB in 1 resumable ranges
+nvidia-cuda-runtime-cu12: 100.0% (0.00/0.00 GB)
+SHA-256 verified: nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+Verified existing nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+Fetching nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl: 0.04 GB in 10 resumable ranges
+nvidia-nvjitlink-cu12: 14.5% (0.01/0.04 GB)
+nvidia-nvjitlink-cu12: 100.0% (0.04/0.04 GB)
+SHA-256 verified: nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl
+Fetching nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl: 0.00 GB in 1 resumable ranges
+nvidia-nvtx-cu12: 100.0% (0.00/0.00 GB)
+SHA-256 verified: nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+Fetching pynvvideocodec-2.1.0-cp312-cp312-manylinux_2_28_x86_64.whl: 0.04 GB in 9 resumable ranges
+pynvvideocodec: 11.4% (0.00/0.04 GB)
+pynvvideocodec: 100.0% (0.04/0.04 GB)
+SHA-256 verified: pynvvideocodec-2.1.0-cp312-cp312-manylinux_2_28_x86_64.whl
+Fetching setuptools-81.0.0-py3-none-any.whl: 0.00 GB in 1 resumable ranges
+setuptools: 100.0% (0.00/0.00 GB)
+SHA-256 verified: setuptools-81.0.0-py3-none-any.whl
+Fetching usd_exchange-3.0.1-cp312-cp312-manylinux_2_34_x86_64.whl: 0.03 GB in 7 resumable ranges
+usd-exchange: 21.1% (0.01/0.03 GB)
+usd-exchange: 100.0% (0.03/0.03 GB)
+SHA-256 verified: usd_exchange-3.0.1-cp312-cp312-manylinux_2_34_x86_64.whl
+Fetching wheel-0.48.0-py3-none-any.whl: 0.00 GB in 1 resumable ranges
+wheel: 100.0% (0.00/0.00 GB)
+SHA-256 verified: wheel-0.48.0-py3-none-any.whl

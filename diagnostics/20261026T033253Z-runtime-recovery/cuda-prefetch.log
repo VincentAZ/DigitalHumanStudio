@@ -1,0 +1,22 @@
+Fetching nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl: 0.59 GB in 142 resumable ranges
+nvidia-cublas-cu12: 7.1% (0.04/0.59 GB)
+nvidia-cublas-cu12: 14.1% (0.08/0.59 GB)
+nvidia-cublas-cu12: 24.7% (0.15/0.59 GB)
+nvidia-cublas-cu12: 33.9% (0.20/0.59 GB)
+nvidia-cublas-cu12: 42.3% (0.25/0.59 GB)
+nvidia-cublas-cu12: 53.6% (0.32/0.59 GB)
+nvidia-cublas-cu12: 61.4% (0.36/0.59 GB)
+nvidia-cublas-cu12: 72.0% (0.43/0.59 GB)
+nvidia-cublas-cu12: 81.2% (0.48/0.59 GB)
+nvidia-cublas-cu12: 88.9% (0.53/0.59 GB)
+nvidia-cublas-cu12: 97.4% (0.58/0.59 GB)
+nvidia-cublas-cu12: 100.0% (0.59/0.59 GB)
+SHA-256 verified: nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl
+Fetching nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl: 0.29 GB in 69 resumable ranges
+nvidia-cusparse-cu12: 11.6% (0.03/0.29 GB)
+nvidia-cusparse-cu12: 27.6% (0.08/0.29 GB)
+nvidia-cusparse-cu12: 49.5% (0.14/0.29 GB)
+nvidia-cusparse-cu12: 71.3% (0.21/0.29 GB)
+nvidia-cusparse-cu12: 82.9% (0.24/0.29 GB)
+nvidia-cusparse-cu12: 100.0% (0.29/0.29 GB)
+SHA-256 verified: nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl

@@ -1,0 +1,10 @@
+{
+  "time": "2026-10-26T04:24:03.965734+00:00",
+  "uv": "0.11.32",
+  "fixture": ".runtime/flat-index-check-ztb50vun",
+  "package": "packaging==25.0",
+  "test": "Install by name/version using --no-index --find-links, then uv sync --locked --offline --dry-run",
+  "exit_code": 0,
+  "result": "Would make no changes",
+  "scope": "Registry-origin reuse; final runtime still requires installation and acceptance tests"
+}

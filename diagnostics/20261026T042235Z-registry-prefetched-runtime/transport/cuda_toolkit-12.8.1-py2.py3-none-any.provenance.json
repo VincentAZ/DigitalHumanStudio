@@ -1,0 +1,9 @@
+{
+  "url": "https://pypi.nvidia.com/cuda-toolkit/cuda_toolkit-12.8.1-py2.py3-none-any.whl",
+  "locked_url": "https://pypi.nvidia.com/cuda-toolkit/cuda_toolkit-12.8.1-py2.py3-none-any.whl",
+  "sha256": "adc7906af4ecbf9a352f9dca5734eceb21daec281ccfcf5675e1d2f724fc2cba",
+  "size": 2283,
+  "chunk_size": 4194304,
+  "status": "verified",
+  "elapsed_seconds": 1.4325657500012312
+}

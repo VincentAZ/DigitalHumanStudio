@@ -1,0 +1,5 @@
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/moviepy/config_defaults.py:47: SyntaxWarning: invalid escape sequence '\P'
+  IMAGEMAGICK_BINARY = r"C:\Program Files\ImageMagick-6.8.8-Q16\magick.exe"
+STUDIO_MEDIA_SMOKE_PASSED
+studio-media-20261026T044911
+Recording encode/decode passed: /home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T044911-media

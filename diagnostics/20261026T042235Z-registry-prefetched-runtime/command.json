@@ -1,0 +1,21 @@
+[
+  "/home/vincent/Repos/DigitalHumanStudio/scripts/docker.sh",
+  "create",
+  "--name",
+  "studio-registry-prefetch-20261026t042235z",
+  "--user",
+  "root",
+  "--env",
+  "UV_HTTP_TIMEOUT=300",
+  "--env",
+  "UV_HTTP_RETRIES=3",
+  "--env",
+  "UV_CONCURRENT_DOWNLOADS=4",
+  "--mount",
+  "type=bind,src=/home/vincent/Repos/DigitalHumanStudio/.downloads/wheels,dst=/wheelhouse,readonly",
+  "--entrypoint",
+  "bash",
+  "sha256:40dd5cc03fbf660ac514d7998235baf2c3e2651ee23ce51b627c640bf87678f2",
+  "-lc",
+  "cd /opt/IsaacLab && uv pip install --python .venv/bin/python --no-deps --no-index --find-links /wheelhouse isaacsim-extscache-kit==6.0.0.1 isaacsim-extscache-kit-sdk==6.0.0.1 nvidia-cublas-cu12==12.8.4.1 nvidia-cusparse-cu12==12.5.8.93 && uv sync --locked --python 3.12.13 --extra isaacsim && bash /opt/studio/finish_environment.sh"
+]

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Execute the pinned upstream installation sequence inside Ubuntu 24.04.
+# Install the recorded combined profile from pinned sources inside Ubuntu 24.04.
 set -euo pipefail
 cd /opt/IsaacLab
 uv python install 3.12.13 --no-bin

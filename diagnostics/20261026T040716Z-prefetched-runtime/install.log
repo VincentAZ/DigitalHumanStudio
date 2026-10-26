@@ -1,0 +1,25 @@
+Resolved 4 packages in 26ms
+Prepared 4 packages in 3.08s
+Installed 4 packages in 5.16s
+ + isaacsim-extscache-kit==6.0.0.1 (from file:///wheelhouse/isaacsim_extscache_kit-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl)
+ + isaacsim-extscache-kit-sdk==6.0.0.1 (from file:///wheelhouse/isaacsim_extscache_kit_sdk-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl)
+ + nvidia-cublas-cu12==12.8.4.1 (from file:///wheelhouse/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl)
+ + nvidia-cusparse-cu12==12.5.8.93 (from file:///wheelhouse/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl)
+Resolved 269 packages in 3ms
+   Building isaaclab @ file:///opt/IsaacLab/source/isaaclab
+   Building isaaclab-assets @ file:///opt/IsaacLab/source/isaaclab_assets
+   Building isaaclab-contrib @ file:///opt/IsaacLab/source/isaaclab_contrib
+   Building isaaclab-experimental @ file:///opt/IsaacLab/source/isaaclab_experimental
+   Building isaaclab-newton @ file:///opt/IsaacLab/source/isaaclab_newton
+   Building isaaclab-ov @ file:///opt/IsaacLab/source/isaaclab_ov
+   Building isaaclab-ovphysx @ file:///opt/IsaacLab/source/isaaclab_ovphysx
+   Building isaaclab-physx @ file:///opt/IsaacLab/source/isaaclab_physx
+   Building isaaclab-ppisp @ file:///opt/IsaacLab/source/isaaclab_ppisp
+   Building isaaclab-rl @ file:///opt/IsaacLab/source/isaaclab_rl
+   Building isaaclab-tasks @ file:///opt/IsaacLab/source/isaaclab_tasks
+   Building isaaclab-tasks-experimental @ file:///opt/IsaacLab/source/isaaclab_tasks_experimental
+   Building isaaclab-visualizers @ file:///opt/IsaacLab/source/isaaclab_visualizers
+   Building protomotions @ file:///opt/ProtoMotions
+Downloading isaacsim-extscache-kit (5.5GiB)
+Downloading isaacsim-extscache-kit-sdk (1.6GiB)
+Downloading nvidia-cublas-cu12 (566.8MiB)

@@ -1,0 +1,9 @@
+{
+  "url": "https://pypi.nvidia.com/isaacsim-template/isaacsim_template-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+  "locked_url": "https://pypi.nvidia.com/isaacsim-template/isaacsim_template-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+  "sha256": "c3b59d0aa9934c44f4337880ae20fc05973d88f330010cb93d6d4e967cb715bf",
+  "size": 17313,
+  "chunk_size": 4194304,
+  "status": "verified",
+  "elapsed_seconds": 0.8607172640004137
+}

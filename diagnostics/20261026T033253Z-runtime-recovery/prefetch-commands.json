@@ -1,0 +1,27 @@
+[
+  [
+    "python3",
+    "scripts/fetch_locked_wheels.py",
+    "--lock",
+    "diagnostics/20261026T032701.811084Z-runtime-build/resolved.uv.lock",
+    "--package",
+    "isaacsim-extscache-kit-sdk",
+    "--package",
+    "isaacsim-extscache-kit",
+    "--workers",
+    "32"
+  ],
+  [
+    "python3",
+    "scripts/fetch_locked_wheels.py",
+    "--lock",
+    "diagnostics/20261026T032701.811084Z-runtime-build/resolved.uv.lock",
+    "--package",
+    "nvidia-cublas-cu12",
+    "--package",
+    "nvidia-cusparse-cu12",
+    "--pypi-mirror",
+    "--workers",
+    "8"
+  ]
+]

@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import platform
 import time
+import traceback
 
 from protomotions.utils.simulator_imports import import_simulator_before_torch
 
@@ -15,7 +16,7 @@ AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
 started = time.monotonic()
 args.output.mkdir(parents=True, exist_ok=True)
-app = AppLauncher(args).app
+app = AppLauncher(args, fast_shutdown=False).app
 
 try:
     import numpy as np
@@ -24,7 +25,6 @@ try:
     from isaaclab.assets import RigidObject, RigidObjectCfg
     from isaaclab.sensors.camera import Camera, CameraCfg
     import isaaclab.sim as sim_utils
-    from isaaclab.utils import convert_dict_to_backend
     from isaaclab_physx.physics import PhysxCfg
     from isaaclab_physx.renderers import IsaacRtxRendererCfg
     from protomotions.simulator.isaaclab.simulator import IsaacLabSimulator
@@ -89,7 +89,7 @@ try:
     assert min(p[2] for p in positions) > 0.20, "Cube penetrated the floor"
     assert max(np.linalg.norm(v) for v in velocities[-30:]) < 0.1, "Cube did not settle"
     assert np.ptp(np.asarray(positions[-30:])[:, 2]) < 0.01, "Contact height is unstable"
-    rgb = convert_dict_to_backend({"rgb": camera.data.output["rgb"][0]}, backend="numpy")["rgb"]
+    rgb = camera.data.output["rgb"].torch[0].detach().cpu().numpy()
     rgb = np.asarray(rgb)[..., :3]
     assert rgb.shape == (480, 640, 3), rgb.shape
     assert np.isfinite(rgb).all() and float(rgb.std()) > 5.0, "Blank/invalid RTX image"
@@ -110,6 +110,9 @@ try:
         "sources": json.loads(Path("/opt/studio/source-revisions.json").read_text()),
     }
     sim.stop()
+except BaseException:
+    traceback.print_exc()
+    raise
 finally:
     app.close()
 

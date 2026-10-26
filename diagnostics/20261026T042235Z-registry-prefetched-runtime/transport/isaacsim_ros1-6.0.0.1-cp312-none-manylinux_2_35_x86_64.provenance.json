@@ -1,0 +1,9 @@
+{
+  "url": "https://pypi.nvidia.com/isaacsim-ros1/isaacsim_ros1-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+  "locked_url": "https://pypi.nvidia.com/isaacsim-ros1/isaacsim_ros1-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+  "sha256": "6cf6f31d2c785a28129276f51c13e659e384d210589049cd26aef9fad370a9b9",
+  "size": 17287,
+  "chunk_size": 4194304,
+  "status": "verified",
+  "elapsed_seconds": 0.5289125179988332
+}

@@ -1,0 +1,23 @@
+{
+  "status": "failed_physics_acceptance_stopped",
+  "image_id": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+  "python_exit_code": 139,
+  "launcher_exit_code": 4,
+  "failure": "assert min(p[2] for p in positions) > 0.20: Cube penetrated the floor",
+  "passed_before_failure": [
+    "Pinned ProtoMotions IsaacLabSimulator import",
+    "CUDA 128x128 matrix multiplication",
+    "Explicit PhysX backend on cuda:0",
+    "240 steps with finite positions and velocities",
+    "Cube falls under gravity",
+    "Final cube center height within 0.03 m of 0.25 m"
+  ],
+  "not_validated": [
+    "Final 30-step settling velocity and height variation",
+    "Saved RTX image and visual inspection",
+    "Successful run shutdown and restart"
+  ],
+  "retained_container": "studio-runtime-20261026T045036-1",
+  "measurement_limitation": "Trajectory and scene export were after assertions, so this failed run did not persist numeric samples or a render. Do not invent minimum height or claim a root cause.",
+  "decision": "Stop M0. Diagnose contact behavior and measurement/configuration before another acceptance run. No host, driver, architecture or backend change; no M1."
+}

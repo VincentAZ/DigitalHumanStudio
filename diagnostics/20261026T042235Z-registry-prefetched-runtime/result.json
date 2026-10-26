@@ -1,0 +1,5 @@
+{
+  "status": "installed_not_runtime_validated",
+  "image_id": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+  "retained_build_container": "studio-registry-prefetch-20261026t042235z"
+}

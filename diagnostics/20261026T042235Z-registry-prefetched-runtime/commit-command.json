@@ -1,0 +1,16 @@
+[
+  "/home/vincent/Repos/DigitalHumanStudio/scripts/docker.sh",
+  "commit",
+  "--change",
+  "ENV PATH=/opt/IsaacLab/.venv/bin:/usr/local/bin:/usr/bin:/bin",
+  "--change",
+  "WORKDIR /opt/IsaacLab",
+  "--change",
+  "USER 1234:1234",
+  "--change",
+  "ENTRYPOINT [\"/opt/IsaacLab/.venv/bin/python\"]",
+  "--change",
+  "CMD [\"--version\"]",
+  "studio-registry-prefetch-20261026t042235z",
+  "digital-human-studio:m0-registry-prefetched-20261026t042235z"
+]

@@ -2,7 +2,7 @@
 
 Local Linux research studio for character authoring and learned physical movement.
 
-Only **Milestone 0: reproducible runtime** is currently authorized. NVIDIA's official compatibility checker passed twice and Mixar checks passed. The user authorized dependency repairs; the combined environment now resolves with recorded build patches and is being installed. Physics and RTX rendering remain untested. See the setup report for current evidence.
+Only **Milestone 0: reproducible runtime** is authorized. Dependency repairs are installed and locked; official Isaac checker, Mixar and video recording checks passed. Full runtime acceptance stopped on a physics minimum-height assertion. Milestone 0 is incomplete, and later milestones remain unstarted. See the [setup report](docs/SETUP_REPORT.md) for the failure, retained diagnostics and next investigation. Host OS and NVIDIA driver are unchanged.
 
 - [Implementation specification](IMPLEMENTATION_PLAN.md)
 - [Milestone log](PROGRESS.md)

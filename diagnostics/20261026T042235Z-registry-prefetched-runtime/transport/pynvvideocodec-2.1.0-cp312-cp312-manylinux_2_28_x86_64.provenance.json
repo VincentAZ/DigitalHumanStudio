@@ -1,0 +1,9 @@
+{
+  "url": "https://pypi.nvidia.com/pynvvideocodec/pynvvideocodec-2.1.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+  "locked_url": "https://pypi.nvidia.com/pynvvideocodec/pynvvideocodec-2.1.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+  "sha256": "c317fbad725b1b81936b863edcd98920bc4be423b9965719657030359d7afe29",
+  "size": 36745131,
+  "chunk_size": 4194304,
+  "status": "verified",
+  "elapsed_seconds": 14.950333633998525
+}

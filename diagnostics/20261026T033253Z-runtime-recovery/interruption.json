@@ -1,0 +1,8 @@
+{
+  "time": "2026-10-26T03:58:03.343828+00:00",
+  "status": "intentional_transport_recovery",
+  "reason": "Long-lived NVIDIA transfers slowed to very low throughput; fresh parallel HTTP range requests are progressing faster. Preserve completed cache and prefetch exact locked wheels with final SHA-256 verification.",
+  "container": "7bbd73d95536",
+  "lock_changed": false,
+  "isaac_runtime_test": false
+}

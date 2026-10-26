@@ -72,6 +72,23 @@ for name, dist in installed.items():
     if requires_python and not SpecifierSet(requires_python).contains(environment["python_full_version"], prereleases=True):
         errors.append({"package": name, "requires_python": requires_python})
 
+# Baseline constraints narrow upstream overrides and must never be waived by them.
+for text in project["tool"]["uv"].get("constraint-dependencies", []):
+    constraint = Requirement(text)
+    dist = installed.get(canonicalize_name(constraint.name))
+    if active(constraint, {""}) and (dist is None or not constraint.specifier.contains(dist.version, prereleases=True)):
+        errors.append({"baseline_constraint": text, "installed": dist.version if dist else None})
+for name, override in overrides.items():
+    dist = installed.get(name)
+    if dist is None:
+        errors.append({"upstream_override": str(override), "error": "missing"})
+    elif override.url:
+        direct = json.loads(dist.read_text("direct_url.json") or "{}")
+        if direct.get("vcs_info", {}).get("commit_id") != override.url.rsplit("@", 1)[1]:
+            errors.append({"upstream_override": str(override), "installed_source": direct})
+    elif not override.specifier.contains(dist.version, prereleases=True):
+        errors.append({"upstream_override": str(override), "installed": dist.version})
+
 raw = subprocess.run(["uv", "pip", "check", "--python", sys.executable],
                      text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 Path("/opt/studio/uv-pip-check.log").write_text(raw.stdout)

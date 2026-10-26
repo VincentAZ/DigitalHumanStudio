@@ -1,0 +1,6 @@
+{
+  "original_build": "diagnostics/20261026T032701.811084Z-runtime-build",
+  "cache_image": "sha256:e76a9e93412d46b7f4dcf429d98db5784d4fcbcac4185e8435c0297e048e9d77",
+  "operation": "Resume exact resolved lock after network timeout; no dependency changes",
+  "official_checker": "diagnostics/20261026T020033-isaac"
+}

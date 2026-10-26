@@ -1,0 +1,54 @@
+{
+  "url": "https://pypi.nvidia.com/isaacsim-extscache-kit-sdk/isaacsim_extscache_kit_sdk-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+  "elapsed": 5.5202577550007845,
+  "results": [
+    {
+      "part": 0,
+      "seconds": 4.16384819599989,
+      "bytes": 1048576,
+      "content_range": "bytes 0-1048575/1676845102"
+    },
+    {
+      "part": 1,
+      "seconds": 5.3819845040015935,
+      "bytes": 1048576,
+      "content_range": "bytes 1048576-2097151/1676845102"
+    },
+    {
+      "part": 2,
+      "seconds": 5.5180220029978955,
+      "bytes": 1048576,
+      "content_range": "bytes 2097152-3145727/1676845102"
+    },
+    {
+      "part": 3,
+      "seconds": 4.621493056998588,
+      "bytes": 1048576,
+      "content_range": "bytes 3145728-4194303/1676845102"
+    },
+    {
+      "part": 4,
+      "seconds": 4.0714726420010265,
+      "bytes": 1048576,
+      "content_range": "bytes 4194304-5242879/1676845102"
+    },
+    {
+      "part": 5,
+      "seconds": 5.139149839000311,
+      "bytes": 1048576,
+      "content_range": "bytes 5242880-6291455/1676845102"
+    },
+    {
+      "part": 6,
+      "seconds": 4.7918009419990995,
+      "bytes": 1048576,
+      "content_range": "bytes 6291456-7340031/1676845102"
+    },
+    {
+      "part": 7,
+      "seconds": 5.4646684100007406,
+      "bytes": 1048576,
+      "content_range": "bytes 7340032-8388607/1676845102"
+    }
+  ]
+}

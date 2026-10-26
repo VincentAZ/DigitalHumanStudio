@@ -1,0 +1,66 @@
+{
+  "status": "passed_with_declared_overrides",
+  "errors": [],
+  "upstream_override_exceptions": [
+    {
+      "parent": "isaacsim-core",
+      "requirement": "newton[sim]==1.2.0",
+      "installed": "1.4.0.dev0",
+      "installed_source": {
+        "url": "https://github.com/newton-physics/newton.git",
+        "vcs_info": {
+          "vcs": "git",
+          "commit_id": "c7ae7c7648cd0717df39e5c94b95d5a02c997320",
+          "requested_revision": "c7ae7c7648cd0717df39e5c94b95d5a02c997320"
+        }
+      },
+      "upstream_override": "newton[sim] @ git+https://github.com/newton-physics/newton.git@c7ae7c7648cd0717df39e5c94b95d5a02c997320"
+    },
+    {
+      "parent": "isaacsim-core",
+      "requirement": "newton-usd-schemas==0.2.0",
+      "installed": "0.6.0",
+      "upstream_override": "newton-usd-schemas>=0.3.1"
+    }
+  ],
+  "uv_pip_check_exit_code": 1,
+  "distribution_count": 268,
+  "selected_extras": {
+    "fsspec": [
+      "http"
+    ],
+    "etils": [
+      "epath",
+      "epy"
+    ],
+    "pyjwt": [
+      "crypto"
+    ],
+    "cuda-toolkit": [
+      "cublas",
+      "cudart",
+      "cufft",
+      "cufile",
+      "cupti",
+      "curand",
+      "cusolver",
+      "cusparse",
+      "nvjitlink",
+      "nvrtc",
+      "nvtx"
+    ],
+    "newton": [
+      "sim"
+    ],
+    "aiobotocore": [
+      "boto3"
+    ],
+    "protomotions": [
+      "isaaclab"
+    ],
+    "isaacsim": [
+      "all",
+      "extscache"
+    ]
+  }
+}

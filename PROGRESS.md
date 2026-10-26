@@ -8,7 +8,7 @@ User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| 0 — Reproducible runtime | Resumed; patched combined graph resolves, build running | Official Isaac checker passed twice; Mixar checks passed; final runtime untested |
+| 0 — Reproducible runtime | Stopped: physics acceptance failed | Locked image installed; media/official checker/Mixar passed; `diagnostics/20261026T045036-runtime/` |
 | 1 — Physical human baseline | Not started | Not authorized in current scope |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
@@ -94,3 +94,19 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Prepared a dependency audit covering selected extras and recording Isaac Lab's pre-existing declared overrides, plus a real encode/decode test for the patched recording path. Neither preparation nor resolution alone proves runtime compatibility. Media, GPU, physics, RTX, and repeat-run acceptance remain outstanding.
 - The first full build stopped on a network timeout downloading `nvidia-nvtx-cu12==12.8.90`, after successful resolution. Retained its container, resolved lock, and a cache snapshot. Recovery in `diagnostics/20261026T033253Z-runtime-recovery/` resumes the exact lock with `uv sync --locked`, longer HTTP timeout and four concurrent downloads. No dependency re-resolution or architecture change was made.
 - Future ordinary builds reuse `config/runtime.uv.lock` when present and refuse a stale lock via `uv sync --locked`. `scripts/check_media.sh` repeats the actual recording encode/decode test once an image exists.
+- The long-lived NVIDIA downloads slowed sharply. Intentionally stopped the first recovery, preserved its container and cache image, and switched the two large rendering wheels to resumable HTTP ranges with final lock SHA-256 verification. Two CUDA wheels were prefetched from PyPI only after matching their filenames and hashes to the same NVIDIA-locked artifacts. This changes transport, not artifact versions.
+- While inspecting the dependency audit, identified Numba 0.64.0's `numpy<2.5` requirement conflicting with the upstream broad override's selection of NumPy 2.5.4. Added the baseline constraint `numpy==2.3.1`, matching Isaac Sim kernel and satisfying Lab's `>=2` override. Resolution succeeded in `diagnostics/20261026T040231Z-numpy-compatible-lock/`; comparison confirms NumPy is the only package version changed.
+- Prepared installation from the preserved cache and verified wheels in `diagnostics/20261026T040716Z-prefetched-runtime/`. Preloading these exact wheels will be followed by full `uv sync --locked` and the dependency audit; it does not bypass final dependency validation. Await the large Kit cache's completion before declaring installation or running runtime acceptance.
+- Verified the two rendering archives and two CUDA archives against the lock. Direct wheel-path preloading was replaced with name/version installation through a local `--find-links` index because uv correctly replaced URL-origin installations during registry-locked sync. A small offline fixture verified registry-origin reuse before retrying the actual environment.
+- Installation succeeded in `diagnostics/20261026T042235Z-registry-prefetched-runtime/`: 268 distributions, requested research versions, NumPy 2.3.1, Pillow 12.1.1, MoviePy 1.0.3, Torch 2.11.0+cu128. The combined dependency audit reports no unexpected violations. Raw `uv pip check` reports two exceptions: the exact Newton Git revision and Newton USD schemas required by Isaac Lab's existing overrides. These remain explicitly recorded; this is not a clean raw pip check.
+- The final image is being saved. Recording, GPU computation, physics, RTX rendering, and restart acceptance still require execution.
+
+- Saved final image `sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9` and `config/runtime.uv.lock`. Media encode/decode passed in `diagnostics/20261026T044911-media/`.
+- First runtime launch failed on root-owned package-local Kit cache/data paths. The wrapper rejected exit 0 without a report and retained the container (`diagnostics/20261026T044914-runtime/`). Corrected the launcher with a writable portable root, explicit log path and non-fast shutdown; the same-image retry is in progress. This is a launcher prerequisite failure, not evidence that replacing Ubuntu would help.
+
+## 2026-10-26 UTC — Final runtime acceptance stopped
+
+- The writable Kit portable root resolved cache/data permission errors. RTX initialized, ProtoMotions backend import and CUDA matrix multiplication succeeded, and the explicit GPU PhysX simulation completed 240 finite steps.
+- The cube fell and reached the expected final resting height, but its center dipped to or below the required 0.20 m minimum. The minimum-height assertion failed. Python exited 1; launcher exited 4 and did not start the second run. Evidence: `diagnostics/20261026T045036-runtime/`, including full Kit log and retained container `studio-runtime-20261026T045036-1`.
+- No successful saved RTX image or repeat-run acceptance exists. Trajectory export came after the failed assertion, so numeric samples are unavailable for this attempt. A future authorized diagnosis must capture them before assertions, inspect solver/contact settings and pose sampling, and retain the current threshold until evidence supports any revision.
+- **Milestone 0 remains incomplete and stopped.** The dependency repair is complete, but the runtime is not accepted. No OS, driver, backend or architecture change was made. Milestone 1 remains unstarted.

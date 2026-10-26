@@ -28,7 +28,8 @@ def main():
             raise RuntimeError(f"Unexpected marker count: {old}")
         modified = modified.replace(old, new)
     target = "sys_platform == 'linux' and platform_machine == 'x86_64'"
-    modified = modified.replace("[tool.uv]\n", f'[tool.uv]\nenvironments = ["{target}"]\n', 1)
+    constraints = ["numpy==2.3.1"]
+    modified = modified.replace("[tool.uv]\n", f'[tool.uv]\nenvironments = ["{target}"]\nconstraint-dependencies = {json.dumps(constraints)}\n', 1)
     upstream = tomllib.loads(original)
     # uv locks every optional extra, even when it is not selected for installation.
     # Preserve the requested base + isaacsim graph; do not lock unused backends.
@@ -47,7 +48,8 @@ def main():
         assert [r.split(";")[0].strip() for r in before["project"][section]] == [
             r.split(";")[0].strip() for r in after["project"][section]]
     assert after["project"]["optional-dependencies"] == {"isaacsim": selected_extra}
-    expected_settings = dict(before["tool"]["uv"], environments=[target], conflicts=[])
+    expected_settings = dict(before["tool"]["uv"], environments=[target], conflicts=[],
+                             **{"constraint-dependencies": constraints})
     assert after["tool"]["uv"] == expected_settings
     combined_requirements = []
     if args.combine_protomotions:
@@ -72,6 +74,8 @@ def main():
         "profile": "base plus isaacsim; unused extras excluded from universal lock",
         "excluded_extras": sorted(set(upstream["project"]["optional-dependencies"]) - {"isaacsim"}),
         "combined_requirements": combined_requirements,
+        "baseline_constraints": constraints,
+        "constraint_reason": "Preserve Isaac Sim kernel's NumPy 2.3.1 pin and satisfy Numba <2.5; within Lab's >=2 override",
         "reason": "Explicit architecture alternatives avoid uv's false substring-marker overlap",
         "isolated_test": "diagnostics/20261026T024641Z-marker-repro",
     }, indent=2) + "\n")

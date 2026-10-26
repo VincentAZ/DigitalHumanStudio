@@ -1,0 +1,41 @@
+Prefetching ['cuda-toolkit', 'isaacsim', 'isaacsim-benchmark', 'isaacsim-core', 'isaacsim-cortex', 'isaacsim-extscache-kit', 'isaacsim-extscache-kit-sdk', 'isaacsim-rl', 'isaacsim-ros1', 'isaacsim-storage', 'isaacsim-template', 'numpy', 'nvidia-cublas-cu12', 'nvidia-cuda-nvrtc-cu12', 'nvidia-cuda-runtime-cu12', 'nvidia-cusparse-cu12', 'nvidia-nvjitlink-cu12', 'nvidia-nvtx-cu12', 'pynvvideocodec', 'setuptools', 'usd-exchange', 'wheel']
+Fetching cuda_toolkit-12.8.1-py2.py3-none-any.whl: 0.00 GB in 1 resumable ranges
+cuda-toolkit: 100.0% (0.00/0.00 GB)
+SHA-256 verified: cuda_toolkit-12.8.1-py2.py3-none-any.whl
+Fetching isaacsim-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl: 0.00 GB in 1 resumable ranges
+isaacsim: 100.0% (0.00/0.00 GB)
+SHA-256 verified: isaacsim-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Fetching isaacsim_benchmark-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl: 0.00 GB in 1 resumable ranges
+isaacsim-benchmark: 100.0% (0.00/0.00 GB)
+SHA-256 verified: isaacsim_benchmark-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Fetching isaacsim_core-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl: 0.01 GB in 3 resumable ranges
+isaacsim-core: 67.2% (0.01/0.01 GB)
+isaacsim-core: 100.0% (0.01/0.01 GB)
+SHA-256 verified: isaacsim_core-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Fetching isaacsim_cortex-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl: 0.00 GB in 1 resumable ranges
+isaacsim-cortex: 100.0% (0.00/0.00 GB)
+SHA-256 verified: isaacsim_cortex-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_extscache_kit-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Verified existing isaacsim_extscache_kit_sdk-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Fetching isaacsim_rl-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl: 0.00 GB in 1 resumable ranges
+isaacsim-rl: 100.0% (0.00/0.00 GB)
+SHA-256 verified: isaacsim_rl-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Fetching isaacsim_ros1-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl: 0.00 GB in 1 resumable ranges
+isaacsim-ros1: 100.0% (0.00/0.00 GB)
+SHA-256 verified: isaacsim_ros1-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Fetching isaacsim_storage-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl: 0.00 GB in 1 resumable ranges
+isaacsim-storage: 100.0% (0.00/0.00 GB)
+SHA-256 verified: isaacsim_storage-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Fetching isaacsim_template-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl: 0.00 GB in 1 resumable ranges
+isaacsim-template: 100.0% (0.00/0.00 GB)
+SHA-256 verified: isaacsim_template-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl
+Traceback (most recent call last):
+  File "/home/vincent/Repos/DigitalHumanStudio/scripts/fetch_locked_wheels.py", line 130, in <module>
+    main()
+    ~~~~^^
+  File "/home/vincent/Repos/DigitalHumanStudio/scripts/fetch_locked_wheels.py", line 126, in main
+    fetch(matches[0], output, args.workers, args.pypi_mirror)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vincent/Repos/DigitalHumanStudio/scripts/fetch_locked_wheels.py", line 19, in fetch
+    raise RuntimeError("Select a target-specific lock with one wheel per requested package")
+RuntimeError: Select a target-specific lock with one wheel per requested package

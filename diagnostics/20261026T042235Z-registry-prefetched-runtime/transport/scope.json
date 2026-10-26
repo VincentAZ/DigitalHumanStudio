@@ -1,0 +1,10 @@
+{
+  "installation_prefilled_packages": [
+    "isaacsim-extscache-kit",
+    "isaacsim-extscache-kit-sdk",
+    "nvidia-cublas-cu12",
+    "nvidia-cusparse-cu12"
+  ],
+  "other_prefetch_artifacts": "Verified fallback cache; actual successful install used ordinary locked sync for remaining packages.",
+  "ambiguous_numpy_wheel": "Initial helper refused multiple alternatives. Explicit manylinux x86_64 CPython 3.12 selection succeeded; musllinux was not selected."
+}

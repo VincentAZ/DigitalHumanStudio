@@ -1,0 +1,16 @@
+{
+  "status": "failed_launcher_configuration",
+  "evidence": [
+    "Kit cache, shader cache and data directory creation denied inside root-owned Python installation",
+    "Missing result.json caused wrapper exit 4 despite Python process exit 0"
+  ],
+  "retained_container": "studio-runtime-20261026T044914-1",
+  "kit_file_log": "Announced package-local file could not be created; docker cp confirmed absent. Full stdout/stderr retained.",
+  "repairs": [
+    "Set Kit portable-root to user-writable persistent project mount",
+    "Set explicit output log file",
+    "Disable fast_shutdown so finally/app.close cannot discard pending exceptions or terminate before the report; explicitly print exceptions"
+  ],
+  "source": "https://docs.omniverse.nvidia.com/kit/docs/kit-manual/latest/guide/configuring.html",
+  "host_compatibility_conclusion": "Not established; writable-cache launch prerequisite failed"
+}

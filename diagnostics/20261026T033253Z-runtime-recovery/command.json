@@ -1,0 +1,7 @@
+[
+  "/home/vincent/Repos/DigitalHumanStudio/scripts/docker.sh",
+  "build",
+  "--tag",
+  "digital-human-studio:m0-recovered-20261026t033253z",
+  "/home/vincent/Repos/DigitalHumanStudio/.runtime/recovery/20261026T033253Z"
+]

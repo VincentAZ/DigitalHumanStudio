@@ -1,0 +1,4 @@
+Checked 268 packages in 11ms
+Found 2 incompatibilities
+The package `isaacsim-core` requires `newton[sim]==1.2.0`, but `1.4.0.dev0` is installed
+The package `isaacsim-core` requires `newton-usd-schemas==0.2.0`, but `0.6.0` is installed

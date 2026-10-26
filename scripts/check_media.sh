@@ -9,6 +9,7 @@ stamp=$(date -u +%Y%m%dT%H%M%S)
 evidence="$project_root/diagnostics/$stamp-media"
 output="$project_root/artifacts/milestone0/media-$stamp"
 mkdir -p "$evidence" "$output"
+cp "$project_root/scripts/media_smoke.py" "$evidence/media_smoke.py"
 exec > >(tee "$evidence/session.log") 2>&1
 trap 'result=$?; printf "%s\n" "$result" > "$evidence/exit-code.txt"' EXIT
 name="studio-media-$stamp"

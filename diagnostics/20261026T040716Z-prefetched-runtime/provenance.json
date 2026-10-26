@@ -1,0 +1,13 @@
+{
+  "cache_image": "sha256:40dd5cc03fbf660ac514d7998235baf2c3e2651ee23ce51b627c640bf87678f2",
+  "prior_recovery": "diagnostics/20261026T033253Z-runtime-recovery",
+  "prepared_lock": "diagnostics/20261026T040231Z-numpy-compatible-lock",
+  "checker": "diagnostics/20261026T020033-isaac",
+  "selected_prefetch_packages": [
+    "isaacsim-extscache-kit",
+    "isaacsim-extscache-kit-sdk",
+    "nvidia-cublas-cu12",
+    "nvidia-cusparse-cu12"
+  ],
+  "status": "awaiting_verified_wheels"
+}

@@ -2,7 +2,7 @@
 
 The requested versions are in `config/baseline.json`. Null digests and locks mean unestablished, not optional. `docs/sources/manifest.json` records retrieved upstream evidence with SHA-256 hashes and failed retrievals. The pinned Isaac Lab revision did not expose a root `uv.lock` (HTTP 404); a resolved environment lock must be created during setup.
 
-The user authorized dependency repairs on 2026-10-26 UTC. The current build applies recorded Isaac Lab marker/profile changes and a ProtoMotions MoviePy compatibility patch to container copies of the pinned sources. These are patched builds, not pristine upstream releases. See `docs/SETUP_REPORT.md` and the emitted patch/hash manifests. The combined resolved lock, installed artifact versions, and runtime results must be recorded before the baseline is accepted.
+The user authorized dependency repairs on 2026-10-26 UTC. The current build applies recorded Isaac Lab marker/profile changes and a ProtoMotions MoviePy compatibility patch to container copies of the pinned sources. These are patched builds, not pristine upstream releases. See `docs/SETUP_REPORT.md` and the emitted patch/hash manifests. The combined lock and installed artifact versions are recorded in `diagnostics/20261026T042235Z-registry-prefetched-runtime/environment/`. The final combined lock is `config/runtime.uv.lock` and the image content ID is `config/runtime-image.lock`. Runtime acceptance failed on the physics minimum-height assertion in `diagnostics/20261026T045036-runtime/`; the baseline is not yet accepted.
 
 | Component | Source / version | Account or license step | Current evidence |
 | --- | --- | --- | --- |
@@ -15,11 +15,11 @@ The user authorized dependency repairs on 2026-10-26 UTC. The current build appl
 | Docker | Ubuntu `docker.io` 29.1.3-0ubuntu4.1 | Distribution package notices | Installed; daemon accessible using `scripts/docker.sh` |
 | NVIDIA Container Toolkit | NVIDIA stable APT repository, 1.20.1-1 | Package notices | Installed; Docker NVIDIA runtime configured; GPU visibility and official checker passed |
 
-Generated smoke scenes will contain only primitives. Register every downloaded model or motion asset with its URL, revision, SHA-256, license, and local destination before later use. Do not claim asset provenance from a component's name alone.
+Generated smoke scenes contain only primitives. Register every downloaded model or motion asset with its URL, revision, SHA-256, license, and local destination before later use. Do not claim asset provenance from a component's name alone.
 
 The first source archive operation accidentally invoked Git LFS filters before it was interrupted. It fetched 100 small Isaac Lab test-fixture objects. Their source paths, pinned revision, SHA-256, byte counts, and license reference are recorded in `diagnostics/20261026T020145.113355Z-runtime-build/staging-interruption.json`; they remain in the ignored vendor checkout's `.git/lfs/objects/`. Subsequent source archiving explicitly skips smudging. No character, motion-tracker, or learned-controller assets were installed.
 
-A diagnostic uv 0.13.5 binary was separately downloaded and verified against its publisher's release digest to investigate the failed dependency resolution. The trial failed with the same error and did not replace the configured uv baseline. Archive hash, release metadata, local paths, configuration changes, and retained-container records are in `diagnostics/20261026T020231.007421Z-runtime-build/`. There is no resolved final package lock or validated learning-runtime image.
+A diagnostic uv 0.13.5 binary was separately downloaded and verified against its publisher's release digest to investigate the failed dependency resolution. The trial failed with the same error and did not replace the configured uv baseline. Archive hash, release metadata, local paths, configuration changes, and retained-container records are in `diagnostics/20261026T020231.007421Z-runtime-build/`. The later repaired installation has a combined resolved lock; the diagnostic resolver did not become the baseline.
 
 Sources inspected on 2026-10-25:
 

@@ -1,0 +1,19 @@
+[
+  "/home/vincent/Repos/DigitalHumanStudio/scripts/docker.sh",
+  "run",
+  "--name",
+  "studio-numpy-lock-20261026t040231z",
+  "--user",
+  "root",
+  "--entrypoint",
+  "bash",
+  "--mount",
+  "type=bind,src=/home/vincent/Repos/DigitalHumanStudio/container/configure_target.py,dst=/opt/studio/configure_target.py,readonly",
+  "--mount",
+  "type=bind,src=/home/vincent/Repos/DigitalHumanStudio/container/configure_protomotions.py,dst=/opt/studio/configure_protomotions.py,readonly",
+  "--mount",
+  "type=bind,src=/home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T032701.811084Z-runtime-build/resolved.uv.lock,dst=/opt/studio/input.uv.lock,readonly",
+  "digital-human-studio:m0-resolver-diagnostic",
+  "-lc",
+  "cd /opt/IsaacLab && /opt/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12 /opt/studio/configure_protomotions.py && /opt/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12 /opt/studio/configure_target.py --combine-protomotions && cp /opt/studio/input.uv.lock uv.lock && uv lock --python 3.12.13"
+]

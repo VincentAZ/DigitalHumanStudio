@@ -1,0 +1,241 @@
+[
+    {
+        "Id": "837323fdc6e64bfd777845d95cfdba1e8d12b107d92b6f93dd9bffe8627eabcf",
+        "Created": "2026-10-26T04:22:39.005910882Z",
+        "Path": "bash",
+        "Args": [
+            "-lc",
+            "cd /opt/IsaacLab && uv pip install --python .venv/bin/python --no-deps --no-index --find-links /wheelhouse isaacsim-extscache-kit==6.0.0.1 isaacsim-extscache-kit-sdk==6.0.0.1 nvidia-cublas-cu12==12.8.4.1 nvidia-cusparse-cu12==12.5.8.93 && uv sync --locked --python 3.12.13 --extra isaacsim && bash /opt/studio/finish_environment.sh"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-26T04:22:39.184615604Z",
+            "FinishedAt": "2026-10-26T04:33:31.676623278Z"
+        },
+        "Image": "sha256:40dd5cc03fbf660ac514d7998235baf2c3e2651ee23ce51b627c640bf87678f2",
+        "ResolvConfPath": "/var/lib/docker/containers/837323fdc6e64bfd777845d95cfdba1e8d12b107d92b6f93dd9bffe8627eabcf/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/837323fdc6e64bfd777845d95cfdba1e8d12b107d92b6f93dd9bffe8627eabcf/hostname",
+        "HostsPath": "/var/lib/docker/containers/837323fdc6e64bfd777845d95cfdba1e8d12b107d92b6f93dd9bffe8627eabcf/hosts",
+        "LogPath": "/var/lib/docker/containers/837323fdc6e64bfd777845d95cfdba1e8d12b107d92b6f93dd9bffe8627eabcf/837323fdc6e64bfd777845d95cfdba1e8d12b107d92b6f93dd9bffe8627eabcf-json.log",
+        "Name": "/studio-registry-prefetch-20261026t042235z",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/.downloads/wheels",
+                    "Target": "/wheelhouse",
+                    "ReadOnly": true
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/.downloads/wheels",
+                "Destination": "/wheelhouse",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "837323fdc6e6",
+            "Domainname": "",
+            "User": "root",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "UV_HTTP_TIMEOUT=300",
+                "UV_HTTP_RETRIES=3",
+                "UV_CONCURRENT_DOWNLOADS=4",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "VK_DRIVER_FILES=/etc/vulkan/icd.d/nvidia_icd.json",
+                "MIN_DRIVER_VERSION=570.169",
+                "HUB__CACHE__PATH=/var/cache/hub",
+                "HUB__ARGS__DETECT_ONLY=true",
+                "OMNICLIENT_HUB_EXE=/usr/local/bin/hub",
+                "DEBIAN_FRONTEND=noninteractive",
+                "UV_PYTHON_INSTALL_DIR=/opt/python",
+                "UV_CACHE_DIR=/opt/uv-cache",
+                "UV_LINK_MODE=copy",
+                "ACCEPT_EULA=Y",
+                "OMNI_KIT_ACCEPT_EULA=YES"
+            ],
+            "Cmd": [
+                "-lc",
+                "cd /opt/IsaacLab && uv pip install --python .venv/bin/python --no-deps --no-index --find-links /wheelhouse isaacsim-extscache-kit==6.0.0.1 isaacsim-extscache-kit-sdk==6.0.0.1 nvidia-cublas-cu12==12.8.4.1 nvidia-cusparse-cu12==12.5.8.93 && uv sync --locked --python 3.12.13 --extra isaacsim && bash /opt/studio/finish_environment.sh"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "NONE"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 180000000000,
+                "Retries": 3
+            },
+            "Image": "sha256:40dd5cc03fbf660ac514d7998235baf2c3e2651ee23ce51b627c640bf87678f2",
+            "Volumes": null,
+            "WorkingDir": "/isaac-sim",
+            "Entrypoint": [
+                "bash"
+            ],
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "cd902e4c66ab44bec23443ca4c1572689b1015358bb8afb3d6d13164fda27870",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:40dd5cc03fbf660ac514d7998235baf2c3e2651ee23ce51b627c640bf87678f2",
+            "size": 7174,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

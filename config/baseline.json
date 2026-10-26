@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "status": "patched_combined_graph_resolved_installing_runtime",
+  "status": "milestone_0_stopped_physics_acceptance_failed",
   "container_userspace": "Ubuntu 24.04",
-  "python": "3.12",
+  "python": "3.12.13",
   "isaac_sim": {
     "version": "6.0.0",
     "image": "nvcr.io/nvidia/isaac-sim:6.0.0",
@@ -29,7 +29,10 @@
     "version": "0.3.4",
     "status": "not_downloaded_mapping_deferred_to_milestone_1"
   },
-  "resolved_package_lock": null,
+  "resolved_package_lock": {
+    "path": "config/runtime.uv.lock",
+    "sha256": "9aae345079bff371fbdfd7e9e1faf14bbca0c516d8fc0156340d84df639c6162"
+  },
   "uv": {
     "version": "0.11.32",
     "sha256": "aab924fd522efd06f1c5f3b93a243864fc453132c94b2dc49f1371b528a4b967",
@@ -43,17 +46,39 @@
     "executable_sha256": "7d43f6e86a6c6dd12005ec77eb2055f1be3f1bb3adedf8afe0a87973fa7371ce"
   },
   "runtime_build": {
-    "status": "building",
-    "evidence": "diagnostics/20261026T032701.811084Z-runtime-build",
-    "resolution_evidence": "diagnostics/20261026T032524Z-combined-patched-resolution",
-    "physics_render_restart": "not_run",
-    "image_lock": null,
-    "recovery_evidence": "diagnostics/20261026T033253Z-runtime-recovery"
+    "status": "installed_audited_runtime_acceptance_failed",
+    "evidence": "diagnostics/20261026T042235Z-registry-prefetched-runtime",
+    "resolution_evidence": "diagnostics/20261026T040231Z-numpy-compatible-lock",
+    "physics_render_restart": "failed_minimum_height_assertion_run_1_restart_not_run",
+    "image_lock": "config/runtime-image.lock",
+    "recovery_evidence": "diagnostics/20261026T033253Z-runtime-recovery",
+    "prefetched_recovery_evidence": "diagnostics/20261026T040716Z-prefetched-runtime",
+    "image_id": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+    "runtime_evidence": "diagnostics/20261026T045036-runtime",
+    "retained_runtime_container": "studio-runtime-20261026T045036-1"
   },
   "build_patches": {
     "isaaclab": "container/configure_target.py",
     "protomotions": "container/configure_protomotions.py",
     "upstream_revisions_preserved": true,
-    "unmodified_upstream_build": false
+    "unmodified_upstream_build": false,
+    "baseline_constraints": {
+      "numpy": "2.3.1"
+    }
+  },
+  "installed_versions": {
+    "isaacsim": "6.0.0.1",
+    "isaaclab": "12.0.0",
+    "protomotions": "3.1.0",
+    "numpy": "2.3.1",
+    "pillow": "12.1.1",
+    "moviepy": "1.0.3",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "torchaudio": "2.11.0+cu128"
+  },
+  "media": {
+    "status": "passed",
+    "evidence": "diagnostics/20261026T044911-media"
   }
 }

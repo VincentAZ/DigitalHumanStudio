@@ -1,0 +1,17 @@
+{
+  "reason": "Isaac Lab requires MoviePy 1.x and Pillow 12.1.1; add legacy image-sequence import",
+  "requirement_change": "moviepy>=2,<3 -> moviepy>=1.0.3,<3; Lab still selects 1.x",
+  "source_revision_changed": false,
+  "files": [
+    {
+      "file": "pyproject.toml",
+      "original_sha256": "bea2c43f9d12ef39055511345d0e42a279753d7714e428c6cd0059383655d434",
+      "configured_sha256": "7f0234b2e8746395bc3f915b5bd966ce4b024d368c5cd5b9080ed9c4392d4d5e"
+    },
+    {
+      "file": "protomotions/simulator/base_simulator/record.py",
+      "original_sha256": "a9516bc2e30975ec7b4ceefc5c659e78137440014e201cbe4461a3c022712162",
+      "configured_sha256": "db1765017c4d81bf547f4e3c11b19d516b349248b6968c2567ac842cf5668ffd"
+    }
+  ]
+}

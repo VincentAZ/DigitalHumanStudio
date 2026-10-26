@@ -1,0 +1,5 @@
+{
+  "prior_attempt": "diagnostics/20261026T040716Z-prefetched-runtime",
+  "change": "Install verified wheels by name==version through local find-links index, preserving registry origin for locked sync",
+  "lock_changed": false
+}

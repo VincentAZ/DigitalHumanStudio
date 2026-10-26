@@ -1,0 +1,22 @@
+[
+  {
+    "file": "isaacsim_extscache_kit-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+    "sha256": "8c6cb23f00de93ee381b28a8d39c9944e2a215742c3a5c227b6e1b32a9bd1a6c",
+    "size": 5918377270
+  },
+  {
+    "file": "isaacsim_extscache_kit_sdk-6.0.0.1-cp312-none-manylinux_2_35_x86_64.whl",
+    "sha256": "04808d0cd284088d9e9cc355a7d3dc1e6a4bedebe7629c18851983bbf7b10d04",
+    "size": 1676845102
+  },
+  {
+    "file": "nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl",
+    "sha256": "8ac4e771d5a348c551b2a426eda6193c19aa630236b418086020df5ba9667142",
+    "size": 594346921
+  },
+  {
+    "file": "nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "1ec05d76bbbd8b61b06a80e1eaf8cf4959c3d4ce8e711b65ebd0443bb0ebb13b",
+    "size": 288216466
+  }
+]

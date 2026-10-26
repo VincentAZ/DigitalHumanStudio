@@ -10,6 +10,8 @@ evidence="$project_root/diagnostics/$stamp-runtime"
 artifacts="$project_root/artifacts/milestone0/runtime-$stamp"
 runtime_home="$project_root/.runtime/isaac-home"
 mkdir -p "$evidence" "$artifacts" "$runtime_home"
+printf '%s\n' "$runtime_home" > "$evidence/persistent-cache-and-log-path.txt"
+cp "$project_root/scripts/runtime_smoke.py" "$evidence/runtime_smoke.py"
 exec > >(tee "$evidence/session.log") 2>&1
 trap 'result=$?; printf "%s\n" "$result" > "$evidence/exit-code.txt"' EXIT
 "$docker_cmd" image inspect "$image" > "$evidence/image.json"
@@ -24,11 +26,13 @@ for attempt in 1 2; do
         --env NVIDIA_DRIVER_CAPABILITIES=all
         --env HOME=/studio-home --env XDG_CACHE_HOME=/studio-home/.cache
         --env XDG_CONFIG_HOME=/studio-home/.config
+        --env XDG_DATA_HOME=/studio-home/.local/share --env HUB__CACHE__PATH=/studio-home/hub-cache
         --mount "type=bind,src=$runtime_home,dst=/studio-home"
         --mount "type=bind,src=$project_root/scripts,dst=/studio/scripts,readonly"
         --mount "type=bind,src=$output,dst=/studio/output"
         "$image" /studio/scripts/runtime_smoke.py
-        --output /studio/output --device cuda:0 --enable_cameras --viz none)
+        --output /studio/output --device cuda:0 --enable_cameras --viz none
+        --kit_args "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log")
     printf '%q ' "${command[@]}" > "$evidence/run-$attempt.command.txt"
     printf '\n' >> "$evidence/run-$attempt.command.txt"
     set +e
@@ -40,6 +44,13 @@ for attempt in 1 2; do
         "$docker_cmd" stop --time 20 "$container_name" || true
     fi
     "$docker_cmd" inspect "$container_name" > "$evidence/container-$attempt.json"
+    if [[ -f "$output/kit.log" ]]; then
+        if ! cp "$output/kit.log" "$evidence/run-$attempt.kit.log"; then
+            printf '%s\n' "$container_name" > "$evidence/retained-container.txt"
+            echo 'STOP: could not preserve runtime Kit logs.'
+            exit 5
+        fi
+    fi
     if [[ $result -ne 0 ]] || [[ ! -f "$output/result.json" ]]; then
         printf '%s\n' "$container_name" > "$evidence/retained-container.txt"
         echo "STOP: runtime smoke did not pass. Evidence: $evidence; retained: $container_name"
@@ -59,5 +70,4 @@ PY
         > "$evidence/run-$attempt.artifact-sha256.txt"
     "$docker_cmd" rm "$container_name"
 done
-printf '%s\n' "$runtime_home" > "$evidence/persistent-cache-and-log-path.txt"
 echo "Pinned runtime smoke passed twice. Evidence: $evidence"

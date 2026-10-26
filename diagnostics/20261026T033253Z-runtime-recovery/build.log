@@ -1,0 +1,81 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  3.584kB
+Step 1/9 : FROM sha256:e76a9e93412d46b7f4dcf429d98db5784d4fcbcac4185e8435c0297e048e9d77
+ ---> e76a9e93412d
+Step 2/9 : ENV UV_HTTP_TIMEOUT=300 UV_HTTP_RETRIES=3 UV_CONCURRENT_DOWNLOADS=4
+ ---> Running in 6a4c062037cc
+ ---> Removed intermediate container 6a4c062037cc
+ ---> e142c4258c2f
+Step 3/9 : COPY finish_environment.sh /opt/studio/finish_environment.sh
+ ---> 51a502e52ce2
+Step 4/9 : RUN cd /opt/IsaacLab && uv sync --locked --python 3.12.13 --extra isaacsim && bash /opt/studio/finish_environment.sh
+ ---> Running in 7bbd73d95536
+[91mResolved 269 packages in 2ms
+[0m[91m   Building isaaclab-contrib @ file:///opt/IsaacLab/source/isaaclab_contrib
+[0m[91m   Building isaaclab-experimental @ file:///opt/IsaacLab/source/isaaclab_experimental
+[0m[91m   Building isaaclab-newton @ file:///opt/IsaacLab/source/isaaclab_newton
+[0m[91m   Building isaaclab-ov @ file:///opt/IsaacLab/source/isaaclab_ov
+[0m[91m   Building isaaclab-ovphysx @ file:///opt/IsaacLab/source/isaaclab_ovphysx
+[0m[91m   Building isaaclab-physx @ file:///opt/IsaacLab/source/isaaclab_physx
+[0m[91m   Building isaaclab-ppisp @ file:///opt/IsaacLab/source/isaaclab_ppisp
+[0m[91m   Building isaaclab-rl @ file:///opt/IsaacLab/source/isaaclab_rl
+[0m[91m   Building isaaclab-tasks @ file:///opt/IsaacLab/source/isaaclab_tasks
+[0m[91m   Building isaaclab-tasks-experimental @ file:///opt/IsaacLab/source/isaaclab_tasks_experimental
+[0m[91m   Building isaaclab-visualizers @ file:///opt/IsaacLab/source/isaaclab_visualizers
+[0m[91m   Building isaaclab @ file:///opt/IsaacLab/source/isaaclab
+[0m[91m   Building isaaclab-assets @ file:///opt/IsaacLab/source/isaaclab_assets
+[0m[91m   Building protomotions @ file:///opt/ProtoMotions
+[0m[91mDownloading omniverseclient (16.2MiB)
+[0m[91mDownloading torch (782.3MiB)
+[0m[91mDownloading warp-lang (159.0MiB)
+[0m[91mDownloading nvidia-cudnn-cu12 (627.4MiB)
+[0m[91m Downloaded omniverseclient
+[0m[91mDownloading nvidia-cusparselt-cu12 (273.9MiB)
+[0m[91m Downloaded warp-lang
+[0m[91mDownloading nvidia-nccl-cu12 (283.0MiB)
+[0m[91m Downloaded torch
+[0m[91mDownloading nvidia-nvshmem-cu12 (132.7MiB)
+[0m[91m Downloaded nvidia-cusparselt-cu12
+[0m[91mDownloading isaacsim-kernel (66.5MiB)
+[0m[91m Downloaded nvidia-nvshmem-cu12
+[0m[91mDownloading isaacsim-asset (27.6MiB)
+[0m[91m Downloaded isaacsim-kernel
+[0m[91mDownloading isaacsim-replicator (37.4MiB)
+[0m[91m Downloaded isaacsim-asset
+[0m[91mDownloading isaacsim-robot (11.8MiB)
+[0m[91m Downloaded nvidia-cudnn-cu12
+[0m[91mDownloading isaacsim-robot-motion (102.9MiB)
+[0m[91m Downloaded isaacsim-robot
+[0m[91mDownloading isaacsim-robot-setup (3.9MiB)
+[0m[91m Downloaded isaacsim-replicator
+[0m[91mDownloading isaacsim-ros2 (87.2MiB)
+[0m[91m Downloaded isaacsim-robot-setup
+[0m[91mDownloading isaacsim-sensor (20.7MiB)
+[0m[91m Downloaded nvidia-nccl-cu12
+[0m[91mDownloading isaacsim-test (17.5MiB)
+[0m[91m Downloaded isaacsim-sensor
+[0m[91mDownloading isaacsim-utils (170.1MiB)
+[0m[91m Downloaded isaacsim-test
+[0m[91mDownloading isaacsim-extscache-kit (5.5GiB)
+[0m[91m Downloaded isaacsim-robot-motion
+[0m[91mDownloading isaacsim-extscache-kit-sdk (1.6GiB)
+[0m[91m Downloaded isaacsim-ros2
+[0m[91mDownloading isaacsim-extscache-physics (246.4MiB)
+[0m[91m Downloaded isaacsim-utils
+[0m[91mDownloading nvidia-cublas-cu12 (566.8MiB)
+[0m[91m Downloaded isaacsim-extscache-physics
+[0m[91mDownloading nvidia-cufft-cu12 (184.2MiB)
+[0m[91m Downloaded nvidia-cufft-cu12
+[0m[91mDownloading nvidia-cufile-cu12 (1.1MiB)
+[0m[91m Downloaded nvidia-cufile-cu12
+[0m[91mDownloading nvidia-cuda-cupti-cu12 (9.8MiB)
+[0m[91m Downloaded nvidia-cuda-cupti-cu12
+[0m[91mDownloading nvidia-curand-cu12 (60.7MiB)
+[0m[91m Downloaded nvidia-curand-cu12
+[0m[91mDownloading nvidia-cusolver-cu12 (255.1MiB)
+[0m[91m Downloaded nvidia-cusolver-cu12
+[0m[91mDownloading nvidia-cusparse-cu12 (274.9MiB)
+[0mThe command '/bin/sh -c cd /opt/IsaacLab && uv sync --locked --python 3.12.13 --extra isaacsim && bash /opt/studio/finish_environment.sh' returned a non-zero code: 137
