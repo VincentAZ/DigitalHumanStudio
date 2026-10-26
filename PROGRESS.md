@@ -4,12 +4,12 @@ Read this file with `IMPLEMENTATION_PLAN.md` and `docs/SETUP_REPORT.md` before c
 
 ## Current scope
 
-User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics and stop at an Isaac compatibility failure before considering another architecture.
+User authorized **Milestone 1** after Milestone 0 completion. Preserve the host OS. Preserve diagnostics and stop at an Isaac compatibility failure before considering another architecture. Milestones 2–5 are not authorized.
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
 | 0 — Reproducible runtime | Complete for standalone workers | Two full exit-0 runs: `diagnostics/20261026T164452-runtime/`; official checker, Mixar, media and dependency audit passed |
-| 1 — Physical human baseline | Not started | Not authorized in current scope |
+| 1 — Physical human baseline | In progress; motion trials pending dataset eligibility | CPU model/contract checks passed: `diagnostics/20261026T170633Z-milestone1-preflight/`; see `docs/MILESTONE1_REPORT.md` |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
 | 4 — Second skill | Not started | — |
@@ -128,3 +128,13 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - `scripts/check_runtime.sh` passed twice in `diagnostics/20261026T164452-runtime/`: each run completed 480 finite GPU PhysX steps at 120 Hz, gravity/contact/settling assertions, pinned backend import, CUDA math and RTX output; cleared scene/context; exited 0. Both images were visually inspected. The second run began after the first process terminated.
 - A separate real intentional failure test exited 1 and produced no passing report. Existing official checker (two passes), Mixar save/render/reopen/desktop checks, recording encode/decode and installed dependency-audit evidence were re-inspected. Prior failed runs remain intact.
 - **Milestone 0 is complete for separate standalone workers.** Host OS, NVIDIA driver, image, source pins and package lock are unchanged. A cold rebuild from empty cache is not claimed. Milestone 1 remains unstarted and must preserve its pretrained controller's own timing.
+
+## 2026-10-26 UTC — Milestone 1 authorized and preparation verified
+
+- User explicitly authorized M1. Updated current scope; M2–M5 remain unauthorized.
+- Staged and hash-verified 44 pinned model, configuration, license, physical-asset and sample-motion files under ignored `.runtime/milestone1/assets/`; recorded `config/milestone1-assets.lock.json`.
+- CPU-only checks in the accepted runtime image passed with exit 0: strict tracker/GPC checkpoint loading, finite saved weights, exact 23-body/66-joint MJCF ordering, 66 actions, 120 Hz physics / 30 Hz control, and self-contained GPC FSQ decoder construction. This is not physics or motion-quality acceptance.
+- Recorded the publisher provenance discrepancy: `last_lab.ckpt` and legacy `last.ckpt` have identical LFS hashes at the pinned source revision despite different model-card descriptions.
+- The BONES-SEED license has eligibility conditions not established by this session. Asked the user which eligibility category or separate license covers their use. Sample files were downloaded from the documented public GitHub location before this issue was found, but have not been loaded or executed. Future fetches exclude motion data by default.
+- No M1 Isaac process, GPU simulation, motion trial, contact test, video or restart check has run. No host/image/source/package change, paid activation or later milestone work occurred.
+- Evidence and precise remaining gates: `docs/MILESTONE1_REPORT.md`. Repeatable CPU check: `scripts/check_milestone1_preflight.sh`. Runtime work awaits the dataset clarification.

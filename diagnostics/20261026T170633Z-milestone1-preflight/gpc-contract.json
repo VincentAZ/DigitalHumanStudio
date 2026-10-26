@@ -1,0 +1,802 @@
+{
+  "status": "passed_cpu_contract_checks",
+  "checkpoint": "/studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt",
+  "source_simulator_target": "protomotions.simulator.isaaclab.simulator.IsaacLabSimulator",
+  "selected_simulator_target": "protomotions.simulator.isaaclab.simulator.IsaacLabSimulator",
+  "physics_hz": 120,
+  "decimation": 4,
+  "control_hz": 30.0,
+  "body_names": [
+    "Hips",
+    "Spine1",
+    "Spine2",
+    "Chest",
+    "Neck1",
+    "Neck2",
+    "Head",
+    "RightShoulder",
+    "RightArm",
+    "RightForeArm",
+    "RightHand",
+    "LeftShoulder",
+    "LeftArm",
+    "LeftForeArm",
+    "LeftHand",
+    "RightLeg",
+    "RightShin",
+    "RightFoot",
+    "RightToeBase",
+    "LeftLeg",
+    "LeftShin",
+    "LeftFoot",
+    "LeftToeBase"
+  ],
+  "dof_names": [
+    "Spine1_x",
+    "Spine1_y",
+    "Spine1_z",
+    "Spine2_x",
+    "Spine2_y",
+    "Spine2_z",
+    "Chest_x",
+    "Chest_y",
+    "Chest_z",
+    "Neck1_x",
+    "Neck1_y",
+    "Neck1_z",
+    "Neck2_x",
+    "Neck2_y",
+    "Neck2_z",
+    "Head_x",
+    "Head_y",
+    "Head_z",
+    "RightShoulder_x",
+    "RightShoulder_y",
+    "RightShoulder_z",
+    "RightArm_x",
+    "RightArm_y",
+    "RightArm_z",
+    "RightForeArm_x",
+    "RightForeArm_y",
+    "RightForeArm_z",
+    "RightHand_x",
+    "RightHand_y",
+    "RightHand_z",
+    "LeftShoulder_x",
+    "LeftShoulder_y",
+    "LeftShoulder_z",
+    "LeftArm_x",
+    "LeftArm_y",
+    "LeftArm_z",
+    "LeftForeArm_x",
+    "LeftForeArm_y",
+    "LeftForeArm_z",
+    "LeftHand_x",
+    "LeftHand_y",
+    "LeftHand_z",
+    "RightLeg_x",
+    "RightLeg_y",
+    "RightLeg_z",
+    "RightShin_x",
+    "RightShin_y",
+    "RightShin_z",
+    "RightFoot_x",
+    "RightFoot_y",
+    "RightFoot_z",
+    "RightToeBase_x",
+    "RightToeBase_y",
+    "RightToeBase_z",
+    "LeftLeg_x",
+    "LeftLeg_y",
+    "LeftLeg_z",
+    "LeftShin_x",
+    "LeftShin_y",
+    "LeftShin_z",
+    "LeftFoot_x",
+    "LeftFoot_y",
+    "LeftFoot_z",
+    "LeftToeBase_x",
+    "LeftToeBase_y",
+    "LeftToeBase_z"
+  ],
+  "model_class": "protomotions.agents.supervised.latent_prior_model.DiscreteAutoregressiveLatentPriorModel",
+  "model_state_keys": 114,
+  "strict_model_load": true,
+  "weights_finite": true,
+  "control": {
+    "override_control_info": {
+      "(Spine|Chest|Neck|Head).*": {
+        "stiffness": null,
+        "damping": null,
+        "armature": null,
+        "friction": null,
+        "effort_limit": 300,
+        "velocity_limit": 100
+      },
+      ".*(Shoulder|Arm|Hand)_.*": {
+        "stiffness": null,
+        "damping": null,
+        "armature": null,
+        "friction": null,
+        "effort_limit": 150,
+        "velocity_limit": 100
+      },
+      ".*(Leg|Shin|Foot|ToeBase)_.*": {
+        "stiffness": null,
+        "damping": null,
+        "armature": null,
+        "friction": null,
+        "effort_limit": 300,
+        "velocity_limit": 100
+      }
+    },
+    "control_type": "ControlType.BUILT_IN_PD",
+    "soft_pos_limit": 0.9,
+    "control_info": {
+      "Spine1_x": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Spine1_y": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Spine1_z": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Spine2_x": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Spine2_y": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Spine2_z": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Chest_x": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Chest_y": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Chest_z": {
+        "stiffness": 800.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Neck1_x": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Neck1_y": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Neck1_z": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Neck2_x": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Neck2_y": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Neck2_z": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Head_x": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Head_y": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "Head_z": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightShoulder_x": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightShoulder_y": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightShoulder_z": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightArm_x": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightArm_y": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightArm_z": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightForeArm_x": {
+        "stiffness": 300.0,
+        "damping": 30.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightForeArm_y": {
+        "stiffness": 300.0,
+        "damping": 80.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightForeArm_z": {
+        "stiffness": 300.0,
+        "damping": 30.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightHand_x": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightHand_y": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightHand_z": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftShoulder_x": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftShoulder_y": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftShoulder_z": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftArm_x": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftArm_y": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftArm_z": {
+        "stiffness": 400.0,
+        "damping": 40.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftForeArm_x": {
+        "stiffness": 300.0,
+        "damping": 30.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftForeArm_y": {
+        "stiffness": 300.0,
+        "damping": 30.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftForeArm_z": {
+        "stiffness": 300.0,
+        "damping": 30.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftHand_x": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftHand_y": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "LeftHand_z": {
+        "stiffness": 200.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 150.0,
+        "velocity_limit": 100
+      },
+      "RightLeg_x": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightLeg_y": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightLeg_z": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightShin_x": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightShin_y": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightShin_z": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightFoot_x": {
+        "stiffness": 100.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightFoot_y": {
+        "stiffness": 100.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightFoot_z": {
+        "stiffness": 100.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightToeBase_x": {
+        "stiffness": 60.0,
+        "damping": 12.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightToeBase_y": {
+        "stiffness": 60.0,
+        "damping": 12.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "RightToeBase_z": {
+        "stiffness": 60.0,
+        "damping": 12.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftLeg_x": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftLeg_y": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftLeg_z": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftShin_x": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftShin_y": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftShin_z": {
+        "stiffness": 500.0,
+        "damping": 50.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftFoot_x": {
+        "stiffness": 100.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftFoot_y": {
+        "stiffness": 100.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftFoot_z": {
+        "stiffness": 100.0,
+        "damping": 20.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftToeBase_x": {
+        "stiffness": 60.0,
+        "damping": 12.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftToeBase_y": {
+        "stiffness": 60.0,
+        "damping": 12.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      },
+      "LeftToeBase_z": {
+        "stiffness": 60.0,
+        "damping": 12.0,
+        "armature": 0.02,
+        "friction": null,
+        "effort_limit": 300.0,
+        "velocity_limit": 100
+      }
+    }
+  },
+  "physics": {
+    "fps": 120,
+    "decimation": 4,
+    "physx": {
+      "num_threads": 4,
+      "solver_type": 1,
+      "num_position_iterations": 4,
+      "num_velocity_iterations": 4,
+      "contact_offset": 0.02,
+      "rest_offset": 0.0,
+      "bounce_threshold_velocity": 0.2,
+      "max_depenetration_velocity": 1,
+      "default_buffer_size_multiplier": 10.0,
+      "gpu_found_lost_pairs_capacity": 2097152,
+      "gpu_max_rigid_contact_count": 8388608,
+      "gpu_found_lost_aggregate_pairs_capacity": 33554432,
+      "gpu_max_rigid_patch_count": 163840
+    }
+  },
+  "model_inference_inputs": [
+    "max_coords_obs"
+  ],
+  "note": "CPU contract check only. No motion data loaded; no simulator or task adaptation executed.",
+  "embedded_decoder": true,
+  "latent_decoder": {
+    "checkpoint_path": "",
+    "module_path": "actor.mu",
+    "module_config_path": "agent.model.actor.mu_model",
+    "module_config": {
+      "_target_": "protomotions.agents.common.fsq.FSQAutoEncoder",
+      "in_keys": [],
+      "out_keys": [],
+      "encoder_out_keys": [
+        "latent"
+      ],
+      "decoder_out_keys": [
+        "mu"
+      ],
+      "encoder": {
+        "normalize_obs": true,
+        "norm_clamp_value": 5,
+        "norm_ema_decay": 0.999,
+        "num_out": 40,
+        "layers": [
+          {
+            "units": 1024,
+            "activation": "relu",
+            "use_layer_norm": false
+          },
+          {
+            "units": 1024,
+            "activation": "relu",
+            "use_layer_norm": false
+          },
+          {
+            "units": 1024,
+            "activation": "relu",
+            "use_layer_norm": false
+          },
+          {
+            "units": 512,
+            "activation": "relu",
+            "use_layer_norm": false
+          },
+          {
+            "units": 256,
+            "activation": "relu",
+            "use_layer_norm": false
+          }
+        ],
+        "_target_": "protomotions.agents.common.mlp.MLPWithConcat",
+        "in_keys": [
+          "mimic_target_poses"
+        ],
+        "out_keys": [
+          "latent"
+        ],
+        "output_activation": null,
+        "module_operations": [
+          {}
+        ]
+      },
+      "decoder": {
+        "normalize_obs": true,
+        "norm_clamp_value": 5,
+        "norm_ema_decay": 0.999,
+        "num_out": 66,
+        "layers": [
+          {
+            "units": 1024,
+            "activation": "relu",
+            "use_layer_norm": false
+          },
+          {
+            "units": 1024,
+            "activation": "relu",
+            "use_layer_norm": false
+          },
+          {
+            "units": 1024,
+            "activation": "relu",
+            "use_layer_norm": false
+          },
+          {
+            "units": 512,
+            "activation": "relu",
+            "use_layer_norm": false
+          },
+          {
+            "units": 256,
+            "activation": "relu",
+            "use_layer_norm": false
+          }
+        ],
+        "_target_": "protomotions.agents.common.mlp.MLPWithConcat",
+        "in_keys": [
+          "max_coords_obs",
+          "latent"
+        ],
+        "out_keys": [
+          "mu"
+        ],
+        "output_activation": null,
+        "module_operations": [
+          {}
+        ]
+      },
+      "latent_key": "latent",
+      "num_fsq_levels": 9,
+      "num_fsq_scalars": 40
+    },
+    "config_path": "agent.model",
+    "state_dict_key": "model",
+    "strict": true,
+    "freeze": true
+  }
+}

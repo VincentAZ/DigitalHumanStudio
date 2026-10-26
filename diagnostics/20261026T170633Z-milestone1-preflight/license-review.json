@@ -1,0 +1,18 @@
+{
+  "review_date_utc": "2026-10-26",
+  "model_license": "NVIDIA Open Model License, bundled 2025-10-24 version",
+  "model_terms_and_notice_preserved": true,
+  "source_code_license": "Apache-2.0",
+  "dataset_url": "https://huggingface.co/datasets/bones-studio/seed",
+  "dataset_license_url": "https://bones.studio/info/seed-license",
+  "dataset_eligibility": "pending_user_clarification",
+  "categories": [
+    "nonprofit academic institution (noncommercial public scientific research)",
+    "commercial entity with annual gross revenue below USD 1 million",
+    "separate license"
+  ],
+  "dataset_rights_not_granted_by_model_card": true,
+  "paid_services_activated": false,
+  "hugging_face_account_or_gate_used": false,
+  "motion_trials_executed": false
+}

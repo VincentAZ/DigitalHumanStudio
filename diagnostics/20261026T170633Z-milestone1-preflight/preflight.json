@@ -1,0 +1,16 @@
+{
+  "tracker": {
+    "status": "passed_cpu_contract_checks",
+    "model_state_keys": 31,
+    "physics_hz": 120,
+    "control_hz": 30.0,
+    "strict_model_load": true
+  },
+  "gpc": {
+    "status": "passed_cpu_contract_checks",
+    "model_state_keys": 114,
+    "physics_hz": 120,
+    "control_hz": 30.0,
+    "strict_model_load": true
+  }
+}

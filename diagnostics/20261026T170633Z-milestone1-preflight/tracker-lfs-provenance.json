@@ -1,0 +1,8 @@
+{
+  "revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "pointers": {
+    "data/pretrained_models/motion_tracker/soma-bones/last.ckpt": "version https://git-lfs.github.com/spec/v1\noid sha256:18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307\nsize 125291239\n",
+    "data/pretrained_models/motion_tracker/soma-bones/last_lab.ckpt": "version https://git-lfs.github.com/spec/v1\noid sha256:18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307\nsize 125291239\n"
+  },
+  "identical": true
+}

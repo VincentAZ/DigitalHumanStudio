@@ -59,7 +59,7 @@ The final launcher uses [NVIDIA's default standalone shutdown](https://docs.isaa
 
 **Scope:** separate standalone worker processes are validated. The upstream slow/in-process finalization defect remains unresolved; repeated Kit startup in one Python interpreter is not claimed. Known Hub/headless/powersave/IOMMU warnings remain in the logs. GDB was installed only in a disposable diagnostic container. Host OS, NVIDIA driver, pinned source revisions, final image and package lock are unchanged.
 
-**Next milestone:** reproduce the supported SOMA 23-body humanoid with its matching pretrained motion tracker, preserving the model's specified simulation/control timing. Milestone 1 has not started; no character or learned-controller assets have been fetched.
+**Milestone 1 update:** the user subsequently authorized M1. Pinned physical/model assets are staged and CPU-only model/contract checks passed; physics trials are pending dataset eligibility clarification. See [the M1 report](MILESTONE1_REPORT.md). The historical M0 observations below remain unchanged.
 
 ## Inspected host — 2026-10-25
 
@@ -167,6 +167,6 @@ The runtime launcher uses the content ID in `config/runtime-image.lock`, runs on
 python3 scripts/build_runtime.py --compatibility-evidence diagnostics/20261026T020033-isaac
 ```
 
-The runtime command passed both complete runs on the existing host with the recorded standalone lifecycle. M0 acceptance is complete; Milestones 1–5 remain unstarted. The resolved package lock and local image content ID remain authoritative. A clean rebuild from an empty cache has not been validated; the accepted launcher reuses the installed image.
+The runtime command passed both complete runs on the existing host with the recorded standalone lifecycle. M0 acceptance is complete. M1 preparation is now recorded separately in [the M1 report](MILESTONE1_REPORT.md); Milestones 2–5 remain unstarted. The resolved package lock and local image content ID remain authoritative. A clean rebuild from an empty cache has not been validated; the accepted launcher reuses the installed image.
 
 If a future runtime check demonstrates host incompatibility, a concrete supported-environment candidate is a separate Ubuntu 24.04 LTS x86_64 machine with an RTX GPU and driver meeting NVIDIA's published Isaac Sim 6.0 requirements, using the same research stack. This is a contingency recommendation only. The dependency repairs recorded above are also required on that candidate; no OS replacement, migration, or different architecture has been selected.

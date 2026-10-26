@@ -1,0 +1,10 @@
+{
+  "command": "python3 scripts/fetch_milestone1_assets.py",
+  "exit_code": 0,
+  "downloaded_before_eligibility_question": [
+    "data/motion_for_trackers/crouch_soma23.pt",
+    "data/motion_for_trackers/soma23_bones_seed_mini.pt"
+  ],
+  "motion_data_loaded_or_executed": false,
+  "note": "Initial fetch included public GitHub samples before the separate dataset eligibility terms were inspected. Subsequent fetches default to excluding motion data. Existing local samples have not been loaded or used in trials."
+}

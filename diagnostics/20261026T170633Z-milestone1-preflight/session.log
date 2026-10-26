@@ -1,0 +1,9 @@
+All staged asset hashes match the lock.
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+/opt/ProtoMotions/protomotions/utils/rotations.py:199: SyntaxWarning: invalid escape sequence '\*'
+  Combine two set of 3D rotations together using \**\* operator. The shape needs to be
+<unknown>:4: SyntaxWarning: invalid escape sequence '\*'
+tracker {'status': 'passed_cpu_contract_checks', 'model_state_keys': 31, 'physics_hz': 120, 'control_hz': 30.0, 'strict_model_load': True}
+gpc {'status': 'passed_cpu_contract_checks', 'model_state_keys': 114, 'physics_hz': 120, 'control_hz': 30.0, 'strict_model_load': True}
+CPU-only contract evidence: /home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T170633Z-milestone1-preflight
