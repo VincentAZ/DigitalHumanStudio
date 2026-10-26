@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "process_exit_code": 0,
+  "child_status": "checks_passed_shutdown_pending",
+  "kit_cleanup_logged": true,
+  "note": "Acceptance requires checked scene cleanup, Kit shutdown logs and process exit 0."
+}

@@ -1,0 +1,3 @@
+072f913810e6ec84753a5a6122e154f7514cbc14e3092b155ca9c2d615c8c041  /home/vincent/Repos/DigitalHumanStudio/artifacts/milestone0/runtime-20261026T164452/run-1/scene.usda
+d72d39866cedaba674e372ce68a2c1417ac0cecb18973d5d0a956696ae73439a  /home/vincent/Repos/DigitalHumanStudio/artifacts/milestone0/runtime-20261026T164452/run-1/render.png
+93aeed14cdf6c2663f017f7c6fc09ae5989764965390c39f1e5970b0302e3ef0  /home/vincent/Repos/DigitalHumanStudio/artifacts/milestone0/runtime-20261026T164452/run-1/trajectory.json

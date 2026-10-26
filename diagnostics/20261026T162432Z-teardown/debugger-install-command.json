@@ -1,0 +1,10 @@
+[
+  "/home/vincent/Repos/DigitalHumanStudio/scripts/docker.sh",
+  "exec",
+  "--user",
+  "root",
+  "studio-teardown-20261026t162432z",
+  "bash",
+  "-c",
+  "apt-get update && apt-get install -y --no-install-recommends --no-upgrade gdb"
+]

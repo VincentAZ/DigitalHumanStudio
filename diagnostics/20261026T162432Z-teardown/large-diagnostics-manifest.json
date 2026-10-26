@@ -1,0 +1,26 @@
+[
+  {
+    "source": "/home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T162432Z-teardown/retained-errors.partial.json",
+    "retained_path": "artifacts/milestone0/teardown-20261026T162432Z/retained-errors.partial.json",
+    "sha256": "0ffc3c5cbfbd51086054e3e77fd97e19aec90aa191609da61ba8e954fe190c89",
+    "bytes": 2167673
+  },
+  {
+    "source": "/home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T162432Z-teardown/inspect-fixed/retained-errors.json",
+    "retained_path": "artifacts/milestone0/teardown-20261026T162432Z/inspect-fixed/retained-errors.json",
+    "sha256": "0ffc3c5cbfbd51086054e3e77fd97e19aec90aa191609da61ba8e954fe190c89",
+    "bytes": 2167673
+  },
+  {
+    "source": "/home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T162432Z-teardown/inspect-fixed/kit-0.nv-gpudmp",
+    "retained_path": "artifacts/milestone0/teardown-20261026T162432Z/inspect-fixed/kit-0.nv-gpudmp",
+    "sha256": "64751d12abf3281a347d08b6ff92ecece82595cc7323d620ae6c785530a87398",
+    "bytes": 63980
+  },
+  {
+    "source": "/home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T162432Z-teardown/inspect-retained/kit-0.nv-gpudmp",
+    "retained_path": "artifacts/milestone0/teardown-20261026T162432Z/inspect-retained/kit-0.nv-gpudmp",
+    "sha256": "3e75c985e892bfcde387062d7e71302ecb5dc7488597e62b3530629edc583584",
+    "bytes": 63980
+  }
+]

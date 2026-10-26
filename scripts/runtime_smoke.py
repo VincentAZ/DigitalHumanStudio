@@ -18,9 +18,10 @@ AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
 started = time.monotonic()
 args.output.mkdir(parents=True, exist_ok=True)
-app = AppLauncher(args, fast_shutdown=False).app
+app = AppLauncher(args).app
 
-try:
+
+def run_checks():
     import numpy as np
     import torch
     from PIL import Image
@@ -146,13 +147,35 @@ try:
         "sources": json.loads(Path("/opt/studio/source-revisions.json").read_text()),
     }
     sim.stop()
+    return result
+
+exit_code = 1
+try:
+    result = run_checks()
+    # Release the simulation scene/services while Kit is alive. Kit's default
+    # standalone shutdown owns final framework/process termination; returning
+    # to Python finalization after unloading Kit leaves dangling native objects.
+    from isaaclab.sim import SimulationContext
+    SimulationContext.clear_instance()
+    assert SimulationContext.instance() is None, "Simulation context still exists"
+    assert app.context.get_stage() is None, "USD stage still open"
+    assert app.config["fast_shutdown"] is True, "Expected Kit's standalone shutdown mode"
+    result["status"] = "checks_passed_shutdown_pending"
+    result["shutdown"] = {
+        "mode": "kit_default_standalone", "fast_shutdown": True,
+        "skip_cleanup": False, "wait_for_replicator": True,
+        "simulation_context_cleared": True, "stage_closed_before_app_shutdown": True,
+    }
+    result["elapsed_before_app_shutdown_seconds"] = time.monotonic() - started
+    (args.output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
+    print("STUDIO_RUNTIME_CHECKS_PASSED_AWAITING_KIT_SHUTDOWN", flush=True)
+    exit_code = 0
 except BaseException:
     traceback.print_exc()
     raise
 finally:
-    app.close()
+    # The pinned SimulationApp supports exit_code: a failed assertion must not
+    # become exit 0 when Kit terminates its standalone process.
+    app.close(wait_for_replicator=True, skip_cleanup=False, exit_code=exit_code)
 
-result["status"] = "checks_passed_cleanup_returned"
-result["elapsed_seconds"] = time.monotonic() - started
-(args.output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
-print("STUDIO_RUNTIME_CHECKS_PASSED_AWAITING_PROCESS_EXIT", flush=True)
+raise RuntimeError("Kit standalone shutdown unexpectedly returned")

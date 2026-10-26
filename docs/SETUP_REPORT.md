@@ -1,10 +1,10 @@
 # Milestone 0 setup report
 
-Status: **Milestone 0 stopped at a shutdown segmentation fault in `libomni.ui.so`. The contact failure is diagnosed: 120 Hz passes unchanged physics thresholds and produces a visually verified RTX image. Process exit 139 prevents acceptance and restart validation. Dependency audit, official checker, Mixar and recording checks remain passed.**
+Status: **Milestone 0 complete for standalone simulation workers. Two full GPU physics/RTX/shutdown runs passed with process exit 0. Dependency audit, official checker, Mixar and recording checks passed. Native slow/in-process teardown remains defective and is not the supported launcher mode.**
 
 ## Current repair — 2026-10-26 UTC
 
-Successful installation evidence: `diagnostics/20261026T042235Z-registry-prefetched-runtime/`. The 268 installed distributions include Isaac Sim 6.0.0.1, Isaac Lab 12.0.0, ProtoMotions 3.1.0, NumPy 2.3.1, Pillow 12.1.1, MoviePy 1.0.3, and Torch 2.11.0+cu128 on Python 3.12.13. `environment/dependency-audit.json` has no unexpected violations. Raw `uv pip check` reports two mismatches intentionally introduced by the pinned Isaac Lab source: Newton 1.4.0.dev0 at commit `c7ae7c7648cd0717df39e5c94b95d5a02c997320` instead of Isaac Sim's 1.2.0 requirement, and Newton USD schemas 0.6.0 satisfying Lab's >=0.3.1 override instead of Sim's 0.2.0 requirement. Those exceptions are preserved, not presented as a clean raw pip check. The image is locked in `config/runtime-image.lock` and the combined package lock in `config/runtime.uv.lock`. Runtime acceptance is now stopped on final process termination, after the contact diagnosis below.
+Successful installation evidence: `diagnostics/20261026T042235Z-registry-prefetched-runtime/`. The 268 installed distributions include Isaac Sim 6.0.0.1, Isaac Lab 12.0.0, ProtoMotions 3.1.0, NumPy 2.3.1, Pillow 12.1.1, MoviePy 1.0.3, and Torch 2.11.0+cu128 on Python 3.12.13. `environment/dependency-audit.json` has no unexpected violations. Raw `uv pip check` reports two mismatches intentionally introduced by the pinned Isaac Lab source: Newton 1.4.0.dev0 at commit `c7ae7c7648cd0717df39e5c94b95d5a02c997320` instead of Isaac Sim's 1.2.0 requirement, and Newton USD schemas 0.6.0 satisfying Lab's >=0.3.1 override instead of Sim's 0.2.0 requirement. Those exceptions are preserved, not presented as a clean raw pip check. The image is locked in `config/runtime-image.lock` and the combined package lock in `config/runtime.uv.lock`. Runtime acceptance passed twice with the standalone lifecycle described below.
 
 The build keeps the requested source revisions but applies explicit, hash-guarded patches to copies inside the container. The ignored vendor checkouts remain pristine. Every modification produces a unified diff and before/after hashes under `/opt/studio` for collection with the final build evidence.
 
@@ -33,28 +33,33 @@ A full clean rebuild from an empty cache has not been completed. The final image
 
 The recording encode/decode test passed in `diagnostics/20261026T044911-media/`, with all 12 frames, 12 fps, and expected decoded colors. The video is under `artifacts/milestone0/media-20261026T044911/`. It exercises the actual patched import block and image-sequence class, not every MoviePy feature.
 
-The first runtime attempt (`diagnostics/20261026T044914-runtime/`) failed because Kit tried to create shader caches and data inside the root-owned Python installation. Its process returned 0 but produced no completion report; the wrapper correctly rejected it and retained the container. Kit could not create its announced file log; complete stdout/stderr are preserved. The launcher now passes a user-writable [Kit portable root](https://docs.omniverse.nvidia.com/kit/docs/kit-manual/latest/guide/configuring.html) and an explicit output log path. It disables fast shutdown so cleanup returns before writing the completion report, and explicitly prints exceptions before cleanup. These are launcher corrections; they do not change the image, host, driver or backend.
+The first runtime attempt (`diagnostics/20261026T044914-runtime/`) failed because Kit tried to create shader caches and data inside the root-owned Python installation. Its process returned 0 but produced no completion report; the wrapper correctly rejected it and retained the container. Kit could not create its announced file log; complete stdout/stderr are preserved. The launcher now passes a user-writable [Kit portable root](https://docs.omniverse.nvidia.com/kit/docs/kit-manual/latest/guide/configuring.html) and an explicit output log path. An earlier launcher disabled fast shutdown to write its completion report after cleanup. Native teardown diagnosis showed that this override exposes late Python destructors after Kit unloads. The final launcher restores the default standalone lifecycle and leaves final acceptance to the parent after process exit. It explicitly prints exceptions and preserves their nonzero status. The image, host, driver and backend are unchanged.
 
-## Current stopping point — teardown after successful physics and rendering
+## Accepted runtime and native teardown diagnosis
 
-The user authorized contact trajectory capture and simulation-versus-measurement diagnosis. [Full comparison and plot](../diagnostics/20261026T160639Z-contact-analysis/README.md) preserve both attempts and the unchanged acceptance thresholds.
+Final evidence: `diagnostics/20261026T164452-runtime/`. Both runs use the same locked image and passed every check independently, with exit 0. The second process started after the first terminated. Both 640×480 RTX images were visually inspected and show the expected blue cube on the floor.
 
-| Check | Result |
-| --- | --- |
-| 60 Hz reproduction | Minimum center height 0.18514985 m at step 34; fails >0.20 m requirement |
-| Independent position readback | Isaac Lab and raw PhysX XYZ match exactly at every sample in both runs |
-| 120 Hz, same four-second duration | Minimum 0.24999999 m; resting-height, finite-state and settling assertions pass |
-| RTX output | 640×480 image saved and visually verified: blue cube on the floor |
-| Shutdown/process exit | `app.close()` returned, but process subsequently exited 139; kernel names `libomni.ui.so` |
-| Restart | Not run; launcher stopped on unsuccessful process exit |
+| Check | Run 1 | Run 2 |
+| --- | --- | --- |
+| CUDA computation / pinned ProtoMotions import | Passed | Passed |
+| GPU PhysX, 120 Hz, four seconds | 480 finite steps | 480 finite steps |
+| Minimum cube center height (>0.20 m) | 0.24999999 m | 0.24999999 m |
+| Final center height (0.25 ±0.03 m) | 0.25 m | 0.25 m |
+| Final 0.5 s maximum speed (<0.1 m/s) | 0.00012403 m/s | 0.00012403 m/s |
+| Cached/raw XYZ disagreement | 0 m | 0 m |
+| RTX image / scene and trajectory saved | Passed | Passed |
+| Simulation singleton cleared / USD stage closed | Verified | Verified |
+| Kit cleanup milestones / final process exit | Verified / 0 | Verified / 0 |
 
-At 60 Hz, the cube travels 98.10 mm during the impact step before contact correction on the next step. The measured comparison supports discrete collision timing rather than stale position reads. Only the simulation `dt` changed between configurations; the scene, GPU PhysX backend, CCD setting, gravity and acceptance thresholds are unchanged. The M0 script now defaults to 120 Hz (480 steps over four seconds). This does **not** change the timing required by later pretrained controllers.
+The [contact diagnosis](../diagnostics/20261026T160639Z-contact-analysis/README.md) preserved the original 60 Hz failure. At that frequency the cube travels 98.10 mm during the impact step before correction, dipping to 0.18515 m. Cached and raw PhysX positions agree exactly. At 120 Hz the same four-second test passes without relaxing any threshold. This M0 integration frequency does not set the timing of later pretrained controllers.
 
-Evidence: `diagnostics/20261026T160211-runtime/` and `diagnostics/20261026T160349-runtime/`. Both containers are retained. Full trajectories, per-step raw PhysX poses/velocities, configuration, initial/final USD scenes, commands, exact tested scripts, logs and exit codes are saved before acceptance decisions. The 120 Hz child result says `passed` because its assertions and cleanup returned; the authoritative `run-1.outcome.json` records process failure. Future script reports explicitly separate these stages. Their reporting-only changes have not been followed by another Isaac launch.
+The [native teardown report](../diagnostics/20261026T162432Z-teardown/README.md) contains GDB traces of a UI-window destructor reached through an OSError traceback during `Py_FinalizeEx`, and a later native event-subscription destructor after a cache experiment. Garbage collection, stat-cache changes and explicit object cleanup did not make `fast_shutdown=False` reliable. Those experiments remain diagnostics only.
 
-The original failed run in `diagnostics/20261026T045036-runtime/` remains intact. Unlike that earlier attempt, the new runs preserve numeric samples before assertions. The shutdown fault is a new blocker; its exact destructor/lifecycle cause is not established. No restart or complete M0 pass is claimed.
+The final launcher uses [NVIDIA's default standalone shutdown](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/py/source/extensions/isaacsim.simulation_app/docs/index.html), scopes simulation objects, explicitly clears the simulation context/stage, and calls `app.close(wait_for_replicator=True, skip_cleanup=False, exit_code=...)`. It writes a pending-shutdown result before Kit terminates the process. The parent requires checked scene cleanup, Kit's Replicator/shutdown log markers and exit 0; a child marker alone cannot pass. A real intentional RuntimeError test returned 1 with no passing report (`diagnostics/20261026T162432Z-teardown/negative-exit.*`). No application-level forced-success exit or library/cache patch ships in the launcher.
 
-**Next:** investigate native teardown in the same pinned environment, then repeat the complete launcher twice with exit 0. Milestone 1 remains gated on that result and will reproduce the SOMA humanoid and matching pretrained motion tracker. No OS replacement, driver change or alternate architecture/backend has been chosen.
+**Scope:** separate standalone worker processes are validated. The upstream slow/in-process finalization defect remains unresolved; repeated Kit startup in one Python interpreter is not claimed. Known Hub/headless/powersave/IOMMU warnings remain in the logs. GDB was installed only in a disposable diagnostic container. Host OS, NVIDIA driver, pinned source revisions, final image and package lock are unchanged.
+
+**Next milestone:** reproduce the supported SOMA 23-body humanoid with its matching pretrained motion tracker, preserving the model's specified simulation/control timing. Milestone 1 has not started; no character or learned-controller assets have been fetched.
 
 ## Inspected host — 2026-10-25
 
@@ -126,7 +131,7 @@ Evidence is in `diagnostics/20261026T020231.007421Z-runtime-build/`: original bu
 
 At this point the milestone was stopped. The user subsequently authorized the repairs described above. The original failure remains preserved; it is not evidence that reinstalling the host OS would fix the dependency-resolution problem. Do not silently change source revisions, select another backend, or begin Milestone 1.
 
-The builder verifies two successful official checker results and their image digest before constructing the environment. The repaired recipe resolves Isaac Lab and ProtoMotions together and records the combined lock and installed environment. `scripts/check_runtime.sh` requires a final image content ID and tests GPU computation, explicit PhysX gravity/contact behavior, an RTX image, clean shutdown, and a second run. Runtime acceptance failed as described below.
+The builder verifies two successful official checker results and their image digest before constructing the environment. The repaired recipe resolves Isaac Lab and ProtoMotions together and records the combined lock and installed environment. `scripts/check_runtime.sh` requires a final image content ID and tests GPU computation, explicit PhysX gravity/contact behavior, an RTX image, clean shutdown, and a second run. The final standalone runtime acceptance passed twice as described above.
 
 The checker launcher retains failed containers and records their names in `retained-container.txt`. It also stops and retains the container if copying Kit logs fails, even when the checker reports PASS. Failure preservation was verified using an isolated mock Docker command. Both real successful checker containers had their logs copied before removal; no genuine failing checker was induced.
 
@@ -156,12 +161,12 @@ scripts/check_mixar.sh
 scripts/mixar.sh artifacts/milestone0/mixar-20261025T235551/milestone0.blend
 ```
 
-The runtime launcher uses the content ID in `config/runtime-image.lock`, runs one GPU process at a time, and requires two successful runs with process exit 0 and a completion report written after cleanup. It preserves failed containers. Its 900-second limit includes first-run shader compilation. Rebuilding is a separate operation:
+The runtime launcher uses the content ID in `config/runtime-image.lock`, runs one GPU process at a time, and requires two successful runs with process exit 0, checked scene cleanup, Kit cleanup log milestones and a pending-shutdown report from the child. It preserves failed containers. Its 900-second limit includes first-run shader compilation. Rebuilding is a separate operation:
 
 ```bash
 python3 scripts/build_runtime.py --compatibility-evidence diagnostics/20261026T020033-isaac
 ```
 
-The commands above reproduce checks; runtime validation is currently stopped and should not be treated as an accepted launcher. Physics and RTX assertions passed at 120 Hz; the remaining gate is successful process termination and a complete second run. The launcher requires both runs to pass all checks and exit 0. Installed package versions and the content-addressed image already exist. Milestone 0 cannot pass until the runtime gate succeeds; Milestones 1–5 remain unstarted.
+The runtime command passed both complete runs on the existing host with the recorded standalone lifecycle. M0 acceptance is complete; Milestones 1–5 remain unstarted. The resolved package lock and local image content ID remain authoritative. A clean rebuild from an empty cache has not been validated; the accepted launcher reuses the installed image.
 
 If a future runtime check demonstrates host incompatibility, a concrete supported-environment candidate is a separate Ubuntu 24.04 LTS x86_64 machine with an RTX GPU and driver meeting NVIDIA's published Isaac Sim 6.0 requirements, using the same research stack. This is a contingency recommendation only. The dependency repairs recorded above are also required on that candidate; no OS replacement, migration, or different architecture has been selected.

@@ -8,7 +8,7 @@ User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| 0 — Reproducible runtime | Stopped: shutdown segmentation fault | Contact diagnosed; 120 Hz physics/RTX passed, process exit 139; `diagnostics/20261026T160349-runtime/` |
+| 0 — Reproducible runtime | Complete for standalone workers | Two full exit-0 runs: `diagnostics/20261026T164452-runtime/`; official checker, Mixar, media and dependency audit passed |
 | 1 — Physical human baseline | Not started | Not authorized in current scope |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
@@ -119,3 +119,12 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - The 120 Hz child wrote its completion report after app.close returned, then process termination failed with exit 139. Kernel journal confirms a segmentation fault in libomni.ui.so; Docker reports no OOM kill. The launcher correctly rejected the internal pass marker, retained the container and stopped before run 2.
 - Preserved both containers, traces, scenes, configuration, logs, exit codes and a comparison plot in `diagnostics/20261026T160639Z-contact-analysis/`. Future reports distinguish internal assertions/cleanup return from full process success. No further Isaac run was attempted after the new lifecycle failure.
 - **Milestone 0 remains incomplete.** Next is native teardown diagnosis and successful complete runs, then Milestone 1. No humanoid/model assets fetched and no architecture change made.
+
+## 2026-10-26 UTC — Native teardown diagnosed; Milestone 0 accepted
+
+- User authorized native teardown diagnosis and two complete runs. Captured GDB stacks showing late UI-window destruction through cached OSError tracebacks, then native event-subscription destruction during Python finalization. Failed trials and inspected-source hashes are preserved in `diagnostics/20261026T162432Z-teardown/`; no host or locked-image package installation occurred (GDB was diagnostic-container-only).
+- Garbage collection, stat-cache reset/disable/detach and scoped slow teardown did not solve all upstream finalization defects. None of those cache experiments ships in the final launcher.
+- Restored NVIDIA's default standalone shutdown mode, scoped simulation objects, explicitly cleared Isaac Lab's simulation context and USD stage, and forwarded failure exit status to SimulationApp.close. The parent accepts only checked artifacts/scene cleanup, Kit cleanup markers and final process exit 0. The slow/in-process teardown defect remains documented and outside the validated worker lifecycle.
+- `scripts/check_runtime.sh` passed twice in `diagnostics/20261026T164452-runtime/`: each run completed 480 finite GPU PhysX steps at 120 Hz, gravity/contact/settling assertions, pinned backend import, CUDA math and RTX output; cleared scene/context; exited 0. Both images were visually inspected. The second run began after the first process terminated.
+- A separate real intentional failure test exited 1 and produced no passing report. Existing official checker (two passes), Mixar save/render/reopen/desktop checks, recording encode/decode and installed dependency-audit evidence were re-inspected. Prior failed runs remain intact.
+- **Milestone 0 is complete for separate standalone workers.** Host OS, NVIDIA driver, image, source pins and package lock are unchanged. A cold rebuild from empty cache is not claimed. Milestone 1 remains unstarted and must preserve its pretrained controller's own timing.

@@ -1,0 +1,62 @@
+{
+  "status": "checks_passed_shutdown_pending",
+  "python": "3.12.13",
+  "versions": {
+    "isaacsim": "6.0.0.1",
+    "isaaclab": "12.0.0",
+    "protomotions": "3.1.0",
+    "torch": "2.11.0+cu128",
+    "moviepy": "1.0.3",
+    "pillow": "12.1.1"
+  },
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "cuda_compute": "128x128 matrix multiplication passed",
+  "physics_manager": "isaaclab_physx.physics.physx_manager",
+  "physics_device": "cuda:0",
+  "protomotions_backend_import": "protomotions.simulator.isaaclab.simulator",
+  "initial_height": 1.9979562759399414,
+  "final_height": 0.25,
+  "steps": 480,
+  "dt": 0.008333333333333333,
+  "duration": 4.0,
+  "physics_hz": 120,
+  "contact_measurements": {
+    "minimum_height": 0.2499999850988388,
+    "minimum_step": 72,
+    "minimum_raw_height": 0.2499999850988388,
+    "final_height": 0.25,
+    "maximum_position_readback_difference": 0.0,
+    "maximum_final_speed": 0.0001240292558936067,
+    "final_height_range": 1.4901161193847656e-08,
+    "minimum_height_required_exclusive": 0.2
+  },
+  "render_shape": [
+    480,
+    640,
+    3
+  ],
+  "render_std": 14.238143171192378,
+  "sources": {
+    "IsaacLab": {
+      "revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "repository": "https://github.com/isaac-sim/IsaacLab.git",
+      "archive_sha256": "3059c92d5667dc5250ca1f217edeb3bb5bfb1da7383bc0c1db3cb8146f3fdce2",
+      "lfs_assets": "not_fetched"
+    },
+    "ProtoMotions": {
+      "revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+      "repository": "https://github.com/NVlabs/ProtoMotions.git",
+      "archive_sha256": "71a58d1e140a14b6aeca18bd62135da0dd0d551fe1f3daba818d929fe4f91526",
+      "lfs_assets": "not_fetched"
+    }
+  },
+  "shutdown": {
+    "mode": "kit_default_standalone",
+    "fast_shutdown": true,
+    "skip_cleanup": false,
+    "wait_for_replicator": true,
+    "simulation_context_cleared": true,
+    "stage_closed_before_app_shutdown": true
+  },
+  "elapsed_before_app_shutdown_seconds": 19.629331291995186
+}

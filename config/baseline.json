@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "milestone_0_stopped_shutdown_segfault",
+  "status": "milestone_0_passed_standalone_workers",
   "container_userspace": "Ubuntu 24.04",
   "python": "3.12.13",
   "isaac_sim": {
@@ -46,16 +46,15 @@
     "executable_sha256": "7d43f6e86a6c6dd12005ec77eb2055f1be3f1bb3adedf8afe0a87973fa7371ce"
   },
   "runtime_build": {
-    "status": "installed_audited_runtime_acceptance_failed",
+    "status": "installed_audited_validated_standalone",
     "evidence": "diagnostics/20261026T042235Z-registry-prefetched-runtime",
     "resolution_evidence": "diagnostics/20261026T040231Z-numpy-compatible-lock",
-    "physics_render_restart": "physics_render_passed_at_120hz_process_exit_139_restart_not_run",
+    "physics_render_restart": "passed_twice",
     "image_lock": "config/runtime-image.lock",
     "recovery_evidence": "diagnostics/20261026T033253Z-runtime-recovery",
     "prefetched_recovery_evidence": "diagnostics/20261026T040716Z-prefetched-runtime",
     "image_id": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
-    "runtime_evidence": "diagnostics/20261026T160349-runtime",
-    "retained_runtime_container": "studio-runtime-20261026T160349-1"
+    "runtime_evidence": "diagnostics/20261026T164452-runtime"
   },
   "build_patches": {
     "isaaclab": "container/configure_target.py",
@@ -82,14 +81,27 @@
     "evidence": "diagnostics/20261026T044911-media"
   },
   "runtime_validation": {
-    "status": "failed_process_termination",
+    "status": "passed_twice",
     "primitive_physics_hz": 120,
     "duration_seconds": 4,
-    "physics_and_render": "passed_single_run",
-    "process_exit_code": 139,
-    "faulting_library": "libomni.ui.so",
-    "restart": "not_run",
+    "steps_per_run": 480,
+    "physics_and_render": "passed_twice",
+    "process_exit_codes": [
+      0,
+      0
+    ],
+    "restart": "passed_second_process",
+    "shutdown_mode": "kit_default_standalone",
+    "fast_shutdown": true,
+    "skip_cleanup": false,
+    "explicit_scene_cleanup": true,
+    "evidence": "diagnostics/20261026T164452-runtime",
+    "teardown_diagnosis": "diagnostics/20261026T162432Z-teardown",
     "contact_analysis": "diagnostics/20261026T160639Z-contact-analysis",
+    "limitations": [
+      "Slow/in-process Python finalization still crashes in native Kit destructors",
+      "Cold rebuild from empty cache not validated"
+    ],
     "controller_timing": "No humanoid/controller timing selected; M0 primitive setting only"
   }
 }

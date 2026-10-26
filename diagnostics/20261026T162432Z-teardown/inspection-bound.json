@@ -1,0 +1,5 @@
+{
+  "status": "inspection_stopped_after_cache_identified",
+  "exceptions_captured": 1187,
+  "finding": "Kit stat_cache stores and re-raises OSError objects with tracebacks; bounded inspection superseded by specific configuration A/B test"
+}

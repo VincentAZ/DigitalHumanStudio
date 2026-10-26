@@ -1,0 +1,5 @@
+{
+  "status": "diagnostic_probe_error",
+  "error": "isinstance on expired weak proxy raised ReferenceError; not an Isaac compatibility result",
+  "action": "Stopped diagnostic container; use issubclass(type(obj), OSError) to avoid proxy dereferencing"
+}

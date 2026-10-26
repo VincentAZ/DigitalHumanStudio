@@ -1,0 +1,14 @@
+[
+  {
+    "name": "upstream-stat_cache.py",
+    "sha256": "fe7e13e58ef766c669f410d6b56acd652e12c6cb59298f01faac746c9d3e6d83",
+    "retained_local_path": ".runtime/teardown-inspected-source/upstream-stat_cache.py",
+    "origin": "Pinned runtime image Kit Python source; inspected only, not modified"
+  },
+  {
+    "name": "upstream-ext_settings.py",
+    "sha256": "ca9db499b5c8373fa93c776db3702c386d448c2eac1eb3114115d2328e30d404",
+    "retained_local_path": ".runtime/teardown-inspected-source/upstream-ext_settings.py",
+    "origin": "Pinned runtime image Kit Python source; inspected only, not modified"
+  }
+]

@@ -1,0 +1,249 @@
+Loading user config located at: '/studio-home/kit/data/Kit/IsaacLab/3.0/user.config.json'
+2026-10-26T16:44:53Z [Info] [carb] Logging to file: /studio/output/kit.log
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_experimental] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_experimental' or '/opt/IsaacLab/source/isaaclab_experimental/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_newton] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_newton' or '/opt/IsaacLab/source/isaaclab_newton/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ovphysx] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ovphysx' or '/opt/IsaacLab/source/isaaclab_ovphysx/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ov] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ov' or '/opt/IsaacLab/source/isaaclab_ov/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_tasks_experimental] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_tasks_experimental' or '/opt/IsaacLab/source/isaaclab_tasks_experimental/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_tasks] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_tasks' or '/opt/IsaacLab/source/isaaclab_tasks/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: .github] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.github' or '/opt/IsaacLab/.github/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: .agents] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.agents' or '/opt/IsaacLab/.agents/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: .claude] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.claude' or '/opt/IsaacLab/.claude/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: docs] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/docs' or '/opt/IsaacLab/docs/config'
+2026-10-26T16:44:53Z [3ms] [Warning] [omni.ext.plugin] [ext: .venv] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.venv' or '/opt/IsaacLab/.venv/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_teleop] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_teleop' or '/opt/IsaacLab/source/isaaclab_teleop/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: apps] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/apps' or '/opt/IsaacLab/apps/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_visualizers] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_visualizers' or '/opt/IsaacLab/source/isaaclab_visualizers/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab' or '/opt/IsaacLab/source/isaaclab/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_assets] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_assets' or '/opt/IsaacLab/source/isaaclab_assets/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_mimic] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_mimic' or '/opt/IsaacLab/source/isaaclab_mimic/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_contrib] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_contrib' or '/opt/IsaacLab/source/isaaclab_contrib/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ppisp] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ppisp' or '/opt/IsaacLab/source/isaaclab_ppisp/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_physx] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_physx' or '/opt/IsaacLab/source/isaaclab_physx/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: skills] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/skills' or '/opt/IsaacLab/skills/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: source] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source' or '/opt/IsaacLab/source/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: docker] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/docker' or '/opt/IsaacLab/docker/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: tools] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/tools' or '/opt/IsaacLab/tools/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: scripts] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/scripts' or '/opt/IsaacLab/scripts/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_rl] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_rl' or '/opt/IsaacLab/source/isaaclab_rl/config'
+2026-10-26T16:44:53Z [4ms] [Warning] [omni.ext.plugin] [ext: .vscode] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.vscode' or '/opt/IsaacLab/.vscode/config'
+2026-10-26T16:44:53Z [119ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:53Z [190ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:53Z [271ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:53Z [362ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:53Z [464ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:53Z [575ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:53Z [696ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:54Z [828ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:54Z [970ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:54Z [1,121ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:54Z [1,283ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:54Z [1,454ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:54Z [1,635ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:55Z [1,826ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:55Z [2,028ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:55Z [2,240ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:55Z [2,461ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:55Z [2,693ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:56Z [2,934ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:56Z [3,186ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:56Z [3,448ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:56Z [3,719ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:57Z [4,001ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:57Z [4,292ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:57Z [4,594ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793033103.593232       1 descriptor_database.cc:633] File already exists in database: grpc/health/v1/health.proto
+W0000 00:00:1793033103.593255       1 message.cc:301] Protobuf GeneratedMessageFactory: File is already registered: grpc/health/v1/health.proto
+2026-10-26T16:44:58Z [4,905ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:58Z [5,227ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:58Z [5,558ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:59Z [5,899ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:59Z [6,251ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:44:59Z [6,613ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:00Z [6,985ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:00Z [7,366ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:01Z [7,758ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:01Z [8,160ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:01Z [8,571ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:02Z [8,993ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:02Z [9,425ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:03Z [9,866ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-24028A50.config.json\\\"\")"
+2026-10-26T16:45:03Z [10,492ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+[ISAACLAB] AppLauncher initialization complete
+[ISAACLAB] Kit version: 110.1.1+production.305458.6312fa25.gl
+[ISAACLAB] Kit kernel:  210.1.5+release.12978.b22b555f.gl
+[ISAACLAB] Kit hash:    6312fa25
+/opt/ProtoMotions/protomotions/utils/rotations.py:199: SyntaxWarning: invalid escape sequence '\*'
+  Combine two set of 3D rotations together using \**\* operator. The shape needs to be
+<unknown>:4: SyntaxWarning: invalid escape sequence '\*'
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+[INFO]: Registered backend 'physx' for factory RigidObject.
+[INFO]: Registered backend 'physx' for factory Renderer.
+[INFO]: Created new renderer for simulation: IsaacRtxRenderer
+[INFO]: Using renderer: IsaacRtxRenderer
+[INFO]: Registered backend 'physx' for factory FrameView.
+STUDIO_CONTACT_MEASUREMENTS {"minimum_height": 0.2499999850988388, "minimum_step": 72, "minimum_raw_height": 0.2499999850988388, "final_height": 0.25, "maximum_position_readback_difference": 0.0, "maximum_final_speed": 0.0001240292558936067, "final_height_range": 1.4901161193847656e-08, "minimum_height_required_exclusive": 0.2}
+[INFO]: SimulationContext cleared
+STUDIO_RUNTIME_CHECKS_PASSED_AWAITING_KIT_SHUTDOWN
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 595.99.02     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX PRO 6000 Blackwell .. | Yes: 0 |     | 97887   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2bb1      | fee22419.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 24.04.3 LTS (Noble Numbat) ubuntu, Version: 24.04.3, Kernel: 7.0.0-38-generic
+| Processor: AMD Ryzen 9 9950X 16-Core Processor
+| Cores: 16 | Logical Cores: 32
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 124087 | Free Memory: 102296
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-10-26T16:45:04Z [10,975ms] [Warning] [omni.rtx] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-10-26T16:45:04Z [10,984ms] [Warning] [omni.rtx] IOMMU is enabled.
+2026-10-26T16:45:04Z [11,614ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-26T16:45:04Z [11,614ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-26T16:45:04Z [11,683ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-26T16:45:04Z [11,683ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-26T16:45:04Z [11,684ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-26T16:45:04Z [11,684ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-26T16:45:05Z [12,031ms] [Warning] [isaacsim.core.simulation_manager.plugin] USD stage is not available; stage-opened subscription is deferred
+2026-10-26T16:45:05Z [12,031ms] [Warning] [isaacsim.core.simulation_manager.plugin] USD stage is not available; stage-opened subscription is deferred
+2026-10-26T16:45:05Z [12,050ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-10-26T16:45:05Z [12,448ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-10-26T16:45:05Z [12,547ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-10-26T16:45:06Z [13,673ms] [Warning] [rtx.hydra] RenderDelegate : Warning /rtx/hydra/readTransformsFromFabricInRenderDelegate and geometry streaming are enabled together but this can cause issues with dynamic objects not streaming correctly due to problems in the transform update.
+2026-10-26T16:45:10Z [17,564ms] [Warning] [isaaclab_physx.physics.physx_manager] TGS solver with enable_external_forces_every_iteration=False may cause noisy velocities.
+studio-runtime-20261026T164452-1
+Loading user config located at: '/studio-home/kit/data/Kit/IsaacLab/3.0/user.config.json'
+2026-10-26T16:45:14Z [Info] [carb] Logging to file: /studio/output/kit.log
+2026-10-26T16:45:14Z [2ms] [Warning] [omni.ext.plugin] [ext: isaaclab_physx] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_physx' or '/opt/IsaacLab/source/isaaclab_physx/config'
+2026-10-26T16:45:14Z [2ms] [Warning] [omni.ext.plugin] [ext: isaaclab_teleop] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_teleop' or '/opt/IsaacLab/source/isaaclab_teleop/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ovphysx] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ovphysx' or '/opt/IsaacLab/source/isaaclab_ovphysx/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_contrib] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_contrib' or '/opt/IsaacLab/source/isaaclab_contrib/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_mimic] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_mimic' or '/opt/IsaacLab/source/isaaclab_mimic/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab' or '/opt/IsaacLab/source/isaaclab/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_rl] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_rl' or '/opt/IsaacLab/source/isaaclab_rl/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ppisp] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ppisp' or '/opt/IsaacLab/source/isaaclab_ppisp/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_visualizers] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_visualizers' or '/opt/IsaacLab/source/isaaclab_visualizers/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_assets] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_assets' or '/opt/IsaacLab/source/isaaclab_assets/config'
+2026-10-26T16:45:14Z [3ms] [Warning] [omni.ext.plugin] [ext: isaaclab_newton] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_newton' or '/opt/IsaacLab/source/isaaclab_newton/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_tasks] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_tasks' or '/opt/IsaacLab/source/isaaclab_tasks/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_tasks_experimental] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_tasks_experimental' or '/opt/IsaacLab/source/isaaclab_tasks_experimental/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: .github] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.github' or '/opt/IsaacLab/.github/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: docs] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/docs' or '/opt/IsaacLab/docs/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: .venv] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.venv' or '/opt/IsaacLab/.venv/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: source] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source' or '/opt/IsaacLab/source/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_ov] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_ov' or '/opt/IsaacLab/source/isaaclab_ov/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: apps] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/apps' or '/opt/IsaacLab/apps/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: .agents] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.agents' or '/opt/IsaacLab/.agents/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: scripts] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/scripts' or '/opt/IsaacLab/scripts/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: tools] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/tools' or '/opt/IsaacLab/tools/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: .claude] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.claude' or '/opt/IsaacLab/.claude/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: isaaclab_experimental] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source/isaaclab_experimental' or '/opt/IsaacLab/source/isaaclab_experimental/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: .vscode] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.vscode' or '/opt/IsaacLab/.vscode/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: docker] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/docker' or '/opt/IsaacLab/docker/config'
+2026-10-26T16:45:14Z [4ms] [Warning] [omni.ext.plugin] [ext: skills] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/skills' or '/opt/IsaacLab/skills/config'
+2026-10-26T16:45:14Z [117ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:14Z [189ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:14Z [270ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:14Z [361ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:14Z [463ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:14Z [574ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:14Z [696ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:14Z [827ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:15Z [969ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:15Z [1,120ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:15Z [1,280ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:15Z [1,452ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:15Z [1,632ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:15Z [1,824ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:16Z [2,025ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:16Z [2,237ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:16Z [2,459ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:16Z [2,690ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:17Z [2,932ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:17Z [3,183ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:17Z [3,445ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:17Z [3,715ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:18Z [3,997ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:18Z [4,289ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:18Z [4,590ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793033124.436528       1 descriptor_database.cc:633] File already exists in database: grpc/health/v1/health.proto
+W0000 00:00:1793033124.436550       1 message.cc:301] Protobuf GeneratedMessageFactory: File is already registered: grpc/health/v1/health.proto
+2026-10-26T16:45:19Z [4,902ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:19Z [5,224ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:19Z [5,555ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:20Z [5,897ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:20Z [6,249ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:20Z [6,609ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:21Z [6,981ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:21Z [7,363ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:21Z [7,754ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:22Z [8,155ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:22Z [8,567ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:23Z [8,989ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:23Z [9,420ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:23Z [9,861ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-8EDE351C.config.json\\\"\")"
+2026-10-26T16:45:24Z [10,499ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+[ISAACLAB] AppLauncher initialization complete
+[ISAACLAB] Kit version: 110.1.1+production.305458.6312fa25.gl
+[ISAACLAB] Kit kernel:  210.1.5+release.12978.b22b555f.gl
+[ISAACLAB] Kit hash:    6312fa25
+/opt/ProtoMotions/protomotions/utils/rotations.py:199: SyntaxWarning: invalid escape sequence '\*'
+  Combine two set of 3D rotations together using \**\* operator. The shape needs to be
+<unknown>:4: SyntaxWarning: invalid escape sequence '\*'
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+[INFO]: Registered backend 'physx' for factory RigidObject.
+[INFO]: Registered backend 'physx' for factory Renderer.
+[INFO]: Created new renderer for simulation: IsaacRtxRenderer
+[INFO]: Using renderer: IsaacRtxRenderer
+[INFO]: Registered backend 'physx' for factory FrameView.
+STUDIO_CONTACT_MEASUREMENTS {"minimum_height": 0.2499999850988388, "minimum_step": 72, "minimum_raw_height": 0.2499999850988388, "final_height": 0.25, "maximum_position_readback_difference": 0.0, "maximum_final_speed": 0.0001240292558936067, "final_height_range": 1.4901161193847656e-08, "minimum_height_required_exclusive": 0.2}
+[INFO]: SimulationContext cleared
+STUDIO_RUNTIME_CHECKS_PASSED_AWAITING_KIT_SHUTDOWN
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 595.99.02     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX PRO 6000 Blackwell .. | Yes: 0 |     | 97887   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2bb1      | fee22419.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 24.04.3 LTS (Noble Numbat) ubuntu, Version: 24.04.3, Kernel: 7.0.0-38-generic
+| Processor: AMD Ryzen 9 9950X 16-Core Processor
+| Cores: 16 | Logical Cores: 32
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 124087 | Free Memory: 101797
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-10-26T16:45:25Z [11,044ms] [Warning] [omni.rtx] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-10-26T16:45:25Z [11,053ms] [Warning] [omni.rtx] IOMMU is enabled.
+2026-10-26T16:45:25Z [11,675ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-26T16:45:25Z [11,675ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-26T16:45:25Z [11,748ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-26T16:45:25Z [11,748ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-26T16:45:25Z [11,749ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-26T16:45:25Z [11,749ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-26T16:45:26Z [12,094ms] [Warning] [isaacsim.core.simulation_manager.plugin] USD stage is not available; stage-opened subscription is deferred
+2026-10-26T16:45:26Z [12,094ms] [Warning] [isaacsim.core.simulation_manager.plugin] USD stage is not available; stage-opened subscription is deferred
+2026-10-26T16:45:26Z [12,114ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-10-26T16:45:26Z [12,510ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-10-26T16:45:26Z [12,608ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-10-26T16:45:27Z [13,670ms] [Warning] [rtx.hydra] RenderDelegate : Warning /rtx/hydra/readTransformsFromFabricInRenderDelegate and geometry streaming are enabled together but this can cause issues with dynamic objects not streaming correctly due to problems in the transform update.
+2026-10-26T16:45:31Z [17,378ms] [Warning] [isaaclab_physx.physics.physx_manager] TGS solver with enable_external_forces_every_iteration=False may cause noisy velocities.
+studio-runtime-20261026T164452-2
+Pinned runtime smoke passed twice. Evidence: /home/vincent/Repos/DigitalHumanStudio/diagnostics/20261026T164452-runtime

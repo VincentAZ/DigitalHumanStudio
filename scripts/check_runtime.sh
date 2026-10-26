@@ -12,6 +12,7 @@ runtime_home="$project_root/.runtime/isaac-home"
 mkdir -p "$evidence" "$artifacts" "$runtime_home"
 printf '%s\n' "$runtime_home" > "$evidence/persistent-cache-and-log-path.txt"
 cp "$project_root/scripts/runtime_smoke.py" "$evidence/runtime_smoke.py"
+cp "$project_root/scripts/check_runtime.sh" "$evidence/check_runtime.sh"
 exec > >(tee "$evidence/session.log") 2>&1
 trap 'result=$?; printf "%s\n" "$result" > "$evidence/exit-code.txt"' EXIT
 "$docker_cmd" image inspect "$image" > "$evidence/image.json"
@@ -50,22 +51,39 @@ for attempt in 1 2; do
         fi
     done
     validation=0
-    python3 - "$output/result.json" "$result" "$evidence/run-$attempt.outcome.json" <<'PY' || validation=$?
+    python3 - "$output/result.json" "$result" "$evidence/run-$attempt.outcome.json" "$output/kit.log" <<'PY' || validation=$?
 import json, sys
 from pathlib import Path
 report = Path(sys.argv[1])
 child = json.loads(report.read_text()) if report.exists() else None
 exit_code = int(sys.argv[2])
+log_path = Path(sys.argv[4])
+kit_log = log_path.read_text(errors='replace') if log_path.exists() else ''
+cleanup_markers = [
+    'SimulationApp.close: Replicator shutdown finished',
+    'Simulation App Shutting Down',
+    'SimulationApp.close: shutting down app',
+]
+cleanup_logged = all(marker in kit_log for marker in cleanup_markers)
+shutdown = child.get('shutdown', {}) if child else {}
 accepted = (exit_code == 0 and child is not None
-            and child.get('status') == 'checks_passed_cleanup_returned'
+            and child.get('status') == 'checks_passed_shutdown_pending'
             and child.get('physics_device') == 'cuda:0'
             and child.get('physics_hz') in (60, 120)
             and child.get('steps') == 4 * child.get('physics_hz')
-            and child.get('duration') == 4.0)
+            and child.get('duration') == 4.0
+            and shutdown.get('mode') == 'kit_default_standalone'
+            and shutdown.get('fast_shutdown') is True
+            and shutdown.get('skip_cleanup') is False
+            and shutdown.get('wait_for_replicator') is True
+            and shutdown.get('simulation_context_cleared') is True
+            and shutdown.get('stage_closed_before_app_shutdown') is True
+            and cleanup_logged)
 Path(sys.argv[3]).write_text(json.dumps({
     'status': 'passed' if accepted else 'failed', 'process_exit_code': exit_code,
     'child_status': child.get('status') if child else None,
-    'note': 'Child assertions and cleanup return cannot replace a successful process exit.',
+    'kit_cleanup_logged': cleanup_logged,
+    'note': 'Acceptance requires checked scene cleanup, Kit shutdown logs and process exit 0.',
 }, indent=2) + '\n')
 sys.exit(0 if accepted else 4)
 PY

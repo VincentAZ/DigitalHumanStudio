@@ -2,7 +2,7 @@
 
 Local Linux research studio for character authoring and learned physical movement.
 
-Only **Milestone 0: reproducible runtime** is authorized. Dependency repairs are installed and locked; official Isaac checker, Mixar and video recording checks passed. The contact diagnosis passes unchanged physics thresholds at 120 Hz and saves a verified RTX image, but runtime acceptance stopped on a shutdown segmentation fault in `libomni.ui.so`. Milestone 0 is incomplete, and later milestones remain unstarted. See the [setup report](docs/SETUP_REPORT.md) for the failure, retained diagnostics and next investigation. Host OS and NVIDIA driver are unchanged.
+**Milestone 0 is complete** on the existing host. The pinned runtime passed two complete GPU physics/render/shutdown runs, and the official Isaac checker, Mixar and video recording checks passed. The launcher uses Kit's supported standalone shutdown; the native slow-shutdown defect and diagnostics are documented in the [setup report](docs/SETUP_REPORT.md). Milestone 1 remains unstarted. Host OS and NVIDIA driver are unchanged.
 
 - [Implementation specification](IMPLEMENTATION_PLAN.md)
 - [Milestone log](PROGRESS.md)

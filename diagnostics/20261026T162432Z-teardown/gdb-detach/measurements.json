@@ -1,0 +1,10 @@
+{
+  "minimum_height": 0.2499999850988388,
+  "minimum_step": 72,
+  "minimum_raw_height": 0.2499999850988388,
+  "final_height": 0.25,
+  "maximum_position_readback_difference": 0.0,
+  "maximum_final_speed": 0.0001240292558936067,
+  "final_height_range": 1.4901161193847656e-08,
+  "minimum_height_required_exclusive": 0.2
+}

@@ -1,0 +1,5 @@
+{
+  "scope": "CPU-only test of exact installed _os_stat_cached AST with a synthetic caller object; no Isaac or native window creation",
+  "retained_after_caller_returns_and_gc": true,
+  "released_after_cache_clear_and_gc": true
+}

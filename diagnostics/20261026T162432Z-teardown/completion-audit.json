@@ -1,0 +1,68 @@
+{
+  "status": "requirements_verified",
+  "goal": "Diagnose native teardown and pass two complete runs",
+  "native_diagnosis": [
+    "gdb-reproduction.log",
+    "gdb-detach.log"
+  ],
+  "accepted_runs": [
+    {
+      "run": 1,
+      "outcome": {
+        "status": "passed",
+        "process_exit_code": 0,
+        "child_status": "checks_passed_shutdown_pending",
+        "kit_cleanup_logged": true,
+        "note": "Acceptance requires checked scene cleanup, Kit shutdown logs and process exit 0."
+      },
+      "started": "2026-10-26T16:44:52.889522077Z",
+      "finished": "2026-10-26T16:45:13.449408961Z",
+      "image_id": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9"
+    },
+    {
+      "run": 2,
+      "outcome": {
+        "status": "passed",
+        "process_exit_code": 0,
+        "child_status": "checks_passed_shutdown_pending",
+        "kit_cleanup_logged": true,
+        "note": "Acceptance requires checked scene cleanup, Kit shutdown logs and process exit 0."
+      },
+      "started": "2026-10-26T16:45:13.786005146Z",
+      "finished": "2026-10-26T16:45:34.007512049Z",
+      "image_id": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9"
+    }
+  ],
+  "real_failure_exit_test": {
+    "exit_code": 1,
+    "passing_report": false
+  },
+  "parent_validator_tests": [
+    {
+      "case": "actual_success",
+      "validator_exit": 0,
+      "scope": "offline regression fixture"
+    },
+    {
+      "case": "segfault_cannot_pass",
+      "validator_exit": 4,
+      "scope": "offline regression fixture"
+    },
+    {
+      "case": "missing_cleanup_log_cannot_pass",
+      "validator_exit": 4,
+      "scope": "offline regression fixture"
+    }
+  ],
+  "visual_inspection": "Both images show expected blue cube on floor; identical SHA256",
+  "milestone_0_prior_gates_reinspected": [
+    "Official checker twice",
+    "Mixar saved project and image hashes / exit 0",
+    "MoviePy encode/decode",
+    "Installed dependency audit with exactly two declared overrides"
+  ],
+  "source_image_lock_plan_preservation": "passed",
+  "shutdown_scope": "Kit default standalone; slow/in-process finalization defect preserved, not claimed fixed",
+  "cold_rebuild": "not_validated",
+  "milestone_1": "not_started"
+}
