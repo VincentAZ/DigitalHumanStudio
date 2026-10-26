@@ -1,0 +1,14 @@
+{
+  "stage": "rlft",
+  "seed": "0",
+  "num_envs": "2048",
+  "batch_size": "2048",
+  "wall_clock_seconds": "420",
+  "experiment_name": "m3_throughput_rlft_2048",
+  "warm_start_checkpoint": "",
+  "image": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+  "output": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_throughput_rlft_2048-20261026T185017Z",
+  "control_hz": 30,
+  "physics_hz": 120,
+  "training_performed": true
+}

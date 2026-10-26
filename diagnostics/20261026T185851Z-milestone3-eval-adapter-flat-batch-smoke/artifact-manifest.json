@@ -1,0 +1,45 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/eval-adapter-flat-batch-smoke-20261026T185851Z",
+  "files": {
+    "result.json": {
+      "bytes": 1027,
+      "sha256": "f4b78e5e9c5bf97b2bc5d8e4d54fdc52f946972333954260f8dd1302646e7308"
+    },
+    "final-scene.usda": {
+      "bytes": 14442171,
+      "sha256": "f6451c6bf083fceff649193948e85872751be2137c9de911420b550fb702654a"
+    },
+    "kit.log": {
+      "bytes": 290655,
+      "sha256": "98a91c0eb70f8d1bf3635cbca5225f5f5f13c5f930c71e9654c4fdfb3dd82ea8"
+    },
+    "initial-scene.usda": {
+      "bytes": 14442171,
+      "sha256": "f6451c6bf083fceff649193948e85872751be2137c9de911420b550fb702654a"
+    },
+    "run-contract.json": {
+      "bytes": 2915,
+      "sha256": "b6c0b3f9508bd74152b0efdd206afa4c6356139269fdfb7e7b64d58be4634262"
+    },
+    "measurements.json": {
+      "bytes": 544,
+      "sha256": "2a2f0cd1b1c01305f7357d30c62d72f74fef87b8eeebc7510dfcf6d78cafc9a4"
+    },
+    "resolved-configs.json": {
+      "bytes": 57069,
+      "sha256": "24b887cde13127c5b43ba2de6d564c98a7ed5ed42edb0c16c00fbe8313028440"
+    },
+    "topdown-flat.png": {
+      "bytes": 81820,
+      "sha256": "28d4af41e6b81b634b061c1e939fb2245f9008322250a8d38d16b9b72bb5ca82"
+    },
+    "trace-flat.jsonl": {
+      "bytes": 10784773,
+      "sha256": "bc9c814c53cb7cbec3f188b6981861216a7b792071ba70bcc558554ca9c725d1"
+    },
+    "trials.json": {
+      "bytes": 106172,
+      "sha256": "3345927591569bb7ac9f7d34cbb6530412e8a1b2e7dd85b1c84487a5e71d5ac6"
+    }
+  }
+}

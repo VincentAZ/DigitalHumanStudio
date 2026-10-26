@@ -1,0 +1,355 @@
+/opt/ProtoMotions/protomotions/utils/rotations.py:199: SyntaxWarning: invalid escape sequence '\*'
+  Combine two set of 3D rotations together using \**\* operator. The shape needs to be
+<unknown>:4: SyntaxWarning: invalid escape sequence '\*'
+INFO:absl:MUJOCO_GL is not set, so an OpenGL backend will be chosen automatically.
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+INFO:absl:Successfully imported OpenGL backend: glfw
+INFO:absl:MuJoCo library version is: 3.8.0
+INFO:__main__:FRESH START: Training from scratch
+INFO:__main__:FRESH: Building configs from experiment file
+INFO:__main__:Using original experiment path: /studio/scripts/studio_walk/experiment_rlft.py
+INFO:__main__:Loading experiment module from: /studio/scripts/studio_walk/experiment_rlft.py
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+INFO:isaaclab.app.app_launcher:No visualizer was selected, so running in headless mode. To launch a visualizer app, pass '--viz <names>' (for example '--viz kit').
+INFO:isaaclab.app.app_launcher:Using device: cuda:0
+INFO:isaaclab.app.app_launcher:Loading experience file: /opt/IsaacLab/apps/isaaclab.python.headless.kit
+DEBUG:asyncio:Using selector: EpollSelector
+Loading user config located at: '/studio-home/kit/data/Kit/IsaacLab/3.0/user.config.json'
+2026-10-26T18:50:26Z [0ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:26Z [71ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:26Z [152ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:26Z [244ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:27Z [345ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:27Z [456ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:27Z [578ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:27Z [708ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:27Z [850ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:27Z [1,001ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:27Z [1,163ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:28Z [1,333ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:28Z [1,515ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:28Z [1,707ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:28Z [1,908ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:28Z [2,120ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:29Z [2,340ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:29Z [2,572ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:29Z [2,814ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:29Z [3,065ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:30Z [3,327ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:30Z [3,599ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:30Z [3,880ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:30Z [4,172ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:31Z [4,472ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:31Z [4,784ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:31Z [5,106ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:32Z [5,437ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:32Z [5,778ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793040636.916032       1 descriptor_database.cc:633] File already exists in database: grpc/health/v1/health.proto
+W0000 00:00:1793040636.916056       1 message.cc:301] Protobuf GeneratedMessageFactory: File is already registered: grpc/health/v1/health.proto
+[ISAACLAB] AppLauncher initialization complete
+[ISAACLAB] Kit version: 110.1.1+production.305458.6312fa25.gl
+[ISAACLAB] Kit kernel:  210.1.5+release.12978.b22b555f.gl
+[ISAACLAB] Kit hash:    6312fa25
+[rank: 0] Seed set to 0
+WARNING:isaaclab_physx.physics.physx_manager:TGS solver with enable_external_forces_every_iteration=False may cause noisy velocities.
+INFO:protomotions.simulator.isaaclab.simulator:Forced IsaacLab clone strategy to 'sequential' (IsaacLab 3 defaults to 'random').
+INFO:isaaclab.utils.backend_utils:Registered backend 'physx' for factory FrameView.
+Overriding control info for Spine1_x with (Spine|Chest|Neck|Head).*
+Overriding control info for Spine1_y with (Spine|Chest|Neck|Head).*
+Overriding control info for Spine1_z with (Spine|Chest|Neck|Head).*
+Overriding control info for Spine2_x with (Spine|Chest|Neck|Head).*
+Overriding control info for Spine2_y with (Spine|Chest|Neck|Head).*
+Overriding control info for Spine2_z with (Spine|Chest|Neck|Head).*
+Overriding control info for Chest_x with (Spine|Chest|Neck|Head).*
+Overriding control info for Chest_y with (Spine|Chest|Neck|Head).*
+Overriding control info for Chest_z with (Spine|Chest|Neck|Head).*
+Overriding control info for Neck1_x with (Spine|Chest|Neck|Head).*
+Overriding control info for Neck1_y with (Spine|Chest|Neck|Head).*
+Overriding control info for Neck1_z with (Spine|Chest|Neck|Head).*
+Overriding control info for Neck2_x with (Spine|Chest|Neck|Head).*
+Overriding control info for Neck2_y with (Spine|Chest|Neck|Head).*
+Overriding control info for Neck2_z with (Spine|Chest|Neck|Head).*
+Overriding control info for Head_x with (Spine|Chest|Neck|Head).*
+Overriding control info for Head_y with (Spine|Chest|Neck|Head).*
+Overriding control info for Head_z with (Spine|Chest|Neck|Head).*
+Overriding control info for RightShoulder_x with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightShoulder_y with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightShoulder_z with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightArm_x with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightArm_y with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightArm_z with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightForeArm_x with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightForeArm_y with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightForeArm_z with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightHand_x with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightHand_y with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightHand_z with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftShoulder_x with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftShoulder_y with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftShoulder_z with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftArm_x with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftArm_y with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftArm_z with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftForeArm_x with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftForeArm_y with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftForeArm_z with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftHand_x with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftHand_y with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for LeftHand_z with .*(Shoulder|Arm|Hand)_.*
+Overriding control info for RightLeg_x with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightLeg_y with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightLeg_z with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightShin_x with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightShin_y with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightShin_z with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightFoot_x with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightFoot_y with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightFoot_z with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightToeBase_x with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightToeBase_y with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for RightToeBase_z with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftLeg_x with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftLeg_y with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftLeg_z with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftShin_x with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftShin_y with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftShin_z with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftFoot_x with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftFoot_y with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftFoot_z with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftToeBase_x with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftToeBase_y with .*(Leg|Shin|Foot|ToeBase)_.*
+Overriding control info for LeftToeBase_z with .*(Leg|Shin|Foot|ToeBase)_.*
+{'accelerator': 'gpu', 'devices': 1, 'num_nodes': 1, 'strategy': 'DDPStrategy', 'precision': '32-true', 'loggers': ['TensorBoardLogger'], 'callbacks': []}
+Warp 1.15.0.dev20260626 initialized:
+   CUDA Toolkit 12.9, Driver 13.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Workstation Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /studio-home/.cache/warp/1.15.0.dev20260626
+Setting seed: 0
+Initial heightfield size: 2800x13300 = 37240000 vertices
+Optimizing mesh by merging flat regions...
+Optimized mesh vertex count: 196
+Loading motions from packaged file which is faster
+Loading motion library from /studio/assets/data/motion_for_trackers/soma23_bones_seed_mini.pt
+Creating empty SceneLib (no scenes)
+[INFO]: Registered backend 'physx' for factory FrameView.
+INFO:isaaclab.utils.backend_utils:Registered backend 'physx' for factory Articulation.
+[INFO]: Registered backend 'physx' for factory Articulation.
+INFO:isaaclab.utils.backend_utils:Registered backend 'physx' for factory ContactSensor.
+[INFO]: Registered backend 'physx' for factory ContactSensor.
+INFO:isaaclab.scene.interactive_scene:Physics scene prim path: /physicsScene
+[INFO]: Physics scene prim path: /physicsScene
+[INFO]: Setup complete...
+Smoothing contact labels with window size 7...
+Contact smoothing complete for 61 motions. Contacts are now float values in [0, 1].
+Motion Manager: Excluding 16 motions from sampling
+Excluded motion IDs: [1, 4, 7, 9, 18, 20, 24, 25, 35, 39, 41, 42, 43, 52, 57, 59]
+[INFO]: Simulation parameters for joints in /World/envs/env_.*/Robot:
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                   Simulation Joint Information (Prim path: /World/envs/env_.*/Robot)                                                   |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+| Index | Name              | Stiffness | Damping | Armature | Static Friction | Dynamic Friction | Viscous Friction | Position Limits | Velocity Limits | Effort Limits |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+|   0   | Spine1_x:0        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   1   | Spine1_x:1        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   2   | Spine1_x:2        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   3   | RightLeg_x:0      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   4   | RightLeg_x:1      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   5   | RightLeg_x:2      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   6   | LeftLeg_x:0       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   7   | LeftLeg_x:1       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   8   | LeftLeg_x:2       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   9   | Spine2_x:0        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   10  | Spine2_x:1        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   11  | Spine2_x:2        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   12  | RightShin_x:0     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   13  | RightShin_x:1     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   14  | RightShin_x:2     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   15  | LeftShin_x:0      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   16  | LeftShin_x:1      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   17  | LeftShin_x:2      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   18  | Chest_x:0         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   19  | Chest_x:1         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   20  | Chest_x:2         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   21  | RightFoot_x:0     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   22  | RightFoot_x:1     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   23  | RightFoot_x:2     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   24  | LeftFoot_x:0      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   25  | LeftFoot_x:1      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   26  | LeftFoot_x:2      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   27  | Neck1_x:0         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   28  | Neck1_x:1         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   29  | Neck1_x:2         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   30  | RightShoulder_x:0 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   31  | RightShoulder_x:1 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   32  | RightShoulder_x:2 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   33  | LeftShoulder_x:0  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   34  | LeftShoulder_x:1  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   35  | LeftShoulder_x:2  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   36  | RightToeBase_x:0  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   37  | RightToeBase_x:1  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   38  | RightToeBase_x:2  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   39  | LeftToeBase_x:0   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   40  | LeftToeBase_x:1   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   41  | LeftToeBase_x:2   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   42  | Neck2_x:0         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   43  | Neck2_x:1         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   44  | Neck2_x:2         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   45  | RightArm_x:0      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   46  | RightArm_x:1      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   47  | RightArm_x:2      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   48  | LeftArm_x:0       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   49  | LeftArm_x:1       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   50  | LeftArm_x:2       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   51  | Head_x:0          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   52  | Head_x:1          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   53  | Head_x:2          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   54  | RightForeArm_x:0  |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   55  | RightForeArm_x:1  |  300.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   56  | RightForeArm_x:2  |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   57  | LeftForeArm_x:0   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   58  | LeftForeArm_x:1   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   59  | LeftForeArm_x:2   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   60  | RightHand_x:0     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   61  | RightHand_x:1     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   62  | RightHand_x:2     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   63  | LeftHand_x:0      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   64  | LeftHand_x:1      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   65  | LeftHand_x:2      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+INFO:isaaclab_physx.assets.articulation.articulation:Simulation parameters for joints in /World/envs/env_.*/Robot:
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                   Simulation Joint Information (Prim path: /World/envs/env_.*/Robot)                                                   |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+| Index | Name              | Stiffness | Damping | Armature | Static Friction | Dynamic Friction | Viscous Friction | Position Limits | Velocity Limits | Effort Limits |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+|   0   | Spine1_x:0        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   1   | Spine1_x:1        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   2   | Spine1_x:2        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   3   | RightLeg_x:0      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   4   | RightLeg_x:1      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   5   | RightLeg_x:2      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   6   | LeftLeg_x:0       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   7   | LeftLeg_x:1       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   8   | LeftLeg_x:2       |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   9   | Spine2_x:0        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   10  | Spine2_x:1        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   11  | Spine2_x:2        |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   12  | RightShin_x:0     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   13  | RightShin_x:1     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   14  | RightShin_x:2     |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   15  | LeftShin_x:0      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   16  | LeftShin_x:1      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   17  | LeftShin_x:2      |  500.000  |  50.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   18  | Chest_x:0         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   19  | Chest_x:1         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   20  | Chest_x:2         |  800.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   21  | RightFoot_x:0     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   22  | RightFoot_x:1     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   23  | RightFoot_x:2     |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   24  | LeftFoot_x:0      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   25  | LeftFoot_x:1      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   26  | LeftFoot_x:2      |  100.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   27  | Neck1_x:0         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   28  | Neck1_x:1         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   29  | Neck1_x:2         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   30  | RightShoulder_x:0 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   31  | RightShoulder_x:1 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   32  | RightShoulder_x:2 |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   33  | LeftShoulder_x:0  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   34  | LeftShoulder_x:1  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   35  | LeftShoulder_x:2  |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   36  | RightToeBase_x:0  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   37  | RightToeBase_x:1  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   38  | RightToeBase_x:2  |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   39  | LeftToeBase_x:0   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   40  | LeftToeBase_x:1   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   41  | LeftToeBase_x:2   |   60.000  |  12.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   42  | Neck2_x:0         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   43  | Neck2_x:1         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   44  | Neck2_x:2         |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   45  | RightArm_x:0      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   46  | RightArm_x:1      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   47  | RightArm_x:2      |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   48  | LeftArm_x:0       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   49  | LeftArm_x:1       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   50  | LeftArm_x:2       |  400.000  |  40.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   51  | Head_x:0          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   52  | Head_x:1          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   53  | Head_x:2          |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    300.000    |
+|   54  | RightForeArm_x:0  |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   55  | RightForeArm_x:1  |  300.000  |  80.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   56  | RightForeArm_x:2  |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   57  | LeftForeArm_x:0   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   58  | LeftForeArm_x:1   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   59  | LeftForeArm_x:2   |  300.000  |  30.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   60  | RightHand_x:0     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   61  | RightHand_x:1     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   62  | RightHand_x:2     |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   63  | LeftHand_x:0      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   64  | LeftHand_x:1      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
+|   65  | LeftHand_x:2      |  200.000  |  20.000 |  0.020   |      0.000      |      0.000       |      0.000       | [-3.142, 3.142] |     100.000     |    150.000    |
++-------+-------------------+-----------+---------+----------+-----------------+------------------+------------------+-----------------+-----------------+---------------+
+INFO:protomotions.agents.fine_tuning.pretrained_modules:Loading pretrained module 'prior' from /studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt (module_path=)
+INFO:protomotions.agents.peft.prior_setup:Resolved actor PEFT input keys=('task_obs', 'max_coords_obs'), actor.peft.model keys=('task_obs',) -> ('task_cond',), mimic_dim=0
+INFO:protomotions.agents.peft.actor:[PEFT] Loaded frozen prior expects actor input keys=('max_coords_obs',); actor.peft.model.in_keys=('task_obs',); actor.peft.model.out_keys=('task_cond',)
+INFO:protomotions.agents.base_agent.agent:Materializing lazy modules...
+INFO:protomotions.agents.peft.prior_with_peft:Pinned PEFT prior reference from current adapter state.
+INFO:protomotions.agents.peft.prior_setup:PEFT parameters: actor trainable 532,224 / 400,191,636 (0.13%); critic 3,504,129 trainable
+INFO:__main__:Saving config file to results/m3_throughput_rlft_2048
+INFO:__main__:Saving resolved configs (pickled) to results/m3_throughput_rlft_2048/resolved_configs.pt
+INFO:__main__:Saving resolved configs (YAML) to results/m3_throughput_rlft_2048/resolved_configs.yaml
+INFO:__main__:Copying experiment file to results/m3_throughput_rlft_2048/experiment_config.py
+INFO:protomotions.utils.inference_utils:Applying experiment inference overrides from apply_inference_overrides()
+INFO:__main__:Saving config file to results/m3_throughput_rlft_2048
+INFO:__main__:Saving resolved configs (pickled) to results/m3_throughput_rlft_2048/resolved_configs_inference.pt
+INFO:__main__:Saving resolved configs (YAML) to results/m3_throughput_rlft_2048/resolved_configs_inference.yaml
+INFO:__main__:Copying experiment file to results/m3_throughput_rlft_2048/experiment_config.py
+INFO:protomotions.agents.base_agent.agent:Auto-registered model output keys: ['action', 'mean_action', 'neglogp', 'prior_tokens', 'value']
+INFO:protomotions.agents.base_agent.agent:Saved env checkpoint: results/m3_throughput_rlft_2048/env_soma23_bones_seed_mini.pt.ckpt, rank 0
+INFO:protomotions.agents.base_agent.agent:Saved checkpoint: results/m3_throughput_rlft_2048/last.ckpt
+INFO:protomotions.agents.base_agent.agent:Saved inference checkpoint: results/m3_throughput_rlft_2048/inference_last.ckpt
+Epoch 0, collecting data... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:27
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/torch/autograd/graph.py:869: UserWarning: The AccumulateGrad node's stream does not match the stream of the node that produced the incoming gradient. This may incur unnecessary synchronization and break CUDA graph capture if the AccumulateGrad node's stream is the default stream. This mismatch is caused by an AccumulateGrad node created prior to the current iteration being kept alive. This can happen if the autograd graph is still being kept alive by tensors such as the loss, or if you are using DDP, which will stash a reference to the node. To resolve the mismatch, delete all references to the autograd graph or ensure that DDP initialization is performed under the same stream as subsequent forwards. If the mismatch is intentional, you can use torch.autograd.graph.set_warn_on_accumulate_grad_stream_mismatch(False) to suppress this warning. (Triggered internally at /pytorch/torch/csrc/autograd/input_buffer.cpp:240.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Epoch 0, training... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:42
+Epoch 1, collecting data... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:24
+Epoch 1, training... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:39
+Epoch 2, collecting data... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:24
+Epoch 2, training... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:40
+Epoch 3, collecting data... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:24
+Epoch 3, training... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:39
+Epoch 4, collecting data... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:24
+Epoch 4, training... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:39
+Epoch 5, collecting data... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:24
+Epoch 5, training... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:39
+STUDIO_WALL_CLOCK_LIMIT reached after 427s at epoch 6; requesting a clean stop with a final checkpoint.
+INFO:protomotions.agents.base_agent.agent:Saved env checkpoint: results/m3_throughput_rlft_2048/env_soma23_bones_seed_mini.pt.ckpt, rank 0
+INFO:protomotions.agents.base_agent.agent:Saved checkpoint: results/m3_throughput_rlft_2048/last.ckpt
+INFO:protomotions.agents.base_agent.agent:Saved inference checkpoint: results/m3_throughput_rlft_2048/inference_last.ckpt
+2026-10-26T18:50:32Z [6,130ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:33Z [6,492ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:33Z [6,863ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:33Z [7,244ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:34Z [7,635ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:34Z [8,037ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:35Z [8,449ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:35Z [8,870ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:36Z [9,302ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:36Z [9,744ms] [Warning] [carb.omniclient.plugin]  128: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-2C770E31.config.json\\\"\")"
+2026-10-26T18:50:37Z [10,495ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-10-26T18:50:37Z [10,504ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-10-26T18:50:37Z [11,262ms] [Warning] [isaacsim.core.simulation_manager.plugin] USD stage is not available; stage-opened subscription is deferred
+2026-10-26T18:50:37Z [11,262ms] [Warning] [isaacsim.core.simulation_manager.plugin] USD stage is not available; stage-opened subscription is deferred
+2026-10-26T18:50:42Z [16,067ms] [Warning] [isaaclab_physx.physics.physx_manager] TGS solver with enable_external_forces_every_iteration=False may cause noisy velocities.
+2026-10-26T18:50:52Z [25,439ms] [Warning] [usdrt.population.plugin] Last global time was not created. Did you call setEnableUsdNoticeHandling?

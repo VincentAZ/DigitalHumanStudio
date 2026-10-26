@@ -4,14 +4,14 @@ Read this file with `IMPLEMENTATION_PLAN.md` and `docs/SETUP_REPORT.md` before c
 
 ## Current scope
 
-User authorized **Milestone 1** after Milestone 0 completion. Preserve the host OS. Preserve diagnostics and stop at an Isaac compatibility failure before considering another architecture. Milestones 2–5 are not authorized.
+User authorized **Milestone 1** after Milestone 0 completion, then **Milestone 3** directly on 2026-10-26 ("start and finish Milestone 3, fixing any M0/M1 issues that affect performance or the last three milestones"). Milestone 2 is deferred; Milestones 4–5 are not authorized. Preserve the host OS. Preserve diagnostics and stop at an Isaac compatibility failure before considering another architecture.
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
 | 0 — Reproducible runtime | Complete for standalone workers | Two full exit-0 runs: `diagnostics/20261026T164452-runtime/`; official checker, Mixar, media and dependency audit passed |
 | 1 — Physical human baseline | Complete for standalone workers | Two 61/61 tracker passes, GPC rollout, video/trace/controller/restart audit: `diagnostics/20261026T180942Z-milestone1-acceptance/`; see `docs/MILESTONE1_REPORT.md` |
-| 2 — Detailed character | Not started | — |
-| 3 — Walking | Not started | — |
+| 2 — Detailed character | Deferred by user; not started | — |
+| 3 — Walking | In progress (authorized 2026-10-26) | Training/evaluation harness committed; seed-0 training running; see `docs/MILESTONE3_REPORT.md` when written |
 | 4 — Second skill | Not started | — |
 | 5 — Desktop studio | Not started | — |
 
@@ -179,3 +179,15 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Recorded acceptance in `config/milestone1.json`; updated README, baseline, setup/provenance records and the full M1 report with commands, measurements, video links, license confirmation, preserved failures and limitations. Python compilation, shell syntax and project whitespace checks passed.
 - No OS, NVIDIA driver, image, package-lock, pinned-source or backend change. Vendor checkouts remain clean; no simulation containers remain running. The accepted mode remains separate standalone workers. Videos are timed at 30 fps; full recording throughput was approximately 20 control frames per wall-clock second, not a realtime UI benchmark.
 - **Milestone 1 is complete.** This reproduces pretrained tracking and prior inference; it is not a newly learned skill. Milestones 2–5 remain unstarted and unauthorized.
+
+## 2026-10-26 UTC — Milestone 3 authorized; M0/M1 hardening and training harness
+
+- User authorized Milestone 3 directly, with Milestone 2 deferred. M3 trains the physical body, so it does not depend on the visual character.
+- M0 hardening: the accepted runtime image (local content ID only, no registry copy) is now backed up as a zstd archive with a recorded SHA-256 under ignored `.runtime/backups/` (39.2 GB). A cold rebuild remains unvalidated; the backup removes the single-point-of-failure noted in the audit.
+- High-level audit of M0/M1 found no overstated claims; recounted 61/61 tracker trials in both runs, byte-identical traces, exit codes and visual frames. Remaining gaps were recorded, not hidden: same-seed restart only, ~20 control frames per wall-clock second with recording, 295 GB of reclaimable Docker state (not pruned), and ten scripts that use container-absolute paths instead of self-location.
+- Added the `scripts/studio_walk` package (importable kernels and command sources so pickled configurations reload), SFT and RLFT experiment files based on the pinned GPC examples, a training wrapper with Kit launch settings, wall-clock stop and per-epoch metrics, launchers with GPU lock/evidence capture, deterministic reserved scenarios (`config/milestone3-scenarios.json`), the evaluation harness, a live-direction worker and a CPU audit.
+- Finding at the pinned revision: the FSQ tracker named by the SFT example (`soma_bones_fsq`) is not shipped, but the prior checkpoint embeds the target encoder; the SFT experiment therefore takes the lookahead steps from the prior's own training configuration.
+- Throughput test (`diagnostics/20261026T185017Z-milestone3-train-rlft/`): 2048 environments, 24 s collection + 40 s PPO update per 65,536-step epoch, about 1,000 steps/s, 55 GiB peak torch memory, clean wall-clock stop with checkpoints and exit 0.
+- Evaluation harness smoke (`diagnostics/20261026T185851Z-milestone3-eval-adapter-flat-batch-smoke/`): 100 parallel reserved trials scored in 93 s; the untrained adapter scored 0/100 as expected. The CPU audit re-scores traces identically.
+- Seed-0 training launched: shared SFT bootstrap (1024 envs, 75 min cap) then RLFT (2048 envs, 6.5 h cap). No OS, driver, image, package-lock or pinned-source change; no later milestone work.
+
