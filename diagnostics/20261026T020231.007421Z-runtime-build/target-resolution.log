@@ -1,0 +1,11 @@
+Would use project environment at: .venv
+  × No solution found when resolving dependencies for split (markers:
+  │ platform_machine == 'x86_64' and platform_machine in 'aarch64 arm64' and
+  │ platform_machine in 'x86_64 AMD64' and sys_platform == 'linux'; included:
+  │ isaaclab-dev[teleop]; excluded: isaaclab-dev[all], isaaclab-dev[isaacsim],
+  │ isaaclab-dev[mimic]):
+  ╰─▶ Because your project depends on pytetwild{platform_machine in 'x86_64
+      AMD64'}==0.2.3 and pytetwild[all]>=0.3.0,<0.4, we can conclude that your
+      project's requirements are unsatisfiable.
+
+hint: The resolution failed for an environment that is not the current one, consider limiting the environments with `tool.uv.environments`.

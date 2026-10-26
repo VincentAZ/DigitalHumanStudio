@@ -1,0 +1,12 @@
+uv 0.13.5 (x86_64-unknown-linux-gnu)
+Would use project environment at: .venv
+   Updating https://github.com/newton-physics/newton.git (c7ae7c7648cd0717df39e5c94b95d5a02c997320)
+   Updating https://github.com/ARISE-Initiative/robomimic.git (v0.4.0)
+   Updating https://github.com/isaac-sim/rl_games.git (python3.11)
+    Updated https://github.com/newton-physics/newton.git (c7ae7c7648cd0717df39e5c94b95d5a02c997320)
+    Updated https://github.com/ARISE-Initiative/robomimic.git (7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9)
+    Updated https://github.com/isaac-sim/rl_games.git (6b3534f29568158e9e29ec8bf83cc88fce5f0cae)
+error: No solution found when resolving dependencies for split (markers: platform_machine == 'x86_64' and platform_machine in 'aarch64 arm64' and platform_machine in 'x86_64 AMD64' and sys_platform == 'linux'; included: isaaclab-dev[teleop]; excluded: isaaclab-dev[all], isaaclab-dev[isaacsim], isaaclab-dev[mimic])
+  cause: Because your project depends on pytetwild{platform_machine in 'x86_64 AMD64'}==0.2.3 and pytetwild[all]>=0.3.0,<0.4, we can conclude that your project's requirements are unsatisfiable.
+
+hint: The resolution failed for an environment that is not the current one, consider limiting the environments with `tool.uv.environments`.

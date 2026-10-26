@@ -4,16 +4,20 @@ The requested versions are in `config/baseline.json`. Null digests and locks mea
 
 | Component | Source / version | Account or license step | Current evidence |
 | --- | --- | --- | --- |
-| Isaac Sim | NVIDIA NGC, 6.0.0 | NVIDIA Omniverse/Isaac terms apply; container execution uses `ACCEPT_EULA=Y`. No optional telemetry consent is set. Registry login only if public access fails. | Requested image, no validated digest yet |
+| Isaac Sim | NVIDIA NGC, 6.0.0 | NVIDIA Omniverse/Isaac terms apply; container execution uses `ACCEPT_EULA=Y`. No optional telemetry consent is set. Public download required no registry login. | Digest in `config/isaac-image.lock`; official checker passed twice in `diagnostics/20261026T020033-isaac/` |
 | Isaac Lab | `isaac-sim/IsaacLab`, pinned Git revision | Preserve upstream BSD-3-Clause and dependency notices | Pinned project metadata retrieved; root upstream lock unavailable |
 | ProtoMotions | `NVlabs/ProtoMotions`, pinned Git revision | Review repository and individual model/data licenses before asset use | Pinned installation instructions; no model assets fetched |
 | Mixar | `Mixar-AI/mixar-app`, v4.3.5 Linux binary | Bundled license directory preserved; no account created or paid service used | Archive matched publisher SHA-256; basic authoring checks passed |
 | uv / local Python | Astral uv 0.11.32; managed CPython 3.12.13 | Bundled license notices retained | uv archive verified against GitHub release digest; Python executable SHA-256 recorded |
 | SOMA-X | Proposed 0.3.4 | Review native model license and asset-specific terms before download. Do not substitute separately licensed SMPL assets. | Not downloaded; mapping belongs to later milestones |
 | Docker | Ubuntu `docker.io` 29.1.3-0ubuntu4.1 | Distribution package notices | Installed; daemon accessible using `scripts/docker.sh` |
-| NVIDIA Container Toolkit | NVIDIA stable APT repository, 1.20.1-1 | Package notices | Installed; Docker NVIDIA runtime configured; GPU container access untested |
+| NVIDIA Container Toolkit | NVIDIA stable APT repository, 1.20.1-1 | Package notices | Installed; Docker NVIDIA runtime configured; GPU visibility and official checker passed |
 
 Generated smoke scenes will contain only primitives. Register every downloaded model or motion asset with its URL, revision, SHA-256, license, and local destination before later use. Do not claim asset provenance from a component's name alone.
+
+The first source archive operation accidentally invoked Git LFS filters before it was interrupted. It fetched 100 small Isaac Lab test-fixture objects. Their source paths, pinned revision, SHA-256, byte counts, and license reference are recorded in `diagnostics/20261026T020145.113355Z-runtime-build/staging-interruption.json`; they remain in the ignored vendor checkout's `.git/lfs/objects/`. Subsequent source archiving explicitly skips smudging. No character, motion-tracker, or learned-controller assets were installed.
+
+A diagnostic uv 0.13.5 binary was separately downloaded and verified against its publisher's release digest to investigate the failed dependency resolution. The trial failed with the same error and did not replace the configured uv baseline. Archive hash, release metadata, local paths, configuration changes, and retained-container records are in `diagnostics/20261026T020231.007421Z-runtime-build/`. There is no resolved final package lock or validated learning-runtime image.
 
 Sources inspected on 2026-10-25:
 

@@ -1,0 +1,79 @@
+[
+    {
+        "Id": "sha256:68735a60b6c15c85e0dd0098570c6d2cc79e928f2d068ce2790aa43284ac165d",
+        "RepoTags": [
+            "nvcr.io/nvidia/isaac-sim:6.0.0"
+        ],
+        "RepoDigests": [
+            "nvcr.io/nvidia/isaac-sim@sha256:68735a60b6c15c85e0dd0098570c6d2cc79e928f2d068ce2790aa43284ac165d"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-05-30T14:57:10.165462922Z",
+        "Config": {
+            "User": "isaac-sim",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "VK_DRIVER_FILES=/etc/vulkan/icd.d/nvidia_icd.json",
+                "MIN_DRIVER_VERSION=570.169",
+                "HUB__CACHE__PATH=/var/cache/hub",
+                "HUB__ARGS__DETECT_ONLY=true",
+                "OMNICLIENT_HUB_EXE=/usr/local/bin/hub"
+            ],
+            "Entrypoint": [
+                "/isaac-sim/runheadless.sh"
+            ],
+            "WorkingDir": "/isaac-sim",
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "24.04"
+            },
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "bash -c 'logdir=\"/isaac-sim/.nvidia-omniverse/logs/Kit\"; [ -d \"$logdir\" ] && latest=$(ls -t \"$logdir\"/*/*/kit_*.log 2>/dev/null | head -1) && [ -n \"$latest\" ] && grep -q \"AppReady\" \"$latest\" && exit 0; exit 1'"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 180000000000,
+                "Retries": 3
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 10706689092,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:e8bce0aabd687e9ee90e0bada33884f40b277196f72aac9934357472863a80ae",
+                "sha256:b2064ba1631073f658f7637c6e2d271a871828e96a5517540ee5b357cb0c3104",
+                "sha256:dde04e68cafc9e633363418071a39c8ecfc88aa3f1a0a90f2f2857ecb931d3bd",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:1da00f98ff7c015b8282c444f8957b3d4414ca97b2e1a0d76bf7032572522aaf",
+                "sha256:7eaee376881cc07daa796bc5dd3424905a0b669a70110bd61841260c315824aa",
+                "sha256:5b286fe2e39c10053a9b5ba68ed15f629edee8d1c236563ce17de785192714a1",
+                "sha256:f0af0c0f6b9e234313649e42d3836e6d646fdc848bb7790bd256e76f066f34ac",
+                "sha256:ac37447a3f04fc370ccc6c7984435eb687a1ceebd24eeb58c4a5ba5118ede512",
+                "sha256:5309e153ca6d61044e3021c49bf1e562a9d6ce6b416e718d77636bc2e8d74e5e",
+                "sha256:9b86032b9bac8fcf3c21af00e1534780a29577bea2e923254e33506723238276",
+                "sha256:409d3a7de9bf06193f49f218609e7dd4debc8e1c8ce2949b5994b0a31c2f5ea5",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:2b80e5af70d5807bdc9187ca9044a2d755de000d43979eb7b13a9b5bd7eceb34",
+                "sha256:208df98d935b19ae30521b14293234dc6d4dcc8e0729dbc239bc14b6aeceb8ec",
+                "sha256:d31b7a81f9c26ced2671f16969f09c179e70fd99758f567f2091773be689aaa7",
+                "sha256:41ca5d6036223cfd7d1769799983aa4de3eae19a4b44c521d0392a69491a84ad",
+                "sha256:338f39f9c0d18c1e841a5f23fb8b62332c6b59681be9455c257e1771aab9c6d7"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-26T02:00:00.395422832Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.docker.distribution.manifest.list.v2+json",
+            "digest": "sha256:68735a60b6c15c85e0dd0098570c6d2cc79e928f2d068ce2790aa43284ac165d",
+            "size": 743
+        }
+    }
+]

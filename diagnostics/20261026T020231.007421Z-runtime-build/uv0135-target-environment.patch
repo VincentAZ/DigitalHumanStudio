@@ -1,0 +1,10 @@
+--- IsaacLab/pyproject.toml (pinned)
++++ IsaacLab/pyproject.toml (target configuration)
+@@ -326,6 +326,7 @@
+ # unsafe-best-match resolves NVIDIA deps with versions mismatched across
+ # pypi.nvidia.com and PyPI; prerelease=allow covers prerelease-only packages.
+ [tool.uv]
++environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+ index-strategy = "unsafe-best-match"
+ prerelease = "allow"
+ # Isaac Lab owns the Newton and torch versions. Overrides replace these requirements

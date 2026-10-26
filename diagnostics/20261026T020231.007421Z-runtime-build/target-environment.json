@@ -1,0 +1,7 @@
+{
+  "environment": "sys_platform == 'linux' and platform_machine == 'x86_64'",
+  "original_pyproject_sha256": "6b398f8c45f6b78f5e79af2c3b24089ef2aed4dac35a64bd2458dd6db69a0657",
+  "configured_pyproject_sha256": "225515f586f8727ea52c9c5ea3b54dd0778e8a2de0b6a3065688b10c5c1856a5",
+  "dependency_versions_changed": false,
+  "reference": "https://docs.astral.sh/uv/reference/settings/#environments"
+}

@@ -1,12 +1,14 @@
 {
   "schema_version": 1,
-  "status": "requested_not_validated",
+  "status": "stopped_dependency_resolution_failed_final_runtime_unvalidated",
   "container_userspace": "Ubuntu 24.04",
   "python": "3.12",
   "isaac_sim": {
     "version": "6.0.0",
     "image": "nvcr.io/nvidia/isaac-sim:6.0.0",
-    "digest": null
+    "digest": "nvcr.io/nvidia/isaac-sim@sha256:68735a60b6c15c85e0dd0098570c6d2cc79e928f2d068ce2790aa43284ac165d",
+    "compatibility_status": "official_checker_passed_twice",
+    "compatibility_evidence": "diagnostics/20261026T020033-isaac"
   },
   "isaac_lab": {
     "repository": "https://github.com/isaac-sim/IsaacLab.git",
@@ -39,5 +41,12 @@
     "path": ".runtime/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12",
     "installer": "uv 0.11.32",
     "executable_sha256": "7d43f6e86a6c6dd12005ec77eb2055f1be3f1bb3adedf8afe0a87973fa7371ce"
+  },
+  "runtime_build": {
+    "status": "failed_dependency_resolution",
+    "evidence": "diagnostics/20261026T020231.007421Z-runtime-build",
+    "exit_code": 1,
+    "physics_render_restart": "not_run",
+    "image_lock": null
   }
 }

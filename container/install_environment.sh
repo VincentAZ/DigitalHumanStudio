@@ -2,6 +2,7 @@
 # Execute the pinned upstream installation sequence inside Ubuntu 24.04.
 set -euo pipefail
 cd /opt/IsaacLab
+uv python install 3.12.13 --no-bin
 uv sync --python 3.12.13 --extra isaacsim
 cp uv.lock /opt/studio/isaaclab.uv.lock
 python_bin=/opt/IsaacLab/.venv/bin/python

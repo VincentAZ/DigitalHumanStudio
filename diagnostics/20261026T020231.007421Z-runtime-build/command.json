@@ -1,0 +1,9 @@
+[
+  "/home/vincent/Repos/DigitalHumanStudio/scripts/docker.sh",
+  "build",
+  "--build-arg",
+  "ISAAC_IMAGE=nvcr.io/nvidia/isaac-sim@sha256:68735a60b6c15c85e0dd0098570c6d2cc79e928f2d068ce2790aa43284ac165d",
+  "--tag",
+  "digital-human-studio:m0-20261026t020231.007421z",
+  "/home/vincent/Repos/DigitalHumanStudio/.runtime/build/20261026T020231.007421Z"
+]

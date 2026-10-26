@@ -1,6 +1,6 @@
 # Milestone 0 setup report
 
-Status: **Milestone 0 in progress; Docker access verified and Isaac image pull/check running. Isaac compatibility is not established yet. Mixar smoke checks passed.**
+Status: **Milestone 0 stopped and incomplete. Official Isaac compatibility checker passed twice; Mixar checks passed. The pinned Isaac Lab/ProtoMotions build failed dependency resolution. Final GPU computation, physics, RTX rendering, and restart checks were not run.**
 
 ## Inspected host — 2026-10-25
 
@@ -31,7 +31,11 @@ NVIDIA's [Isaac Sim 6.0 requirements](https://docs.isaacsim.omniverse.nvidia.com
 
 The pinned ProtoMotions installation instructions confirm Isaac Lab revision `4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8`, Isaac Sim 6.0, and Python 3.12. The upstream text contains inconsistent Isaac Lab major labels; the source revision is authoritative. No upgrade to current main branches is intended.
 
-## Resume installation
+The official Isaac Sim 6.0.0 container checker passed twice on this host, both with exit code 0 and explicit PASS messages. It detected the NVIDIA GPU through Vulkan and accepted driver 595.99.02. The image has Ubuntu 24.04.3 userspace and Python 3.12.13. Exact digest: `nvcr.io/nvidia/isaac-sim@sha256:68735a60b6c15c85e0dd0098570c6d2cc79e928f2d068ce2790aa43284ac165d`. Evidence: `diagnostics/20261026T020033-isaac/`. This proves the official checker runs on the unchanged Ubuntu 26.04 host; it does not yet prove physics or training compatibility.
+
+Both runs emitted Hub-startup, headless-display, power-governor, and IOMMU warnings. Raw logs are retained. No host driver, kernel, power profile, or IOMMU settings were changed.
+
+## Installed host tooling
 
 The user completed the host bootstrap. Docker 29.1.3 and NVIDIA Container Toolkit 1.20.1 are installed and Docker is active with the NVIDIA runtime configured. Git LFS and Vulkan tools are also installed. Fresh evidence is in `diagnostics/20261026T012503.739621Z/`.
 
@@ -50,20 +54,27 @@ sudo bash scripts/install_host_tools.sh
 
 This installs pinned Ubuntu Docker/Git LFS/Vulkan packages and NVIDIA Container Toolkit from NVIDIA's stable repository, configures the Docker runtime, and adds the invoking user to the Docker group (which grants host administrative capability). It does not replace the OS or NVIDIA driver. Existing container installations cause it to stop for inspection. A partial installation should be inspected before retrying. `scripts/docker.sh` can use newly assigned Docker group membership without restarting this session.
 
-Then capture `python3 scripts/inspect_host.py` and run `scripts/check_isaac.sh`. That script records the image digest and userspace, verifies GPU visibility, and runs NVIDIA's official checker twice with a five-minute limit per attempt. Once pulled, the image digest is saved in `config/isaac-image.lock` and reused. It uses the required NVIDIA license-acceptance flag for the requested installation; it does not opt into optional telemetry. It stops if userspace differs from Ubuntu 24.04, the checker exits unsuccessfully, or its explicit PASS message is missing. The launcher's prerequisite check was executed and exited 2 because Docker is absent; no Isaac process ran. Script preparation is not evidence of Isaac compatibility.
+`python3 scripts/inspect_host.py` captures machine state; the latest host report is `diagnostics/20261026T013048.738346Z/host.json`. `scripts/check_isaac.sh` records the image digest and userspace, verifies GPU visibility, and runs NVIDIA's official checker twice with a five-minute limit per attempt. Once pulled, the image digest is saved in `config/isaac-image.lock` and reused. It uses the required NVIDIA license-acceptance flag for the requested installation; it does not opt into optional telemetry. It stops if userspace differs from Ubuntu 24.04, the checker exits unsuccessfully, or its explicit PASS message is missing. Earlier missing-prerequisite results are historical; the actual checker has now passed twice.
 
-After a checker pass, remaining work is to establish the pinned Isaac Lab/ProtoMotions environment using its documented `uv sync --extra isaacsim` procedure inside Ubuntu 24.04, record the resolved lock and image digest, and run physics/render/startup/shutdown/restart checks in that final environment. Use explicit PhysX configuration where required by ProtoMotions; do not infer that a default backend proves the requested physics stack.
+## Pinned environment failure and stopping point
 
-Prepared (not yet executed) commands for those remaining checks:
+The guarded builder ran after the official checker pass. It installed build prerequisites and managed Python 3.12.13 inside Ubuntu 24.04, then failed during the documented `uv sync --python 3.12.13 --extra isaacsim` operation. The original invocation was:
 
 ```bash
-python3 scripts/build_runtime.py --compatibility-evidence diagnostics/<successful-isaac-run>
-scripts/check_runtime.sh
+python3 scripts/build_runtime.py --compatibility-evidence diagnostics/20261026T020033-isaac
 ```
 
-The builder verifies two successful official checker results and their image digest before constructing the pinned environment. It records the upstream Isaac Lab resolver lock before installing ProtoMotions, then records the final environment freeze and checks installed-package dependencies. The final smoke launcher uses the built image's content ID, tests GPU computation and explicit PhysX gravity/contact behavior, saves an RTX image, and repeats the full run. These prepared scripts have only undergone syntax checks; they are not runtime evidence yet.
+uv 0.11.32 exited 1 because its resolution includes both `pytetwild==0.2.3` and `pytetwild[all]>=0.3.0,<0.4`. The reported branch combines `platform_machine == 'x86_64'` with membership in both `'aarch64 arm64'` and `'x86_64 AMD64'`, and includes an unrequested teleop extra. That is an impossible target-platform combination; the logs support a resolver/metadata interaction, not a conclusion that the host GPU failed.
 
-The checker launcher retains failed containers and records their names in `retained-container.txt`. It also stops and retains the container if copying Kit logs fails, even when the checker reports PASS. Failure preservation was verified using an isolated mock Docker command; real container behavior still requires validation after installation.
+Two bounded diagnostic dry runs used the same failed-build snapshot: first with [uv's supported-environment restriction](https://docs.astral.sh/uv/reference/settings/#environments) limited to Linux x86_64, then with that same restriction and publisher-verified uv 0.13.5. Both exited 1 with the same conflict. No source revision or dependency version requirement was changed. The ineffective configuration overlay remains in diagnostic evidence only; it was removed from the build recipe. uv 0.13.5 was a diagnostic trial, not an upgrade to the configured baseline.
+
+Evidence is in `diagnostics/20261026T020231.007421Z-runtime-build/`: original build log and exit code, retained container metadata, original Dockerfile/install script, trial logs and exit codes, platform patch, resolver release metadata, and `stopped-result.json`. Its README identifies all retained containers and the diagnostic snapshot image. Large local source archives and caches remain under ignored `.runtime/` and `vendor/`; small diagnostic records are committed.
+
+**Stop here.** The pinned environment is not installed; neither a final runtime image lock nor a resolved package lock exists. Fixing this requires reviewing the source metadata/resolver failure before any retry. Do not silently relax library pins, switch Isaac Lab revisions, select another backend, or begin Milestone 1. There is no evidence that reinstalling the host OS would fix this dependency-resolution problem.
+
+The builder verifies two successful official checker results and their image digest before constructing the environment. If installation eventually succeeds, it will preserve the upstream Isaac Lab lock before ProtoMotions installation and record the final environment freeze separately. The prepared `scripts/check_runtime.sh` requires a final image content ID and is designed to test GPU computation, explicit PhysX gravity/contact behavior, an RTX image, clean shutdown, and a repeat run. It has **not executed**. Script syntax and rejection of failed compatibility evidence passed; these are launcher checks, not runtime acceptance evidence.
+
+The checker launcher retains failed containers and records their names in `retained-container.txt`. It also stops and retains the container if copying Kit logs fails, even when the checker reports PASS. Failure preservation was verified using an isolated mock Docker command. Both real successful checker containers had their logs copied before removal; no genuine failing checker was induced.
 
 ## Installed local tooling and passed authoring checks
 
@@ -82,8 +93,7 @@ Git history uses an explicit `Digital Human Studio bootstrap <bootstrap@localhos
 
 ## Acceptance evidence still required
 
-- Container GPU access and actual GPU computation.
-- Official Isaac compatibility result with retained Kit logs.
+- Actual GPU computation in the final pinned environment (container GPU visibility passed).
 - Pinned Isaac Lab and ProtoMotions import/version evidence, resolved package lock, and final image digest.
 - Primitive rigid-body simulation with finite poses, gravity and floor-contact assertions.
 - Nonblank RTX-rendered scene saved as an image, followed by clean shutdown and a second successful run.
@@ -91,4 +101,4 @@ Git history uses an explicit `Digital Human Studio bootstrap <bootstrap@localhos
 
 Milestone 0 cannot pass until these checks succeed. Milestones 1–5 remain unstarted.
 
-If Isaac fails, preserve the complete diagnostic directory and stop. A concrete supported-environment candidate would be a separate Ubuntu 24.04 LTS x86_64 machine with an RTX GPU meeting NVIDIA's requirements and a documented supported driver, using these same pinned components. This is a contingency recommendation only; no host replacement, migration, or different research architecture is selected.
+If a future runtime check demonstrates host incompatibility, a concrete supported-environment candidate is a separate Ubuntu 24.04 LTS x86_64 machine with an RTX GPU and driver meeting NVIDIA's published Isaac Sim 6.0 requirements, using the same research stack. This is a contingency recommendation only. The current dependency-resolution failure must be addressed even on that candidate; no OS replacement, migration, or different architecture has been selected.

@@ -52,7 +52,8 @@ def main():
         if output(["git", "-C", str(source), "status", "--porcelain"]):
             raise RuntimeError(f"Modified {name} source; inspect before building")
         subprocess.run(["git", "-C", str(source), "archive", "--format=tar",
-                        f"--output={context / archive}", head], check=True)
+                        f"--output={context / archive}", head],
+                       env=dict(os.environ, GIT_LFS_SKIP_SMUDGE="1"), check=True)
         with (context / archive).open("rb") as handle:
             digest = hashlib.file_digest(handle, "sha256").hexdigest()
         sources[name] = {"revision": head, "repository": baseline[key]["repository"],

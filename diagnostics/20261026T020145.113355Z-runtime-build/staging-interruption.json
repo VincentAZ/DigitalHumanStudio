@@ -1,0 +1,1189 @@
+{
+  "status": "staging_interrupted_before_docker_build",
+  "reason": "git archive invoked LFS smudging; corrected to retain source LFS pointers for Milestone 0",
+  "isaac_lab_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+  "incidental_lfs_objects": [
+    {
+      "sha256": "5e9155c484a7ab6131add9adce634f37d6c8205cb1696108f83acc96f6d19ea6",
+      "size_bytes": 4241,
+      "lfs_object": "5e9155c484a7ab6131add9adce634f37d6c8205cb1696108f83acc96f6d19ea6",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-simple_shading_full_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "b13022d765d32e38218490ae5a3b4b8c3fd650d39fe93cc5be602908bc16ebf5",
+      "size_bytes": 1781,
+      "lfs_object": "b13022d765d32e38218490ae5a3b4b8c3fd650d39fe93cc5be602908bc16ebf5",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-newton_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "dbdd35faa369977b8a1621fda0947b1c33d6a23d66bb762f42f47871e9cdb39b",
+      "size_bytes": 3874,
+      "lfs_object": "dbdd35faa369977b8a1621fda0947b1c33d6a23d66bb762f42f47871e9cdb39b",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-simple_shading_diffuse_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "15a6be1c6d16f00eee85812248ae0751d74809a1941c46199fc9d70da846b0a3",
+      "size_bytes": 20631,
+      "lfs_object": "15a6be1c6d16f00eee85812248ae0751d74809a1941c46199fc9d70da846b0a3",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-motion_vectors.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "66a908918302e713a2cc82a091c4e82db3da46a06cf08311b3818e93714b9132",
+      "size_bytes": 532,
+      "lfs_object": "66a908918302e713a2cc82a091c4e82db3da46a06cf08311b3818e93714b9132",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-depth.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "41ecbb1dbb608dbc9aa4b172fcbff57333a741e36b85ea937930b593eba774c1",
+      "size_bytes": 588,
+      "lfs_object": "41ecbb1dbb608dbc9aa4b172fcbff57333a741e36b85ea937930b593eba774c1",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-distance_to_camera.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "842d0ba399d255b07c14fd6278c199ca72e4027d1e5f0cd5e616371f1751cd32",
+      "size_bytes": 3691,
+      "lfs_object": "842d0ba399d255b07c14fd6278c199ca72e4027d1e5f0cd5e616371f1751cd32",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-simple_shading_diffuse_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "8e1d94f0c6ae2e40a1b0ff9cf27a0f2f9b756ebcebd9ddf27b0da31c89e3a57f",
+      "size_bytes": 1485,
+      "lfs_object": "8e1d94f0c6ae2e40a1b0ff9cf27a0f2f9b756ebcebd9ddf27b0da31c89e3a57f",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-simple_shading_constant_diffuse.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-simple_shading_constant_diffuse.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "51b51e89d6cd508fac3231f82dd28ad317961377b9bf2a0bcd8ea9f4e39b7db2",
+      "size_bytes": 1555,
+      "lfs_object": "51b51e89d6cd508fac3231f82dd28ad317961377b9bf2a0bcd8ea9f4e39b7db2",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-newton_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "516de455bbf77ceafc5c8496e5f7ec6e154ac9efb7c3b51ae3d3a144165be69b",
+      "size_bytes": 764,
+      "lfs_object": "516de455bbf77ceafc5c8496e5f7ec6e154ac9efb7c3b51ae3d3a144165be69b",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-normals.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-normals.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-normals.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "51c9179327bd35e53af764a1b4a0ce6aef153ead67a7e3d5cccc977bb108812f",
+      "size_bytes": 1234,
+      "lfs_object": "51c9179327bd35e53af764a1b4a0ce6aef153ead67a7e3d5cccc977bb108812f",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-newton_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-newton_renderer-distance_to_image_plane.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "45625ebd4ab10cdcf63c3c395def80a053db3aea220f0bf392d5b282d0c44481",
+      "size_bytes": 1775,
+      "lfs_object": "45625ebd4ab10cdcf63c3c395def80a053db3aea220f0bf392d5b282d0c44481",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-newton_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "0b9f107fcb9ad46be5fea0353a56b0123d2337f8cfa8765ee4cbaaa612c06351",
+      "size_bytes": 1349,
+      "lfs_object": "0b9f107fcb9ad46be5fea0353a56b0123d2337f8cfa8765ee4cbaaa612c06351",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-newton_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-newton_renderer-distance_to_image_plane.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "0b8729d722d1780272b24f0804e517ea024ec2b93f4a0fa3e26c82f222f5c9eb",
+      "size_bytes": 700,
+      "lfs_object": "0b8729d722d1780272b24f0804e517ea024ec2b93f4a0fa3e26c82f222f5c9eb",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-instance_segmentation_fast.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-semantic_segmentation.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-instance_segmentation_fast.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-semantic_segmentation.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-instance_segmentation_fast.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-semantic_segmentation.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "3445142682c88dc5ce11c5d749c7754bf2d54bf0f1aab6420513a733bf3cf645",
+      "size_bytes": 14919,
+      "lfs_object": "3445142682c88dc5ce11c5d749c7754bf2d54bf0f1aab6420513a733bf3cf645",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "ded6501a0625eec5bc3f794084c4f0c34a50d1566af8e2f72e62ff047ddebd16",
+      "size_bytes": 1746,
+      "lfs_object": "ded6501a0625eec5bc3f794084c4f0c34a50d1566af8e2f72e62ff047ddebd16",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-newton_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "de05d580b99f1cbcfa28834a5713786a4355b658f216da9d89cd5c688c9d97a9",
+      "size_bytes": 2571,
+      "lfs_object": "de05d580b99f1cbcfa28834a5713786a4355b658f216da9d89cd5c688c9d97a9",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "bb4e34655515b7dff2111e0028774b294e8b08222ef75c78e59f1cc23adc7c06",
+      "size_bytes": 20602,
+      "lfs_object": "bb4e34655515b7dff2111e0028774b294e8b08222ef75c78e59f1cc23adc7c06",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "ac5c65b0e22c8e0237c939be3273ba8395cfb25f33e50eaac9c04eda0c6c21d6",
+      "size_bytes": 20541,
+      "lfs_object": "ac5c65b0e22c8e0237c939be3273ba8395cfb25f33e50eaac9c04eda0c6c21d6",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "acb2d13fde971a265e03879f4513cb8c3b092a57a19dd8e70b009c4f5ad93175",
+      "size_bytes": 3505,
+      "lfs_object": "acb2d13fde971a265e03879f4513cb8c3b092a57a19dd8e70b009c4f5ad93175",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/franka_cloth/newton-isaacsim_rtx_renderer-albedo.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "c003b10810539f538464992860c74ee3bf531b8b4e9b6e0ebe84041d42dba643",
+      "size_bytes": 532,
+      "lfs_object": "c003b10810539f538464992860c74ee3bf531b8b4e9b6e0ebe84041d42dba643",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-distance_to_image_plane.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "5753345a44259432586b1449ac669149faae6839f286c2dbd51d7c10fc4906fe",
+      "size_bytes": 502,
+      "lfs_object": "5753345a44259432586b1449ac669149faae6839f286c2dbd51d7c10fc4906fe",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-instance_segmentation_fast.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-instance_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "9ea5b5e7f937b293152960d668cae542e379c7d3512be63f83ed9dca17de635e",
+      "size_bytes": 615,
+      "lfs_object": "9ea5b5e7f937b293152960d668cae542e379c7d3512be63f83ed9dca17de635e",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-instance_id_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "6edd251cce17369d9934379283f90b298ddf3ae76cf4ecb1c81957d4d98c16ee",
+      "size_bytes": 2527,
+      "lfs_object": "6edd251cce17369d9934379283f90b298ddf3ae76cf4ecb1c81957d4d98c16ee",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-newton_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "6071e437b0bcd341fff8a0bcf696da2abe4c5147da701e764596eac16b9fca1a",
+      "size_bytes": 5472,
+      "lfs_object": "6071e437b0bcd341fff8a0bcf696da2abe4c5147da701e764596eac16b9fca1a",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "60ad4597e21c5e34d0123075af2f9d4021c049519b2472c8511bfedc97a0be6f",
+      "size_bytes": 14830,
+      "lfs_object": "60ad4597e21c5e34d0123075af2f9d4021c049519b2472c8511bfedc97a0be6f",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "f38e6af9aaa8e80ab22ee5cc4139685941c4aa26e2a355e98f67cf54f1f0bdd8",
+      "size_bytes": 600,
+      "lfs_object": "f38e6af9aaa8e80ab22ee5cc4139685941c4aa26e2a355e98f67cf54f1f0bdd8",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-instance_id_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "ec727622d2e85c742051daac4c8ad9ce56af4b2d4d10766810a696b60cef82da",
+      "size_bytes": 2579,
+      "lfs_object": "ec727622d2e85c742051daac4c8ad9ce56af4b2d4d10766810a696b60cef82da",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-albedo.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "6a58c732a7d6c862182babc64c3322b139d87f5324d41b8bbe34cb9d553e2316",
+      "size_bytes": 2820,
+      "lfs_object": "6a58c732a7d6c862182babc64c3322b139d87f5324d41b8bbe34cb9d553e2316",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-albedo.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "5bac82d59bef687bf903a36fa5b922e6478cf5e944e10eb8da2f59043e41202b",
+      "size_bytes": 1558,
+      "lfs_object": "5bac82d59bef687bf903a36fa5b922e6478cf5e944e10eb8da2f59043e41202b",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-newton_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "5b789a30eccbd20f73c6e6ceab5e299b022039199e4b1b803e6dfb5a8097587e",
+      "size_bytes": 17629,
+      "lfs_object": "5b789a30eccbd20f73c6e6ceab5e299b022039199e4b1b803e6dfb5a8097587e",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "7681c231ab2c75ee863b70f61a252480cb42d2214ef2d4397f0aa418d95aa82a",
+      "size_bytes": 703,
+      "lfs_object": "7681c231ab2c75ee863b70f61a252480cb42d2214ef2d4397f0aa418d95aa82a",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-instance_segmentation_fast.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-semantic_segmentation.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-instance_segmentation_fast.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-semantic_segmentation.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-instance_segmentation_fast.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-semantic_segmentation.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "4d9e9ab8a64d13ff42364b411eed268739f2f66c533123a1fde28f02a745922d",
+      "size_bytes": 1771,
+      "lfs_object": "4d9e9ab8a64d13ff42364b411eed268739f2f66c533123a1fde28f02a745922d",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-newton_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "3afc4f214e51a1ccc1b0341448f64b82773bcc4bba3d913ad4f3052dcf497032",
+      "size_bytes": 4513,
+      "lfs_object": "3afc4f214e51a1ccc1b0341448f64b82773bcc4bba3d913ad4f3052dcf497032",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-simple_shading_full_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "f79522cbf6d3e84c61dcde71f23984971a645ceefece920418e4d837e1d5d7de",
+      "size_bytes": 8670,
+      "lfs_object": "f79522cbf6d3e84c61dcde71f23984971a645ceefece920418e4d837e1d5d7de",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-motion_vectors.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "ea4e6ba2251666e4df0c937fbd123489f2a06939bda9e674d5f84eb5c8831f7d",
+      "size_bytes": 422,
+      "lfs_object": "ea4e6ba2251666e4df0c937fbd123489f2a06939bda9e674d5f84eb5c8831f7d",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-newton_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-newton_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-newton_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-newton_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-newton_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-newton_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/registered_tasks/Isaac-Cartpole-Camera-Direct/default_physics-default_renderer-depth.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "faf7bd52ff523f811df1324c51383491020f053108b365954b7f079f3d26154a",
+      "size_bytes": 1260,
+      "lfs_object": "faf7bd52ff523f811df1324c51383491020f053108b365954b7f079f3d26154a",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-instance_id_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "44152261cc3b4f1c4006d4fd0e00d8c6e41508d368f2aa49b20b045ef0c59912",
+      "size_bytes": 8370,
+      "lfs_object": "44152261cc3b4f1c4006d4fd0e00d8c6e41508d368f2aa49b20b045ef0c59912",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/franka_cloth/newton-isaacsim_rtx_renderer-distance_to_camera.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "448cf080979ce371de5d8ffb61de6615b906dbe852aa82c018d45467e59016ec",
+      "size_bytes": 501,
+      "lfs_object": "448cf080979ce371de5d8ffb61de6615b906dbe852aa82c018d45467e59016ec",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-instance_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "058466b74a49061695567d84edeffb21ad9e88d8c83125d6b2b59cb70bdd5a70",
+      "size_bytes": 3701,
+      "lfs_object": "058466b74a49061695567d84edeffb21ad9e88d8c83125d6b2b59cb70bdd5a70",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-simple_shading_diffuse_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "33cce7fdc53de5e4629ef9a45dc0ce850afeb3fcc0ed10ac2005442641ec5b6f",
+      "size_bytes": 1941,
+      "lfs_object": "33cce7fdc53de5e4629ef9a45dc0ce850afeb3fcc0ed10ac2005442641ec5b6f",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-normals.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "83ca3d8f55f971d473409c73e77582175906670f3962b56723cccd28d062a868",
+      "size_bytes": 3513,
+      "lfs_object": "83ca3d8f55f971d473409c73e77582175906670f3962b56723cccd28d062a868",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-simple_shading_diffuse_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "644faec4cd0a00fe4e9dc7d168d1b67796d5d0136c7f8fef1154cef359549095",
+      "size_bytes": 4304,
+      "lfs_object": "644faec4cd0a00fe4e9dc7d168d1b67796d5d0136c7f8fef1154cef359549095",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-simple_shading_full_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "26fddeee2ecfa92b1f496260400464713d7e8c3a1b3569908b7bdfea974915a5",
+      "size_bytes": 20685,
+      "lfs_object": "26fddeee2ecfa92b1f496260400464713d7e8c3a1b3569908b7bdfea974915a5",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "8f401da10698c1025957c57b8ca5ee359dab0449a78613941e3d9841df595794",
+      "size_bytes": 568,
+      "lfs_object": "8f401da10698c1025957c57b8ca5ee359dab0449a78613941e3d9841df595794",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-distance_to_image_plane.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-distance_to_image_plane.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "7186c295f740f686648e96ab43f04d2e69d8e66b617fad0c52ae592a5b96f800",
+      "size_bytes": 474,
+      "lfs_object": "7186c295f740f686648e96ab43f04d2e69d8e66b617fad0c52ae592a5b96f800",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-simple_shading_diffuse_mdl.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-simple_shading_diffuse_mdl.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-simple_shading_diffuse_mdl.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-simple_shading_diffuse_mdl.png",
+        "source/isaaclab_tasks/test/golden_images/registered_tasks/Isaac-Cartpole-Camera-Direct/default_physics-default_renderer-simple_shading_diffuse_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "712ec9de5fbfbedd6aecd7303a2ee6bcbb347d3db7c4969268fee75b8a32522b",
+      "size_bytes": 1414,
+      "lfs_object": "712ec9de5fbfbedd6aecd7303a2ee6bcbb347d3db7c4969268fee75b8a32522b",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-newton_renderer-distance_to_camera.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "0d4097a68ad1baec0d2c4fc8525409bb5e8535c7302d54bd38f79a70ed77d704",
+      "size_bytes": 3324,
+      "lfs_object": "0d4097a68ad1baec0d2c4fc8525409bb5e8535c7302d54bd38f79a70ed77d704",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "011b53a7a713c00dc5e1892285aa4785defe99b2bcbaa7e551dc05b9abe974de",
+      "size_bytes": 1752,
+      "lfs_object": "011b53a7a713c00dc5e1892285aa4785defe99b2bcbaa7e551dc05b9abe974de",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-normals.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "14f277009292a7cc2e21fdb4f2b5e77a0fb1025435badcb0ccc96871bd8c322d",
+      "size_bytes": 3698,
+      "lfs_object": "14f277009292a7cc2e21fdb4f2b5e77a0fb1025435badcb0ccc96871bd8c322d",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-simple_shading_diffuse_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "402f49c7bed1ffa6bad5362530c8f4caff9c3827a2126d65ba744e4c1fe24f1f",
+      "size_bytes": 4416,
+      "lfs_object": "402f49c7bed1ffa6bad5362530c8f4caff9c3827a2126d65ba744e4c1fe24f1f",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "e9b4a25f06bec386952e0f5f01ade1359f04344276dc68c5d1c826b5b1c618f8",
+      "size_bytes": 1235,
+      "lfs_object": "e9b4a25f06bec386952e0f5f01ade1359f04344276dc68c5d1c826b5b1c618f8",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-newton_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-newton_renderer-distance_to_image_plane.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "e933536d04c93bc9df198a4ac3fcfa8ff4edc25d7c0ee67f23eaaa9aadb91f59",
+      "size_bytes": 766,
+      "lfs_object": "e933536d04c93bc9df198a4ac3fcfa8ff4edc25d7c0ee67f23eaaa9aadb91f59",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-newton_renderer-normals.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-newton_renderer-normals.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-newton_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "6d68551c1e2c1deca570da094a0515e700b3a5dcddd324807b228862a09d592e",
+      "size_bytes": 1940,
+      "lfs_object": "6d68551c1e2c1deca570da094a0515e700b3a5dcddd324807b228862a09d592e",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "692702c1fdc7180b17ce49ee8c690ff2bd54e0f70d4145477987dc76533cd4af",
+      "size_bytes": 1280,
+      "lfs_object": "692702c1fdc7180b17ce49ee8c690ff2bd54e0f70d4145477987dc76533cd4af",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-instance_id_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "eeef3cf2b450b431199245a0d7938b29c8390307c314b1826adfa970df3ed352",
+      "size_bytes": 1333,
+      "lfs_object": "eeef3cf2b450b431199245a0d7938b29c8390307c314b1826adfa970df3ed352",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-newton_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-newton_renderer-distance_to_image_plane.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "179a5acba0a763fcc2317cd784f8c347ef48f0d81f8028a1a64996ade67f8706",
+      "size_bytes": 17836,
+      "lfs_object": "179a5acba0a763fcc2317cd784f8c347ef48f0d81f8028a1a64996ade67f8706",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "273294b5c95dce4ad856c8634eef70f8bb1daf5421b517c64e58b0eda89d348f",
+      "size_bytes": 5580,
+      "lfs_object": "273294b5c95dce4ad856c8634eef70f8bb1daf5421b517c64e58b0eda89d348f",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/franka_cloth/newton-isaacsim_rtx_renderer-depth.png",
+        "source/isaaclab_tasks/test/golden_images/franka_cloth/newton-isaacsim_rtx_renderer-distance_to_image_plane.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "ae861919fe6db45bccbdc295237c7e647591f99da7288a5c4e9edd8ce9a57a66",
+      "size_bytes": 2501,
+      "lfs_object": "ae861919fe6db45bccbdc295237c7e647591f99da7288a5c4e9edd8ce9a57a66",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "7c0b49d1ab6df864c12a6ee80dc54e2c52e94f9e98a208b932475129d1d9a7ea",
+      "size_bytes": 18177,
+      "lfs_object": "7c0b49d1ab6df864c12a6ee80dc54e2c52e94f9e98a208b932475129d1d9a7ea",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "7cf76622f5f5cc7e7889fe6032ba4cda22516248fa7bb5e957f181c92c86b42b",
+      "size_bytes": 3054,
+      "lfs_object": "7cf76622f5f5cc7e7889fe6032ba4cda22516248fa7bb5e957f181c92c86b42b",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-ovrtx_renderer-albedo.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "7ccc32454acce3698a1bbba177e5bee752b056d2e764b8a208747b5e796efa82",
+      "size_bytes": 1937,
+      "lfs_object": "7ccc32454acce3698a1bbba177e5bee752b056d2e764b8a208747b5e796efa82",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-newton_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "be48c0028e9bea1576c03dc01f8c8d45793ea6f3e2afe8aa17a8f3784c026991",
+      "size_bytes": 4378,
+      "lfs_object": "be48c0028e9bea1576c03dc01f8c8d45793ea6f3e2afe8aa17a8f3784c026991",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-simple_shading_full_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "a45b4b004e38db22b25ef145c5b75348826dc05a9afa7daf74a978ba8fa41a93",
+      "size_bytes": 772,
+      "lfs_object": "a45b4b004e38db22b25ef145c5b75348826dc05a9afa7daf74a978ba8fa41a93",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-newton_renderer-rgb.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-newton_renderer-rgb.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-newton_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "38cb065e378b20e508ca875fc3e0533b516acba206ff6cb4bf25456d1e0d9eb0",
+      "size_bytes": 1644,
+      "lfs_object": "38cb065e378b20e508ca875fc3e0533b516acba206ff6cb4bf25456d1e0d9eb0",
+      "source_paths": [
+        "source/isaaclab_physx/test/assets/data/articulation_ordering_branching.usda"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "8929af0b155ac73e4dd74dd70dbc502fb78bd962248e5c46f88972a0a7e3e80e",
+      "size_bytes": 538,
+      "lfs_object": "8929af0b155ac73e4dd74dd70dbc502fb78bd962248e5c46f88972a0a7e3e80e",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-newton_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-newton_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-newton_renderer-distance_to_camera.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "280b876c267461d8719d7473fc9da751642cf343a68cbb626b2ad39fca8513b7",
+      "size_bytes": 454,
+      "lfs_object": "280b876c267461d8719d7473fc9da751642cf343a68cbb626b2ad39fca8513b7",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-semantic_segmentation.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-semantic_segmentation.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-semantic_segmentation.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-semantic_segmentation.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "c7107d92be7a79450f8c5251c53b56e7147157f2aca66dcf432cc9f73d1f6417",
+      "size_bytes": 18284,
+      "lfs_object": "c7107d92be7a79450f8c5251c53b56e7147157f2aca66dcf432cc9f73d1f6417",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "dc7041f2d9621d9b63eab871aed36bdc82b3b2be9ccb7bc6dc8546137d2bc260",
+      "size_bytes": 2706,
+      "lfs_object": "dc7041f2d9621d9b63eab871aed36bdc82b3b2be9ccb7bc6dc8546137d2bc260",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-newton_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "1bf8a42b1b3c652ea9f8d79d89a02865ea2c1b347bf61dee810e01890aa00563",
+      "size_bytes": 4248,
+      "lfs_object": "1bf8a42b1b3c652ea9f8d79d89a02865ea2c1b347bf61dee810e01890aa00563",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-simple_shading_full_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "bc36db345dd02fc794a9c9cf4256da534f264e6f17aaea4d5acc4a53b449267b",
+      "size_bytes": 3873,
+      "lfs_object": "bc36db345dd02fc794a9c9cf4256da534f264e6f17aaea4d5acc4a53b449267b",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-simple_shading_diffuse_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "bc9d35e46a41fa55125da0d64396df781962b78642f727f5f0f0c758fc861001",
+      "size_bytes": 2515,
+      "lfs_object": "bc9d35e46a41fa55125da0d64396df781962b78642f727f5f0f0c758fc861001",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-newton_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "d7f2cfee1e6415ec92374319331ea496299471f37ea1ee0f66ffe9618e82b604",
+      "size_bytes": 8629,
+      "lfs_object": "d7f2cfee1e6415ec92374319331ea496299471f37ea1ee0f66ffe9618e82b604",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-motion_vectors.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "d7bc55c61a3b20c4c9d504cd45a5aef41192d63b727408c813a6e7bf91a7b265",
+      "size_bytes": 1519,
+      "lfs_object": "d7bc55c61a3b20c4c9d504cd45a5aef41192d63b727408c813a6e7bf91a7b265",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-newton_renderer-distance_to_camera.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "e6e8bfb5a5cbbd882df2c114300ce607d92b45fd963f6d650b9a58d7f6d9c43f",
+      "size_bytes": 431,
+      "lfs_object": "e6e8bfb5a5cbbd882df2c114300ce607d92b45fd963f6d650b9a58d7f6d9c43f",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-simple_shading_constant_diffuse.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-simple_shading_constant_diffuse.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-simple_shading_constant_diffuse.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-simple_shading_constant_diffuse.png",
+        "source/isaaclab_tasks/test/golden_images/registered_tasks/Isaac-Cartpole-Camera-Direct/default_physics-default_renderer-simple_shading_constant_diffuse.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "afae7b67addb9e7e9f8e140bf5a65b7a1dd727ba35c3627408fad79d955f47e2",
+      "size_bytes": 663,
+      "lfs_object": "afae7b67addb9e7e9f8e140bf5a65b7a1dd727ba35c3627408fad79d955f47e2",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-simple_shading_full_mdl.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-simple_shading_full_mdl.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-simple_shading_full_mdl.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-simple_shading_full_mdl.png",
+        "source/isaaclab_tasks/test/golden_images/registered_tasks/Isaac-Cartpole-Camera-Direct/default_physics-default_renderer-simple_shading_full_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "70cc200aa9d558e309d0e69c618b8235de0af11d6cf8b524bb7e7777f5d950cc",
+      "size_bytes": 1492,
+      "lfs_object": "70cc200aa9d558e309d0e69c618b8235de0af11d6cf8b524bb7e7777f5d950cc",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-simple_shading_constant_diffuse.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "80b41b886947df5d981b845bec7db3a070d298b64f1cc3502eae3b04a555fae3",
+      "size_bytes": 4441,
+      "lfs_object": "80b41b886947df5d981b845bec7db3a070d298b64f1cc3502eae3b04a555fae3",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "8709d55c5e2cc88531f15ebc943b01bee12c87f8f9aaeaaa41d0b00148b48475",
+      "size_bytes": 1530,
+      "lfs_object": "8709d55c5e2cc88531f15ebc943b01bee12c87f8f9aaeaaa41d0b00148b48475",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-newton_renderer-distance_to_camera.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "22b7f956e2455765b0a2a81d02d48173854a8c8773b2a8050bf1fc927602516d",
+      "size_bytes": 1951,
+      "lfs_object": "22b7f956e2455765b0a2a81d02d48173854a8c8773b2a8050bf1fc927602516d",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-newton_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "fddc33b267fe9810973419babf140faf39b964466bfb6f50193abc8f278cfce4",
+      "size_bytes": 3052,
+      "lfs_object": "fddc33b267fe9810973419babf140faf39b964466bfb6f50193abc8f278cfce4",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-albedo.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "c97a707e640bf7e71a34b556db44c579cbb15f7cff341434471a8fdcaa7a0fa7",
+      "size_bytes": 843,
+      "lfs_object": "c97a707e640bf7e71a34b556db44c579cbb15f7cff341434471a8fdcaa7a0fa7",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-newton_renderer-rgba.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-newton_renderer-rgba.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-newton_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "ad3084ff3266d91e5d606bbc1b80bafcdd296432bf55c5ec896f5584e68d7ef7",
+      "size_bytes": 2680,
+      "lfs_object": "ad3084ff3266d91e5d606bbc1b80bafcdd296432bf55c5ec896f5584e68d7ef7",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-newton_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "82f83c645e08169008c3e8620a93d82963aa17de990c30f9fd460b6f99e91c54",
+      "size_bytes": 1280,
+      "lfs_object": "82f83c645e08169008c3e8620a93d82963aa17de990c30f9fd460b6f99e91c54",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-instance_id_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "084f049a7b700ea75716f77e0c80e307c38f414b5da68be34ebad3c1ebe453a9",
+      "size_bytes": 551,
+      "lfs_object": "084f049a7b700ea75716f77e0c80e307c38f414b5da68be34ebad3c1ebe453a9",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-isaacsim_rtx_renderer-distance_to_camera.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-distance_to_camera.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "08ad307fa88f6d86d9deaebcda7abd1d752f8404162cdc2ce2a29594f03ca4cd",
+      "size_bytes": 1672,
+      "lfs_object": "08ad307fa88f6d86d9deaebcda7abd1d752f8404162cdc2ce2a29594f03ca4cd",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-simple_shading_constant_diffuse.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "2f0bdb1f222020492308ba02bb1c2328a313abc2431aa6e475cbf667b25c1aea",
+      "size_bytes": 1268,
+      "lfs_object": "2f0bdb1f222020492308ba02bb1c2328a313abc2431aa6e475cbf667b25c1aea",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-instance_id_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "2ff388280fb319b8412755235b0b807a91c209248e2be2446ab3c7040282e94e",
+      "size_bytes": 18252,
+      "lfs_object": "2ff388280fb319b8412755235b0b807a91c209248e2be2446ab3c7040282e94e",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "2f6f3bd74afeec7ed39905f3113582aa1c01eb417c46c2e3a438164ea71429cb",
+      "size_bytes": 20487,
+      "lfs_object": "2f6f3bd74afeec7ed39905f3113582aa1c01eb417c46c2e3a438164ea71429cb",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "2f2dda83b6ddefb6e3d8bb4f1d93b6453a357f22924ecfd523609d38b89afb3e",
+      "size_bytes": 5498,
+      "lfs_object": "2f2dda83b6ddefb6e3d8bb4f1d93b6453a357f22924ecfd523609d38b89afb3e",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "092518333b62ed5b9b0d84a8a883756980c45c9c9329f13adb893793475fb1fb",
+      "size_bytes": 3102,
+      "lfs_object": "092518333b62ed5b9b0d84a8a883756980c45c9c9329f13adb893793475fb1fb",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-albedo.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/physx-isaacsim_rtx_renderer-albedo.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "3009f0ef2b7e67bdeeeaef56d1b8bb800bd3159f3782d1c588f227137238f3e3",
+      "size_bytes": 1754,
+      "lfs_object": "3009f0ef2b7e67bdeeeaef56d1b8bb800bd3159f3782d1c588f227137238f3e3",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/physx-isaacsim_rtx_renderer-normals.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "f6c278751bb84db672c53c193d7e514d229995e6c46d615b088dd8b0b645d605",
+      "size_bytes": 3248,
+      "lfs_object": "f6c278751bb84db672c53c193d7e514d229995e6c46d615b088dd8b0b645d605",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-rgba.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "ff6afde2c34c0f51496f74331f0768aaf9da7807932eca462c636d4346f1b9f5",
+      "size_bytes": 4378,
+      "lfs_object": "ff6afde2c34c0f51496f74331f0768aaf9da7807932eca462c636d4346f1b9f5",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-simple_shading_full_mdl.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "f1834b5dacf9b54375a6e4dc29cab777af63baf3db62ab3519a8f918d86dc980",
+      "size_bytes": 501,
+      "lfs_object": "f1834b5dacf9b54375a6e4dc29cab777af63baf3db62ab3519a8f918d86dc980",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-instance_segmentation_fast.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "008b89db0d5940848dded727a81d43bb2e727429eff6340cb485501c0031db57",
+      "size_bytes": 1417,
+      "lfs_object": "008b89db0d5940848dded727a81d43bb2e727429eff6340cb485501c0031db57",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_homo/newton-newton_renderer-distance_to_camera.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "e72c9c3b8052b67b26cc8553dd097915860af12ba997083a28e746babd322a28",
+      "size_bytes": 20584,
+      "lfs_object": "e72c9c3b8052b67b26cc8553dd097915860af12ba997083a28e746babd322a28",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-motion_vectors.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "2d6b61a08f44d446ac22ccd07a0afbcdabcf09cbc91aa45c3d1756631214d5ee",
+      "size_bytes": 1671,
+      "lfs_object": "2d6b61a08f44d446ac22ccd07a0afbcdabcf09cbc91aa45c3d1756631214d5ee",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-simple_shading_constant_diffuse.png",
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-ovrtx_renderer-simple_shading_constant_diffuse.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "88da57e08497b308d47c3e606d40142291adde3c0fe2df46ab0a924d39b6847b",
+      "size_bytes": 435,
+      "lfs_object": "88da57e08497b308d47c3e606d40142291adde3c0fe2df46ab0a924d39b6847b",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-isaacsim_rtx_renderer-albedo.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/newton-ovrtx_renderer-albedo.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/ovphysx-ovrtx_renderer-albedo.png",
+        "source/isaaclab_tasks/test/golden_images/cartpole/physx-isaacsim_rtx_renderer-albedo.png",
+        "source/isaaclab_tasks/test/golden_images/registered_tasks/Isaac-Cartpole-Camera-Direct/default_physics-default_renderer-albedo.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    },
+    {
+      "sha256": "78745527ac80db6e9117cf105539ac4291bc9b6bec80c198c0568d625edad885",
+      "size_bytes": 18227,
+      "lfs_object": "78745527ac80db6e9117cf105539ac4291bc9b6bec80c198c0568d625edad885",
+      "source_paths": [
+        "source/isaaclab_tasks/test/golden_images/dexsuite_kuka_hetero/newton-isaacsim_rtx_renderer-rgb.png"
+      ],
+      "source_revision": "4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8",
+      "source_repository": "https://github.com/isaac-sim/IsaacLab",
+      "license_reference": "https://github.com/isaac-sim/IsaacLab/blob/4ecd0b036da19ff6ad2bb4d621f886b63e9f6db8/LICENSE"
+    }
+  ]
+}

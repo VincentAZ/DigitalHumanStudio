@@ -22,7 +22,7 @@ fi
 image_digest=$("$docker_cmd" image inspect --format '{{index .RepoDigests 0}}' "$image")
 printf '%s\n' "$image_digest" > "$evidence/image-digest.txt"
 printf '%s\n' "$image_digest" > "$lock_file"
-"$docker_cmd" run --rm --entrypoint bash "$image_digest" -lc 'cat /etc/os-release; python3 --version' \
+"$docker_cmd" run --rm --entrypoint bash "$image_digest" -lc 'cat /etc/os-release; ./python.sh --version' \
     > "$evidence/container-userspace.txt"
 if ! grep -q '^VERSION_ID="24.04"$' "$evidence/container-userspace.txt"; then
     echo 'STOP: image userspace does not match the requested Ubuntu 24.04 baseline.'

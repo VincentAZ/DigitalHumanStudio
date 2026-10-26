@@ -8,7 +8,7 @@ User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| 0 — Reproducible runtime | In progress; Isaac container pull/check running | Container tooling verified; Mixar checks passed |
+| 0 — Reproducible runtime | Stopped; dependency resolution failed | Official Isaac checker passed twice; Mixar checks passed; final runtime untested |
 | 1 — Physical human baseline | Not started | Not authorized in current scope |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
@@ -59,3 +59,21 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Recorded installed host package versions in `config/host-tools.json` and refreshed diagnostics in `diagnostics/20261026T013048.738346Z/`.
 - Started `scripts/check_isaac.sh`; pulling the pinned Isaac Sim 6.0.0 image. Await the running process's result before any retry or pinned runtime installation.
 - Prepared a guarded container builder and final-environment smoke checks while the 10.7 GB compressed image downloads. Syntax checks passed; neither builder nor smoke has executed. They do not count as completed acceptance evidence.
+
+## 2026-10-26 UTC — Official compatibility gate passed
+
+- Downloaded and locked Isaac Sim 6.0.0 image digest `sha256:68735a60b6c15c85e0dd0098570c6d2cc79e928f2d068ce2790aa43284ac165d`. Container userspace is Ubuntu 24.04.3, bundled Python is 3.12.13.
+- First preflight stopped because the image provides `./python.sh`, not a `python3` command on PATH. Corrected the launcher. This was a launcher error before Isaac executed; the evidence is retained in `diagnostics/20261026T012936-isaac/`.
+- Both actual official checker runs exited 0 and reported `System checking result: PASSED`. Container GPU visibility and Vulkan detection succeeded. Evidence: `diagnostics/20261026T020033-isaac/`, including copied Kit logs.
+- Preserved warnings about Hub startup, headless display, CPU powersave governor, and IOMMU. No host settings were changed to suppress them.
+- The first source-staging attempt invoked Git LFS filters and fetched small upstream test fixtures. Interrupted that staging process before Docker build and fixed `git archive` to set `GIT_LFS_SKIP_SMUDGE=1`. Their hashes are preserved under `diagnostics/20261026T020145.113355Z-runtime-build/`.
+- The guarded build started in `diagnostics/20261026T020231.007421Z-runtime-build/`; its failure and the final stopping point are recorded below.
+
+## 2026-10-26 UTC — Pinned runtime build stopped
+
+- The documented `uv sync --python 3.12.13 --extra isaacsim` step exited 1. uv reports conflicting `pytetwild==0.2.3` and `pytetwild[all]>=0.3.0,<0.4` requirements in a marker branch containing both x86_64 and ARM conditions. This occurs before the final environment is installed.
+- Tested a resolver-only Linux x86_64 restriction in a disposable copy, then the same restriction with verified uv 0.13.5. Both dry runs exited 1 with the same error. Source revisions and package requirements were not changed. The unsuccessful restriction is preserved as a diagnostic experiment and is not part of the build configuration. The configured baseline remains uv 0.11.32.
+- Preserved the original failed build container, two diagnostic containers, a snapshot image, complete logs/exit codes, original build inputs, trial configuration patch, and publisher metadata. See `diagnostics/20261026T020231.007421Z-runtime-build/README.md` and `stopped-result.json`.
+- **Milestone 0 remains incomplete and is stopped at this dependency compatibility barrier.** No final image lock or resolved package lock exists. Final GPU computation, physics, RTX rendering, shutdown, and repeat-run checks were not executed.
+- The official checker pass does not establish full-stack compatibility; the resolver failure also does not demonstrate that the Ubuntu 26.04 host is incompatible. Changing the host OS is not an evidenced remedy for this dependency error.
+- No OS, NVIDIA driver, research source revision, backend, or architecture was changed. Milestones 1–5 remain unstarted. Resume requires a reviewed resolution of the pinned environment failure; do not silently change pins or substitute a backend.

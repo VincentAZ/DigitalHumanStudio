@@ -1,0 +1,19 @@
+{
+  "status": "stopped_dependency_resolution_failure",
+  "official_isaac_checker": "passed_twice",
+  "final_environment_installed": false,
+  "physics_render_restart_checks": "not_run",
+  "baseline_uv": "0.11.32",
+  "diagnostic_uv": "0.13.5",
+  "source_revisions_changed": false,
+  "host_os_or_driver_changed": false,
+  "alternative_architecture_selected": false,
+  "retained_containers": [
+    "e721aa99631615a7bec10ed84f1eb14889d24c2f768e54a2d200531c90730bcb",
+    "studio-resolver-target",
+    "studio-resolver-uv0135"
+  ],
+  "diagnostic_image": "sha256:82258e8c8305bac5f3eb2c51e902fd69075ebbd6ab5ab593662b58d63e1b4100",
+  "reason": "uv reports mutually incompatible pytetwild requirements in an impossible platform-marker branch; both resolver versions fail before installation",
+  "conclusion_limit": "This does not demonstrate host incompatibility; no final learning runtime exists to test."
+}

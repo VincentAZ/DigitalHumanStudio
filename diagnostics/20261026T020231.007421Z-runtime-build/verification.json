@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-26T02:18:43.749052+00:00",
+  "script_syntax": "passed",
+  "config_json": "passed",
+  "official_checker_evidence": "two exit-zero PASS results and matching digest",
+  "failed_container_records": "all three exited 1 and stopped",
+  "final_runtime_image_lock": "absent as expected",
+  "original_plan": "byte-identical to initial commit",
+  "vendor_source_worktrees": "clean",
+  "project_source_whitespace": "passed; raw diagnostics/upstream snapshots excluded",
+  "runtime_acceptance": "not run; build failed"
+}

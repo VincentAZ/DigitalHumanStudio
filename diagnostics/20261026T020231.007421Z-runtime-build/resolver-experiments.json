@@ -1,0 +1,28 @@
+{
+  "original_build": {
+    "uv": "0.11.32",
+    "exit_code": 1,
+    "log": "build.log",
+    "retained_container": "e721aa99631615a7bec10ed84f1eb14889d24c2f768e54a2d200531c90730bcb"
+  },
+  "diagnostic_image": "sha256:82258e8c8305bac5f3eb2c51e902fd69075ebbd6ab5ab593662b58d63e1b4100",
+  "platform_scope_only": {
+    "uv": "0.11.32",
+    "exit_code": 1,
+    "container": "studio-resolver-target",
+    "log": "target-resolution.log",
+    "patch": "target-environment.patch"
+  },
+  "new_resolver_trial": {
+    "uv": "0.13.5",
+    "container": "studio-resolver-uv0135",
+    "log": "uv0135-resolution.log",
+    "status": "failed_same_dependency_resolution",
+    "archive_sha256": "f68d291c75783122dad58ab77def0e13f3233f358731db5d6d7e8715603b928f",
+    "release_url": "https://github.com/astral-sh/uv/releases/tag/0.13.5",
+    "note": "Diagnostic trial only; configured baseline remains uv 0.11.32.",
+    "exit_code": 1
+  },
+  "host_changed": false,
+  "research_source_versions_changed": false
+}
