@@ -8,7 +8,7 @@ User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| 0 — Reproducible runtime | Incomplete; Docker installed, session group refresh pending | Host diagnostics and Mixar checks passed; Isaac not yet tested |
+| 0 — Reproducible runtime | In progress; Isaac container pull/check running | Container tooling verified; Mixar checks passed |
 | 1 — Physical human baseline | Not started | Not authorized in current scope |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
@@ -52,3 +52,10 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Fresh host and package/group/configuration evidence: `diagnostics/20261026T012503.739621Z/`.
 - Fetched detached source checkouts at both requested revisions into ignored `vendor/IsaacLab` and `vendor/ProtoMotions`. LFS smudging was disabled during fetch; these are source checkouts only, not installed environments or downloaded model assets.
 - Isaac remains untested until this session can access Docker. Continue with `scripts/check_isaac.sh` once `sg` is installed.
+
+## 2026-10-26 UTC — Docker access verified; compatibility run started
+
+- User installed the missing group-refresh utility. `scripts/docker.sh version` successfully contacted Docker client and daemon, both 29.1.3.
+- Recorded installed host package versions in `config/host-tools.json` and refreshed diagnostics in `diagnostics/20261026T013048.738346Z/`.
+- Started `scripts/check_isaac.sh`; pulling the pinned Isaac Sim 6.0.0 image. Await the running process's result before any retry or pinned runtime installation.
+- Prepared a guarded container builder and final-environment smoke checks while the 10.7 GB compressed image downloads. Syntax checks passed; neither builder nor smoke has executed. They do not count as completed acceptance evidence.

@@ -1,6 +1,6 @@
 # Milestone 0 setup report
 
-Status: **Milestone 0 incomplete; Docker and NVIDIA Container Toolkit installed, current-session Docker access awaiting group-refresh utility. Isaac compatibility is untested. Mixar smoke checks passed.**
+Status: **Milestone 0 in progress; Docker access verified and Isaac image pull/check running. Isaac compatibility is not established yet. Mixar smoke checks passed.**
 
 ## Inspected host — 2026-10-25
 
@@ -35,7 +35,7 @@ The pinned ProtoMotions installation instructions confirm Isaac Lab revision `4e
 
 The user completed the host bootstrap. Docker 29.1.3 and NVIDIA Container Toolkit 1.20.1 are installed and Docker is active with the NVIDIA runtime configured. Git LFS and Vulkan tools are also installed. Fresh evidence is in `diagnostics/20261026T012503.739621Z/`.
 
-The initial bootstrap omitted `util-linux-extra`, which supplies `sg` on this host. The account has Docker group membership, but the existing agent process does not. Install the missing utility in a local terminal so `scripts/docker.sh` can refresh its group:
+The initial bootstrap omitted `util-linux-extra`, which supplies `sg` on this host. The user has now installed it, and `scripts/docker.sh version` successfully contacts the daemon. Exact installed package versions are recorded in `config/host-tools.json`. The repair command used was:
 
 ```bash
 sudo apt-get install -y util-linux-extra
@@ -53,6 +53,15 @@ This installs pinned Ubuntu Docker/Git LFS/Vulkan packages and NVIDIA Container 
 Then capture `python3 scripts/inspect_host.py` and run `scripts/check_isaac.sh`. That script records the image digest and userspace, verifies GPU visibility, and runs NVIDIA's official checker twice with a five-minute limit per attempt. Once pulled, the image digest is saved in `config/isaac-image.lock` and reused. It uses the required NVIDIA license-acceptance flag for the requested installation; it does not opt into optional telemetry. It stops if userspace differs from Ubuntu 24.04, the checker exits unsuccessfully, or its explicit PASS message is missing. The launcher's prerequisite check was executed and exited 2 because Docker is absent; no Isaac process ran. Script preparation is not evidence of Isaac compatibility.
 
 After a checker pass, remaining work is to establish the pinned Isaac Lab/ProtoMotions environment using its documented `uv sync --extra isaacsim` procedure inside Ubuntu 24.04, record the resolved lock and image digest, and run physics/render/startup/shutdown/restart checks in that final environment. Use explicit PhysX configuration where required by ProtoMotions; do not infer that a default backend proves the requested physics stack.
+
+Prepared (not yet executed) commands for those remaining checks:
+
+```bash
+python3 scripts/build_runtime.py --compatibility-evidence diagnostics/<successful-isaac-run>
+scripts/check_runtime.sh
+```
+
+The builder verifies two successful official checker results and their image digest before constructing the pinned environment. It records the upstream Isaac Lab resolver lock before installing ProtoMotions, then records the final environment freeze and checks installed-package dependencies. The final smoke launcher uses the built image's content ID, tests GPU computation and explicit PhysX gravity/contact behavior, saves an RTX image, and repeats the full run. These prepared scripts have only undergone syntax checks; they are not runtime evidence yet.
 
 The checker launcher retains failed containers and records their names in `retained-container.txt`. It also stops and retains the container if copying Kit logs fails, even when the checker reports PASS. Failure preservation was verified using an isolated mock Docker command; real container behavior still requires validation after installation.
 
