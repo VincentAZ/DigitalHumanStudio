@@ -1,0 +1,99 @@
+{
+  "process_exit_code": 0,
+  "wrapper_exit_code": 4,
+  "physics_samples_finite": 30,
+  "wrapper_acceptance": "failed_missing_shutdown_log_markers",
+  "source_logging_defaults": {
+    "file": "vendor/IsaacLab/apps/isaaclab.python.headless.kit",
+    "log.level": "Warn",
+    "log.outputStreamLevel": "Warn"
+  },
+  "configured_terrain_bounds": [
+    [
+      0.0,
+      279.8999938964844
+    ],
+    [
+      0.0,
+      309.8999938964844
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "reset_root_position": [
+    0.0,
+    0.0,
+    0.95
+  ],
+  "maximum_absolute_measured_contact_force_component": 0.0,
+  "final_body_positions": {
+    "Hips": [
+      -0.5278369784355164,
+      -0.16940584778785706,
+      0.3282248079776764
+    ],
+    "LeftFoot": [
+      0.062290504574775696,
+      -0.10175944864749908,
+      -0.40628334879875183
+    ],
+    "RightFoot": [
+      -0.11206690967082977,
+      -0.09207512438297272,
+      -0.5161572098731995
+    ],
+    "LeftToeBase": [
+      0.08806758373975754,
+      -0.2318006157875061,
+      -0.456167995929718
+    ],
+    "RightToeBase": [
+      -0.086299367249012,
+      -0.2223319113254547,
+      -0.5670067071914673
+    ]
+  },
+  "contact_acceptance": "not established; reset is at the terrain corner and feet move outside its bounds",
+  "converted_asset_cache_source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/isaac-home/.cache/protomotions/isaaclab_mjcf_usd/soma23_humanoid_560acaf5f0a8e636/soma23_humanoid",
+  "copied_converted_asset_root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone1/articulation-20261026T171414Z/converted-asset",
+  "converted_asset_files": {
+    "payloads/Physics/mujoco.usda": {
+      "bytes": 60219,
+      "sha256": "925c57bf3b48a45c7d9887cbb4e0f427e916d18f7ed7e607d981590eab39ae07"
+    },
+    "payloads/Physics/physics.usda": {
+      "bytes": 88401,
+      "sha256": "eca91c13fab2ed54f5382706b755a9e286c4504ced1218cd50274e477a6cb8e2"
+    },
+    "payloads/Physics/physx.usda": {
+      "bytes": 73508,
+      "sha256": "804381a76db51200e414d2a56fe40521ea7cb4bbb4b6d6a1738e3a015833d7f3"
+    },
+    "payloads/base.usda": {
+      "bytes": 46541,
+      "sha256": "96a244ca679d0158d1f393fc332cd7e420e014e2b022d1213350186a5d8d9952"
+    },
+    "payloads/materials.usda": {
+      "bytes": 1917,
+      "sha256": "1634d055eda3ffcf47383ebe055c0cba57f617da37816bd835db860bb1de00e3"
+    },
+    "payloads/robot.usda": {
+      "bytes": 18725,
+      "sha256": "59f43d3bef3ace78b2019892a37cc55a4f171e8efbad005928fd9f1a9e12c497"
+    },
+    "soma23_humanoid.usda": {
+      "bytes": 2836,
+      "sha256": "b3d5c3b30aabf6923b9f2f47c67ec47fc3723d49418abdffd452fe64c865a743"
+    }
+  },
+  "motion_dataset_used": false,
+  "learned_policy_used": false,
+  "further_isaac_runs": "stopped after failed wrapper gate",
+  "proposed_changes_not_executed": [
+    "Set explicit Info logging to capture close() lifecycle evidence",
+    "Place synthetic reset inside flat terrain with clearance and explicitly require observed contact forces"
+  ],
+  "milestone1_complete": false
+}

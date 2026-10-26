@@ -1,0 +1,92 @@
+Loading user config located at: '/studio-home/kit/data/Kit/IsaacLab/3.0/user.config.json'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: .agents] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.agents' or '/opt/IsaacLab/.agents/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: skills] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/skills' or '/opt/IsaacLab/skills/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: apps] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/apps' or '/opt/IsaacLab/apps/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: source] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/source' or '/opt/IsaacLab/source/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: docs] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/docs' or '/opt/IsaacLab/docs/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: scripts] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/scripts' or '/opt/IsaacLab/scripts/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: docker] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/docker' or '/opt/IsaacLab/docker/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: .venv] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.venv' or '/opt/IsaacLab/.venv/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: .vscode] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.vscode' or '/opt/IsaacLab/.vscode/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: tools] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/tools' or '/opt/IsaacLab/tools/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: .claude] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.claude' or '/opt/IsaacLab/.claude/config'
+2026-10-26T17:13:32Z [0ms] [Warning] [omni.ext.plugin] [ext: .github] Extensions config 'extension.toml' doesn't exist '/opt/IsaacLab/.github' or '/opt/IsaacLab/.github/config'
+2026-10-26T17:13:32Z [83ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:32Z [154ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:32Z [235ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:32Z [327ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:32Z [428ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:32Z [539ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:32Z [660ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:33Z [791ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:33Z [933ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:33Z [1,084ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:33Z [1,246ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:33Z [1,417ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:33Z [1,598ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:34Z [1,790ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:34Z [1,991ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:34Z [2,203ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:34Z [2,424ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:34Z [2,656ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:35Z [2,897ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:35Z [3,149ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:35Z [3,411ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:35Z [3,682ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:36Z [3,963ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:36Z [4,254ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:36Z [4,556ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:37Z [4,867ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:37Z [5,189ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:37Z [5,521ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:38Z [5,862ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:38Z [6,213ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:38Z [6,575ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:39Z [6,946ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:39Z [7,327ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:39Z [7,719ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:40Z [8,120ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:40Z [8,532ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+2026-10-26T17:13:41Z [8,953ms] [Warning] [carb.omniclient.plugin]  101: OmniHub: ThreadId(02) Hub encountered error. Trying to reconnect to Hub. retry_reason="Hub failed to launch: Io(\"child exited with exit status: 1 without writing file \\\"/tmp/hub-ubuntu-FD95C419.config.json\\\"\")"
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793034822.555803       1 descriptor_database.cc:633] File already exists in database: grpc/health/v1/health.proto
+W0000 00:00:1793034822.555826       1 message.cc:301] Protobuf GeneratedMessageFactory: File is already registered: grpc/health/v1/health.proto
+[ISAACLAB] AppLauncher initialization complete
+[ISAACLAB] Kit version: 110.1.1+production.305458.6312fa25.gl
+[ISAACLAB] Kit kernel:  210.1.5+release.12978.b22b555f.gl
+[ISAACLAB] Kit hash:    6312fa25
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+/opt/ProtoMotions/protomotions/utils/rotations.py:199: SyntaxWarning: invalid escape sequence '\*'
+  Combine two set of 3D rotations together using \**\* operator. The shape needs to be
+<unknown>:4: SyntaxWarning: invalid escape sequence '\*'
+Traceback (most recent call last):
+  File "/studio/scripts/soma_articulation_probe.py", line 105, in <module>
+    result = run_probe()
+             ^^^^^^^^^^^
+  File "/studio/scripts/soma_articulation_probe.py", line 56, in run_probe
+    sim = build_simulator_from_config(cfg, robot, terrain, scene_lib, device, simulation_app=app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ProtoMotions/protomotions/utils/component_builder.py", line 122, in build_simulator_from_config
+    return SimulatorClass(
+           ^^^^^^^^^^^^^^^
+  File "/opt/ProtoMotions/protomotions/simulator/isaaclab/simulator.py", line 135, in __init__
+    super().__init__(
+  File "/opt/ProtoMotions/protomotions/simulator/base_simulator/simulator.py", line 184, in __init__
+    self._init_recording_state()
+  File "/opt/ProtoMotions/protomotions/simulator/base_simulator/record.py", line 53, in _init_recording_state
+    os.makedirs("output/renderings", exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: 'output'
+Warp 1.15.0.dev20260626 initialized:
+   CUDA Toolkit 12.9, Driver 13.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Workstation Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /studio-home/.cache/warp/1.15.0.dev20260626
+Initial heightfield size: 2800x3100 = 8680000 vertices
+Optimizing mesh by merging flat regions...
+Optimized mesh vertex count: 56
+Creating empty SceneLib (no scenes)

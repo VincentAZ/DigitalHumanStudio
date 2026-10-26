@@ -1,0 +1,13 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone1/articulation-20261026T171331Z",
+  "files": {
+    "kit.log": {
+      "bytes": 13898,
+      "sha256": "cbc862e03847533f118dbecf978f79043c91b35965cd4624ba58799313f58680"
+    },
+    "requested-config.json": {
+      "bytes": 41692,
+      "sha256": "8be08ca2242a9bdade9d0ef7f9ae26de19247a83cffc518d4e29a01dfdfc749a"
+    }
+  }
+}

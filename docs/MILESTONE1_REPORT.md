@@ -1,6 +1,6 @@
 # Milestone 1 — SOMA physical baseline
 
-Status: **started; motion trials awaiting dataset eligibility clarification**. Milestone 0 remains accepted for standalone workers. No Milestone 2–5 work has started.
+Status: **incomplete; articulation probe stopped at its evidence gate, and motion trials await dataset eligibility clarification**. Milestone 0 remains accepted for standalone workers. No Milestone 2–5 work has started.
 
 ## Verified preparation
 
@@ -11,7 +11,7 @@ Evidence: [`diagnostics/20261026T170633Z-milestone1-preflight/`](../diagnostics/
 - Both configurations agree with the bundled `soma23_humanoid.xml`: 23 bodies and 66 joint names in exact order, with 66 actions. The Isaac Lab configuration specifies 120 Hz integration, decimation 4 and 30 Hz control. Full gains, limits, solver settings and resolved configurations are in the evidence directory.
 - The GPC inference configuration embeds its frozen FSQ decoder and takes `max_coords_obs`. Strict loading required no external FSQ checkpoint. This verifies model construction and loading, not behavior or task adaptation.
 - Used the bundled primitive physical SOMA model. Native SOMA-X 0.3.4 visual assets have not been fetched; visual skeleton mapping belongs to Milestone 2.
-- Host OS, NVIDIA driver, image, package lock and research source revisions remain unchanged. No Isaac application or GPU physics job was started for M1.
+- Host OS, NVIDIA driver, image, package lock and research source revisions remain unchanged. The initial CPU checks did not start Isaac; a subsequent independent articulation probe is recorded below.
 
 The CPU process exited 0. Its GLFW/no-display and upstream syntax warnings remain in the log. Python compilation, shell syntax and Git whitespace checks passed for project changes.
 
@@ -20,6 +20,16 @@ The CPU process exited 0. Its GLFW/no-display and upstream syntax warnings remai
 The [pinned tracker card](https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/MODEL_CARD.md) recommends `last_lab.ckpt` for Isaac Lab and says its serialized configuration describes the legacy checkpoint. The configuration therefore uses the upstream inference factory to select the saved SOMA Isaac Lab parameters while preserving 30 Hz control.
 
 At this exact revision, `last.ckpt` and `last_lab.ckpt` have the **same committed LFS object hash** (see the full recommended-checkpoint hash in the asset lock). The publisher's claimed separate fine-tune identity is not independently established. We selected the documented filename and retained this discrepancy; no alternate checkpoint or backend was substituted.
+
+## Independent articulation probe
+
+`check_soma_articulation.sh` isolates physical-asset loading from the pending motion-data license: no motion files or learned weights are mounted. The first attempt hit a read-only working-directory prerequisite, retained in `diagnostics/20261026T171331Z-soma-articulation/`. The launcher now uses its writable output mount.
+
+The subsequent [probe evidence](../diagnostics/20261026T171414Z-soma-articulation/README.md) establishes SOMA asset loading, 23/66 body/joint permutation checks and 30 finite zero-action steps. The process exited 0, but the wrapper rejected it (exit 4): the headless experience suppresses the Info-level shutdown records required for acceptance. The original failed outcome remains intact.
+
+The trace also shows zero measured foot contact forces. Its synthetic default reset lies at the corner of the finite terrain; the feet leave its bounds. Contact correctness and balance were not established. This probe is not a substitute for the bundled motion-tracking trials.
+
+Further Isaac runs stopped under the project failure rule. A reviewed continuation should set explicit Info logging, move the synthetic reset inside the terrain with clearance, and require observed contacts. The complete trace and converted USD files are preserved under ignored `artifacts/milestone1/`; hashes, logs and mappings are committed as small diagnostic records.
 
 ## Dataset prerequisite
 
@@ -49,4 +59,4 @@ After the dataset prerequisite is resolved:
 4. Exercise the GPC prior with its embedded decoder and document its distinct role. Its inference configuration has no evaluation components, so an empty `--full-eval` result would not demonstrate a successful rollout.
 5. Publish the measurements, recordings, exact commands and M1 acceptance result. No milestone pass is claimed before this evidence exists.
 
-No physical baseline score, contact validation, video, restart result or learned skill exists for M1 yet.
+No accepted motion-tracking score, ground-contact validation, video, restart result or learned skill exists for M1 yet. The independent articulation probe remains unaccepted for the reasons above.

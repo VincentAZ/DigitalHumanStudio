@@ -1,0 +1,317 @@
+{
+  "revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "asset_root": ".runtime/milestone1/assets",
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "sha256": "59899c6091b540582ed617e8eeaac4919dc985ccfc35459ee9752b699be5205b",
+      "bytes": 10172,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/LICENSE.md"
+    },
+    {
+      "path": "data/motion_for_trackers/crouch_soma23.pt",
+      "sha256": "2532970f835442afd44c0d5e24d948deac6d6261d78416d41719a9f22a7a5236",
+      "bytes": 1153070,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/crouch_soma23.pt"
+    },
+    {
+      "path": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+      "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+      "bytes": 26720082,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/LICENSE.pdf",
+      "sha256": "4d2fb590aa9b30c47f2058bff17291df7fa2aa0c1bd775a20703da9bb267cfab",
+      "bytes": 79005,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/LICENSE.pdf"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/MODEL_CARD.md",
+      "sha256": "0190514d44c54f8472f4ec7961bf7025fdcd7ad184486975fd14e3150fdc7e44",
+      "bytes": 3582,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/MODEL_CARD.md"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/NOTICE.txt",
+      "sha256": "5fc60716a9ba57f3792e71ed776b4065671c64d0c2db716698f4d646ad833eb1",
+      "bytes": 67,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/NOTICE.txt"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/config.yaml",
+      "sha256": "e68d868812403325ba6fce8626c69faf1ba0eb26b8c83dc16a79f976999d79d7",
+      "bytes": 734,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/config.yaml"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/experiment_config.py",
+      "sha256": "7100b59ae20da373de234b5b35d12da097da099d24df5298d462c00da535e90c",
+      "bytes": 7600,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/experiment_config.py"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt",
+      "sha256": "13b48605622b1eabe75cc10ccf15a2ab9c05cd953115da6ce08ad9716344a51d",
+      "bytes": 831589795,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/resolved_configs.pt",
+      "sha256": "7d2eb04aca4d5a24022afa53e65d59371f73cbbee9b0c0345f3c8a018e49e237",
+      "bytes": 36307,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/resolved_configs.pt"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/resolved_configs.yaml",
+      "sha256": "a6d452679a2458ae79eaa0fc9cbc206b56656bdce1254c99da595a486c846900",
+      "bytes": 41791,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/resolved_configs.yaml"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/resolved_configs_inference.pt",
+      "sha256": "02d0584769af85ba15808e8c0854288633c60a2944148ea17b4be4f936408905",
+      "bytes": 37765,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/resolved_configs_inference.pt"
+    },
+    {
+      "path": "data/pretrained_models/gpc_prior/soma_bones/resolved_configs_inference.yaml",
+      "sha256": "7816b07ee30c0a079f0d4ba5725f38dea9884c0404336c40b46a2518644b5ed9",
+      "bytes": 43447,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/gpc_prior/soma_bones/resolved_configs_inference.yaml"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/LICENSE.pdf",
+      "sha256": "4d2fb590aa9b30c47f2058bff17291df7fa2aa0c1bd775a20703da9bb267cfab",
+      "bytes": 79005,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/LICENSE.pdf"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/MODEL_CARD.md",
+      "sha256": "517dc6eef2d9e9d4880929ec1711ed3081c4264d3d7237705958ffc26c93d1f3",
+      "bytes": 3762,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/MODEL_CARD.md"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/NOTICE.txt",
+      "sha256": "5fc60716a9ba57f3792e71ed776b4065671c64d0c2db716698f4d646ad833eb1",
+      "bytes": 67,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/NOTICE.txt"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/experiment_config.py",
+      "sha256": "f454bd7be351016bc4a88c1b05fe6fc260ec2e6a463f1ca6ef241206b0c32433",
+      "bytes": 7671,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/experiment_config.py"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/last_lab.ckpt",
+      "sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+      "bytes": 125291239,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/last_lab.ckpt"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/resolved_configs.pt",
+      "sha256": "71d054f90825bb8c2843ca49c7082672ceb7f2e0b742029ee2c8f7416fa62643",
+      "bytes": 38867,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/resolved_configs.pt"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/resolved_configs.yaml",
+      "sha256": "4cb5d2f0e5344899869aa22e363acd2f5e7b99d93949ca8dc78116e8aad66163",
+      "bytes": 44334,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/resolved_configs.yaml"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/resolved_configs_inference.pt",
+      "sha256": "9eac37282d5e337a0d92a0af6eaf88c45fe4098239087387b626bd155dd6d7ee",
+      "bytes": 39429,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/resolved_configs_inference.pt"
+    },
+    {
+      "path": "data/pretrained_models/motion_tracker/soma-bones/resolved_configs_inference.yaml",
+      "sha256": "f3c0cc06756c0ae6c78382cea3bfc08377c414885ef369b8bb5179e73475d965",
+      "bytes": 44098,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/soma-bones/resolved_configs_inference.yaml"
+    },
+    {
+      "path": "legal/MODEL-LICENSING.md",
+      "sha256": "be15e25c132e63555205ae7e9aa0cb008854f20f0b283e2f4cbb8ce10225d974",
+      "bytes": 2862,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/legal/MODEL-LICENSING.md"
+    },
+    {
+      "path": "legal/NVIDIA-Open-Model-License.pdf",
+      "sha256": "4d2fb590aa9b30c47f2058bff17291df7fa2aa0c1bd775a20703da9bb267cfab",
+      "bytes": 79005,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/legal/NVIDIA-Open-Model-License.pdf"
+    },
+    {
+      "path": "legal/THIRD-PARTY SOFTWARE NOTICES AND ASSET LICENSES - ProtoMotions.txt",
+      "sha256": "c912e2fd4276369fdc75472c05254d1985facb24eb0154d4d06006bdd9adf8e4",
+      "bytes": 4481,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/legal/THIRD-PARTY SOFTWARE NOTICES AND ASSET LICENSES - ProtoMotions.txt"
+    },
+    {
+      "path": "legal/model-license-exceptions.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/legal/model-license-exceptions.json"
+    },
+    {
+      "path": "protomotions/data/assets/checkerboard/checkerboard_ground.mdl",
+      "sha256": "75862d3ee97d1cae46cd1f10101c30c1d8ffe4a8b202fefd5df197f6bd126c6b",
+      "bytes": 894,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/checkerboard/checkerboard_ground.mdl"
+    },
+    {
+      "path": "protomotions/data/assets/checkerboard/checkerboard_ground.mtl",
+      "sha256": "eb294d639ec6de1372901495e13651de4b9586033cecdff666aa50b207461ede",
+      "bytes": 146,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/checkerboard/checkerboard_ground.mtl"
+    },
+    {
+      "path": "protomotions/data/assets/checkerboard/checkerboard_ground.obj",
+      "sha256": "5f80e58a9d96a2ab39dfad1eac2d8249c5fe31d2fb39d211e9baf73104d87ee7",
+      "bytes": 483,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/checkerboard/checkerboard_ground.obj"
+    },
+    {
+      "path": "protomotions/data/assets/checkerboard/checkerboard_ground.urdf",
+      "sha256": "80d5b5adb174eb84a10458e0d1826a4bad2de50fafc8c885e0ee260398c68a42",
+      "bytes": 811,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/checkerboard/checkerboard_ground.urdf"
+    },
+    {
+      "path": "protomotions/data/assets/checkerboard/checkerboard_ground.usda",
+      "sha256": "3c1917110b17eadad72e62f3fa84d03dd225151c51f85dff1a9b4e96c7113e3d",
+      "bytes": 2235,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/checkerboard/checkerboard_ground.usda"
+    },
+    {
+      "path": "protomotions/data/assets/checkerboard/checkerboard_texture.png",
+      "sha256": "cdd8a13b5c102caecb7a2f16b42965e4814282fb9b55efa057557fb63373841d",
+      "bytes": 2055,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/checkerboard/checkerboard_texture.png"
+    },
+    {
+      "path": "protomotions/data/assets/checkerboard/create_checkerboard_texture.py",
+      "sha256": "7d7a120dcb24ed88c8930af214edc53483ef0de9d0ce8d253f67bbfc2b9d244a",
+      "bytes": 1930,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/checkerboard/create_checkerboard_texture.py"
+    },
+    {
+      "path": "protomotions/data/assets/mjcf/soma23_humanoid.xml",
+      "sha256": "0b3b4cc6967d0ebe24dd54b87a8a4b3fe1c05d44a53a8f435e2b854f3189a1b3",
+      "bytes": 22959,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/mjcf/soma23_humanoid.xml"
+    },
+    {
+      "path": "protomotions/data/assets/usd/direction_marker.usd",
+      "sha256": "ce38de60bf8c14f6ec1a143846da363d23a06c6ac8d3df5a29ae072a13fb7df7",
+      "bytes": 4816,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/direction_marker.usd"
+    },
+    {
+      "path": "protomotions/data/assets/usd/facing_direction_marker.usd",
+      "sha256": "b4fbbe113b8c6a65d457b8318a3da686f37d9fccd0c677ea044cdbf8e3538690",
+      "bytes": 5573,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/facing_direction_marker.usd"
+    },
+    {
+      "path": "protomotions/data/assets/usd/perturb_box_instanceable.usd",
+      "sha256": "59649f127016a87f54494e96e8ec2dfc186d4a223612b3050244cddca001ed45",
+      "bytes": 28892,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/perturb_box_instanceable.usd"
+    },
+    {
+      "path": "protomotions/data/assets/usd/perturb_boxes_instanceable.usd",
+      "sha256": "0138af16a22dfb238ec475b4dc0aed98fd36f268170c3c78a6a9650d3cf3e458",
+      "bytes": 27569,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/perturb_boxes_instanceable.usd"
+    },
+    {
+      "path": "protomotions/data/assets/usd/ray_crown.usd",
+      "sha256": "c17b69e544386d128f760d2d6b422bd2ce64bfaf1512e0917f1c7c250b8c7c04",
+      "bytes": 3954,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/ray_crown.usd"
+    },
+    {
+      "path": "protomotions/data/assets/usd/room.usd",
+      "sha256": "e4d8fccd175b00afbdb487a8551f2d13116a54ef8dad79f811a58600c05687fe",
+      "bytes": 5817,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/room.usd"
+    },
+    {
+      "path": "protomotions/data/assets/usd/strike_target.usd",
+      "sha256": "cb34078b350f1d5e48a5c16ba2060d77167f6ea2daed1feadc4c8b3b72b0e923",
+      "bytes": 23432,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/strike_target.usd"
+    },
+    {
+      "path": "protomotions/data/assets/usd/strike_target_box_instanceable.usd",
+      "sha256": "cb34078b350f1d5e48a5c16ba2060d77167f6ea2daed1feadc4c8b3b72b0e923",
+      "bytes": 23432,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/strike_target_box_instanceable.usd"
+    },
+    {
+      "path": "protomotions/data/assets/usd/terrain_grid.png",
+      "sha256": "5ae9a2a83d40d0938b32e542948c233c6029710700e59621b179be8af45b38ad",
+      "bytes": 2479,
+      "verification": "pinned-git-blob",
+      "source_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/terrain_grid.png"
+    },
+    {
+      "path": "protomotions/data/assets/usd/terrain_material.usda",
+      "sha256": "fea517294854b8d22cadb38015addd78224773490646bba535e130bc3af192f7",
+      "bytes": 5373,
+      "verification": "git-lfs-sha256",
+      "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/protomotions/data/assets/usd/terrain_material.usda"
+    }
+  ],
+  "provenance_note": "At this revision last_lab.ckpt and last.ckpt have identical LFS OIDs; no separate fine-tune identity can be established.",
+  "motion_data_included": true,
+  "motion_data_eligibility": "pending_user_clarification; downloaded before review, not loaded or executed"
+}

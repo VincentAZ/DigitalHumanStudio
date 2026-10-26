@@ -1,0 +1,33 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone1/articulation-20261026T171414Z",
+  "files": {
+    "synthetic-trace.jsonl": {
+      "bytes": 362835,
+      "sha256": "ee563016682d00b91c2fb58778963118ca0da3f64d8b6a45872b98a94db3a51b"
+    },
+    "result.json": {
+      "bytes": 1047,
+      "sha256": "0129ed55e8af6ebf8cb5b7f0f51cdc854531c0e5a1d251df95f3e7451ca0e956"
+    },
+    "actual-mapping.json": {
+      "bytes": 50936,
+      "sha256": "4f6a3ee0109ebd4c7aea7a254cd1b0038bc772ebc46f87ce97a1be98fd9277aa"
+    },
+    "loaded-scene.usda": {
+      "bytes": 154621,
+      "sha256": "53f0f8c16baa37dc3b2a286df2d2bb3ef5a9215b7ac4e8cb85414e58380d4883"
+    },
+    "kit.log": {
+      "bytes": 64286,
+      "sha256": "39ac89678cf9661b290d36aec70c4ce91d58e4721ccb6ce9ce1f8c5c01e143f4"
+    },
+    "requested-config.json": {
+      "bytes": 41692,
+      "sha256": "8be08ca2242a9bdade9d0ef7f9ae26de19247a83cffc518d4e29a01dfdfc749a"
+    },
+    "synthetic-reset.json": {
+      "bytes": 1869,
+      "sha256": "dfd9f64cb8e9431ac36d15eb7d5fa898a94e6899b2b3700ea4d4c6862ddd6cf3"
+    }
+  }
+}

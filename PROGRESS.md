@@ -9,7 +9,7 @@ User authorized **Milestone 1** after Milestone 0 completion. Preserve the host 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
 | 0 — Reproducible runtime | Complete for standalone workers | Two full exit-0 runs: `diagnostics/20261026T164452-runtime/`; official checker, Mixar, media and dependency audit passed |
-| 1 — Physical human baseline | In progress; motion trials pending dataset eligibility | CPU model/contract checks passed: `diagnostics/20261026T170633Z-milestone1-preflight/`; see `docs/MILESTONE1_REPORT.md` |
+| 1 — Physical human baseline | Incomplete; articulation probe stopped, motion eligibility pending | CPU checks passed; probe exit 0 but wrapper exit 4: `diagnostics/20261026T171414Z-soma-articulation/`; see `docs/MILESTONE1_REPORT.md` |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
 | 4 — Second skill | Not started | — |
@@ -138,3 +138,13 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - The BONES-SEED license has eligibility conditions not established by this session. Asked the user which eligibility category or separate license covers their use. Sample files were downloaded from the documented public GitHub location before this issue was found, but have not been loaded or executed. Future fetches exclude motion data by default.
 - No M1 Isaac process, GPU simulation, motion trial, contact test, video or restart check has run. No host/image/source/package change, paid activation or later milestone work occurred.
 - Evidence and precise remaining gates: `docs/MILESTONE1_REPORT.md`. Repeatable CPU check: `scripts/check_milestone1_preflight.sh`. Runtime work awaits the dataset clarification.
+
+## 2026-10-26 UTC — Independent articulation probe; stopped at evidence gate
+
+- Previous goal turn made concrete progress through pinned assets and passing CPU checks. Rechecked the clean worktree, accepted image and records; no live GPU job existed. Dataset eligibility remains unanswered.
+- Added a one-second physical-asset probe independent of motion data and learned policies. Its container mounts only the physical asset directory and serialized configuration; it uses no MotionLib or checkpoint weights.
+- The first attempt failed before simulator construction because the upstream recording setup wrote `output/renderings` beneath read-only `/opt/IsaacLab`. Preserved exit 1 and retained container under `diagnostics/20261026T171331Z-soma-articulation/`. Repaired only the launcher's working directory.
+- The second attempt loaded 23 bodies and 66 joints, passed body/DOF permutation checks, instantiated all four contact sensors and recorded 30 finite zero-action steps at 120 Hz physics / 30 Hz control. It cleared the scene/context and exited 0. The wrapper returned 4 because Info-level shutdown markers were absent under the headless experience's Warn-level logging. No acceptance pass is claimed.
+- Read-only trace analysis also found the default synthetic reset sits at the flat terrain's corner; feet move outside it and measured foot contact forces stay zero. This does not validate ground contacts, tracking or balance. Correcting the probe placement and explicit logging are proposed, not executed.
+- Preserved full logs, both exit codes, configuration, mappings, scene, trace, converted USD files and hashes, and both containers. Further Isaac runs stopped at the failed evidence gate under AGENTS.md. Host, driver, image, pins and backend remain unchanged.
+- The original M1 tracker trials, video, complete measurements and runtime GPC behavior remain unexecuted. Dataset eligibility still requires the user's answer. M1 is incomplete.
