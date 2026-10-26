@@ -1,6 +1,6 @@
 # Milestone 1 — SOMA physical baseline
 
-Status: **incomplete; articulation probe stopped at its evidence gate, and motion trials await dataset eligibility clarification**. Milestone 0 remains accepted for standalone workers. No Milestone 2–5 work has started.
+Status: **blocked and incomplete; articulation probe stopped at its evidence gate, and motion trials await dataset eligibility clarification**. Milestone 0 remains accepted for standalone workers. No Milestone 2–5 work has started.
 
 ## Verified preparation
 

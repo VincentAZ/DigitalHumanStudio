@@ -9,7 +9,7 @@ User authorized **Milestone 1** after Milestone 0 completion. Preserve the host 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
 | 0 — Reproducible runtime | Complete for standalone workers | Two full exit-0 runs: `diagnostics/20261026T164452-runtime/`; official checker, Mixar, media and dependency audit passed |
-| 1 — Physical human baseline | Incomplete; articulation probe stopped, motion eligibility pending | CPU checks passed; probe exit 0 but wrapper exit 4: `diagnostics/20261026T171414Z-soma-articulation/`; see `docs/MILESTONE1_REPORT.md` |
+| 1 — Physical human baseline | Blocked; incomplete, motion eligibility pending and articulation probe stopped | CPU checks passed; probe exit 0 but wrapper exit 4: `diagnostics/20261026T171414Z-soma-articulation/`; see `docs/MILESTONE1_REPORT.md` |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
 | 4 — Second skill | Not started | — |
@@ -148,3 +148,11 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Read-only trace analysis also found the default synthetic reset sits at the flat terrain's corner; feet move outside it and measured foot contact forces stay zero. This does not validate ground contacts, tracking or balance. Correcting the probe placement and explicit logging are proposed, not executed.
 - Preserved full logs, both exit codes, configuration, mappings, scene, trace, converted USD files and hashes, and both containers. Further Isaac runs stopped at the failed evidence gate under AGENTS.md. Host, driver, image, pins and backend remain unchanged.
 - The original M1 tracker trials, video, complete measurements and runtime GPC behavior remain unexecuted. Dataset eligibility still requires the user's answer. M1 is incomplete.
+
+## 2026-10-26 UTC — Third-turn blocked audit
+
+- Classified the previous goal turn as progress: it created physical articulation evidence and preserved the rejected runtime acceptance result. It was not a live-job wait.
+- Rechecked authoritative state: worktree clean at `4bb4b84`, no running Docker containers, and both retained probe containers terminal (exit 1 for the launcher prerequisite; exit 0 for the run rejected by the parent evidence gate).
+- The same unanswered BONES-SEED eligibility question has persisted across the initial M1 turn and two automatic continuations. No user eligibility statement or separate license has arrived. Independent CPU and articulation preparation is already recorded; motion trials cannot proceed on an assumed answer.
+- Further Isaac runs also remain stopped under the explicit project failure rule. M1 still lacks accepted contacts/shutdown evidence, tracker trials, measurements/video, and runtime GPC behavior. No narrower preparation check establishes milestone completion.
+- Goal marked blocked pending user input. All source/image/host constraints and diagnostics remain preserved; no new simulation was launched during this audit.
