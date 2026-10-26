@@ -1,0 +1,12 @@
+Would use project environment at: .venv
+  × No solution found when resolving dependencies for split (markers:
+  │ platform_machine == 'x86_64' and sys_platform == 'linux'):
+  ╰─▶ Because only protomotions[isaaclab]==3.1.0 is available and
+      protomotions==3.1.0 depends on moviepy>=2,<3, we can conclude that all
+      versions of protomotions[isaaclab] depend on moviepy>=2,<3.
+      And because your project depends on moviepy>=1.0.3,<2.0.0.dev0, we can
+      conclude that your project and all versions of protomotions[isaaclab]
+      are incompatible.
+      And because your project depends on protomotions[isaaclab] and your
+      project requires isaaclab-dev[isaacsim], we can conclude that your
+      project's requirements are unsatisfiable.

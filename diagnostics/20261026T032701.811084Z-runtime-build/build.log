@@ -1,0 +1,229 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  215.2MB
+Step 1/20 : ARG ISAAC_IMAGE
+Step 2/20 : FROM ${ISAAC_IMAGE}
+ ---> 68735a60b6c1
+Step 3/20 : USER root
+ ---> Using cache
+ ---> cc7ecc7ce0e1
+Step 4/20 : ENV DEBIAN_FRONTEND=noninteractive UV_PYTHON_INSTALL_DIR=/opt/python UV_CACHE_DIR=/opt/uv-cache UV_LINK_MODE=copy
+ ---> Using cache
+ ---> a0f998b1501a
+Step 5/20 : RUN apt-get update && apt-get install -y --no-install-recommends     build-essential cmake pkg-config git git-lfs ca-certificates curl     && rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> d6c29acbbdc6
+Step 6/20 : COPY uv /usr/local/bin/uv
+ ---> Using cache
+ ---> 55fe4f965dab
+Step 7/20 : ADD isaaclab.tar /opt/IsaacLab/
+ ---> Using cache
+ ---> 142d55d651be
+Step 8/20 : ADD protomotions.tar /opt/ProtoMotions/
+ ---> Using cache
+ ---> c93cfacf433f
+Step 9/20 : COPY source-revisions.json /opt/studio/source-revisions.json
+ ---> Using cache
+ ---> b374cb7f8946
+Step 10/20 : COPY configure_target.py /opt/studio/configure_target.py
+ ---> bdb7ebd9d60c
+Step 11/20 : COPY configure_protomotions.py /opt/studio/configure_protomotions.py
+ ---> 314d9b54c5c5
+Step 12/20 : COPY verify_dependencies.py /opt/studio/verify_dependencies.py
+ ---> 88c0c9fdb04e
+Step 13/20 : COPY install_environment.sh /opt/studio/install_environment.sh
+ ---> 64213935c820
+Step 14/20 : ENV ACCEPT_EULA=Y OMNI_KIT_ACCEPT_EULA=YES
+ ---> Running in 21a4d569f572
+ ---> Removed intermediate container 21a4d569f572
+ ---> 662323b960ec
+Step 15/20 : RUN bash /opt/studio/install_environment.sh
+ ---> Running in 19996bd0d964
+[91mDownloading cpython-3.12.13-linux-x86_64-gnu (download) (32.6MiB)
+[0m[91m Downloaded cpython-3.12.13-linux-x86_64-gnu (download)
+[0m[91mInstalled Python 3.12.13 in 4.52s
+ + cpython-3.12.13-linux-x86_64-gnu
+[0m[91mUsing CPython 3.12.13
+Creating virtual environment at: .venv
+[0m[91m   Updating https://github.com/newton-physics/newton.git (c7ae7c7648cd0717df39e5c94b95d5a02c997320)
+[0m[91m    Updated https://github.com/newton-physics/newton.git (c7ae7c7648cd0717df39e5c94b95d5a02c997320)
+[0m[91mResolved 269 packages in 16.16s
+[0m[91m   Building isaaclab @ file:///opt/IsaacLab/source/isaaclab
+[0m[91m   Building isaaclab-contrib @ file:///opt/IsaacLab/source/isaaclab_contrib
+[0m[91m   Building isaaclab-assets @ file:///opt/IsaacLab/source/isaaclab_assets
+[0m[91m   Building isaaclab-ov @ file:///opt/IsaacLab/source/isaaclab_ov
+[0m[91m   Building isaaclab-experimental @ file:///opt/IsaacLab/source/isaaclab_experimental
+[0m[91m   Building isaaclab-ovphysx @ file:///opt/IsaacLab/source/isaaclab_ovphysx
+[0m[91m   Building isaaclab-newton @ file:///opt/IsaacLab/source/isaaclab_newton
+[0m[91m   Building isaaclab-physx @ file:///opt/IsaacLab/source/isaaclab_physx
+[0m[91m   Building isaaclab-ppisp @ file:///opt/IsaacLab/source/isaaclab_ppisp
+[0m[91m   Building isaaclab-rl @ file:///opt/IsaacLab/source/isaaclab_rl
+[0m[91m   Building isaaclab-visualizers @ file:///opt/IsaacLab/source/isaaclab_visualizers
+[0m[91m   Building protomotions @ file:///opt/ProtoMotions
+[0m[91m   Building isaaclab-tasks @ file:///opt/IsaacLab/source/isaaclab_tasks
+[0m[91m   Building isaaclab-tasks-experimental @ file:///opt/IsaacLab/source/isaaclab_tasks_experimental
+[0m[91m   Building newton @ git+https://github.com/newton-physics/newton.git@c7ae7c7648cd0717df39e5c94b95d5a02c997320
+[0m[91mwarning: `build_system.requires = ["uv_build>=0.11.0"]` is missing an upper bound on the `uv_build` version such as `<0.12`. Without bounding the `uv_build` version, the source distribution will break when a future, breaking version of `uv_build` is released.
+[0m[91mDownloading nvidia-cusparselt-cu12 (273.9MiB)
+[0m[91mDownloading pynvvideocodec (35.0MiB)
+[0m[91m      Built newton @ git+https://github.com/newton-physics/newton.git@c7ae7c7648cd0717df39e5c94b95d5a02c997320
+[0m[91mDownloading torch (782.3MiB)
+[0m[91mDownloading isaacsim-sensor (20.7MiB)
+[0m[91mDownloading isaacsim-asset (27.6MiB)
+[0m[91mDownloading torchaudio (1.6MiB)
+[0m[91mDownloading torchvision (7.7MiB)
+[0m[91mDownloading omniverseclient (16.2MiB)
+[0m[91mDownloading warp-lang (159.0MiB)
+[0m[91mDownloading nvidia-cudnn-cu12 (627.4MiB)
+[0m[91mDownloading nvidia-nccl-cu12 (283.0MiB)
+[0m[91mDownloading nvidia-nvshmem-cu12 (132.7MiB)
+[0m[91mDownloading isaacsim-kernel (66.5MiB)
+[0m[91mDownloading isaacsim-app (1.8MiB)
+[0m[91mDownloading usd-exchange (25.3MiB)
+[0m[91mDownloading triton (179.5MiB)
+[0m[91mDownloading hf-xet (65.1MiB)
+[0m[91mDownloading isaacsim-code-editor (1.0MiB)
+[0m[91mDownloading isaacsim-core (11.9MiB)
+[0m[91mDownloading isaacsim-example (2.4MiB)
+[0m[91mDownloading isaacsim-gui (2.0MiB)
+[0m[91mDownloading isaacsim-replicator (37.4MiB)
+[0m[91mDownloading isaacsim-robot (11.8MiB)
+[0m[91mDownloading isaacsim-robot-motion (102.9MiB)
+[0m[91mDownloading isaacsim-robot-setup (3.9MiB)
+[0m[91mDownloading isaacsim-ros2 (87.2MiB)
+[0m[91mDownloading opencv-python-headless (59.6MiB)
+[0m[91mDownloading isaacsim-test (17.5MiB)
+[0m[91mDownloading isaacsim-utils (170.1MiB)
+[0m[91mDownloading isaacsim-extscache-kit (5.5GiB)
+[0m[91mDownloading isaacsim-extscache-kit-sdk (1.6GiB)
+[0m[91m Downloaded torchaudio
+[0m[91mDownloading dm-control (53.8MiB)
+[0m[91mDownloading llvmlite (53.7MiB)
+[0m[91mDownloading cmeel-boost (34.5MiB)
+[0m[91mDownloading scipy (33.4MiB)
+[0m[91mDownloading isaacsim-extscache-physics (246.4MiB)
+[0m[91mDownloading nvidia-cublas-cu12 (566.8MiB)
+[0m[91mDownloading imageio-ffmpeg (28.1MiB)
+[0m[91m Downloaded torchvision
+[0m[91mDownloading usd-core (26.1MiB)
+[0m[91mDownloading onnxruntime (22.7MiB)
+[0m[91m Downloaded isaacsim-code-editor
+[0m[91mDownloading wandb (19.3MiB)
+[0m[91mDownloading numpy (16.0MiB)
+[0m[91m Downloaded isaacsim-gui
+[0m[91mDownloading cmeel-assimp (14.2MiB)
+[0m[91m Downloaded isaacsim-app
+[0m[91mDownloading botocore (13.4MiB)
+[0m[91m Downloaded isaacsim-example
+[0m[91mDownloading scikit-image (12.9MiB)
+[0m[91m Downloaded botocore
+[0m[91mDownloading transformers (11.4MiB)
+[0m[91m Downloaded cmeel-assimp
+[0m[91mDownloading imgui-bundle (10.3MiB)
+[0m[91m Downloaded scikit-image
+[0m[91m Downloaded numpy
+[0m[91mDownloading pin (9.5MiB)
+[0m[91mDownloading onnx (8.5MiB)
+[0m[91m Downloaded wandb
+[0m[91mDownloading awscrt (8.3MiB)
+[0m[91m Downloaded onnxruntime
+[0m[91mDownloading matplotlib (8.3MiB)
+[0m[91m Downloaded onnx
+[0m[91mDownloading cuda-bindings (7.3MiB)
+[0m[91m Downloaded usd-core
+[0m[91m Downloaded pin
+[0m[91m Downloaded imgui-bundle
+[0m[91mDownloading grpcio (7.1MiB)
+[0m[91mDownloading mujoco (6.9MiB)
+[0m[91mDownloading pillow (6.7MiB)
+[0m[91m Downloaded transformers
+[0m[91mDownloading tensorboard-data-server (6.3MiB)
+[0m[91m Downloaded imageio-ffmpeg
+[0m[91mDownloading sympy (6.0MiB)
+[0m[91m Downloaded awscrt
+[0m[91mDownloading eigenpy (5.8MiB)
+[0m[91m Downloaded matplotlib
+[0m[91mDownloading tensorboard (5.3MiB)
+[0m[91m Downloaded cuda-bindings
+[0m[91mDownloading h5py (5.2MiB)
+[0m[91m Downloaded pillow
+[0m[91m Downloaded grpcio
+[0m[91m Downloaded scipy
+[0m[91m Downloaded mujoco
+[0m[91mDownloading lxml (5.1MiB)
+[0m[91mDownloading fonttools (4.7MiB)
+[0m[91mDownloading labmaze (4.6MiB)
+[0m[91mDownloading cryptography (4.3MiB)
+[0m[91m Downloaded tensorboard-data-server
+[0m[91mDownloading libpinocchio (3.6MiB)
+[0m[91m Downloaded sympy
+[0m[91m Downloaded cmeel-boost
+[0m[91m Downloaded eigenpy
+[0m[91mDownloading numba (3.6MiB)
+[0m[91mDownloading tokenizers (3.2MiB)
+[0m[91mDownloading pyopengl-accelerate (3.1MiB)
+[0m[91m Downloaded tensorboard
+[0m[91m Downloaded libpinocchio
+[0m[91mDownloading cmeel-qhull (3.1MiB)
+[0m[91m Downloaded pyopengl-accelerate
+[0m[91m Downloaded tokenizers
+[0m[91mDownloading pyopengl (3.0MiB)
+[0m[91m Downloaded cryptography
+[0m[91mDownloading pytetwild (3.0MiB)
+[0m[91mDownloading coacd (2.5MiB)
+[0m[91m Downloaded h5py
+[0m[91m Downloaded fonttools
+[0m[91m Downloaded numba
+[0m[91m Downloaded labmaze
+[0m[91mDownloading libcoal (2.2MiB)
+[0m[91m Downloaded lxml
+[0m[91mDownloading networkx (2.0MiB)
+[0m[91mDownloading coal (2.1MiB)
+[0m[91mDownloading mujoco-warp (1.9MiB)
+[0m[91mDownloading pydantic-core (1.9MiB)
+[0m[91mDownloading aiohttp (1.6MiB)
+[0m[91m Downloaded libcoal
+[0m[91m Downloaded aiohttp
+[0m[91m Downloaded pydantic-core
+[0m[91m Downloaded mujoco-warp
+[0m[91m Downloaded coacd
+[0m[91m Downloaded networkx
+[0m[91m Downloaded cmeel-qhull
+[0m[91mDownloading kiwisolver (1.4MiB)
+[0m[91m Downloaded coal
+[0m[91mDownloading pygments (1.2MiB)
+[0m[91m Downloaded pyopengl
+[0m[91mDownloading qdldl (1.1MiB)
+[0m[91m Downloaded pytetwild
+[0m[91mDownloading cmeel-octomap (1.1MiB)
+[0m[91mDownloading hidapi (1.0MiB)
+[0m[91mDownloading setuptools (1.0MiB)
+[0m[91mDownloading cmeel-zlib (1.0MiB)
+[0m[91m Downloaded pygments
+[0m[91m Downloaded cmeel-octomap
+[0m[91m Downloaded qdldl
+[0m[91m Downloaded setuptools
+[0m[91m Downloaded hidapi
+[0m[91m Downloaded kiwisolver
+[0m[91m Downloaded cmeel-zlib
+[0m[91m   Building moviepy==1.0.3
+[0m[91m   Building idna-ssl==1.1.0
+[0m[91m   Building antlr4-python3-runtime==4.9.3
+[0m[91m      Built idna-ssl==1.1.0
+[0m[91m      Built antlr4-python3-runtime==4.9.3
+[0m[91m      Built moviepy==1.0.3
+[0m[91m Downloaded dm-control
+[0m[91m Downloaded llvmlite
+[0m[91m Downloaded opencv-python-headless
+[0m[91m Downloaded hf-xet
+[0m[91m  × Failed to download `nvidia-nvtx-cu12==12.8.90`
+  ├─▶ Request failed after 3 retries in 124.9s
+  ├─▶ Failed to fetch:
+  │   `https://pypi.nvidia.com/nvidia-nvtx-cu12/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl`
+  ├─▶ error sending request for url
+  │   (https://pypi.nvidia.com/nvidia-nvtx-cu12/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl)
+  ╰─▶ operation timed out
+
+hint: `nvidia-nvtx-cu12` (v12.8.90) was included because `isaaclab-dev` (v0.1.0) depends on `torch` (v2.11.0+cu128) which depends on `cuda-toolkit[nvtx]` (v12.8.1) which depends on `nvidia-nvtx-cu12`[0mThe command '/bin/sh -c bash /opt/studio/install_environment.sh' returned a non-zero code: 1

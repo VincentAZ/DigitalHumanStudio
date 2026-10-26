@@ -1,0 +1,238 @@
+[
+    {
+        "Id": "482c4aaefe8768bd15b758e7b79201bf89d9b5b8a893f361a7a5ed78f0293892",
+        "Created": "2026-10-26T03:24:29.702376284Z",
+        "Path": "bash",
+        "Args": [
+            "-lc",
+            "cd /opt/IsaacLab && /opt/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12 /opt/studio/configure_target.py --combine-protomotions && uv sync --python 3.12.13 --extra isaacsim --dry-run"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 1,
+            "Error": "",
+            "StartedAt": "2026-10-26T03:24:29.737230212Z",
+            "FinishedAt": "2026-10-26T03:24:30.96311925Z"
+        },
+        "Image": "sha256:82258e8c8305bac5f3eb2c51e902fd69075ebbd6ab5ab593662b58d63e1b4100",
+        "ResolvConfPath": "/var/lib/docker/containers/482c4aaefe8768bd15b758e7b79201bf89d9b5b8a893f361a7a5ed78f0293892/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/482c4aaefe8768bd15b758e7b79201bf89d9b5b8a893f361a7a5ed78f0293892/hostname",
+        "HostsPath": "/var/lib/docker/containers/482c4aaefe8768bd15b758e7b79201bf89d9b5b8a893f361a7a5ed78f0293892/hosts",
+        "LogPath": "/var/lib/docker/containers/482c4aaefe8768bd15b758e7b79201bf89d9b5b8a893f361a7a5ed78f0293892/482c4aaefe8768bd15b758e7b79201bf89d9b5b8a893f361a7a5ed78f0293892-json.log",
+        "Name": "/studio-combined-20261026t032429z",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/container/configure_target.py",
+                    "Target": "/opt/studio/configure_target.py",
+                    "ReadOnly": true
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/container/configure_target.py",
+                "Destination": "/opt/studio/configure_target.py",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "482c4aaefe87",
+            "Domainname": "",
+            "User": "root",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "VK_DRIVER_FILES=/etc/vulkan/icd.d/nvidia_icd.json",
+                "MIN_DRIVER_VERSION=570.169",
+                "HUB__CACHE__PATH=/var/cache/hub",
+                "HUB__ARGS__DETECT_ONLY=true",
+                "OMNICLIENT_HUB_EXE=/usr/local/bin/hub",
+                "DEBIAN_FRONTEND=noninteractive",
+                "UV_PYTHON_INSTALL_DIR=/opt/python",
+                "UV_CACHE_DIR=/opt/uv-cache",
+                "UV_LINK_MODE=copy",
+                "ACCEPT_EULA=Y",
+                "OMNI_KIT_ACCEPT_EULA=YES"
+            ],
+            "Cmd": [
+                "-lc",
+                "cd /opt/IsaacLab && /opt/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12 /opt/studio/configure_target.py --combine-protomotions && uv sync --python 3.12.13 --extra isaacsim --dry-run"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "NONE"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 180000000000,
+                "Retries": 3
+            },
+            "Image": "digital-human-studio:m0-resolver-diagnostic",
+            "Volumes": null,
+            "WorkingDir": "/isaac-sim",
+            "Entrypoint": [
+                "bash"
+            ],
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "cd902e4c66ab44bec23443ca4c1572689b1015358bb8afb3d6d13164fda27870",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:82258e8c8305bac5f3eb2c51e902fd69075ebbd6ab5ab593662b58d63e1b4100",
+            "size": 6070,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

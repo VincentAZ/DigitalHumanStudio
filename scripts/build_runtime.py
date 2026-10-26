@@ -42,6 +42,13 @@ def main():
     diagnostics = ROOT / "diagnostics" / f"{stamp}-runtime-build"
     context.mkdir(parents=True)
     diagnostics.mkdir(parents=True)
+    locks = context / "locks"
+    locks.mkdir()
+    (locks / "README.txt").write_text("An established combined lock is reused with uv sync --locked.\n")
+    existing_lock = ROOT / "config/runtime.uv.lock"
+    if existing_lock.exists():
+        shutil.copy2(existing_lock, locks / "runtime.uv.lock")
+        shutil.copy2(existing_lock, diagnostics / "input-runtime.uv.lock")
     sources = {}
     for key, name, archive in (("isaac_lab", "IsaacLab", "isaaclab.tar"),
                                ("protomotions", "ProtoMotions", "protomotions.tar")):
@@ -66,8 +73,12 @@ def main():
         with bundle.extractfile("uv-x86_64-unknown-linux-gnu/uv") as source, (context / "uv").open("wb") as dest:
             shutil.copyfileobj(source, dest)
     (context / "uv").chmod(0o755)
-    for name in ("Dockerfile", "install_environment.sh"):
+    inputs = diagnostics / "build-inputs"
+    inputs.mkdir()
+    for name in ("Dockerfile", "install_environment.sh", "configure_target.py", "configure_protomotions.py",
+                 "verify_dependencies.py", "finish_environment.sh"):
         shutil.copy2(ROOT / "container" / name, context / name)
+        shutil.copy2(ROOT / "container" / name, inputs / name)
     (context / "source-revisions.json").write_text(json.dumps(sources, indent=2) + "\n")
     shutil.copy2(context / "source-revisions.json", diagnostics / "source-revisions.json")
 

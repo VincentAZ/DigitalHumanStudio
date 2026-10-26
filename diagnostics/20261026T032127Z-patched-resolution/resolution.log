@@ -1,0 +1,10 @@
+Would use project environment at: .venv
+  × No solution found when resolving dependencies for split (markers:
+  │ platform_machine == 'x86_64' and sys_platform == 'linux'; included:
+  │ isaaclab-dev[teleop]; excluded: isaaclab-dev[all], isaaclab-dev[isaacsim],
+  │ isaaclab-dev[mimic]):
+  ╰─▶ Because there is no version of ovphysx==0.5.2+head.f62c22207c and
+      isaaclab-dev[ov] depends on ovphysx==0.5.2+head.f62c22207c, we can
+      conclude that isaaclab-dev[ov]'s requirements are unsatisfiable.
+      And because your project requires isaaclab-dev[ov], we can conclude that
+      your project's requirements are unsatisfiable.

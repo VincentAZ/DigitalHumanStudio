@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "stopped_dependency_resolution_failed_final_runtime_unvalidated",
+  "status": "patched_combined_graph_resolved_installing_runtime",
   "container_userspace": "Ubuntu 24.04",
   "python": "3.12",
   "isaac_sim": {
@@ -43,10 +43,17 @@
     "executable_sha256": "7d43f6e86a6c6dd12005ec77eb2055f1be3f1bb3adedf8afe0a87973fa7371ce"
   },
   "runtime_build": {
-    "status": "failed_dependency_resolution",
-    "evidence": "diagnostics/20261026T020231.007421Z-runtime-build",
-    "exit_code": 1,
+    "status": "building",
+    "evidence": "diagnostics/20261026T032701.811084Z-runtime-build",
+    "resolution_evidence": "diagnostics/20261026T032524Z-combined-patched-resolution",
     "physics_render_restart": "not_run",
-    "image_lock": null
+    "image_lock": null,
+    "recovery_evidence": "diagnostics/20261026T033253Z-runtime-recovery"
+  },
+  "build_patches": {
+    "isaaclab": "container/configure_target.py",
+    "protomotions": "container/configure_protomotions.py",
+    "upstream_revisions_preserved": true,
+    "unmodified_upstream_build": false
   }
 }

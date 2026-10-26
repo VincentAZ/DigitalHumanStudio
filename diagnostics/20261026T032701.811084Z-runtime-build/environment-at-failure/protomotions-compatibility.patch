@@ -1,0 +1,25 @@
+--- ProtoMotions/pyproject.toml (pinned)
++++ ProtoMotions/pyproject.toml (configured)
+@@ -40,7 +40,7 @@
+   "easydict>=1.10",
+   "lightning>=2.3,<2.6",
+   "matplotlib>=3.6",
+-  "moviepy>=2,<3; python_version >= '3.9'",
++  "moviepy>=1.0.3,<3; python_version >= '3.9'",
+   "numpy>=1.21.1",
+   "omegaconf==2.3.0",
+   "PyYAML>=6",
+--- ProtoMotions/protomotions/simulator/base_simulator/record.py (pinned)
++++ ProtoMotions/protomotions/simulator/base_simulator/record.py (configured)
+@@ -310,7 +310,10 @@
+                     )
+                 else:
+                     # Finalize recording and create video
+-                    from moviepy import ImageSequenceClip
++                    try:
++                        from moviepy import ImageSequenceClip
++                    except ImportError:
++                        from moviepy.video.io.ImageSequenceClip import ImageSequenceClip
+ 
+                     image_dir = self._curr_user_recording_name
+                     images = sorted(

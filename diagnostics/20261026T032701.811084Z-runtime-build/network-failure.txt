@@ -1,0 +1,1 @@
+Installation failed on an HTTP timeout for nvidia-nvtx-cu12==12.8.90 after 3 retries. The resolved lock and original failed container are preserved. Recovery uses the exact lock, longer timeout and four concurrent downloads. See diagnostics/20261026T033253Z-runtime-recovery/. This was not an Isaac runtime compatibility test.

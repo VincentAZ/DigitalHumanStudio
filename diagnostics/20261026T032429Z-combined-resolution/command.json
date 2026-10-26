@@ -1,0 +1,15 @@
+[
+  "/home/vincent/Repos/DigitalHumanStudio/scripts/docker.sh",
+  "run",
+  "--name",
+  "studio-combined-20261026t032429z",
+  "--user",
+  "root",
+  "--entrypoint",
+  "bash",
+  "--mount",
+  "type=bind,src=/home/vincent/Repos/DigitalHumanStudio/container/configure_target.py,dst=/opt/studio/configure_target.py,readonly",
+  "digital-human-studio:m0-resolver-diagnostic",
+  "-lc",
+  "cd /opt/IsaacLab && /opt/python/cpython-3.12.13-linux-x86_64-gnu/bin/python3.12 /opt/studio/configure_target.py --combine-protomotions && uv sync --python 3.12.13 --extra isaacsim --dry-run"
+]

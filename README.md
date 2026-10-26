@@ -2,7 +2,7 @@
 
 Local Linux research studio for character authoring and learned physical movement.
 
-Only **Milestone 0: reproducible runtime** is currently authorized. **Stopped, incomplete:** NVIDIA's official compatibility checker passed twice and Mixar checks passed, but the pinned learning environment failed dependency resolution. Diagnostics are preserved; physics and RTX rendering remain untested. See the setup report before resuming.
+Only **Milestone 0: reproducible runtime** is currently authorized. NVIDIA's official compatibility checker passed twice and Mixar checks passed. The user authorized dependency repairs; the combined environment now resolves with recorded build patches and is being installed. Physics and RTX rendering remain untested. See the setup report for current evidence.
 
 - [Implementation specification](IMPLEMENTATION_PLAN.md)
 - [Milestone log](PROGRESS.md)

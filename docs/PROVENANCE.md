@@ -2,6 +2,8 @@
 
 The requested versions are in `config/baseline.json`. Null digests and locks mean unestablished, not optional. `docs/sources/manifest.json` records retrieved upstream evidence with SHA-256 hashes and failed retrievals. The pinned Isaac Lab revision did not expose a root `uv.lock` (HTTP 404); a resolved environment lock must be created during setup.
 
+The user authorized dependency repairs on 2026-10-26 UTC. The current build applies recorded Isaac Lab marker/profile changes and a ProtoMotions MoviePy compatibility patch to container copies of the pinned sources. These are patched builds, not pristine upstream releases. See `docs/SETUP_REPORT.md` and the emitted patch/hash manifests. The combined resolved lock, installed artifact versions, and runtime results must be recorded before the baseline is accepted.
+
 | Component | Source / version | Account or license step | Current evidence |
 | --- | --- | --- | --- |
 | Isaac Sim | NVIDIA NGC, 6.0.0 | NVIDIA Omniverse/Isaac terms apply; container execution uses `ACCEPT_EULA=Y`. No optional telemetry consent is set. Public download required no registry login. | Digest in `config/isaac-image.lock`; official checker passed twice in `diagnostics/20261026T020033-isaac/` |

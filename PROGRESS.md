@@ -8,7 +8,7 @@ User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| 0 — Reproducible runtime | Stopped; dependency resolution failed | Official Isaac checker passed twice; Mixar checks passed; final runtime untested |
+| 0 — Reproducible runtime | Resumed; patched combined graph resolves, build running | Official Isaac checker passed twice; Mixar checks passed; final runtime untested |
 | 1 — Physical human baseline | Not started | Not authorized in current scope |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
@@ -83,3 +83,14 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Isolated the architecture-marker issue in an offline metadata-only reproduction using uv 0.11.32 and synthetic local wheels. Substring membership markers reproduce the same impossible branch (exit 1); explicit architecture equality alternatives resolve successfully (exit 0).
 - Evidence: `diagnostics/20261026T024641Z-marker-repro/`. This identifies a narrow candidate metadata patch without changing package versions; it does not validate the real dependency graph or runtime.
 - No fix has been applied to the active build recipe. Next is to test a recorded build-time marker patch against the full graph, then review any further conflicts. The pinned Isaac Lab root requests MoviePy 1.x while ProtoMotions requests 2.x; their final combined environment must also be checked before acceptance.
+
+## 2026-10-26 UTC — User authorized repairs and continuation
+
+- Applied a hash-guarded build-copy patch for explicit architecture markers. This cleared the original `pytetwild` conflict, exposing an unavailable `ovphysx` pin in an unrequested extra (`diagnostics/20261026T032127Z-patched-resolution/`).
+- Restricted the lock profile to the complete base requirements plus `isaacsim`; excluded optional backend/test extras are listed in the emitted patch manifest. That profile resolves (`diagnostics/20261026T032232Z-isaac-profile-resolution/`).
+- Combined ProtoMotions and its Isaac Lab requirements into the same resolver graph to prevent a later pip operation from replacing Isaac dependencies. The unpatched combination confirms the MoviePy 1.x/2.x conflict (`diagnostics/20261026T032429Z-combined-resolution/`).
+- Added a recorded ProtoMotions build-copy patch allowing MoviePy >=1.0.3 and a fallback import for its image-sequence recording path. Isaac Lab still selects MoviePy 1.0.3 and Pillow 12.1.1. This changes one dependency floor and one import block; it is not an unmodified upstream source build. Vendor checkouts and source revisions remain unchanged.
+- The combined patched profile resolves 269 packages with uv 0.11.32 (`diagnostics/20261026T032524Z-combined-patched-resolution/`). A full build is running in `diagnostics/20261026T032701.811084Z-runtime-build/`.
+- Prepared a dependency audit covering selected extras and recording Isaac Lab's pre-existing declared overrides, plus a real encode/decode test for the patched recording path. Neither preparation nor resolution alone proves runtime compatibility. Media, GPU, physics, RTX, and repeat-run acceptance remain outstanding.
+- The first full build stopped on a network timeout downloading `nvidia-nvtx-cu12==12.8.90`, after successful resolution. Retained its container, resolved lock, and a cache snapshot. Recovery in `diagnostics/20261026T033253Z-runtime-recovery/` resumes the exact lock with `uv sync --locked`, longer HTTP timeout and four concurrent downloads. No dependency re-resolution or architecture change was made.
+- Future ordinary builds reuse `config/runtime.uv.lock` when present and refuse a stale lock via `uv sync --locked`. `scripts/check_media.sh` repeats the actual recording encode/decode test once an image exists.

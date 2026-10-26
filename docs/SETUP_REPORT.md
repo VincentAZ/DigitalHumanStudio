@@ -1,6 +1,17 @@
 # Milestone 0 setup report
 
-Status: **Milestone 0 stopped and incomplete. Official Isaac compatibility checker passed twice; Mixar checks passed. The pinned Isaac Lab/ProtoMotions build failed dependency resolution. Final GPU computation, physics, RTX rendering, and restart checks were not run.**
+Status: **Milestone 0 resumed with user-authorized dependency repairs; full installation is running. Official Isaac compatibility checker and Mixar checks passed. The patched combined graph resolves; final GPU computation, physics, RTX rendering, and restart checks remain unrun.**
+
+## Current repair — 2026-10-26 UTC
+
+The build keeps the requested source revisions but applies explicit, hash-guarded patches to copies inside the container. The ignored vendor checkouts remain pristine. Every modification produces a unified diff and before/after hashes under `/opt/studio` for collection with the final build evidence.
+
+- `container/configure_target.py` replaces architecture substring checks with equality alternatives and limits the universal lock to Linux x86_64, the base requirements, and the `isaacsim` extra. Unused extras are excluded from this target profile because uv otherwise resolves their unavailable optional backend packages. This preserves the selected Isaac dependency requirements.
+- `container/configure_protomotions.py` lowers the MoviePy dependency floor from 2 to 1.0.3 and adds a fallback import for the 1.x image-sequence class. The combined graph selects MoviePy 1.0.3 and keeps Isaac's Pillow 12.1.1. This is a documented compatibility patch, not an unmodified upstream build; other MoviePy functionality is outside the test scope.
+- ProtoMotions and `requirements_isaaclab.txt` now resolve in the Isaac Lab root project so the final environment has one combined `runtime.uv.lock`. The previous sequential installation could otherwise replace Isaac dependencies.
+- Isaac Lab's original dependency overrides remain unchanged. The installed-environment audit will preserve raw `uv pip check` output and separately check default and selected-extra requirements. Only mismatches matching those explicit upstream overrides can be accepted; a Git override must match the installed commit. Such exceptions remain visible in `dependency-audit.json` and must not be described as a clean pip check.
+
+The real combined dry run resolves 269 packages using uv 0.11.32: `diagnostics/20261026T032524Z-combined-patched-resolution/`. The first full build (`diagnostics/20261026T032701.811084Z-runtime-build/`) stopped on an NVIDIA package HTTP timeout. Its failed container and resolved lock are retained. Recovery in `diagnostics/20261026T033253Z-runtime-recovery/` reuses the downloaded cache and exact lock with `uv sync --locked`, longer HTTP timeouts and reduced download concurrency. Installation, recording encode/decode, GPU computation, PhysX contact behavior, RTX rendering, and repeatability still require actual results. No host OS, driver, simulation backend, or source revision was changed; no later milestone was started.
 
 ## Inspected host — 2026-10-25
 
@@ -56,7 +67,7 @@ This installs pinned Ubuntu Docker/Git LFS/Vulkan packages and NVIDIA Container 
 
 `python3 scripts/inspect_host.py` captures machine state; the latest host report is `diagnostics/20261026T013048.738346Z/host.json`. `scripts/check_isaac.sh` records the image digest and userspace, verifies GPU visibility, and runs NVIDIA's official checker twice with a five-minute limit per attempt. Once pulled, the image digest is saved in `config/isaac-image.lock` and reused. It uses the required NVIDIA license-acceptance flag for the requested installation; it does not opt into optional telemetry. It stops if userspace differs from Ubuntu 24.04, the checker exits unsuccessfully, or its explicit PASS message is missing. Earlier missing-prerequisite results are historical; the actual checker has now passed twice.
 
-## Pinned environment failure and stopping point
+## Historical failure before the user authorized repairs
 
 The guarded builder ran after the official checker pass. It installed build prerequisites and managed Python 3.12.13 inside Ubuntu 24.04, then failed during the documented `uv sync --python 3.12.13 --extra isaacsim` operation. The original invocation was:
 
@@ -70,7 +81,7 @@ Two bounded diagnostic dry runs used the same failed-build snapshot: first with 
 
 Evidence is in `diagnostics/20261026T020231.007421Z-runtime-build/`: original build log and exit code, retained container metadata, original Dockerfile/install script, trial logs and exit codes, platform patch, resolver release metadata, and `stopped-result.json`. Its README identifies all retained containers and the diagnostic snapshot image. Large local source archives and caches remain under ignored `.runtime/` and `vendor/`; small diagnostic records are committed.
 
-**Stop here.** The pinned environment is not installed; neither a final runtime image lock nor a resolved package lock exists. Fixing this requires reviewing the source metadata/resolver failure before any retry. Do not silently relax library pins, switch Isaac Lab revisions, select another backend, or begin Milestone 1. There is no evidence that reinstalling the host OS would fix this dependency-resolution problem.
+At this point the milestone was stopped. The user subsequently authorized the repairs described above. The original failure remains preserved; it is not evidence that reinstalling the host OS would fix the dependency-resolution problem. Do not silently change source revisions, select another backend, or begin Milestone 1.
 
 The builder verifies two successful official checker results and their image digest before constructing the environment. If installation eventually succeeds, it will preserve the upstream Isaac Lab lock before ProtoMotions installation and record the final environment freeze separately. The prepared `scripts/check_runtime.sh` requires a final image content ID and is designed to test GPU computation, explicit PhysX gravity/contact behavior, an RTX image, clean shutdown, and a repeat run. It has **not executed**. Script syntax and rejection of failed compatibility evidence passed; these are launcher checks, not runtime acceptance evidence.
 

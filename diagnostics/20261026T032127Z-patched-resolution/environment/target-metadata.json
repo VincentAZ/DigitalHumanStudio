@@ -1,0 +1,9 @@
+{
+  "original_sha256": "6b398f8c45f6b78f5e79af2c3b24089ef2aed4dac35a64bd2458dd6db69a0657",
+  "configured_sha256": "8b674d3a734b5283558985baa7dcfd3945bff6b1844504f28fd40cb6992d6fd4",
+  "target": "sys_platform == 'linux' and platform_machine == 'x86_64'",
+  "dependency_version_requirements_changed": false,
+  "marker_replacements": 10,
+  "reason": "Explicit architecture alternatives avoid uv's false substring-marker overlap",
+  "isolated_test": "diagnostics/20261026T024641Z-marker-repro"
+}
