@@ -8,7 +8,7 @@ User authorized **Milestone 0 only**. Preserve the host OS. Preserve diagnostics
 
 | Milestone | Status | Evidence |
 | --- | --- | --- |
-| 0 — Reproducible runtime | Stopped: physics acceptance failed | Locked image installed; media/official checker/Mixar passed; `diagnostics/20261026T045036-runtime/` |
+| 0 — Reproducible runtime | Stopped: shutdown segmentation fault | Contact diagnosed; 120 Hz physics/RTX passed, process exit 139; `diagnostics/20261026T160349-runtime/` |
 | 1 — Physical human baseline | Not started | Not authorized in current scope |
 | 2 — Detailed character | Not started | — |
 | 3 — Walking | Not started | — |
@@ -110,3 +110,12 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - The cube fell and reached the expected final resting height, but its center dipped to or below the required 0.20 m minimum. The minimum-height assertion failed. Python exited 1; launcher exited 4 and did not start the second run. Evidence: `diagnostics/20261026T045036-runtime/`, including full Kit log and retained container `studio-runtime-20261026T045036-1`.
 - No successful saved RTX image or repeat-run acceptance exists. Trajectory export came after the failed assertion, so numeric samples are unavailable for this attempt. A future authorized diagnosis must capture them before assertions, inspect solver/contact settings and pose sampling, and retain the current threshold until evidence supports any revision.
 - **Milestone 0 remains incomplete and stopped.** The dependency repair is complete, but the runtime is not accepted. No OS, driver, backend or architecture change was made. Milestone 1 remains unstarted.
+
+## 2026-10-26 UTC — Contact diagnosis authorized; teardown failure preserved
+
+- User requested trajectory capture and diagnosis of simulation settings versus measurement behavior; Milestone 1 remains gated on physics/render/restart success.
+- Instrumented the test to persist every sampled position/velocity and an independent raw PhysX transform/velocity read before acceptance assertions. Also preserve configuration and initial/final scenes. At 60 Hz, the original failure reproduces with minimum z=0.18514985 m at step 34; cached/raw XYZ disagreement is zero (`diagnostics/20261026T160211-runtime/`).
+- Changed only the integration frequency to 120 Hz, preserving four seconds of simulation (480 steps), a 0.5 s settling window and all thresholds. The cube stays at or above 0.24999999 m. All physics assertions pass. Saved and visually checked the RTX image (`diagnostics/20261026T160349-runtime/run-1.render.png`). No simulator/image/lock/driver/source change.
+- The 120 Hz child wrote its completion report after app.close returned, then process termination failed with exit 139. Kernel journal confirms a segmentation fault in libomni.ui.so; Docker reports no OOM kill. The launcher correctly rejected the internal pass marker, retained the container and stopped before run 2.
+- Preserved both containers, traces, scenes, configuration, logs, exit codes and a comparison plot in `diagnostics/20261026T160639Z-contact-analysis/`. Future reports distinguish internal assertions/cleanup return from full process success. No further Isaac run was attempted after the new lifecycle failure.
+- **Milestone 0 remains incomplete.** Next is native teardown diagnosis and successful complete runs, then Milestone 1. No humanoid/model assets fetched and no architecture change made.

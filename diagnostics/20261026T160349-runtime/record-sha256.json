@@ -1,0 +1,15 @@
+{
+  "run-1.command.txt": "8f06cba31cc3a4aa3cad20a39220cb389d5023edffc950d645c7c7a933bae226",
+  "run-1.contact-trace.jsonl": "15adcd9ef939c255a2678af73324749f0e63420a7cffe6d779abdfc7e915e202",
+  "run-1.exit-code.txt": "690e07064753123c967bbac0180f32da6a753a5bd8b79a47644cef58e776d9f0",
+  "run-1.initial-scene.usda": "072f913810e6ec84753a5a6122e154f7514cbc14e3092b155ca9c2d615c8c041",
+  "run-1.kit.log": "800208e82f1ab0d5c4c4250d3e51c8715d8da50683ea69163072c0daa9de5ccc",
+  "run-1.log": "61d9e0c91c7e20bcdf5b9a9dae89216418c498ecfede809773143db221f739df",
+  "run-1.measurements.json": "8019d060f47a1f944e6bdbc1409287ca26b1f4cfa96caedc2d2b97ead67c37ac",
+  "run-1.outcome.json": "2d1e35797bd20683661454d3681532e23a79919a0e3b9d16f166c5f5d0978bee",
+  "run-1.render.png": "d72d39866cedaba674e372ce68a2c1417ac0cecb18973d5d0a956696ae73439a",
+  "run-1.result.json": "2b36257568946d0115a10633a177db4ee71c501ade5edb6b092f6bac303f0ab3",
+  "run-1.scene.usda": "072f913810e6ec84753a5a6122e154f7514cbc14e3092b155ca9c2d615c8c041",
+  "run-1.simulation-config.json": "0f39b1810839f05792123bbad7f3cdf0a1f46a9caa5661b8f335a5892ce57ae7",
+  "run-1.trajectory.json": "93aeed14cdf6c2663f017f7c6fc09ae5989764965390c39f1e5970b0302e3ef0"
+}

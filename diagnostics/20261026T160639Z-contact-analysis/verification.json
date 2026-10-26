@@ -1,0 +1,61 @@
+{
+  "syntax": "passed",
+  "offline_result_validator": [
+    {
+      "check": "actual_segmentation_fault",
+      "validator_exit": 4,
+      "outcome": {
+        "status": "failed",
+        "process_exit_code": 139,
+        "child_status": "passed",
+        "note": "Child assertions and cleanup return cannot replace a successful process exit."
+      },
+      "scope": "Offline fixture, not simulator execution"
+    },
+    {
+      "check": "new_marker_cannot_hide_segfault",
+      "validator_exit": 4,
+      "outcome": {
+        "status": "failed",
+        "process_exit_code": 139,
+        "child_status": "checks_passed_cleanup_returned",
+        "note": "Child assertions and cleanup return cannot replace a successful process exit."
+      },
+      "scope": "Offline fixture, not simulator execution"
+    },
+    {
+      "check": "synthetic_successful_exit",
+      "validator_exit": 0,
+      "outcome": {
+        "status": "passed",
+        "process_exit_code": 0,
+        "child_status": "checks_passed_cleanup_returned",
+        "note": "Child assertions and cleanup return cannot replace a successful process exit."
+      },
+      "scope": "Offline fixture, not simulator execution"
+    },
+    {
+      "check": "missing_report_with_exit_zero",
+      "validator_exit": 4,
+      "outcome": {
+        "status": "failed",
+        "process_exit_code": 0,
+        "child_status": null,
+        "note": "Child assertions and cleanup return cannot replace a successful process exit."
+      },
+      "scope": "Offline fixture, not simulator execution"
+    },
+    {
+      "check": "20261026T160211-runtime_trace_consistency",
+      "samples": 240,
+      "status": "passed"
+    },
+    {
+      "check": "20261026T160349-runtime_trace_consistency",
+      "samples": 480,
+      "status": "passed"
+    }
+  ],
+  "original_plan_image_lock_package_lock_vendor_checkouts": "unchanged",
+  "new_isaac_runs_after_shutdown_failure": 0
+}

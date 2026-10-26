@@ -1,0 +1,13 @@
+[
+  "scripts/docker.sh",
+  "run",
+  "--rm",
+  "--user",
+  "1000:1000",
+  "--env",
+  "MPLCONFIGDIR=/tmp/mpl",
+  "--mount",
+  "type=bind,src=/home/vincent/Repos/DigitalHumanStudio,dst=/workspace",
+  "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+  "/workspace/diagnostics/20261026T160639Z-contact-analysis/plot_contact.py"
+]

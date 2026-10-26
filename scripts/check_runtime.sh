@@ -32,7 +32,7 @@ for attempt in 1 2; do
         --mount "type=bind,src=$output,dst=/studio/output"
         "$image" /studio/scripts/runtime_smoke.py
         --output /studio/output --device cuda:0 --enable_cameras --viz none
-        --kit_args "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log")
+        --kit_args "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log" "$@")
     printf '%q ' "${command[@]}" > "$evidence/run-$attempt.command.txt"
     printf '\n' >> "$evidence/run-$attempt.command.txt"
     set +e
@@ -44,6 +44,31 @@ for attempt in 1 2; do
         "$docker_cmd" stop --time 20 "$container_name" || true
     fi
     "$docker_cmd" inspect "$container_name" > "$evidence/container-$attempt.json"
+    for record in trajectory.json contact-trace.jsonl measurements.json simulation-config.json initial-scene.usda scene.usda result.json render.png; do
+        if [[ -f "$output/$record" ]]; then
+            cp "$output/$record" "$evidence/run-$attempt.$record"
+        fi
+    done
+    validation=0
+    python3 - "$output/result.json" "$result" "$evidence/run-$attempt.outcome.json" <<'PY' || validation=$?
+import json, sys
+from pathlib import Path
+report = Path(sys.argv[1])
+child = json.loads(report.read_text()) if report.exists() else None
+exit_code = int(sys.argv[2])
+accepted = (exit_code == 0 and child is not None
+            and child.get('status') == 'checks_passed_cleanup_returned'
+            and child.get('physics_device') == 'cuda:0'
+            and child.get('physics_hz') in (60, 120)
+            and child.get('steps') == 4 * child.get('physics_hz')
+            and child.get('duration') == 4.0)
+Path(sys.argv[3]).write_text(json.dumps({
+    'status': 'passed' if accepted else 'failed', 'process_exit_code': exit_code,
+    'child_status': child.get('status') if child else None,
+    'note': 'Child assertions and cleanup return cannot replace a successful process exit.',
+}, indent=2) + '\n')
+sys.exit(0 if accepted else 4)
+PY
     if [[ -f "$output/kit.log" ]]; then
         if ! cp "$output/kit.log" "$evidence/run-$attempt.kit.log"; then
             printf '%s\n' "$container_name" > "$evidence/retained-container.txt"
@@ -51,21 +76,11 @@ for attempt in 1 2; do
             exit 5
         fi
     fi
-    if [[ $result -ne 0 ]] || [[ ! -f "$output/result.json" ]]; then
+    if [[ $validation -ne 0 ]]; then
         printf '%s\n' "$container_name" > "$evidence/retained-container.txt"
         echo "STOP: runtime smoke did not pass. Evidence: $evidence; retained: $container_name"
         exit 4
     fi
-    # A report alone cannot substitute for the process exiting cleanly.
-    python3 - "$output/result.json" <<'PY'
-import json, sys
-result = json.load(open(sys.argv[1]))
-assert result['status'] == 'passed', result
-assert result['physics_device'] == 'cuda:0', result
-assert result['steps'] == 240, result
-PY
-    cp "$output/result.json" "$evidence/run-$attempt.result.json"
-    cp "$output/render.png" "$evidence/run-$attempt.render.png"
     sha256sum "$output/scene.usda" "$output/render.png" "$output/trajectory.json" \
         > "$evidence/run-$attempt.artifact-sha256.txt"
     "$docker_cmd" rm "$container_name"

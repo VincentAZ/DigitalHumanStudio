@@ -1,10 +1,10 @@
 # Milestone 0 setup report
 
-Status: **Milestone 0 stopped at a failed physics acceptance assertion. Dependency installation/audit, official Isaac checker, Mixar and recording checks passed. The final image and package lock exist, but physics/render/restart acceptance is incomplete.**
+Status: **Milestone 0 stopped at a shutdown segmentation fault in `libomni.ui.so`. The contact failure is diagnosed: 120 Hz passes unchanged physics thresholds and produces a visually verified RTX image. Process exit 139 prevents acceptance and restart validation. Dependency audit, official checker, Mixar and recording checks remain passed.**
 
 ## Current repair — 2026-10-26 UTC
 
-Successful installation evidence: `diagnostics/20261026T042235Z-registry-prefetched-runtime/`. The 268 installed distributions include Isaac Sim 6.0.0.1, Isaac Lab 12.0.0, ProtoMotions 3.1.0, NumPy 2.3.1, Pillow 12.1.1, MoviePy 1.0.3, and Torch 2.11.0+cu128 on Python 3.12.13. `environment/dependency-audit.json` has no unexpected violations. Raw `uv pip check` reports two mismatches intentionally introduced by the pinned Isaac Lab source: Newton 1.4.0.dev0 at commit `c7ae7c7648cd0717df39e5c94b95d5a02c997320` instead of Isaac Sim's 1.2.0 requirement, and Newton USD schemas 0.6.0 satisfying Lab's >=0.3.1 override instead of Sim's 0.2.0 requirement. Those exceptions are preserved, not presented as a clean raw pip check. The image is locked in `config/runtime-image.lock` and the combined package lock in `config/runtime.uv.lock`. Runtime acceptance stopped on the physics assertion described below.
+Successful installation evidence: `diagnostics/20261026T042235Z-registry-prefetched-runtime/`. The 268 installed distributions include Isaac Sim 6.0.0.1, Isaac Lab 12.0.0, ProtoMotions 3.1.0, NumPy 2.3.1, Pillow 12.1.1, MoviePy 1.0.3, and Torch 2.11.0+cu128 on Python 3.12.13. `environment/dependency-audit.json` has no unexpected violations. Raw `uv pip check` reports two mismatches intentionally introduced by the pinned Isaac Lab source: Newton 1.4.0.dev0 at commit `c7ae7c7648cd0717df39e5c94b95d5a02c997320` instead of Isaac Sim's 1.2.0 requirement, and Newton USD schemas 0.6.0 satisfying Lab's >=0.3.1 override instead of Sim's 0.2.0 requirement. Those exceptions are preserved, not presented as a clean raw pip check. The image is locked in `config/runtime-image.lock` and the combined package lock in `config/runtime.uv.lock`. Runtime acceptance is now stopped on final process termination, after the contact diagnosis below.
 
 The build keeps the requested source revisions but applies explicit, hash-guarded patches to copies inside the container. The ignored vendor checkouts remain pristine. Every modification produces a unified diff and before/after hashes under `/opt/studio` for collection with the final build evidence.
 
@@ -35,13 +35,26 @@ The recording encode/decode test passed in `diagnostics/20261026T044911-media/`,
 
 The first runtime attempt (`diagnostics/20261026T044914-runtime/`) failed because Kit tried to create shader caches and data inside the root-owned Python installation. Its process returned 0 but produced no completion report; the wrapper correctly rejected it and retained the container. Kit could not create its announced file log; complete stdout/stderr are preserved. The launcher now passes a user-writable [Kit portable root](https://docs.omniverse.nvidia.com/kit/docs/kit-manual/latest/guide/configuring.html) and an explicit output log path. It disables fast shutdown so cleanup returns before writing the completion report, and explicitly prints exceptions before cleanup. These are launcher corrections; they do not change the image, host, driver or backend.
 
-## Current stopping point — physics acceptance
+## Current stopping point — teardown after successful physics and rendering
 
-Evidence: `diagnostics/20261026T045036-runtime/`. The corrected launch initialized RTX and imported the pinned ProtoMotions backend. CUDA matrix multiplication succeeded. Explicit GPU PhysX completed 240 steps with finite poses and velocities; gravity and final resting-height checks passed. The next assertion failed: the 0.5 m cube's center must stay **above 0.20 m**, but at least one sampled height did not. The process exited 1; the launcher exited 4 and stopped before run 2. Container `studio-runtime-20261026T045036-1` is retained, together with command, exact script, image metadata, stdout/stderr, full Kit log and exit codes.
+The user authorized contact trajectory capture and simulation-versus-measurement diagnosis. [Full comparison and plot](../diagnostics/20261026T160639Z-contact-analysis/README.md) preserve both attempts and the unchanged acceptance thresholds.
 
-This is a failed acceptance gate, not a diagnosed host incompatibility. It may involve contact settings, solver behavior or measurement timing; the current evidence does not identify which. Trajectory/scene export came after the assertions, so the precise minimum and contact trace were not saved. There is no accepted RTX image or successful repeat run. Shutdown cleanup executed after the assertion, but a failed process is not successful lifecycle acceptance.
+| Check | Result |
+| --- | --- |
+| 60 Hz reproduction | Minimum center height 0.18514985 m at step 34; fails >0.20 m requirement |
+| Independent position readback | Isaac Lab and raw PhysX XYZ match exactly at every sample in both runs |
+| 120 Hz, same four-second duration | Minimum 0.24999999 m; resting-height, finite-state and settling assertions pass |
+| RTX output | 640×480 image saved and visually verified: blue cube on the floor |
+| Shutdown/process exit | `app.close()` returned, but process subsequently exited 139; kernel names `libomni.ui.so` |
+| Restart | Not run; launcher stopped on unsuccessful process exit |
 
-**Next:** diagnose this within Milestone 0. Before an authorized retry, capture trajectories and scene before assertions, then inspect contact configuration, timestep and pose sampling. Preserve the current threshold until evidence supports an explicit revision. Do not reinstall Ubuntu, change the driver or select another architecture/backend. Milestone 1 follows only after the primitive runtime passes; it will reproduce the SOMA humanoid and matching pretrained motion tracker, not begin new skill training.
+At 60 Hz, the cube travels 98.10 mm during the impact step before contact correction on the next step. The measured comparison supports discrete collision timing rather than stale position reads. Only the simulation `dt` changed between configurations; the scene, GPU PhysX backend, CCD setting, gravity and acceptance thresholds are unchanged. The M0 script now defaults to 120 Hz (480 steps over four seconds). This does **not** change the timing required by later pretrained controllers.
+
+Evidence: `diagnostics/20261026T160211-runtime/` and `diagnostics/20261026T160349-runtime/`. Both containers are retained. Full trajectories, per-step raw PhysX poses/velocities, configuration, initial/final USD scenes, commands, exact tested scripts, logs and exit codes are saved before acceptance decisions. The 120 Hz child result says `passed` because its assertions and cleanup returned; the authoritative `run-1.outcome.json` records process failure. Future script reports explicitly separate these stages. Their reporting-only changes have not been followed by another Isaac launch.
+
+The original failed run in `diagnostics/20261026T045036-runtime/` remains intact. Unlike that earlier attempt, the new runs preserve numeric samples before assertions. The shutdown fault is a new blocker; its exact destructor/lifecycle cause is not established. No restart or complete M0 pass is claimed.
+
+**Next:** investigate native teardown in the same pinned environment, then repeat the complete launcher twice with exit 0. Milestone 1 remains gated on that result and will reproduce the SOMA humanoid and matching pretrained motion tracker. No OS replacement, driver change or alternate architecture/backend has been chosen.
 
 ## Inspected host — 2026-10-25
 
@@ -149,6 +162,6 @@ The runtime launcher uses the content ID in `config/runtime-image.lock`, runs on
 python3 scripts/build_runtime.py --compatibility-evidence diagnostics/20261026T020033-isaac
 ```
 
-The commands above reproduce checks; runtime validation is currently stopped and should not be treated as an accepted launcher. The remaining gate is passing floor-contact and settling assertions, saving and inspecting a nonblank RTX image, and clean shutdown followed by a successful second run. Installed package versions and the content-addressed image already exist. Milestone 0 cannot pass until the runtime gate succeeds; Milestones 1–5 remain unstarted.
+The commands above reproduce checks; runtime validation is currently stopped and should not be treated as an accepted launcher. Physics and RTX assertions passed at 120 Hz; the remaining gate is successful process termination and a complete second run. The launcher requires both runs to pass all checks and exit 0. Installed package versions and the content-addressed image already exist. Milestone 0 cannot pass until the runtime gate succeeds; Milestones 1–5 remain unstarted.
 
 If a future runtime check demonstrates host incompatibility, a concrete supported-environment candidate is a separate Ubuntu 24.04 LTS x86_64 machine with an RTX GPU and driver meeting NVIDIA's published Isaac Sim 6.0 requirements, using the same research stack. This is a contingency recommendation only. The dependency repairs recorded above are also required on that candidate; no OS replacement, migration, or different architecture has been selected.

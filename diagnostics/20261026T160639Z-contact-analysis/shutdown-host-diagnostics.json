@@ -1,0 +1,27 @@
+[
+  {
+    "command": [
+      "cat",
+      "/proc/sys/kernel/core_pattern"
+    ],
+    "exit_code": 0,
+    "stdout": "|/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -F%F -- %E\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "journalctl",
+      "-k",
+      "--since",
+      "2026-10-26 16:03:40 UTC",
+      "--until",
+      "2026-10-26 16:04:40 UTC",
+      "--no-pager",
+      "-o",
+      "short-iso"
+    ],
+    "exit_code": 0,
+    "stdout": "2026-10-26T09:03:50-07:00 LinuxWorkstationRTX6000 kernel: docker0: port 1(vetha54c5b8) entered blocking state\n2026-10-26T09:03:50-07:00 LinuxWorkstationRTX6000 kernel: docker0: port 1(vetha54c5b8) entered disabled state\n2026-10-26T09:03:50-07:00 LinuxWorkstationRTX6000 kernel: vetha54c5b8: entered allmulticast mode\n2026-10-26T09:03:50-07:00 LinuxWorkstationRTX6000 kernel: vetha54c5b8: entered promiscuous mode\n2026-10-26T09:03:50-07:00 LinuxWorkstationRTX6000 kernel: eth0: renamed from veth38d76ab\n2026-10-26T09:03:50-07:00 LinuxWorkstationRTX6000 kernel: docker0: port 1(vetha54c5b8) entered blocking state\n2026-10-26T09:03:50-07:00 LinuxWorkstationRTX6000 kernel: docker0: port 1(vetha54c5b8) entered forwarding state\n2026-10-26T09:04:01-07:00 LinuxWorkstationRTX6000 kernel: NVRM: GPU0 refcntRequestReference_IMPL: Failed to enter state 1 (current state: 0, status: 0x00000056)\n2026-10-26T09:04:26-07:00 LinuxWorkstationRTX6000 kernel: python[337513]: segfault at 73401245e888 ip 000073400f4d2205 sp 00007ffcefcd4b10 error 4 in libomni.ui.so[1b7205,73400f3b4000+132000] likely on CPU 1 (core 1, socket 0)\n2026-10-26T09:04:26-07:00 LinuxWorkstationRTX6000 kernel: Code: 48 8d 43 58 48 39 c7 74 0d 48 8b 43 58 48 8d 70 01 e8 6f 7c ee ff 48 8b 7b 18 48 c7 43 18 00 00 00 00 48 85 ff 74 06 48 8b 07 <ff> 50 18 48 8b 44 24 58 64 48 2b 04 25 28 00 00 00 0f 85 cc 02 00\n2026-10-26T09:04:27-07:00 LinuxWorkstationRTX6000 kernel: docker0: port 1(vetha54c5b8) entered disabled state\n2026-10-26T09:04:27-07:00 LinuxWorkstationRTX6000 kernel: veth38d76ab: renamed from eth0\n2026-10-26T09:04:27-07:00 LinuxWorkstationRTX6000 kernel: docker0: port 1(vetha54c5b8) entered disabled state\n2026-10-26T09:04:27-07:00 LinuxWorkstationRTX6000 kernel: vetha54c5b8 (unregistering): left allmulticast mode\n2026-10-26T09:04:27-07:00 LinuxWorkstationRTX6000 kernel: vetha54c5b8 (unregistering): left promiscuous mode\n2026-10-26T09:04:27-07:00 LinuxWorkstationRTX6000 kernel: docker0: port 1(vetha54c5b8) entered disabled state\n",
+    "stderr": ""
+  }
+]

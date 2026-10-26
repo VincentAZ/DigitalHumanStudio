@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "milestone_0_stopped_physics_acceptance_failed",
+  "status": "milestone_0_stopped_shutdown_segfault",
   "container_userspace": "Ubuntu 24.04",
   "python": "3.12.13",
   "isaac_sim": {
@@ -49,13 +49,13 @@
     "status": "installed_audited_runtime_acceptance_failed",
     "evidence": "diagnostics/20261026T042235Z-registry-prefetched-runtime",
     "resolution_evidence": "diagnostics/20261026T040231Z-numpy-compatible-lock",
-    "physics_render_restart": "failed_minimum_height_assertion_run_1_restart_not_run",
+    "physics_render_restart": "physics_render_passed_at_120hz_process_exit_139_restart_not_run",
     "image_lock": "config/runtime-image.lock",
     "recovery_evidence": "diagnostics/20261026T033253Z-runtime-recovery",
     "prefetched_recovery_evidence": "diagnostics/20261026T040716Z-prefetched-runtime",
     "image_id": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
-    "runtime_evidence": "diagnostics/20261026T045036-runtime",
-    "retained_runtime_container": "studio-runtime-20261026T045036-1"
+    "runtime_evidence": "diagnostics/20261026T160349-runtime",
+    "retained_runtime_container": "studio-runtime-20261026T160349-1"
   },
   "build_patches": {
     "isaaclab": "container/configure_target.py",
@@ -80,5 +80,16 @@
   "media": {
     "status": "passed",
     "evidence": "diagnostics/20261026T044911-media"
+  },
+  "runtime_validation": {
+    "status": "failed_process_termination",
+    "primitive_physics_hz": 120,
+    "duration_seconds": 4,
+    "physics_and_render": "passed_single_run",
+    "process_exit_code": 139,
+    "faulting_library": "libomni.ui.so",
+    "restart": "not_run",
+    "contact_analysis": "diagnostics/20261026T160639Z-contact-analysis",
+    "controller_timing": "No humanoid/controller timing selected; M0 primitive setting only"
   }
 }

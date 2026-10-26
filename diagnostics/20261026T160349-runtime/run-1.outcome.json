@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "process_exit_code": 139,
+  "child_status": "passed",
+  "phase": "process termination after app.close returned",
+  "restart": "not_run",
+  "visual_inspection": "render.png shows a blue cube resting on the floor; no humanoid assets",
+  "retained_container": "studio-runtime-20261026T160349-1"
+}

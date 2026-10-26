@@ -1,0 +1,194 @@
+{
+  "status": "contact_diagnosed_shutdown_failed",
+  "runs": [
+    {
+      "evidence": "diagnostics/20261026T160211-runtime",
+      "physics_hz": 60,
+      "steps": 240,
+      "elapsed_simulation_seconds": 4.0,
+      "measurements": {
+        "minimum_height": 0.18514984846115112,
+        "minimum_step": 34,
+        "minimum_raw_height": 0.18514984846115112,
+        "final_height": 0.2499999850988388,
+        "maximum_position_readback_difference": 0.0,
+        "maximum_final_speed": 0.0002459977004975247,
+        "final_height_range": 1.4901161193847656e-08,
+        "minimum_height_required_exclusive": 0.2
+      },
+      "minimum_sample": {
+        "step": 34,
+        "time": 0.5666666666666667,
+        "physics_step_count": 34,
+        "position": [
+          0.0,
+          0.0,
+          0.18514984846115112
+        ],
+        "linear_velocity": [
+          0.0,
+          0.0,
+          -5.8859992027282715
+        ],
+        "raw_physx_pose_xyzw": [
+          0.0,
+          0.0,
+          0.18514984846115112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "raw_physx_velocity": [
+          0.0,
+          0.0,
+          -5.8859992027282715,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "previous_sample": {
+        "step": 33,
+        "time": 0.55,
+        "physics_step_count": 33,
+        "position": [
+          0.0,
+          0.0,
+          0.2832498252391815
+        ],
+        "linear_velocity": [
+          0.0,
+          0.0,
+          -5.722499370574951
+        ],
+        "raw_physx_pose_xyzw": [
+          0.0,
+          0.0,
+          0.2832498252391815,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "raw_physx_velocity": [
+          0.0,
+          0.0,
+          -5.722499370574951,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "process_exit_code": 139,
+      "pose_readback_comparison": "Cached Isaac Lab slice versus direct PhysX TensorAPI; all XYZ samples identical",
+      "solver_type": 1,
+      "enable_ccd": false
+    },
+    {
+      "evidence": "diagnostics/20261026T160349-runtime",
+      "physics_hz": 120,
+      "steps": 480,
+      "elapsed_simulation_seconds": 4.0,
+      "measurements": {
+        "minimum_height": 0.2499999850988388,
+        "minimum_step": 72,
+        "minimum_raw_height": 0.2499999850988388,
+        "final_height": 0.25,
+        "maximum_position_readback_difference": 0.0,
+        "maximum_final_speed": 0.0001240292558936067,
+        "final_height_range": 1.4901161193847656e-08,
+        "minimum_height_required_exclusive": 0.2
+      },
+      "minimum_sample": {
+        "step": 72,
+        "time": 0.6,
+        "physics_step_count": 72,
+        "position": [
+          -3.1857990734351915e-07,
+          -4.735471179628803e-07,
+          0.2499999850988388
+        ],
+        "linear_velocity": [
+          9.946759382728487e-05,
+          0.00011697773879859596,
+          -0.00014558248221874237
+        ],
+        "raw_physx_pose_xyzw": [
+          -3.1857990734351915e-07,
+          -4.735471179628803e-07,
+          0.2499999850988388,
+          1.6429595461886493e-07,
+          -4.4704119517291474e-08,
+          -1.0497151592403497e-08,
+          1.0
+        ],
+        "raw_physx_velocity": [
+          9.946759382728487e-05,
+          0.00011697773879859596,
+          -0.00014558248221874237,
+          0.0001623105927137658,
+          7.981251110322773e-05,
+          -1.2816447451768909e-05
+        ]
+      },
+      "previous_sample": {
+        "step": 71,
+        "time": 0.5916666666666667,
+        "physics_step_count": 71,
+        "position": [
+          -8.411228691329597e-07,
+          -5.731308192480356e-07,
+          0.2500000596046448
+        ],
+        "linear_velocity": [
+          0.00011444077244959772,
+          -0.0002781437651719898,
+          -0.00036770477890968323
+        ],
+        "raw_physx_pose_xyzw": [
+          -8.411228691329597e-07,
+          -5.731308192480356e-07,
+          0.2500000596046448,
+          9.150274422609073e-07,
+          -9.985031965698e-07,
+          -1.357131829138325e-08,
+          0.9999999403953552
+        ],
+        "raw_physx_velocity": [
+          0.00011444077244959772,
+          -0.0002781437651719898,
+          -0.00036770477890968323,
+          0.0011571694631129503,
+          4.1212249925592914e-05,
+          1.72111776919337e-05
+        ]
+      },
+      "process_exit_code": 139,
+      "pose_readback_comparison": "Cached Isaac Lab slice versus direct PhysX TensorAPI; all XYZ samples identical",
+      "solver_type": 1,
+      "enable_ccd": false
+    }
+  ],
+  "simulation_config_differences": {
+    "dt": [
+      0.016666666666666666,
+      0.008333333333333333
+    ]
+  },
+  "unchanged_acceptance": {
+    "minimum_center_height_exclusive": 0.2,
+    "rest_height": 0.25,
+    "rest_height_tolerance": 0.03,
+    "settling_window_seconds": 0.5,
+    "maximum_settling_speed_exclusive": 0.1,
+    "maximum_settling_height_range_exclusive": 0.01
+  },
+  "inference": "60 Hz discrete integration crosses the floor before contact correction. At 120 Hz, unchanged contact settings and thresholds pass. Readback disagreement is zero; this is simulation configuration sensitivity rather than stale asset slices.",
+  "remaining_failure": "120 Hz process exits 139 after app.close returns and child report is written. Kernel journal confirms a segfault in libomni.ui.so. No successful restart attempt. Precise teardown cause remains unestablished.",
+  "decision": "Stop Isaac runs; preserve both containers and all evidence. Do not start M1 or change host/backend.",
+  "sources": [
+    "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/latest/dev_guide/rigid_bodies_articulations/collision.html",
+    "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/latest/dev_guide/rigid_bodies_articulations/rigid_bodies.html"
+  ]
+}
