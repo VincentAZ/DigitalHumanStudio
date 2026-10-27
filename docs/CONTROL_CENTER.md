@@ -77,6 +77,22 @@ the clip's own stop produces a true standstill. Launch it outside the window wit
 (`live-tracker-…` folders) and can be compared with the learned adapter in the same room and with the
 same buttons.
 
+## Director's assistant
+
+The right-hand dock is a chat with an AI assistant that drives the studio through the same
+operations as the buttons: `scripts/studio_assistant/tools.py` defines the tools (describe the studio
+and a scene, start or end a live session, walk to a point in scene/world/local frames, stop, pause,
+resume, reset, push, mark recordings, wait for arrival or standing, list and play skills) over the
+recorded launchers and the live command file, so every assistant action leaves the same evidence as a
+button press. Providers: Claude through the Claude Agent SDK (needs an Anthropic API key; Anthropic
+does not allow third-party apps to use the claude.ai sign-in), and OpenAI, Google Gemini, xAI Grok and
+OpenRouter through one OpenAI-compatible adapter. Keys come from the environment (`ANTHROPIC_API_KEY`,
+`OPENAI_API_KEY`, `GEMINI_API_KEY`, `XAI_API_KEY`, `OPENROUTER_API_KEY`) or from
+`~/.config/digital-human-studio/providers.json` (written by the Settings dialog with mode 600); the
+repository never holds a key, and no provider is called until you choose one and send a message.
+Transcripts with tool calls are saved under `artifacts/assistant/<stamp>-<provider>/`. The same
+assistant runs in a terminal: `.runtime/studio-app/bin/python scripts/studio_assistant.py --provider openai "walk to the machine"`.
+
 ## Scenes
 
 `scripts/build_scene.py` authors the industrial work-cell scene deterministically as text USD

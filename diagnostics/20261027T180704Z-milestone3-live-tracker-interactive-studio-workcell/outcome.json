@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "process_exit_code": 0,
+  "cleanup_logged": true,
+  "steps": null,
+  "frames": null,
+  "trace_lines": 16457,
+  "commands": 0,
+  "command_results": [],
+  "final_state": null,
+  "resets": null,
+  "milestone3_complete": false
+}

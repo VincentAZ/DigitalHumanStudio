@@ -8,6 +8,7 @@ from PySide6.QtCore import Qt, QThread, QTimer, Signal
 from PySide6.QtWidgets import QApplication, QDockWidget, QMainWindow, QPlainTextEdit, QTabWidget
 
 from studio_app import ROOT
+from studio_app.assistant import AssistantPanel
 from studio_app import state as st
 from studio_app.compare import CompareView
 from studio_app.evaluation import EvaluationView
@@ -46,6 +47,11 @@ class MainWindow(QMainWindow):
         self.skills.use_in_live.connect(self._direct)
         self.skills.evaluate.connect(self._evaluate)
         self.jobs.changed.connect(self._jobs_changed)
+        assistant_dock = QDockWidget("Director's assistant", self)
+        self.assistant = AssistantPanel()
+        assistant_dock.setWidget(self.assistant)
+        self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, assistant_dock)
+        self.resizeDocks([assistant_dock], [420], Qt.Orientation.Horizontal)
         dock = QDockWidget("Job output (launchers run here; full log in .runtime/studio-app.log)", self)
         self.job_log = QPlainTextEdit()
         self.job_log.setReadOnly(True)

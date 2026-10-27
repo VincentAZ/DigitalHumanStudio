@@ -1,0 +1,261 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-interactive-studio-workcell-20261027T180704Z",
+  "files": {
+    "frame-06300.png": {
+      "bytes": 314765,
+      "sha256": "a293774fc1c1f592ad625328d47c6711ad52073b25cf1d6583611f02dbb74d53"
+    },
+    "frame-15000.png": {
+      "bytes": 379138,
+      "sha256": "18c6e5bdffc4891102052ec9933d737d531f1543afbd0a2033a6f1d4252cb846"
+    },
+    "frame-14400.png": {
+      "bytes": 392775,
+      "sha256": "ceaf5fe19ebe773b1119f36cf2ed263baf3fce454a5771843d5d00674b1adfd4"
+    },
+    "frame-04500.png": {
+      "bytes": 306445,
+      "sha256": "5db96b0e0b72e327da6f1b8d5ace262cbd38d2685b7070927b358d502e6d777b"
+    },
+    "frame-13500.png": {
+      "bytes": 384989,
+      "sha256": "242efc226262600cbf8207a5efce4accc653758156e086734afa62dd1d7c3d7d"
+    },
+    "frame-13800.png": {
+      "bytes": 385962,
+      "sha256": "47d9d45c7ec371d1d5833063490381eca99320a1786aebaf8805d80336c8ffbd"
+    },
+    "frame-14700.png": {
+      "bytes": 393850,
+      "sha256": "845856881aa392ce91a734c3dc1b6fbc3dff0baaf82d5b953d80cb55f7901924"
+    },
+    "frame-02400.png": {
+      "bytes": 295764,
+      "sha256": "81d5a96efe00e95e91285cd8765c23816ee351858850a878414531abefac5e37"
+    },
+    "session-contract.json": {
+      "bytes": 1724,
+      "sha256": "817f3ce58d98136234925acce9b9ec48f5f60a1b1b26f69bd6d0ce0b5d38155b"
+    },
+    "frame-02700.png": {
+      "bytes": 314229,
+      "sha256": "04fb5e0b901b6009ced3d4966e773d540c7913728e5ce26742770846ab6e3843"
+    },
+    "frame-13200.png": {
+      "bytes": 394660,
+      "sha256": "c2fb297aa002aaa7401c1ff14098f8400b30152ea22a42e1eb7ed2fdc3d3cbf1"
+    },
+    "performance.mp4": {
+      "bytes": 83880758,
+      "sha256": "faf88ca42ad72ed0d02b9fc1a94ae1ea8b7b030ffa575fcd76f52ff85e53deae"
+    },
+    "frame-01200.png": {
+      "bytes": 327578,
+      "sha256": "b5d13c9b96c1f6dfcb02324ecee14dde547019d19635c10894cae1d0f7e38d2b"
+    },
+    "frame-09600.png": {
+      "bytes": 212680,
+      "sha256": "7cf3733ef5df7f9744e0d08e291e2f5861607768cb0c62bc57647655f4bafcbf"
+    },
+    "frame-09300.png": {
+      "bytes": 256689,
+      "sha256": "bd1355489b7830b36ed2b44bd8cbde25756b20439640806c195152e36c781a25"
+    },
+    "frame-06600.png": {
+      "bytes": 300127,
+      "sha256": "8d2b788fdb753a08b455f548bd2ae79d9701b9c7df5a3c34718675047a1ae8b0"
+    },
+    "frame-10800.png": {
+      "bytes": 354042,
+      "sha256": "27f9934e44d55012a537d90702337d5de7e29983528cd88f123b4353dad8ccf4"
+    },
+    "frame-12900.png": {
+      "bytes": 393412,
+      "sha256": "61918af46520835f58870305b3fdbab69d9956eb0872e8f44d7f196b7b479877"
+    },
+    "frame-00600.png": {
+      "bytes": 457658,
+      "sha256": "6288c84cbd2af5aaab56705f734a5841d6f24b0eeac88a4de2bc9f1293da4bd0"
+    },
+    "frame-02100.png": {
+      "bytes": 296823,
+      "sha256": "5c3d09ca60afde830c9a2a7056b97b0582bbb86e0e43d4623f368b13cf82ab91"
+    },
+    "commands.jsonl": {
+      "bytes": 324,
+      "sha256": "f737be7e4ccd302f0151a5072ab1195fbc1c13f1030c433a7fdf22ccd7bd76aa"
+    },
+    "frame-16200.png": {
+      "bytes": 381671,
+      "sha256": "5632c9cb85d0580f08f8d4b97b4c34a6f18524a1eaa7dc00f2e02ce6452a8914"
+    },
+    "frame-11100.png": {
+      "bytes": 341109,
+      "sha256": "703a654ce6431f17fd921e42ce9b8607d86873f87b7a5a799ef858442e8de230"
+    },
+    "frame-12000.png": {
+      "bytes": 375892,
+      "sha256": "3b7cad799bd6e3267ab5181e50d534108a5a899699b0776711246936dac7bd13"
+    },
+    "frame-07200.png": {
+      "bytes": 295711,
+      "sha256": "7b6896ca1654128bbacd27ce369650162204a786922d93d55f4c0ccea7312342"
+    },
+    "frame-00300.png": {
+      "bytes": 491084,
+      "sha256": "5915b7220a07a06aa2524dcba94632c20df2a5aa65275af0edec30e5cc1426c9"
+    },
+    "frame-08700.png": {
+      "bytes": 267991,
+      "sha256": "33dacb57f0415d716d6841390d809b097f37c27ab89f9385e370fe2082f5e96b"
+    },
+    "frame-08100.png": {
+      "bytes": 447722,
+      "sha256": "5fabb8b3daadcf082a1e15ef52a3b81e36dcc73ec945acb8a4441d6573deb02a"
+    },
+    "kit.log": {
+      "bytes": 768895,
+      "sha256": "d80744d68501c5c037bd1d7f66f9bfd812875e56889e71975a718ddb8acc36e1"
+    },
+    "frame-05700.png": {
+      "bytes": 293082,
+      "sha256": "63bcc9ec80341f767d2c535f255443a119844c1504a209e4fe69b31148c5852b"
+    },
+    "frame-04200.png": {
+      "bytes": 302875,
+      "sha256": "ce7bead3ca99ff9586589dc9f7358adaea72f4bc116a3a90122321c9df2b0bf9"
+    },
+    "frame-09900.png": {
+      "bytes": 250040,
+      "sha256": "51cb639dc57d023e6819e3d87e94d3a3fb24ad4840fa2eedd0b615675654c97a"
+    },
+    "frame-03300.png": {
+      "bytes": 290250,
+      "sha256": "401d2e17f31e7c9b4354ec1c750d9eddc2132d2498d874b370fe1aca7ee7ac0d"
+    },
+    "frame-11400.png": {
+      "bytes": 339159,
+      "sha256": "531df53cb86635681cdf0a70f2fab9b2a30fcc46f3e29cf7276137c17269fa7b"
+    },
+    "frame-03600.png": {
+      "bytes": 299466,
+      "sha256": "72a5b84cedaa575779f505eb2c89c2b0731e5542f61305efcc3c3e90fb900327"
+    },
+    "frame-07500.png": {
+      "bytes": 407110,
+      "sha256": "12b3d35a1dd7903b54119e01433816128c5b45ebd1ab90b37b61aec27b9e372e"
+    },
+    "frame-00900.png": {
+      "bytes": 418200,
+      "sha256": "a661a1ae9cc5aa6056bdeda0d3b886ee876b8144554c826c7b0b5f185361c9e0"
+    },
+    "status.jsonl": {
+      "bytes": 1457,
+      "sha256": "4911a1d56a5aef840ad96b634cfa37bce2b83027776bc409ff55df95e4df792d"
+    },
+    "frame-06000.png": {
+      "bytes": 296533,
+      "sha256": "be59e97772279ad62ac55b0f1d0efca6a3ee360b0cf6947148d992f3a775e53c"
+    },
+    "frame-10200.png": {
+      "bytes": 264683,
+      "sha256": "cc796ec04c29970349e4f77ab7e7b78267082a8972e8196f003ff140fff9cd2c"
+    },
+    "frame-06900.png": {
+      "bytes": 301678,
+      "sha256": "9e720253680c7db5b808aaa027a8844f98bf8684ff888244f6db18475e4a6bbd"
+    },
+    "frame-05100.png": {
+      "bytes": 295634,
+      "sha256": "da4a4e65c9de989e21a2c9bf3814434b21699590504800aa978fd244ec335a94"
+    },
+    "frame-09000.png": {
+      "bytes": 275412,
+      "sha256": "b4caef065e4c953005620cd690f5f19ed2d6a3f33659ae70a95cd50503ee873f"
+    },
+    "frame-14100.png": {
+      "bytes": 386943,
+      "sha256": "551f28209bc151aaccf7ebf3c05364ba7d539b52adc2e54242bd562d39ec09ac"
+    },
+    "frame-15300.png": {
+      "bytes": 385192,
+      "sha256": "7496bd1a92d5460ffae7106b818436d95bdfd02f28fed6f973cc927b6babb40a"
+    },
+    "trace.jsonl": {
+      "bytes": 13513733,
+      "sha256": "09e797850356254877154c10257c3043294d299811cd00ec1f693c737cc28218"
+    },
+    "frame-03000.png": {
+      "bytes": 301637,
+      "sha256": "fa2cad35f01b1a343068715bb73e014e99b0cf3b8749c45e2eeb39c786a7e06d"
+    },
+    "frame-05400.png": {
+      "bytes": 292362,
+      "sha256": "cecfacbec80634d6ffe7d322b82edfc653def449c99fbafac1fed7c92f702167"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "6a6def72d5b3151d357ff91a73405ecf5efb9a2eaa96149f55bab9d7757baf2c"
+    },
+    "frame-07800.png": {
+      "bytes": 368866,
+      "sha256": "3476d265ab116e26b18c513e1767f80915e562f39a62ae487ffad80fb4f1ed30"
+    },
+    "frame-15600.png": {
+      "bytes": 380233,
+      "sha256": "ef2cfb8092a43360cba0151665491c4a0fa1f15b367eb02931f83824068c09c9"
+    },
+    "frame-08400.png": {
+      "bytes": 238033,
+      "sha256": "0eb34c50b8a778ae8e16299da32646494c8e5330024d406348ecbc581d77ee9a"
+    },
+    "scene.json": {
+      "bytes": 6355,
+      "sha256": "ec44335cabe2f35972d57a81ab675ed359650676b3db730706aa4e02414e47f2"
+    },
+    "frame-12600.png": {
+      "bytes": 400900,
+      "sha256": "86f13a5c60c68455ef4ddc8b0d7082ffe6b65504bef522229dcb89dc033d6439"
+    },
+    "frame-01800.png": {
+      "bytes": 288126,
+      "sha256": "da4e558f6ea48333f6475032049fff11cb03e3d7c8788e339e9a046b32fd888a"
+    },
+    "frame-11700.png": {
+      "bytes": 351214,
+      "sha256": "508bc4a7c178031ad51e571e4a4639a752e8f8cff8d972a833b08cae4565a1df"
+    },
+    "frame-10500.png": {
+      "bytes": 298410,
+      "sha256": "49c92301d2a552fceec1cc3b87260472f70f72d80a61f7dde4b55482cca196e8"
+    },
+    "frame-01500.png": {
+      "bytes": 284279,
+      "sha256": "0f63a527ed0898a2baab686d9975b0e4a0142930f89d9c8292e298108da50567"
+    },
+    "frame-12300.png": {
+      "bytes": 405805,
+      "sha256": "761c5a5f48f6fa5461c4bfaaa3b8dc70843c270418f7b1e90da2c8170f766ac6"
+    },
+    "frame-15900.png": {
+      "bytes": 376276,
+      "sha256": "008f8dc6a71437bef721b1d156b455941fddd7a9fda938b826da5f7ea3cc3a4f"
+    },
+    "frame-03900.png": {
+      "bytes": 305429,
+      "sha256": "4e7a08e69b89da6ff4e9e33402325a7895c60d7e34902ebd3b9d832f9292bc00"
+    },
+    "frame-04800.png": {
+      "bytes": 309399,
+      "sha256": "e4d43eb5079724cefc4236245627f911a7c0d0ec7dbb4537928c0257cfee6544"
+    },
+    "live/frame.jpg": {
+      "bytes": 41228,
+      "sha256": "2a27a3dd45fe474730b693dfaad7f3d47ea8a57fcaa2076539cf7972466e9613"
+    },
+    "live/state.json": {
+      "bytes": 675,
+      "sha256": "8689e3af336eb446aaf6a8db1a9667948396a8d1d4632e5238c04621de792743"
+    }
+  }
+}

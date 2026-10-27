@@ -1,0 +1,45 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-cmp-workcell-20261027T182517Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 1093,
+      "sha256": "619699c6c6f3c2660bc71008d091f2f80b8f26b267d849c0c7dbee0f2ab8141c"
+    },
+    "performance.mp4": {
+      "bytes": 6608742,
+      "sha256": "25183c4ce6ac9f99b2e75d591fab29f94837a8548a7d24a0bdde048f39ec6c61"
+    },
+    "frame-00600.png": {
+      "bytes": 268178,
+      "sha256": "b8405fecbae21ef691641fac892dbdcad8a567b92340bd6ae6057dd36ee5f6f6"
+    },
+    "frame-00300.png": {
+      "bytes": 262333,
+      "sha256": "4d0f19333ee5cb75e89e2ccd1eeb872adb3ed7565d907516e3a7d1519ffb647c"
+    },
+    "kit.log": {
+      "bytes": 768927,
+      "sha256": "f7eab648656a80cdb444c5a8e75d234abc0a899ffad6318dcb82d1cd498cb8ef"
+    },
+    "frame-00900.png": {
+      "bytes": 314687,
+      "sha256": "2ed7f7558445229798f7579c5567d6072eb22f76375c8ab6eed164f2cd7ed7f4"
+    },
+    "status.jsonl": {
+      "bytes": 1887,
+      "sha256": "ed59543d6fdba8ff47d84a35d0f0e6c99723815f927bf5b7a548abb335841910"
+    },
+    "trace.jsonl": {
+      "bytes": 903620,
+      "sha256": "ca533b873fb5683a233836b1f6eebd0c388497fc75fd654db3e690f61cdff8c4"
+    },
+    "resolved-configs.json": {
+      "bytes": 57062,
+      "sha256": "9490b46b59d620159ba13cb53fe3a214d25b4617f0b6239c41a18c2cc698d314"
+    },
+    "scene.json": {
+      "bytes": 6355,
+      "sha256": "ec44335cabe2f35972d57a81ab675ed359650676b3db730706aa4e02414e47f2"
+    }
+  }
+}

@@ -14,4 +14,8 @@ if [[ ! -x "$venv/bin/python" ]]; then
     "$uv" pip install --python "$venv/bin/python" --require-hashes -r "$requirements"
 fi
 export PYTHONPATH="$project_root/scripts${PYTHONPATH:+:$PYTHONPATH}"
+if [[ "${1:-}" == --assistant ]]; then
+    shift
+    exec "$venv/bin/python" "$project_root/scripts/studio_assistant.py" "$@"   # terminal assistant, same tools and providers
+fi
 exec "$venv/bin/python" -m studio_app "$@"
