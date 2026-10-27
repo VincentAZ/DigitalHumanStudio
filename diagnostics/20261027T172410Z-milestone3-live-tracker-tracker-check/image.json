@@ -1,0 +1,103 @@
+[
+    {
+        "Architecture": "amd64",
+        "Config": {
+            "Cmd": [
+                "--version"
+            ],
+            "Entrypoint": [
+                "/opt/IsaacLab/.venv/bin/python"
+            ],
+            "Env": [
+                "UV_HTTP_TIMEOUT=300",
+                "UV_HTTP_RETRIES=3",
+                "UV_CONCURRENT_DOWNLOADS=4",
+                "PATH=/opt/IsaacLab/.venv/bin:/usr/local/bin:/usr/bin:/bin",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "VK_DRIVER_FILES=/etc/vulkan/icd.d/nvidia_icd.json",
+                "MIN_DRIVER_VERSION=570.169",
+                "HUB__CACHE__PATH=/var/cache/hub",
+                "HUB__ARGS__DETECT_ONLY=true",
+                "OMNICLIENT_HUB_EXE=/usr/local/bin/hub",
+                "DEBIAN_FRONTEND=noninteractive",
+                "UV_PYTHON_INSTALL_DIR=/opt/python",
+                "UV_CACHE_DIR=/opt/uv-cache",
+                "UV_LINK_MODE=copy",
+                "ACCEPT_EULA=Y",
+                "OMNI_KIT_ACCEPT_EULA=YES"
+            ],
+            "Healthcheck": {
+                "Interval": 30000000000,
+                "Retries": 3,
+                "StartPeriod": 180000000000,
+                "Test": [
+                    "NONE"
+                ],
+                "Timeout": 10000000000
+            },
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "24.04"
+            },
+            "User": "1234:1234",
+            "WorkingDir": "/opt/IsaacLab"
+        },
+        "Created": "2026-10-25T21:45:31.596876224-07:00",
+        "Descriptor": {
+            "digest": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "size": 7396
+        },
+        "Id": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+        "Metadata": {
+            "LastTagTime": "2026-10-26T04:48:25.392254718Z"
+        },
+        "Os": "linux",
+        "Parent": "sha256:40dd5cc03fbf660ac514d7998235baf2c3e2651ee23ce51b627c640bf87678f2",
+        "RepoDigests": [
+            "digital-human-studio@sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9"
+        ],
+        "RepoTags": [
+            "digital-human-studio:m0-registry-prefetched-20261026t042235z"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:e8bce0aabd687e9ee90e0bada33884f40b277196f72aac9934357472863a80ae",
+                "sha256:b2064ba1631073f658f7637c6e2d271a871828e96a5517540ee5b357cb0c3104",
+                "sha256:dde04e68cafc9e633363418071a39c8ecfc88aa3f1a0a90f2f2857ecb931d3bd",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:1da00f98ff7c015b8282c444f8957b3d4414ca97b2e1a0d76bf7032572522aaf",
+                "sha256:7eaee376881cc07daa796bc5dd3424905a0b669a70110bd61841260c315824aa",
+                "sha256:5b286fe2e39c10053a9b5ba68ed15f629edee8d1c236563ce17de785192714a1",
+                "sha256:f0af0c0f6b9e234313649e42d3836e6d646fdc848bb7790bd256e76f066f34ac",
+                "sha256:ac37447a3f04fc370ccc6c7984435eb687a1ceebd24eeb58c4a5ba5118ede512",
+                "sha256:5309e153ca6d61044e3021c49bf1e562a9d6ce6b416e718d77636bc2e8d74e5e",
+                "sha256:9b86032b9bac8fcf3c21af00e1534780a29577bea2e923254e33506723238276",
+                "sha256:409d3a7de9bf06193f49f218609e7dd4debc8e1c8ce2949b5994b0a31c2f5ea5",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:2b80e5af70d5807bdc9187ca9044a2d755de000d43979eb7b13a9b5bd7eceb34",
+                "sha256:208df98d935b19ae30521b14293234dc6d4dcc8e0729dbc239bc14b6aeceb8ec",
+                "sha256:d31b7a81f9c26ced2671f16969f09c179e70fd99758f567f2091773be689aaa7",
+                "sha256:41ca5d6036223cfd7d1769799983aa4de3eae19a4b44c521d0392a69491a84ad",
+                "sha256:338f39f9c0d18c1e841a5f23fb8b62332c6b59681be9455c257e1771aab9c6d7",
+                "sha256:cbabeb32ca008f89db1a608c9f1a93bf554382f1c50900865c32e3ab3c803315",
+                "sha256:80d6e73815d625c8bd6ab33b04e4a93eda50b13e71b755695c19b480ba108f29",
+                "sha256:4ef92f07628971b810ebc660063291008b5fd96475d66a5418276077de7d09de",
+                "sha256:325eb68b356cb088bea50792f1746ce02944795c4db32cfb891a33997134f8e9",
+                "sha256:48db4b3c6d74683cd5f697bba31f517db6d59be60c9f5d5321f464041872f6c0",
+                "sha256:d6319824904cf6560d3e38b5fa0eac76013af1eaf18b1974c7128f544a10b13c",
+                "sha256:ff058f0481bf12ce3b782e4572eb2c37aec34c1591044396a5411db9d5ea41b9",
+                "sha256:a24b7a20c1f610698af537db4ef8ded7a06baf4f4b156063ee77fb9c21f9b333",
+                "sha256:e95a3efd2f1219dd61debcdbe857317c27b8c858d0f4b993ac6aa26e565eb1de",
+                "sha256:ede5c7fb432d233835bb63b7a04073596e5af7bdb1c7190fddd68ab78869892a",
+                "sha256:040c1fd6c571f6ced3722360640e88558f851a3179ed2235b3080ccd32327f96",
+                "sha256:8be02c67a99d58d735570c3a953651207eb7f3e29b0a06a60212200eeca0e7e6",
+                "sha256:0ddc0acbe603862d303281b627667dcfd9df42c98d6cc6880772313ef88318fa"
+            ],
+            "Type": "layers"
+        },
+        "Size": 39576474045
+    }
+]

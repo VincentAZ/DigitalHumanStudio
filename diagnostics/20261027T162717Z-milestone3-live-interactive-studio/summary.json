@@ -1,0 +1,136 @@
+{
+  "steps": 40733,
+  "sim_seconds": 1357.7666666666667,
+  "frames": 40733,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 288.8333,
+      "step": 8665,
+      "wall_time": 1793119056.8451025,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 81.052,
+        "y": 234.303,
+        "frame": "world",
+        "issued_wall_time": 1793119056.8201103
+      },
+      "result": "accepted",
+      "world_xy": [
+        81.052001953125,
+        234.30299377441406
+      ],
+      "ack_latency_ms": 0.7752720002827118
+    },
+    {
+      "sim_time": 310.5667,
+      "step": 9317,
+      "wall_time": 1793119101.5925882,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 82.641,
+        "y": 231.638,
+        "frame": "world",
+        "issued_wall_time": 1793119101.5748422
+      },
+      "result": "accepted",
+      "world_xy": [
+        82.64099884033203,
+        231.63800048828125
+      ],
+      "ack_latency_ms": 0.9717230000205745
+    },
+    {
+      "sim_time": 594.5,
+      "step": 17835,
+      "wall_time": 1793119681.510038,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 87.892,
+        "y": 239.116,
+        "frame": "world",
+        "issued_wall_time": 1793119681.4488356
+      },
+      "result": "accepted",
+      "world_xy": [
+        87.89199829101562,
+        239.11599731445312
+      ],
+      "ack_latency_ms": 0.9184030000142229
+    },
+    {
+      "sim_time": 713.7333,
+      "step": 21412,
+      "wall_time": 1793119927.424299,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 88.278,
+        "y": 237.461,
+        "frame": "world",
+        "issued_wall_time": 1793119927.3835425
+      },
+      "result": "accepted",
+      "world_xy": [
+        88.27799987792969,
+        237.46099853515625
+      ],
+      "ack_latency_ms": 1.3751749997936713
+    },
+    {
+      "sim_time": 1357.7667,
+      "step": 40733,
+      "wall_time": 1793121249.369776,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "quit"
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.003876999471685849
+    }
+  ],
+  "destinations": [
+    {
+      "sim_time": 288.8333333333333,
+      "xy": [
+        81.052001953125,
+        234.30299377441406
+      ]
+    },
+    {
+      "sim_time": 310.56666666666666,
+      "xy": [
+        82.64099884033203,
+        231.63800048828125
+      ]
+    },
+    {
+      "sim_time": 594.5,
+      "xy": [
+        87.89199829101562,
+        239.11599731445312
+      ]
+    },
+    {
+      "sim_time": 713.7333333333333,
+      "xy": [
+        88.27799987792969,
+        237.46099853515625
+      ]
+    }
+  ],
+  "recording_segments": [],
+  "final_state": "standing",
+  "interactive": true,
+  "adapter_sha256": "cb4d301c0dbd90dc43f0dac43c2a2592aee5223877a1512f99e7c1532eca0154",
+  "max_ack_latency_ms": 1.3751749997936713
+}

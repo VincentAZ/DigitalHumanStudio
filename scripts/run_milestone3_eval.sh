@@ -4,6 +4,9 @@
 #   controller_dir holds inference_last.ckpt and resolved_configs_inference.pt (adapter) or supplies the task
 #   environment configuration for the unadapted prior baseline.
 set -euo pipefail
+# The whole launcher runs inside main() so bash parses the complete file before executing it:
+# editing this script while a session is running can then no longer corrupt that session.
+main() {
 project_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 controller=${1:?controller}; scenario_set=${2:?set}; controller_dir=${3:?controller_dir}
 shift 3
@@ -138,3 +141,6 @@ if [[ $validation -ne 0 ]]; then
 fi
 "$docker_cmd" rm "$container_name" >/dev/null
 echo "Recorded evaluation run accepted. Evidence: $evidence"
+}
+
+main "$@"

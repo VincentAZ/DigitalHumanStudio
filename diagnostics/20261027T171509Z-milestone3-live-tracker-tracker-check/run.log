@@ -1,0 +1,10 @@
+usage: milestone3_live.py [-h] --output OUTPUT --adapter-checkpoint
+                          ADAPTER_CHECKPOINT
+                          [--prior-checkpoint PRIOR_CHECKPOINT] --commands
+                          COMMANDS [--room-half-size ROOM_HALF_SIZE]
+                          [--max-session-seconds MAX_SESSION_SECONDS]
+                          [--start-motion-id START_MOTION_ID] [--seed SEED]
+                          [--interactive] [--live-dir LIVE_DIR]
+                          [--preview-width PREVIEW_WIDTH]
+                          [--preview-height PREVIEW_HEIGHT]
+milestone3_live.py: error: the following arguments are required: --adapter-checkpoint

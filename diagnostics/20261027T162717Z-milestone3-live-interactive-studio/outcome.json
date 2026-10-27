@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "process_exit_code": 0,
+  "cleanup_logged": true,
+  "steps": 40733,
+  "frames": 40733,
+  "trace_lines": 40733,
+  "commands": 5,
+  "command_results": [
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.775
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.972
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.918
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 1.375
+    },
+    {
+      "cmd": "quit",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.004
+    }
+  ],
+  "final_state": "standing",
+  "resets": 1,
+  "milestone3_complete": false,
+  "recovered_by_hand": true,
+  "launcher_exit_code_recorded": 2,
+  "launcher_failure": "launcher edited while running; see launcher-failure.txt"
+}

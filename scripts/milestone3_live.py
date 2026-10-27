@@ -31,7 +31,14 @@ from protomotions.utils.simulator_imports import import_simulator_before_torch
 AppLauncher = import_simulator_before_torch("isaaclab")
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--output", type=Path, required=True)
-parser.add_argument("--adapter-checkpoint", type=Path, required=True)
+parser.add_argument("--controller", choices=["adapter", "tracker"], default="adapter",
+                    help="adapter: GPC prior + trained walking adapter; tracker: Milestone 1 tracker following a composed clip reference")
+parser.add_argument("--adapter-checkpoint", type=Path, default=None, help="inference_last.ckpt of a trained adapter (controller=adapter)")
+parser.add_argument("--tracker-checkpoint", type=Path,
+                    default=Path("/studio/assets/data/pretrained_models/motion_tracker/soma-bones/last_lab.ckpt"))
+parser.add_argument("--walk-clip", type=int, default=30)
+parser.add_argument("--stop-clip", type=int, default=30)
+parser.add_argument("--idle-clip", type=int, default=30)
 parser.add_argument("--prior-checkpoint", type=Path,
                     default=Path("/studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt"))
 parser.add_argument("--commands", type=Path, required=True, help="JSON lines command file (read incrementally)")
@@ -46,6 +53,8 @@ parser.add_argument("--preview-width", type=int, default=640)
 parser.add_argument("--preview-height", type=int, default=480)
 AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
+if args.controller == "adapter" and args.adapter_checkpoint is None:
+    parser.error("--adapter-checkpoint is required for --controller adapter")
 args.output.mkdir(parents=True, exist_ok=True)
 if args.live_dir is not None:
     args.live_dir.mkdir(parents=True, exist_ok=True)
@@ -71,14 +80,10 @@ def run_session():
     from isaaclab.sensors.camera import Camera, CameraCfg
     from isaaclab_physx.renderers import IsaacRtxRendererCfg
     import isaaclab.sim as sim_utils
-    from protomotions.simulator.base_simulator.utils import convert_friction_for_simulator
-    from protomotions.utils.component_builder import build_all_components
-    from protomotions.utils.hydra_replacement import get_class
-    from protomotions.utils.rotations import calc_heading_quat, quat_rotate
+    from protomotions.utils.rotations import quat_rotate
     from protomotions.envs.mdp_component import MdpComponent
     from studio_walk import kernels
-    from studio_walk.control import ScriptedTargetCommandSource
-    from studio_walk.experiment_common import apply_studio_inference_overrides
+    from studio_walk.live_controllers import build_controller
 
     def encode(obj):
         if isinstance(obj, torch.Tensor):
@@ -96,44 +101,22 @@ def run_session():
     fabric = Fabric(accelerator="gpu", devices=1, num_nodes=1, loggers=[], callbacks=[])
     fabric.launch()
     device = fabric.device
-    ckpt = args.adapter_checkpoint
-    configs = torch.load(ckpt.parent / "resolved_configs_inference.pt", map_location="cpu", weights_only=False)
-    robot, sim_cfg, env_cfg = configs["robot"], configs["simulator"], configs["env"]
-    apply_studio_inference_overrides(env_cfg)
-    sim_cfg.num_envs, sim_cfg.headless, sim_cfg.w_last = 1, True, True
-    configs["motion_lib"].motion_file = "/studio/assets/data/motion_for_trackers/soma23_bones_seed_mini.pt"
-    configs["motion_lib"].motion_file_shard_indices = None
-    configs["agent"].pretrained_modules["prior"].checkpoint_path = str(args.prior_checkpoint)
-    terrain_cfg, sim_cfg = convert_friction_for_simulator(configs["terrain"], sim_cfg)
-    configs["terrain"], configs["simulator"] = terrain_cfg, sim_cfg
+    def make_camera(_sim):
+        return Camera(CameraCfg(
+            prim_path="/World/StudioCamera", update_period=0, width=args.preview_width, height=args.preview_height, data_types=["rgb"],
+            renderer_cfg=IsaacRtxRendererCfg(),
+            spawn=sim_utils.PinholeCameraCfg(focal_length=24.0, horizontal_aperture=20.955, clipping_range=(0.1, 1000.0))))
+
+    controller = build_controller(args.controller, args, device, fabric, app,
+                                  "/studio/assets/data/motion_for_trackers/soma23_bones_seed_mini.pt", after_sim=make_camera)
+    configs, robot, sim, env, camera = controller.configs, controller.robot, controller.sim, controller.env, controller.camera
     (args.output / "resolved-configs.json").write_text(json.dumps(configs, default=encode, indent=2) + "\n")
-    components = build_all_components(terrain_cfg, configs["scene_lib"], configs["motion_lib"], sim_cfg, robot,
-                                      device, simulation_app=app)
-    sim = components["simulator"]
-    camera = Camera(CameraCfg(
-        prim_path="/World/StudioCamera", update_period=0, width=args.preview_width, height=args.preview_height, data_types=["rgb"],
-        renderer_cfg=IsaacRtxRendererCfg(),
-        spawn=sim_utils.PinholeCameraCfg(focal_length=24.0, horizontal_aperture=20.955, clipping_range=(0.1, 1000.0))))
-    env = get_class(env_cfg._target_)(config=env_cfg, robot_config=robot, device=device, terrain=components["terrain"],
-                                      scene_lib=components["scene_lib"], motion_lib=components["motion_lib"], simulator=sim)
-    source = env.control_manager.components["target"].command_source
-    assert isinstance(source, ScriptedTargetCommandSource)
     anchor = robot.anchor_body_index
     dt = env.dt
     assert abs(dt - 1 / 30) < 1e-9
     env_ids = torch.arange(1, device=device)
-    agent = get_class(configs["agent"]._target_)(config=configs["agent"], env=env, fabric=fabric, root_dir=args.output / "upstream")
-    agent.setup()
-    agent.load(ckpt, load_env=False, load_training_state=False)
-    agent.eval()
+    policy = controller.act
 
-    def policy(obs, step):
-        agent.pre_collect_step(step)
-        td = agent.obs_dict_to_tensordict(agent.add_agent_info_to_obs(obs))
-        out = agent.model(td)
-        return out["mean_action"] if "mean_action" in out.keys() else out["action"]
-
-    motion_lengths = env.motion_lib.get_motion_length(None)
     status_stream = (args.output / "status.jsonl").open("w", buffering=1)
     trace_stream = (args.output / "trace.jsonl").open("w", buffering=1)
     writer = imageio.get_writer(str(args.output / "performance.mp4"), fps=30, codec="libx264", quality=7, macro_block_size=1)
@@ -141,11 +124,11 @@ def run_session():
                "fallen": False, "recording_segments": [], "active_segment": None, "spawn_xy": None,
                "destination": None, "resets": 0, "commands": [], "paused": False, "pause_started_wall": None}
     step_wall_times = []
-    adapter_sha256 = sha256_of(ckpt)
+    adapter_sha256 = controller.contract.get("adapter_sha256") or controller.contract.get("tracker_sha256")
 
     def heading_yaw(root_rot):
-        forward = quat_rotate(calc_heading_quat(root_rot.unsqueeze(0), w_last=True),
-                              torch.tensor([[1.0, 0.0, 0.0]], device=device), w_last=True)[0]
+        """Facing direction: yaw of the pelvis' semantic forward axis (SOMA faces along -y)."""
+        forward = quat_rotate(root_rot.unsqueeze(0), torch.tensor([[0.0, -1.0, 0.0]], device=device), w_last=True)[0]
         return math.atan2(float(forward[1]), float(forward[0]))
 
     def publish_live(rgb=None):
@@ -153,7 +136,7 @@ def run_session():
         if args.live_dir is None:
             return
         _, root_pos, root_rot, speed, up_z = current_pose()
-        target = env.control_manager.components["target"]._tar_pos[0, :2]
+        target = controller.target_xy()
         now = time.time()
         rate = None
         if len(step_wall_times) >= 2:
@@ -171,6 +154,7 @@ def run_session():
                  "recording_segments": len(session["recording_segments"]),
                  "steps_per_wall_second": round(rate, 2) if rate else None, "wall_time": now,
                  "preview_size": [args.preview_width, args.preview_height], "adapter_sha256": adapter_sha256,
+                 "controller": controller.name, "phase": controller.phase(),
                  "max_session_seconds": args.max_session_seconds}
         tmp = args.live_dir / "state.json.tmp"
         tmp.write_text(json.dumps(state) + "\n")
@@ -198,8 +182,7 @@ def run_session():
         return state, root_pos, root_rot, speed, up_z
 
     def do_reset():
-        env.motion_manager.motion_ids[:] = args.start_motion_id
-        env.motion_manager.motion_times[:] = 0.0
+        controller.reset(env_ids, args.start_motion_id)
         # The first reset samples a flat spawn; every later reset returns the character to that
         # same spot so the room, its bounds and the top-down map stay fixed for the whole session.
         pinned = session["spawn_xy"]
@@ -210,8 +193,7 @@ def run_session():
             obs, _ = env.reset(env_ids, sample_flat=True, disable_motion_resample=True)
         finally:
             env.terrain.sample_valid_locations = original_sampler
-        if hasattr(agent.model, "reset_rollout_context"):
-            agent.model.reset_rollout_context(env_ids=env_ids)
+        controller.after_reset(env_ids)
         _, root_pos, _, _, _ = current_pose()
         if pinned is None:
             session["spawn_xy"] = root_pos[:2].clone()
@@ -220,7 +202,6 @@ def run_session():
         session["state"] = "standing"
         session["destination"] = None
         session["resets"] += 1
-        source.hold_position(env_ids)
         env._current_context = None
         env.compute_observations(context=env._build_global_context())
         return env.get_obs()
@@ -238,8 +219,9 @@ def run_session():
             x, y = float(command["x"]), float(command["y"])
             _, root_pos, root_rot, _, _ = current_pose()
             if frame == "local":
-                local = torch.tensor([[x, y, 0.0]], device=device)
-                world = root_pos[:2] + quat_rotate(calc_heading_quat(root_rot.unsqueeze(0), w_last=True), local, w_last=True)[0, :2]
+                facing = heading_yaw(root_rot)      # local frame: x ahead of the character, y to its left
+                world = root_pos[:2] + torch.tensor([x * math.cos(facing) - y * math.sin(facing),
+                                                     x * math.sin(facing) + y * math.cos(facing)], device=device)
             else:
                 world = torch.tensor([x, y], device=device)
             if session["fallen"]:
@@ -247,7 +229,7 @@ def run_session():
             elif not in_bounds(world):
                 ack.update({"result": "rejected_out_of_bounds", "world_xy": world.tolist(), "room_half_size": args.room_half_size})
             else:
-                source.set_target_now(env_ids, world.unsqueeze(0))
+                controller.set_destination(env_ids, world)
                 session["destination"] = world.clone()
                 session["state"] = "walking"
                 destinations.append({"sim_time": session["sim_time"], "xy": world.tolist()})
@@ -256,7 +238,7 @@ def run_session():
             if session["fallen"]:
                 ack.update({"result": "rejected_fallen_requires_reset"})
             else:
-                source.hold_position(env_ids)
+                controller.hold(env_ids)
                 _, root_pos, _, _, _ = current_pose()
                 session["destination"] = root_pos[:2].clone()
                 session["state"] = "stopping"
@@ -335,8 +317,7 @@ def run_session():
         consumed_lines = len(lines)
 
     (args.output / "session-contract.json").write_text(json.dumps({
-        "adapter_checkpoint": str(ckpt), "adapter_sha256": sha256_of(ckpt),
-        "prior_checkpoint": str(args.prior_checkpoint), "prior_sha256": sha256_of(args.prior_checkpoint),
+        **controller.contract,
         "commands_file": str(args.commands), "room_half_size_m": args.room_half_size,
         "start_motion_id": args.start_motion_id, "control_hz": 30, "physics_hz": 120,
         "fall_rule": {"pelvis_height_below_m": FALL_HEIGHT, "up_z_below": FALL_UP_Z},
@@ -371,7 +352,7 @@ def run_session():
             state, root_pos, root_rot, speed, up_z = current_pose()
             assert torch.isfinite(state.rigid_body_pos).all() and torch.isfinite(action).all()
             height = float(root_pos[2])
-            target = env.control_manager.components["target"]._tar_pos[0, :2]
+            target = controller.target_xy()
             dist = float(torch.linalg.norm(target - root_pos[:2]))
             fallen_now = (height < FALL_HEIGHT) or (up_z < FALL_UP_Z)
             if fallen_now and not session["fallen"]:
@@ -387,7 +368,7 @@ def run_session():
             trace_stream.write(json.dumps({"step": session["step"], "sim_time": round(session["sim_time"], 4),
                                            "root_pos": [round(float(v), 4) for v in root_pos], "speed": round(speed, 4),
                                            "up_z": round(up_z, 4), "target_xy": [round(float(v), 4) for v in target],
-                                           "distance": round(dist, 4), "state": session["state"],
+                                           "distance": round(dist, 4), "state": session["state"], "phase": controller.phase(),
                                            "dof_pos": [round(float(v), 4) for v in state.dof_pos[0]],
                                            "root_rot_xyzw": [round(float(v), 5) for v in root_rot]}) + "\n")
             trajectory.append([float(root_pos[0]), float(root_pos[1]), session["state"]])
@@ -437,7 +418,7 @@ def run_session():
                "paused_wall_seconds": session["paused_wall_seconds"], "resets": session["resets"],
                "commands": session["commands"], "destinations": destinations,
                "recording_segments": session["recording_segments"], "final_state": session["state"],
-               "interactive": args.interactive, "adapter_sha256": adapter_sha256,
+               "interactive": args.interactive, "adapter_sha256": adapter_sha256, "controller": controller.name,
                "max_ack_latency_ms": max([c.get("ack_latency_ms", 0.0) for c in session["commands"]] + [0.0])}
     (args.output / "summary.json").write_text(json.dumps(summary, indent=2, default=encode) + "\n")
     sim._sim.stage.Export(str(args.output / "final-scene.usda"))

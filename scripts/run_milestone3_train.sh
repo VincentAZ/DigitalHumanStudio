@@ -3,6 +3,9 @@
 # usage: run_milestone3_train.sh <sft|rlft> <seed> <num_envs> <batch_size> <wall_clock_seconds> <experiment_name>
 #        [--warm-start <host path to last.ckpt>] [-- <extra train_agent arguments>]
 set -euo pipefail
+# The whole launcher runs inside main() so bash parses the complete file before executing it:
+# editing this script while a session is running can then no longer corrupt that session.
+main() {
 project_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 stage=${1:?stage}; seed=${2:?seed}; num_envs=${3:?num_envs}; batch_size=${4:?batch_size}
 wall_seconds=${5:?wall_clock_seconds}; experiment_name=${6:?experiment_name}
@@ -128,3 +131,6 @@ if [[ $validation -ne 0 ]]; then
 fi
 "$docker_cmd" rm "$container_name" >/dev/null
 echo "Recorded $stage training accepted. Evidence: $evidence Results: $results_dir"
+}
+
+main "$@"

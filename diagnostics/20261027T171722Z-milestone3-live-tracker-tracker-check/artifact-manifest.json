@@ -1,0 +1,25 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-tracker-check-20261027T171722Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 1452,
+      "sha256": "4c2ba5c13e36d408ed0f33d317475f93b9fe032717747c1f1e8637dba1b1923e"
+    },
+    "kit.log": {
+      "bytes": 764806,
+      "sha256": "535e1d173bfd7e23b10e8d58ebd732ed781578df7276c06876429f71443661d5"
+    },
+    "status.jsonl": {
+      "bytes": 163,
+      "sha256": "977536e0a1b2652a5cdd61a1ae90597c442876ff5ae97faf23535844fa7a797a"
+    },
+    "trace.jsonl": {
+      "bytes": 819,
+      "sha256": "5222ed7cb351779be43fd8f20ace22f67b8dacd89f95371b312c70d47eeb7d62"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "a305727efb0c9887278f98b2445df46681ddc59a47fd5f619aff506d0d1f6531"
+    }
+  }
+}

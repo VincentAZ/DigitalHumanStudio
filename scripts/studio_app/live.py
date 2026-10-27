@@ -245,6 +245,7 @@ class LiveView(QWidget):
     def refresh_controllers(self):
         current = self.controller_combo.currentData()
         self.controller_combo.clear()
+        self.controller_combo.addItem("Tracker-driven walker  (Milestone 1 tracker + licensed clips, no training)", "tracker")
         for run in st.list_controllers():
             title = f"{run.experiment}  ({run.created}, {run.epochs} epochs)"
             self.controller_combo.addItem(title, str(run.results_dir))
@@ -388,8 +389,9 @@ class LiveView(QWidget):
 
     def _render_status(self, state: dict):
         colour = STATE_COLOURS.get(state.get("state", ""), "#52514e")
+        phase = f" · reference: {state['phase']}" if state.get("phase") else ""
         self.status_labels["state"].setText(f"<span style='color:{colour}; font-weight:600'>{state.get('state')}</span>"
-                                            + (" (fallen: reset required)" if state.get("fallen") else ""))
+                                            + (" (fallen: reset required)" if state.get("fallen") else "") + phase)
         self.status_labels["sim_time"].setText(f"{state.get('sim_time', 0):.2f} s · step {state.get('step', 0)}")
         self.status_labels["speed"].setText(f"{state.get('speed', 0):.3f} m/s")
         self.status_labels["distance"].setText(f"{state.get('distance', 0):.2f} m")
@@ -400,7 +402,7 @@ class LiveView(QWidget):
         self.pause_button.setText("Resume" if state.get("paused") else "Pause")
         self.record_button.setText("Stop recording segment" if state.get("recording") else "Start recording segment")
         self.session_label.setText(f"Session {Path(self.session['output']).name} · container {self.session['container']} · "
-                                   f"preview {'x'.join(str(v) for v in state.get('preview_size', []))} · adapter {state.get('adapter_sha256', '')[:12]}")
+                                   f"preview {'x'.join(str(v) for v in state.get('preview_size', []))} · {state.get('controller', 'adapter')} {state.get('adapter_sha256', '')[:12]}")
 
     @staticmethod
     def _format_status(record: dict) -> str:

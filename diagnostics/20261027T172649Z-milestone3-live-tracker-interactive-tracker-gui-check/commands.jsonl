@@ -1,0 +1,11 @@
+{"cmd":"destination","x":3.0,"y":0.0,"frame":"local"}
+{"cmd":"pause"}
+{"cmd":"resume"}
+{"cmd":"destination","x":-2.0,"y":2.0,"frame":"local"}
+{"cmd":"stop"}
+{"cmd":"record","action":"start","name":"gui-check"}
+{"cmd":"push","vx":4.0,"vy":0.0}
+{"cmd":"reset"}
+{"cmd":"record","action":"stop"}
+{"cmd":"destination","x":2.0,"y":0.0,"frame":"local"}
+{"cmd":"quit"}

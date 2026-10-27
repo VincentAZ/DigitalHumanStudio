@@ -1,0 +1,11 @@
+Launcher post-processing did not run for this session.
+
+The session's launcher (scripts/run_milestone3_live.sh) was edited on disk while this instance was
+still executing (adding the tracker-driven controller option). Bash reads scripts incrementally, so
+when the worker exited after the operator's quit command the launcher parsed the modified file and
+died with "--mount: command not found" / "syntax error near unexpected token" (see session.log),
+exit-code.txt = 2. The worker itself completed normally (container exit 0, result.json written,
+Kit shutdown markers present). The records in this folder (process-exit-code.txt, container.json,
+copied outputs, artifact-manifest.json, outcome.json) were produced afterwards by re-running the
+launcher's post-processing steps by hand on 2026-10-27; outcome.json is marked
+"recovered_by_hand": true. The launchers now run inside main() so a complete parse precedes execution.

@@ -60,6 +60,19 @@ Preview frames are rendered by the simulation worker itself, so the preview rate
 control-step rate, not the recording rate: recordings stay timed at 30 fps simulated regardless of
 how fast the preview arrives. Larger preview sizes cost render time per step.
 
+## Tracker-driven walker
+
+The controller list in the Live scene offers, besides trained adapters, the tracker-driven
+walker: the Milestone 1 motion tracker following a reference that `scripts/studio_walk/reference_walker.py`
+composes on the fly from licensed clip segments (a looped walk cycle, a walk-to-stand transition and a
+standing idle, all from `happy_walk_ff_stop_180_R_005`). The reference heading is steered toward the
+clicked destination; the environment re-anchors the reference's planar position to the character
+every step, so the tracker always sees one frame ahead of where it is. No learning is involved, and
+the clip's own stop produces a true standstill. Launch it outside the window with
+`scripts/run_milestone3_live.sh tracker --interactive`. Its sessions are recorded like any other
+(`live-tracker-…` folders) and can be compared with the learned adapter in the same room and with the
+same buttons.
+
 ## Training and evaluation from the window
 
 The Training view calls `scripts/run_milestone3_train.sh` with the fields shown; the

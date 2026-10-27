@@ -1,0 +1,61 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-interactive-tracker-gui-check-20261027T172649Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 1477,
+      "sha256": "21d3c4636338b777f8c2a71d8125ff5d4f11b417c2189b8ede5877886faaf06c"
+    },
+    "performance.mp4": {
+      "bytes": 6143932,
+      "sha256": "6e26ae0b57a01748df1c00738457f6d31cb55951748fdd1cb3581858aa7e197d"
+    },
+    "result.json": {
+      "bytes": 312,
+      "sha256": "e6779206f4c34d6677ef9525b699869da860bbf2d018a69238694dc5fcb99144"
+    },
+    "topdown.png": {
+      "bytes": 11411,
+      "sha256": "cc6f9694c67b51b56ed793550bb5578f936e46004cce7a10c3eff7d7881fdaf9"
+    },
+    "commands.jsonl": {
+      "bytes": 361,
+      "sha256": "afdc067b640089887f05e9c745de1c6ba1dda819bb970e710302309e2dabf4ac"
+    },
+    "frame-00300.png": {
+      "bytes": 511907,
+      "sha256": "1fefb7600983176e21c45d49745a8d349492d3f358f93c357b6187b23d6169f4"
+    },
+    "final-scene.usda": {
+      "bytes": 174472,
+      "sha256": "eb73d392b1492a56be01b24fde50b7cf51cd0d628e5c5fec6d50c0a6682d87e4"
+    },
+    "kit.log": {
+      "bytes": 768308,
+      "sha256": "fa8a3ca369d7b3e390730c6858203db1a86d8f554bbb1d24f6cf415b59a6d61b"
+    },
+    "summary.json": {
+      "bytes": 5078,
+      "sha256": "3819e81175a7ba6d2e8098c306f30ca06d47568a0fffc08214b0175b96f2a8cb"
+    },
+    "status.jsonl": {
+      "bytes": 3249,
+      "sha256": "c48744fa0141ee08358e5e338241064ff9a00547b173b61056a42542930317e1"
+    },
+    "trace.jsonl": {
+      "bytes": 444938,
+      "sha256": "0afdb794b587df6af5c1a9d3c40d674c84109cc85489e012abbafe3c6411f747"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "137d2451fdff52442c32068633b2dfd1c194ba332ac29d3ce994bf45a686f21a"
+    },
+    "live/frame.jpg": {
+      "bytes": 66771,
+      "sha256": "1d005e13374e5927e3441d1df17dd8481c511486d20d94b2ec548bc8aed3f834"
+    },
+    "live/state.json": {
+      "bytes": 692,
+      "sha256": "8f66847a03a663335848578df817d2c02fc86c05b0c1aceac58c0e94126aff11"
+    }
+  }
+}

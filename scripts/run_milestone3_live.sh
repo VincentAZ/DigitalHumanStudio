@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 # One recorded live-direction session with the trained walking adapter.
-# usage: run_milestone3_live.sh <controller_dir> [<commands.jsonl>] [--label name] [--interactive] [--preview WxH]
+# usage: run_milestone3_live.sh <controller_dir|tracker> [<commands.jsonl>] [--label name] [--interactive] [--preview WxH]
+#   controller_dir: a trained adapter directory (inference_last.ckpt + resolved_configs_inference.pt), or the word
+#   "tracker" for the tracker-driven walker (Milestone 1 tracker following a reference composed from licensed clips).
 #   --interactive: the control center appends commands to <output>/commands.jsonl while the worker publishes
 #   preview frames to <output>/live/; the session pointer is written to .runtime/studio-live-current.json.
 set -euo pipefail
+# The whole launcher runs inside main() so bash parses the complete file before executing it:
+# editing this script while a session is running can then no longer corrupt that session.
+main() {
 project_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 controller_dir=${1:?controller_dir}; shift
 commands="$project_root/config/milestone3-live-script.jsonl"; label=""; interactive=0; preview="640x480"
@@ -17,14 +22,22 @@ while [[ $# -gt 0 ]]; do
 done
 [[ "$preview" =~ ^[0-9]+x[0-9]+$ ]] || { echo "Expected --preview WxH" >&2; exit 2; }
 preview_width=${preview%x*}; preview_height=${preview#*x}
-controller_dir=$(cd -- "$controller_dir" && pwd)
-[[ -f "$controller_dir/inference_last.ckpt" && -f "$controller_dir/resolved_configs_inference.pt" ]]
+controller=adapter
+if [[ "$controller_dir" == tracker ]]; then
+    controller=tracker
+    controller_dir="$project_root/.runtime/milestone1/assets/data/pretrained_models/motion_tracker/soma-bones"
+    [[ -f "$controller_dir/last_lab.ckpt" && -f "$controller_dir/resolved_configs_inference.pt" ]]
+else
+    controller_dir=$(cd -- "$controller_dir" && pwd)
+    [[ -f "$controller_dir/inference_last.ckpt" && -f "$controller_dir/resolved_configs_inference.pt" ]]
+fi
 [[ $interactive == 1 ]] || commands=$(readlink -f "$commands")
 docker_cmd="$project_root/scripts/docker.sh"
 image=$(cat "$project_root/config/runtime-image.lock")
 [[ "$image" =~ ^sha256:[a-f0-9]{64}$ ]]
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
 name="live${label:+-$label}"; [[ $interactive == 1 ]] && name="live-interactive${label:+-$label}"
+[[ $controller == tracker ]] && name="${name/live/live-tracker}"
 evidence="$project_root/diagnostics/$stamp-milestone3-$name"
 output="$project_root/artifacts/milestone3/$name-$stamp"
 runtime_home="$project_root/.runtime/isaac-home"
@@ -44,11 +57,17 @@ if [[ $interactive == 1 ]]; then
 fi
 cp -r "$project_root/scripts/studio_walk" "$evidence/studio_walk"; rm -rf "$evidence/studio_walk/__pycache__"
 cp "$project_root/scripts/milestone3_live.py" "$project_root/scripts/run_milestone3_live.sh" "$commands" "$evidence/"
-( cd "$controller_dir" && sha256sum inference_last.ckpt resolved_configs_inference.pt ) > "$evidence/controller.sha256"
+if [[ $controller == tracker ]]; then
+    ( cd "$controller_dir" && sha256sum last_lab.ckpt resolved_configs_inference.pt ) > "$evidence/controller.sha256"
+else
+    ( cd "$controller_dir" && sha256sum inference_last.ckpt resolved_configs_inference.pt ) > "$evidence/controller.sha256"
+fi
 "$docker_cmd" image inspect "$image" > "$evidence/image.json"
 "$docker_cmd" ps --format '{{.Names}} {{.Status}}' > "$evidence/running-containers-before.txt"
 [[ ! -s "$evidence/running-containers-before.txt" ]] || { echo 'STOP: inspect running containers first.'; exit 2; }
 worker_args=(--max-session-seconds 120)
+controller_args=(--controller "$controller")
+[[ $controller == adapter ]] && controller_args+=(--adapter-checkpoint /studio/controller/inference_last.ckpt)
 mounts=(--mount "type=bind,src=$commands,dst=/studio/commands.jsonl,readonly")
 commands_in_container=/studio/commands.jsonl
 session_timeout=3600
@@ -71,7 +90,7 @@ command=("$docker_cmd" run --name "$container_name" --gpus all --runtime=nvidia
     "${mounts[@]}"
     --mount "type=bind,src=$output,dst=/studio/output"
     "$image" /studio/scripts/milestone3_live.py --output /studio/output
-    --adapter-checkpoint /studio/controller/inference_last.ckpt --commands "$commands_in_container"
+    "${controller_args[@]}" --commands "$commands_in_container"
     "${worker_args[@]}" --device cuda:0 --enable_cameras --viz none
     --kit_args "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info")
 { printf '%q' "${command[0]}"; printf ' %q' "${command[@]:1}"; printf '\n'; } > "$evidence/command.txt"
@@ -120,3 +139,6 @@ if [[ $validation -ne 0 ]]; then
 fi
 "$docker_cmd" rm "$container_name" >/dev/null
 echo "Recorded live session accepted. Evidence: $evidence"
+}
+
+main "$@"
