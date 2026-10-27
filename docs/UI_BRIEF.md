@@ -1,5 +1,8 @@
 # Digital Human Studio: what the app does today (brief for the UI redesign)
 
+> Status 2026-10-27: the redesign delivered against this brief (`Astra Redesign/`) was implemented as
+> `scripts/studio_app/web/` and wired to the back end described below; see `docs/CONTROL_CENTER.md`.
+
 Audience: whoever designs the new interface. This describes only the parts in use. Training,
 evaluation and the comparison tools are retired and must not appear. The redesign replaces the
 current PySide6 window (`scripts/studio_app/`); the back end stays as is and is described at the

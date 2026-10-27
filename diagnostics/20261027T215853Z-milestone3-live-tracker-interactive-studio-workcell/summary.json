@@ -1,0 +1,197 @@
+{
+  "steps": 2532,
+  "sim_seconds": 84.4,
+  "frames": 2532,
+  "paused_wall_seconds": 3.0145012739994854,
+  "resets": 2,
+  "commands": [
+    {
+      "sim_time": 28.1667,
+      "step": 845,
+      "wall_time": 1793138417.7772439,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 2,
+        "y": 1.5,
+        "frame": "spawn",
+        "issued_wall_time": 1793138417.7205663
+      },
+      "result": "accepted",
+      "world_xy": [
+        102.0,
+        101.5
+      ],
+      "ack_latency_ms": 0.7168449992605019
+    },
+    {
+      "sim_time": 43.7667,
+      "step": 1313,
+      "wall_time": 1793138444.7763274,
+      "state": "paused",
+      "event": "command",
+      "command": {
+        "cmd": "pause",
+        "issued_wall_time": 1793138444.7518752
+      },
+      "result": "accepted",
+      "sim_time_before": 43.766666666666666,
+      "ack_latency_ms": 0.06284900155151263
+    },
+    {
+      "sim_time": 43.7667,
+      "step": 1313,
+      "wall_time": 1793138447.790787,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "resume",
+        "issued_wall_time": 1793138447.7704775
+      },
+      "result": "accepted",
+      "wall_seconds": 3.0145012739994854,
+      "sim_time_after": 43.766666666666666,
+      "sim_time_advanced": false,
+      "ack_latency_ms": 0.0110910004877951
+    },
+    {
+      "sim_time": 45.2667,
+      "step": 1358,
+      "wall_time": 1793138450.3248143,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "record",
+        "action": "start",
+        "name": "segment-1793138450",
+        "issued_wall_time": 1793138450.2856312
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.005820998921990395
+    },
+    {
+      "sim_time": 47.0333,
+      "step": 1411,
+      "wall_time": 1793138453.3222957,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "push",
+        "vx": 1.5,
+        "vy": 0,
+        "issued_wall_time": 1793138453.301558
+      },
+      "result": "accepted",
+      "velocity_impulse": [
+        1.5,
+        0.0,
+        0.0
+      ],
+      "ack_latency_ms": 0.6313630001386628
+    },
+    {
+      "sim_time": 49.6667,
+      "step": 1490,
+      "wall_time": 1793138457.8298535,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "record",
+        "action": "stop",
+        "name": "segment-1793138457",
+        "issued_wall_time": 1793138457.8135452
+      },
+      "result": "accepted",
+      "segment": {
+        "start_step": 1358,
+        "start_sim_time": 45.266666666666666,
+        "name": "segment-1793138450",
+        "end_step": 1490,
+        "end_sim_time": 49.666666666666664
+      },
+      "ack_latency_ms": 0.007533999450970441
+    },
+    {
+      "sim_time": 51.0333,
+      "step": 1531,
+      "wall_time": 1793138460.3852925,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "reset",
+        "issued_wall_time": 1793138460.3263824
+      },
+      "result": "accepted",
+      "spawn_xy": [
+        100.0,
+        100.0
+      ],
+      "respawn_offset_from_spawn_m": 0.0,
+      "ack_latency_ms": 21.562901998549933
+    },
+    {
+      "sim_time": 53.0667,
+      "step": 1592,
+      "wall_time": 1793138463.887737,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 2,
+        "y": 0,
+        "frame": "local",
+        "issued_wall_time": 1793138463.8428328
+      },
+      "result": "accepted",
+      "world_xy": [
+        99.30858612060547,
+        98.1617660522461
+      ],
+      "ack_latency_ms": 0.9071140011656098
+    },
+    {
+      "sim_time": 84.4,
+      "step": 2532,
+      "wall_time": 1793138519.5131807,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "quit",
+        "issued_wall_time": 1793138519.4992905
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.003827000909950584
+    }
+  ],
+  "destinations": [
+    {
+      "sim_time": 28.166666666666668,
+      "xy": [
+        102.0,
+        101.5
+      ]
+    },
+    {
+      "sim_time": 53.06666666666666,
+      "xy": [
+        99.30858612060547,
+        98.1617660522461
+      ]
+    }
+  ],
+  "recording_segments": [
+    {
+      "start_step": 1358,
+      "start_sim_time": 45.266666666666666,
+      "name": "segment-1793138450",
+      "end_step": 1490,
+      "end_sim_time": 49.666666666666664
+    }
+  ],
+  "final_state": "standing",
+  "interactive": true,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "max_ack_latency_ms": 21.562901998549933
+}

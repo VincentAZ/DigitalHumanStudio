@@ -1,8 +1,9 @@
 # Control center
 
-`scripts/studio.sh` launches the Digital Human Studio control center: one desktop window
-(PySide6 on the host) from which you direct the character, by hand or through the assistant, in a
-scene. It is built on top of the recorded live-session launcher rather than replacing it: every
+`scripts/studio.sh` launches the Digital Human Studio control center: one desktop window from
+which you direct the character, by hand or through the assistant, in a scene. Since 2026-10-27 the
+interface is the Astra redesign: an HTML/CSS/JS page (`scripts/studio_app/web/`) hosted in Qt
+WebEngine inside a PySide6 window, wired to the back end through `scripts/studio_app/bridge.py`. It is built on top of the recorded live-session launcher rather than replacing it: every
 simulation process runs inside the locked runtime image through `scripts/run_milestone3_live.sh`,
 takes the studio GPU lock and records its evidence under `diagnostics/`. Training, evaluation and
 the walker-versus-adapter comparison were retired to `sandbox/rl-training/` on 2026-10-27.
@@ -26,13 +27,27 @@ the checkout, or pass `--uninstall`.
 
 | View | What you can do |
 |---|---|
-| Live scene | Pick a trained controller, start an interactive Isaac worker, watch the rendered preview, click the top-down room map to send the character somewhere, stop walking, pause/resume simulated time, reset explicitly, push the character, mark recording segments, end the session. Command acknowledgements and the character state update live. |
-| Skills | The skill library (today: the tracker-driven walker and the retired trained adapters as controllers; library skills arrive with the next stage). |
-| Project | Locked image digest, GPU, running containers, studio lock, milestone records, latest progress-log entries, Mixar launch, shortcuts to the plan, log and diagnostics. |
+| Live scene | Pick the scene, the controller (default: the tracker-driven walker) and the preview size, start an interactive Isaac worker (a progress overlay covers the minute it takes), watch the camera frame, click the top-down room map to send the character somewhere, walk relative to the character, stop walking, pause/resume simulated time, reset explicitly (required after a fall, which shows a banner), push the character, mark recording segments, end the session cleanly or force stop. Telemetry (state and reference phase, simulated time, pelvis speed, distance to the destination, control rate, resets) and the command activity log update live. |
+| Skill library | A browsable library with search and category filters. Today it holds the tracker-driven walker; shipped clips, generated motions and composed skills arrive with the next stages of `docs/DIRECTION.md`. "Create a skill" hands a motion description to the assistant. |
+| Project | Locked image digest, interface versions, milestone records, workspace path, live GPU load and memory, the studio lock and running containers, shortcuts (Mixar, the direction document, the progress log, the diagnostics folder) and the latest progress-log entries. |
 
-The bottom dock shows the output of launchers started from the window; the full text is also
-appended to `.runtime/studio-app.log`. The status bar polls the GPU, the studio lock and the
-container list every two seconds.
+The assistant panel stays beside every view. The status bar shows whether the GPU is busy, its load
+and memory, the running containers, the session state and a button that opens the job-output drawer
+(the output of launchers started from the window; the full text is also appended to
+`.runtime/studio-app.log`). The sidebar shows the current session at all times.
+
+## How the interface is wired
+
+`scripts/studio_app/main.py` opens one `QWebEngineView` on `scripts/studio_app/web/index.html` and
+registers `Bridge` (`scripts/studio_app/bridge.py`) on a Qt WebChannel. The page calls the bridge's
+slots (start/end a session, append a command, provider settings, assistant turns, open a folder) and
+polls `poll(cursor, state_token)` about fifteen times a second, which returns the latest
+`live/state.json`, the frame URL (`live/frame.jpg` with its modification time as cache buster) and
+every event that happened since the cursor: command acknowledgements from `status.jsonl`, session
+phase changes, host status, launcher output and streamed assistant events. Qt-to-page signals are
+deliberately not used; their delivery was lost after page reloads. `STUDIO_DEVTOOLS=<port>`
+exposes Chromium's remote debugging on localhost for the interface only. The retired Qt Widgets
+interface lives in `sandbox/qt-widgets-ui/`, the design study it replaced in `Astra Redesign/`.
 
 ## How the live scene works
 
@@ -77,16 +92,17 @@ same buttons.
 
 ## Director's assistant
 
-The right-hand dock is a chat with an AI assistant that drives the studio through the same
+The right-hand panel is a chat with an AI assistant that drives the studio through the same
 operations as the buttons: `scripts/studio_assistant/tools.py` defines the tools (describe the studio
 and a scene, start or end a live session, walk to a point in scene/world/local frames, stop, pause,
 resume, reset, push, mark recordings, wait for arrival or standing, list and play skills) over the
 recorded launchers and the live command file, so every assistant action leaves the same evidence as a
 button press. Providers: Claude through the Claude Agent SDK (needs an Anthropic API key; Anthropic
 does not allow third-party apps to use the claude.ai sign-in), and OpenAI, Google Gemini, xAI Grok and
-OpenRouter through one OpenAI-compatible adapter. Keys come from the environment (`ANTHROPIC_API_KEY`,
+OpenRouter through one OpenAI-compatible adapter, and LM Studio (a local server, no key). Keys come from the environment (`ANTHROPIC_API_KEY`,
 `OPENAI_API_KEY`, `GEMINI_API_KEY`, `XAI_API_KEY`, `OPENROUTER_API_KEY`) or from
-`~/.config/digital-human-studio/providers.json` (written by the Settings dialog with mode 600); the
+`~/.config/digital-human-studio/providers.json` (written by the provider settings dialog with mode 600,
+together with the model, the thinking level and the base URL); the
 repository never holds a key, and no provider is called until you choose one and send a message.
 Transcripts with tool calls are saved under `artifacts/assistant/<stamp>-<provider>/`. The same
 assistant runs in a terminal: `.runtime/studio-app/bin/python scripts/studio_assistant.py --provider openai "walk to the machine"`.
@@ -106,8 +122,9 @@ pair into `config/scenes/`.
 
 ## Limits
 
-- The interface is a view over recorded launchers. It does not change acceptance rules; the
-  Skills view reports the 90/100 gates from recorded evaluations only.
+- The interface is a view over recorded launchers. It does not change acceptance rules.
+- Without a destination the walker's idle creeps slowly (a few centimetres per second); give it a
+  destination or a stop to hold a spot.
 - The preview is a file-based frame stream from the worker's own camera at the worker's step
   rate; a separate 30 fps 720p preview stream is not implemented.
 - Skinned characters, library skills, objects and composition are the next stages of `docs/DIRECTION.md`.

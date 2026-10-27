@@ -1,0 +1,29 @@
+{
+  "steps": 5651,
+  "sim_seconds": 188.36666666666667,
+  "frames": 5651,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 188.3667,
+      "step": 5651,
+      "wall_time": 1793138289.529364,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "quit",
+        "issued_wall_time": 1793138289.5064604
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.002644999767653644
+    }
+  ],
+  "destinations": [],
+  "recording_segments": [],
+  "final_state": "standing",
+  "interactive": true,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "max_ack_latency_ms": 0.002644999767653644
+}

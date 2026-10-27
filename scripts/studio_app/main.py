@@ -1,108 +1,93 @@
-"""Main window of the Digital Human Studio control center."""
+"""Main window of the Digital Human Studio control center.
+
+The interface is the Astra redesign (HTML/CSS/JS in ``scripts/studio_app/web``) hosted in Qt
+WebEngine; ``bridge.Bridge`` connects it to the launchers, the live worker files and the
+assistant. ``STUDIO_DEVTOOLS=<port>`` exposes Chromium's remote debugging on localhost.
+"""
 from __future__ import annotations
 
-import sys
+import os
 from pathlib import Path
 
-from PySide6.QtCore import Qt, QThread, QTimer, Signal
-from PySide6.QtWidgets import QApplication, QDockWidget, QMainWindow, QPlainTextEdit, QTabWidget
+from PySide6.QtCore import QFile, QUrl
+from PySide6.QtGui import QColor, QIcon
+from PySide6.QtWebChannel import QWebChannel
+from PySide6.QtWebEngineCore import QWebEnginePage, QWebEngineScript, QWebEngineSettings
+from PySide6.QtWebEngineWidgets import QWebEngineView
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 
-from studio_app import ROOT
-from studio_app.assistant import AssistantPanel
-from studio_app import state as st
+from studio_app import APP_LOG
+from studio_app.bridge import Bridge
 from studio_app.jobs import JobCenter
-from studio_app.live import LiveView
-from studio_app.project import ProjectView
-from studio_app.skills import SkillsView
+
+WEB = Path(__file__).resolve().parent / "web"
 
 
-class StatusPoller(QThread):
-    """Collect host status off the interface thread (nvidia-smi and docker take tens of milliseconds)."""
-    status = Signal(dict)
-
-    def run(self):
-        self.status.emit({"gpu": st.gpu_status(), "containers": st.running_containers(), "lock": st.gpu_lock_held()})
+class StudioPage(QWebEnginePage):
+    def javaScriptConsoleMessage(self, level, message, line, source):
+        try:
+            with APP_LOG.open("a") as stream:
+                stream.write(f"[page] {Path(source).name}:{line} {message}\n")
+        except OSError:
+            pass
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Digital Human Studio — control center")
-        self.resize(1500, 980)
+        self.setWindowTitle("Digital Human Studio")
+        self.resize(1600, 1000)
         self.jobs = JobCenter(self)
-        self.tabs = QTabWidget()
-        self.project = ProjectView()
-        self.skills = SkillsView()
-        self.live = LiveView(self.jobs)
-        for widget, title in ((self.live, "Live scene"), (self.skills, "Skills"), (self.project, "Project")):
-            self.tabs.addTab(widget, title)
-        self.setCentralWidget(self.tabs)
-        self.skills.use_in_live.connect(self._direct)
-        self.jobs.changed.connect(self._jobs_changed)
-        assistant_dock = QDockWidget("Director's assistant", self)
-        self.assistant = AssistantPanel()
-        assistant_dock.setWidget(self.assistant)
-        self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, assistant_dock)
-        self.resizeDocks([assistant_dock], [420], Qt.Orientation.Horizontal)
-        dock = QDockWidget("Job output (launchers run here; full log in .runtime/studio-app.log)", self)
-        self.job_log = QPlainTextEdit()
-        self.job_log.setReadOnly(True)
-        self.job_log.setMaximumBlockCount(2000)
-        dock.setWidget(self.job_log)
-        self.addDockWidget(Qt.DockWidgetArea.BottomDockWidgetArea, dock)
-        self.resizeDocks([dock], [150], Qt.Orientation.Vertical)
-        self.jobs.log.connect(self._append_log)
-        self.poller = StatusPoller(self)
-        self.poller.status.connect(self._status)
-        self.status_timer = QTimer(self)
-        self.status_timer.timeout.connect(self._poll_status)
-        self.status_timer.start(2000)
-        self._poll_status()
+        self.bridge = Bridge(self.jobs, self)
+        self.view = QWebEngineView(self)
+        self.page = StudioPage(self.view)
+        self.view.setPage(self.page)
+        self.page.setBackgroundColor(QColor("#141516"))
+        settings = self.page.settings()
+        settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessFileUrls, True)
+        settings.setAttribute(QWebEngineSettings.WebAttribute.JavascriptCanAccessClipboard, True)
+        settings.setAttribute(QWebEngineSettings.WebAttribute.FocusOnNavigationEnabled, True)
+        self._inject_webchannel_js()
+        self.channel = QWebChannel(self.page)
+        self.channel.registerObject("bridge", self.bridge)
+        self.page.setWebChannel(self.channel)
+        self.view.load(QUrl.fromLocalFile(str(WEB / "index.html")))
+        self.setCentralWidget(self.view)
 
-    def _poll_status(self):
-        if not self.poller.isRunning():
-            self.poller.start()
-
-    def _status(self, status: dict):
-        gpu = status["gpu"]
-        gpu_text = "GPU: unavailable" if not gpu else f"GPU {gpu['utilization']}% · {gpu['memory_used']}/{gpu['memory_total']} MiB · {gpu['temperature']} °C"
-        jobs = ", ".join(job.label for job in self.jobs.active()) or "none"
-        containers = len(status["containers"])
-        self.statusBar().showMessage(f"{gpu_text}   |   studio lock: {'held' if status['lock'] else 'free'}   |   "
-                                     f"containers: {containers}   |   interface jobs: {jobs}   |   {ROOT}")
-
-    def _append_log(self, text: str):
-        self.job_log.moveCursor(self.job_log.textCursor().MoveOperation.End)
-        self.job_log.insertPlainText(text)
-        self.job_log.moveCursor(self.job_log.textCursor().MoveOperation.End)
-
-    def _jobs_changed(self):
-        self.skills.refresh()
-        self.live.refresh_controllers()
-
-    def _direct(self, run):
-        self.live.select_controller(run.results_dir)
-        self.tabs.setCurrentWidget(self.live)
+    def _inject_webchannel_js(self):
+        """qwebchannel.js ships inside QtWebChannel's resources; inject it before the page's own scripts run."""
+        resource = QFile(":/qtwebchannel/qwebchannel.js")
+        if not resource.open(QFile.OpenModeFlag.ReadOnly):
+            raise RuntimeError("qwebchannel.js resource missing from the Qt build")
+        script = QWebEngineScript()
+        script.setName("qwebchannel")
+        script.setSourceCode(bytes(resource.readAll()).decode("utf-8"))
+        script.setInjectionPoint(QWebEngineScript.InjectionPoint.DocumentCreation)
+        script.setWorldId(QWebEngineScript.ScriptWorldId.MainWorld)
+        script.setRunsOnSubFrames(False)
+        self.page.scripts().insert(script)
 
     def closeEvent(self, event):
         active = self.jobs.active()
         if active:
-            from PySide6.QtWidgets import QMessageBox
-            answer = QMessageBox.question(self, "Jobs still running",
-                                          "Launchers started from this window keep running after it closes and record their own evidence. Close anyway?")
+            answer = QMessageBox.question(self, "Session still running",
+                                          "The live session keeps running after the window closes and records its own evidence. Close anyway?")
             if answer != QMessageBox.StandardButton.Yes:
                 event.ignore()
                 return
             for job in active:
                 job.process.setParent(None)
+        self.bridge.assistantNew()
         event.accept()
 
 
 def run(argv: list[str]) -> int:
+    port = os.environ.get("STUDIO_DEVTOOLS")
+    if port:
+        os.environ["QTWEBENGINE_REMOTE_DEBUGGING"] = port
     app = QApplication(argv)
     app.setApplicationName("Digital Human Studio")
     app.setDesktopFileName("digital-human-studio")   # matches the entry scripts/install_desktop_launcher.sh writes
-    from PySide6.QtGui import QIcon
     app.setWindowIcon(QIcon(str(Path(__file__).resolve().parent / "icon.svg")))
     window = MainWindow()
     window.show()

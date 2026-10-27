@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-27T20:21:22.378Z",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.47",
+    "revision": "@1d17a2e2ee147bb7d6ae2ab6abdb3a2510c17775",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.19"
+  },
+  "passed": [
+    "All three views fit 1920px",
+    "All three views fit 1600px",
+    "All three views fit 1440px",
+    "All three views fit 1280px",
+    "All three views fit 1024px",
+    "All three views fit 768px",
+    "All three views fit 600px",
+    "All three views fit 390px",
+    "All three views fit 320px",
+    "Skill search, category filters, concept dialog",
+    "Pause freezes time, reset returns to spawn, real map click walks and arrives",
+    "Fall blocks destinations until reset; out-of-bounds commands are rejected",
+    "Recording, clean end, scene switch, startup, one-session guard, emergency failure state",
+    "Assistant wait can be interrupted; manual controls stay active; replacement direction completes",
+    "Provider settings stay in-memory; keys disabled; job drawer; expanded preview",
+    "No browser exceptions, duplicate IDs, or external network requests"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "scope": "UI mockup only; no backend or simulation tests executed"
+}

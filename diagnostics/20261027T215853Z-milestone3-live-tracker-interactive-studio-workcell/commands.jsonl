@@ -1,0 +1,9 @@
+{"cmd": "destination", "x": 2, "y": 1.5, "frame": "spawn", "issued_wall_time": 1793138417.7205663}
+{"cmd": "pause", "issued_wall_time": 1793138444.7518752}
+{"cmd": "resume", "issued_wall_time": 1793138447.7704775}
+{"cmd": "record", "action": "start", "name": "segment-1793138450", "issued_wall_time": 1793138450.2856312}
+{"cmd": "push", "vx": 1.5, "vy": 0, "issued_wall_time": 1793138453.301558}
+{"cmd": "record", "action": "stop", "name": "segment-1793138457", "issued_wall_time": 1793138457.8135452}
+{"cmd": "reset", "issued_wall_time": 1793138460.3263824}
+{"cmd": "destination", "x": 2, "y": 0, "frame": "local", "issued_wall_time": 1793138463.8428328}
+{"cmd": "quit", "issued_wall_time": 1793138519.4992905}
