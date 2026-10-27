@@ -54,7 +54,10 @@ skills (behaviours) the character can perform; the assistant will generate and c
   OpenAI-compatible providers, "Forget stored key". Keys live in a per-user file, never in the project.
 - Conversation view: user messages, streamed assistant text, and the tool calls the assistant makes
   shown inline with their results (e.g. `walk_to({x: 2.5, y: 0.3, frame: "spawn"})` → accepted).
-- Input box with Send (Ctrl+Enter). "New conversation" resets.
+- Input box with Send (Ctrl+Enter) and Stop. "New conversation" resets. While the assistant works it may wait on the
+  simulation (a session start takes a minute, "wait until standing" up to two); the person must be able to
+  interrupt (Stop) and to keep using the hand controls meanwhile. Observed need: a user asked "how can I just reply
+  when I want?" while the assistant was waiting.
 - Typical sentences: "load the work cell and walk to the machine", "stop", "push her from the left",
   "walk to the conveyor, wait until she is standing, then come back".
 

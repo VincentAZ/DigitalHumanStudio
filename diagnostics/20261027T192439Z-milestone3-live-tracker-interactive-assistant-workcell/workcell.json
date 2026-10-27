@@ -1,0 +1,534 @@
+{
+ "name": "workcell",
+ "description": "Small industrial work cell: walls, a machine with its guarded zone, a conveyor, a rack, two loaded pallets, lane markings.",
+ "spawn_xy": [
+  100.0,
+  100.0
+ ],
+ "room_half_size": 5.2,
+ "usd": "workcell.usda",
+ "items": [
+  {
+   "name": "wall_north",
+   "kind": "wall",
+   "center": [
+    0.0,
+    5.5
+   ],
+   "size": [
+    11.2,
+    0.2
+   ],
+   "height": 3.0,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.82,
+    0.82,
+    0.8
+   ]
+  },
+  {
+   "name": "wall_south",
+   "kind": "wall",
+   "center": [
+    0.0,
+    -5.5
+   ],
+   "size": [
+    11.2,
+    0.2
+   ],
+   "height": 3.0,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.82,
+    0.82,
+    0.8
+   ]
+  },
+  {
+   "name": "wall_east",
+   "kind": "wall",
+   "center": [
+    5.5,
+    0.0
+   ],
+   "size": [
+    0.2,
+    11.2
+   ],
+   "height": 3.0,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.82,
+    0.82,
+    0.8
+   ]
+  },
+  {
+   "name": "wall_west",
+   "kind": "wall",
+   "center": [
+    -5.5,
+    0.0
+   ],
+   "size": [
+    0.2,
+    11.2
+   ],
+   "height": 3.0,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.82,
+    0.82,
+    0.8
+   ]
+  },
+  {
+   "name": "machine_body",
+   "kind": "machine",
+   "center": [
+    3.2,
+    2.6
+   ],
+   "size": [
+    2.0,
+    1.5
+   ],
+   "height": 1.8,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.35,
+    0.42,
+    0.5
+   ]
+  },
+  {
+   "name": "machine_panel",
+   "kind": "machine",
+   "center": [
+    2.0,
+    2.6
+   ],
+   "size": [
+    0.35,
+    0.6
+   ],
+   "height": 1.5,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.2,
+    0.22,
+    0.25
+   ]
+  },
+  {
+   "name": "conveyor_bed",
+   "kind": "conveyor",
+   "center": [
+    -2.5,
+    3.2
+   ],
+   "size": [
+    4.0,
+    0.8
+   ],
+   "height": 0.12,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.25,
+    0.55,
+    0.35
+   ]
+  },
+  {
+   "name": "conveyor_leg_a",
+   "kind": "conveyor",
+   "center": [
+    -4.3,
+    3.2
+   ],
+   "size": [
+    0.12,
+    0.6
+   ],
+   "height": 0.8,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.3,
+    0.3,
+    0.32
+   ]
+  },
+  {
+   "name": "conveyor_leg_b",
+   "kind": "conveyor",
+   "center": [
+    -2.5,
+    3.2
+   ],
+   "size": [
+    0.12,
+    0.6
+   ],
+   "height": 0.8,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.3,
+    0.3,
+    0.32
+   ]
+  },
+  {
+   "name": "conveyor_leg_c",
+   "kind": "conveyor",
+   "center": [
+    -0.7,
+    3.2
+   ],
+   "size": [
+    0.12,
+    0.6
+   ],
+   "height": 0.8,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.3,
+    0.3,
+    0.32
+   ]
+  },
+  {
+   "name": "rack",
+   "kind": "rack",
+   "center": [
+    -3.6,
+    -3.2
+   ],
+   "size": [
+    2.4,
+    1.0
+   ],
+   "height": 2.5,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.8,
+    0.45,
+    0.15
+   ]
+  },
+  {
+   "name": "pallet_a",
+   "kind": "pallet",
+   "center": [
+    2.4,
+    -3.6
+   ],
+   "size": [
+    1.2,
+    0.8
+   ],
+   "height": 0.15,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.6,
+    0.45,
+    0.25
+   ]
+  },
+  {
+   "name": "pallet_a_load",
+   "kind": "pallet",
+   "center": [
+    2.4,
+    -3.6
+   ],
+   "size": [
+    1.0,
+    0.7
+   ],
+   "height": 0.8,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.72,
+    0.6,
+    0.4
+   ]
+  },
+  {
+   "name": "pallet_b",
+   "kind": "pallet",
+   "center": [
+    3.9,
+    -3.6
+   ],
+   "size": [
+    1.2,
+    0.8
+   ],
+   "height": 0.15,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.6,
+    0.45,
+    0.25
+   ]
+  },
+  {
+   "name": "pallet_b_load",
+   "kind": "pallet",
+   "center": [
+    3.9,
+    -3.6
+   ],
+   "size": [
+    1.0,
+    0.7
+   ],
+   "height": 0.4,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.72,
+    0.6,
+    0.4
+   ]
+  },
+  {
+   "name": "lane_outer_n",
+   "kind": "marking",
+   "center": [
+    0.0,
+    4.5
+   ],
+   "size": [
+    9.0,
+    0.08
+   ],
+   "height": 0.008,
+   "yaw_deg": 0,
+   "collision": false,
+   "colour": [
+    0.95,
+    0.8,
+    0.1
+   ]
+  },
+  {
+   "name": "lane_outer_s",
+   "kind": "marking",
+   "center": [
+    0.0,
+    -4.5
+   ],
+   "size": [
+    9.0,
+    0.08
+   ],
+   "height": 0.008,
+   "yaw_deg": 0,
+   "collision": false,
+   "colour": [
+    0.95,
+    0.8,
+    0.1
+   ]
+  },
+  {
+   "name": "lane_outer_e",
+   "kind": "marking",
+   "center": [
+    4.5,
+    0.0
+   ],
+   "size": [
+    0.08,
+    9.0
+   ],
+   "height": 0.008,
+   "yaw_deg": 0,
+   "collision": false,
+   "colour": [
+    0.95,
+    0.8,
+    0.1
+   ]
+  },
+  {
+   "name": "lane_outer_w",
+   "kind": "marking",
+   "center": [
+    -4.5,
+    0.0
+   ],
+   "size": [
+    0.08,
+    9.0
+   ],
+   "height": 0.008,
+   "yaw_deg": 0,
+   "collision": false,
+   "colour": [
+    0.95,
+    0.8,
+    0.1
+   ]
+  },
+  {
+   "name": "machine_zone",
+   "kind": "marking",
+   "center": [
+    2.6,
+    1.2
+   ],
+   "size": [
+    3.6,
+    0.08
+   ],
+   "height": 0.008,
+   "yaw_deg": 0,
+   "collision": false,
+   "colour": [
+    0.95,
+    0.3,
+    0.15
+   ]
+  },
+  {
+   "name": "spawn_mark",
+   "kind": "marking",
+   "center": [
+    0.0,
+    0.0
+   ],
+   "size": [
+    0.6,
+    0.6
+   ],
+   "height": 0.008,
+   "yaw_deg": 45,
+   "collision": false,
+   "colour": [
+    0.2,
+    0.5,
+    0.9
+   ]
+  },
+  {
+   "name": "post_a",
+   "kind": "post",
+   "center": [
+    1.0,
+    1.4
+   ],
+   "size": [
+    0.12,
+    0.12
+   ],
+   "height": 1.0,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.95,
+    0.8,
+    0.1
+   ]
+  },
+  {
+   "name": "post_b",
+   "kind": "post",
+   "center": [
+    4.4,
+    1.4
+   ],
+   "size": [
+    0.12,
+    0.12
+   ],
+   "height": 1.0,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.95,
+    0.8,
+    0.1
+   ]
+  },
+  {
+   "name": "post_c",
+   "kind": "post",
+   "center": [
+    1.0,
+    -1.6
+   ],
+   "size": [
+    0.12,
+    0.12
+   ],
+   "height": 1.0,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.95,
+    0.8,
+    0.1
+   ]
+  },
+  {
+   "name": "post_d",
+   "kind": "post",
+   "center": [
+    4.4,
+    -1.6
+   ],
+   "size": [
+    0.12,
+    0.12
+   ],
+   "height": 1.0,
+   "yaw_deg": 0,
+   "collision": true,
+   "colour": [
+    0.95,
+    0.8,
+    0.1
+   ]
+  }
+ ],
+ "route": [
+  {
+   "x": 3.0,
+   "y": 0.3
+  },
+  {
+   "x": -2.3,
+   "y": 1.8
+  },
+  {
+   "x": -3.2,
+   "y": -1.3
+  },
+  {
+   "x": 0.5,
+   "y": -2.2
+  },
+  {
+   "x": 0.0,
+   "y": 0.0
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+{"cmd": "destination", "x": 101.0, "y": 100.0, "frame": "spawn", "issued_wall_time": 1793129110.7768295}
+{"cmd": "destination", "x": 101.0, "y": 100.0, "frame": "spawn", "issued_wall_time": 1793129113.7891805}
+{"cmd": "destination", "x": 101.217, "y": 100.039, "frame": "world", "issued_wall_time": 1793129129.5096166}
+{"cmd": "quit"}

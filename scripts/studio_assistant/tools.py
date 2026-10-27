@@ -10,6 +10,7 @@ import fcntl
 import json
 import os
 import subprocess
+import threading
 import time
 from pathlib import Path
 from typing import Callable, Optional
@@ -17,6 +18,11 @@ from typing import Callable, Optional
 from studio_assistant import ARTIFACTS, CONFIG, ROOT, RUNTIME, SCRIPTS
 
 LIVE_POINTER = RUNTIME / "studio-live-current.json"
+CANCEL = threading.Event()   # set by the interface's Stop button; waiting tools return early
+
+
+def cancelled() -> bool:
+    return CANCEL.is_set()
 GPU_LOCK = RUNTIME / "studio-gpu.lock"
 SKILLS_DIR = ROOT / "skills"
 
@@ -74,7 +80,7 @@ def _send(session: dict, command: dict, wait_s: float = 5.0) -> dict:
     with (output / "commands.jsonl").open("a") as stream:
         stream.write(json.dumps(command) + "\n")
     deadline = time.time() + wait_s
-    while time.time() < deadline:
+    while time.time() < deadline and not cancelled():
         if status.exists():
             lines = status.read_text().splitlines()
             for line in lines[before:]:
@@ -131,6 +137,9 @@ def start_session(controller: str = "tracker", scene: Optional[str] = None, prev
         raise RuntimeError("a live session is already running; use it or call end_session first")
     if _gpu_lock_held():
         raise RuntimeError("another studio GPU job holds the lock")
+    scenes = sorted(p.stem for p in (CONFIG / "scenes").glob("*.json"))
+    if scene and scene not in scenes:
+        raise RuntimeError(f"unknown scene {scene!r}; available scenes: {scenes}")
     target = controller
     if controller != "tracker":
         candidates = [c for c in describe_studio()["controllers"] if c["name"] == controller and "path" in c]
@@ -143,9 +152,11 @@ def start_session(controller: str = "tracker", scene: Optional[str] = None, prev
     log = RUNTIME / "assistant-live-launch.log"
     before = (_read_json(LIVE_POINTER) or {}).get("started_utc")
     with log.open("a") as stream:
-        subprocess.Popen(argv, cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT, start_new_session=True)
+        stream.write(f"=== {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())} {' '.join(argv)}\n")
+        stream.flush()
+        process = subprocess.Popen(argv, cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT, start_new_session=True)
     deadline = time.time() + wait_s
-    while time.time() < deadline:
+    while time.time() < deadline and not cancelled():
         pointer = _read_json(LIVE_POINTER)
         if pointer and pointer.get("started_utc") != before:
             state = _read_json(Path(pointer["output"]) / "live" / "state.json")
@@ -153,7 +164,12 @@ def start_session(controller: str = "tracker", scene: Optional[str] = None, prev
                 return {"started": True, "session": pointer["output"], "controller": controller, "scene": scene, "state": state}
             if (Path(pointer["evidence"]) / "exit-code.txt").exists():
                 raise RuntimeError(f"the launcher exited before the session started; see {pointer['evidence']}")
+        if process.poll() is not None:
+            tail = "".join(log.read_text(errors="replace").splitlines(keepends=True)[-6:]).strip()
+            raise RuntimeError(f"the launcher exited with code {process.returncode} before starting a session: {tail[-600:]}")
         time.sleep(0.5)
+    if cancelled():
+        raise RuntimeError("cancelled by the user; the session may still be starting in the background")
     raise RuntimeError("the session did not publish a state within the wait time")
 
 
@@ -163,7 +179,7 @@ def end_session(wait_s: float = 120.0) -> dict:
     ack = _send(session, {"cmd": "quit"})
     deadline = time.time() + wait_s
     evidence = Path(session["evidence"])
-    while time.time() < deadline and not (evidence / "exit-code.txt").exists():
+    while time.time() < deadline and not (evidence / "exit-code.txt").exists() and not cancelled():
         time.sleep(0.5)
     outcome = _read_json(evidence / "outcome.json", {}) or {}
     return {"quit": ack, "evidence": str(evidence), "outcome": outcome.get("status"), "recording": str(Path(session["output"]) / "performance.mp4")}
@@ -225,7 +241,7 @@ def wait_until(condition: str, timeout_s: float = 20.0) -> dict:
     session = _require_session()
     deadline = time.time() + max(0.0, min(float(timeout_s), 120.0))
     last = None
-    while time.time() < deadline:
+    while time.time() < deadline and not cancelled():
         state = _state(session)
         if state:
             last = state
@@ -238,7 +254,7 @@ def wait_until(condition: str, timeout_s: float = 20.0) -> dict:
             if condition == "stopped" and state.get("speed", 1) < 0.15 and state.get("state") in ("standing", "stopping"):
                 return {"met": True, "state": state}
         time.sleep(0.1)
-    return {"met": False, "state": last}
+    return {"met": False, "cancelled": cancelled(), "state": last}
 
 
 def list_skills() -> dict:

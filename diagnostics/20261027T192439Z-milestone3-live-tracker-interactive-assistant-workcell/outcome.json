@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "process_exit_code": 0,
+  "cleanup_logged": true,
+  "steps": 301,
+  "frames": 301,
+  "trace_lines": 301,
+  "commands": 4,
+  "command_results": [
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "rejected_out_of_bounds",
+      "ack_latency_ms": 0.978
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "rejected_out_of_bounds",
+      "ack_latency_ms": 0.641
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 2.929
+    },
+    {
+      "cmd": "quit",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.004
+    }
+  ],
+  "final_state": "walking",
+  "resets": 1,
+  "milestone3_complete": false
+}

@@ -1,0 +1,98 @@
+{
+  "steps": 301,
+  "sim_seconds": 10.033333333333333,
+  "frames": 301,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 0.0333,
+      "step": 1,
+      "wall_time": 1793129113.4830098,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 101.0,
+        "y": 100.0,
+        "frame": "spawn",
+        "issued_wall_time": 1793129110.7768295
+      },
+      "result": "rejected_out_of_bounds",
+      "world_xy": [
+        201.0,
+        200.0
+      ],
+      "room_half_size": 5.2,
+      "ack_latency_ms": 0.9782689994608518
+    },
+    {
+      "sim_time": 0.1333,
+      "step": 4,
+      "wall_time": 1793129113.8387637,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 101.0,
+        "y": 100.0,
+        "frame": "spawn",
+        "issued_wall_time": 1793129113.7891805
+      },
+      "result": "rejected_out_of_bounds",
+      "world_xy": [
+        201.0,
+        200.0
+      ],
+      "room_half_size": 5.2,
+      "ack_latency_ms": 0.6408110002666945
+    },
+    {
+      "sim_time": 8.6333,
+      "step": 259,
+      "wall_time": 1793129129.5162122,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 101.217,
+        "y": 100.039,
+        "frame": "world",
+        "issued_wall_time": 1793129129.5096166
+      },
+      "result": "accepted",
+      "world_xy": [
+        101.21700286865234,
+        100.03900146484375
+      ],
+      "ack_latency_ms": 2.9289250014699064
+    },
+    {
+      "sim_time": 10.0333,
+      "step": 301,
+      "wall_time": 1793129131.8174503,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "quit"
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.003545999788912013
+    }
+  ],
+  "destinations": [
+    {
+      "sim_time": 8.633333333333333,
+      "xy": [
+        101.21700286865234,
+        100.03900146484375
+      ]
+    }
+  ],
+  "recording_segments": [],
+  "final_state": "walking",
+  "interactive": true,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "max_ack_latency_ms": 2.9289250014699064
+}

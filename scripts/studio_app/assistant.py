@@ -11,6 +11,7 @@ from PySide6.QtWidgets import (QCheckBox, QComboBox, QDialog, QDialogButtonBox, 
 
 from studio_app import ROOT
 from studio_assistant import TRANSCRIPTS
+from studio_assistant.tools import CANCEL
 from studio_assistant.providers import PROVIDERS, THINKING_LEVELS, key_status, list_models, load_config, make_assistant, provider_settings, save_config
 
 
@@ -146,8 +147,13 @@ class AssistantPanel(QWidget):
         self.input.setMaximumHeight(70)
         self.send_button = QPushButton("Send")
         self.send_button.clicked.connect(self.send)
+        self.stop_button = QPushButton("Stop")
+        self.stop_button.setToolTip("Interrupt what the assistant is waiting for; it then replies with what it has")
+        self.stop_button.setEnabled(False)
+        self.stop_button.clicked.connect(CANCEL.set)
         bottom.addWidget(self.input, 1)
         bottom.addWidget(self.send_button)
+        bottom.addWidget(self.stop_button)
         root.addLayout(bottom)
         self.input.installEventFilter(self)
 
@@ -212,6 +218,8 @@ class AssistantPanel(QWidget):
         self.view.append("<p><b>Assistant:</b> ")
         self._log({"kind": "user", "text": text})
         self.send_button.setEnabled(False)
+        self.stop_button.setEnabled(True)
+        CANCEL.clear()
         self.worker = TurnWorker(self.assistant, text, self)
         self.worker.event.connect(self._event)
         self.worker.start()
@@ -232,5 +240,6 @@ class AssistantPanel(QWidget):
         elif kind == "done":
             cursor.insertHtml("</p>")
             self.send_button.setEnabled(True)
+            self.stop_button.setEnabled(False)
         self.view.setTextCursor(cursor)
         self.view.ensureCursorVisible()

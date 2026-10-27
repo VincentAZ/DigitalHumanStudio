@@ -1,0 +1,65 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-interactive-assistant-workcell-20261027T192439Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 1724,
+      "sha256": "817f3ce58d98136234925acce9b9ec48f5f60a1b1b26f69bd6d0ce0b5d38155b"
+    },
+    "performance.mp4": {
+      "bytes": 2862546,
+      "sha256": "2486eadd439e6d8cebb903c3727f1d624394dc145e63281d9d2dc9f93b968e66"
+    },
+    "result.json": {
+      "bytes": 311,
+      "sha256": "ab05cbe28f88cfc230b4e2ab72269d1366f0e45455107f06d90d96ffd11f847c"
+    },
+    "topdown.png": {
+      "bytes": 11358,
+      "sha256": "6a892d6091bb58f9350e2e4cba9589aa250c6c21a2f49316a4ee861cd6bc528d"
+    },
+    "commands.jsonl": {
+      "bytes": 335,
+      "sha256": "573a0ad95fc1d44e99ae04627b033ef32010d06201bf1ac441f13db214f53a67"
+    },
+    "frame-00300.png": {
+      "bytes": 532912,
+      "sha256": "662b7efd8c366d9d69c302b053161281e115fad2c03eb3714d021a1c7c0a0a6a"
+    },
+    "final-scene.usda": {
+      "bytes": 186865,
+      "sha256": "b8293757b1c8ccd69d20396530ce6a5bceaed36a9082248ca67a469ee2d18423"
+    },
+    "kit.log": {
+      "bytes": 768832,
+      "sha256": "29448864a8a1f8b5648b9bf40eeb6e3956895f490519a923eec23dd5148be745"
+    },
+    "summary.json": {
+      "bytes": 2261,
+      "sha256": "5bb2b7f61e6e4c55a1e48dd192787b692ea9ca09f740a4c3eb810bcde5bddc60"
+    },
+    "status.jsonl": {
+      "bytes": 1416,
+      "sha256": "a6db27ff3ef8a61cda72c2c0d75ac94a5b1cf9738728a46ee1fa1b7522b78cab"
+    },
+    "trace.jsonl": {
+      "bytes": 246619,
+      "sha256": "dc63b3aab739c9bcfad45c9a78d8770329517381adc1d336b6fabf73cf22bfeb"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "9e5a655e514710e8fb5a9b00ce1a697a2f5b7f99f67614378b383a4247337507"
+    },
+    "scene.json": {
+      "bytes": 6355,
+      "sha256": "ec44335cabe2f35972d57a81ab675ed359650676b3db730706aa4e02414e47f2"
+    },
+    "live/frame.jpg": {
+      "bytes": 69227,
+      "sha256": "7e4873f8a3c7797b01318d170a53670e9d55fe667184cd3ae8bb99b01d073dd5"
+    },
+    "live/state.json": {
+      "bytes": 674,
+      "sha256": "77dabe8d2054da134f677265037719044921e56a9daabb238c46699a289f7ce7"
+    }
+  }
+}
