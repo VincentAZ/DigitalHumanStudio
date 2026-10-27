@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import sys
+from pathlib import Path
 
 from PySide6.QtCore import Qt, QThread, QTimer, Signal
 from PySide6.QtWidgets import QApplication, QDockWidget, QMainWindow, QPlainTextEdit, QTabWidget
@@ -105,6 +106,9 @@ class MainWindow(QMainWindow):
 def run(argv: list[str]) -> int:
     app = QApplication(argv)
     app.setApplicationName("Digital Human Studio")
+    app.setDesktopFileName("digital-human-studio")   # matches the entry scripts/install_desktop_launcher.sh writes
+    from PySide6.QtGui import QIcon
+    app.setWindowIcon(QIcon(str(Path(__file__).resolve().parent / "icon.svg")))
     window = MainWindow()
     window.show()
     return app.exec()

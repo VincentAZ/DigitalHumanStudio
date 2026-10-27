@@ -18,6 +18,10 @@ The interface runs in a project-local Python 3.12 environment at `.runtime/studi
 It needs a desktop session (Wayland or X11) and the pinned uv/Python from
 `python3 scripts/install_local_tools.py`. Nothing in the Isaac image changed for the interface.
 
+`scripts/install_desktop_launcher.sh` installs a desktop entry ("Digital Human Studio" in the
+application grid, plus an icon on the Desktop) that runs the same launcher; re-run it after moving
+the checkout, or pass `--uninstall`.
+
 ## Views
 
 | View | What you can do |
