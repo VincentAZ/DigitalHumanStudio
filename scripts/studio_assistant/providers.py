@@ -20,13 +20,26 @@ from studio_assistant.tools import SYSTEM_PROMPT, TOOL_SPECS, call_tool
 
 CONFIG_PATH = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "digital-human-studio" / "providers.json"
 
+THINKING_LEVELS = ["default", "low", "medium", "high", "xhigh", "max"]   # xhigh/max apply to Claude; others cap at high
+
 PROVIDERS = {
-    "anthropic": {"title": "Claude (Agent SDK, Anthropic API key)", "kind": "agent_sdk", "model": "", "env": "ANTHROPIC_API_KEY"},
-    "openai": {"title": "OpenAI", "kind": "openai_compatible", "base_url": "https://api.openai.com/v1", "model": "gpt-5", "env": "OPENAI_API_KEY"},
-    "google": {"title": "Google Gemini", "kind": "openai_compatible", "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "model": "gemini-2.5-pro", "env": "GEMINI_API_KEY"},
-    "xai": {"title": "xAI Grok", "kind": "openai_compatible", "base_url": "https://api.x.ai/v1", "model": "grok-4", "env": "XAI_API_KEY"},
-    "openrouter": {"title": "OpenRouter", "kind": "openai_compatible", "base_url": "https://openrouter.ai/api/v1", "model": "anthropic/claude-sonnet-4.5", "env": "OPENROUTER_API_KEY"},
+    "anthropic": {"title": "Claude (Agent SDK, Anthropic API key)", "kind": "agent_sdk", "model": "sonnet", "env": "ANTHROPIC_API_KEY",
+                  "models": ["sonnet", "opus", "fable", "haiku", "claude-sonnet-5", "claude-opus-5-5", "claude-fable-5-1", "claude-haiku-5-5"]},
+    "openai": {"title": "OpenAI", "kind": "openai_compatible", "base_url": "https://api.openai.com/v1", "model": "gpt-5", "env": "OPENAI_API_KEY", "models": ["gpt-5", "gpt-5-mini"]},
+    "google": {"title": "Google Gemini", "kind": "openai_compatible", "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "model": "gemini-2.5-pro", "env": "GEMINI_API_KEY", "models": ["gemini-2.5-pro", "gemini-2.5-flash"]},
+    "xai": {"title": "xAI Grok", "kind": "openai_compatible", "base_url": "https://api.x.ai/v1", "model": "grok-4", "env": "XAI_API_KEY", "models": ["grok-4"]},
+    "openrouter": {"title": "OpenRouter", "kind": "openai_compatible", "base_url": "https://openrouter.ai/api/v1", "model": "anthropic/claude-sonnet-4.5", "env": "OPENROUTER_API_KEY", "models": ["anthropic/claude-sonnet-4.5", "openai/gpt-5", "google/gemini-2.5-pro"]},
 }
+
+
+def list_models(name: str, api_key: str = "", base_url: str = "") -> list[str]:
+    """Models the provider reports (OpenAI-compatible /models); the Claude list is the SDK's documented ids."""
+    settings = provider_settings(name)
+    if settings["kind"] == "agent_sdk":
+        return list(settings.get("models", []))
+    from openai import OpenAI
+    client = OpenAI(base_url=base_url or settings["base_url"], api_key=api_key or settings.get("api_key") or "missing")
+    return sorted(m.id for m in client.models.list())
 
 
 def load_config() -> dict:
@@ -68,6 +81,8 @@ class OpenAICompatibleAssistant:
             raise RuntimeError(f"no API key for {self.settings['title']}")
         self.client = OpenAI(base_url=self.settings["base_url"], api_key=self.settings["api_key"])
         self.model = self.settings["model"]
+        self.thinking = self.settings.get("thinking", "default")
+        self.provider_name = name
         self.messages: list[dict] = [{"role": "system", "content": SYSTEM_PROMPT}]
         self.tools = [{"type": "function", "function": {"name": t["name"], "description": t["description"], "parameters": t["parameters"]}} for t in TOOL_SPECS]
 
@@ -78,7 +93,12 @@ class OpenAICompatibleAssistant:
         self.messages.append({"role": "user", "content": user_text})
         final = ""
         for _ in range(max_steps):
-            stream = self.client.chat.completions.create(model=self.model, messages=self.messages, tools=self.tools, stream=True)
+            extra = {}
+            if self.thinking != "default":
+                effort = self.thinking if self.thinking in ("low", "medium", "high") else "high"
+                # OpenAI, Gemini and xAI take reasoning_effort; OpenRouter takes a reasoning object.
+                extra = {"extra_body": {"reasoning": {"effort": effort}}} if self.provider_name == "openrouter" else {"reasoning_effort": effort}
+            stream = self.client.chat.completions.create(model=self.model, messages=self.messages, tools=self.tools, stream=True, **extra)
             text, calls = "", {}
             for chunk in stream:
                 if not chunk.choices:

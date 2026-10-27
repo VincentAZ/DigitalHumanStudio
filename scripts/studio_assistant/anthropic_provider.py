@@ -42,6 +42,7 @@ class AgentSDKAssistant:
             setting_sources=[],
             env={"ANTHROPIC_API_KEY": api_key},
             **({"model": settings["model"]} if settings.get("model") else {}),
+            **({"effort": settings["thinking"]} if settings.get("thinking") in ("low", "medium", "high", "xhigh", "max") else {}),
         )
         self.model = settings.get("model") or "default"
         self.loop = asyncio.new_event_loop()
