@@ -1,40 +1,62 @@
 #!/usr/bin/env bash
 # One recorded live-direction session with the trained walking adapter.
-# usage: run_milestone3_live.sh <controller_dir> [<commands.jsonl>] [--label name]
+# usage: run_milestone3_live.sh <controller_dir> [<commands.jsonl>] [--label name] [--interactive] [--preview WxH]
+#   --interactive: the control center appends commands to <output>/commands.jsonl while the worker publishes
+#   preview frames to <output>/live/; the session pointer is written to .runtime/studio-live-current.json.
 set -euo pipefail
 project_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 controller_dir=${1:?controller_dir}; shift
-commands="$project_root/config/milestone3-live-script.jsonl"; label=""
+commands="$project_root/config/milestone3-live-script.jsonl"; label=""; interactive=0; preview="640x480"
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --label) label=$2; shift 2 ;;
+        --interactive) interactive=1; shift ;;
+        --preview) preview=$2; shift 2 ;;
         *) commands=$1; shift ;;
     esac
 done
+[[ "$preview" =~ ^[0-9]+x[0-9]+$ ]] || { echo "Expected --preview WxH" >&2; exit 2; }
+preview_width=${preview%x*}; preview_height=${preview#*x}
 controller_dir=$(cd -- "$controller_dir" && pwd)
 [[ -f "$controller_dir/inference_last.ckpt" && -f "$controller_dir/resolved_configs_inference.pt" ]]
-commands=$(readlink -f "$commands")
+[[ $interactive == 1 ]] || commands=$(readlink -f "$commands")
 docker_cmd="$project_root/scripts/docker.sh"
 image=$(cat "$project_root/config/runtime-image.lock")
 [[ "$image" =~ ^sha256:[a-f0-9]{64}$ ]]
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
-name="live${label:+-$label}"
+name="live${label:+-$label}"; [[ $interactive == 1 ]] && name="live-interactive${label:+-$label}"
 evidence="$project_root/diagnostics/$stamp-milestone3-$name"
 output="$project_root/artifacts/milestone3/$name-$stamp"
 runtime_home="$project_root/.runtime/isaac-home"
 assets="$project_root/.runtime/milestone1/assets"
 mkdir -p "$evidence" "$output" "$runtime_home"
+if [[ $interactive == 1 ]]; then
+    commands="$output/commands.jsonl"; : > "$commands"; mkdir -p "$output/live"
+fi
 exec 9>"$project_root/.runtime/studio-gpu.lock"
 flock -n 9 || { echo 'Another studio GPU job holds the lock.' >&2; exit 2; }
 exec > >(tee "$evidence/session.log") 2>&1
 trap 'result=$?; printf "%s\n" "$result" > "$evidence/exit-code.txt"' EXIT
+container_name="studio-m3-$name-$stamp"
+if [[ $interactive == 1 ]]; then
+    printf '{"output": "%s", "evidence": "%s", "container": "%s", "launcher_pid": %s, "controller_dir": "%s", "started_utc": "%s"}\n' \
+        "$output" "$evidence" "$container_name" "$$" "$controller_dir" "$stamp" > "$project_root/.runtime/studio-live-current.json"
+fi
 cp -r "$project_root/scripts/studio_walk" "$evidence/studio_walk"; rm -rf "$evidence/studio_walk/__pycache__"
 cp "$project_root/scripts/milestone3_live.py" "$project_root/scripts/run_milestone3_live.sh" "$commands" "$evidence/"
 ( cd "$controller_dir" && sha256sum inference_last.ckpt resolved_configs_inference.pt ) > "$evidence/controller.sha256"
 "$docker_cmd" image inspect "$image" > "$evidence/image.json"
 "$docker_cmd" ps --format '{{.Names}} {{.Status}}' > "$evidence/running-containers-before.txt"
 [[ ! -s "$evidence/running-containers-before.txt" ]] || { echo 'STOP: inspect running containers first.'; exit 2; }
-container_name="studio-m3-$name-$stamp"
+worker_args=(--max-session-seconds 120)
+mounts=(--mount "type=bind,src=$commands,dst=/studio/commands.jsonl,readonly")
+commands_in_container=/studio/commands.jsonl
+session_timeout=3600
+if [[ $interactive == 1 ]]; then
+    worker_args=(--interactive --live-dir /studio/output/live --max-session-seconds 14400
+                 --preview-width "$preview_width" --preview-height "$preview_height")
+    mounts=(); commands_in_container=/studio/output/commands.jsonl; session_timeout=15000
+fi
 command=("$docker_cmd" run --name "$container_name" --gpus all --runtime=nvidia
     --workdir /studio/output --user "$(id -u):$(id -g)" --shm-size=2g
     --env ACCEPT_EULA=Y --env OMNI_KIT_ACCEPT_EULA=YES --env NVIDIA_DRIVER_CAPABILITIES=all
@@ -46,15 +68,15 @@ command=("$docker_cmd" run --name "$container_name" --gpus all --runtime=nvidia
     --mount "type=bind,src=$project_root/scripts,dst=/studio/scripts,readonly"
     --mount "type=bind,src=$assets,dst=/studio/assets,readonly"
     --mount "type=bind,src=$controller_dir,dst=/studio/controller,readonly"
-    --mount "type=bind,src=$commands,dst=/studio/commands.jsonl,readonly"
+    "${mounts[@]}"
     --mount "type=bind,src=$output,dst=/studio/output"
     "$image" /studio/scripts/milestone3_live.py --output /studio/output
-    --adapter-checkpoint /studio/controller/inference_last.ckpt --commands /studio/commands.jsonl
-    --device cuda:0 --enable_cameras --viz none
+    --adapter-checkpoint /studio/controller/inference_last.ckpt --commands "$commands_in_container"
+    "${worker_args[@]}" --device cuda:0 --enable_cameras --viz none
     --kit_args "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info")
 { printf '%q' "${command[0]}"; printf ' %q' "${command[@]:1}"; printf '\n'; } > "$evidence/command.txt"
 set +e
-timeout --signal=TERM --kill-after=30s 3600 "${command[@]}" 2>&1 | tee "$evidence/run.log"
+timeout --signal=TERM --kill-after=30s "$session_timeout" "${command[@]}" 2>&1 | tee "$evidence/run.log"
 result=${PIPESTATUS[0]}
 set -e
 printf '%s\n' "$result" > "$evidence/process-exit-code.txt"
@@ -63,6 +85,7 @@ if [[ $result -ne 0 ]]; then "$docker_cmd" stop --timeout 20 "$container_name" >
 for record in session-contract.json summary.json status.jsonl result.json kit.log topdown.png; do
     [[ -f "$output/$record" ]] && cp "$output/$record" "$evidence/$record"
 done
+[[ $interactive == 1 && -f "$output/commands.jsonl" ]] && cp "$output/commands.jsonl" "$evidence/commands.jsonl"
 validation=0
 python3 - "$output" "$result" "$evidence" <<'PY' || validation=$?
 import hashlib, json, sys

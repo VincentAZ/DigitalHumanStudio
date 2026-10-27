@@ -10,10 +10,16 @@ explicit ``reset`` restores the character at the session's spawn point. No invis
 
 Commands carry an ``at`` field in simulated seconds (scripted sessions) or are applied as
 soon as they are read (interactive use with an appended file or FIFO).
+
+With ``--interactive`` the worker also publishes the latest preview frame and a state record
+into ``--live-dir`` after every control step, and ``pause`` without ``wall_seconds`` freezes
+simulated time until a ``resume`` command arrives. The desktop control center
+(``scripts/studio_app``) appends commands to the file and reads the live directory.
 """
 import argparse
 import dataclasses
 import hashlib
+import os
 import json
 import math
 import time
@@ -33,9 +39,16 @@ parser.add_argument("--room-half-size", type=float, default=6.0, help="Destinati
 parser.add_argument("--max-session-seconds", type=float, default=120.0)
 parser.add_argument("--start-motion-id", type=int, default=7)
 parser.add_argument("--seed", type=int, default=0)
+parser.add_argument("--interactive", action="store_true",
+                    help="Commands are applied as they arrive; pause holds until resume; preview frames are published")
+parser.add_argument("--live-dir", type=Path, default=None, help="Directory receiving frame.jpg and state.json for the control center")
+parser.add_argument("--preview-width", type=int, default=640)
+parser.add_argument("--preview-height", type=int, default=480)
 AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
 args.output.mkdir(parents=True, exist_ok=True)
+if args.live_dir is not None:
+    args.live_dir.mkdir(parents=True, exist_ok=True)
 app = AppLauncher(args).app
 
 ARRIVAL_RADIUS = 0.3
@@ -98,7 +111,7 @@ def run_session():
                                       device, simulation_app=app)
     sim = components["simulator"]
     camera = Camera(CameraCfg(
-        prim_path="/World/StudioCamera", update_period=0, width=640, height=480, data_types=["rgb"],
+        prim_path="/World/StudioCamera", update_period=0, width=args.preview_width, height=args.preview_height, data_types=["rgb"],
         renderer_cfg=IsaacRtxRendererCfg(),
         spawn=sim_utils.PinholeCameraCfg(focal_length=24.0, horizontal_aperture=20.955, clipping_range=(0.1, 1000.0))))
     env = get_class(env_cfg._target_)(config=env_cfg, robot_config=robot, device=device, terrain=components["terrain"],
@@ -126,7 +139,46 @@ def run_session():
     writer = imageio.get_writer(str(args.output / "performance.mp4"), fps=30, codec="libx264", quality=7, macro_block_size=1)
     session = {"sim_time": 0.0, "step": 0, "frames": 0, "paused_wall_seconds": 0.0, "state": "standing",
                "fallen": False, "recording_segments": [], "active_segment": None, "spawn_xy": None,
-               "destination": None, "resets": 0, "commands": []}
+               "destination": None, "resets": 0, "commands": [], "paused": False, "pause_started_wall": None}
+    step_wall_times = []
+    adapter_sha256 = sha256_of(ckpt)
+
+    def heading_yaw(root_rot):
+        forward = quat_rotate(calc_heading_quat(root_rot.unsqueeze(0), w_last=True),
+                              torch.tensor([[1.0, 0.0, 0.0]], device=device), w_last=True)[0]
+        return math.atan2(float(forward[1]), float(forward[0]))
+
+    def publish_live(rgb=None):
+        """Atomically publish the latest state (and frame) for the control center."""
+        if args.live_dir is None:
+            return
+        _, root_pos, root_rot, speed, up_z = current_pose()
+        target = env.control_manager.components["target"]._tar_pos[0, :2]
+        now = time.time()
+        rate = None
+        if len(step_wall_times) >= 2:
+            rate = (len(step_wall_times) - 1) / max(step_wall_times[-1] - step_wall_times[0], 1e-6)
+        state = {"sim_time": round(session["sim_time"], 4), "step": session["step"], "frames": session["frames"],
+                 "state": session["state"], "fallen": session["fallen"], "paused": session["paused"],
+                 "root_xy": [round(float(root_pos[0]), 4), round(float(root_pos[1]), 4)], "root_z": round(float(root_pos[2]), 4),
+                 "yaw": round(heading_yaw(root_rot), 4), "speed": round(speed, 4), "up_z": round(up_z, 4),
+                 "spawn_xy": session["spawn_xy"].tolist() if session["spawn_xy"] is not None else None,
+                 "destination": session["destination"].tolist() if session["destination"] is not None else None,
+                 "target_xy": [round(float(v), 4) for v in target],
+                 "distance": round(float(torch.linalg.norm(target - root_pos[:2])), 4),
+                 "room_half_size": args.room_half_size, "resets": session["resets"],
+                 "recording": session["active_segment"]["name"] if session["active_segment"] else None,
+                 "recording_segments": len(session["recording_segments"]),
+                 "steps_per_wall_second": round(rate, 2) if rate else None, "wall_time": now,
+                 "preview_size": [args.preview_width, args.preview_height], "adapter_sha256": adapter_sha256,
+                 "max_session_seconds": args.max_session_seconds}
+        tmp = args.live_dir / "state.json.tmp"
+        tmp.write_text(json.dumps(state) + "\n")
+        os.replace(tmp, args.live_dir / "state.json")
+        if rgb is not None:
+            frame_tmp = args.live_dir / "frame.jpg.tmp"
+            Image.fromarray(rgb).save(frame_tmp, format="JPEG", quality=85)
+            os.replace(frame_tmp, args.live_dir / "frame.jpg")
     trajectory = []
     destinations = []
 
@@ -209,6 +261,26 @@ def run_session():
                 session["destination"] = root_pos[:2].clone()
                 session["state"] = "stopping"
                 ack.update({"result": "accepted", "hold_xy": root_pos[:2].tolist()})
+        elif kind == "pause" and args.interactive and "wall_seconds" not in command:
+            if session["paused"]:
+                ack.update({"result": "rejected_already_paused"})
+            else:
+                session["state_before_pause"] = session["state"]
+                session["state"] = "paused"
+                session["paused"] = True
+                session["pause_started_wall"] = time.monotonic()
+                log_status("paused", wall_seconds=None, until="resume")
+                ack.update({"result": "accepted", "sim_time_before": session["sim_time"]})
+        elif kind == "resume":
+            if not session["paused"]:
+                ack.update({"result": "rejected_not_paused"})
+            else:
+                held = time.monotonic() - session["pause_started_wall"]
+                session["paused_wall_seconds"] += held
+                session["paused"] = False
+                session["state"] = session.pop("state_before_pause", "standing")
+                ack.update({"result": "accepted", "wall_seconds": held, "sim_time_after": session["sim_time"],
+                            "sim_time_advanced": False})
         elif kind == "pause":
             wall = float(command.get("wall_seconds", 1.0))
             before = session["sim_time"]
@@ -268,10 +340,13 @@ def run_session():
         "commands_file": str(args.commands), "room_half_size_m": args.room_half_size,
         "start_motion_id": args.start_motion_id, "control_hz": 30, "physics_hz": 120,
         "fall_rule": {"pelvis_height_below_m": FALL_HEIGHT, "up_z_below": FALL_UP_Z},
-        "commands_supported": ["destination", "stop", "pause", "reset", "push", "record", "quit"],
+        "commands_supported": ["destination", "stop", "pause", "resume", "reset", "push", "record", "quit"],
+        "interactive": args.interactive, "live_dir": str(args.live_dir) if args.live_dir else None,
+        "preview_size": [args.preview_width, args.preview_height], "max_session_seconds": args.max_session_seconds,
     }, indent=2) + "\n")
     obs = do_reset()
     log_status("session_started", spawn_xy=session["spawn_xy"].tolist())
+    publish_live()
     quit_requested = False
     max_steps = int(args.max_session_seconds / dt)
     with torch.no_grad():
@@ -285,6 +360,10 @@ def run_session():
                     break
             if quit_requested:
                 break
+            if session["paused"]:
+                publish_live()
+                time.sleep(0.03)
+                continue
             action = policy(obs, session["step"])
             obs, _, _, _, _ = env.step(action)
             session["step"] += 1
@@ -318,9 +397,12 @@ def run_session():
             sim._sim.render()
             camera.update(dt)
             rgb = camera.data.output["rgb"].torch[0].detach().cpu().numpy()[..., :3].astype(np.uint8)
-            assert rgb.shape == (480, 640, 3) and float(rgb.std()) > 5
+            assert rgb.shape == (args.preview_height, args.preview_width, 3) and float(rgb.std()) > 5
             writer.append_data(rgb)
             session["frames"] += 1
+            step_wall_times.append(time.time())
+            del step_wall_times[:-60]
+            publish_live(rgb)
             if session["step"] % 300 == 0:
                 Image.fromarray(rgb).save(args.output / f"frame-{session['step']:05d}.png")
     writer.close()
@@ -355,6 +437,7 @@ def run_session():
                "paused_wall_seconds": session["paused_wall_seconds"], "resets": session["resets"],
                "commands": session["commands"], "destinations": destinations,
                "recording_segments": session["recording_segments"], "final_state": session["state"],
+               "interactive": args.interactive, "adapter_sha256": adapter_sha256,
                "max_ack_latency_ms": max([c.get("ack_latency_ms", 0.0) for c in session["commands"]] + [0.0])}
     (args.output / "summary.json").write_text(json.dumps(summary, indent=2, default=encode) + "\n")
     sim._sim.stage.Export(str(args.output / "final-scene.usda"))

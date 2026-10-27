@@ -1,0 +1,61 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-interactive-gui-check-20261027T162435Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 844,
+      "sha256": "2bc8da75f122eb1dadfd76b2c859a4d92e7107554c1caa9f9a088068f438b4dc"
+    },
+    "performance.mp4": {
+      "bytes": 5237718,
+      "sha256": "f3ee406a819ba887bdb781b96423c2f5aa7a26f590d960e5b3bc72fa6461d10e"
+    },
+    "result.json": {
+      "bytes": 312,
+      "sha256": "3cefea948bb62042bba749cb9e187dca8d8f539b79ab3b0c554df6ba43b9cab1"
+    },
+    "topdown.png": {
+      "bytes": 10763,
+      "sha256": "ca369451e35103e4578a2ccef5db45701f55221c74cf480b425358c4cd3a93c7"
+    },
+    "commands.jsonl": {
+      "bytes": 361,
+      "sha256": "afdc067b640089887f05e9c745de1c6ba1dda819bb970e710302309e2dabf4ac"
+    },
+    "frame-00300.png": {
+      "bytes": 519554,
+      "sha256": "77737688f2a3300a64d5adaad78463adb163e2e98a257204b46ca1bfd31c5297"
+    },
+    "final-scene.usda": {
+      "bytes": 174473,
+      "sha256": "b0f2fc5b98a56fb7e63855cca4959547c43e76365d2b18de6419f1efb2f16288"
+    },
+    "kit.log": {
+      "bytes": 768384,
+      "sha256": "ce736702b6a31511c3f881e25b4b9a09ad6f14e76e6b2be2b667c8858f80183d"
+    },
+    "summary.json": {
+      "bytes": 5044,
+      "sha256": "88abe1da5b5f271b575837085727cbb803383fd4f8fcdf7485f61b85a425dbc4"
+    },
+    "status.jsonl": {
+      "bytes": 3486,
+      "sha256": "558ee27fb208fcfac9f47ea31191b0e3cfbd748245f2a4abfb1892d6da604c93"
+    },
+    "trace.jsonl": {
+      "bytes": 360006,
+      "sha256": "5a29c85f140877b32307188800b164c05ad3aee563f3c92cd21a27195b3f0290"
+    },
+    "resolved-configs.json": {
+      "bytes": 57062,
+      "sha256": "0842723cd80c715e66d7a5a6180ca7a4e14116dcca9d563c60f908b7a8bcbf6b"
+    },
+    "live/frame.jpg": {
+      "bytes": 65932,
+      "sha256": "b886108c0d3213b65dc10ee61542d17f4ece55cb12569ad14f142594a7bd8918"
+    },
+    "live/state.json": {
+      "bytes": 655,
+      "sha256": "dfc1a1d6d85581a6e74ec0c0695e2767a6f8ca66ef027d3935f74804f7c54a6a"
+    }
+  }
+}

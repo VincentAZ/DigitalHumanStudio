@@ -86,6 +86,11 @@ def _patched_post_epoch_logging(self, training_log_dict):
         print(f"STUDIO_WALL_CLOCK_LIMIT reached after {elapsed:.0f}s at epoch {self.current_epoch}; "
               "requesting a clean stop with a final checkpoint.", flush=True)
         self._should_stop = True
+    stop_request = own.metrics_log.parent / "STOP_REQUESTED"
+    if stop_request.exists() and not self._should_stop:
+        print(f"STUDIO_STOP_REQUESTED found after {elapsed:.0f}s at epoch {self.current_epoch}; "
+              "requesting a clean stop with a final checkpoint.", flush=True)
+        self._should_stop = True
 
 
 base_agent_module.BaseAgent.post_epoch_logging = _patched_post_epoch_logging

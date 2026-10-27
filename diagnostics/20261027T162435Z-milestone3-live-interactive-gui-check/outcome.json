@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "process_exit_code": 0,
+  "cleanup_logged": true,
+  "steps": 449,
+  "frames": 449,
+  "trace_lines": 449,
+  "commands": 11,
+  "command_results": [
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.938
+    },
+    {
+      "cmd": "pause",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.043
+    },
+    {
+      "cmd": "resume",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.016
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.997
+    },
+    {
+      "cmd": "stop",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 1.058
+    },
+    {
+      "cmd": "record",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.006
+    },
+    {
+      "cmd": "push",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.495
+    },
+    {
+      "cmd": "reset",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 10.431
+    },
+    {
+      "cmd": "record",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.007
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.998
+    },
+    {
+      "cmd": "quit",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.003
+    }
+  ],
+  "final_state": "walking",
+  "resets": 2,
+  "milestone3_complete": false
+}
