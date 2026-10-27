@@ -6,7 +6,7 @@ from a JSON-lines command file: ``destination``, ``stop``, ``pause``, ``reset``,
 ``record`` and ``quit``. Every command is acknowledged in ``status.jsonl`` with the
 simulated time, wall-clock latency and the resulting state. A fall is detected with the
 same rule as training; while fallen, destination commands are rejected and only an
-explicit ``reset`` restores the character. No invisible reset or teleport is used.
+explicit ``reset`` restores the character at the session's spawn point. No invisible reset or teleport is used.
 
 Commands carry an ``at`` field in simulated seconds (scripted sessions) or are applied as
 soon as they are read (interactive use with an appended file or FIFO).
@@ -148,11 +148,22 @@ def run_session():
     def do_reset():
         env.motion_manager.motion_ids[:] = args.start_motion_id
         env.motion_manager.motion_times[:] = 0.0
-        obs, _ = env.reset(env_ids, sample_flat=True, disable_motion_resample=True)
+        # The first reset samples a flat spawn; every later reset returns the character to that
+        # same spot so the room, its bounds and the top-down map stay fixed for the whole session.
+        pinned = session["spawn_xy"]
+        original_sampler = env.terrain.sample_valid_locations
+        if pinned is not None:
+            env.terrain.sample_valid_locations = lambda num_envs, sample_flat=False: pinned.to(device).unsqueeze(0).repeat(num_envs, 1)
+        try:
+            obs, _ = env.reset(env_ids, sample_flat=True, disable_motion_resample=True)
+        finally:
+            env.terrain.sample_valid_locations = original_sampler
         if hasattr(agent.model, "reset_rollout_context"):
             agent.model.reset_rollout_context(env_ids=env_ids)
         _, root_pos, _, _, _ = current_pose()
-        session["spawn_xy"] = root_pos[:2].clone()
+        if pinned is None:
+            session["spawn_xy"] = root_pos[:2].clone()
+        session["last_reset_offset_m"] = float((root_pos[:2] - session["spawn_xy"]).norm())
         session["fallen"] = False
         session["state"] = "standing"
         session["destination"] = None
@@ -211,7 +222,8 @@ def run_session():
                         "sim_time_after": session["sim_time"], "sim_time_advanced": session["sim_time"] != before})
         elif kind == "reset":
             obs = do_reset()
-            ack.update({"result": "accepted", "spawn_xy": session["spawn_xy"].tolist()})
+            ack.update({"result": "accepted", "spawn_xy": session["spawn_xy"].tolist(),
+                        "respawn_offset_from_spawn_m": session["last_reset_offset_m"]})
         elif kind == "push":
             lin = torch.tensor([[float(command.get("vx", 0.0)), float(command.get("vy", 0.0)), 0.0]], device=device)
             sim._apply_root_velocity_impulse(lin, torch.zeros_like(lin), env_ids)
