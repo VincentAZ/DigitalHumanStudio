@@ -77,6 +77,31 @@ the clip's own stop produces a true standstill. Launch it outside the window wit
 (`live-tracker-…` folders) and can be compared with the learned adapter in the same room and with the
 same buttons.
 
+## Scenes
+
+`scripts/build_scene.py` authors the industrial work-cell scene deterministically as text USD
+(`config/scenes/workcell.usda`: walls, a machine with a guarded zone, a conveyor, a rack, two loaded
+pallets, lane markings; static PhysX colliders on everything but the markings) together with its
+footprint (`workcell.json`: the same boxes in scene-relative metres, the pinned spawn on the flat
+terrain, the room size, and the comparison route). The Live scene's Scene picker passes the scene to
+the launcher, which references it into the stage at the spawn before the simulation plays, pins the
+spawn there, and copies the footprint into the session so the room map and the recorded top-down plot
+draw it. Destinations are not planned around obstacles: a click inside the machine sends the character
+into the machine. Add a scene by extending the builder or dropping a `<name>.usda` plus `<name>.json`
+pair into `config/scenes/`.
+
+## Comparing the two locomotion modes
+
+The Compare tab runs `scripts/run_milestone3_compare.sh`: the same scripted route
+(`config/milestone3-compare-route.jsonl`, scene-relative destinations with nine seconds per leg)
+through a scene, first with the tracker-driven walker, then with the chosen learned adapter, as two
+ordinary recorded live sessions. `scripts/compare_sessions.py` then scores both traces with the
+acceptance wording (arrival within 0.3 m, a 2 s hold below 0.15 m/s inside the radius, falls), writes
+`comparison.json`/`comparison.md`, a side-by-side video (`side-by-side.mp4`, ffmpeg) and paired
+top-down plots under `artifacts/milestone3/compare-<scene>-<stamp>/`, with records under
+`diagnostics/`. The tab shows the metrics table and the plots and opens the video with the system
+player. These are two scripted sessions, not the 100-trial reserved sets.
+
 ## Training and evaluation from the window
 
 The Training view calls `scripts/run_milestone3_train.sh` with the fields shown; the

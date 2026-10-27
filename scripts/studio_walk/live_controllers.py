@@ -153,7 +153,7 @@ class TrackerController:
 
     def hold(self, env_ids):
         self.destination = None
-        self.walker.request_stop()
+        self.walker.request_stop(self.sim.get_robot_state().rigid_body_pos[0, 0, :2])
 
     def target_xy(self) -> torch.Tensor:
         if self.destination is not None:

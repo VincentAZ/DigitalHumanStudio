@@ -1,0 +1,189 @@
+{
+  "sides": {
+    "left": {
+      "name": "tracker-driven walker",
+      "legs": [
+        {
+          "leg": 0,
+          "target_xy": [
+            103.0,
+            100.30000305175781
+          ],
+          "issued_s": 1.0,
+          "window_s": 9.0,
+          "arrival_s": 2.83,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.051,
+          "post_arrival_max_distance": 0.241,
+          "path_length_m": 4.65,
+          "fell": false
+        },
+        {
+          "leg": 1,
+          "target_xy": [
+            97.69999694824219,
+            101.80000305175781
+          ],
+          "issued_s": 10.0,
+          "window_s": 9.0,
+          "arrival_s": 5.4,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.107,
+          "post_arrival_max_distance": 0.203,
+          "path_length_m": 7.74,
+          "fell": false
+        },
+        {
+          "leg": 2,
+          "target_xy": [
+            96.80000305175781,
+            98.69999694824219
+          ],
+          "issued_s": 19.0,
+          "window_s": 9.0,
+          "arrival_s": 2.53,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.038,
+          "post_arrival_max_distance": 0.215,
+          "path_length_m": 4.26,
+          "fell": false
+        },
+        {
+          "leg": 3,
+          "target_xy": [
+            100.5,
+            97.80000305175781
+          ],
+          "issued_s": 28.0,
+          "window_s": 9.0,
+          "arrival_s": 3.2,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.059,
+          "post_arrival_max_distance": 0.215,
+          "path_length_m": 5.17,
+          "fell": false
+        },
+        {
+          "leg": 4,
+          "target_xy": [
+            100.0,
+            100.0
+          ],
+          "issued_s": 37.0,
+          "window_s": 9.5,
+          "arrival_s": 3.7,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.064,
+          "post_arrival_max_distance": 0.284,
+          "path_length_m": 5.05,
+          "fell": true
+        }
+      ],
+      "aggregate": {
+        "legs": 5,
+        "arrived": 5,
+        "held_2s": 0,
+        "mean_arrival_s": 3.53,
+        "median_post_arrival_speed": 0.059,
+        "falls": 1,
+        "resets": 1,
+        "steps": 1395,
+        "controller": "tracker",
+        "session": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-cmp-workcell-20261027T175219Z"
+      }
+    },
+    "right": {
+      "name": "learned adapter",
+      "legs": [
+        {
+          "leg": 0,
+          "target_xy": [
+            103.0,
+            100.30000305175781
+          ],
+          "issued_s": 1.0,
+          "window_s": 9.0,
+          "arrival_s": 3.1,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.193,
+          "post_arrival_max_distance": 0.342,
+          "path_length_m": 4.21,
+          "fell": false
+        },
+        {
+          "leg": 1,
+          "target_xy": [
+            97.69999694824219,
+            101.80000305175781
+          ],
+          "issued_s": 10.0,
+          "window_s": 9.0,
+          "arrival_s": 4.1,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.14,
+          "post_arrival_max_distance": 0.262,
+          "path_length_m": 6.63,
+          "fell": false
+        },
+        {
+          "leg": 2,
+          "target_xy": [
+            96.80000305175781,
+            98.69999694824219
+          ],
+          "issued_s": 19.0,
+          "window_s": 9.0,
+          "arrival_s": 2.87,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.146,
+          "post_arrival_max_distance": 0.163,
+          "path_length_m": 4.29,
+          "fell": false
+        },
+        {
+          "leg": 3,
+          "target_xy": [
+            100.5,
+            97.80000305175781
+          ],
+          "issued_s": 28.0,
+          "window_s": 9.0,
+          "arrival_s": 3.63,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.126,
+          "post_arrival_max_distance": 0.341,
+          "path_length_m": 4.65,
+          "fell": false
+        },
+        {
+          "leg": 4,
+          "target_xy": [
+            100.0,
+            100.0
+          ],
+          "issued_s": 37.0,
+          "window_s": 9.5,
+          "arrival_s": 2.67,
+          "hold_s": null,
+          "post_arrival_median_speed": 0.161,
+          "post_arrival_max_distance": 0.305,
+          "path_length_m": 3.41,
+          "fell": false
+        }
+      ],
+      "aggregate": {
+        "legs": 5,
+        "arrived": 5,
+        "held_2s": 0,
+        "mean_arrival_s": 3.27,
+        "median_post_arrival_speed": 0.146,
+        "falls": 0,
+        "resets": 1,
+        "steps": 1395,
+        "controller": "adapter",
+        "session": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-cmp-workcell-20261027T175401Z"
+      }
+    }
+  },
+  "video": "side-by-side.mp4"
+}

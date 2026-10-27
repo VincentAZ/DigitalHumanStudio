@@ -1,0 +1,44 @@
+{
+  "controller": "adapter",
+  "adapter_checkpoint": "/studio/controller/inference_last.ckpt",
+  "adapter_sha256": "cb4d301c0dbd90dc43f0dac43c2a2592aee5223877a1512f99e7c1532eca0154",
+  "prior_checkpoint": "/studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt",
+  "prior_sha256": "13b48605622b1eabe75cc10ccf15a2ab9c05cd953115da6ce08ad9716344a51d",
+  "commands_file": "/studio/commands.jsonl",
+  "room_half_size_m": 5.2,
+  "start_motion_id": 7,
+  "control_hz": 30,
+  "physics_hz": 120,
+  "fall_rule": {
+    "pelvis_height_below_m": 0.5,
+    "up_z_below": 0.3
+  },
+  "commands_supported": [
+    "destination",
+    "stop",
+    "pause",
+    "resume",
+    "reset",
+    "push",
+    "record",
+    "quit"
+  ],
+  "destination_frames": [
+    "local",
+    "world",
+    "spawn"
+  ],
+  "scene": "/studio/scenes/workcell.usda",
+  "scene_sha256": "c4c5f3655d4490214a5b02abdf9c93b16f0f70dc6dbe42c53061520fcb63d6af",
+  "spawn_xy_pinned": [
+    100.0,
+    100.0
+  ],
+  "interactive": false,
+  "live_dir": null,
+  "preview_size": [
+    640,
+    480
+  ],
+  "max_session_seconds": 120.0
+}

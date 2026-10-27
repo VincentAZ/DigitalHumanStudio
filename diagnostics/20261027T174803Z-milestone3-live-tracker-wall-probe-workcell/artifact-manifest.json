@@ -1,0 +1,61 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-wall-probe-workcell-20261027T174803Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 1699,
+      "sha256": "c94183bbc345f86b8bd9a03d2924635cef7e18229d24f34e13125f16b320d6df"
+    },
+    "performance.mp4": {
+      "bytes": 5521272,
+      "sha256": "5932807f8d7c275be07aeba30602e6b1ff4131ba21d72757b8b26002f931d3c3"
+    },
+    "result.json": {
+      "bytes": 311,
+      "sha256": "7b7e64b62a8a90242e9bcf1dc7477f64436c314740cc1a0387e5742ba508a3cf"
+    },
+    "frame-00600.png": {
+      "bytes": 328978,
+      "sha256": "ed8447320ba2059a55506a66708694244dfba61478a64edd7777bf83bc4df711"
+    },
+    "topdown.png": {
+      "bytes": 12882,
+      "sha256": "d6a8d496c98c6915a2dd680d30a76a67e7de79c0f71edaaf95f31c40da341c7e"
+    },
+    "frame-00300.png": {
+      "bytes": 301611,
+      "sha256": "03c7c0022aec428a206ed3abdd72e77706ffb2ca4dc965fb601994e548f7860b"
+    },
+    "final-scene.usda": {
+      "bytes": 186865,
+      "sha256": "2099193e7fd80c027450ad4710700b20a012763339925c508def821c5dd42f29"
+    },
+    "kit.log": {
+      "bytes": 768200,
+      "sha256": "f2abbea9559e8141d9d45f7577870cb616e0918288aa9c078a6e17d2b33977c1"
+    },
+    "summary.json": {
+      "bytes": 3527,
+      "sha256": "718e47d5911a7d28873dc4b310d53871511e43eaf30a62f9ac34b86442d37132"
+    },
+    "frame-00900.png": {
+      "bytes": 318580,
+      "sha256": "d054f569ccb2831bc3bd61e6eada9ab6651e5f4d11f3968d237d0f227a95dfc6"
+    },
+    "status.jsonl": {
+      "bytes": 2129,
+      "sha256": "796773294515298734c392a98001c1fa4c154930ec935f0d66ca8775e222778f"
+    },
+    "trace.jsonl": {
+      "bytes": 746921,
+      "sha256": "a2808059df2db53dce41a238d91c544cf52eb02201d5fa8201343ef2a9cd06cc"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "3273747f885fa67710c355ae84b7529aad20b72ef3b30c7d10d1601a7482b926"
+    },
+    "scene.json": {
+      "bytes": 6355,
+      "sha256": "ec44335cabe2f35972d57a81ab675ed359650676b3db730706aa4e02414e47f2"
+    }
+  }
+}

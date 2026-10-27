@@ -1,0 +1,342 @@
+#usda 1.0
+(
+    defaultPrim = "Workcell"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Workcell"
+{
+    def Cube "wall_north"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.82, 0.82, 0.8)]
+        double3 xformOp:translate = (0.0, 5.5, 1.5)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (11.2, 0.2, 3.0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "wall"
+    }
+
+    def Cube "wall_south"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.82, 0.82, 0.8)]
+        double3 xformOp:translate = (0.0, -5.5, 1.5)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (11.2, 0.2, 3.0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "wall"
+    }
+
+    def Cube "wall_east"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.82, 0.82, 0.8)]
+        double3 xformOp:translate = (5.5, 0.0, 1.5)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (0.2, 11.2, 3.0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "wall"
+    }
+
+    def Cube "wall_west"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.82, 0.82, 0.8)]
+        double3 xformOp:translate = (-5.5, 0.0, 1.5)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (0.2, 11.2, 3.0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "wall"
+    }
+
+    def Cube "machine_body"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.35, 0.42, 0.5)]
+        double3 xformOp:translate = (3.2, 2.6, 0.9)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (2.0, 1.5, 1.8)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "machine"
+    }
+
+    def Cube "machine_panel"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.2, 0.22, 0.25)]
+        double3 xformOp:translate = (2.0, 2.6, 0.75)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (0.35, 0.6, 1.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "machine"
+    }
+
+    def Cube "conveyor_bed"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.25, 0.55, 0.35)]
+        double3 xformOp:translate = (-2.5, 3.2, 0.85)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (4.0, 0.8, 0.12)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "conveyor"
+    }
+
+    def Cube "conveyor_leg_a"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.3, 0.3, 0.32)]
+        double3 xformOp:translate = (-4.3, 3.2, 0.4)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (0.12, 0.6, 0.8)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "conveyor"
+    }
+
+    def Cube "conveyor_leg_b"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.3, 0.3, 0.32)]
+        double3 xformOp:translate = (-2.5, 3.2, 0.4)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (0.12, 0.6, 0.8)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "conveyor"
+    }
+
+    def Cube "conveyor_leg_c"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.3, 0.3, 0.32)]
+        double3 xformOp:translate = (-0.7, 3.2, 0.4)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (0.12, 0.6, 0.8)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "conveyor"
+    }
+
+    def Cube "rack"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.8, 0.45, 0.15)]
+        double3 xformOp:translate = (-3.6, -3.2, 1.25)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (2.4, 1.0, 2.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "rack"
+    }
+
+    def Cube "pallet_a"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.6, 0.45, 0.25)]
+        double3 xformOp:translate = (2.4, -3.6, 0.075)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (1.2, 0.8, 0.15)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "pallet"
+    }
+
+    def Cube "pallet_a_load"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.72, 0.6, 0.4)]
+        double3 xformOp:translate = (2.4, -3.6, 0.55)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (1.0, 0.7, 0.8)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "pallet"
+    }
+
+    def Cube "pallet_b"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.6, 0.45, 0.25)]
+        double3 xformOp:translate = (3.9, -3.6, 0.075)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (1.2, 0.8, 0.15)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "pallet"
+    }
+
+    def Cube "pallet_b_load"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.72, 0.6, 0.4)]
+        double3 xformOp:translate = (3.9, -3.6, 0.35)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (1.0, 0.7, 0.4)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "pallet"
+    }
+
+    def Cube "lane_outer_n"
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.95, 0.8, 0.1)]
+        double3 xformOp:translate = (0.0, 4.5, 0.004)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (9.0, 0.08, 0.008)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "marking"
+    }
+
+    def Cube "lane_outer_s"
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.95, 0.8, 0.1)]
+        double3 xformOp:translate = (0.0, -4.5, 0.004)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (9.0, 0.08, 0.008)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "marking"
+    }
+
+    def Cube "lane_outer_e"
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.95, 0.8, 0.1)]
+        double3 xformOp:translate = (4.5, 0.0, 0.004)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (0.08, 9.0, 0.008)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "marking"
+    }
+
+    def Cube "lane_outer_w"
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.95, 0.8, 0.1)]
+        double3 xformOp:translate = (-4.5, 0.0, 0.004)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (0.08, 9.0, 0.008)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "marking"
+    }
+
+    def Cube "machine_zone"
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.95, 0.3, 0.15)]
+        double3 xformOp:translate = (2.6, 1.2, 0.004)
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (3.6, 0.08, 0.008)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "marking"
+    }
+
+    def Cube "spawn_mark"
+    {
+        double size = 1
+        color3f[] primvars:displayColor = [(0.2, 0.5, 0.9)]
+        double3 xformOp:translate = (0.0, 0.0, 0.004)
+        float3 xformOp:rotateXYZ = (0, 0, 45)
+        float3 xformOp:scale = (0.6, 0.6, 0.008)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        custom string studio:kind = "marking"
+    }
+
+    def Cylinder "post_a"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double radius = 0.06
+        double height = 1.0
+        uniform token axis = "Z"
+        color3f[] primvars:displayColor = [(0.95, 0.8, 0.1)]
+        double3 xformOp:translate = (1.0, 1.4, 0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+        custom string studio:kind = "post"
+    }
+
+    def Cylinder "post_b"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double radius = 0.06
+        double height = 1.0
+        uniform token axis = "Z"
+        color3f[] primvars:displayColor = [(0.95, 0.8, 0.1)]
+        double3 xformOp:translate = (4.4, 1.4, 0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+        custom string studio:kind = "post"
+    }
+
+    def Cylinder "post_c"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double radius = 0.06
+        double height = 1.0
+        uniform token axis = "Z"
+        color3f[] primvars:displayColor = [(0.95, 0.8, 0.1)]
+        double3 xformOp:translate = (1.0, -1.6, 0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+        custom string studio:kind = "post"
+    }
+
+    def Cylinder "post_d"
+    (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        double radius = 0.06
+        double height = 1.0
+        uniform token axis = "Z"
+        color3f[] primvars:displayColor = [(0.95, 0.8, 0.1)]
+        double3 xformOp:translate = (4.4, -1.6, 0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+        custom string studio:kind = "post"
+    }
+
+}

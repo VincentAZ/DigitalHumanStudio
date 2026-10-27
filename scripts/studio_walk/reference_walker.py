@@ -213,6 +213,9 @@ class ReferenceWalker:
     turn_rate: float = math.radians(120.0)        # rad/s, maximum heading change of the reference
     blend_frames: int = 8
     travel_angle: float = 0.0                     # direction the walk cycle travels, in the heading frame
+    hold_xy: Optional[torch.Tensor] = None        # where the character should stand while stopped/idle
+    hold_gain: float = 0.10                       # fraction of the position error corrected per frame
+    hold_max_step: float = 0.004                  # metres per frame (0.12 m/s): stays below the 0.15 m/s hold speed
     phase: str = "idle"
     frame: int = 0
     destination: Optional[torch.Tensor] = None
@@ -230,6 +233,8 @@ class ReferenceWalker:
 
     def reset(self):
         self.phase, self.frame, self.destination = "idle", 0, None
+        self.hold_xy = None
+        self.idle_direction = 1
         self.previous, self.blend_from, self.blend_left = None, None, 0
         self.history.clear()
 
@@ -238,8 +243,9 @@ class ReferenceWalker:
         if self.phase != "walk":
             self._enter("walk", 0)
 
-    def request_stop(self):
+    def request_stop(self, hold_xy: Optional[torch.Tensor] = None):
         self.destination = None
+        self.hold_xy = None if hold_xy is None else hold_xy.clone()
         if self.phase == "walk":
             self._enter("stop", 0)
 
@@ -255,6 +261,7 @@ class ReferenceWalker:
         """Advance phase/frame for the next frame, deciding transitions from the current distance."""
         if self.phase == "walk":
             if self.destination is not None and distance <= self.arrival_radius:
+                self.hold_xy = self.destination.clone()
                 self._enter("stop", 0)
                 return
             self.frame = (self.frame + 1) % self.walk.frames
@@ -263,7 +270,14 @@ class ReferenceWalker:
             if self.frame >= self.stop.frames:
                 self._enter("idle", 0)
         else:
-            self.frame = (self.frame + 1) % self.idle.frames
+            # Idle plays ping-pong (forward, then backward) so the loop has no seam: the clip's first
+            # and last idle frames differ, and a jump there made the tracker lurch every loop.
+            self.idle_direction = getattr(self, "idle_direction", 1)
+            nxt = self.frame + self.idle_direction
+            if nxt >= self.idle.frames or nxt < 0:
+                self.idle_direction = -self.idle_direction
+                nxt = self.frame + self.idle_direction
+            self.frame = max(0, min(self.idle.frames - 1, nxt))
 
     def next_pose(self, root_xy: torch.Tensor, yaw: torch.Tensor, actual_xy: Optional[torch.Tensor] = None) -> ReferencePose:
         """Reference for the next control step.
@@ -295,6 +309,15 @@ class ReferenceWalker:
         rot = yaw_quat(new_yaw)
         planar = quat_rotate(rot, torch.tensor([forward, lateral, 0.0], device=device))
         new_xy = root_xy + planar[:2]
+        if self.phase in ("stop", "idle") and self.hold_xy is not None:
+            # The environment re-anchors the reference to the character every step, so standing
+            # still needs an explicit pull back to the hold point or slow drift goes uncorrected.
+            error = self.hold_xy - actual_xy
+            correction = error * self.hold_gain
+            norm = float(correction.norm())
+            if norm > self.hold_max_step:
+                correction = correction * (self.hold_max_step / norm)
+            new_xy = new_xy + correction
         rot_b = rot.unsqueeze(0).expand(segment.rel_rot[f].shape)
         body_pos = quat_rotate(rot_b, segment.rel_pos[f]).clone()
         body_pos[:, :2] += new_xy

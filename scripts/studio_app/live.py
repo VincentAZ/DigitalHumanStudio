@@ -27,6 +27,7 @@ class RoomMap(QWidget):
         super().__init__(parent)
         self.state: dict = {}
         self.trail: list[tuple[float, float, str]] = []
+        self.footprint: list[dict] = []
         self.setMinimumSize(360, 360)
         self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.setCursor(Qt.CursorShape.CrossCursor)
@@ -42,6 +43,10 @@ class RoomMap(QWidget):
 
     def clear_trail(self):
         self.trail.clear()
+        self.update()
+
+    def set_footprint(self, items: list[dict]):
+        self.footprint = items or []
         self.update()
 
     def _geometry(self):
@@ -72,6 +77,14 @@ class RoomMap(QWidget):
         painter.setPen(QPen(QColor("#52514e"), 2))
         top_left = self.to_px(spawn[0] - half, spawn[1] + half)
         painter.drawRect(QRectF(top_left, QPointF(top_left.x() + 2 * half * scale, top_left.y() + 2 * half * scale)))
+        for item in self.footprint:
+            cx, cy = item["center"]; sx, sy = item["size"]; ang = math.radians(item.get("yaw_deg", 0))
+            corners = [(cx + dx * math.cos(ang) - dy * math.sin(ang), cy + dx * math.sin(ang) + dy * math.cos(ang))
+                       for dx, dy in ((-sx / 2, -sy / 2), (sx / 2, -sy / 2), (sx / 2, sy / 2), (-sx / 2, sy / 2))]
+            colour = QColor.fromRgbF(*item.get("colour", (0.6, 0.6, 0.6)))
+            painter.setPen(QPen(colour, 1))
+            painter.setBrush(QBrush(colour) if item.get("collision") else Qt.BrushStyle.NoBrush)
+            painter.drawPolygon(QPolygonF([self.to_px(spawn[0] + x, spawn[1] + y) for x, y in corners]))
         for a, b in zip(self.trail[:-1], self.trail[1:]):
             painter.setPen(QPen(QColor(STATE_COLOURS.get(b[2], "#52514e")), 2))
             painter.drawLine(self.to_px(a[0], a[1]), self.to_px(b[0], b[1]))
@@ -142,6 +155,11 @@ class LiveView(QWidget):
         self.controller_combo.setMinimumWidth(320)
         self.preview_combo = QComboBox()
         self.preview_combo.addItems(["640x480", "960x540", "1280x720"])
+        self.scene_combo = QComboBox()
+        self.scene_combo.addItem("Flat floor (no scene)", "")
+        for scene in sorted((st.CONFIG / "scenes").glob("*.json")):
+            meta = st.read_json(scene, {}) or {}
+            self.scene_combo.addItem(f"{meta.get('name', scene.stem)}: {meta.get('description', '')[:60]}", scene.stem)
         self.label_edit = QLineEdit()
         self.label_edit.setPlaceholderText("optional label")
         self.start_button = QPushButton("Start live session")
@@ -153,7 +171,7 @@ class LiveView(QWidget):
         self.force_button.setToolTip("docker stop of the worker container; the launcher records it as a failed session")
         self.force_button.clicked.connect(self.force_stop)
         self.session_label = QLabel("no live session")
-        for widget in (QLabel("Controller"), self.controller_combo, QLabel("Preview"), self.preview_combo, self.label_edit,
+        for widget in (QLabel("Controller"), self.controller_combo, QLabel("Scene"), self.scene_combo, QLabel("Preview"), self.preview_combo, self.label_edit,
                        self.start_button, self.quit_button, self.force_button):
             session_layout.addWidget(widget)
         session_layout.addStretch(1)
@@ -268,6 +286,8 @@ class LiveView(QWidget):
     def _attach(self, pointer: dict):
         self.session = pointer
         self.map.clear_trail()
+        footprint = st.read_json(Path(pointer["output"]) / "scene.json", {}) or {}
+        self.map.set_footprint(footprint.get("items", []))
         self._frame_mtime = self._state_mtime = 0.0
         self._status_lines = 0
         self.log.clear()
@@ -283,6 +303,8 @@ class LiveView(QWidget):
             QMessageBox.warning(self, "GPU busy", "Another studio GPU job is running. One heavy GPU job at a time.")
             return
         argv = [str(SCRIPTS / "run_milestone3_live.sh"), results_dir, "--interactive", "--preview", self.preview_combo.currentText()]
+        if self.scene_combo.currentData():
+            argv += ["--scene", self.scene_combo.currentData()]
         label = self.label_edit.text().strip()
         if label:
             argv += ["--label", label]

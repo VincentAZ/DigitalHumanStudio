@@ -134,3 +134,4 @@ echo "Recorded $stage training accepted. Evidence: $evidence Results: $results_d
 }
 
 main "$@"
+exit $?

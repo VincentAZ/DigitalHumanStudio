@@ -9,6 +9,7 @@ from PySide6.QtWidgets import QApplication, QDockWidget, QMainWindow, QPlainText
 
 from studio_app import ROOT
 from studio_app import state as st
+from studio_app.compare import CompareView
 from studio_app.evaluation import EvaluationView
 from studio_app.jobs import JobCenter
 from studio_app.live import LiveView
@@ -37,7 +38,8 @@ class MainWindow(QMainWindow):
         self.training = TrainingView(self.jobs)
         self.live = LiveView(self.jobs)
         self.evaluation = EvaluationView(self.jobs)
-        for widget, title in ((self.live, "Live scene"), (self.training, "Training"), (self.skills, "Skills"),
+        self.compare = CompareView(self.jobs)
+        for widget, title in ((self.live, "Live scene"), (self.compare, "Compare"), (self.training, "Training"), (self.skills, "Skills"),
                               (self.evaluation, "Evaluation"), (self.project, "Project")):
             self.tabs.addTab(widget, title)
         self.setCentralWidget(self.tabs)
@@ -77,7 +79,7 @@ class MainWindow(QMainWindow):
         self.job_log.moveCursor(self.job_log.textCursor().MoveOperation.End)
 
     def _jobs_changed(self):
-        for view in (self.training, self.evaluation, self.skills):
+        for view in (self.training, self.evaluation, self.skills, self.compare):
             view.refresh()
         self.live.refresh_controllers()
 

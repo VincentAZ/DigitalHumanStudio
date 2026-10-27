@@ -1,0 +1,65 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-cmp-workcell-20261027T175816Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 1699,
+      "sha256": "c94183bbc345f86b8bd9a03d2924635cef7e18229d24f34e13125f16b320d6df"
+    },
+    "performance.mp4": {
+      "bytes": 8496720,
+      "sha256": "96e77e36b72ce85095a819b7aaeb767596c2a5e7c5d7b7d9e6c618b00391a0d3"
+    },
+    "frame-01200.png": {
+      "bytes": 326061,
+      "sha256": "6ceb661e086a078f0d0b4d28096877d5e0931927c1e031862be3031b87ab9330"
+    },
+    "result.json": {
+      "bytes": 313,
+      "sha256": "0d97c337c7d62f3b41da3df1b5eabb69e98ae0c6e492d12c196c164c7dacf42f"
+    },
+    "frame-00600.png": {
+      "bytes": 258094,
+      "sha256": "de794d81dee80285a10cf22e7f65a118dfac93051ad62a860d76d8734aa6bd88"
+    },
+    "topdown.png": {
+      "bytes": 15104,
+      "sha256": "f0d5f2b7a5efa351333eff1b98f07c7db4bc4dbb6c03ca3d915a9cce0862cbc5"
+    },
+    "frame-00300.png": {
+      "bytes": 294820,
+      "sha256": "33682663b72d070c0c5dff62ddb4ad0007190bc89e3a76580fd1882c0c127122"
+    },
+    "final-scene.usda": {
+      "bytes": 186864,
+      "sha256": "59101478f2efcd86d0d4d9a40d0224adab2ff1913aa3e3974adff04f056437e1"
+    },
+    "kit.log": {
+      "bytes": 768212,
+      "sha256": "4c4332420f4efdaf630437c8eb921a46a668082f5de08cbdbae7257d64616e1a"
+    },
+    "summary.json": {
+      "bytes": 4312,
+      "sha256": "ba78339c663c5af866db15179d3c4fac2f10acbe38113610a29ff800b99b4ab7"
+    },
+    "frame-00900.png": {
+      "bytes": 294242,
+      "sha256": "11fbf46bc977e5a2907891bd755f74cae7389393c7ec1c666306adeb6b2a1867"
+    },
+    "status.jsonl": {
+      "bytes": 2435,
+      "sha256": "cd53a4124d32838c4d002853ad56751ee19c621e45e635c69f3575f9ee97a36f"
+    },
+    "trace.jsonl": {
+      "bytes": 1137792,
+      "sha256": "624cbf62803729f1de1783946fee9b287e04398d0be3a0d45f4af11936d9e8c9"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "fb44d9e47623bcfb19dd0da01b2d8d26c347a7ca93ff8a356d74fbbd28dbc7eb"
+    },
+    "scene.json": {
+      "bytes": 6355,
+      "sha256": "ec44335cabe2f35972d57a81ab675ed359650676b3db730706aa4e02414e47f2"
+    }
+  }
+}

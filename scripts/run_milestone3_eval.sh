@@ -144,3 +144,4 @@ echo "Recorded evaluation run accepted. Evidence: $evidence"
 }
 
 main "$@"
+exit $?

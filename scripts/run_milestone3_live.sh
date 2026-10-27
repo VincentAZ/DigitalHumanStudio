@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # One recorded live-direction session with the trained walking adapter.
-# usage: run_milestone3_live.sh <controller_dir|tracker> [<commands.jsonl>] [--label name] [--interactive] [--preview WxH]
+# usage: run_milestone3_live.sh <controller_dir|tracker> [<commands.jsonl>] [--label name] [--interactive] [--preview WxH] [--scene name]
+#   --scene name: reference config/scenes/<name>.usda into the stage at the scene's spawn (from <name>.json) with
+#   static colliders, and use the scene's room size; the footprint is copied to the session for the room map.
 #   controller_dir: a trained adapter directory (inference_last.ckpt + resolved_configs_inference.pt), or the word
 #   "tracker" for the tracker-driven walker (Milestone 1 tracker following a reference composed from licensed clips).
 #   --interactive: the control center appends commands to <output>/commands.jsonl while the worker publishes
@@ -11,16 +13,25 @@ set -euo pipefail
 main() {
 project_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 controller_dir=${1:?controller_dir}; shift
-commands="$project_root/config/milestone3-live-script.jsonl"; label=""; interactive=0; preview="640x480"
+commands="$project_root/config/milestone3-live-script.jsonl"; label=""; interactive=0; preview="640x480"; scene=""
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --label) label=$2; shift 2 ;;
+        --scene) scene=$2; shift 2 ;;
         --interactive) interactive=1; shift ;;
         --preview) preview=$2; shift 2 ;;
         *) commands=$1; shift ;;
     esac
 done
 [[ "$preview" =~ ^[0-9]+x[0-9]+$ ]] || { echo "Expected --preview WxH" >&2; exit 2; }
+scene_args=(); scene_mounts=()
+if [[ -n "$scene" ]]; then
+    [[ "$scene" =~ ^[A-Za-z0-9_-]+$ && -f "$project_root/config/scenes/$scene.usda" && -f "$project_root/config/scenes/$scene.json" ]] \
+        || { echo "Unknown scene $scene (expected config/scenes/$scene.usda and .json)" >&2; exit 2; }
+    read -r spawn_x spawn_y room_half < <(python3 -c "import json,sys; d=json.load(open(sys.argv[1])); print(d['spawn_xy'][0], d['spawn_xy'][1], d['room_half_size'])" "$project_root/config/scenes/$scene.json")
+    scene_args=(--scene "/studio/scenes/$scene.usda" --scene-footprint "/studio/scenes/$scene.json" --spawn-xy "$spawn_x" "$spawn_y" --room-half-size "$room_half")
+    scene_mounts=(--mount "type=bind,src=$project_root/config/scenes,dst=/studio/scenes,readonly")
+fi
 preview_width=${preview%x*}; preview_height=${preview#*x}
 controller=adapter
 if [[ "$controller_dir" == tracker ]]; then
@@ -38,6 +49,7 @@ image=$(cat "$project_root/config/runtime-image.lock")
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
 name="live${label:+-$label}"; [[ $interactive == 1 ]] && name="live-interactive${label:+-$label}"
 [[ $controller == tracker ]] && name="${name/live/live-tracker}"
+[[ -n "$scene" ]] && name="$name-$scene"
 evidence="$project_root/diagnostics/$stamp-milestone3-$name"
 output="$project_root/artifacts/milestone3/$name-$stamp"
 runtime_home="$project_root/.runtime/isaac-home"
@@ -57,6 +69,7 @@ if [[ $interactive == 1 ]]; then
 fi
 cp -r "$project_root/scripts/studio_walk" "$evidence/studio_walk"; rm -rf "$evidence/studio_walk/__pycache__"
 cp "$project_root/scripts/milestone3_live.py" "$project_root/scripts/run_milestone3_live.sh" "$commands" "$evidence/"
+[[ -n "$scene" ]] && cp "$project_root/config/scenes/$scene.usda" "$project_root/config/scenes/$scene.json" "$evidence/"
 if [[ $controller == tracker ]]; then
     ( cd "$controller_dir" && sha256sum last_lab.ckpt resolved_configs_inference.pt ) > "$evidence/controller.sha256"
 else
@@ -87,10 +100,10 @@ command=("$docker_cmd" run --name "$container_name" --gpus all --runtime=nvidia
     --mount "type=bind,src=$project_root/scripts,dst=/studio/scripts,readonly"
     --mount "type=bind,src=$assets,dst=/studio/assets,readonly"
     --mount "type=bind,src=$controller_dir,dst=/studio/controller,readonly"
-    "${mounts[@]}"
+    "${mounts[@]}" "${scene_mounts[@]}"
     --mount "type=bind,src=$output,dst=/studio/output"
     "$image" /studio/scripts/milestone3_live.py --output /studio/output
-    "${controller_args[@]}" --commands "$commands_in_container"
+    "${controller_args[@]}" "${scene_args[@]}" --commands "$commands_in_container"
     "${worker_args[@]}" --device cuda:0 --enable_cameras --viz none
     --kit_args "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info")
 { printf '%q' "${command[0]}"; printf ' %q' "${command[@]:1}"; printf '\n'; } > "$evidence/command.txt"
@@ -142,3 +155,4 @@ echo "Recorded live session accepted. Evidence: $evidence"
 }
 
 main "$@"
+exit $?

@@ -1,0 +1,29 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-wall-probe-workcell-20261027T174630Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 1699,
+      "sha256": "c94183bbc345f86b8bd9a03d2924635cef7e18229d24f34e13125f16b320d6df"
+    },
+    "kit.log": {
+      "bytes": 767058,
+      "sha256": "416052fc3588b51eb0d3fbea0ad266f9a791e53c0a9bde067787b71bb67a1269"
+    },
+    "status.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trace.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "3a3e3a285832b0cd5f194563a68b8666c75c9f88b1daeb64db2375ce6b6f1dca"
+    },
+    "scene.json": {
+      "bytes": 6355,
+      "sha256": "ec44335cabe2f35972d57a81ab675ed359650676b3db730706aa4e02414e47f2"
+    }
+  }
+}

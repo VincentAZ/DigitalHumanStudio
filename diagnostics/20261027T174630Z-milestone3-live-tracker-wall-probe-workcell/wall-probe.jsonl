@@ -1,0 +1,7 @@
+{"at": 0.5, "cmd": "record", "action": "start", "name": "wall-probe"}
+{"at": 1.0, "cmd": "destination", "x": 3.0, "y": 0.3, "frame": "spawn"}
+{"at": 9.0, "cmd": "destination", "x": 5.3, "y": 0.0, "frame": "spawn"}
+{"at": 19.0, "cmd": "stop"}
+{"at": 22.0, "cmd": "destination", "x": 0.0, "y": 0.0, "frame": "spawn"}
+{"at": 30.0, "cmd": "record", "action": "stop"}
+{"at": 30.5, "cmd": "quit"}

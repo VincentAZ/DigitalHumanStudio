@@ -39,6 +39,9 @@ parser.add_argument("--tracker-checkpoint", type=Path,
 parser.add_argument("--walk-clip", type=int, default=30)
 parser.add_argument("--stop-clip", type=int, default=30)
 parser.add_argument("--idle-clip", type=int, default=30)
+parser.add_argument("--scene", type=Path, default=None, help="USD scene referenced into the stage at the spawn (static colliders)")
+parser.add_argument("--scene-footprint", type=Path, default=None, help="JSON footprint of the scene, copied to the output for the room map")
+parser.add_argument("--spawn-xy", type=float, nargs=2, default=None, help="Pin the spawn to this terrain location (required with --scene)")
 parser.add_argument("--prior-checkpoint", type=Path,
                     default=Path("/studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt"))
 parser.add_argument("--commands", type=Path, required=True, help="JSON lines command file (read incrementally)")
@@ -55,6 +58,8 @@ AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
 if args.controller == "adapter" and args.adapter_checkpoint is None:
     parser.error("--adapter-checkpoint is required for --controller adapter")
+if args.scene is not None and args.spawn_xy is None:
+    parser.error("--spawn-xy is required with --scene")
 args.output.mkdir(parents=True, exist_ok=True)
 if args.live_dir is not None:
     args.live_dir.mkdir(parents=True, exist_ok=True)
@@ -102,6 +107,14 @@ def run_session():
     fabric.launch()
     device = fabric.device
     def make_camera(_sim):
+        if args.scene is not None:
+            # Reference the static scene at the spawn before the environment plays the stage so PhysX
+            # parses its colliders together with the terrain.
+            from pxr import Gf, UsdGeom
+            stage = _sim._sim.stage
+            prim = stage.DefinePrim("/World/StudioScene", "Xform")
+            prim.GetReferences().AddReference(str(args.scene))
+            UsdGeom.Xformable(prim).AddTranslateOp().Set(Gf.Vec3d(args.spawn_xy[0], args.spawn_xy[1], 0.0))
         return Camera(CameraCfg(
             prim_path="/World/StudioCamera", update_period=0, width=args.preview_width, height=args.preview_height, data_types=["rgb"],
             renderer_cfg=IsaacRtxRendererCfg(),
@@ -186,6 +199,8 @@ def run_session():
         # The first reset samples a flat spawn; every later reset returns the character to that
         # same spot so the room, its bounds and the top-down map stay fixed for the whole session.
         pinned = session["spawn_xy"]
+        if pinned is None and args.spawn_xy is not None:
+            pinned = torch.tensor(args.spawn_xy, device=device)
         original_sampler = env.terrain.sample_valid_locations
         if pinned is not None:
             env.terrain.sample_valid_locations = lambda num_envs, sample_flat=False: pinned.to(device).unsqueeze(0).repeat(num_envs, 1)
@@ -195,7 +210,7 @@ def run_session():
             env.terrain.sample_valid_locations = original_sampler
         controller.after_reset(env_ids)
         _, root_pos, _, _, _ = current_pose()
-        if pinned is None:
+        if session["spawn_xy"] is None:
             session["spawn_xy"] = root_pos[:2].clone()
         session["last_reset_offset_m"] = float((root_pos[:2] - session["spawn_xy"]).norm())
         session["fallen"] = False
@@ -222,6 +237,8 @@ def run_session():
                 facing = heading_yaw(root_rot)      # local frame: x ahead of the character, y to its left
                 world = root_pos[:2] + torch.tensor([x * math.cos(facing) - y * math.sin(facing),
                                                      x * math.sin(facing) + y * math.cos(facing)], device=device)
+            elif frame == "spawn":                  # scene frame: relative to the session's spawn point
+                world = session["spawn_xy"] + torch.tensor([x, y], device=device)
             else:
                 world = torch.tensor([x, y], device=device)
             if session["fallen"]:
@@ -322,11 +339,16 @@ def run_session():
         "start_motion_id": args.start_motion_id, "control_hz": 30, "physics_hz": 120,
         "fall_rule": {"pelvis_height_below_m": FALL_HEIGHT, "up_z_below": FALL_UP_Z},
         "commands_supported": ["destination", "stop", "pause", "resume", "reset", "push", "record", "quit"],
+        "destination_frames": ["local", "world", "spawn"],
+        "scene": str(args.scene) if args.scene else None, "scene_sha256": sha256_of(args.scene) if args.scene else None,
+        "spawn_xy_pinned": args.spawn_xy,
         "interactive": args.interactive, "live_dir": str(args.live_dir) if args.live_dir else None,
         "preview_size": [args.preview_width, args.preview_height], "max_session_seconds": args.max_session_seconds,
     }, indent=2) + "\n")
+    if args.scene_footprint is not None:
+        (args.output / "scene.json").write_text(args.scene_footprint.read_text())
     obs = do_reset()
-    log_status("session_started", spawn_xy=session["spawn_xy"].tolist())
+    log_status("session_started", spawn_xy=session["spawn_xy"].tolist(), scene=str(args.scene) if args.scene else None)
     publish_live()
     quit_requested = False
     max_steps = int(args.max_session_seconds / dt)
@@ -372,7 +394,7 @@ def run_session():
                                            "dof_pos": [round(float(v), 4) for v in state.dof_pos[0]],
                                            "root_rot_xyzw": [round(float(v), 5) for v in root_rot]}) + "\n")
             trajectory.append([float(root_pos[0]), float(root_pos[1]), session["state"]])
-            eye = root_pos.unsqueeze(0) + torch.tensor([[3.0, -4.0, 2.0]], device=device)
+            eye = root_pos.unsqueeze(0) + torch.tensor([[3.0, -4.0, 2.0 if args.scene is None else 3.2]], device=device)
             look = root_pos.unsqueeze(0) + torch.tensor([[0.0, 0.0, 0.15]], device=device)
             camera.set_world_poses_from_view(eye, look)
             sim._sim.render()
@@ -405,6 +427,14 @@ def run_session():
         draw.line([(0, offset), (size, offset)], fill=colour)
     half = args.room_half_size * scale
     draw.rectangle([centre - half, centre - half, centre + half, centre + half], outline=(80, 80, 80), width=2)
+    if args.scene_footprint is not None:
+        for item in json.loads(args.scene_footprint.read_text()).get("items", []):
+            cx, cy = item["center"]; sx, sy = item["size"]; ang = math.radians(item.get("yaw_deg", 0))
+            corners = [(cx + dx * math.cos(ang) - dy * math.sin(ang), cy + dx * math.sin(ang) + dy * math.cos(ang))
+                       for dx, dy in ((-sx / 2, -sy / 2), (sx / 2, -sy / 2), (sx / 2, sy / 2), (-sx / 2, sy / 2))]
+            colour = tuple(int(255 * c) for c in item.get("colour", (0.6, 0.6, 0.6)))
+            draw.polygon([to_px(spawn[0] + x, spawn[1] + y) for x, y in corners], fill=colour if item.get("collision") else None,
+                         outline=colour)
     colours = {"walking": (40, 140, 60), "standing": (30, 30, 200), "stopping": (200, 140, 0), "fallen": (200, 60, 60), "paused": (120, 120, 120)}
     for a, b in zip(trajectory[:-1], trajectory[1:]):
         draw.line([to_px(a[0], a[1]), to_px(b[0], b[1])], fill=colours.get(b[2], (0, 0, 0)), width=3)
