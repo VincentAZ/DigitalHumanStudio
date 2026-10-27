@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "acceptance_rule": {
+    "arrival_radius_m": 0.3,
+    "deadline_s": 15.0,
+    "hold_speed_mps": 0.15,
+    "hold_s": 2.0,
+    "fall_height_m": 0.5,
+    "fall_up_z": 0.3
+  },
+  "runs": [
+    {
+      "evidence": "diagnostics/20261027T070549Z-milestone3-eval-adapter-flat-batch-seed0a2",
+      "controller": "adapter",
+      "set": "flat",
+      "record": false,
+      "trials": 100,
+      "successes": 10,
+      "recomputed_successes": 10,
+      "falls": 0,
+      "arrived_within_15s": 82,
+      "run_status": "passed",
+      "adapter_sha256": "88f02d76deb23744615331d1b490facaad71b534e44d382dffce6cd7b7364c89",
+      "prior_sha256": "13b48605622b1eabe75cc10ccf15a2ab9c05cd953115da6ce08ad9716344a51d",
+      "files_hash_verified": 10,
+      "problems": [],
+      "mismatches": [],
+      "gate_passed_90_percent": false
+    },
+    {
+      "evidence": "diagnostics/20261027T070752Z-milestone3-eval-adapter-redirect-batch-seed0a2",
+      "controller": "adapter",
+      "set": "redirect",
+      "record": false,
+      "trials": 100,
+      "successes": 14,
+      "recomputed_successes": 14,
+      "falls": 0,
+      "arrived_within_15s": 82,
+      "run_status": "passed",
+      "adapter_sha256": "88f02d76deb23744615331d1b490facaad71b534e44d382dffce6cd7b7364c89",
+      "prior_sha256": "13b48605622b1eabe75cc10ccf15a2ab9c05cd953115da6ce08ad9716344a51d",
+      "files_hash_verified": 10,
+      "problems": [],
+      "mismatches": [],
+      "gate_passed_90_percent": false
+    },
+    {
+      "evidence": "diagnostics/20261027T071011Z-milestone3-eval-adapter-push-batch-seed0a2",
+      "controller": "adapter",
+      "set": "push",
+      "record": false,
+      "trials": 100,
+      "successes": 16,
+      "recomputed_successes": 16,
+      "falls": 0,
+      "arrived_within_15s": 86,
+      "run_status": "passed",
+      "adapter_sha256": "88f02d76deb23744615331d1b490facaad71b534e44d382dffce6cd7b7364c89",
+      "prior_sha256": "13b48605622b1eabe75cc10ccf15a2ab9c05cd953115da6ce08ad9716344a51d",
+      "files_hash_verified": 10,
+      "problems": [],
+      "mismatches": [],
+      "gate_passed_90_percent": false
+    }
+  ]
+}

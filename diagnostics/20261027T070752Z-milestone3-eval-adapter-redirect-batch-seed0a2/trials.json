@@ -1,0 +1,4886 @@
+[
+  {
+    "trial_id": 0,
+    "scenario": {
+      "id": 0,
+      "start_motion_id": 7,
+      "start_phase": 0.2099,
+      "distance_m": 3.341,
+      "bearing_deg": 168.35,
+      "friction": 0.945,
+      "change_time_s": 3.536,
+      "second_distance_m": 3.599,
+      "second_bearing_deg": 154.92
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 106,
+    "arrival_step": 210,
+    "time_to_arrival_s": 3.467,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9138575792312622,
+    "min_up_z": 0.8936758041381836,
+    "max_planar_speed_mps": 2.051208734512329,
+    "final_distance_m": 0.06315068155527115,
+    "final_speed_mps": 0.1817220002412796,
+    "max_foot_contact_force_n": 999.0863037109375,
+    "max_action_abs": 1.7223224639892578,
+    "start_xy": [
+      84.4000015258789,
+      234.10000610351562
+    ],
+    "heading_rad": -3.08648681640625,
+    "first_target_xy": [
+      87.7043685913086,
+      233.60659790039062
+    ],
+    "friction": 0.945,
+    "second_target_xy": [
+      91.04312133789062,
+      232.2628936767578
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 1,
+    "scenario": {
+      "id": 1,
+      "start_motion_id": 7,
+      "start_phase": 0.0724,
+      "distance_m": 2.478,
+      "bearing_deg": -22.56,
+      "friction": 1.05,
+      "change_time_s": 2.827,
+      "second_distance_m": 1.194,
+      "second_bearing_deg": -40.11
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 85,
+    "arrival_step": 358,
+    "time_to_arrival_s": 9.1,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.889657735824585,
+    "min_up_z": 0.8509621620178223,
+    "max_planar_speed_mps": 1.5604043006896973,
+    "final_distance_m": 0.4984471797943115,
+    "final_speed_mps": 0.05643068999052048,
+    "max_foot_contact_force_n": 1459.0828857421875,
+    "max_action_abs": 1.7418601512908936,
+    "start_xy": [
+      44.60000228881836,
+      195.6999969482422
+    ],
+    "heading_rad": -3.0882010459899902,
+    "first_target_xy": [
+      42.2641487121582,
+      196.52720642089844
+    ],
+    "friction": 1.05,
+    "second_target_xy": [
+      41.31121826171875,
+      197.24661254882812
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 2,
+    "scenario": {
+      "id": 2,
+      "start_motion_id": 59,
+      "start_phase": 0.6694,
+      "distance_m": 3.194,
+      "bearing_deg": 23.72,
+      "friction": 1.247,
+      "change_time_s": 2.731,
+      "second_distance_m": 1.704,
+      "second_bearing_deg": -110.15
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 82,
+    "arrival_step": 294,
+    "time_to_arrival_s": 7.067,
+    "settle_step_strict": 659,
+    "time_to_settle_s": 19.233,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8580207228660583,
+    "min_up_z": 0.9095134735107422,
+    "max_planar_speed_mps": 2.0191988945007324,
+    "final_distance_m": 0.15471233427524567,
+    "final_speed_mps": 0.0578499436378479,
+    "max_foot_contact_force_n": 1321.373046875,
+    "max_action_abs": 1.5340325832366943,
+    "start_xy": [
+      233.90000915527344,
+      70.0999984741211
+    ],
+    "heading_rad": -0.15649399161338806,
+    "first_target_xy": [
+      236.98870849609375,
+      70.91339111328125
+    ],
+    "friction": 1.247,
+    "second_target_xy": [
+      236.15956115722656,
+      69.42472076416016
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 3,
+    "scenario": {
+      "id": 3,
+      "start_motion_id": 7,
+      "start_phase": 0.0512,
+      "distance_m": 2.759,
+      "bearing_deg": 84.95,
+      "friction": 0.515,
+      "change_time_s": 2.766,
+      "second_distance_m": 2.598,
+      "second_bearing_deg": 57.34
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 83,
+    "arrival_step": 349,
+    "time_to_arrival_s": 8.867,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.846891462802887,
+    "min_up_z": 0.899177074432373,
+    "max_planar_speed_mps": 1.6694360971450806,
+    "final_distance_m": 0.31096315383911133,
+    "final_speed_mps": 0.1875649243593216,
+    "max_foot_contact_force_n": 1597.2236328125,
+    "max_action_abs": 1.6591988801956177,
+    "start_xy": [
+      130.90000915527344,
+      186.1999969482422
+    ],
+    "heading_rad": -3.0955002307891846,
+    "first_target_xy": [
+      130.78404235839844,
+      183.4434356689453
+    ],
+    "friction": 0.515,
+    "second_target_xy": [
+      129.4842987060547,
+      181.19393920898438
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 4,
+    "scenario": {
+      "id": 4,
+      "start_motion_id": 59,
+      "start_phase": 0.1671,
+      "distance_m": 3.304,
+      "bearing_deg": -93.18,
+      "friction": 1.149,
+      "change_time_s": 2.734,
+      "second_distance_m": 2.77,
+      "second_bearing_deg": -151.08
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 82,
+    "arrival_step": 208,
+    "time_to_arrival_s": 4.2,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9000644087791443,
+    "min_up_z": 0.8293871283531189,
+    "max_planar_speed_mps": 1.9192560911178589,
+    "final_distance_m": 0.25773411989212036,
+    "final_speed_mps": 0.31003907322883606,
+    "max_foot_contact_force_n": 1092.19287109375,
+    "max_action_abs": 1.7713264226913452,
+    "start_xy": [
+      207.1999969482422,
+      51.29999923706055
+    ],
+    "heading_rad": 3.016587257385254,
+    "first_target_xy": [
+      207.79315185546875,
+      54.55031967163086
+    ],
+    "friction": 1.149,
+    "second_target_xy": [
+      210.36581420898438,
+      55.577110290527344
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 5,
+    "scenario": {
+      "id": 5,
+      "start_motion_id": 43,
+      "start_phase": 0.7307,
+      "distance_m": 4.933,
+      "bearing_deg": -136.24,
+      "friction": 1.002,
+      "change_time_s": 2.203,
+      "second_distance_m": 4.489,
+      "second_bearing_deg": -176.29
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 66,
+    "arrival_step": 582,
+    "time_to_arrival_s": 17.2,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8423700332641602,
+    "min_up_z": 0.6984878182411194,
+    "max_planar_speed_mps": 2.7687265872955322,
+    "final_distance_m": 0.3632139265537262,
+    "final_speed_mps": 0.25880035758018494,
+    "max_foot_contact_force_n": 2472.5439453125,
+    "max_action_abs": 1.79620361328125,
+    "start_xy": [
+      105.5,
+      95.4000015258789
+    ],
+    "heading_rad": 1.4686330556869507,
+    "first_target_xy": [
+      108.53070831298828,
+      91.5077896118164
+    ],
+    "friction": 1.002,
+    "second_target_xy": [
+      108.36280822753906,
+      87.02192687988281
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 6,
+    "scenario": {
+      "id": 6,
+      "start_motion_id": 9,
+      "start_phase": 0.6129,
+      "distance_m": 2.417,
+      "bearing_deg": 140.24,
+      "friction": 0.802,
+      "change_time_s": 3.643,
+      "second_distance_m": 2.837,
+      "second_bearing_deg": -55.48
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 109,
+    "arrival_step": 437,
+    "time_to_arrival_s": 10.933,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9157968759536743,
+    "min_up_z": 0.8875230550765991,
+    "max_planar_speed_mps": 1.6166235208511353,
+    "final_distance_m": 0.2598211169242859,
+    "final_speed_mps": 0.04668895900249481,
+    "max_foot_contact_force_n": 1246.6302490234375,
+    "max_action_abs": 1.5566669702529907,
+    "start_xy": [
+      87.5,
+      185.3000030517578
+    ],
+    "heading_rad": -1.4666876792907715,
+    "first_target_xy": [
+      88.84439086914062,
+      187.30860900878906
+    ],
+    "friction": 0.802,
+    "second_target_xy": [
+      86.68663787841797,
+      185.46669006347656
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 7,
+    "scenario": {
+      "id": 7,
+      "start_motion_id": 9,
+      "start_phase": 0.3499,
+      "distance_m": 4.084,
+      "bearing_deg": -126.37,
+      "friction": 1.146,
+      "change_time_s": 3.6,
+      "second_distance_m": 3.489,
+      "second_bearing_deg": -69.56
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 108,
+    "arrival_step": 361,
+    "time_to_arrival_s": 8.433,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8264143466949463,
+    "min_up_z": 0.9180771708488464,
+    "max_planar_speed_mps": 2.0918543338775635,
+    "final_distance_m": 0.01988409273326397,
+    "final_speed_mps": 0.17879538238048553,
+    "max_foot_contact_force_n": 1608.51513671875,
+    "max_action_abs": 1.6360481977462769,
+    "start_xy": [
+      52.400001525878906,
+      169.3000030517578
+    ],
+    "heading_rad": -1.4094793796539307,
+    "first_target_xy": [
+      48.765254974365234,
+      171.16217041015625
+    ],
+    "friction": 1.146,
+    "second_target_xy": [
+      45.73408126831055,
+      169.43443298339844
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 8,
+    "scenario": {
+      "id": 8,
+      "start_motion_id": 24,
+      "start_phase": 0.0636,
+      "distance_m": 4.674,
+      "bearing_deg": -80.01,
+      "friction": 0.982,
+      "change_time_s": 2.533,
+      "second_distance_m": 4.298,
+      "second_bearing_deg": 25.83
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 76,
+    "arrival_step": 263,
+    "time_to_arrival_s": 6.233,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8407925963401794,
+    "min_up_z": 0.8913018107414246,
+    "max_planar_speed_mps": 2.8006551265716553,
+    "final_distance_m": 0.3795868158340454,
+    "final_speed_mps": 0.05640064924955368,
+    "max_foot_contact_force_n": 2664.9208984375,
+    "max_action_abs": 1.6640902757644653,
+    "start_xy": [
+      214.6999969482422,
+      55.20000076293945
+    ],
+    "heading_rad": 3.1222681999206543,
+    "first_target_xy": [
+      213.978271484375,
+      59.81794357299805
+    ],
+    "friction": 0.982,
+    "second_target_xy": [
+      210.07421875,
+      58.0203971862793
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 9,
+    "scenario": {
+      "id": 9,
+      "start_motion_id": 20,
+      "start_phase": 0.6189,
+      "distance_m": 4.225,
+      "bearing_deg": 8.3,
+      "friction": 1.183,
+      "change_time_s": 2.186,
+      "second_distance_m": 1.621,
+      "second_bearing_deg": 72.35
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 66,
+    "arrival_step": 139,
+    "time_to_arrival_s": 2.433,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8999754190444946,
+    "min_up_z": 0.8937967419624329,
+    "max_planar_speed_mps": 2.6289093494415283,
+    "final_distance_m": 0.4485064744949341,
+    "final_speed_mps": 0.5286555886268616,
+    "max_foot_contact_force_n": 1420.0233154296875,
+    "max_action_abs": 1.5386888980865479,
+    "start_xy": [
+      189.8000030517578,
+      45.29999542236328
+    ],
+    "heading_rad": -0.14435558021068573,
+    "first_target_xy": [
+      194.02500915527344,
+      45.3021354675293
+    ],
+    "friction": 1.183,
+    "second_target_xy": [
+      194.7335968017578,
+      46.76005935668945
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 10,
+    "scenario": {
+      "id": 10,
+      "start_motion_id": 24,
+      "start_phase": 0.3163,
+      "distance_m": 4.603,
+      "bearing_deg": 148.81,
+      "friction": 1.075,
+      "change_time_s": 3.3,
+      "second_distance_m": 4.465,
+      "second_bearing_deg": 69.74
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 99,
+    "arrival_step": 475,
+    "time_to_arrival_s": 12.533,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8294157981872559,
+    "min_up_z": 0.8091503381729126,
+    "max_planar_speed_mps": 2.757218837738037,
+    "final_distance_m": 0.22544783353805542,
+    "final_speed_mps": 0.12596973776817322,
+    "max_foot_contact_force_n": 1375.57470703125,
+    "max_action_abs": 1.5416994094848633,
+    "start_xy": [
+      226.1999969482422,
+      173.0
+    ],
+    "heading_rad": 3.0233373641967773,
+    "first_target_xy": [
+      229.82891845703125,
+      170.1682891845703
+    ],
+    "friction": 1.075,
+    "second_target_xy": [
+      227.79937744140625,
+      166.1912078857422
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 11,
+    "scenario": {
+      "id": 11,
+      "start_motion_id": 24,
+      "start_phase": 0.1723,
+      "distance_m": 4.237,
+      "bearing_deg": -81.11,
+      "friction": 0.73,
+      "change_time_s": 2.396,
+      "second_distance_m": 2.074,
+      "second_bearing_deg": -142.42
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 72,
+    "arrival_step": 162,
+    "time_to_arrival_s": 3.0,
+    "settle_step_strict": 297,
+    "time_to_settle_s": 7.5,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8542909026145935,
+    "min_up_z": 0.9333117008209229,
+    "max_planar_speed_mps": 2.101874828338623,
+    "final_distance_m": 0.19965851306915283,
+    "final_speed_mps": 0.16283676028251648,
+    "max_foot_contact_force_n": 1388.2008056640625,
+    "max_action_abs": 1.4993503093719482,
+    "start_xy": [
+      89.30000305175781,
+      212.6999969482422
+    ],
+    "heading_rad": 3.0934126377105713,
+    "first_target_xy": [
+      88.84759521484375,
+      216.91278076171875
+    ],
+    "friction": 0.73,
+    "second_target_xy": [
+      90.55025482177734,
+      218.09701538085938
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 12,
+    "scenario": {
+      "id": 12,
+      "start_motion_id": 20,
+      "start_phase": 0.4522,
+      "distance_m": 2.879,
+      "bearing_deg": -165.2,
+      "friction": 0.815,
+      "change_time_s": 1.889,
+      "second_distance_m": 1.585,
+      "second_bearing_deg": -42.26
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 57,
+    "arrival_step": 363,
+    "time_to_arrival_s": 10.2,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8537371158599854,
+    "min_up_z": 0.8887652158737183,
+    "max_planar_speed_mps": 2.2982475757598877,
+    "final_distance_m": 0.22845028340816498,
+    "final_speed_mps": 0.03284992650151253,
+    "max_foot_contact_force_n": 1022.863037109375,
+    "max_action_abs": 1.4546189308166504,
+    "start_xy": [
+      204.6999969482422,
+      50.79999923706055
+    ],
+    "heading_rad": -0.20735132694244385,
+    "first_target_xy": [
+      201.82473754882812,
+      50.65335464477539
+    ],
+    "friction": 0.815,
+    "second_target_xy": [
+      202.75323486328125,
+      49.3687858581543
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 13,
+    "scenario": {
+      "id": 13,
+      "start_motion_id": 24,
+      "start_phase": 0.7829,
+      "distance_m": 2.919,
+      "bearing_deg": -116.56,
+      "friction": 0.599,
+      "change_time_s": 3.568,
+      "second_distance_m": 1.908,
+      "second_bearing_deg": 67.64
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 107,
+    "arrival_step": 300,
+    "time_to_arrival_s": 6.433,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8456342816352844,
+    "min_up_z": 0.907063901424408,
+    "max_planar_speed_mps": 1.7247501611709595,
+    "final_distance_m": 0.24295613169670105,
+    "final_speed_mps": 0.08830828219652176,
+    "max_foot_contact_force_n": 1549.732421875,
+    "max_action_abs": 1.360433578491211,
+    "start_xy": [
+      153.0,
+      234.40000915527344
+    ],
+    "heading_rad": -1.5321073532104492,
+    "first_target_xy": [
+      150.34051513671875,
+      235.6032257080078
+    ],
+    "friction": 0.599,
+    "second_target_xy": [
+      152.13180541992188,
+      234.9461669921875
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 14,
+    "scenario": {
+      "id": 14,
+      "start_motion_id": 43,
+      "start_phase": 0.0528,
+      "distance_m": 1.267,
+      "bearing_deg": 62.07,
+      "friction": 0.621,
+      "change_time_s": 2.661,
+      "second_distance_m": 4.961,
+      "second_bearing_deg": -54.53
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 80,
+    "arrival_step": null,
+    "time_to_arrival_s": null,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.7960864901542664,
+    "min_up_z": 0.8902480602264404,
+    "max_planar_speed_mps": 2.1252644062042236,
+    "final_distance_m": 0.39681771397590637,
+    "final_speed_mps": 0.165817990899086,
+    "max_foot_contact_force_n": 885.04443359375,
+    "max_action_abs": 1.383544683456421,
+    "start_xy": [
+      145.40000915527344,
+      209.8000030517578
+    ],
+    "heading_rad": 1.8376749753952026,
+    "first_target_xy": [
+      144.16371154785156,
+      210.0772247314453
+    ],
+    "friction": 0.621,
+    "second_target_xy": [
+      147.30181884765625,
+      213.91958618164062
+    ],
+    "reached_first_before_change": true
+  },
+  {
+    "trial_id": 15,
+    "scenario": {
+      "id": 15,
+      "start_motion_id": 43,
+      "start_phase": 0.0571,
+      "distance_m": 4.246,
+      "bearing_deg": -102.46,
+      "friction": 0.75,
+      "change_time_s": 2.623,
+      "second_distance_m": 4.083,
+      "second_bearing_deg": 38.63
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 79,
+    "arrival_step": 183,
+    "time_to_arrival_s": 3.467,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8451335430145264,
+    "min_up_z": 0.896511971950531,
+    "max_planar_speed_mps": 2.414206027984619,
+    "final_distance_m": 0.39805033802986145,
+    "final_speed_mps": 0.10532531142234802,
+    "max_foot_contact_force_n": 1395.8590087890625,
+    "max_action_abs": 1.5740537643432617,
+    "start_xy": [
+      109.5,
+      95.80000305175781
+    ],
+    "heading_rad": 1.8641700744628906,
+    "first_target_xy": [
+      113.73377227783203,
+      96.12198638916016
+    ],
+    "friction": 0.75,
+    "second_target_xy": [
+      110.37132263183594,
+      98.43820190429688
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 16,
+    "scenario": {
+      "id": 16,
+      "start_motion_id": 24,
+      "start_phase": 0.5335,
+      "distance_m": 3.408,
+      "bearing_deg": 23.55,
+      "friction": 0.812,
+      "change_time_s": 2.586,
+      "second_distance_m": 3.68,
+      "second_bearing_deg": -128.85
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 78,
+    "arrival_step": 182,
+    "time_to_arrival_s": 3.467,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8454828262329102,
+    "min_up_z": 0.9020190238952637,
+    "max_planar_speed_mps": 2.2040021419525146,
+    "final_distance_m": 0.2891484200954437,
+    "final_speed_mps": 0.053018439561128616,
+    "max_foot_contact_force_n": 1091.6790771484375,
+    "max_action_abs": 1.7341961860656738,
+    "start_xy": [
+      173.10000610351562,
+      51.400001525878906
+    ],
+    "heading_rad": -1.7309362888336182,
+    "first_target_xy": [
+      173.94607543945312,
+      48.09869384765625
+    ],
+    "friction": 0.812,
+    "second_target_xy": [
+      171.48487854003906,
+      50.834556579589844
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 17,
+    "scenario": {
+      "id": 17,
+      "start_motion_id": 43,
+      "start_phase": 0.1942,
+      "distance_m": 2.728,
+      "bearing_deg": 136.18,
+      "friction": 1.048,
+      "change_time_s": 3.695,
+      "second_distance_m": 4.33,
+      "second_bearing_deg": -145.87
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 111,
+    "arrival_step": 299,
+    "time_to_arrival_s": 6.267,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8966508507728577,
+    "min_up_z": 0.8724098801612854,
+    "max_planar_speed_mps": 2.0862693786621094,
+    "final_distance_m": 0.15541064739227295,
+    "final_speed_mps": 0.08085153251886368,
+    "max_foot_contact_force_n": 1322.016845703125,
+    "max_action_abs": 1.5076011419296265,
+    "start_xy": [
+      112.9000015258789,
+      90.0999984741211
+    ],
+    "heading_rad": 1.7026095390319824,
+    "first_target_xy": [
+      111.2862319946289,
+      87.9005126953125
+    ],
+    "friction": 1.048,
+    "second_target_xy": [
+      114.16567993164062,
+      84.66667938232422
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 18,
+    "scenario": {
+      "id": 18,
+      "start_motion_id": 9,
+      "start_phase": 0.1011,
+      "distance_m": 4.506,
+      "bearing_deg": 53.03,
+      "friction": 0.984,
+      "change_time_s": 2.737,
+      "second_distance_m": 1.691,
+      "second_bearing_deg": -167.65
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 82,
+    "arrival_step": 313,
+    "time_to_arrival_s": 7.7,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9018869400024414,
+    "min_up_z": 0.897706925868988,
+    "max_planar_speed_mps": 2.520141839981079,
+    "final_distance_m": 0.26973286271095276,
+    "final_speed_mps": 0.20431509613990784,
+    "max_foot_contact_force_n": 1940.634765625,
+    "max_action_abs": 1.3790446519851685,
+    "start_xy": [
+      173.5,
+      215.1999969482422
+    ],
+    "heading_rad": -1.254973292350769,
+    "first_target_xy": [
+      177.76370239257812,
+      213.7423095703125
+    ],
+    "friction": 0.984,
+    "second_target_xy": [
+      176.90684509277344,
+      215.2001495361328
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 19,
+    "scenario": {
+      "id": 19,
+      "start_motion_id": 9,
+      "start_phase": 0.4784,
+      "distance_m": 1.363,
+      "bearing_deg": 175.47,
+      "friction": 1.041,
+      "change_time_s": 3.182,
+      "second_distance_m": 3.534,
+      "second_bearing_deg": -75.61
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 95,
+    "arrival_step": 426,
+    "time_to_arrival_s": 11.033,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8742464780807495,
+    "min_up_z": 0.9201747179031372,
+    "max_planar_speed_mps": 1.8583648204803467,
+    "final_distance_m": 0.48171502351760864,
+    "final_speed_mps": 0.23049061000347137,
+    "max_foot_contact_force_n": 1409.2103271484375,
+    "max_action_abs": 1.2579511404037476,
+    "start_xy": [
+      95.4000015258789,
+      193.10000610351562
+    ],
+    "heading_rad": -1.8095030784606934,
+    "first_target_xy": [
+      95.82586669921875,
+      194.39476013183594
+    ],
+    "friction": 1.041,
+    "second_target_xy": [
+      92.2921371459961,
+      194.3507843017578
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 20,
+    "scenario": {
+      "id": 20,
+      "start_motion_id": 7,
+      "start_phase": 0.5767,
+      "distance_m": 4.175,
+      "bearing_deg": -94.01,
+      "friction": 1.002,
+      "change_time_s": 1.73,
+      "second_distance_m": 3.666,
+      "second_bearing_deg": -23.56
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 52,
+    "arrival_step": 160,
+    "time_to_arrival_s": 3.6,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8480386137962341,
+    "min_up_z": 0.8477407693862915,
+    "max_planar_speed_mps": 2.412952184677124,
+    "final_distance_m": 0.18818750977516174,
+    "final_speed_mps": 0.19153152406215668,
+    "max_foot_contact_force_n": 1249.080322265625,
+    "max_action_abs": 1.9398767948150635,
+    "start_xy": [
+      67.9000015258789,
+      154.1999969482422
+    ],
+    "heading_rad": -3.0778656005859375,
+    "first_target_xy": [
+      67.92613983154297,
+      158.37490844726562
+    ],
+    "friction": 1.002,
+    "second_target_xy": [
+      64.47923278808594,
+      159.62326049804688
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 21,
+    "scenario": {
+      "id": 21,
+      "start_motion_id": 20,
+      "start_phase": 0.0342,
+      "distance_m": 3.116,
+      "bearing_deg": 65.04,
+      "friction": 0.633,
+      "change_time_s": 1.876,
+      "second_distance_m": 1.089,
+      "second_bearing_deg": -162.25
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 56,
+    "arrival_step": 478,
+    "time_to_arrival_s": 14.067,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8088015913963318,
+    "min_up_z": 0.9229610562324524,
+    "max_planar_speed_mps": 2.061544895172119,
+    "final_distance_m": 0.37513771653175354,
+    "final_speed_mps": 0.24625323712825775,
+    "max_foot_contact_force_n": 1151.1322021484375,
+    "max_action_abs": 1.423343539237976,
+    "start_xy": [
+      126.80000305175781,
+      193.6999969482422
+    ],
+    "heading_rad": -0.12287779152393341,
+    "first_target_xy": [
+      128.4512481689453,
+      196.34249877929688
+    ],
+    "friction": 0.633,
+    "second_target_xy": [
+      127.38121795654297,
+      196.14012145996094
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 22,
+    "scenario": {
+      "id": 22,
+      "start_motion_id": 9,
+      "start_phase": 0.6296,
+      "distance_m": 1.462,
+      "bearing_deg": 177.23,
+      "friction": 0.78,
+      "change_time_s": 2.272,
+      "second_distance_m": 1.797,
+      "second_bearing_deg": -80.45
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 68,
+    "arrival_step": null,
+    "time_to_arrival_s": null,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8905205726623535,
+    "min_up_z": 0.8771264553070068,
+    "max_planar_speed_mps": 1.5653003454208374,
+    "final_distance_m": 0.48064419627189636,
+    "final_speed_mps": 0.13510216772556305,
+    "max_foot_contact_force_n": 1827.534423828125,
+    "max_action_abs": 1.3373801708221436,
+    "start_xy": [
+      72.5,
+      126.0999984741211
+    ],
+    "heading_rad": -1.455697774887085,
+    "first_target_xy": [
+      72.40248107910156,
+      127.55874633789062
+    ],
+    "friction": 0.78,
+    "second_target_xy": [
+      70.67635345458984,
+      127.05906677246094
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 23,
+    "scenario": {
+      "id": 23,
+      "start_motion_id": 20,
+      "start_phase": 0.3923,
+      "distance_m": 1.25,
+      "bearing_deg": -165.07,
+      "friction": 1.062,
+      "change_time_s": 1.983,
+      "second_distance_m": 4.62,
+      "second_bearing_deg": -42.48
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 59,
+    "arrival_step": 196,
+    "time_to_arrival_s": 4.567,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8813291788101196,
+    "min_up_z": 0.9014840722084045,
+    "max_planar_speed_mps": 1.9334362745285034,
+    "final_distance_m": 0.18613457679748535,
+    "final_speed_mps": 0.5419314503669739,
+    "max_foot_contact_force_n": 1545.8709716796875,
+    "max_action_abs": 1.3655720949172974,
+    "start_xy": [
+      92.9000015258789,
+      168.5
+    ],
+    "heading_rad": 0.08900588005781174,
+    "first_target_xy": [
+      91.7256088256836,
+      168.07186889648438
+    ],
+    "friction": 1.062,
+    "second_target_xy": [
+      95.39676666259766,
+      165.26705932617188
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 24,
+    "scenario": {
+      "id": 24,
+      "start_motion_id": 24,
+      "start_phase": 0.2243,
+      "distance_m": 1.456,
+      "bearing_deg": -179.48,
+      "friction": 0.539,
+      "change_time_s": 2.056,
+      "second_distance_m": 3.279,
+      "second_bearing_deg": 146.07
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 62,
+    "arrival_step": 205,
+    "time_to_arrival_s": 4.767,
+    "settle_step_strict": 544,
+    "time_to_settle_s": 16.067,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8358412384986877,
+    "min_up_z": 0.9253613948822021,
+    "max_planar_speed_mps": 1.875963568687439,
+    "final_distance_m": 0.25052937865257263,
+    "final_speed_mps": 0.36890923976898193,
+    "max_foot_contact_force_n": 1268.13623046875,
+    "max_action_abs": 1.3430209159851074,
+    "start_xy": [
+      169.40000915527344,
+      151.40000915527344
+    ],
+    "heading_rad": -3.0787813663482666,
+    "first_target_xy": [
+      170.8522491455078,
+      151.5045928955078
+    ],
+    "friction": 0.539,
+    "second_target_xy": [
+      173.6824188232422,
+      149.8487091064453
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 25,
+    "scenario": {
+      "id": 25,
+      "start_motion_id": 43,
+      "start_phase": 0.1166,
+      "distance_m": 2.635,
+      "bearing_deg": -163.5,
+      "friction": 0.926,
+      "change_time_s": 3.788,
+      "second_distance_m": 1.417,
+      "second_bearing_deg": -121.79
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 114,
+    "arrival_step": 315,
+    "time_to_arrival_s": 6.7,
+    "settle_step_strict": 335,
+    "time_to_settle_s": 7.367,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8504637479782104,
+    "min_up_z": 0.8638639450073242,
+    "max_planar_speed_mps": 1.724387526512146,
+    "final_distance_m": 0.19181929528713226,
+    "final_speed_mps": 0.1007433608174324,
+    "max_foot_contact_force_n": 1407.7913818359375,
+    "max_action_abs": 1.521785855293274,
+    "start_xy": [
+      188.5,
+      170.6999969482422
+    ],
+    "heading_rad": 1.9232110977172852,
+    "first_target_xy": [
+      190.07444763183594,
+      168.58709716796875
+    ],
+    "friction": 0.926,
+    "second_target_xy": [
+      191.46250915527344,
+      168.30221557617188
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 26,
+    "scenario": {
+      "id": 26,
+      "start_motion_id": 7,
+      "start_phase": 0.2757,
+      "distance_m": 4.546,
+      "bearing_deg": 33.07,
+      "friction": 0.503,
+      "change_time_s": 3.12,
+      "second_distance_m": 1.103,
+      "second_bearing_deg": -165.19
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 94,
+    "arrival_step": 132,
+    "time_to_arrival_s": 1.267,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8675083518028259,
+    "min_up_z": 0.9019284844398499,
+    "max_planar_speed_mps": 2.4002151489257812,
+    "final_distance_m": 0.21210844814777374,
+    "final_speed_mps": 0.057157378643751144,
+    "max_foot_contact_force_n": 2287.938720703125,
+    "max_action_abs": 1.6709563732147217,
+    "start_xy": [
+      110.5,
+      146.60000610351562
+    ],
+    "heading_rad": -3.0796282291412354,
+    "first_target_xy": [
+      106.85134887695312,
+      143.88827514648438
+    ],
+    "friction": 0.503,
+    "second_target_xy": [
+      107.89820098876953,
+      144.2357177734375
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 27,
+    "scenario": {
+      "id": 27,
+      "start_motion_id": 20,
+      "start_phase": 0.3198,
+      "distance_m": 1.235,
+      "bearing_deg": 35.59,
+      "friction": 0.806,
+      "change_time_s": 3.345,
+      "second_distance_m": 1.075,
+      "second_bearing_deg": 46.4
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 100,
+    "arrival_step": 179,
+    "time_to_arrival_s": 2.633,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8876044750213623,
+    "min_up_z": 0.9387484788894653,
+    "max_planar_speed_mps": 1.291471242904663,
+    "final_distance_m": 0.3847794234752655,
+    "final_speed_mps": 0.10462601482868195,
+    "max_foot_contact_force_n": 678.9886474609375,
+    "max_action_abs": 1.3447619676589966,
+    "start_xy": [
+      89.0999984741211,
+      191.1999969482422
+    ],
+    "heading_rad": 0.13018201291561127,
+    "first_target_xy": [
+      90.00250244140625,
+      192.04302978515625
+    ],
+    "friction": 0.806,
+    "second_target_xy": [
+      90.63651275634766,
+      192.91116333007812
+    ],
+    "reached_first_before_change": true
+  },
+  {
+    "trial_id": 28,
+    "scenario": {
+      "id": 28,
+      "start_motion_id": 24,
+      "start_phase": 0.6639,
+      "distance_m": 2.401,
+      "bearing_deg": -8.74,
+      "friction": 1.206,
+      "change_time_s": 1.51,
+      "second_distance_m": 2.853,
+      "second_bearing_deg": -128.1
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 45,
+    "arrival_step": 592,
+    "time_to_arrival_s": 18.233,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9048565030097961,
+    "min_up_z": 0.9274682998657227,
+    "max_planar_speed_mps": 1.6533547639846802,
+    "final_distance_m": 0.3301251530647278,
+    "final_speed_mps": 0.045764219015836716,
+    "max_foot_contact_force_n": 1068.5614013671875,
+    "max_action_abs": 1.4533313512802124,
+    "start_xy": [
+      168.1999969482422,
+      210.6999969482422
+    ],
+    "heading_rad": -1.6667728424072266,
+    "first_target_xy": [
+      167.6094207763672,
+      208.3727569580078
+    ],
+    "friction": 1.206,
+    "second_target_xy": [
+      165.54331970214844,
+      210.3402099609375
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 29,
+    "scenario": {
+      "id": 29,
+      "start_motion_id": 59,
+      "start_phase": 0.5154,
+      "distance_m": 2.303,
+      "bearing_deg": -40.57,
+      "friction": 0.92,
+      "change_time_s": 3.574,
+      "second_distance_m": 3.624,
+      "second_bearing_deg": 101.5
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 107,
+    "arrival_step": 237,
+    "time_to_arrival_s": 4.333,
+    "settle_step_strict": 430,
+    "time_to_settle_s": 10.767,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8877708911895752,
+    "min_up_z": 0.9012742042541504,
+    "max_planar_speed_mps": 1.9062809944152832,
+    "final_distance_m": 0.24242962896823883,
+    "final_speed_mps": 0.0975506380200386,
+    "max_foot_contact_force_n": 1801.497314453125,
+    "max_action_abs": 1.5552364587783813,
+    "start_xy": [
+      166.60000610351562,
+      207.90000915527344
+    ],
+    "heading_rad": -0.5071423053741455,
+    "first_target_xy": [
+      167.40174865722656,
+      205.74107360839844
+    ],
+    "friction": 0.92,
+    "second_target_xy": [
+      168.4949493408203,
+      209.19625854492188
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 30,
+    "scenario": {
+      "id": 30,
+      "start_motion_id": 9,
+      "start_phase": 0.2565,
+      "distance_m": 2.682,
+      "bearing_deg": -42.72,
+      "friction": 0.762,
+      "change_time_s": 2.926,
+      "second_distance_m": 3.337,
+      "second_bearing_deg": -162.14
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 88,
+    "arrival_step": 280,
+    "time_to_arrival_s": 6.4,
+    "settle_step_strict": 328,
+    "time_to_settle_s": 8.0,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.854264497756958,
+    "min_up_z": 0.8992590308189392,
+    "max_planar_speed_mps": 1.5961315631866455,
+    "final_distance_m": 0.22100935876369476,
+    "final_speed_mps": 0.10694895684719086,
+    "max_foot_contact_force_n": 1111.132080078125,
+    "max_action_abs": 1.3704134225845337,
+    "start_xy": [
+      130.40000915527344,
+      147.0
+    ],
+    "heading_rad": -1.7593401670455933,
+    "first_target_xy": [
+      128.24343872070312,
+      145.40554809570312
+    ],
+    "friction": 0.762,
+    "second_target_xy": [
+      127.83345031738281,
+      148.71726989746094
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 31,
+    "scenario": {
+      "id": 31,
+      "start_motion_id": 59,
+      "start_phase": 0.7203,
+      "distance_m": 3.395,
+      "bearing_deg": -82.44,
+      "friction": 0.893,
+      "change_time_s": 3.316,
+      "second_distance_m": 3.504,
+      "second_bearing_deg": 8.85
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 99,
+    "arrival_step": 236,
+    "time_to_arrival_s": 4.567,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8519179224967957,
+    "min_up_z": 0.9205087423324585,
+    "max_planar_speed_mps": 2.2883200645446777,
+    "final_distance_m": 0.49487921595573425,
+    "final_speed_mps": 0.044068675488233566,
+    "max_foot_contact_force_n": 1331.6441650390625,
+    "max_action_abs": 1.6844569444656372,
+    "start_xy": [
+      207.0,
+      175.5
+    ],
+    "heading_rad": -0.1737673580646515,
+    "first_target_xy": [
+      206.85806274414062,
+      172.10797119140625
+    ],
+    "friction": 0.893,
+    "second_target_xy": [
+      210.3614044189453,
+      172.0403289794922
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 32,
+    "scenario": {
+      "id": 32,
+      "start_motion_id": 59,
+      "start_phase": 0.6183,
+      "distance_m": 4.188,
+      "bearing_deg": -141.24,
+      "friction": 0.531,
+      "change_time_s": 2.147,
+      "second_distance_m": 4.292,
+      "second_bearing_deg": -76.63
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 64,
+    "arrival_step": 253,
+    "time_to_arrival_s": 6.3,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8965322375297546,
+    "min_up_z": 0.893147349357605,
+    "max_planar_speed_mps": 2.6442837715148926,
+    "final_distance_m": 0.5036402344703674,
+    "final_speed_mps": 0.0957220047712326,
+    "max_foot_contact_force_n": 1439.4697265625,
+    "max_action_abs": 1.6693568229675293,
+    "start_xy": [
+      233.10000610351562,
+      146.40000915527344
+    ],
+    "heading_rad": -0.1507195681333542,
+    "first_target_xy": [
+      229.47764587402344,
+      144.2981414794922
+    ],
+    "friction": 0.531,
+    "second_target_xy": [
+      229.83189392089844,
+      140.02078247070312
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 33,
+    "scenario": {
+      "id": 33,
+      "start_motion_id": 9,
+      "start_phase": 0.6509,
+      "distance_m": 3.555,
+      "bearing_deg": -2.18,
+      "friction": 1.099,
+      "change_time_s": 1.587,
+      "second_distance_m": 4.642,
+      "second_bearing_deg": -4.14
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 48,
+    "arrival_step": null,
+    "time_to_arrival_s": null,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8106223344802856,
+    "min_up_z": 0.8481723070144653,
+    "max_planar_speed_mps": 2.582068920135498,
+    "final_distance_m": 0.5604379773139954,
+    "final_speed_mps": 0.31284505128860474,
+    "max_foot_contact_force_n": 1442.8526611328125,
+    "max_action_abs": 1.6250455379486084,
+    "start_xy": [
+      46.70000076293945,
+      173.6999969482422
+    ],
+    "heading_rad": -1.5270296335220337,
+    "first_target_xy": [
+      46.72032928466797,
+      170.14505004882812
+    ],
+    "friction": 1.099,
+    "second_target_xy": [
+      46.588096618652344,
+      165.5049285888672
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 34,
+    "scenario": {
+      "id": 34,
+      "start_motion_id": 43,
+      "start_phase": 0.0442,
+      "distance_m": 2.204,
+      "bearing_deg": 22.62,
+      "friction": 1.213,
+      "change_time_s": 1.838,
+      "second_distance_m": 2.23,
+      "second_bearing_deg": -43.2
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 55,
+    "arrival_step": 433,
+    "time_to_arrival_s": 12.6,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.863365113735199,
+    "min_up_z": 0.9173968434333801,
+    "max_planar_speed_mps": 1.7022063732147217,
+    "final_distance_m": 0.2987270951271057,
+    "final_speed_mps": 0.1380501389503479,
+    "max_foot_contact_force_n": 1380.5357666015625,
+    "max_action_abs": 1.375872254371643,
+    "start_xy": [
+      174.10000610351562,
+      231.0
+    ],
+    "heading_rad": 1.7705796957015991,
+    "first_target_xy": [
+      172.86541748046875,
+      232.8257598876953
+    ],
+    "friction": 1.213,
+    "second_target_xy": [
+      174.0389862060547,
+      234.72198486328125
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 35,
+    "scenario": {
+      "id": 35,
+      "start_motion_id": 20,
+      "start_phase": 0.4833,
+      "distance_m": 1.046,
+      "bearing_deg": 2.86,
+      "friction": 1.184,
+      "change_time_s": 3.036,
+      "second_distance_m": 2.275,
+      "second_bearing_deg": -88.9
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 91,
+    "arrival_step": 175,
+    "time_to_arrival_s": 2.8,
+    "settle_step_strict": 234,
+    "time_to_settle_s": 4.767,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9043111801147461,
+    "min_up_z": 0.9044870138168335,
+    "max_planar_speed_mps": 1.7921096086502075,
+    "final_distance_m": 0.37547051906585693,
+    "final_speed_mps": 0.17014281451702118,
+    "max_foot_contact_force_n": 945.3408813476562,
+    "max_action_abs": 1.4862583875656128,
+    "start_xy": [
+      155.5,
+      191.60000610351562
+    ],
+    "heading_rad": 0.11984947323799133,
+    "first_target_xy": [
+      156.5309600830078,
+      191.7767333984375
+    ],
+    "friction": 1.184,
+    "second_target_xy": [
+      156.84628295898438,
+      189.52369689941406
+    ],
+    "reached_first_before_change": true
+  },
+  {
+    "trial_id": 36,
+    "scenario": {
+      "id": 36,
+      "start_motion_id": 59,
+      "start_phase": 0.0607,
+      "distance_m": 4.151,
+      "bearing_deg": -27.06,
+      "friction": 0.922,
+      "change_time_s": 2.803,
+      "second_distance_m": 2.548,
+      "second_bearing_deg": -69.77
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 84,
+    "arrival_step": 237,
+    "time_to_arrival_s": 5.1,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8784458637237549,
+    "min_up_z": 0.9079955816268921,
+    "max_planar_speed_mps": 1.7481921911239624,
+    "final_distance_m": 0.3525490164756775,
+    "final_speed_mps": 0.06836777925491333,
+    "max_foot_contact_force_n": 1224.951416015625,
+    "max_action_abs": 1.5546082258224487,
+    "start_xy": [
+      106.9000015258789,
+      104.20000457763672
+    ],
+    "heading_rad": 3.01910138130188,
+    "first_target_xy": [
+      103.46183776855469,
+      106.52590942382812
+    ],
+    "friction": 0.922,
+    "second_target_xy": [
+      102.8794937133789,
+      109.0064697265625
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 37,
+    "scenario": {
+      "id": 37,
+      "start_motion_id": 24,
+      "start_phase": 0.6859,
+      "distance_m": 1.201,
+      "bearing_deg": -30.8,
+      "friction": 1.011,
+      "change_time_s": 2.776,
+      "second_distance_m": 2.754,
+      "second_bearing_deg": 147.59
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 83,
+    "arrival_step": 426,
+    "time_to_arrival_s": 11.433,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8211705684661865,
+    "min_up_z": 0.9040389060974121,
+    "max_planar_speed_mps": 1.696480393409729,
+    "final_distance_m": 0.1446901112794876,
+    "final_speed_mps": 0.1653614342212677,
+    "max_foot_contact_force_n": 1241.9388427734375,
+    "max_action_abs": 1.4385497570037842,
+    "start_xy": [
+      185.10000610351562,
+      224.6999969482422
+    ],
+    "heading_rad": -1.6175410747528076,
+    "first_target_xy": [
+      184.43751525878906,
+      223.6982421875
+    ],
+    "friction": 1.011,
+    "second_target_xy": [
+      186.02061462402344,
+      225.95175170898438
+    ],
+    "reached_first_before_change": true
+  },
+  {
+    "trial_id": 38,
+    "scenario": {
+      "id": 38,
+      "start_motion_id": 24,
+      "start_phase": 0.7184,
+      "distance_m": 4.296,
+      "bearing_deg": 9.67,
+      "friction": 0.725,
+      "change_time_s": 1.654,
+      "second_distance_m": 1.438,
+      "second_bearing_deg": 43.96
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 50,
+    "arrival_step": 140,
+    "time_to_arrival_s": 3.0,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9063318371772766,
+    "min_up_z": 0.9000827074050903,
+    "max_planar_speed_mps": 2.156752824783325,
+    "final_distance_m": 0.20113341510295868,
+    "final_speed_mps": 0.21967366337776184,
+    "max_foot_contact_force_n": 1641.539794921875,
+    "max_action_abs": 1.5482597351074219,
+    "start_xy": [
+      192.90000915527344,
+      94.4000015258789
+    ],
+    "heading_rad": -1.504498839378357,
+    "first_target_xy": [
+      193.90060424804688,
+      90.22215270996094
+    ],
+    "friction": 0.725,
+    "second_target_xy": [
+      194.96517944335938,
+      89.25544738769531
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 39,
+    "scenario": {
+      "id": 39,
+      "start_motion_id": 7,
+      "start_phase": 0.5175,
+      "distance_m": 3.418,
+      "bearing_deg": 107.65,
+      "friction": 0.889,
+      "change_time_s": 2.104,
+      "second_distance_m": 1.718,
+      "second_bearing_deg": -153.81
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 63,
+    "arrival_step": 221,
+    "time_to_arrival_s": 5.267,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8452286720275879,
+    "min_up_z": 0.9157299995422363,
+    "max_planar_speed_mps": 1.9628762006759644,
+    "final_distance_m": 0.27524372935295105,
+    "final_speed_mps": 0.03726555407047272,
+    "max_foot_contact_force_n": 1312.8380126953125,
+    "max_action_abs": 1.5454448461532593,
+    "start_xy": [
+      72.5,
+      50.400001525878906
+    ],
+    "heading_rad": -3.064525604248047,
+    "first_target_xy": [
+      73.7840347290039,
+      47.232357025146484
+    ],
+    "friction": 0.889,
+    "second_target_xy": [
+      75.26270294189453,
+      48.10703659057617
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 40,
+    "scenario": {
+      "id": 40,
+      "start_motion_id": 43,
+      "start_phase": 0.0713,
+      "distance_m": 4.761,
+      "bearing_deg": -13.48,
+      "friction": 0.94,
+      "change_time_s": 3.704,
+      "second_distance_m": 3.671,
+      "second_bearing_deg": -42.1
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 111,
+    "arrival_step": 567,
+    "time_to_arrival_s": 15.2,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9132581949234009,
+    "min_up_z": 0.7617533206939697,
+    "max_planar_speed_mps": 2.0586352348327637,
+    "final_distance_m": 0.3568649888038635,
+    "final_speed_mps": 0.12944258749485016,
+    "max_foot_contact_force_n": 1579.52685546875,
+    "max_action_abs": 1.589919924736023,
+    "start_xy": [
+      66.20000457763672,
+      66.5999984741211
+    ],
+    "heading_rad": 1.8897058963775635,
+    "first_target_xy": [
+      65.80226135253906,
+      71.34435272216797
+    ],
+    "friction": 0.94,
+    "second_target_xy": [
+      67.28530883789062,
+      74.70245361328125
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 41,
+    "scenario": {
+      "id": 41,
+      "start_motion_id": 59,
+      "start_phase": 0.767,
+      "distance_m": 1.761,
+      "bearing_deg": 131.55,
+      "friction": 1.01,
+      "change_time_s": 2.157,
+      "second_distance_m": 1.564,
+      "second_bearing_deg": -108.12
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 65,
+    "arrival_step": 281,
+    "time_to_arrival_s": 7.2,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9132278561592102,
+    "min_up_z": 0.9282497763633728,
+    "max_planar_speed_mps": 1.734391212463379,
+    "final_distance_m": 0.1869245171546936,
+    "final_speed_mps": 0.04270487651228905,
+    "max_foot_contact_force_n": 2054.1513671875,
+    "max_action_abs": 1.6903934478759766,
+    "start_xy": [
+      69.0999984741211,
+      104.80000305175781
+    ],
+    "heading_rad": -0.1588219553232193,
+    "first_target_xy": [
+      68.15510559082031,
+      106.28604125976562
+    ],
+    "friction": 1.01,
+    "second_target_xy": [
+      67.4397201538086,
+      104.8952407836914
+    ],
+    "reached_first_before_change": true
+  },
+  {
+    "trial_id": 42,
+    "scenario": {
+      "id": 42,
+      "start_motion_id": 43,
+      "start_phase": 0.5809,
+      "distance_m": 3.814,
+      "bearing_deg": -61.2,
+      "friction": 0.769,
+      "change_time_s": 3.075,
+      "second_distance_m": 1.189,
+      "second_bearing_deg": -74.01
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 92,
+    "arrival_step": 429,
+    "time_to_arrival_s": 11.233,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.894947350025177,
+    "min_up_z": 0.9259142875671387,
+    "max_planar_speed_mps": 1.7954860925674438,
+    "final_distance_m": 0.09343775361776352,
+    "final_speed_mps": 0.2584278881549835,
+    "max_foot_contact_force_n": 1654.92236328125,
+    "max_action_abs": 1.5117580890655518,
+    "start_xy": [
+      153.5,
+      224.10000610351562
+    ],
+    "heading_rad": 1.6122113466262817,
+    "first_target_xy": [
+      156.76329040527344,
+      226.07421875
+    ],
+    "friction": 0.769,
+    "second_target_xy": [
+      157.89175415039062,
+      226.44879150390625
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 43,
+    "scenario": {
+      "id": 43,
+      "start_motion_id": 59,
+      "start_phase": 0.7914,
+      "distance_m": 4.565,
+      "bearing_deg": 104.81,
+      "friction": 0.946,
+      "change_time_s": 1.716,
+      "second_distance_m": 2.797,
+      "second_bearing_deg": 93.14
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 51,
+    "arrival_step": 158,
+    "time_to_arrival_s": 3.567,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8928645253181458,
+    "min_up_z": 0.7487419843673706,
+    "max_planar_speed_mps": 2.8605258464813232,
+    "final_distance_m": 0.2407727688550949,
+    "final_speed_mps": 0.24077652394771576,
+    "max_foot_contact_force_n": 1355.9339599609375,
+    "max_action_abs": 1.8058136701583862,
+    "start_xy": [
+      224.8000030517578,
+      167.60000610351562
+    ],
+    "heading_rad": -0.1578085571527481,
+    "first_target_xy": [
+      224.34120178222656,
+      172.1418914794922
+    ],
+    "friction": 0.946,
+    "second_target_xy": [
+      224.62879943847656,
+      174.924072265625
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 44,
+    "scenario": {
+      "id": 44,
+      "start_motion_id": 59,
+      "start_phase": 0.6197,
+      "distance_m": 4.957,
+      "bearing_deg": -91.78,
+      "friction": 1.237,
+      "change_time_s": 3.424,
+      "second_distance_m": 3.321,
+      "second_bearing_deg": 71.86
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 103,
+    "arrival_step": 216,
+    "time_to_arrival_s": 3.767,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.812232255935669,
+    "min_up_z": 0.7817661762237549,
+    "max_planar_speed_mps": 2.556990385055542,
+    "final_distance_m": 0.05039386823773384,
+    "final_speed_mps": 0.19642822444438934,
+    "max_foot_contact_force_n": 1908.968505859375,
+    "max_action_abs": 1.6560251712799072,
+    "start_xy": [
+      232.40000915527344,
+      234.8000030517578
+    ],
+    "heading_rad": -0.15059500932693481,
+    "first_target_xy": [
+      231.50445556640625,
+      229.92457580566406
+    ],
+    "friction": 1.237,
+    "second_target_xy": [
+      233.00018310546875,
+      232.88967895507812
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 45,
+    "scenario": {
+      "id": 45,
+      "start_motion_id": 24,
+      "start_phase": 0.0192,
+      "distance_m": 3.135,
+      "bearing_deg": -166.74,
+      "friction": 1.15,
+      "change_time_s": 2.614,
+      "second_distance_m": 4.738,
+      "second_bearing_deg": -49.69
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 78,
+    "arrival_step": 293,
+    "time_to_arrival_s": 7.167,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.7996512651443481,
+    "min_up_z": 0.8986206650733948,
+    "max_planar_speed_mps": 2.3763301372528076,
+    "final_distance_m": 0.2043835073709488,
+    "final_speed_mps": 0.1981458067893982,
+    "max_foot_contact_force_n": 1292.788818359375,
+    "max_action_abs": 1.6570103168487549,
+    "start_xy": [
+      195.90000915527344,
+      52.10000228881836
+    ],
+    "heading_rad": 3.0683953762054443,
+    "first_target_xy": [
+      198.995849609375,
+      52.593997955322266
+    ],
+    "friction": 1.15,
+    "second_target_xy": [
+      196.20315551757812,
+      56.421470642089844
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 46,
+    "scenario": {
+      "id": 46,
+      "start_motion_id": 9,
+      "start_phase": 0.4736,
+      "distance_m": 4.294,
+      "bearing_deg": -178.13,
+      "friction": 0.723,
+      "change_time_s": 2.843,
+      "second_distance_m": 4.864,
+      "second_bearing_deg": 161.37
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 85,
+    "arrival_step": 224,
+    "time_to_arrival_s": 4.633,
+    "settle_step_strict": 510,
+    "time_to_settle_s": 14.167,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.81501305103302,
+    "min_up_z": 0.8607204556465149,
+    "max_planar_speed_mps": 2.44907808303833,
+    "final_distance_m": 0.21934808790683746,
+    "final_speed_mps": 0.022046582773327827,
+    "max_foot_contact_force_n": 1284.4686279296875,
+    "max_action_abs": 1.713080883026123,
+    "start_xy": [
+      212.1999969482422,
+      128.5
+    ],
+    "heading_rad": -1.7915518283843994,
+    "first_target_xy": [
+      213.00302124023438,
+      132.71824645996094
+    ],
+    "friction": 0.723,
+    "second_target_xy": [
+      215.5283966064453,
+      136.8752899169922
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 47,
+    "scenario": {
+      "id": 47,
+      "start_motion_id": 24,
+      "start_phase": 0.5878,
+      "distance_m": 4.803,
+      "bearing_deg": 29.82,
+      "friction": 0.863,
+      "change_time_s": 1.503,
+      "second_distance_m": 2.13,
+      "second_bearing_deg": 157.23
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 45,
+    "arrival_step": 254,
+    "time_to_arrival_s": 6.967,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8519089221954346,
+    "min_up_z": 0.8833026885986328,
+    "max_planar_speed_mps": 2.107975959777832,
+    "final_distance_m": 0.4127142131328583,
+    "final_speed_mps": 0.1634332835674286,
+    "max_foot_contact_force_n": 987.6461181640625,
+    "max_action_abs": 1.591579794883728,
+    "start_xy": [
+      89.70000457763672,
+      110.30000305175781
+    ],
+    "heading_rad": -1.6261615753173828,
+    "first_target_xy": [
+      91.85417175292969,
+      106.0071792602539
+    ],
+    "friction": 0.863,
+    "second_target_xy": [
+      92.78597259521484,
+      107.92255401611328
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 48,
+    "scenario": {
+      "id": 48,
+      "start_motion_id": 9,
+      "start_phase": 0.5144,
+      "distance_m": 1.285,
+      "bearing_deg": 120.68,
+      "friction": 0.774,
+      "change_time_s": 1.503,
+      "second_distance_m": 2.624,
+      "second_bearing_deg": 26.68
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 45,
+    "arrival_step": null,
+    "time_to_arrival_s": null,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9059075117111206,
+    "min_up_z": 0.921262264251709,
+    "max_planar_speed_mps": 1.9437175989151,
+    "final_distance_m": 0.45640382170677185,
+    "final_speed_mps": 0.045533329248428345,
+    "max_foot_contact_force_n": 1321.7940673828125,
+    "max_action_abs": 1.4193919897079468,
+    "start_xy": [
+      145.60000610351562,
+      164.8000030517578
+    ],
+    "heading_rad": -1.8323942422866821,
+    "first_target_xy": [
+      146.8371124267578,
+      165.1475372314453
+    ],
+    "friction": 0.774,
+    "second_target_xy": [
+      147.3688507080078,
+      162.57797241210938
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 49,
+    "scenario": {
+      "id": 49,
+      "start_motion_id": 24,
+      "start_phase": 0.5505,
+      "distance_m": 2.1,
+      "bearing_deg": -131.25,
+      "friction": 0.61,
+      "change_time_s": 3.297,
+      "second_distance_m": 1.572,
+      "second_bearing_deg": -29.55
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 99,
+    "arrival_step": 167,
+    "time_to_arrival_s": 2.267,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8778699636459351,
+    "min_up_z": 0.8813877701759338,
+    "max_planar_speed_mps": 1.9438154697418213,
+    "final_distance_m": 0.12143267691135406,
+    "final_speed_mps": 0.22911007702350616,
+    "max_foot_contact_force_n": 957.5691528320312,
+    "max_action_abs": 1.349281907081604,
+    "start_xy": [
+      215.90000915527344,
+      128.3000030517578
+    ],
+    "heading_rad": -1.6616096496582031,
+    "first_target_xy": [
+      214.45321655273438,
+      129.82211303710938
+    ],
+    "friction": 0.61,
+    "second_target_xy": [
+      213.55711364746094,
+      128.53053283691406
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 50,
+    "scenario": {
+      "id": 50,
+      "start_motion_id": 9,
+      "start_phase": 0.2113,
+      "distance_m": 4.096,
+      "bearing_deg": -45.86,
+      "friction": 1.222,
+      "change_time_s": 2.828,
+      "second_distance_m": 1.944,
+      "second_bearing_deg": 17.91
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 85,
+    "arrival_step": 581,
+    "time_to_arrival_s": 16.533,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8702459931373596,
+    "min_up_z": 0.8937617540359497,
+    "max_planar_speed_mps": 2.1297857761383057,
+    "final_distance_m": 0.238467276096344,
+    "final_speed_mps": 0.4113004207611084,
+    "max_foot_contact_force_n": 2689.301025390625,
+    "max_action_abs": 1.7547608613967896,
+    "start_xy": [
+      148.90000915527344,
+      49.5
+    ],
+    "heading_rad": -1.7441948652267456,
+    "first_target_xy": [
+      145.51248168945312,
+      47.197410583496094
+    ],
+    "friction": 1.222,
+    "second_target_xy": [
+      145.78219604492188,
+      45.272212982177734
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 51,
+    "scenario": {
+      "id": 51,
+      "start_motion_id": 20,
+      "start_phase": 0.7525,
+      "distance_m": 2.544,
+      "bearing_deg": 8.1,
+      "friction": 0.728,
+      "change_time_s": 1.872,
+      "second_distance_m": 3.237,
+      "second_bearing_deg": 6.76
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 56,
+    "arrival_step": 454,
+    "time_to_arrival_s": 13.267,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8858518600463867,
+    "min_up_z": 0.9044650793075562,
+    "max_planar_speed_mps": 2.1104736328125,
+    "final_distance_m": 0.23737721145153046,
+    "final_speed_mps": 0.11307467520236969,
+    "max_foot_contact_force_n": 1464.911376953125,
+    "max_action_abs": 1.684462308883667,
+    "start_xy": [
+      228.40000915527344,
+      106.30000305175781
+    ],
+    "heading_rad": 0.23617199063301086,
+    "first_target_xy": [
+      230.7648468017578,
+      107.2378158569336
+    ],
+    "friction": 0.728,
+    "second_target_xy": [
+      233.80096435546875,
+      108.36040496826172
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 52,
+    "scenario": {
+      "id": 52,
+      "start_motion_id": 9,
+      "start_phase": 0.2791,
+      "distance_m": 2.286,
+      "bearing_deg": -126.21,
+      "friction": 1.186,
+      "change_time_s": 2.924,
+      "second_distance_m": 2.937,
+      "second_bearing_deg": -10.75
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 88,
+    "arrival_step": 667,
+    "time_to_arrival_s": 19.3,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8484554886817932,
+    "min_up_z": 0.8726837038993835,
+    "max_planar_speed_mps": 2.486701011657715,
+    "final_distance_m": 0.2503384053707123,
+    "final_speed_mps": 0.1513807326555252,
+    "max_foot_contact_force_n": 1577.8111572265625,
+    "max_action_abs": 1.7401025295257568,
+    "start_xy": [
+      46.10000228881836,
+      227.6999969482422
+    ],
+    "heading_rad": -1.6691808700561523,
+    "first_target_xy": [
+      44.3970947265625,
+      229.22508239746094
+    ],
+    "friction": 1.186,
+    "second_target_xy": [
+      43.56849670410156,
+      226.4073944091797
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 53,
+    "scenario": {
+      "id": 53,
+      "start_motion_id": 7,
+      "start_phase": 0.6644,
+      "distance_m": 4.995,
+      "bearing_deg": -95.55,
+      "friction": 0.572,
+      "change_time_s": 2.532,
+      "second_distance_m": 3.709,
+      "second_bearing_deg": -146.95
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 76,
+    "arrival_step": 487,
+    "time_to_arrival_s": 13.7,
+    "settle_step_strict": 530,
+    "time_to_settle_s": 15.133,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8963039517402649,
+    "min_up_z": 0.8634067177772522,
+    "max_planar_speed_mps": 2.386972427368164,
+    "final_distance_m": 0.22721052169799805,
+    "final_speed_mps": 0.09996914118528366,
+    "max_foot_contact_force_n": 1479.58349609375,
+    "max_action_abs": 1.3525289297103882,
+    "start_xy": [
+      215.1999969482422,
+      188.5
+    ],
+    "heading_rad": -3.0845091342926025,
+    "first_target_xy": [
+      215.39865112304688,
+      193.4910430908203
+    ],
+    "friction": 0.572,
+    "second_target_xy": [
+      218.38705444335938,
+      195.68789672851562
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 54,
+    "scenario": {
+      "id": 54,
+      "start_motion_id": 20,
+      "start_phase": 0.5005,
+      "distance_m": 2.022,
+      "bearing_deg": -65.11,
+      "friction": 0.801,
+      "change_time_s": 1.955,
+      "second_distance_m": 1.846,
+      "second_bearing_deg": -138.24
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 59,
+    "arrival_step": 173,
+    "time_to_arrival_s": 3.8,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.915027916431427,
+    "min_up_z": 0.9420504570007324,
+    "max_planar_speed_mps": 1.316075086593628,
+    "final_distance_m": 0.3624477684497833,
+    "final_speed_mps": 0.05489218235015869,
+    "max_foot_contact_force_n": 1041.2100830078125,
+    "max_action_abs": 1.2543566226959229,
+    "start_xy": [
+      53.60000228881836,
+      104.20000457763672
+    ],
+    "heading_rad": 0.3413676917552948,
+    "first_target_xy": [
+      55.015953063964844,
+      102.75654602050781
+    ],
+    "friction": 0.801,
+    "second_target_xy": [
+      54.1299934387207,
+      101.13703918457031
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 55,
+    "scenario": {
+      "id": 55,
+      "start_motion_id": 9,
+      "start_phase": 0.18,
+      "distance_m": 3.131,
+      "bearing_deg": -145.99,
+      "friction": 1.162,
+      "change_time_s": 3.687,
+      "second_distance_m": 1.56,
+      "second_bearing_deg": -57.11
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 111,
+    "arrival_step": 207,
+    "time_to_arrival_s": 3.2,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9154407382011414,
+    "min_up_z": 0.8991437554359436,
+    "max_planar_speed_mps": 1.9834256172180176,
+    "final_distance_m": 0.374332457780838,
+    "final_speed_mps": 0.09858345240354538,
+    "max_foot_contact_force_n": 1086.072998046875,
+    "max_action_abs": 1.3538461923599243,
+    "start_xy": [
+      108.5999984741211,
+      92.20000457763672
+    ],
+    "heading_rad": -1.617920160293579,
+    "first_target_xy": [
+      106.97291564941406,
+      94.87503051757812
+    ],
+    "friction": 1.162,
+    "second_target_xy": [
+      105.62451171875,
+      94.0905532836914
+    ],
+    "reached_first_before_change": true
+  },
+  {
+    "trial_id": 56,
+    "scenario": {
+      "id": 56,
+      "start_motion_id": 24,
+      "start_phase": 0.6068,
+      "distance_m": 3.278,
+      "bearing_deg": -90.08,
+      "friction": 0.659,
+      "change_time_s": 1.524,
+      "second_distance_m": 1.743,
+      "second_bearing_deg": -44.57
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 46,
+    "arrival_step": 253,
+    "time_to_arrival_s": 6.9,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.904861569404602,
+    "min_up_z": 0.8887230157852173,
+    "max_planar_speed_mps": 1.7601436376571655,
+    "final_distance_m": 0.4538988471031189,
+    "final_speed_mps": 0.14509692788124084,
+    "max_foot_contact_force_n": 1373.425048828125,
+    "max_action_abs": 1.3674131631851196,
+    "start_xy": [
+      187.8000030517578,
+      111.70000457763672
+    ],
+    "heading_rad": -1.6059845685958862,
+    "first_target_xy": [
+      184.52420043945312,
+      111.81990051269531
+    ],
+    "friction": 0.659,
+    "second_target_xy": [
+      183.25807189941406,
+      110.62200164794922
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 57,
+    "scenario": {
+      "id": 57,
+      "start_motion_id": 24,
+      "start_phase": 0.5727,
+      "distance_m": 4.315,
+      "bearing_deg": 129.98,
+      "friction": 0.545,
+      "change_time_s": 3.393,
+      "second_distance_m": 3.624,
+      "second_bearing_deg": -95.29
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 102,
+    "arrival_step": 526,
+    "time_to_arrival_s": 14.133,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.81764817237854,
+    "min_up_z": 0.8363266587257385,
+    "max_planar_speed_mps": 2.9314980506896973,
+    "final_distance_m": 0.3219912052154541,
+    "final_speed_mps": 0.117152139544487,
+    "max_foot_contact_force_n": 1424.1187744140625,
+    "max_action_abs": 1.5243967771530151,
+    "start_xy": [
+      94.20000457763672,
+      191.90000915527344
+    ],
+    "heading_rad": -1.6433199644088745,
+    "first_target_xy": [
+      97.69865417480469,
+      194.4256134033203
+    ],
+    "friction": 0.545,
+    "second_target_xy": [
+      94.12378692626953,
+      195.0203399658203
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 58,
+    "scenario": {
+      "id": 58,
+      "start_motion_id": 20,
+      "start_phase": 0.2137,
+      "distance_m": 2.818,
+      "bearing_deg": -84.96,
+      "friction": 0.547,
+      "change_time_s": 3.94,
+      "second_distance_m": 4.474,
+      "second_bearing_deg": -56.33
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 118,
+    "arrival_step": 624,
+    "time_to_arrival_s": 16.867,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9036932587623596,
+    "min_up_z": 0.838375449180603,
+    "max_planar_speed_mps": 2.246492624282837,
+    "final_distance_m": 0.17524297535419464,
+    "final_speed_mps": 0.10325394570827484,
+    "max_foot_contact_force_n": 1182.79833984375,
+    "max_action_abs": 1.547095775604248,
+    "start_xy": [
+      213.40000915527344,
+      52.900001525878906
+    ],
+    "heading_rad": 0.16437485814094543,
+    "first_target_xy": [
+      214.10357666015625,
+      50.17124557495117
+    ],
+    "friction": 0.547,
+    "second_target_xy": [
+      217.15985107421875,
+      46.90385818481445
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 59,
+    "scenario": {
+      "id": 59,
+      "start_motion_id": 43,
+      "start_phase": 0.5498,
+      "distance_m": 4.657,
+      "bearing_deg": 171.12,
+      "friction": 1.102,
+      "change_time_s": 3.177,
+      "second_distance_m": 1.73,
+      "second_bearing_deg": 120.01
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 95,
+    "arrival_step": 377,
+    "time_to_arrival_s": 9.4,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8992663621902466,
+    "min_up_z": 0.9006046652793884,
+    "max_planar_speed_mps": 1.926223874092102,
+    "final_distance_m": 0.08055596053600311,
+    "final_speed_mps": 0.09455494582653046,
+    "max_foot_contact_force_n": 974.5728149414062,
+    "max_action_abs": 1.497784972190857,
+    "start_xy": [
+      47.0,
+      51.5
+    ],
+    "heading_rad": 1.8165202140808105,
+    "first_target_xy": [
+      47.42198944091797,
+      46.862159729003906
+    ],
+    "friction": 1.102,
+    "second_target_xy": [
+      46.17939758300781,
+      45.658470153808594
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 60,
+    "scenario": {
+      "id": 60,
+      "start_motion_id": 9,
+      "start_phase": 0.3057,
+      "distance_m": 3.122,
+      "bearing_deg": 30.61,
+      "friction": 0.821,
+      "change_time_s": 1.669,
+      "second_distance_m": 1.819,
+      "second_bearing_deg": 84.95
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 50,
+    "arrival_step": 330,
+    "time_to_arrival_s": 9.333,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8983621001243591,
+    "min_up_z": 0.8942365646362305,
+    "max_planar_speed_mps": 1.77057683467865,
+    "final_distance_m": 0.6586953401565552,
+    "final_speed_mps": 0.12381231784820557,
+    "max_foot_contact_force_n": 901.459716796875,
+    "max_action_abs": 1.3022717237472534,
+    "start_xy": [
+      227.5,
+      194.90000915527344
+    ],
+    "heading_rad": -1.5430110692977905,
+    "first_target_xy": [
+      229.16372680664062,
+      192.2582550048828
+    ],
+    "friction": 0.821,
+    "second_target_xy": [
+      230.9794158935547,
+      192.14854431152344
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 61,
+    "scenario": {
+      "id": 61,
+      "start_motion_id": 20,
+      "start_phase": 0.3692,
+      "distance_m": 3.961,
+      "bearing_deg": 178.38,
+      "friction": 0.815,
+      "change_time_s": 2.525,
+      "second_distance_m": 4.042,
+      "second_bearing_deg": -134.3
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 76,
+    "arrival_step": 381,
+    "time_to_arrival_s": 10.167,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.7705653309822083,
+    "min_up_z": 0.7085858583450317,
+    "max_planar_speed_mps": 2.5023508071899414,
+    "final_distance_m": 0.25425198674201965,
+    "final_speed_mps": 0.04297136142849922,
+    "max_foot_contact_force_n": 1603.717529296875,
+    "max_action_abs": 1.5375823974609375,
+    "start_xy": [
+      235.8000030517578,
+      65.70000457763672
+    ],
+    "heading_rad": -0.3086208701133728,
+    "first_target_xy": [
+      232.06167602539062,
+      67.00934600830078
+    ],
+    "friction": 0.815,
+    "second_target_xy": [
+      228.49337768554688,
+      65.11066436767578
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 62,
+    "scenario": {
+      "id": 62,
+      "start_motion_id": 43,
+      "start_phase": 0.7576,
+      "distance_m": 4.864,
+      "bearing_deg": -152.55,
+      "friction": 0.769,
+      "change_time_s": 1.695,
+      "second_distance_m": 4.557,
+      "second_bearing_deg": -99.78
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 51,
+    "arrival_step": 391,
+    "time_to_arrival_s": 11.333,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8399859666824341,
+    "min_up_z": 0.7957667112350464,
+    "max_planar_speed_mps": 3.8921525478363037,
+    "final_distance_m": 0.18040332198143005,
+    "final_speed_mps": 0.098519466817379,
+    "max_foot_contact_force_n": 1429.9075927734375,
+    "max_action_abs": 1.7661254405975342,
+    "start_xy": [
+      190.10000610351562,
+      129.5
+    ],
+    "heading_rad": 1.5837334394454956,
+    "first_target_xy": [
+      192.39784240722656,
+      125.2129898071289
+    ],
+    "friction": 0.769,
+    "second_target_xy": [
+      196.89825439453125,
+      124.4970703125
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 63,
+    "scenario": {
+      "id": 63,
+      "start_motion_id": 43,
+      "start_phase": 0.7789,
+      "distance_m": 3.685,
+      "bearing_deg": -155.77,
+      "friction": 1.247,
+      "change_time_s": 2.552,
+      "second_distance_m": 2.025,
+      "second_bearing_deg": -10.57
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 77,
+    "arrival_step": 264,
+    "time_to_arrival_s": 6.233,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8589145541191101,
+    "min_up_z": 0.8568769097328186,
+    "max_planar_speed_mps": 2.317544937133789,
+    "final_distance_m": 0.3376788794994354,
+    "final_speed_mps": 0.0733303353190422,
+    "max_foot_contact_force_n": 1390.8564453125,
+    "max_action_abs": 1.8188737630844116,
+    "start_xy": [
+      230.60000610351562,
+      152.90000915527344
+    ],
+    "heading_rad": 1.5165445804595947,
+    "first_target_xy": [
+      231.92788696289062,
+      149.4625701904297
+    ],
+    "friction": 1.247,
+    "second_target_xy": [
+      232.40673828125,
+      151.43014526367188
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 64,
+    "scenario": {
+      "id": 64,
+      "start_motion_id": 20,
+      "start_phase": 0.7712,
+      "distance_m": 1.685,
+      "bearing_deg": 14.37,
+      "friction": 0.873,
+      "change_time_s": 1.781,
+      "second_distance_m": 4.033,
+      "second_bearing_deg": 78.27
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 53,
+    "arrival_step": 175,
+    "time_to_arrival_s": 4.067,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9233853220939636,
+    "min_up_z": 0.9017767906188965,
+    "max_planar_speed_mps": 2.652280807495117,
+    "final_distance_m": 0.3577888011932373,
+    "final_speed_mps": 0.03968267887830734,
+    "max_foot_contact_force_n": 2005.401611328125,
+    "max_action_abs": 1.7471035718917847,
+    "start_xy": [
+      91.0,
+      153.3000030517578
+    ],
+    "heading_rad": 0.33231279253959656,
+    "first_target_xy": [
+      92.40655517578125,
+      154.22781372070312
+    ],
+    "friction": 0.873,
+    "second_target_xy": [
+      91.89339447021484,
+      158.22802734375
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 65,
+    "scenario": {
+      "id": 65,
+      "start_motion_id": 43,
+      "start_phase": 0.4716,
+      "distance_m": 2.039,
+      "bearing_deg": 43.62,
+      "friction": 0.808,
+      "change_time_s": 3.473,
+      "second_distance_m": 4.851,
+      "second_bearing_deg": -37.14
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 104,
+    "arrival_step": 244,
+    "time_to_arrival_s": 4.667,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.873177170753479,
+    "min_up_z": 0.8971946239471436,
+    "max_planar_speed_mps": 2.0586678981781006,
+    "final_distance_m": 0.3044293224811554,
+    "final_speed_mps": 0.08468673378229141,
+    "max_foot_contact_force_n": 1852.017333984375,
+    "max_action_abs": 1.6610304117202759,
+    "start_xy": [
+      90.5999984741211,
+      74.20000457763672
+    ],
+    "heading_rad": 1.5711368322372437,
+    "first_target_xy": [
+      89.1928482055664,
+      75.67562103271484
+    ],
+    "friction": 0.808,
+    "second_target_xy": [
+      92.12039184570312,
+      79.54365539550781
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 66,
+    "scenario": {
+      "id": 66,
+      "start_motion_id": 7,
+      "start_phase": 0.6135,
+      "distance_m": 3.476,
+      "bearing_deg": 123.11,
+      "friction": 0.862,
+      "change_time_s": 1.637,
+      "second_distance_m": 3.798,
+      "second_bearing_deg": -118.41
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 49,
+    "arrival_step": 621,
+    "time_to_arrival_s": 19.067,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8307187557220459,
+    "min_up_z": 0.863399863243103,
+    "max_planar_speed_mps": 2.0377519130706787,
+    "final_distance_m": 0.3026065528392792,
+    "final_speed_mps": 0.07901483029127121,
+    "max_foot_contact_force_n": 1096.8541259765625,
+    "max_action_abs": 1.9083268642425537,
+    "start_xy": [
+      135.0,
+      153.6999969482422
+    ],
+    "heading_rad": -3.0727574825286865,
+    "first_target_xy": [
+      137.0945281982422,
+      150.9259033203125
+    ],
+    "friction": 0.862,
+    "second_target_xy": [
+      138.66748046875,
+      154.38287353515625
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 67,
+    "scenario": {
+      "id": 67,
+      "start_motion_id": 7,
+      "start_phase": 0.5835,
+      "distance_m": 4.413,
+      "bearing_deg": -158.88,
+      "friction": 1.036,
+      "change_time_s": 3.08,
+      "second_distance_m": 2.203,
+      "second_bearing_deg": -155.95
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 92,
+    "arrival_step": 329,
+    "time_to_arrival_s": 7.9,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9008132219314575,
+    "min_up_z": 0.8573358058929443,
+    "max_planar_speed_mps": 2.323709487915039,
+    "final_distance_m": 0.47778254747390747,
+    "final_speed_mps": 0.007162923458963633,
+    "max_foot_contact_force_n": 2088.638427734375,
+    "max_action_abs": 1.572178602218628,
+    "start_xy": [
+      230.0,
+      88.20000457763672
+    ],
+    "heading_rad": -3.0766873359680176,
+    "first_target_xy": [
+      234.0047607421875,
+      90.05375671386719
+    ],
+    "friction": 1.036,
+    "second_target_xy": [
+      235.9540557861328,
+      91.08014678955078
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 68,
+    "scenario": {
+      "id": 68,
+      "start_motion_id": 9,
+      "start_phase": 0.633,
+      "distance_m": 1.952,
+      "bearing_deg": 83.15,
+      "friction": 0.566,
+      "change_time_s": 2.485,
+      "second_distance_m": 2.367,
+      "second_bearing_deg": 90.69
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 75,
+    "arrival_step": 464,
+    "time_to_arrival_s": 12.967,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8887631297111511,
+    "min_up_z": 0.8728260397911072,
+    "max_planar_speed_mps": 2.363374948501587,
+    "final_distance_m": 0.385507196187973,
+    "final_speed_mps": 0.11332792788743973,
+    "max_foot_contact_force_n": 1451.126708984375,
+    "max_action_abs": 1.4973278045654297,
+    "start_xy": [
+      133.0,
+      105.0999984741211
+    ],
+    "heading_rad": -1.4575023651123047,
+    "first_target_xy": [
+      134.95196533203125,
+      105.08777618408203
+    ],
+    "friction": 0.566,
+    "second_target_xy": [
+      137.30039978027344,
+      105.38367462158203
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 69,
+    "scenario": {
+      "id": 69,
+      "start_motion_id": 24,
+      "start_phase": 0.742,
+      "distance_m": 2.984,
+      "bearing_deg": 78.01,
+      "friction": 0.643,
+      "change_time_s": 2.95,
+      "second_distance_m": 4.874,
+      "second_bearing_deg": -97.36
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 88,
+    "arrival_step": 441,
+    "time_to_arrival_s": 11.767,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8972803950309753,
+    "min_up_z": 0.8912894129753113,
+    "max_planar_speed_mps": 2.318593740463257,
+    "final_distance_m": 0.20818071067333221,
+    "final_speed_mps": 0.12883205711841583,
+    "max_foot_contact_force_n": 1370.139404296875,
+    "max_action_abs": 1.6982437372207642,
+    "start_xy": [
+      147.8000030517578,
+      204.89999389648438
+    ],
+    "heading_rad": -1.4892009496688843,
+    "first_target_xy": [
+      150.7597198486328,
+      204.5200653076172
+    ],
+    "friction": 0.643,
+    "second_target_xy": [
+      145.8910675048828,
+      204.74838256835938
+    ],
+    "reached_first_before_change": true
+  },
+  {
+    "trial_id": 70,
+    "scenario": {
+      "id": 70,
+      "start_motion_id": 59,
+      "start_phase": 0.7454,
+      "distance_m": 3.486,
+      "bearing_deg": -73.32,
+      "friction": 0.717,
+      "change_time_s": 1.597,
+      "second_distance_m": 2.357,
+      "second_bearing_deg": 0.51
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 48,
+    "arrival_step": 123,
+    "time_to_arrival_s": 2.5,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9116883277893066,
+    "min_up_z": 0.9044389724731445,
+    "max_planar_speed_mps": 2.644407033920288,
+    "final_distance_m": 0.44019022583961487,
+    "final_speed_mps": 0.055253930389881134,
+    "max_foot_contact_force_n": 1293.68505859375,
+    "max_action_abs": 1.692478895187378,
+    "start_xy": [
+      55.20000076293945,
+      106.70000457763672
+    ],
+    "heading_rad": -0.16569869220256805,
+    "first_target_xy": [
+      55.636077880859375,
+      103.24138641357422
+    ],
+    "friction": 0.717,
+    "second_target_xy": [
+      57.96416473388672,
+      102.87332916259766
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 71,
+    "scenario": {
+      "id": 71,
+      "start_motion_id": 9,
+      "start_phase": 0.3091,
+      "distance_m": 3.054,
+      "bearing_deg": -3.96,
+      "friction": 0.902,
+      "change_time_s": 2.346,
+      "second_distance_m": 2.859,
+      "second_bearing_deg": -58.61
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 70,
+    "arrival_step": 362,
+    "time_to_arrival_s": 9.733,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9048895239830017,
+    "min_up_z": 0.9249733686447144,
+    "max_planar_speed_mps": 1.8535521030426025,
+    "final_distance_m": 0.24244584143161774,
+    "final_speed_mps": 0.08459040522575378,
+    "max_foot_contact_force_n": 1353.189453125,
+    "max_action_abs": 1.2592999935150146,
+    "start_xy": [
+      93.30000305175781,
+      150.1999969482422
+    ],
+    "heading_rad": -1.5319770574569702,
+    "first_target_xy": [
+      93.2074966430664,
+      147.14739990234375
+    ],
+    "friction": 0.902,
+    "second_target_xy": [
+      90.82656860351562,
+      145.56466674804688
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 72,
+    "scenario": {
+      "id": 72,
+      "start_motion_id": 24,
+      "start_phase": 0.2076,
+      "distance_m": 1.339,
+      "bearing_deg": -112.94,
+      "friction": 0.937,
+      "change_time_s": 3.587,
+      "second_distance_m": 2.752,
+      "second_bearing_deg": 118.77
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 108,
+    "arrival_step": 548,
+    "time_to_arrival_s": 14.667,
+    "settle_step_strict": 630,
+    "time_to_settle_s": 17.4,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8161029815673828,
+    "min_up_z": 0.9353230595588684,
+    "max_planar_speed_mps": 2.2947216033935547,
+    "final_distance_m": 0.21774986386299133,
+    "final_speed_mps": 0.0532098263502121,
+    "max_foot_contact_force_n": 1132.041015625,
+    "max_action_abs": 1.4736586809158325,
+    "start_xy": [
+      154.60000610351562,
+      230.8000030517578
+    ],
+    "heading_rad": -3.0799014568328857,
+    "first_target_xy": [
+      155.04489135742188,
+      232.0629425048828
+    ],
+    "friction": 0.937,
+    "second_target_xy": [
+      156.515625,
+      229.73690795898438
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 73,
+    "scenario": {
+      "id": 73,
+      "start_motion_id": 59,
+      "start_phase": 0.236,
+      "distance_m": 3.315,
+      "bearing_deg": 132.33,
+      "friction": 0.55,
+      "change_time_s": 1.685,
+      "second_distance_m": 2.379,
+      "second_bearing_deg": 141.02
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 51,
+    "arrival_step": 169,
+    "time_to_arrival_s": 3.933,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8753709197044373,
+    "min_up_z": 0.9155233502388,
+    "max_planar_speed_mps": 2.226284980773926,
+    "final_distance_m": 0.2550225555896759,
+    "final_speed_mps": 0.06535235792398453,
+    "max_foot_contact_force_n": 1232.5821533203125,
+    "max_action_abs": 1.713182806968689,
+    "start_xy": [
+      68.0999984741211,
+      165.1999969482422
+    ],
+    "heading_rad": -3.0928239822387695,
+    "first_target_xy": [
+      70.44913482666016,
+      162.86102294921875
+    ],
+    "friction": 0.55,
+    "second_target_xy": [
+      72.3692398071289,
+      161.45645141601562
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 74,
+    "scenario": {
+      "id": 74,
+      "start_motion_id": 20,
+      "start_phase": 0.7225,
+      "distance_m": 3.916,
+      "bearing_deg": -98.98,
+      "friction": 0.708,
+      "change_time_s": 1.668,
+      "second_distance_m": 4.887,
+      "second_bearing_deg": 81.96
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 50,
+    "arrival_step": 242,
+    "time_to_arrival_s": 6.4,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8033191561698914,
+    "min_up_z": 0.8872194290161133,
+    "max_planar_speed_mps": 2.55415415763855,
+    "final_distance_m": 0.20277558267116547,
+    "final_speed_mps": 0.015637941658496857,
+    "max_foot_contact_force_n": 1258.576904296875,
+    "max_action_abs": 1.4613709449768066,
+    "start_xy": [
+      155.3000030517578,
+      189.5
+    ],
+    "heading_rad": -0.1359720528125763,
+    "first_target_xy": [
+      154.17007446289062,
+      185.75054931640625
+    ],
+    "friction": 0.708,
+    "second_target_xy": [
+      155.5032196044922,
+      190.4521942138672
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 75,
+    "scenario": {
+      "id": 75,
+      "start_motion_id": 43,
+      "start_phase": 0.6482,
+      "distance_m": 1.655,
+      "bearing_deg": -52.59,
+      "friction": 1.092,
+      "change_time_s": 2.568,
+      "second_distance_m": 2.637,
+      "second_bearing_deg": -125.72
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 77,
+    "arrival_step": 175,
+    "time_to_arrival_s": 3.267,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": true,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8538679480552673,
+    "min_up_z": 0.909320056438446,
+    "max_planar_speed_mps": 1.7911021709442139,
+    "final_distance_m": 0.2723921537399292,
+    "final_speed_mps": 0.14778169989585876,
+    "max_foot_contact_force_n": 1174.2684326171875,
+    "max_action_abs": 1.3249658346176147,
+    "start_xy": [
+      168.5,
+      145.5
+    ],
+    "heading_rad": 1.4495526552200317,
+    "first_target_xy": [
+      169.92652893066406,
+      146.3390655517578
+    ],
+    "friction": 1.092,
+    "second_target_xy": [
+      171.86553955078125,
+      144.5518798828125
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 76,
+    "scenario": {
+      "id": 76,
+      "start_motion_id": 7,
+      "start_phase": 0.1335,
+      "distance_m": 1.262,
+      "bearing_deg": 59.55,
+      "friction": 0.563,
+      "change_time_s": 3.15,
+      "second_distance_m": 4.236,
+      "second_bearing_deg": -55.68
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 94,
+    "arrival_step": null,
+    "time_to_arrival_s": null,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9127004742622375,
+    "min_up_z": 0.9116894006729126,
+    "max_planar_speed_mps": 2.19932222366333,
+    "final_distance_m": 0.4907517433166504,
+    "final_speed_mps": 0.036299072206020355,
+    "max_foot_contact_force_n": 1020.489501953125,
+    "max_action_abs": 1.7263456583023071,
+    "start_xy": [
+      50.20000076293945,
+      55.400001525878906
+    ],
+    "heading_rad": -3.079526424407959,
+    "first_target_xy": [
+      49.629150390625,
+      54.27449035644531
+    ],
+    "friction": 0.563,
+    "second_target_xy": [
+      47.0284309387207,
+      57.618133544921875
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 77,
+    "scenario": {
+      "id": 77,
+      "start_motion_id": 20,
+      "start_phase": 0.1932,
+      "distance_m": 2.568,
+      "bearing_deg": 166.61,
+      "friction": 1.045,
+      "change_time_s": 2.488,
+      "second_distance_m": 4.217,
+      "second_bearing_deg": 74.11
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 75,
+    "arrival_step": 305,
+    "time_to_arrival_s": 7.667,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8528911471366882,
+    "min_up_z": 0.9094826579093933,
+    "max_planar_speed_mps": 2.1572608947753906,
+    "final_distance_m": 0.557100772857666,
+    "final_speed_mps": 0.30155298113822937,
+    "max_foot_contact_force_n": 1579.6099853515625,
+    "max_action_abs": 1.614933967590332,
+    "start_xy": [
+      214.90000915527344,
+      215.90000915527344
+    ],
+    "heading_rad": -0.15896376967430115,
+    "first_target_xy": [
+      212.52745056152344,
+      216.88265991210938
+    ],
+    "friction": 1.045,
+    "second_target_xy": [
+      214.3094940185547,
+      220.70462036132812
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 78,
+    "scenario": {
+      "id": 78,
+      "start_motion_id": 24,
+      "start_phase": 0.5018,
+      "distance_m": 1.261,
+      "bearing_deg": -10.88,
+      "friction": 0.897,
+      "change_time_s": 1.539,
+      "second_distance_m": 1.633,
+      "second_bearing_deg": 88.55
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 46,
+    "arrival_step": 524,
+    "time_to_arrival_s": 15.933,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9212875962257385,
+    "min_up_z": 0.939105749130249,
+    "max_planar_speed_mps": 1.149546504020691,
+    "final_distance_m": 0.13044676184654236,
+    "final_speed_mps": 0.13690203428268433,
+    "max_foot_contact_force_n": 1542.6458740234375,
+    "max_action_abs": 1.4764996767044067,
+    "start_xy": [
+      150.0,
+      110.0
+    ],
+    "heading_rad": -1.9933931827545166,
+    "first_target_xy": [
+      149.27503967285156,
+      108.96822357177734
+    ],
+    "friction": 0.897,
+    "second_target_xy": [
+      150.7469482421875,
+      108.2610092163086
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 79,
+    "scenario": {
+      "id": 79,
+      "start_motion_id": 20,
+      "start_phase": 0.1879,
+      "distance_m": 1.982,
+      "bearing_deg": -51.56,
+      "friction": 0.5,
+      "change_time_s": 2.243,
+      "second_distance_m": 1.24,
+      "second_bearing_deg": -24.81
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 67,
+    "arrival_step": 155,
+    "time_to_arrival_s": 2.933,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8242626190185547,
+    "min_up_z": 0.9142378568649292,
+    "max_planar_speed_mps": 1.3812038898468018,
+    "final_distance_m": 0.2995724380016327,
+    "final_speed_mps": 0.10768863558769226,
+    "max_foot_contact_force_n": 1125.543701171875,
+    "max_action_abs": 1.4837143421173096,
+    "start_xy": [
+      131.90000915527344,
+      48.10000228881836
+    ],
+    "heading_rad": -0.18744835257530212,
+    "first_target_xy": [
+      132.82131958007812,
+      46.345149993896484
+    ],
+    "friction": 0.5,
+    "second_target_xy": [
+      133.8302001953125,
+      45.62419891357422
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 80,
+    "scenario": {
+      "id": 80,
+      "start_motion_id": 59,
+      "start_phase": 0.5858,
+      "distance_m": 3.192,
+      "bearing_deg": 3.87,
+      "friction": 0.717,
+      "change_time_s": 2.955,
+      "second_distance_m": 4.758,
+      "second_bearing_deg": -76.61
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 89,
+    "arrival_step": 559,
+    "time_to_arrival_s": 15.667,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9081368446350098,
+    "min_up_z": 0.9163758754730225,
+    "max_planar_speed_mps": 2.0782840251922607,
+    "final_distance_m": 0.10475919395685196,
+    "final_speed_mps": 0.028741246089339256,
+    "max_foot_contact_force_n": 930.9080810546875,
+    "max_action_abs": 1.6088603734970093,
+    "start_xy": [
+      213.40000915527344,
+      124.70000457763672
+    ],
+    "heading_rad": -0.147499680519104,
+    "first_target_xy": [
+      216.58181762695312,
+      124.44506072998047
+    ],
+    "friction": 0.717,
+    "second_target_xy": [
+      216.991455078125,
+      119.70472717285156
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 81,
+    "scenario": {
+      "id": 81,
+      "start_motion_id": 24,
+      "start_phase": 0.1557,
+      "distance_m": 1.11,
+      "bearing_deg": 131.74,
+      "friction": 0.66,
+      "change_time_s": 2.72,
+      "second_distance_m": 4.154,
+      "second_bearing_deg": -157.57
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 82,
+    "arrival_step": 465,
+    "time_to_arrival_s": 12.767,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8332173824310303,
+    "min_up_z": 0.8793461918830872,
+    "max_planar_speed_mps": 2.4275712966918945,
+    "final_distance_m": 0.4473651945590973,
+    "final_speed_mps": 0.25232207775115967,
+    "max_foot_contact_force_n": 1172.465576171875,
+    "max_action_abs": 1.5731728076934814,
+    "start_xy": [
+      150.90000915527344,
+      144.90000915527344
+    ],
+    "heading_rad": 3.079768180847168,
+    "first_target_xy": [
+      151.58641052246094,
+      144.02767944335938
+    ],
+    "friction": 0.66,
+    "second_target_xy": [
+      155.51673889160156,
+      145.3723907470703
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 82,
+    "scenario": {
+      "id": 82,
+      "start_motion_id": 20,
+      "start_phase": 0.327,
+      "distance_m": 2.464,
+      "bearing_deg": -43.6,
+      "friction": 0.772,
+      "change_time_s": 1.526,
+      "second_distance_m": 3.87,
+      "second_bearing_deg": 165.32
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 46,
+    "arrival_step": 274,
+    "time_to_arrival_s": 7.6,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8647089004516602,
+    "min_up_z": 0.8569625616073608,
+    "max_planar_speed_mps": 2.2027499675750732,
+    "final_distance_m": 0.25165098905563354,
+    "final_speed_mps": 0.27472633123397827,
+    "max_foot_contact_force_n": 1318.7655029296875,
+    "max_action_abs": 1.5080045461654663,
+    "start_xy": [
+      127.20000457763672,
+      174.3000030517578
+    ],
+    "heading_rad": 0.03251917287707329,
+    "first_target_xy": [
+      129.03866577148438,
+      172.65969848632812
+    ],
+    "friction": 0.772,
+    "second_target_xy": [
+      125.26509094238281,
+      173.51820373535156
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 83,
+    "scenario": {
+      "id": 83,
+      "start_motion_id": 59,
+      "start_phase": 0.0013,
+      "distance_m": 1.111,
+      "bearing_deg": -86.34,
+      "friction": 0.809,
+      "change_time_s": 3.955,
+      "second_distance_m": 1.553,
+      "second_bearing_deg": -17.33
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 119,
+    "arrival_step": 251,
+    "time_to_arrival_s": 4.4,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8626911640167236,
+    "min_up_z": 0.9395826458930969,
+    "max_planar_speed_mps": 1.056463360786438,
+    "final_distance_m": 0.17915870249271393,
+    "final_speed_mps": 0.06756937503814697,
+    "max_foot_contact_force_n": 950.6409301757812,
+    "max_action_abs": 1.7682331800460815,
+    "start_xy": [
+      207.5,
+      215.3000030517578
+    ],
+    "heading_rad": 3.0202479362487793,
+    "first_target_xy": [
+      207.56381225585938,
+      216.40916442871094
+    ],
+    "friction": 0.809,
+    "second_target_xy": [
+      206.14820861816406,
+      217.04782104492188
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 84,
+    "scenario": {
+      "id": 84,
+      "start_motion_id": 20,
+      "start_phase": 0.0511,
+      "distance_m": 4.205,
+      "bearing_deg": -163.2,
+      "friction": 0.843,
+      "change_time_s": 1.867,
+      "second_distance_m": 3.343,
+      "second_bearing_deg": 70.61
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 56,
+    "arrival_step": 161,
+    "time_to_arrival_s": 3.5,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8321783542633057,
+    "min_up_z": 0.9171099662780762,
+    "max_planar_speed_mps": 1.9569531679153442,
+    "final_distance_m": 0.1474054753780365,
+    "final_speed_mps": 0.15329506993293762,
+    "max_foot_contact_force_n": 1259.7413330078125,
+    "max_action_abs": 1.5340451002120972,
+    "start_xy": [
+      105.5,
+      226.3000030517578
+    ],
+    "heading_rad": -0.12873327732086182,
+    "first_target_xy": [
+      101.35175323486328,
+      225.61146545410156
+    ],
+    "friction": 0.843,
+    "second_target_xy": [
+      102.85726165771484,
+      228.59628295898438
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 85,
+    "scenario": {
+      "id": 85,
+      "start_motion_id": 24,
+      "start_phase": 0.0354,
+      "distance_m": 3.842,
+      "bearing_deg": 47.61,
+      "friction": 0.56,
+      "change_time_s": 1.591,
+      "second_distance_m": 2.373,
+      "second_bearing_deg": -54.98
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 48,
+    "arrival_step": 307,
+    "time_to_arrival_s": 8.633,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8596367835998535,
+    "min_up_z": 0.8222684860229492,
+    "max_planar_speed_mps": 2.855407953262329,
+    "final_distance_m": 0.19650152325630188,
+    "final_speed_mps": 0.330751895904541,
+    "max_foot_contact_force_n": 1148.0855712890625,
+    "max_action_abs": 1.5575801134109497,
+    "start_xy": [
+      145.0,
+      230.90000915527344
+    ],
+    "heading_rad": 3.126093626022339,
+    "first_target_xy": [
+      142.3661651611328,
+      228.10289001464844
+    ],
+    "friction": 0.56,
+    "second_target_xy": [
+      141.03466796875,
+      230.067138671875
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 86,
+    "scenario": {
+      "id": 86,
+      "start_motion_id": 43,
+      "start_phase": 0.7683,
+      "distance_m": 1.693,
+      "bearing_deg": -178.74,
+      "friction": 1.128,
+      "change_time_s": 2.341,
+      "second_distance_m": 1.478,
+      "second_bearing_deg": -169.01
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 70,
+    "arrival_step": 645,
+    "time_to_arrival_s": 19.167,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9194320440292358,
+    "min_up_z": 0.9257486462593079,
+    "max_planar_speed_mps": 1.73158860206604,
+    "final_distance_m": 0.266139954328537,
+    "final_speed_mps": 0.30477333068847656,
+    "max_foot_contact_force_n": 1279.831787109375,
+    "max_action_abs": 1.4032591581344604,
+    "start_xy": [
+      214.0,
+      172.5
+    ],
+    "heading_rad": 1.5414177179336548,
+    "first_target_xy": [
+      213.98748779296875,
+      170.8070526123047
+    ],
+    "friction": 1.128,
+    "second_target_xy": [
+      214.2265167236328,
+      169.3485107421875
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 87,
+    "scenario": {
+      "id": 87,
+      "start_motion_id": 7,
+      "start_phase": 0.7508,
+      "distance_m": 3.89,
+      "bearing_deg": 143.29,
+      "friction": 0.861,
+      "change_time_s": 3.849,
+      "second_distance_m": 4.443,
+      "second_bearing_deg": -79.79
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 115,
+    "arrival_step": 330,
+    "time_to_arrival_s": 7.167,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.823652446269989,
+    "min_up_z": 0.8450063467025757,
+    "max_planar_speed_mps": 2.4436612129211426,
+    "final_distance_m": 0.05851586535573006,
+    "final_speed_mps": 0.21229135990142822,
+    "max_foot_contact_force_n": 2168.4208984375,
+    "max_action_abs": 1.6942825317382812,
+    "start_xy": [
+      234.90000915527344,
+      186.60000610351562
+    ],
+    "heading_rad": -3.084439992904663,
+    "first_target_xy": [
+      238.146240234375,
+      184.45663452148438
+    ],
+    "friction": 0.861,
+    "second_target_xy": [
+      237.11019897460938,
+      188.7771453857422
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 88,
+    "scenario": {
+      "id": 88,
+      "start_motion_id": 43,
+      "start_phase": 0.0768,
+      "distance_m": 3.754,
+      "bearing_deg": 128.02,
+      "friction": 1.081,
+      "change_time_s": 3.665,
+      "second_distance_m": 2.478,
+      "second_bearing_deg": 65.84
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 110,
+    "arrival_step": 207,
+    "time_to_arrival_s": 3.233,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.897438645362854,
+    "min_up_z": 0.8994345664978027,
+    "max_planar_speed_mps": 2.0077545642852783,
+    "final_distance_m": 0.3011848032474518,
+    "final_speed_mps": 0.036444041877985,
+    "max_foot_contact_force_n": 1154.7022705078125,
+    "max_action_abs": 1.5298806428909302,
+    "start_xy": [
+      150.40000915527344,
+      44.29999923706055
+    ],
+    "heading_rad": 1.8932353258132935,
+    "first_target_xy": [
+      148.32772827148438,
+      41.169795989990234
+    ],
+    "friction": 1.081,
+    "second_target_xy": [
+      145.86192321777344,
+      41.41529083251953
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 89,
+    "scenario": {
+      "id": 89,
+      "start_motion_id": 9,
+      "start_phase": 0.7051,
+      "distance_m": 4.989,
+      "bearing_deg": 144.88,
+      "friction": 0.714,
+      "change_time_s": 3.399,
+      "second_distance_m": 4.351,
+      "second_bearing_deg": -165.15
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 102,
+    "arrival_step": 331,
+    "time_to_arrival_s": 7.633,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8661436438560486,
+    "min_up_z": 0.7918882966041565,
+    "max_planar_speed_mps": 2.4026339054107666,
+    "final_distance_m": 0.256179541349411,
+    "final_speed_mps": 0.21865984797477722,
+    "max_foot_contact_force_n": 1523.35791015625,
+    "max_action_abs": 1.5753931999206543,
+    "start_xy": [
+      170.40000915527344,
+      190.40000915527344
+    ],
+    "heading_rad": -1.7291920185089111,
+    "first_target_xy": [
+      173.8778839111328,
+      193.97695922851562
+    ],
+    "friction": 0.714,
+    "second_target_xy": [
+      173.4401092529297,
+      198.30587768554688
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 90,
+    "scenario": {
+      "id": 90,
+      "start_motion_id": 24,
+      "start_phase": 0.4529,
+      "distance_m": 2.67,
+      "bearing_deg": -91.51,
+      "friction": 0.553,
+      "change_time_s": 2.152,
+      "second_distance_m": 4.585,
+      "second_bearing_deg": 94.41
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 65,
+    "arrival_step": 285,
+    "time_to_arrival_s": 7.333,
+    "settle_step_strict": 428,
+    "time_to_settle_s": 12.1,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.7648441195487976,
+    "min_up_z": 0.8427697420120239,
+    "max_planar_speed_mps": 2.908940315246582,
+    "final_distance_m": 0.10141739994287491,
+    "final_speed_mps": 0.12311089038848877,
+    "max_foot_contact_force_n": 1155.274169921875,
+    "max_action_abs": 1.6829042434692383,
+    "start_xy": [
+      130.60000610351562,
+      135.0
+    ],
+    "heading_rad": -2.3741092681884766,
+    "first_target_xy": [
+      128.7974395751953,
+      136.9696807861328
+    ],
+    "friction": 0.553,
+    "second_target_xy": [
+      132.2252197265625,
+      133.92459106445312
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 91,
+    "scenario": {
+      "id": 91,
+      "start_motion_id": 7,
+      "start_phase": 0.5731,
+      "distance_m": 3.221,
+      "bearing_deg": -12.06,
+      "friction": 1.052,
+      "change_time_s": 1.972,
+      "second_distance_m": 2.361,
+      "second_bearing_deg": 18.93
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 59,
+    "arrival_step": 338,
+    "time_to_arrival_s": 9.3,
+    "settle_step_strict": 591,
+    "time_to_settle_s": 17.733,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8991610407829285,
+    "min_up_z": 0.8761992454528809,
+    "max_planar_speed_mps": 2.0835413932800293,
+    "final_distance_m": 0.4492279589176178,
+    "final_speed_mps": 0.11537101119756699,
+    "max_foot_contact_force_n": 1336.3092041015625,
+    "max_action_abs": 1.5275304317474365,
+    "start_xy": [
+      215.8000030517578,
+      172.3000030517578
+    ],
+    "heading_rad": -3.0791141986846924,
+    "first_target_xy": [
+      212.6142120361328,
+      172.77499389648438
+    ],
+    "friction": 1.052,
+    "second_target_xy": [
+      210.43309020996094,
+      171.87110900878906
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 92,
+    "scenario": {
+      "id": 92,
+      "start_motion_id": 20,
+      "start_phase": 0.7725,
+      "distance_m": 2.882,
+      "bearing_deg": -22.16,
+      "friction": 0.628,
+      "change_time_s": 1.689,
+      "second_distance_m": 2.148,
+      "second_bearing_deg": 49.02
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 51,
+    "arrival_step": null,
+    "time_to_arrival_s": null,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9187913537025452,
+    "min_up_z": 0.8446884155273438,
+    "max_planar_speed_mps": 1.8778680562973022,
+    "final_distance_m": 0.7301434874534607,
+    "final_speed_mps": 0.2080366462469101,
+    "max_foot_contact_force_n": 1038.2686767578125,
+    "max_action_abs": 1.5260919332504272,
+    "start_xy": [
+      233.1999969482422,
+      70.5999984741211
+    ],
+    "heading_rad": 0.31960177421569824,
+    "first_target_xy": [
+      236.07550048828125,
+      70.40657806396484
+    ],
+    "friction": 0.628,
+    "second_target_xy": [
+      236.9033203125,
+      72.3886489868164
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 93,
+    "scenario": {
+      "id": 93,
+      "start_motion_id": 20,
+      "start_phase": 0.2844,
+      "distance_m": 1.31,
+      "bearing_deg": 37.37,
+      "friction": 0.898,
+      "change_time_s": 2.512,
+      "second_distance_m": 3.345,
+      "second_bearing_deg": 16.76
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 75,
+    "arrival_step": 502,
+    "time_to_arrival_s": 14.233,
+    "settle_step_strict": 657,
+    "time_to_settle_s": 19.4,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8872877955436707,
+    "min_up_z": 0.9325709939002991,
+    "max_planar_speed_mps": 1.9058700799942017,
+    "final_distance_m": 0.19581586122512817,
+    "final_speed_mps": 0.10350172221660614,
+    "max_foot_contact_force_n": 1306.0177001953125,
+    "max_action_abs": 1.3575599193572998,
+    "start_xy": [
+      144.60000610351562,
+      211.1999969482422
+    ],
+    "heading_rad": -0.12315956503152847,
+    "first_target_xy": [
+      145.73089599609375,
+      211.86119079589844
+    ],
+    "friction": 0.898,
+    "second_target_xy": [
+      149.02804565429688,
+      212.42498779296875
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 94,
+    "scenario": {
+      "id": 94,
+      "start_motion_id": 59,
+      "start_phase": 0.4386,
+      "distance_m": 3.184,
+      "bearing_deg": 47.66,
+      "friction": 1.026,
+      "change_time_s": 2.404,
+      "second_distance_m": 2.285,
+      "second_bearing_deg": -39.09
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 72,
+    "arrival_step": 160,
+    "time_to_arrival_s": 2.933,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.7960147261619568,
+    "min_up_z": 0.8775793313980103,
+    "max_planar_speed_mps": 1.8097399473190308,
+    "final_distance_m": 0.26538801193237305,
+    "final_speed_mps": 0.05126294866204262,
+    "max_foot_contact_force_n": 1261.006103515625,
+    "max_action_abs": 1.4753707647323608,
+    "start_xy": [
+      211.1999969482422,
+      106.0999984741211
+    ],
+    "heading_rad": -1.3134745359420776,
+    "first_target_xy": [
+      214.02175903320312,
+      104.62503051757812
+    ],
+    "friction": 1.026,
+    "second_target_xy": [
+      213.0797576904297,
+      102.5432357788086
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 95,
+    "scenario": {
+      "id": 95,
+      "start_motion_id": 43,
+      "start_phase": 0.6174,
+      "distance_m": 1.031,
+      "bearing_deg": -58.19,
+      "friction": 0.871,
+      "change_time_s": 2.441,
+      "second_distance_m": 1.575,
+      "second_bearing_deg": 112.67
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 73,
+    "arrival_step": 359,
+    "time_to_arrival_s": 9.533,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8602309823036194,
+    "min_up_z": 0.9349570870399475,
+    "max_planar_speed_mps": 1.3425577878952026,
+    "final_distance_m": 0.2343335747718811,
+    "final_speed_mps": 0.08952068537473679,
+    "max_foot_contact_force_n": 931.8748168945312,
+    "max_action_abs": 1.1762003898620605,
+    "start_xy": [
+      148.3000030517578,
+      191.3000030517578
+    ],
+    "heading_rad": 1.4508804082870483,
+    "first_target_xy": [
+      149.23486328125,
+      191.73472595214844
+    ],
+    "friction": 0.871,
+    "second_target_xy": [
+      147.7193603515625,
+      191.305908203125
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 96,
+    "scenario": {
+      "id": 96,
+      "start_motion_id": 43,
+      "start_phase": 0.2388,
+      "distance_m": 3.883,
+      "bearing_deg": -142.5,
+      "friction": 1.176,
+      "change_time_s": 3.524,
+      "second_distance_m": 4.956,
+      "second_bearing_deg": -34.27
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 106,
+    "arrival_step": 401,
+    "time_to_arrival_s": 9.833,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9059870839118958,
+    "min_up_z": 0.8324428200721741,
+    "max_planar_speed_mps": 1.9868396520614624,
+    "final_distance_m": 0.4191170930862427,
+    "final_speed_mps": 0.10829083621501923,
+    "max_foot_contact_force_n": 1461.7916259765625,
+    "max_action_abs": 1.742551565170288,
+    "start_xy": [
+      94.20000457763672,
+      171.8000030517578
+    ],
+    "heading_rad": 1.556012511253357,
+    "first_target_xy": [
+      96.51802825927734,
+      168.68479919433594
+    ],
+    "friction": 1.176,
+    "second_target_xy": [
+      99.36895751953125,
+      172.73870849609375
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 97,
+    "scenario": {
+      "id": 97,
+      "start_motion_id": 24,
+      "start_phase": 0.7406,
+      "distance_m": 4.883,
+      "bearing_deg": -101.01,
+      "friction": 0.773,
+      "change_time_s": 3.122,
+      "second_distance_m": 4.228,
+      "second_bearing_deg": -142.4
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 94,
+    "arrival_step": 255,
+    "time_to_arrival_s": 5.367,
+    "settle_step_strict": 555,
+    "time_to_settle_s": 15.367,
+    "success": true,
+    "success_loose": true,
+    "failure_reasons": [],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9196595549583435,
+    "min_up_z": 0.9065812826156616,
+    "max_planar_speed_mps": 1.9399884939193726,
+    "final_distance_m": 0.28763818740844727,
+    "final_speed_mps": 0.14651469886302948,
+    "max_foot_contact_force_n": 1159.2215576171875,
+    "max_action_abs": 1.648317575454712,
+    "start_xy": [
+      168.90000915527344,
+      187.40000915527344
+    ],
+    "heading_rad": -1.4843354225158691,
+    "first_target_xy": [
+      164.0442657470703,
+      187.91517639160156
+    ],
+    "friction": 0.773,
+    "second_target_xy": [
+      161.1849365234375,
+      191.02969360351562
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 98,
+    "scenario": {
+      "id": 98,
+      "start_motion_id": 43,
+      "start_phase": 0.4545,
+      "distance_m": 1.38,
+      "bearing_deg": -5.44,
+      "friction": 0.851,
+      "change_time_s": 2.447,
+      "second_distance_m": 2.045,
+      "second_bearing_deg": -137.26
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 73,
+    "arrival_step": 596,
+    "time_to_arrival_s": 17.433,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.8526095747947693,
+    "min_up_z": 0.8973351716995239,
+    "max_planar_speed_mps": 1.5348807573318481,
+    "final_distance_m": 0.31446146965026855,
+    "final_speed_mps": 0.21866752207279205,
+    "max_foot_contact_force_n": 663.5559692382812,
+    "max_action_abs": 1.0478696823120117,
+    "start_xy": [
+      108.70000457763672,
+      71.80000305175781
+    ],
+    "heading_rad": 1.5123306512832642,
+    "first_target_xy": [
+      108.91088104248047,
+      73.1637954711914
+    ],
+    "friction": 0.851,
+    "second_target_xy": [
+      110.20863342285156,
+      71.58333587646484
+    ],
+    "reached_first_before_change": false
+  },
+  {
+    "trial_id": 99,
+    "scenario": {
+      "id": 99,
+      "start_motion_id": 59,
+      "start_phase": 0.3004,
+      "distance_m": 2.069,
+      "bearing_deg": -112.52,
+      "friction": 0.784,
+      "change_time_s": 3.904,
+      "second_distance_m": 2.795,
+      "second_bearing_deg": -33.97
+    },
+    "set": "redirect",
+    "horizon_steps": 719,
+    "reference_step": 117,
+    "arrival_step": 588,
+    "time_to_arrival_s": 15.7,
+    "settle_step_strict": null,
+    "time_to_settle_s": null,
+    "success": false,
+    "success_loose": false,
+    "failure_reasons": [
+      "no_arrival_within_15s",
+      "no_two_second_hold_within_0.3m"
+    ],
+    "fall_step": null,
+    "min_pelvis_height_m": 0.9111098647117615,
+    "min_up_z": 0.9287518262863159,
+    "max_planar_speed_mps": 1.7073854207992554,
+    "final_distance_m": 0.24647767841815948,
+    "final_speed_mps": 0.07580038160085678,
+    "max_foot_contact_force_n": 1477.0050048828125,
+    "max_action_abs": 1.4266948699951172,
+    "start_xy": [
+      225.60000610351562,
+      109.9000015258789
+    ],
+    "heading_rad": -2.5861566066741943,
+    "first_target_xy": [
+      225.2655029296875,
+      111.94178009033203
+    ],
+    "friction": 0.784,
+    "second_target_xy": [
+      222.4724578857422,
+      112.04643249511719
+    ],
+    "reached_first_before_change": true
+  }
+]

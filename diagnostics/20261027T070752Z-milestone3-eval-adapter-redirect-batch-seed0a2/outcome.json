@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "process_exit_code": 0,
+  "media_exit_code": 0,
+  "cleanup_logged": true,
+  "controller": "adapter",
+  "set": "redirect",
+  "trials": 100,
+  "successes": 14,
+  "success_rate": 0.14,
+  "gate_passed_90_percent": false,
+  "milestone3_complete": false
+}

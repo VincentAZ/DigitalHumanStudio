@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "process_exit_code": 0,
+  "stage": "rlft",
+  "epochs_completed": 222,
+  "elapsed_seconds": 14429.123,
+  "last_epoch_fps": 1016.0303955078125,
+  "max_gpu_memory_gib": 56.903,
+  "last_ckpt": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_rlft_walk_seed0_attempt2-20261027T030449Z/results/m3_rlft_walk_seed0_attempt2/last.ckpt",
+  "inference_ckpt": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_rlft_walk_seed0_attempt2-20261027T030449Z/results/m3_rlft_walk_seed0_attempt2/inference_last.ckpt",
+  "milestone3_complete": false
+}

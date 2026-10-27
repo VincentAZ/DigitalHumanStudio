@@ -1,0 +1,22 @@
+{
+  "controller": "adapter",
+  "set": "push",
+  "trials": 100,
+  "successes": 16,
+  "success_rate": 0.16,
+  "successes_loose": 34,
+  "arrived_within_15s": 86,
+  "falls": 0,
+  "failure_reasons": {
+    "no_arrival_within_15s": 14,
+    "fell": 0,
+    "no_two_second_hold_within_0.3m": 77
+  },
+  "mean_time_to_arrival_s": 7.159096774193549,
+  "mean_time_to_settle_s": 10.75,
+  "min_pelvis_height_m": 0.7011265754699707,
+  "max_planar_speed_mps": 3.8888070583343506,
+  "required_successes_per_100": 90,
+  "gate_passed_90_percent": false,
+  "trace_lines": 60000
+}

@@ -1,0 +1,45 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/eval-adapter-redirect-batch-seed0a2-20261027T070752Z",
+  "files": {
+    "result.json": {
+      "bytes": 1062,
+      "sha256": "fd21550b4dd3d1843519e629f5a9a07b3efb2bcac6facc1c2d170158c7bd8e7f"
+    },
+    "final-scene.usda": {
+      "bytes": 14442171,
+      "sha256": "f6451c6bf083fceff649193948e85872751be2137c9de911420b550fb702654a"
+    },
+    "kit.log": {
+      "bytes": 290660,
+      "sha256": "9934c3d2a6c7be99ca4b1a7ddf0171c395ea4c6086edd4271ffa1bbb91980e51"
+    },
+    "trace-redirect.jsonl": {
+      "bytes": 12924791,
+      "sha256": "e017670f7103ab67c8de82ef75ee26cb41dd53c9afd0bb91aae4530c6ca53034"
+    },
+    "initial-scene.usda": {
+      "bytes": 14442171,
+      "sha256": "f6451c6bf083fceff649193948e85872751be2137c9de911420b550fb702654a"
+    },
+    "run-contract.json": {
+      "bytes": 2980,
+      "sha256": "b89cc41832f0572444173aa916b75448588852f5f62ade1125b52a3b580b1b13"
+    },
+    "measurements.json": {
+      "bytes": 575,
+      "sha256": "3f43d7691ddad3c45d9dde8e5eb645723273998b48e7781c4721c1821cca005d"
+    },
+    "resolved-configs.json": {
+      "bytes": 57155,
+      "sha256": "5b93389ce065e3ea5b68f52d2bd36263bb93a355843d719074201843850bc6cb"
+    },
+    "topdown-redirect.png": {
+      "bytes": 85309,
+      "sha256": "fe4d36337c6efd1ba6f014e47d16ccf12825e1db225cc6172134063a3683c913"
+    },
+    "trials.json": {
+      "bytes": 129021,
+      "sha256": "cb6ffd7df0cb57d3971d8e9bfafcda0077f72864ed83832de68a242bd5d03077"
+    }
+  }
+}

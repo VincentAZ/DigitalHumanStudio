@@ -1,0 +1,384 @@
+[
+    {
+        "Id": "d5cf54a1e879a9a51d1000b610ec2cc57bdbfffd1fe4d6bebe2f37e6a6582fe1",
+        "Created": "2026-10-27T07:10:12.1513412Z",
+        "Path": "/opt/IsaacLab/.venv/bin/python",
+        "Args": [
+            "/studio/scripts/milestone3_eval.py",
+            "--output",
+            "/studio/output",
+            "--controller",
+            "adapter",
+            "--set",
+            "push",
+            "--seed",
+            "0",
+            "--scenarios",
+            "/studio/scenarios.json",
+            "--env-config",
+            "/studio/env-config/resolved_configs_inference.pt",
+            "--prior-checkpoint",
+            "/studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt",
+            "--adapter-checkpoint",
+            "/studio/controller/inference_last.ckpt",
+            "--device",
+            "cuda:0",
+            "--viz",
+            "none",
+            "--kit_args",
+            "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-27T07:10:12.188926969Z",
+            "FinishedAt": "2026-10-27T07:12:13.053490106Z"
+        },
+        "Image": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+        "ResolvConfPath": "/var/lib/docker/containers/d5cf54a1e879a9a51d1000b610ec2cc57bdbfffd1fe4d6bebe2f37e6a6582fe1/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/d5cf54a1e879a9a51d1000b610ec2cc57bdbfffd1fe4d6bebe2f37e6a6582fe1/hostname",
+        "HostsPath": "/var/lib/docker/containers/d5cf54a1e879a9a51d1000b610ec2cc57bdbfffd1fe4d6bebe2f37e6a6582fe1/hosts",
+        "LogPath": "/var/lib/docker/containers/d5cf54a1e879a9a51d1000b610ec2cc57bdbfffd1fe4d6bebe2f37e6a6582fe1/d5cf54a1e879a9a51d1000b610ec2cc57bdbfffd1fe4d6bebe2f37e6a6582fe1-json.log",
+        "Name": "/studio-m3-eval-adapter-push-batch-seed0a2-20261027T071011Z",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 4294967296,
+            "Runtime": "nvidia",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": [
+                {
+                    "Driver": "",
+                    "Count": -1,
+                    "DeviceIDs": null,
+                    "Capabilities": [
+                        [
+                            "gpu"
+                        ]
+                    ],
+                    "Options": {}
+                }
+            ],
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/isaac-home",
+                    "Target": "/studio-home"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/scripts",
+                    "Target": "/studio/scripts",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/milestone1/assets",
+                    "Target": "/studio/assets",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_rlft_walk_seed0_attempt2-20261027T030449Z/results/m3_rlft_walk_seed0_attempt2",
+                    "Target": "/studio/controller",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_rlft_walk_seed0_attempt2-20261027T030449Z/results/m3_rlft_walk_seed0_attempt2",
+                    "Target": "/studio/env-config",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/config/milestone3-scenarios.json",
+                    "Target": "/studio/scenarios.json",
+                    "ReadOnly": true
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/eval-adapter-push-batch-seed0a2-20261027T071011Z",
+                    "Target": "/studio/output"
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/scripts",
+                "Destination": "/studio/scripts",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/milestone1/assets",
+                "Destination": "/studio/assets",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_rlft_walk_seed0_attempt2-20261027T030449Z/results/m3_rlft_walk_seed0_attempt2",
+                "Destination": "/studio/controller",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_rlft_walk_seed0_attempt2-20261027T030449Z/results/m3_rlft_walk_seed0_attempt2",
+                "Destination": "/studio/env-config",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/config/milestone3-scenarios.json",
+                "Destination": "/studio/scenarios.json",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/eval-adapter-push-batch-seed0a2-20261027T071011Z",
+                "Destination": "/studio/output",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/vincent/Repos/DigitalHumanStudio/.runtime/isaac-home",
+                "Destination": "/studio-home",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "d5cf54a1e879",
+            "Domainname": "",
+            "User": "1000:1000",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "ACCEPT_EULA=Y",
+                "OMNI_KIT_ACCEPT_EULA=YES",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "XDG_CACHE_HOME=/studio-home/.cache",
+                "XDG_DATA_HOME=/studio-home/.local/share",
+                "HUB__CACHE__PATH=/studio-home/hub-cache",
+                "PROTOMOTIONS_ASSET_ROOT=/studio/assets/protomotions/data/assets",
+                "PYTHONPATH=/studio/scripts",
+                "HOME=/studio-home",
+                "XDG_CONFIG_HOME=/studio-home/.config",
+                "OMP_NUM_THREADS=4",
+                "UV_HTTP_TIMEOUT=300",
+                "UV_HTTP_RETRIES=3",
+                "UV_CONCURRENT_DOWNLOADS=4",
+                "PATH=/opt/IsaacLab/.venv/bin:/usr/local/bin:/usr/bin:/bin",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "VK_DRIVER_FILES=/etc/vulkan/icd.d/nvidia_icd.json",
+                "MIN_DRIVER_VERSION=570.169",
+                "HUB__ARGS__DETECT_ONLY=true",
+                "OMNICLIENT_HUB_EXE=/usr/local/bin/hub",
+                "DEBIAN_FRONTEND=noninteractive",
+                "UV_PYTHON_INSTALL_DIR=/opt/python",
+                "UV_CACHE_DIR=/opt/uv-cache",
+                "UV_LINK_MODE=copy"
+            ],
+            "Cmd": [
+                "/studio/scripts/milestone3_eval.py",
+                "--output",
+                "/studio/output",
+                "--controller",
+                "adapter",
+                "--set",
+                "push",
+                "--seed",
+                "0",
+                "--scenarios",
+                "/studio/scenarios.json",
+                "--env-config",
+                "/studio/env-config/resolved_configs_inference.pt",
+                "--prior-checkpoint",
+                "/studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt",
+                "--adapter-checkpoint",
+                "/studio/controller/inference_last.ckpt",
+                "--device",
+                "cuda:0",
+                "--viz",
+                "none",
+                "--kit_args",
+                "--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "NONE"
+                ],
+                "Interval": 30000000000,
+                "Timeout": 10000000000,
+                "StartPeriod": 180000000000,
+                "Retries": 3
+            },
+            "Image": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+            "Volumes": null,
+            "WorkingDir": "/studio/output",
+            "Entrypoint": [
+                "/opt/IsaacLab/.venv/bin/python"
+            ],
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "24.04"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "cd902e4c66ab44bec23443ca4c1572689b1015358bb8afb3d6d13164fda27870",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+            "size": 7396,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
