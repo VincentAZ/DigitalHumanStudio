@@ -1,0 +1,8 @@
+{"cmd": "record", "action": "start", "name": "walk_idle", "issued_wall_time": 1793128338.1300945}
+{"cmd": "destination", "x": -3.2, "y": -1.3, "frame": "spawn", "issued_wall_time": 1793128338.8008802}
+{"cmd": "record", "action": "stop", "name": "walk_idle", "issued_wall_time": 1793128351.0244389}
+{"cmd": "destination", "x": 98.087, "y": 100.124, "frame": "world", "issued_wall_time": 1793128369.7069294}
+{"cmd": "reset", "issued_wall_time": 1793128498.1013033}
+{"cmd": "push", "vx": 2.0, "vy": 0.0, "issued_wall_time": 1793128503.5416102}
+{"cmd": "destination", "x": 3.0, "y": 0.0, "frame": "local", "issued_wall_time": 1793128508.1913483}
+{"cmd": "quit", "issued_wall_time": 1793128587.5068498}

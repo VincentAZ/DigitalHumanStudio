@@ -29,6 +29,8 @@ PROVIDERS = {
     "google": {"title": "Google Gemini", "kind": "openai_compatible", "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "model": "gemini-2.5-pro", "env": "GEMINI_API_KEY", "models": ["gemini-2.5-pro", "gemini-2.5-flash"]},
     "xai": {"title": "xAI Grok", "kind": "openai_compatible", "base_url": "https://api.x.ai/v1", "model": "grok-4", "env": "XAI_API_KEY", "models": ["grok-4"]},
     "openrouter": {"title": "OpenRouter", "kind": "openai_compatible", "base_url": "https://openrouter.ai/api/v1", "model": "anthropic/claude-sonnet-4.5", "env": "OPENROUTER_API_KEY", "models": ["anthropic/claude-sonnet-4.5", "openai/gpt-5", "google/gemini-2.5-pro"]},
+    "lmstudio": {"title": "LM Studio (local)", "kind": "openai_compatible", "base_url": "http://127.0.0.1:1234/v1", "model": "", "env": "LMSTUDIO_API_KEY",
+                 "models": [], "key_optional": True},
 }
 
 
@@ -38,7 +40,7 @@ def list_models(name: str, api_key: str = "", base_url: str = "") -> list[str]:
     if settings["kind"] == "agent_sdk":
         return list(settings.get("models", []))
     from openai import OpenAI
-    client = OpenAI(base_url=base_url or settings["base_url"], api_key=api_key or settings.get("api_key") or "missing")
+    client = OpenAI(base_url=base_url or settings["base_url"], api_key=api_key or settings.get("api_key") or "not-needed")
     return sorted(m.id for m in client.models.list())
 
 
@@ -68,6 +70,8 @@ def key_status(name: str) -> str:
     settings = provider_settings(name)
     if settings["kind"] == "agent_sdk":
         return "key set" if settings.get("api_key") else "no key: set ANTHROPIC_API_KEY or enter one (the claude.ai sign-in cannot be used by apps)"
+    if settings.get("key_optional"):
+        return "local server, no key needed (use Fetch models to pick the loaded model)"
     return "key set" if settings.get("api_key") else f"no key: set {settings['env']} or enter one"
 
 
@@ -77,9 +81,11 @@ class OpenAICompatibleAssistant:
     def __init__(self, name: str):
         from openai import OpenAI
         self.settings = provider_settings(name)
-        if not self.settings.get("api_key"):
+        if not self.settings.get("api_key") and not self.settings.get("key_optional"):
             raise RuntimeError(f"no API key for {self.settings['title']}")
-        self.client = OpenAI(base_url=self.settings["base_url"], api_key=self.settings["api_key"])
+        if not self.settings.get("model"):
+            raise RuntimeError(f"no model chosen for {self.settings['title']}: open Settings, Fetch models, pick one")
+        self.client = OpenAI(base_url=self.settings["base_url"], api_key=self.settings.get("api_key") or "not-needed")
         self.model = self.settings["model"]
         self.thinking = self.settings.get("thinking", "default")
         self.provider_name = name

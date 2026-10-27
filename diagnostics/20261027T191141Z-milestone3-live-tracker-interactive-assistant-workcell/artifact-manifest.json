@@ -1,0 +1,117 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-interactive-assistant-workcell-20261027T191141Z",
+  "files": {
+    "frame-02400.png": {
+      "bytes": 463004,
+      "sha256": "e4bc41c771a7d3a98c402219642ea397ac20982b7ff0a4b21014ac89560b9651"
+    },
+    "session-contract.json": {
+      "bytes": 1724,
+      "sha256": "817f3ce58d98136234925acce9b9ec48f5f60a1b1b26f69bd6d0ce0b5d38155b"
+    },
+    "frame-02700.png": {
+      "bytes": 469333,
+      "sha256": "b1da8b71aeeb649ac1f43fb7cdeea9aece5fd23909cbd77b115be3caaead1160"
+    },
+    "performance.mp4": {
+      "bytes": 33602838,
+      "sha256": "5cdcb5f4a95ab98cf83f390fac0f672f0961d6dd9ea3bb8da700b31a84e68b8f"
+    },
+    "frame-01200.png": {
+      "bytes": 463847,
+      "sha256": "344de8da61dc819c1e4387482f8458baab3cdc77881a64f68e05d5c066b821de"
+    },
+    "result.json": {
+      "bytes": 313,
+      "sha256": "126daa85a2fb383dada79ee534056b564f0515cb23abfa1dec8e575d50c4462d"
+    },
+    "frame-00600.png": {
+      "bytes": 410005,
+      "sha256": "ea995d6055f0afaa53a50a7fa1d011fb73a205634cf50e1444515df6745c7d35"
+    },
+    "topdown.png": {
+      "bytes": 13305,
+      "sha256": "92642a6740c99c81a22771e6cbeddc10796a16731d5480b9c4ab67feeaddba00"
+    },
+    "frame-02100.png": {
+      "bytes": 466534,
+      "sha256": "3ac7f305c269ee6281c74c1313a7eb631347afe63fc874f5da58e3583c146b02"
+    },
+    "commands.jsonl": {
+      "bytes": 698,
+      "sha256": "1d5ca17bf63533ef8a035178b5d4768ba08559ca6b305252cb539a4732cc3d7f"
+    },
+    "frame-00300.png": {
+      "bytes": 399682,
+      "sha256": "3dce58c2ab6e85a691834707465f02ac982d4c2b70e7815929e0538d54e0eeca"
+    },
+    "final-scene.usda": {
+      "bytes": 186864,
+      "sha256": "ee5b6e34cca8d3b30318d962eaace3ba5d615513047f20536221f6f863998e67"
+    },
+    "kit.log": {
+      "bytes": 768575,
+      "sha256": "13727f61cec0417f5e6b9b5f15ff75f6fc7b9e2fc33e054ae1b582a96ddfc05a"
+    },
+    "frame-04200.png": {
+      "bytes": 504107,
+      "sha256": "97adc93385597b6dc9a58942af62093051ff8f95f349939d73f38a8d7fd5ff3f"
+    },
+    "summary.json": {
+      "bytes": 4382,
+      "sha256": "cf45c052825756f0ffa81c4437e5edb94525682dc0cba22458f335b1a690bfe1"
+    },
+    "frame-03300.png": {
+      "bytes": 495839,
+      "sha256": "5aefce608e2035cb807d43168adfee23783c5970672f5e0b3d23d90c7b2f6bfe"
+    },
+    "frame-03600.png": {
+      "bytes": 491569,
+      "sha256": "36560035578911bc7c77ccc47bbdb4b0be0b80a91092af83fc59ba63ece0ff57"
+    },
+    "frame-00900.png": {
+      "bytes": 462848,
+      "sha256": "d31acffe5f28635b661ccfa4550580c385cb1508909441807a686e030ed8ab92"
+    },
+    "status.jsonl": {
+      "bytes": 2678,
+      "sha256": "e47dbe5018602c49d21cf46f9507a73f14b2e4bb71569e5aaf13e98769764850"
+    },
+    "trace.jsonl": {
+      "bytes": 3677310,
+      "sha256": "e00d601f25042872e647ea75b6d847d10aa7dac1585f48c3398dc9b8b6509461"
+    },
+    "frame-03000.png": {
+      "bytes": 529595,
+      "sha256": "1d2ee53e216a2798f540e9a3e78c3b84f384f9eec42b7505320404c117c7a9c9"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "5403be4f8550917d8b4b6feab0f5e7c00e2c91b54b7d73493771c1670eb4eb8b"
+    },
+    "scene.json": {
+      "bytes": 6355,
+      "sha256": "ec44335cabe2f35972d57a81ab675ed359650676b3db730706aa4e02414e47f2"
+    },
+    "frame-01800.png": {
+      "bytes": 462366,
+      "sha256": "6f014095a97def7b883e1613ea8dd7c069336ae74f06ec16833fc05a188dcad5"
+    },
+    "frame-01500.png": {
+      "bytes": 455381,
+      "sha256": "e155863e6f81537d4a680a7a38274b112a3930d3566dddb0f1afd21f84e3f5b8"
+    },
+    "frame-03900.png": {
+      "bytes": 502328,
+      "sha256": "1f417e2c2dc8a6d90c7124c44e2e60223b997d37df58446c86f9bcb3b5694fa0"
+    },
+    "live/frame.jpg": {
+      "bytes": 63685,
+      "sha256": "254a4af27fe89521157c0b8de3a5f02c2d1732846a245d351a8f94218ca4d81e"
+    },
+    "live/state.json": {
+      "bytes": 670,
+      "sha256": "485f0fe60a98f5a40e94bc3246c9e3ace29575a0282e2ca36e1722fe733a6bd7"
+    }
+  }
+}

@@ -39,11 +39,9 @@ class SkillsView(QWidget):
         actions = QHBoxLayout()
         self.live_button = QPushButton("Direct in live scene")
         self.live_button.clicked.connect(lambda: self.selected and self.use_in_live.emit(self.selected))
-        self.eval_button = QPushButton("Evaluate")
-        self.eval_button.clicked.connect(lambda: self.selected and self.evaluate.emit(self.selected))
         self.folder_button = QPushButton("Open checkpoint folder")
         self.folder_button.clicked.connect(lambda: self.selected and open_path(self.selected.results_dir))
-        for widget in (self.live_button, self.eval_button, self.folder_button):
+        for widget in (self.live_button, self.folder_button):
             actions.addWidget(widget)
         actions.addStretch(1)
         root.addLayout(actions)

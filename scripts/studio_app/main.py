@@ -10,13 +10,10 @@ from PySide6.QtWidgets import QApplication, QDockWidget, QMainWindow, QPlainText
 from studio_app import ROOT
 from studio_app.assistant import AssistantPanel
 from studio_app import state as st
-from studio_app.compare import CompareView
-from studio_app.evaluation import EvaluationView
 from studio_app.jobs import JobCenter
 from studio_app.live import LiveView
 from studio_app.project import ProjectView
 from studio_app.skills import SkillsView
-from studio_app.training import TrainingView
 
 
 class StatusPoller(QThread):
@@ -36,16 +33,11 @@ class MainWindow(QMainWindow):
         self.tabs = QTabWidget()
         self.project = ProjectView()
         self.skills = SkillsView()
-        self.training = TrainingView(self.jobs)
         self.live = LiveView(self.jobs)
-        self.evaluation = EvaluationView(self.jobs)
-        self.compare = CompareView(self.jobs)
-        for widget, title in ((self.live, "Live scene"), (self.compare, "Compare"), (self.training, "Training"), (self.skills, "Skills"),
-                              (self.evaluation, "Evaluation"), (self.project, "Project")):
+        for widget, title in ((self.live, "Live scene"), (self.skills, "Skills"), (self.project, "Project")):
             self.tabs.addTab(widget, title)
         self.setCentralWidget(self.tabs)
         self.skills.use_in_live.connect(self._direct)
-        self.skills.evaluate.connect(self._evaluate)
         self.jobs.changed.connect(self._jobs_changed)
         assistant_dock = QDockWidget("Director's assistant", self)
         self.assistant = AssistantPanel()
@@ -85,17 +77,12 @@ class MainWindow(QMainWindow):
         self.job_log.moveCursor(self.job_log.textCursor().MoveOperation.End)
 
     def _jobs_changed(self):
-        for view in (self.training, self.evaluation, self.skills, self.compare):
-            view.refresh()
+        self.skills.refresh()
         self.live.refresh_controllers()
 
     def _direct(self, run):
         self.live.select_controller(run.results_dir)
         self.tabs.setCurrentWidget(self.live)
-
-    def _evaluate(self, run):
-        self.evaluation.select_controller(run.results_dir)
-        self.tabs.setCurrentWidget(self.evaluation)
 
     def closeEvent(self, event):
         active = self.jobs.active()
