@@ -21,7 +21,7 @@ from studio_assistant.tools import SYSTEM_PROMPT, TOOL_SPECS, call_tool
 CONFIG_PATH = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "digital-human-studio" / "providers.json"
 
 PROVIDERS = {
-    "anthropic": {"title": "Claude (Agent SDK, your Claude Code sign-in)", "kind": "agent_sdk", "model": "", "env": "ANTHROPIC_API_KEY"},
+    "anthropic": {"title": "Claude (Agent SDK, Anthropic API key)", "kind": "agent_sdk", "model": "", "env": "ANTHROPIC_API_KEY"},
     "openai": {"title": "OpenAI", "kind": "openai_compatible", "base_url": "https://api.openai.com/v1", "model": "gpt-5", "env": "OPENAI_API_KEY"},
     "google": {"title": "Google Gemini", "kind": "openai_compatible", "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "model": "gemini-2.5-pro", "env": "GEMINI_API_KEY"},
     "xai": {"title": "xAI Grok", "kind": "openai_compatible", "base_url": "https://api.x.ai/v1", "model": "grok-4", "env": "XAI_API_KEY"},
@@ -54,7 +54,7 @@ def provider_settings(name: str) -> dict:
 def key_status(name: str) -> str:
     settings = provider_settings(name)
     if settings["kind"] == "agent_sdk":
-        return "uses the Claude Code sign-in (or ANTHROPIC_API_KEY if set)"
+        return "key set" if settings.get("api_key") else "no key: set ANTHROPIC_API_KEY or enter one (the claude.ai sign-in cannot be used by apps)"
     return "key set" if settings.get("api_key") else f"no key: set {settings['env']} or enter one"
 
 
