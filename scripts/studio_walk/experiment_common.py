@@ -96,6 +96,13 @@ def motion_manager_config(init_start_prob: float = 0.2):
     )
 
 
+# Training attempt 2 (2026-10-27): attempt 1 reached 98/100 destinations but held still in only 8/100
+# trials because exp(-3 v^2) still pays 0.93 at the 0.15 m/s gate speed. These scales make the
+# stillness terms discriminate at the gate: exp(-40 v^2) is 0.41 at 0.15 m/s and 0.90 at 0.05 m/s.
+STILLNESS_SCALE = 40.0
+YAW_STILLNESS_SCALE = 2.0
+
+
 def walking_reward_components():
     from protomotions.envs.component_factories import target_reward_factory
     from protomotions.envs.context_views import EnvContext
@@ -112,13 +119,14 @@ def walking_reward_components():
         "progress": MdpComponent(
             compute_func=kernels.compute_progress_velocity_rew,
             dynamic_vars={**target_vars, "root_vel": EnvContext.current.anchor_vel},
-            static_params={"weight": 0.5, "target_speed": 1.2, "slow_down_seconds": 1.0},
+            static_params={"weight": 0.5, "target_speed": 1.2, "slow_down_seconds": 1.0,
+                           "still_scale": STILLNESS_SCALE},
         ),
         "standing": MdpComponent(
             compute_func=kernels.compute_standing_rew,
             dynamic_vars={**target_vars, "root_vel": EnvContext.current.anchor_vel,
                           "root_ang_vel": EnvContext.current.anchor_ang_vel},
-            static_params={"weight": 0.5},
+            static_params={"weight": 0.5, "lin_scale": STILLNESS_SCALE, "ang_scale": YAW_STILLNESS_SCALE},
         ),
         "upright": MdpComponent(
             compute_func=kernels.compute_upright_rew,

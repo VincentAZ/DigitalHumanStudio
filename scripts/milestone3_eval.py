@@ -36,6 +36,8 @@ parser.add_argument("--set", dest="scenario_set", choices=["flat", "redirect", "
 parser.add_argument("--trial-ids", default="all", help="'all', 'a-b' or comma separated ids")
 parser.add_argument("--record", action="store_true", help="Sequential single-environment trials with video")
 parser.add_argument("--seed", type=int, default=0)
+parser.add_argument("--temperature", type=float, default=None,
+                    help="Override the PEFT actor token-sampling temperature (adapter only); None keeps the trained value")
 parser.add_argument("--scenario-friction", type=int, default=1,
                     help="1 applies each trial's robot contact friction value; 0 keeps the simulator default")
 AppLauncher.add_app_launcher_args(parser)
@@ -131,6 +133,9 @@ def run_evaluation():
     assert configs["scene_lib"].scene_file is None
     if "pretrained_modules" in dir(configs["agent"]) and "prior" in configs["agent"].pretrained_modules:
         configs["agent"].pretrained_modules["prior"].checkpoint_path = str(args.prior_checkpoint)
+    if args.temperature is not None:
+        assert args.controller == "adapter", "--temperature applies to the adapter controller"
+        configs["agent"].model.actor.peft.temperature = float(args.temperature)
     terrain_cfg, sim_cfg = convert_friction_for_simulator(configs["terrain"], sim_cfg)
     configs["terrain"], configs["simulator"] = terrain_cfg, sim_cfg
     save("resolved-configs.json", configs)
@@ -176,7 +181,9 @@ def run_evaluation():
         controller_record["actor_in_keys"] = list(actor.in_keys)
         controller_record["peft"] = {"type": configs["agent"].model.actor.peft.peft_type,
                                      "rank": configs["agent"].model.actor.peft.rank,
-                                     "sampling_mode": configs["agent"].model.actor.peft.sampling_mode}
+                                     "sampling_mode": configs["agent"].model.actor.peft.sampling_mode,
+                                     "temperature": float(configs["agent"].model.actor.peft.temperature),
+                                     "temperature_overridden": args.temperature is not None}
 
         def policy(obs, step):
             agent.pre_collect_step(step)

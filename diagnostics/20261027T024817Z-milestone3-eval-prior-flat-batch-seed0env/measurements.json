@@ -1,0 +1,22 @@
+{
+  "controller": "prior",
+  "set": "flat",
+  "trials": 100,
+  "successes": 0,
+  "success_rate": 0.0,
+  "successes_loose": 0,
+  "arrived_within_15s": 5,
+  "falls": 53,
+  "failure_reasons": {
+    "no_arrival_within_15s": 95,
+    "fell": 53,
+    "no_two_second_hold_within_0.3m": 5
+  },
+  "mean_time_to_arrival_s": 4.8066,
+  "mean_time_to_settle_s": null,
+  "min_pelvis_height_m": 0.04979211837053299,
+  "max_planar_speed_mps": 6.38209867477417,
+  "required_successes_per_100": 90,
+  "gate_passed_90_percent": false,
+  "trace_lines": 60000
+}

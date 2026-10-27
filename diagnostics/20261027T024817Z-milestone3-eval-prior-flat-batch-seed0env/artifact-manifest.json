@@ -1,0 +1,45 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/eval-prior-flat-batch-seed0env-20261027T024817Z",
+  "files": {
+    "result.json": {
+      "bytes": 1021,
+      "sha256": "7303cf5db87ff67def9a74e043dc7fa4d1189493d918187c4943a01b4ae96e06"
+    },
+    "final-scene.usda": {
+      "bytes": 14442171,
+      "sha256": "f6451c6bf083fceff649193948e85872751be2137c9de911420b550fb702654a"
+    },
+    "kit.log": {
+      "bytes": 290524,
+      "sha256": "1e407ccd96c964ff922ac21437656873d3fe0cea1806750262e1c2094c0a9ede"
+    },
+    "initial-scene.usda": {
+      "bytes": 14442171,
+      "sha256": "f6451c6bf083fceff649193948e85872751be2137c9de911420b550fb702654a"
+    },
+    "run-contract.json": {
+      "bytes": 2498,
+      "sha256": "d01145c2af667b3a9c280cd3463fe85abb6318956520034e88cfe295155d5082"
+    },
+    "measurements.json": {
+      "bytes": 540,
+      "sha256": "760d4b5a15b2be427bff3be16b2fbfab71e4a19d6a30a26b08e20dbb86e0084f"
+    },
+    "resolved-configs.json": {
+      "bytes": 57064,
+      "sha256": "a7ee3667a749e77fc2a3d5b47c073f25f62018ceb16062f99a8697a4d7e2858e"
+    },
+    "topdown-flat.png": {
+      "bytes": 86448,
+      "sha256": "e781304fac575d2f33b152a85ae0ac00d3948396096ffa2905141109085a3382"
+    },
+    "trace-flat.jsonl": {
+      "bytes": 10785571,
+      "sha256": "8f67687ae291b008c45ba7de5f4ba7249a0bc23598efaab02a668be373789cad"
+    },
+    "trials.json": {
+      "bytes": 106225,
+      "sha256": "f65e8f500f5bc8eebb56e94a54854a18e9563eb681279983987144bbb6ed2aa9"
+    }
+  }
+}

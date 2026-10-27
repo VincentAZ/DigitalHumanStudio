@@ -1,0 +1,14 @@
+{
+  "stage": "sft",
+  "seed": "0",
+  "num_envs": "1024",
+  "batch_size": "1024",
+  "wall_clock_seconds": "4500",
+  "experiment_name": "m3_sft_walk",
+  "warm_start_checkpoint": "",
+  "image": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+  "output": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-sft-m3_sft_walk-20261026T190135Z",
+  "control_hz": 30,
+  "physics_hz": 120,
+  "training_performed": true
+}

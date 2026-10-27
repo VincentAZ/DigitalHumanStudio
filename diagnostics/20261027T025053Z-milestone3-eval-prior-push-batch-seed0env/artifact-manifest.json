@@ -1,0 +1,45 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/eval-prior-push-batch-seed0env-20261027T025053Z",
+  "files": {
+    "result.json": {
+      "bytes": 1021,
+      "sha256": "42d075aa8dc9403c68b512d06f06502016a3fca8156a1141f04d133b3f62dd40"
+    },
+    "trace-push.jsonl": {
+      "bytes": 10783970,
+      "sha256": "6227da4a0323b471ac1063e834993f9fe358ad1e76c81ec1f17c932e6598cbef"
+    },
+    "final-scene.usda": {
+      "bytes": 14442171,
+      "sha256": "f6451c6bf083fceff649193948e85872751be2137c9de911420b550fb702654a"
+    },
+    "kit.log": {
+      "bytes": 290513,
+      "sha256": "c2559d784578ba82fc91d7dde0ae7ecab6644957878cfb7bda5d8bdd36029f75"
+    },
+    "initial-scene.usda": {
+      "bytes": 14442171,
+      "sha256": "f6451c6bf083fceff649193948e85872751be2137c9de911420b550fb702654a"
+    },
+    "run-contract.json": {
+      "bytes": 2498,
+      "sha256": "ca780d70e5b3ff727ff69e079307df6570d2a29c9da81e645b8afea09803e93c"
+    },
+    "measurements.json": {
+      "bytes": 540,
+      "sha256": "85b4c606c68fc4be963e4feaf24c4ea9a0d2e61a5f3d9135115bb1c81aee35ea"
+    },
+    "resolved-configs.json": {
+      "bytes": 57064,
+      "sha256": "d3bb17cf554b14851f00eda5b20df650c073f5bcfcafbfc42540cfb60356b248"
+    },
+    "trials.json": {
+      "bytes": 117445,
+      "sha256": "c60eeaa6a39f93fb717248e59520046978e229be2390a849ca1c174ad1657014"
+    },
+    "topdown-push.png": {
+      "bytes": 80594,
+      "sha256": "f93124e4de7513a15e8e11b7ea694e6610ad14d82cad9ce85c9c96d68e5ce556"
+    }
+  }
+}

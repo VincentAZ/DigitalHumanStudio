@@ -1,0 +1,40 @@
+{
+  "status": "checks_passed_shutdown_pending",
+  "controller": "prior",
+  "set": "push",
+  "trials": 100,
+  "recorded_frames": 0,
+  "all_trials_complete": true,
+  "all_sampled_states_actions_finite": true,
+  "physics_hz": 120,
+  "control_hz": 30,
+  "measurements": {
+    "controller": "prior",
+    "set": "push",
+    "trials": 100,
+    "successes": 0,
+    "success_rate": 0.0,
+    "successes_loose": 0,
+    "arrived_within_15s": 2,
+    "falls": 57,
+    "failure_reasons": {
+      "no_arrival_within_15s": 98,
+      "fell": 57,
+      "no_two_second_hold_within_0.3m": 2
+    },
+    "mean_time_to_arrival_s": 6.2835,
+    "mean_time_to_settle_s": null,
+    "min_pelvis_height_m": 0.04895156994462013,
+    "max_planar_speed_mps": 6.01857328414917,
+    "required_successes_per_100": 90,
+    "gate_passed_90_percent": false,
+    "trace_lines": 60000
+  },
+  "training_performed": false,
+  "shutdown": {
+    "simulation_context_cleared": true,
+    "stage_closed": true,
+    "fast_shutdown": true,
+    "skip_cleanup": false
+  }
+}

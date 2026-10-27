@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
 # One recorded Milestone 3 evaluation process on the reserved scenarios.
-# usage: run_milestone3_eval.sh <adapter|prior> <set: flat|redirect|push> <controller_dir> [--record <trial ids>] [--env-config <dir>] [--seed N]
+# usage: run_milestone3_eval.sh <adapter|prior> <set: flat|redirect|push> <controller_dir> [--record <trial ids>] [--env-config <dir>] [--seed N] [--label x] [--temperature T]
 #   controller_dir holds inference_last.ckpt and resolved_configs_inference.pt (adapter) or supplies the task
 #   environment configuration for the unadapted prior baseline.
 set -euo pipefail
 project_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 controller=${1:?controller}; scenario_set=${2:?set}; controller_dir=${3:?controller_dir}
 shift 3
-record_ids=""; env_config_dir=""; seed=0; label=""
+record_ids=""; env_config_dir=""; seed=0; label=""; temperature=""
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --record) record_ids=$2; shift 2 ;;
         --env-config) env_config_dir=$2; shift 2 ;;
         --seed) seed=$2; shift 2 ;;
         --label) label=$2; shift 2 ;;
+        --temperature) temperature=$2; shift 2 ;;
         *) echo "Unknown argument $1" >&2; exit 2 ;;
     esac
 done
@@ -63,6 +64,7 @@ eval_args=(--output /studio/output --controller "$controller" --set "$scenario_s
     --scenarios /studio/scenarios.json --env-config /studio/env-config/resolved_configs_inference.pt
     --prior-checkpoint /studio/assets/data/pretrained_models/gpc_prior/soma_bones/inference_last.ckpt)
 [[ "$controller" == adapter ]] && eval_args+=(--adapter-checkpoint /studio/controller/inference_last.ckpt)
+[[ -n "$temperature" ]] && eval_args+=(--temperature "$temperature")
 kit_args="--portable --portable-root /studio-home/kit --/log/file=/studio/output/kit.log --/log/level=Info"
 launcher_args=(--device cuda:0 --viz none)
 if [[ -n "$record_ids" ]]; then eval_args+=(--record --trial-ids "$record_ids"); launcher_args+=(--enable_cameras); fi
