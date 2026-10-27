@@ -1,0 +1,57 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-seed0-attempt1-20261027T071227Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 687,
+      "sha256": "2053dc05e3b3e3aa36443b6b36fd4d8c16e06918c77157df01d07180dee4fa93"
+    },
+    "performance.mp4": {
+      "bytes": 6595689,
+      "sha256": "84a8b0ef7fe7d951999155b0d7345468e5887a32d8e7214605b5308fbae9b7d6"
+    },
+    "result.json": {
+      "bytes": 314,
+      "sha256": "a709c6dcc6ec61f97be9900293499062cbad3d9eb8353c26021774e4080863aa"
+    },
+    "frame-00600.png": {
+      "bytes": 294759,
+      "sha256": "78cc364b1159a17f20c8796425f5073e9a70db4d05065ed30375b2ed2244d6e3"
+    },
+    "topdown.png": {
+      "bytes": 9915,
+      "sha256": "8ad9561359ee2916f2c14971250e145077e67c8e3224fb921eda362e997d50c6"
+    },
+    "frame-00300.png": {
+      "bytes": 295335,
+      "sha256": "1bc0760632ce4d7b264b3dbfe12c5e7cb27f71ccd61e62b82a5dee99067310bf"
+    },
+    "final-scene.usda": {
+      "bytes": 174472,
+      "sha256": "27ad46471e463c0dfb96481a650679d39373df4314aac964828341ba9d0368cf"
+    },
+    "kit.log": {
+      "bytes": 768016,
+      "sha256": "46ed6f4e39fcf1a489a4aeb3d21e346796cc0294d6ea8a02728900d58dba476e"
+    },
+    "summary.json": {
+      "bytes": 6172,
+      "sha256": "392dc3b52ca816133f3ede6f730cb543c65d31431a8b1ee784f560b280fe3a87"
+    },
+    "frame-00900.png": {
+      "bytes": 294886,
+      "sha256": "aa95bdf6d35be156393adee1340288845ee3b845247ecf5e881a16c76c79a42f"
+    },
+    "status.jsonl": {
+      "bytes": 4250,
+      "sha256": "590dd9ba8fe457ddef282ccab18535d554ef440e71d1b7ebae4cfdd7a6910de6"
+    },
+    "trace.jsonl": {
+      "bytes": 916352,
+      "sha256": "2a233deaa96b39d9649745f4a6f207b2401e815729a64db80f2f1b7dde28974c"
+    },
+    "resolved-configs.json": {
+      "bytes": 57062,
+      "sha256": "8197a73060ab7c351d8f3bec23fde60023f1c3df437d2c9382d0024bd7f09f7d"
+    }
+  }
+}
