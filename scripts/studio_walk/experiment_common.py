@@ -99,8 +99,12 @@ def motion_manager_config(init_start_prob: float = 0.2):
 # Training attempt 2 (2026-10-27): attempt 1 reached 98/100 destinations but held still in only 8/100
 # trials because exp(-3 v^2) still pays 0.93 at the 0.15 m/s gate speed. These scales make the
 # stillness terms discriminate at the gate: exp(-40 v^2) is 0.41 at 0.15 m/s and 0.90 at 0.05 m/s.
-STILLNESS_SCALE = 40.0
+# Training attempt 3 (2026-10-27): attempt 2 at scale 40 made the policy hesitant (42% of post-arrival time
+# outside the radius) without producing stillness. Attempt 3 uses a moderate scale (0.71 at 0.15 m/s,
+# 0.26 at 0.30 m/s) and halves the token-sampling temperature so rollouts inject less per-step motion.
+STILLNESS_SCALE = 15.0
 YAW_STILLNESS_SCALE = 2.0
+PEFT_SAMPLING_TEMPERATURE = 0.5
 
 
 def walking_reward_components():
@@ -173,7 +177,7 @@ def peft_actor_config(args, sampling_kwargs: dict):
             peft_type="dora",
             rank=32,
             alpha=64,
-            temperature=1.0,
+            temperature=PEFT_SAMPLING_TEMPERATURE,
             film_input_norm=True,
             **sampling_kwargs,
         ),

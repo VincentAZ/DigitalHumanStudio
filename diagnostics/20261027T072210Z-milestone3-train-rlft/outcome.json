@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "process_exit_code": 1,
+  "stage": "rlft",
+  "epochs_completed": 227,
+  "elapsed_seconds": 14656.958,
+  "last_epoch_fps": 1017.9741821289062,
+  "max_gpu_memory_gib": 56.903,
+  "last_ckpt": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_rlft_walk_seed0_attempt3-20261027T072210Z/results/m3_rlft_walk_seed0_attempt3/last.ckpt",
+  "inference_ckpt": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/train-rlft-m3_rlft_walk_seed0_attempt3-20261027T072210Z/results/m3_rlft_walk_seed0_attempt3/inference_last.ckpt",
+  "milestone3_complete": false
+}
