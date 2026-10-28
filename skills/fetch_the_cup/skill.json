@@ -1,0 +1,45 @@
+{
+ "id": "fetch_the_cup",
+ "kind": "sequence",
+ "name": "Fetch the cup",
+ "description": "Walks to the cup, picks it up with the right hand, brings it back to the spawn and puts it down.",
+ "category": "sequence",
+ "tags": [
+  "composed",
+  "sequence"
+ ],
+ "steps": [
+  {
+   "skill": "walk_to",
+   "object": "cup"
+  },
+  {
+   "skill": "pocket_searching_r01_m07",
+   "attach": {
+    "object": "cup",
+    "body": "RightHand",
+    "at_frame": 60
+   }
+  },
+  {
+   "skill": "walk_to",
+   "x": 0,
+   "y": 0,
+   "frame": "spawn"
+  },
+  {
+   "skill": "release",
+   "object": "cup"
+  }
+ ],
+ "duration_s": 6.07,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "licence": {
+  "name": "composed from library skills; each step carries its own licence"
+ },
+ "provenance": {
+  "created_utc": "2026-10-28T01:53:19.707550+00:00",
+  "created_by": "assistant save_sequence"
+ }
+}
