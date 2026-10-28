@@ -318,6 +318,26 @@ class Bridge(QObject):
     def endSession(self) -> str:
         return self.sendCommand(json.dumps({"cmd": "quit"}))
 
+    def session_active(self) -> bool:
+        return self.phase in ("starting", "running") or bool(self.jobs.active())
+
+    def end_for_close(self) -> bool:
+        """Queue ``quit`` for the live session whatever its phase; the worker reads the command file from
+        the start, so a session still booting quits as soon as it is up. False when no pointer exists yet."""
+        pointer = self.pointer
+        if pointer is None and self.phase == "starting":
+            fresh = st.current_live_pointer()
+            if fresh and fresh.get("started_utc") != self._pending_stamp and not fresh["finished"]:
+                pointer = fresh
+        if not pointer:
+            return False
+        try:
+            with (Path(pointer["output"]) / "commands.jsonl").open("a") as stream:
+                stream.write(json.dumps({"cmd": "quit", "issued_wall_time": time.time()}) + "\n")
+        except OSError:
+            return False
+        return True
+
     @Slot(result=str)
     def forceStop(self) -> str:
         if not self.pointer:

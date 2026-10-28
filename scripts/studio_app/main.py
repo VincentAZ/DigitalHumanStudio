@@ -68,15 +68,21 @@ class MainWindow(QMainWindow):
         self.page.scripts().insert(script)
 
     def closeEvent(self, event):
-        active = self.jobs.active()
-        if active:
-            answer = QMessageBox.question(self, "Session still running",
-                                          "The live session keeps running after the window closes and records its own evidence. Close anyway?")
-            if answer != QMessageBox.StandardButton.Yes:
+        if self.bridge.session_active():
+            box = QMessageBox(QMessageBox.Icon.Question, "Session still running",
+                              "A live session is running. End it, or leave it running in the background? "
+                              "Either way it finishes on its own and records its evidence; reopening the studio reattaches to a session left running.",
+                              QMessageBox.StandardButton.Cancel, self)
+            end = box.addButton("End session and close", QMessageBox.ButtonRole.AcceptRole)
+            leave = box.addButton("Leave it running", QMessageBox.ButtonRole.DestructiveRole)
+            box.setDefaultButton(end)
+            box.exec()
+            if box.clickedButton() not in (end, leave):
                 event.ignore()
                 return
-            for job in active:
-                job.process.setParent(None)
+            if box.clickedButton() is end and not self.bridge.end_for_close():
+                for job in self.jobs.active():
+                    job.terminate()
         self.bridge.assistantNew()
         event.accept()
 
