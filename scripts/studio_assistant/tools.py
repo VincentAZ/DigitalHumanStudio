@@ -535,7 +535,7 @@ TOOL_SPECS = [
      "parameters": {"type": "object", "properties": {"object": {"type": "string"}}, "required": ["object"]}},
     {"name": "place_object", "description": "Put a scene object at a point in scene metres (origin = spawn, z up).",
      "parameters": {"type": "object", "properties": {"object": {"type": "string"}, "x": {"type": "number"}, "y": {"type": "number"}, "z": {"type": "number"}}, "required": ["object", "x", "y", "z"]}},
-    {"name": "generate_skill", "description": "Generate a new motion clip from a text description with the local text-to-motion model and add it to the library as a skill (1-10 s; takes a few minutes). Returns the new skill's name.",
+    {"name": "generate_skill", "description": "Only when the user explicitly asks to create or generate a new motion: generate a clip from a text description with the local text-to-motion model and add it to the library as a skill (1-10 s; takes minutes). For walking, carrying or playing existing motions use walk_to, search_skills, play_skill and run_sequence instead.",
      "parameters": {"type": "object", "properties": {"description": {"type": "string"}, "seconds": {"type": "number", "default": 4}, "name": {"type": "string"}, "seed": {"type": "integer", "default": 0}}, "required": ["description"]}},
     {"name": "list_characters", "description": "Skinned characters available for start_session(character=...).", "parameters": {"type": "object", "properties": {}}},
 ]
@@ -565,8 +565,9 @@ exactly what the control center's buttons do. Rules:
   play_skill plays a clip; run_sequence chains walk_to, clips and object attachments and is the way to do
   "walk to the cup and pick it up": walk_to(object="cup"), then a reaching/carrying clip with attach
   {object, body, at_frame}, then wherever the user wants it carried, then release. Save a sequence the
-  user likes with save_sequence so it becomes a skill. If no clip fits, generate_skill makes one from a
-  description (slow). Kinematic mode plays clips exactly; physical mode may fall on acrobatic clips.
+  user likes with save_sequence so it becomes a skill. Prefer existing library clips (search_skills) and
+  the walker; call generate_skill only when the user explicitly asks to create or generate a new motion,
+  because it takes minutes. Kinematic mode plays clips exactly; physical mode may fall on acrobatic clips.
 - Only one GPU job runs at a time; starting a session takes about a minute. Do not end a session the
   user did not ask to end.
 - Be brief in replies: say what you did and what the character is doing now. Report failures plainly.

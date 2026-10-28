@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "process_exit_code": 0,
+  "cleanup_logged": true,
+  "steps": 2795,
+  "frames": 2795,
+  "trace_lines": 2795,
+  "commands": 6,
+  "command_results": [
+    {
+      "cmd": "sequence",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.968
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.787
+    },
+    {
+      "cmd": "play_skill",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.048
+    },
+    {
+      "cmd": "destination",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.87
+    },
+    {
+      "cmd": "release",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.393
+    },
+    {
+      "cmd": "quit",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.004
+    }
+  ],
+  "final_state": "standing",
+  "resets": 1,
+  "milestone3_complete": false
+}

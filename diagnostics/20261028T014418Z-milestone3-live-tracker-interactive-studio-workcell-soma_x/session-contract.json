@@ -1,0 +1,85 @@
+{
+  "controller": "tracker",
+  "tracker_checkpoint": "/studio/assets/data/pretrained_models/motion_tracker/soma-bones/last_lab.ckpt",
+  "tracker_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "motion_file": "/studio/assets/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "motion_file_sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "segments": {
+    "walk": {
+      "clip": 30,
+      "name": "happy_walk_ff_stop_180_R_005__A421.motion[18:51]",
+      "frames": 33,
+      "closing_m": 0.0215,
+      "speed_mps": 1.338
+    },
+    "stop": {
+      "clip": 30,
+      "name": "happy_walk_ff_stop_180_R_005__A421.motion[106:136]",
+      "frames": 30
+    },
+    "idle": {
+      "clip": 30,
+      "name": "happy_walk_ff_stop_180_R_005__A421.motion[136:195]",
+      "frames": 59
+    }
+  },
+  "reference": "composed on the fly from clip segments; closed-loop heading, planar realignment every step",
+  "learning": false,
+  "mode": "physical",
+  "commands_file": "/studio/output/commands.jsonl",
+  "room_half_size_m": 5.2,
+  "start_motion_id": 7,
+  "control_hz": 30,
+  "physics_hz": 120,
+  "fall_rule": {
+    "pelvis_height_below_m": 0.5,
+    "up_z_below": 0.3
+  },
+  "commands_supported": [
+    "destination",
+    "stop",
+    "pause",
+    "resume",
+    "reset",
+    "push",
+    "record",
+    "play_skill",
+    "sequence",
+    "attach",
+    "release",
+    "place_object",
+    "quit"
+  ],
+  "destination_frames": [
+    "local",
+    "world",
+    "spawn"
+  ],
+  "scene": "/studio/scenes/workcell.usda",
+  "scene_sha256": "49c99ca28f6b480ddd8c40702b4500185652704a670c530881985bdd53017fc0",
+  "spawn_xy_pinned": [
+    100.0,
+    100.0
+  ],
+  "objects": [
+    "carton",
+    "cup"
+  ],
+  "skills_dir": "/studio/skills",
+  "character": {
+    "id": "soma_x",
+    "name": "SOMA-X neutral body",
+    "rig_sha256": "a952cb7bdf4ccd801e355d53122d395b985b69d0d9181439edad5081bb171856",
+    "licence": "Apache License 2.0",
+    "vertices": 18056,
+    "joints": 110,
+    "mapped_bodies": 23
+  },
+  "interactive": true,
+  "live_dir": "/studio/output/live",
+  "preview_size": [
+    960,
+    540
+  ],
+  "max_session_seconds": 14400.0
+}

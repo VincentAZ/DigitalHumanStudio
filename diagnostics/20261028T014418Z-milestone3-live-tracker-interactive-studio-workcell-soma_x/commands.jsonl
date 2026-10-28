@@ -1,0 +1,2 @@
+{"cmd": "sequence", "name": "", "steps": [{"skill": "walk_to", "object": "cup"}, {"skill": "pocket_searching_r01_m07", "attach": {"object": "cup", "body": "RightHand", "at_frame": 60}}, {"skill": "walk_to", "x": 0, "y": 0, "frame": "spawn"}, {"skill": "release", "object": "cup"}], "issued_wall_time": 1793152027.528978}
+{"cmd": "quit", "issued_wall_time": 1793152075.4573689}
