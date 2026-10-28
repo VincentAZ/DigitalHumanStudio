@@ -311,7 +311,7 @@ function onGeneration(p){
   ui.generation=p;const status=$('#generation-status');
   if(p.status==='running'){if(status)status.textContent=`Generating “${p.description}”…`;return;}
   if(p.status==='failed'){toast(`Generation failed: ${p.error||'see .runtime/assistant-generate.log'}`);if(status)status.textContent=`Failed: ${p.error||''}`;const b=$('#generate-skill');if(b){b.disabled=false;b.innerHTML=icon('sparkles')+'Generate';}return;}
-  toast(`New skill ready: ${p.skill||p.name||'generated'}.`);if($('#modal').open&&status)closeModal();setView('skills');
+  toast(`New skill ready: ${p.skill||p.name||'generated'}.`);if($('#modal').open&&status)closeModal();ui.filter='generated';$('#skill-search').value='';setView('skills');
 }
 // ---- characters
 function renderCharacters(){

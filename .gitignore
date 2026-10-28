@@ -11,5 +11,5 @@ artifacts/
 vendor/
 # generated previews stay out of Git; thumbnails and metadata are committed
 skills/*/preview.gif
-skills/*/motion.pt
+# generated clips are small (under 1 MB) and travel with their skill.json; imported bulk clips should stay out
 skills/*/motion.npz

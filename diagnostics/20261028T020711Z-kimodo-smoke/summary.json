@@ -1,0 +1,40 @@
+{
+  "run": "20261028T020711Z",
+  "command": "python3 scripts/generate_motion.py --prompt \"a person waves hello with the right hand\" --seconds 4 --seed 0 --output artifacts/generation/test-wave-20261028T020711Z",
+  "exit_code": 0,
+  "wall_clock_seconds_total": 27,
+  "wall_clock_seconds_kimodo": 20.22,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, driver 595.99.02, torch 2.9.1+cu128",
+  "gpu_peak_allocated_bytes": 16391022592,
+  "precondition": "no studio-* container running; studio GPU lock taken by the script; LM Studio llama-server (7.9 GB) and the studio-app GUI (140 MB) were resident on the GPU and are not studio jobs",
+  "npz": {
+    "path": "artifacts/generation/test-wave-20261028T020711Z/motion.npz",
+    "sha256": "5f2c2abcd00bbcc5ee6982785ada92eead5d3265af3463d625a5c12c62887202",
+    "bytes": 826046,
+    "shapes": {"posed_joints": [120, 77, 3], "local_rot_mats": [120, 77, 3, 3], "global_rot_mats": [120, 77, 3, 3], "posed_joints_norootpos": [120, 30, 3], "root_positions": [120, 3], "smooth_root_pos": [120, 3], "foot_contacts": [120, 6], "global_root_heading": [120, 2]},
+    "finite": true,
+    "joint_order": "kimodo SOMASkeleton77 == ProtoMotions SOMASKEL77_BONE_NAMES (77/77 identical)",
+    "up_axis": "y",
+    "units": "metres",
+    "root_mean_xyz": [-0.0011, 0.9679, -0.0051],
+    "lowest_joint_y": 0.0027,
+    "right_hand_y_range": [0.832, 1.769],
+    "right_hand_path_m": 3.012,
+    "left_hand_path_m": 0.694,
+    "rotation_orthonormality_max_error": 1e-06,
+    "notes": "foot_contacts has 6 columns (README says 4) and posed_joints_norootpos is an extra key; all foot contacts are true (feet planted)"
+  },
+  "conversion": {
+    "tool": "vendor/ProtoMotions/data/scripts/convert_soma23_npz_to_proto.py @ f69fdcaabff31846b4d2247207417b57dc788828",
+    "image": "sha256:a233b5828caf801aabc6069c9e13169fb34fba8f365b0f72359b93e4b56055d9",
+    "exit_code": 0,
+    "seconds": 2.5,
+    "motion_filter": "passed",
+    "output": "artifacts/generation/test-wave-20261028T020711Z/proto/motion.motion",
+    "sha256": "d95cbd1011aa6d7eec301dc93bd07eafda2f165072e64056f1dc3644445c14c2",
+    "bytes": 260415,
+    "tensors": {"fps": 30, "dof_pos": [120, 66], "dof_vel": [120, 66], "rigid_body_pos": [120, 23, 3], "rigid_body_rot": [120, 23, 4], "rigid_body_vel": [120, 23, 3], "rigid_body_ang_vel": [120, 23, 3], "rigid_body_contacts": [120, 23], "local_rigid_body_rot": [120, 23, 4], "state_conversion": "StateConversion.COMMON"},
+    "root_mean_xyz_zup": [0.001, -0.005, 0.968],
+    "min_body_z": 0.0199
+  }
+}

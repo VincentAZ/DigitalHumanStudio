@@ -89,8 +89,9 @@ if "local_rigid_body_rot" not in motion_dict or motion_dict["local_rigid_body_ro
 motion_dict["fps"] = float(motion_dict.get("fps", args.fps))
 frames = frames_from_motion_dict(motion_dict)
 if args.trim_still and frames["gts"].shape[0] > 30:
-    speed = (frames["gts"][1:, 0, :2] - frames["gts"][:-1, 0, :2]).norm(dim=-1) * frames["fps"]
-    moving = (speed > 0.05).nonzero()
+    # a frame is "still" when no body moves faster than 0.25 m/s (a wave moves the hand, not the root)
+    speed = (frames["gts"][1:] - frames["gts"][:-1]).norm(dim=-1).max(dim=-1).values * frames["fps"]
+    moving = (speed > 0.25).nonzero()
     if moving.numel():
         start, end = max(0, int(moving[0]) - 5), min(frames["gts"].shape[0], int(moving[-1]) + 6)
         motion_dict = {k: (v[start:end] if hasattr(v, "shape") and v.shape[:1] == frames["gts"].shape[:1] else v) for k, v in motion_dict.items()}

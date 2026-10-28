@@ -29,21 +29,23 @@ work="$project_root/artifacts/generation/$stamp-$name"
 evidence="$project_root/diagnostics/$stamp-generate-$name"
 mkdir -p "$work" "$evidence"
 echo "generating '$prompt' ($seconds s, seed $seed) into $work" >&2
-"$project_root/scripts/generate_motion.py" --prompt "$prompt" --seconds "$seconds" --seed "$seed" --output "$work" >&2
+python3 "$project_root/scripts/generate_motion.py" --prompt "$prompt" --seconds "$seconds" --seed "$seed" --output "$work" >&2
 [[ -f "$work/motion.npz" && -f "$work/generation.json" ]] || { echo "generation produced no motion.npz" >&2; exit 4; }
 cp "$work/generation.json" "$evidence/"
 licence=$(python3 - "$project_root/config/kimodo.lock.json" <<'PY'
 import json, sys
 lock = json.load(open(sys.argv[1]))
-print(json.dumps({"name": "Generated with " + lock.get("model", {}).get("repo_id", "Kimodo") + " (NVIDIA Open Model License); the generated clip belongs to the user",
-                  "url": lock.get("model", {}).get("licence_url", "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/"),
+model = lock.get("model")
+model = model.get("repo_id", "Kimodo") if isinstance(model, dict) else str(model or "Kimodo")
+print(json.dumps({"name": f"Generated with {model} (NVIDIA Open Model License); the generated clip belongs to the user",
+                  "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
                   "record": "config/kimodo.lock.json"}))
 PY
 )
 provenance=$(python3 - "$work/generation.json" <<'PY'
 import json, sys
 g = json.load(open(sys.argv[1]))
-keep = {k: g.get(k) for k in ("prompt", "seconds", "seed", "model", "model_revision", "weights_sha256", "diffusion_steps", "cfg_weight", "kimodo_commit", "wall_seconds", "gpu") if k in g}
+keep = {k: g.get(k) for k in ("prompt", "seconds", "seed", "frames", "model", "text_encoder", "diffusion_steps", "cfg", "kimodo_commit", "torch", "gpu_name", "wall_seconds", "generation_seconds") if k in g}
 keep["generation_dir"] = sys.argv[1].rsplit("/", 1)[0]
 print(json.dumps(keep))
 PY

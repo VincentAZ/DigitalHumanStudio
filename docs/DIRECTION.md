@@ -1,4 +1,7 @@
 <!-- Approved 2026-10-27; copied from the planning session. -->
+<!-- Status 2026-10-28: stages A (assistant), B (skill library), F (kinematic playback), D (objects, sequences)
+     and E (skinned characters) are built and recorded in PROGRESS.md; stage C (text-to-motion) is wired
+     through scripts/generate_skill.sh and documented in docs/MOTION_GENERATION.md. -->
 # Director's assistant with a growing skill library
 
 ## Context

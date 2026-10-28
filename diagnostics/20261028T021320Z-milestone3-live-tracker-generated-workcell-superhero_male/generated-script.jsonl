@@ -1,0 +1,4 @@
+{"at": 1.0, "cmd": "play_skill", "skill": "wave_hello"}
+{"at": 6.0, "cmd": "play_skill", "skill": "bow_politely"}
+{"at": 11.0, "cmd": "play_skill", "skill": "robot_dance"}
+{"at": 19.0, "cmd": "quit"}

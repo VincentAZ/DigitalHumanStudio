@@ -1,0 +1,133 @@
+{
+  "steps": 570,
+  "sim_seconds": 19.0,
+  "frames": 570,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 1.0,
+      "step": 30,
+      "wall_time": 1793153635.4724052,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "at": 1.0,
+        "cmd": "play_skill",
+        "skill": "wave_hello"
+      },
+      "result": "accepted",
+      "frames": 120,
+      "duration_s": 4.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 1.4482560000033118
+    },
+    {
+      "sim_time": 6.0,
+      "step": 180,
+      "wall_time": 1793153643.5163157,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "at": 6.0,
+        "cmd": "play_skill",
+        "skill": "bow_politely"
+      },
+      "result": "accepted",
+      "frames": 120,
+      "duration_s": 4.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 1.4875799970468506
+    },
+    {
+      "sim_time": 11.0,
+      "step": 330,
+      "wall_time": 1793153651.6423936,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "at": 11.0,
+        "cmd": "play_skill",
+        "skill": "robot_dance"
+      },
+      "result": "accepted",
+      "frames": 180,
+      "duration_s": 6.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 1.5120060052140616
+    },
+    {
+      "sim_time": 19.0,
+      "step": 570,
+      "wall_time": 1793153664.2724717,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "at": 19.0,
+        "cmd": "quit"
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.010879994079004973
+    }
+  ],
+  "destinations": [],
+  "recording_segments": [],
+  "final_state": "standing",
+  "interactive": false,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "mode": "physical",
+  "skills_played": [
+    {
+      "id": "wave_hello",
+      "name": "a person waves hello with the right hand",
+      "frames": 120,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 30,
+      "started_sim_time": 1.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    },
+    {
+      "id": "bow_politely",
+      "name": "a person bows politely with the hands together",
+      "frames": 120,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 180,
+      "started_sim_time": 6.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    },
+    {
+      "id": "robot_dance",
+      "name": "a person dances like a robot",
+      "frames": 180,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 330,
+      "started_sim_time": 11.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    }
+  ],
+  "sequences": [],
+  "character": "superhero_male",
+  "objects": {
+    "cup": [
+      -2.0,
+      3.0,
+      0.96
+    ],
+    "carton": [
+      3.9,
+      -3.4,
+      0.66
+    ]
+  },
+  "max_ack_latency_ms": 1.5120060052140616
+}

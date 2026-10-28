@@ -1,0 +1,5 @@
+/opt/IsaacLab/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+/studio/ProtoMotions/protomotions/utils/rotations.py:199: SyntaxWarning: invalid escape sequence '\*'
+  Combine two set of 3D rotations together using \**\* operator. The shape needs to be
+<unknown>:4: SyntaxWarning: invalid escape sequence '\*'

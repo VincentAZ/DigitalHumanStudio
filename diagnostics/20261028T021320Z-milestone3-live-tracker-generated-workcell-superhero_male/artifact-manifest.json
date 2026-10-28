@@ -1,0 +1,53 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-generated-workcell-superhero_male-20261028T021320Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 2161,
+      "sha256": "374b3ad2c3f8aeef0685d91a8ef49ad255fa42b383e144e3a50b215ead9f6e8d"
+    },
+    "performance.mp4": {
+      "bytes": 3034291,
+      "sha256": "c32c33fa91af6d5ec29d942365792e7a5f0f6215c4f82b0219908135d323d4e3"
+    },
+    "result.json": {
+      "bytes": 333,
+      "sha256": "4dc83d6317b441b3e1107afa15fe87ff76bd135c8db6ed220c52cd75e580e2d6"
+    },
+    "topdown.png": {
+      "bytes": 11384,
+      "sha256": "a28f6386e08fa163891a3677b8e023ca0a93f2b46a3ff1966472e50984aee236"
+    },
+    "frame-00300.png": {
+      "bytes": 314544,
+      "sha256": "f76163b3253a1eeb609581639348674b6eb826f59fdf428d04e29e7e52f508f0"
+    },
+    "final-scene.usda": {
+      "bytes": 1316513,
+      "sha256": "fd7d87020a3f1f94781c3d91a7235a8b0f8d167a7aa8b06ba73111bb0ef322aa"
+    },
+    "kit.log": {
+      "bytes": 768692,
+      "sha256": "c3adaf023232255308ac2717ffe73eb92ab6ae53f486368a6ceede104aac36c3"
+    },
+    "summary.json": {
+      "bytes": 3031,
+      "sha256": "7a402438ef1a456105c7060bf746163495e2d315a3c41687c653fb1e2766eb28"
+    },
+    "status.jsonl": {
+      "bytes": 1940,
+      "sha256": "9b54fbc1c627d0ad9eb487bc01be22e272660761b51f42cce76c657593f7d568"
+    },
+    "trace.jsonl": {
+      "bytes": 477855,
+      "sha256": "081a086ee15bb1e8658d5e402ff17e0a9645dc37f8e6a35f453bc05d5fb7196c"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "74eea8e2d1b5f06b4586893e445f08a617c0cca3b8c6895364223ef457eac100"
+    },
+    "scene.json": {
+      "bytes": 7641,
+      "sha256": "fdbde5b94fc2bb060e2485b821f355bc88c366cd6c8354dd8bbb0f83ef7dfd1a"
+    }
+  }
+}
