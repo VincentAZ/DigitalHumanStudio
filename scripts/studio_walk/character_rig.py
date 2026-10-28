@@ -81,7 +81,7 @@ def quat_to_matrix(q: torch.Tensor) -> torch.Tensor:
 
 
 class SkinnedCharacter:
-    def __init__(self, folder: Path, mjcf_path: Path, device):
+    def __init__(self, folder: Path, mjcf_path: Path, device, root_height: float = 0.95, body_height: float = 1.72):
         self.folder = Path(folder)
         self.meta = json.loads((self.folder / "character.json").read_text())
         rig = np.load(self.folder / "rig.npz", allow_pickle=False)
@@ -97,6 +97,18 @@ class SkinnedCharacter:
         M[:3, :3] *= meters
         if up.upper() == "Y":
             M[:3, :3] = np.array([[1, 0, 0], [0, 0, -1], [0, 1, 0]], dtype=np.float64) @ M[:3, :3]
+        # Stylised rigs (a chibi knight, a giant) are scaled to the body's height; near-human rigs keep their size.
+        count = int(rig["mesh_count"])
+        lowest, highest = np.inf, -np.inf
+        for i in range(count):
+            pts = (M @ rig[f"m{i}_geom_bind"].astype(np.float64) @ np.concatenate([rig[f"m{i}_points"].astype(np.float64), np.ones((rig[f"m{i}_points"].shape[0], 1))], -1).T).T
+            lowest, highest = min(lowest, float(pts[:, 2].min())), max(highest, float(pts[:, 2].max()))
+        rig_height = highest - lowest
+        self.height_scale = 1.0
+        if rig_height > 0.1 and abs(body_height / rig_height - 1.0) > 0.08:
+            self.height_scale = body_height / rig_height
+            M[:3, :3] *= self.height_scale
+            lowest, highest = lowest * self.height_scale, highest * self.height_scale
         self.M = M
         joint_world = np.einsum("ij,njk->nik", M, bind)          # (J, 4, 4): joints in world axes at the rig's bind pose
         q = joint_world[:, :3, 3]
@@ -125,10 +137,13 @@ class SkinnedCharacter:
         # aligned bind positions: the hips snap to the body's hips, children keep their (rotated) offsets
         p_aligned = np.zeros((J, 3))
         root_joint = mapped.get("Hips", 0)
+        # the rig's hips follow the pelvis, shifted so the rig's feet rest on the floor when the body stands
+        hips_offset = np.array([0.0, 0.0, (q[root_joint, 2] - lowest) - root_height])
+        self.hips_offset = hips_offset
         for j in order:
             parent = int(parents[j])
             if parent < 0:
-                p_aligned[j] = soma[0] + (q[j] - q[root_joint])
+                p_aligned[j] = soma[0] + hips_offset + (q[j] - q[root_joint])
             else:
                 p_aligned[j] = p_aligned[parent] + C[parent] @ (q[j] - q[parent])
         # skinning matrices at bind, relative to the body each joint follows:  A_j = [C R | p'_j - p_b] . (M B_j)^-1

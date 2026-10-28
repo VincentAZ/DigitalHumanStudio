@@ -1,0 +1,132 @@
+{
+  "steps": 720,
+  "sim_seconds": 24.0,
+  "frames": 720,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 1.0,
+      "step": 30,
+      "wall_time": 1793152279.0974143,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "at": 1.0,
+        "cmd": "play_skill",
+        "skill": "sending_kisses_r03_m06"
+      },
+      "result": "accepted",
+      "frames": 120,
+      "duration_s": 4.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 0.981143006356433
+    },
+    {
+      "sim_time": 6.0,
+      "step": 180,
+      "wall_time": 1793152285.169754,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "at": 6.0,
+        "cmd": "destination",
+        "x": 2.5,
+        "y": 1.0,
+        "frame": "spawn"
+      },
+      "result": "accepted",
+      "world_xy": [
+        102.5,
+        101.0
+      ],
+      "ack_latency_ms": 1.3147330028004944
+    },
+    {
+      "sim_time": 16.0,
+      "step": 480,
+      "wall_time": 1793152297.4848323,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "at": 16.0,
+        "cmd": "play_skill",
+        "skill": "dance_hiphop_power_step_r01_m48"
+      },
+      "result": "accepted",
+      "frames": 180,
+      "duration_s": 6.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 1.3662209967151284
+    },
+    {
+      "sim_time": 24.0,
+      "step": 720,
+      "wall_time": 1793152307.4001648,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "at": 24.0,
+        "cmd": "quit"
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.009407995094079524
+    }
+  ],
+  "destinations": [
+    {
+      "sim_time": 6.0,
+      "xy": [
+        102.5,
+        101.0
+      ]
+    }
+  ],
+  "recording_segments": [],
+  "final_state": "standing",
+  "interactive": false,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "mode": "kinematic",
+  "skills_played": [
+    {
+      "id": "sending_kisses_r03_m06",
+      "name": "Sending kisses",
+      "frames": 120,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 30,
+      "started_sim_time": 1.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    },
+    {
+      "id": "dance_hiphop_power_step_r01_m48",
+      "name": "Dance hiphop power step",
+      "frames": 180,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 480,
+      "started_sim_time": 16.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    }
+  ],
+  "sequences": [],
+  "character": "kaykit_knight",
+  "objects": {
+    "cup": [
+      -2.0,
+      3.0,
+      0.96
+    ],
+    "carton": [
+      3.9,
+      -3.4,
+      0.66
+    ]
+  },
+  "max_ack_latency_ms": 1.3662209967151284
+}

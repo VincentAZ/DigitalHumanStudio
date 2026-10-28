@@ -1,0 +1,57 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-kinematic-tracker-chartest-workcell-kaykit_knight-20261028T014848Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 2090,
+      "sha256": "75e5e2b000af06c7bdd4b07c058db752b3a2c0d959fa6eeb7ce6a7dfa63ebbf8"
+    },
+    "performance.mp4": {
+      "bytes": 4448843,
+      "sha256": "93f1cdfd41377a01ac927003a93ef47067f8ad815e4badbff33801222bc8f7dd"
+    },
+    "result.json": {
+      "bytes": 334,
+      "sha256": "a9b7a170ad4fab4733b434371bd57f9bfc9ddb8a4c667831777b3f6108b50be6"
+    },
+    "frame-00600.png": {
+      "bytes": 313192,
+      "sha256": "758ba1ca3f0cdab47b392f3ebee824ca31dc61941608c4e11af97cde9e325497"
+    },
+    "topdown.png": {
+      "bytes": 12362,
+      "sha256": "296439a4aaf3345698d735d61a310524afa03a668d07524b4d805d74ac439b02"
+    },
+    "frame-00300.png": {
+      "bytes": 304144,
+      "sha256": "b8ac1d87753c0a3dbeacffbbfa2b7900a8493cdfc17d0da9e0c6866708dc507b"
+    },
+    "final-scene.usda": {
+      "bytes": 638791,
+      "sha256": "c02385014177d05a8f6eaf466a5ce729f52f6aefd4023ceeee81b87bd4b4d5b4"
+    },
+    "kit.log": {
+      "bytes": 768789,
+      "sha256": "295b3a65b4c03252ef2ecbe142546032f50bc1ca207a290ccade792807dce73a"
+    },
+    "summary.json": {
+      "bytes": 2847,
+      "sha256": "f305432e0d9679d0bb02f918c8af8406ed650c94e2985500d4edc300beadbb4d"
+    },
+    "status.jsonl": {
+      "bytes": 1778,
+      "sha256": "179303717ab35e5b070b596285135a60855ec51dd051f3110782f7f37fcc70a1"
+    },
+    "trace.jsonl": {
+      "bytes": 607313,
+      "sha256": "2540887e8eb392eb7b3b3c47c947070f1d7cbc695319cb2b9590419e884ea39f"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "1e0d7dd079900989ab365904c37261b23bd0f35ad9c6223e5a0dcb041a4749f5"
+    },
+    "scene.json": {
+      "bytes": 7641,
+      "sha256": "fdbde5b94fc2bb060e2485b821f355bc88c366cd6c8354dd8bbb0f83ef7dfd1a"
+    }
+  }
+}

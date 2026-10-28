@@ -150,10 +150,10 @@ def run_session():
     if args.character is not None:
         import protomotions
         mjcf = Path(protomotions.__file__).resolve().parent / "data" / "assets" / robot.asset.asset_file_name
-        character = SkinnedCharacter(args.character, mjcf, device)
+        character = SkinnedCharacter(args.character, mjcf, device, root_height=float(getattr(robot, 'default_root_height', 0.95) or 0.95))
         character.create_prims(stage_holder["stage"], texture_root=str(args.character))
         hidden = character.hide_robot(stage_holder["stage"])
-        print(f"STUDIO_CHARACTER {json.dumps({'character': character.meta.get('id'), 'meshes': [m['name'] for m in character.meshes], 'vertices': character.meta.get('vertices'), 'hidden_prims': hidden})}", flush=True)
+        print(f"STUDIO_CHARACTER {json.dumps({"character": character.meta.get("id"), "height_scale": round(character.height_scale, 3), "hips_offset_m": round(float(character.hips_offset[2]), 3), 'meshes': [m['name'] for m in character.meshes], 'vertices': character.meta.get('vertices'), 'hidden_prims': hidden})}", flush=True)
     anchor = robot.anchor_body_index
     dt = env.dt
     assert abs(dt - 1 / 30) < 1e-9
