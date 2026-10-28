@@ -1,0 +1,62 @@
+ 0 obese_idle_loop_max_r01_m00                                  idle        14.7s standing->standing
+ 1 drunk_fall_down_r04_m01                                      floor        5.4s standing->floor
+ 2 injured_leg_walk_loop_r02_m02                                locomotion   9.1s standing->standing
+ 3 drunk_walk_loop_r02_m03                                      locomotion   6.0s standing->standing
+ 4 dance_vouge_go_down_chest_r01_m04                            dance        6.7s standing->standing
+ 5 m_happy_jump_stadium_r01_m05                                 locomotion   6.5s standing->standing
+ 6 sending_kisses_r03_m06                                       gesture      4.0s standing->standing
+ 7 pocket_searching_r01_m07                                     gesture      6.1s standing->standing
+ 8 injured_leg_jog_start_r02_m08                                locomotion   4.9s standing->standing
+ 9 sad_walk_start_r02_m09                                       locomotion   6.2s standing->standing
+10 no_speak_r01_m10                                             gesture      3.7s standing->standing
+11 medium_big_light_one_hand_right_side_medium_to_r_r01_m11     action       4.7s standing->standing
+12 angry_threaten_finger_r01_m12                                gesture      4.9s standing->standing
+13 inside_door_handle_left_side_slam_r01_m13                    action       2.7s standing->standing
+14 scared_jog_arc_cw_stop_normal_pace_r01_m14                   locomotion   7.1s standing->standing
+15 crutches_turn_walk_fast_r01_m15                              locomotion   3.9s standing->standing
+16 crouch_start_r02_m16                                         action       3.4s standing->standing
+17 jog_backward_stop_r01_m17                                    locomotion   7.3s standing->standing
+18 on_all_fours_idle_loop_r02_m18                               floor       11.3s crouching->crouching
+19 medium_big_heavy_one_hand_behind_high_to_behind_r01_m19      action       6.5s standing->standing
+20 child_walk_max_r03_m20                                       locomotion  10.0s standing->standing
+21 high_energy_turn_jog_r05_m21                                 locomotion   3.5s standing->standing
+22 macho_idle_turn_r02_m22                                      locomotion   8.3s standing->standing
+23 jump_sideway_r01_m23                                         locomotion   2.5s standing->standing
+24 small_heavy_two_hands_walk_turn_r01_m24                      locomotion   9.5s standing->standing
+25 old_cry_standing_to_kneeling_max_r03_m25                     floor       14.7s standing->crouching
+26 angry_jog_loop_r03_m26                                       locomotion   2.6s standing->standing
+27 jog_stop_r01_m27                                             locomotion   3.6s standing->standing
+28 looking_around_on_ground_r02_m28                             floor       10.6s standing->standing
+29 putting_on_colia_r03_m29                                     action       6.3s standing->standing
+30 happy_walk_stop_r05_m30                                      locomotion   7.5s standing->standing
+31 leaning_walk_arc_cw_stop_r03_m31                             locomotion   9.2s standing->standing
+32 point_direction_horizontal_right_hand_head_r03_m32           gesture      3.5s standing->standing
+33 scared_jog_start_r01_m33                                     locomotion   3.4s standing->standing
+34 dancing_routine_2_r03_m34                                    dance       14.2s standing->standing
+35 zombie_crawl_idle_loop_r01_m35                               floor       20.3s floor->floor
+36 warm_up_chest_r01_m36                                        action      10.9s standing->standing
+37 point_direction_vertical_right_hand_head_r01_m37             gesture      6.0s standing->standing
+38 dont_touch_reaction_r03_m38                                  gesture     10.7s standing->standing
+39 gun_crouch_idle_to_gun_idle_r01_m39                          idle         4.8s crouching->standing
+40 sword_shield_walk_pass_start_r01_m40                         locomotion   7.4s standing->standing
+41 crawl_loop_r01_m41                                           floor        8.9s floor->floor
+42 zombie_stumble_down_front_r02_m42                            floor        9.9s standing->floor
+43 walk_start_r03_m43                                           locomotion   6.6s standing->standing
+44 victory_dance_worm_steps_front_back_r01_m44                  dance        5.8s standing->standing
+45 drunk_walk_stop_r01_m45                                      locomotion   6.1s standing->standing
+46 medium_big_heavy_one_hand_put_down_behind_medium_r01_m46     action       4.1s standing->standing
+47 spear_quickstep_turn_idle_r03_m47                            locomotion   5.1s standing->standing
+48 dance_hiphop_power_step_r01_m48                              dance        6.0s standing->standing
+49 rifle_idle_r02_m49                                           idle         8.5s standing->standing
+50 pocket_searching_r03_m50                                     gesture      5.7s standing->standing
+51 scared_afraid_confusion_r01_m51                              gesture      8.0s standing->standing
+52 crawl_start_r01_m52                                          floor        8.9s floor->floor
+53 body_stretch_r02_m53                                         action       5.9s standing->standing
+54 idle_hands_on_back_start_r01_m54                             idle         5.9s standing->standing
+55 jog_start_r02_m55                                            locomotion   3.7s standing->standing
+56 tired_combat_turn_walk_start_r01_m56                         locomotion   5.6s standing->standing
+57 mohak_forward_loop_r01_m57                                   dance        9.9s crouching->crouching
+58 angry_jog_loop_r02_m58                                       locomotion   2.4s standing->standing
+59 idle_turn_r03_m59                                            locomotion   5.8s standing->standing
+60 finger_gun_whole_body_r03_m60                                gesture      3.5s standing->standing
+wrote 61 skills to /studio/skills

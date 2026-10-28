@@ -15,7 +15,7 @@
  ],
  "loop": false,
  "frames": 224,
- "fps": 29.999998435378156,
+ "fps": 30.0,
  "duration_s": 7.467,
  "entry_pose": "standing",
  "exit_pose": "standing",

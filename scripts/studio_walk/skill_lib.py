@@ -125,7 +125,7 @@ def analyse_frames(frames: dict) -> dict:
     turn = math.degrees((yaw1 - yaw0 + math.pi) % (2 * math.pi) - math.pi)
     travel_dir = math.degrees((math.atan2(float(delta[1]), float(delta[0])) - yaw0 + math.pi) % (2 * math.pi) - math.pi) if travel > 0.25 else 0.0
     speed = float((root[1:, :2] - root[:-1, :2]).norm(dim=-1).mean() * fps) if count > 1 else 0.0
-    return {"frames": count, "fps": fps, "duration_s": round(count / fps, 3), "entry_pose": pose_class(start_h), "exit_pose": pose_class(end_h),
+    return {"frames": count, "fps": round(fps, 3), "duration_s": round(count / fps, 3), "entry_pose": pose_class(start_h), "exit_pose": pose_class(end_h),
             "lowest_root_m": round(min_h, 3), "travel_m": round(travel, 3), "travel_direction_deg": round(travel_dir, 1),
             "turn_deg": round(turn, 1), "mean_speed_mps": round(speed, 3)}
 
