@@ -1,0 +1,45 @@
+{
+  "steps": 45778,
+  "sim_seconds": 1525.9333333333334,
+  "frames": 45778,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 1525.9333,
+      "step": 45778,
+      "wall_time": 1793220048.2006087,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "quit",
+        "issued_wall_time": 1793220048.1949751
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.004449000698514283
+    }
+  ],
+  "destinations": [],
+  "recording_segments": [],
+  "final_state": "standing",
+  "interactive": true,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "mode": "physical",
+  "skills_played": [],
+  "sequences": [],
+  "character": "superhero_female",
+  "objects": {
+    "cup": [
+      -2.0,
+      3.0,
+      0.96
+    ],
+    "carton": [
+      3.9,
+      -3.4,
+      0.66
+    ]
+  },
+  "max_ack_latency_ms": 0.004449000698514283
+}

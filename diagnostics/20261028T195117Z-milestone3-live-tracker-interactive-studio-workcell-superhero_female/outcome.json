@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "process_exit_code": 0,
+  "cleanup_logged": true,
+  "steps": 45778,
+  "frames": 45778,
+  "trace_lines": 45778,
+  "commands": 1,
+  "command_results": [
+    {
+      "cmd": "quit",
+      "at": null,
+      "result": "accepted",
+      "ack_latency_ms": 0.004
+    }
+  ],
+  "final_state": "standing",
+  "resets": 1,
+  "milestone3_complete": false
+}
