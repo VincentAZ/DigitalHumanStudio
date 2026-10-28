@@ -1,0 +1,9 @@
+{"cmd": "destination", "x": 1.5, "y": 0.8, "frame": "spawn", "issued_wall_time": 1793156179.7453604}
+{"cmd": "destination", "object": "cup", "frame": "spawn", "issued_wall_time": 1793156187.2774408}
+{"cmd": "pause", "issued_wall_time": 1793156191.305533}
+{"cmd": "resume", "issued_wall_time": 1793156195.3542168}
+{"cmd": "record", "action": "start", "name": "segment-1793156199", "issued_wall_time": 1793156199.3764098}
+{"cmd": "push", "vx": 1, "vy": 0, "issued_wall_time": 1793156203.4007595}
+{"cmd": "play_skill", "skill": "dance_hiphop_power_step_r01_m48", "loops": 1, "speed": 1.0, "issued_wall_time": 1793156211.988052}
+{"cmd": "sequence", "name": "composed", "steps": [{"skill": "walk_to", "object": "cup"}, {"skill": "pocket_searching_r01_m07", "attach": {"object": "cup", "body": "RightHand", "at_frame": 60}}, {"skill": "walk_to", "x": 0, "y": 0, "frame": "spawn"}, {"skill": "release", "object": "cup"}], "issued_wall_time": 1793156225.3353415}
+{"cmd": "quit", "issued_wall_time": 1793156269.1176064}

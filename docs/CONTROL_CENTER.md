@@ -37,6 +37,17 @@ and memory, the running containers, the session state and a button that opens th
 (the output of launchers started from the window; the full text is also appended to
 `.runtime/studio-app.log`). The sidebar shows the current session at all times.
 
+## Interactive tutorial
+
+`Interactive tutorial` in the sidebar starts a guided tour of 36 numbered steps (`scripts/studio_app/web/tour.js`).
+Each step dims the window, spotlights one control and explains it; a step that asks for an action
+(start a session, click the map, pause, record, push, play a clip, run a sequence, end the session)
+advances by itself when the studio reports the result, and offers "Do it for me". The tour can be
+hidden or skipped at any time and resumes from the sidebar at the step it was left on (progress is
+kept in the page's local storage); it opens on the first launch and restarts from the beginning once
+completed. Keyboard: → next, ← back, Esc hide. The whole tour takes about fifteen minutes and starts
+a real session, so it needs the GPU free.
+
 ## How the interface is wired
 
 `scripts/studio_app/main.py` opens one `QWebEngineView` on `scripts/studio_app/web/index.html` and

@@ -1,0 +1,16 @@
+{
+  "status": "not_gated",
+  "reason": "the control center was restarted by the developer while this session ran; its launcher died with it, so the evidence gate never ran. The worker was sent quit afterwards and finished cleanly.",
+  "worker_result": "checks_passed_shutdown_pending",
+  "steps": 11666,
+  "commands": 10,
+  "final_state": "fallen",
+  "skills_played": [
+    "dance_hiphop_power_step_r01_m48",
+    "looking_around_on_ground_r02_m28",
+    "dance_hiphop_power_step_r01_m48",
+    "body_stretch_r02_m53",
+    "crawl_loop_r01_m41"
+  ],
+  "milestone3_complete": false
+}

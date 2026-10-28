@@ -179,6 +179,7 @@ function updateUI(){
 }
 function onLiveState(state){
   const previous=ui.state;ui.state=state;
+  try{document.dispatchEvent(new CustomEvent('studio:state',{detail:state}));}catch(err){}
   if(state.recording&&!(previous&&previous.recording))ui.recordStart=state.sim_time;
   if(!state.recording)ui.recordStart=null;
   const pos=relativePosition();
@@ -227,7 +228,7 @@ function onAck(record){
 }
 
 // ---- views ---------------------------------------------------------------------------------
-function setView(view){if(!['live','skills','characters','project'].includes(view))return;ui.view=view;$$('.view').forEach(el=>{const active=el.id===`${view}-view`;el.hidden=!active;el.classList.toggle('active',active);});$$('[data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);b.setAttribute('aria-current',b.dataset.view===view?'page':'false');});$('#breadcrumb-title').textContent={live:'Live scene',skills:'Skill library',characters:'Characters',project:'Project'}[view];try{history.replaceState(null,'',`#${view}`);}catch(e){}if(view==='skills')renderSkills();if(view==='characters')renderCharacters();if(view==='project')renderProject();window.scrollTo({top:0,behavior:'instant'});}
+function setView(view){if(!['live','skills','characters','project'].includes(view))return;ui.view=view;$$('.view').forEach(el=>{const active=el.id===`${view}-view`;el.hidden=!active;el.classList.toggle('active',active);});$$('[data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);b.setAttribute('aria-current',b.dataset.view===view?'page':'false');});$('#breadcrumb-title').textContent={live:'Live scene',skills:'Skill library',characters:'Characters',project:'Project'}[view];try{history.replaceState(null,'',`#${view}`);}catch(e){}try{document.dispatchEvent(new CustomEvent('studio:view',{detail:view}));}catch(e){}if(view==='skills')renderSkills();if(view==='characters')renderCharacters();if(view==='project')renderProject();window.scrollTo({top:0,behavior:'instant'});}
 
 // ---- skills --------------------------------------------------------------------------------
 const CATEGORY_NAMES={locomotion:'Locomotion',dance:'Dance',gesture:'Gestures',idle:'Idle',action:'Actions',floor:'Floor',generated:'Generated',sequence:'Sequences'};
@@ -452,6 +453,7 @@ function wire(){
 function jobLine(text){const pre=$('#job-output');pre.textContent=(pre.textContent+text).split('\n').slice(-400).join('\n');pre.scrollTop=pre.scrollHeight;const lines=text.split('\n').map(l=>l.trim()).filter(Boolean);if(lines.length)ui.lastJobLine=lines[lines.length-1].slice(0,110);}
 function handleEvent(e){
   const p=e.payload;
+  try{document.dispatchEvent(new CustomEvent('studio:'+e.kind,{detail:p}));}catch(err){}
   if(e.kind==='session')onSession(p);
   else if(e.kind==='ack')onAck(p);
   else if(e.kind==='host'){ui.host=p||{};renderHost();}
@@ -489,6 +491,7 @@ function init(boot){
   if(boot.session)onSession(boot.session);else updateUI();
   setView(location.hash.slice(1)||'live');
   setInterval(pollTick,66);
+  try{document.dispatchEvent(new CustomEvent('studio:ready'));}catch(e){}
 }
 
 new QWebChannel(qt.webChannelTransport,channel=>{ui.bridge=channel.objects.bridge;ui.bridge.bootstrap(json=>{const boot=parse(json);if(!boot){document.body.innerHTML='<p style="padding:40px">The interface could not read the project state.</p>';return;}init(boot);});});

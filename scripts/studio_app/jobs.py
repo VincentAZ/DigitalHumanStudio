@@ -2,15 +2,21 @@
 from __future__ import annotations
 
 import datetime as dt
+import os
+import signal
 import subprocess
 from pathlib import Path
 
-from PySide6.QtCore import QObject, QProcess, Signal
+from PySide6.QtCore import QObject, QProcess, QTimer, Signal
 
-from studio_app import APP_LOG, ROOT, SCRIPTS
+from studio_app import APP_LOG, ROOT, RUNTIME, SCRIPTS
+from studio_app.state import pid_alive
 
 
 class LauncherJob(QObject):
+    """A launcher started in its own session outside the app's process tree, so closing the window
+    neither kills it nor breaks its output pipe: it finishes and records its evidence either way.
+    Its output goes to a log file that the job follows while the app is open."""
     output = Signal(str)
     finished = Signal(int)
 
@@ -20,29 +26,64 @@ class LauncherJob(QObject):
         self.argv = [str(part) for part in argv]
         self.started_at = dt.datetime.now(dt.timezone.utc)
         self.exit_code = None
-        self.process = QProcess(self)
-        self.process.setProcessChannelMode(QProcess.ProcessChannelMode.MergedChannels)
-        self.process.setWorkingDirectory(str(ROOT))
-        self.process.readyReadStandardOutput.connect(self._read)
-        self.process.finished.connect(self._finished)
+        stamp = self.started_at.strftime("%Y%m%dT%H%M%SZ")
+        self.log_path = RUNTIME / "launchers" / f"{stamp}-{label.replace(' ', '-')}.log"
+        self.code_path = self.log_path.with_suffix(".exit")
+        self.pid = 0
+        self._offset = 0
+        self._pending = ""
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self._follow)
         self.lines: list[str] = []
 
     def start(self):
-        self.process.start(self.argv[0], self.argv[1:])
+        self.log_path.parent.mkdir(parents=True, exist_ok=True)
+        wrapper = 'log=$1 code=$2; shift 2; "$@" >"$log" 2>&1 </dev/null; printf "%s\\n" "$?" >"$code"'
+        started, self.pid = QProcess.startDetached("setsid", ["--wait", "bash", "-c", wrapper, "launcher",
+                                                              str(self.log_path), str(self.code_path), *self.argv], str(ROOT))
+        if not started:
+            self.exit_code = -1
+            self.lines.append("Could not start the launcher.")
+            QTimer.singleShot(0, lambda: self.finished.emit(-1))
+            return
+        self.timer.start(250)
 
     @property
     def running(self) -> bool:
-        return self.process.state() != QProcess.ProcessState.NotRunning
+        return self.exit_code is None and self.pid > 0
 
-    def _read(self):
-        text = bytes(self.process.readAllStandardOutput()).decode("utf-8", errors="replace")
-        if not text:
-            return
-        self.lines.extend(text.splitlines())
-        del self.lines[:-2000]
-        self.output.emit(text)
+    def terminate(self):
+        """Ask the launcher's whole session to stop (only before a session pointer exists)."""
+        try:
+            os.killpg(os.getpgid(self.pid), signal.SIGTERM)
+        except OSError:
+            pass
 
-    def _finished(self, code: int, _status):
+    def _follow(self):
+        try:
+            with self.log_path.open("rb") as stream:
+                stream.seek(self._offset)
+                data = stream.read()
+        except OSError:
+            data = b""
+        if data:
+            self._offset += len(data)
+            text = data.decode("utf-8", errors="replace")
+            self.lines.extend((self._pending + text).splitlines())
+            self._pending = "" if text.endswith("\n") else self.lines.pop()
+            del self.lines[:-2000]
+            self.output.emit(text)
+        if self.code_path.exists():
+            code = self.code_path.read_text().strip()
+            self._done(int(code) if code.lstrip("-").isdigit() else -1)
+        elif not pid_alive(self.pid):
+            self._done(-1)
+
+    def _done(self, code: int):
+        self.timer.stop()
+        if self._pending:
+            self.lines.append(self._pending)
+            self._pending = ""
         self.exit_code = code
         self.finished.emit(code)
 

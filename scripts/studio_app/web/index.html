@@ -7,6 +7,7 @@
   <title>Digital Human Studio</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script src="tour.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to workspace</a>
@@ -24,6 +25,7 @@
       <div class="sidebar-session"><div class="nav-label">CURRENT SESSION</div><button id="session-nav"><span class="status-dot"></span><span id="sidebar-scene">No session</span><i data-icon="chevron-right"></i></button><div class="session-sub" id="sidebar-session-status">Start one from the live scene</div></div>
       <div class="sidebar-bottom">
         <div class="local-card"><span class="local-icon"><i data-icon="shield"></i></span><strong>Your studio. Your machine.</strong><p>Simulation, recordings and keys<br>stay on this computer.</p></div>
+        <button class="sidebar-help" id="tutorial-button"><i data-icon="play"></i>Interactive tutorial<span id="tutorial-progress">new</span></button>
         <button class="sidebar-help" id="help-button"><i data-icon="help"></i>Quick guide<span>?</span></button>
         <div class="profile"><span class="profile-avatar" id="profile-initial">U</span><span id="profile-name">user<small>Local workspace</small></span><span class="local-light"></span></div>
       </div>
