@@ -26,9 +26,13 @@ from studio_assistant import TRANSCRIPTS
 from studio_assistant.providers import (PROVIDERS, THINKING_LEVELS, key_status, list_models, load_config, make_assistant,
                                         provider_settings, save_config)
 from studio_assistant.tools import CANCEL, call_tool
+from studio_walk.skill_lib import list_skills as read_skill_folders
 
 SKILLS_DIR = ROOT / "skills"
+CHARACTERS_DIR = ROOT / ".runtime" / "characters"
 PREVIEWS = ["640x480", "960x540", "1280x720"]
+MODES = [{"id": "physical", "name": "Physical (tracker)", "description": "The tracker acts and physics decides; falls are possible."},
+         {"id": "kinematic", "name": "Kinematic playback", "description": "The composed reference is played exactly: no tracking, no contact, no falls."}]
 WALKER = {"id": "tracker", "name": "Tracker-driven walker", "category": "locomotion", "available": True, "duration": "continuous",
           "description": "Walk to a destination, turn, slow down and come to a stand. Milestone 1 tracker following licensed clips; no training.",
           "source": "Built in", "licence": "BONES-SEED clip licence recorded in config/milestone1-license.json", "tags": ["locomotion", "SOMA-23"]}
@@ -60,6 +64,18 @@ class TurnWorker(QThread):
         except Exception as error:  # the page shows the message; the turn always ends with "done"
             self.event.emit("error", {"message": str(error)})
             self.event.emit("done", {"text": ""})
+
+
+class ToolWorker(QThread):
+    """Runs one assistant tool off the interface thread (generation, sequences)."""
+    result = Signal(str, dict)
+
+    def __init__(self, label: str, name: str, arguments: dict, parent=None):
+        super().__init__(parent)
+        self.label, self.name, self.arguments = label, name, arguments
+
+    def run(self):
+        self.result.emit(self.label, call_tool(self.name, self.arguments))
 
 
 class ModelsWorker(QThread):
@@ -141,27 +157,55 @@ class Bridge(QObject):
         for path in sorted((st.CONFIG / "scenes").glob("*.json")):
             meta = st.read_json(path, {}) or {}
             scenes.append({"id": path.stem, "name": meta.get("name", path.stem).replace("_", " ").capitalize(),
-                           "description": meta.get("description", ""), "items": meta.get("items", []),
+                           "description": meta.get("description", ""), "items": meta.get("items", []), "objects": meta.get("objects", []),
                            "room_half_size": meta.get("room_half_size", 6.0)})
         controllers = [{"id": "tracker", "name": "Tracker-driven walker"}]
         for run in st.list_controllers():
             controllers.append({"id": str(run.results_dir), "name": f"{run.experiment} (retired trained adapter, {run.created})"})
-        return _dumps({"scenes": scenes, "controllers": controllers, "previews": PREVIEWS,
+        return _dumps({"scenes": scenes, "controllers": controllers, "previews": PREVIEWS, "modes": MODES, "characters": self._characters(),
                        "providers": [{"id": name, "title": meta["title"].split(" (")[0]} for name, meta in PROVIDERS.items()],
                        "thinking_levels": THINKING_LEVELS, "user": getpass.getuser(), "root": str(ROOT),
                        "skills": self._skills(), "project": self._project_facts(), "session": self._session_payload(), "seq": self.seq,
-                       "host": self._host_payload()})
+                       "host": self._host_payload(), "generation_available": (SCRIPTS / "generate_skill.sh").exists()})
 
     def _skills(self) -> list[dict]:
         skills = [WALKER]
-        for path in sorted(SKILLS_DIR.glob("*/skill.json")):
+        for meta in read_skill_folders(SKILLS_DIR):
+            folder = SKILLS_DIR / meta["id"]
+            thumb, preview = folder / "thumbnail.png", folder / "preview.gif"
+            licence = meta.get("licence")
+            source = meta.get("source") or {}
+            provenance = meta.get("provenance") or {}
+            skills.append({"id": meta["id"], "name": meta.get("name", meta["id"]), "kind": meta.get("kind", "clip"),
+                           "category": meta.get("category", "library"), "available": False,
+                           "duration": f"{meta['duration_s']:.1f} s" if meta.get("duration_s") else "", "duration_s": meta.get("duration_s"),
+                           "description": meta.get("description", ""), "tags": meta.get("tags", []), "loop": meta.get("loop", False),
+                           "entry_pose": meta.get("entry_pose", ""), "exit_pose": meta.get("exit_pose", ""), "travel_m": meta.get("travel_m"),
+                           "turn_deg": meta.get("turn_deg"), "frames": meta.get("frames"), "steps": meta.get("steps"),
+                           "source": provenance.get("dataset") or source.get("kind", "") or "", "licence": licence.get("name", "") if isinstance(licence, dict) else (licence or "not recorded"),
+                           "licence_url": licence.get("url", "") if isinstance(licence, dict) else "", "attribution": licence.get("attribution", "") if isinstance(licence, dict) else "",
+                           "provenance": provenance, "clip": source.get("clip", ""),
+                           "thumbnail": QUrl.fromLocalFile(str(thumb)).toString() if thumb.exists() else "",
+                           "preview": QUrl.fromLocalFile(str(preview)).toString() if preview.exists() else "",
+                           "folder": str(folder)})
+        return skills
+
+    @staticmethod
+    def _characters() -> list[dict]:
+        characters = [{"id": "", "name": "Mannequin (capsule body)", "licence": "built in", "source": "SOMA-23 physics body", "description": "The physical body as it is simulated."}]
+        for path in sorted(CHARACTERS_DIR.glob("*/character.json")):
             meta = st.read_json(path, {}) or {}
             thumb = path.parent / "thumbnail.png"
-            skills.append({"id": path.parent.name, "name": meta.get("name", path.parent.name), "category": meta.get("category", "library"),
-                           "available": False, "duration": meta.get("duration", ""), "description": meta.get("description", ""),
-                           "source": meta.get("source", ""), "licence": meta.get("licence", "not recorded"), "tags": meta.get("tags", []),
-                           "thumbnail": QUrl.fromLocalFile(str(thumb)).toString() if thumb.exists() else ""})
-        return skills
+            characters.append({"id": path.parent.name, "name": meta.get("name", path.parent.name), "licence": (meta.get("licence") or {}).get("name", ""),
+                               "licence_url": (meta.get("licence") or {}).get("url", ""), "source": (meta.get("source") or {}).get("name", ""),
+                               "source_url": (meta.get("source") or {}).get("url", ""), "description": meta.get("description", ""),
+                               "vertices": meta.get("vertices"), "joints": meta.get("joints"), "mapped": meta.get("mapped_bodies"), "unmapped": meta.get("unmapped_bodies", []),
+                               "thumbnail": QUrl.fromLocalFile(str(thumb)).toString() if thumb.exists() else ""})
+        return characters
+
+    @Slot(result=str)
+    def listCharacters(self) -> str:
+        return _dumps(self._characters())
 
     def _project_facts(self) -> dict:
         records = st.milestone_records()
@@ -204,7 +248,8 @@ class Bridge(QObject):
             payload.update({"name": output.name, "output": str(output), "evidence": self.pointer.get("evidence", ""),
                             "container": self.pointer.get("container", ""), "started_utc": self.pointer.get("started_utc", ""),
                             "controller": self.pointer.get("controller_dir", ""), "scene": scene.get("name", "") or "",
-                            "scene_items": scene.get("items", []), "recording": str(output / "performance.mp4")})
+                            "mode": self.pointer.get("mode", "physical"), "character": self.pointer.get("character", ""),
+                            "scene_items": scene.get("items", []), "scene_objects": scene.get("objects", []), "recording": str(output / "performance.mp4")})
         return payload
 
     def _emit_session(self, message: str = "", outcome: dict | None = None):
@@ -224,19 +269,27 @@ class Bridge(QObject):
         self.last_frame = ""
         self._emit_session("Isaac is starting in the worker container")
 
-    @Slot(str, str, str, result=str)
-    def startSession(self, controller: str, scene: str, preview: str) -> str:
+    @Slot(str, str, str, str, str, result=str)
+    def startSession(self, controller: str, scene: str, preview: str, mode: str = "physical", character: str = "") -> str:
         if self.phase in ("starting", "running"):
             return "A session is already running."
         if self.jobs.active() or st.gpu_lock_held():
             return "Another studio GPU job is running. One heavy GPU job at a time."
         if preview not in PREVIEWS:
             return f"Unknown preview size {preview}."
-        argv = [str(SCRIPTS / "run_milestone3_live.sh"), controller or "tracker", "--interactive", "--preview", preview, "--label", "studio"]
+        if mode not in ("physical", "kinematic"):
+            return f"Unknown mode {mode}."
+        if mode == "kinematic" and (controller or "tracker") != "tracker":
+            return "Kinematic playback needs the tracker-driven walker's reference composer."
+        if character and not (CHARACTERS_DIR / character / "character.json").exists():
+            return f"Unknown character {character}."
+        argv = [str(SCRIPTS / "run_milestone3_live.sh"), controller or "tracker", "--interactive", "--preview", preview, "--label", "studio", "--mode", mode]
         if scene:
             if not (st.CONFIG / "scenes" / f"{scene}.json").exists():
                 return f"Unknown scene {scene}."
             argv += ["--scene", scene]
+        if character:
+            argv += ["--character", character]
         before = st.current_live_pointer()
         self._pending_stamp = before.get("started_utc") if before else None
         self.pointer = None
@@ -356,6 +409,66 @@ class Bridge(QObject):
             return _dumps(call_tool("play_skill", {"name": name, **arguments}))
         except Exception as error:
             return _dumps({"error": str(error)})
+
+    @Slot(str, str, result=str)
+    def runSequence(self, name: str, steps_json: str) -> str:
+        try:
+            return _dumps(call_tool("run_sequence", {"steps": json.loads(steps_json), "name": name}))
+        except Exception as error:
+            return _dumps({"error": str(error)})
+
+    @Slot(str, str, str, result=str)
+    def saveSequence(self, name: str, description: str, steps_json: str) -> str:
+        try:
+            result = call_tool("save_sequence", {"name": name, "description": description, "steps": json.loads(steps_json)})
+        except Exception as error:
+            return _dumps({"error": str(error)})
+        if "error" not in result:
+            self._push("skills", self._skills())
+        return _dumps(result)
+
+    @Slot(result=str)
+    def refreshSkills(self) -> str:
+        skills = self._skills()
+        self._push("skills", skills)
+        return _dumps(skills)
+
+    @Slot(str, str, result=str)
+    def skillAction(self, action: str, skill: str) -> str:
+        """Open a skill's folder or preview, or forget a generated/composed skill (shipped clips are kept)."""
+        folder = SKILLS_DIR / skill
+        if not (folder / "skill.json").exists():
+            return "Unknown skill."
+        if action == "open":
+            open_path(folder)
+            return ""
+        if action == "delete":
+            meta = st.read_json(folder / "skill.json", {}) or {}
+            if (meta.get("provenance") or {}).get("generated_by") == "scripts/build_skill_catalog.py":
+                return "Shipped clips are part of the catalog; rebuild it with scripts/build_skill_catalog.sh instead."
+            import shutil
+            shutil.rmtree(folder)
+            self._push("skills", self._skills())
+            return ""
+        return "Unknown action."
+
+    @Slot(str, float, str, int, result=str)
+    def generateSkill(self, description: str, seconds: float, name: str, seed: int) -> str:
+        if getattr(self, "generation_worker", None) is not None and self.generation_worker.isRunning():
+            return "A generation is already running."
+        if not (SCRIPTS / "generate_skill.sh").exists():
+            return "Text-to-motion generation is not installed (see docs/MOTION_GENERATION.md)."
+        self.generation_worker = ToolWorker("generation", "generate_skill", {"description": description, "seconds": seconds, "name": name, "seed": seed}, self)
+        self.generation_worker.result.connect(self._tool_result)
+        self.generation_worker.start()
+        self._push("generation", {"status": "running", "description": description, "seconds": seconds})
+        return ""
+
+    def _tool_result(self, label: str, result: dict):
+        if label == "generation":
+            self._push("generation", {"status": "failed" if "error" in result else "done", **result})
+            if "error" not in result:
+                self._push("skills", self._skills())
 
     # ---- providers --------------------------------------------------------------------------
     @Slot(str, result=str)

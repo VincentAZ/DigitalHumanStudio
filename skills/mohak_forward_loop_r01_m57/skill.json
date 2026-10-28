@@ -1,0 +1,55 @@
+{
+ "id": "mohak_forward_loop_r01_m57",
+ "kind": "clip",
+ "name": "Mohak forward loop",
+ "description": "Mohak forward loop. 9.9 s, starts crouching, ends crouching, travels 3.0 m. Loops. BONES-SEED motion capture, actor A125_M.",
+ "category": "dance",
+ "tags": [
+  "SOMA-23",
+  "crouching",
+  "dance",
+  "loop",
+  "mocap",
+  "travels"
+ ],
+ "loop": true,
+ "frames": 298,
+ "fps": 29.999998435378156,
+ "duration_s": 9.933,
+ "entry_pose": "crouching",
+ "exit_pose": "crouching",
+ "lowest_root_m": 0.487,
+ "travel_m": 3.002,
+ "travel_direction_deg": 6.7,
+ "turn_deg": 16.5,
+ "mean_speed_mps": 0.309,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 57,
+  "clip": "mohak_forward_loop_001__A125_M.motion",
+  "frames": [
+   0,
+   298
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A125_M",
+  "take": 1,
+  "direction_token": null,
+  "right_side_variant": false,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

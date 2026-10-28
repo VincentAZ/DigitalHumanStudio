@@ -1,0 +1,54 @@
+{
+ "id": "pocket_searching_r01_m07",
+ "kind": "clip",
+ "name": "Pocket searching",
+ "description": "Pocket searching. 6.1 s, starts standing, ends standing. BONES-SEED motion capture, actor A143_M.",
+ "category": "gesture",
+ "tags": [
+  "SOMA-23",
+  "gesture",
+  "in place",
+  "mocap",
+  "standing"
+ ],
+ "loop": false,
+ "frames": 182,
+ "fps": 29.999998435378156,
+ "duration_s": 6.067,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.996,
+ "travel_m": 0.007,
+ "travel_direction_deg": 0.0,
+ "turn_deg": -0.1,
+ "mean_speed_mps": 0.019,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 7,
+  "clip": "pocket_searching_001__A143_M.motion",
+  "frames": [
+   0,
+   182
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A143_M",
+  "take": 1,
+  "direction_token": null,
+  "right_side_variant": false,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

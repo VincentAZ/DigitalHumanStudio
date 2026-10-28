@@ -1,0 +1,3 @@
+{"at": 1.0, "cmd": "play_skill", "skill": "dance_hiphop_power_step_r01_m48"}
+{"at": 9.0, "cmd": "sequence", "name": "fetch-cup", "steps": [{"skill": "walk_to", "object": "cup"}, {"skill": "pocket_searching_r01_m07", "attach": {"object": "cup", "body": "RightHand", "at_frame": 60}}, {"skill": "walk_to", "x": 0.0, "y": 0.0, "frame": "spawn"}, {"skill": "release", "object": "cup"}, {"skill": "sending_kisses_r03_m06"}]}
+{"at": 75.0, "cmd": "quit"}

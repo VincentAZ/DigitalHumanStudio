@@ -1,0 +1,56 @@
+{
+ "id": "old_cry_standing_to_kneeling_max_r03_m25",
+ "kind": "clip",
+ "name": "Old cry standing to kneeling max",
+ "description": "Old cry standing to kneeling max. 14.7 s, starts standing, ends crouching, travels 0.5 m. Right-side variant. BONES-SEED motion capture, actor A264_M.",
+ "category": "floor",
+ "tags": [
+  "SOMA-23",
+  "floor",
+  "max",
+  "mocap",
+  "old",
+  "standing",
+  "travels"
+ ],
+ "loop": false,
+ "frames": 442,
+ "fps": 29.999998435378156,
+ "duration_s": 14.733,
+ "entry_pose": "standing",
+ "exit_pose": "crouching",
+ "lowest_root_m": 0.442,
+ "travel_m": 0.498,
+ "travel_direction_deg": -3.7,
+ "turn_deg": -4.1,
+ "mean_speed_mps": 0.118,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 25,
+  "clip": "old_cry_standing_to_kneeling_R_max_003__A264_M.motion",
+  "frames": [
+   0,
+   442
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A264_M",
+  "take": 3,
+  "direction_token": null,
+  "right_side_variant": true,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

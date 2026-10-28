@@ -1,0 +1,54 @@
+{
+ "id": "body_stretch_r02_m53",
+ "kind": "clip",
+ "name": "Body stretch",
+ "description": "Body stretch. 5.9 s, starts standing, ends standing. BONES-SEED motion capture, actor A272.",
+ "category": "action",
+ "tags": [
+  "SOMA-23",
+  "action",
+  "in place",
+  "mocap",
+  "standing"
+ ],
+ "loop": false,
+ "frames": 176,
+ "fps": 29.999998435378156,
+ "duration_s": 5.867,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.953,
+ "travel_m": 0.006,
+ "travel_direction_deg": 0.0,
+ "turn_deg": -0.7,
+ "mean_speed_mps": 0.067,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 53,
+  "clip": "body_stretch_V002_002__A272.motion",
+  "frames": [
+   0,
+   176
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A272",
+  "take": 2,
+  "direction_token": null,
+  "right_side_variant": false,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

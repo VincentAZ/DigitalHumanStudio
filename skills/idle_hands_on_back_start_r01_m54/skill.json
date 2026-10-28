@@ -1,0 +1,55 @@
+{
+ "id": "idle_hands_on_back_start_r01_m54",
+ "kind": "clip",
+ "name": "Idle hands on back start",
+ "description": "Idle hands on back start. 5.9 s, starts standing, ends standing. BONES-SEED motion capture, actor A268_M.",
+ "category": "idle",
+ "tags": [
+  "SOMA-23",
+  "idle",
+  "in place",
+  "mocap",
+  "standing",
+  "start"
+ ],
+ "loop": false,
+ "frames": 178,
+ "fps": 29.999998435378156,
+ "duration_s": 5.933,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.992,
+ "travel_m": 0.018,
+ "travel_direction_deg": 0.0,
+ "turn_deg": 1.1,
+ "mean_speed_mps": 0.011,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 54,
+  "clip": "idle_hands_on_back_start_001__A268_M.motion",
+  "frames": [
+   0,
+   178
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A268_M",
+  "take": 1,
+  "direction_token": null,
+  "right_side_variant": false,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

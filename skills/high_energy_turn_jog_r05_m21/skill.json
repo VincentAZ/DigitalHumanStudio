@@ -1,0 +1,54 @@
+{
+ "id": "high_energy_turn_jog_r05_m21",
+ "kind": "clip",
+ "name": "High energy turn jog",
+ "description": "High energy turn jog. 3.5 s, starts standing, ends standing, travels 6.1 m, turns +86\u00b0. BONES-SEED motion capture, actor A151_M.",
+ "category": "locomotion",
+ "tags": [
+  "SOMA-23",
+  "locomotion",
+  "mocap",
+  "standing",
+  "travels"
+ ],
+ "loop": false,
+ "frames": 106,
+ "fps": 29.999998435378156,
+ "duration_s": 3.533,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.889,
+ "travel_m": 6.132,
+ "travel_direction_deg": 91.8,
+ "turn_deg": 86.1,
+ "mean_speed_mps": 1.765,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 21,
+  "clip": "high_energy_turn_jog_270_005__A151_M.motion",
+  "frames": [
+   0,
+   106
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A151_M",
+  "take": 5,
+  "direction_token": 270,
+  "right_side_variant": false,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

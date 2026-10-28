@@ -1,0 +1,54 @@
+{
+ "id": "crawl_loop_r01_m41",
+ "kind": "clip",
+ "name": "Crawl loop",
+ "description": "Crawl loop. 8.9 s, starts floor, ends floor, travels 1.7 m. Loops. Right-side variant. BONES-SEED motion capture, actor A214_M.",
+ "category": "floor",
+ "tags": [
+  "SOMA-23",
+  "floor",
+  "loop",
+  "mocap",
+  "travels"
+ ],
+ "loop": true,
+ "frames": 267,
+ "fps": 29.999998435378156,
+ "duration_s": 8.9,
+ "entry_pose": "floor",
+ "exit_pose": "floor",
+ "lowest_root_m": 0.131,
+ "travel_m": 1.731,
+ "travel_direction_deg": 135.3,
+ "turn_deg": -14.8,
+ "mean_speed_mps": 0.272,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 41,
+  "clip": "crawl_ff_loop_225_R_001__A214_M.motion",
+  "frames": [
+   0,
+   267
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A214_M",
+  "take": 1,
+  "direction_token": 225,
+  "right_side_variant": true,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

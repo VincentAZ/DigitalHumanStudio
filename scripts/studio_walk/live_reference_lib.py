@@ -104,6 +104,18 @@ class LiveReferenceLib:
         self.frames[0] = pose
         self.latest = 0
 
+    def rebase(self, root_xy: torch.Tensor):
+        """Move the virtual motion so its latest frame sits at ``root_xy`` (kinematic playback starts
+        where the character was placed instead of at the origin)."""
+        delta = root_xy.to(self.device) - self.frames[self.latest].root_xy
+        for pose in self.frames.values():
+            pose.rigid_body_pos[:, :2] += delta
+            pose.root_xy = pose.root_xy + delta
+        if self.walker.hold_xy is not None:
+            self.walker.hold_xy = self.walker.hold_xy + delta
+        if self.walker.destination is not None:
+            self.walker.destination = self.walker.destination + delta
+
     def _ensure(self, key: int):
         if key in self.frames:
             return

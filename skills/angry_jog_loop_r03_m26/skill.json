@@ -1,0 +1,56 @@
+{
+ "id": "angry_jog_loop_r03_m26",
+ "kind": "clip",
+ "name": "Angry jog loop",
+ "description": "Angry jog loop. 2.6 s, starts standing, ends standing, travels 4.9 m. Loops. Right-side variant. BONES-SEED motion capture, actor A220_M.",
+ "category": "locomotion",
+ "tags": [
+  "SOMA-23",
+  "angry",
+  "locomotion",
+  "loop",
+  "mocap",
+  "standing",
+  "travels"
+ ],
+ "loop": true,
+ "frames": 79,
+ "fps": 29.999998435378156,
+ "duration_s": 2.633,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.916,
+ "travel_m": 4.914,
+ "travel_direction_deg": 131.6,
+ "turn_deg": -5.8,
+ "mean_speed_mps": 1.907,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 26,
+  "clip": "angry_jog_ff_loop_315_R_003__A220_M.motion",
+  "frames": [
+   0,
+   79
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A220_M",
+  "take": 3,
+  "direction_token": 315,
+  "right_side_variant": true,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

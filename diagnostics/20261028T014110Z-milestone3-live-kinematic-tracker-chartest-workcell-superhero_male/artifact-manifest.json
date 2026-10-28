@@ -1,0 +1,57 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-kinematic-tracker-chartest-workcell-superhero_male-20261028T014110Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 2105,
+      "sha256": "cf327a6078ec864cc0d890655bd01e15a6b980326b32a6ba7f6529affa608c26"
+    },
+    "performance.mp4": {
+      "bytes": 4162577,
+      "sha256": "9b0d0e955457b44c72004c26fe721c27db4d15bf1603c2fb0de4f98237ff6386"
+    },
+    "result.json": {
+      "bytes": 334,
+      "sha256": "a9b7a170ad4fab4733b434371bd57f9bfc9ddb8a4c667831777b3f6108b50be6"
+    },
+    "frame-00600.png": {
+      "bytes": 307184,
+      "sha256": "2166751df1f4370ff177217fa8923ddecddd844993da44863f158f4a3b2682b2"
+    },
+    "topdown.png": {
+      "bytes": 12362,
+      "sha256": "296439a4aaf3345698d735d61a310524afa03a668d07524b4d805d74ac439b02"
+    },
+    "frame-00300.png": {
+      "bytes": 301018,
+      "sha256": "a955d0e589d0c5f99ec48e12357e837f3e5653274770b28a389e5956d32ac76f"
+    },
+    "final-scene.usda": {
+      "bytes": 1322926,
+      "sha256": "5599772647b1d96a253bd45c6b07ca86d53bb2187618bbae37c71ab5754b0db0"
+    },
+    "kit.log": {
+      "bytes": 768689,
+      "sha256": "0c5d62557786d63f103232eabb4822d37072e2d6a68296b02e670883c2ebda93"
+    },
+    "summary.json": {
+      "bytes": 2848,
+      "sha256": "386cd50ce48d221b2a8f1784aba105d339dcebd7e53677f6c8350f0967365266"
+    },
+    "status.jsonl": {
+      "bytes": 1777,
+      "sha256": "0c5e29dc5270e0ea218f76f8e0da98eeab9ced7c19a7eec173cbc5a02dbd88c9"
+    },
+    "trace.jsonl": {
+      "bytes": 607313,
+      "sha256": "2540887e8eb392eb7b3b3c47c947070f1d7cbc695319cb2b9590419e884ea39f"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "bac9b1ff894ab9699f4be9d23a031b23cc9ac3dfdfdd5097b355b00d07669811"
+    },
+    "scene.json": {
+      "bytes": 7641,
+      "sha256": "fdbde5b94fc2bb060e2485b821f355bc88c366cd6c8354dd8bbb0f83ef7dfd1a"
+    }
+  }
+}

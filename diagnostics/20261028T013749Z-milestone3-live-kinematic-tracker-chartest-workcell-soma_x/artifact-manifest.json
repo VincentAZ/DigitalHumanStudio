@@ -1,0 +1,57 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-kinematic-tracker-chartest-workcell-soma_x-20261028T013749Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 2092,
+      "sha256": "6a5cdf3a7565a24b9cdf0e781f5261b25e08c7bb45b17bba375000bcf2ef9bc2"
+    },
+    "performance.mp4": {
+      "bytes": 3450054,
+      "sha256": "2a01eeb5355d4fc0f377a54eb1d1ce883ac6fc7a1ef649168a4fc30c5ab60c5e"
+    },
+    "result.json": {
+      "bytes": 334,
+      "sha256": "a9b7a170ad4fab4733b434371bd57f9bfc9ddb8a4c667831777b3f6108b50be6"
+    },
+    "frame-00600.png": {
+      "bytes": 292284,
+      "sha256": "b258661c8d91e60cef0f95b8b7d339036630ed1759549c7e2c4fdd9083613a8d"
+    },
+    "topdown.png": {
+      "bytes": 12362,
+      "sha256": "296439a4aaf3345698d735d61a310524afa03a668d07524b4d805d74ac439b02"
+    },
+    "frame-00300.png": {
+      "bytes": 291100,
+      "sha256": "e1cb76d68503d299d6cd21622406cec9f41b7d8ead892303493d52632114311b"
+    },
+    "final-scene.usda": {
+      "bytes": 2313856,
+      "sha256": "43c79ce802db5a557a2de80f6cf1873f190ed167fe86a3130628fc17d56f577f"
+    },
+    "kit.log": {
+      "bytes": 768673,
+      "sha256": "327c5d53f80e9b83bb13cdbfef5ee3b07021a6576dbc902e5943b64c2d101015"
+    },
+    "summary.json": {
+      "bytes": 2836,
+      "sha256": "71f66c124d9fba5926e43ab73640837fef6eb6bcc86b6c06eaad289f1070d4ee"
+    },
+    "status.jsonl": {
+      "bytes": 1775,
+      "sha256": "8cd0a1e56a3f929d22f6a09f376df682335ea726256ca4037b618321ceb5a2cd"
+    },
+    "trace.jsonl": {
+      "bytes": 607313,
+      "sha256": "2540887e8eb392eb7b3b3c47c947070f1d7cbc695319cb2b9590419e884ea39f"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "1dfbac62dec16bd6df690320d3711be172b4d6b9a5521e0cccb289ac92c9863e"
+    },
+    "scene.json": {
+      "bytes": 7641,
+      "sha256": "fdbde5b94fc2bb060e2485b821f355bc88c366cd6c8354dd8bbb0f83ef7dfd1a"
+    }
+  }
+}

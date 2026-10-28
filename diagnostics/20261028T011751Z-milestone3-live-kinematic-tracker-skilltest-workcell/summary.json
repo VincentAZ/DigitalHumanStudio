@@ -1,0 +1,154 @@
+{
+  "steps": 2250,
+  "sim_seconds": 75.0,
+  "frames": 2250,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 1.0,
+      "step": 30,
+      "wall_time": 1793150305.0717268,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "at": 1.0,
+        "cmd": "play_skill",
+        "skill": "dance_hiphop_power_step_r01_m48"
+      },
+      "result": "accepted",
+      "frames": 180,
+      "duration_s": 6.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 0.9696109991637059
+    },
+    {
+      "sim_time": 9.0,
+      "step": 270,
+      "wall_time": 1793150313.3654275,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "at": 9.0,
+        "cmd": "sequence",
+        "name": "fetch-cup",
+        "steps": [
+          {
+            "skill": "walk_to",
+            "object": "cup",
+            "_attached": false,
+            "_released": false
+          },
+          {
+            "skill": "pocket_searching_r01_m07",
+            "attach": {
+              "object": "cup",
+              "body": "RightHand",
+              "at_frame": 60
+            }
+          },
+          {
+            "skill": "walk_to",
+            "x": 0.0,
+            "y": 0.0,
+            "frame": "spawn"
+          },
+          {
+            "skill": "release",
+            "object": "cup"
+          },
+          {
+            "skill": "sending_kisses_r03_m06"
+          }
+        ]
+      },
+      "result": "accepted",
+      "steps": 5,
+      "name": "fetch-cup",
+      "ack_latency_ms": 1.6355589978047647
+    },
+    {
+      "sim_time": 9.0,
+      "step": 270,
+      "wall_time": 1793150313.3663375,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "object": "cup",
+        "sequence_step": 0
+      },
+      "result": "accepted",
+      "world_xy": [
+        98.0,
+        102.25
+      ],
+      "ack_latency_ms": 0.8495250003761612
+    },
+    {
+      "sim_time": 75.0,
+      "step": 2250,
+      "wall_time": 1793150383.6670535,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "at": 75.0,
+        "cmd": "quit"
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.006663001840934157
+    }
+  ],
+  "destinations": [
+    {
+      "sim_time": 9.0,
+      "xy": [
+        98.0,
+        102.25
+      ]
+    }
+  ],
+  "recording_segments": [],
+  "final_state": "walking",
+  "interactive": false,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "mode": "kinematic",
+  "skills_played": [
+    {
+      "id": "dance_hiphop_power_step_r01_m48",
+      "name": "Dance hiphop power step",
+      "frames": 180,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 30,
+      "started_sim_time": 1.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "fetch-cup",
+      "steps": 5,
+      "started_sim_time": 9.0,
+      "status": "cancelled",
+      "reason": "session ended",
+      "ended_sim_time": 75.0
+    }
+  ],
+  "objects": {
+    "cup": [
+      -2.0,
+      3.0,
+      0.96
+    ],
+    "carton": [
+      3.9,
+      -3.4,
+      0.66
+    ]
+  },
+  "max_ack_latency_ms": 1.6355589978047647
+}

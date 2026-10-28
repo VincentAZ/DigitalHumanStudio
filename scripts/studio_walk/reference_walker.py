@@ -143,6 +143,16 @@ def make_segment(frames: dict, start: int, end: int, name: str, frame_yaw: Optio
                    frame_yaw=float(frame_yaw))
 
 
+def make_clip_segment(frames: dict, name: str, lead_frames: int = 10) -> Segment:
+    """A whole clip as one segment, expressed against its heading over the first ``lead_frames``
+    frames so that playback starts facing the way the character faces now; the clip's own turning
+    and travel stay inside the relative poses and per-frame steps."""
+    count = frames["gts"].shape[0]
+    lead = max(1, min(lead_frames, count))
+    frame_yaw = circular_mean(heading_of(frames["grs"][:lead, ROOT]))
+    return make_segment(frames, 0, count, name, frame_yaw=frame_yaw)
+
+
 def pose_distance(a: Segment, i: int, b: Segment, j: int) -> float:
     """Body-position distance between two root-relative frames (metres, mean over bodies)."""
     return float((a.rel_pos[i] - b.rel_pos[j]).norm(dim=-1).mean())
@@ -204,10 +214,17 @@ class ReferenceWalker:
     clips); the planar position is integrated from the previous reference frame and re-anchored to
     the character by the environment every step. Steering and arrival decisions use the
     character's actual position. The walk cycle phase advances by exactly one frame per step.
-    Phases: ``idle`` → ``walk`` → ``stop`` → ``idle``."""
+    Phases: ``idle`` → ``walk`` → ``stop`` → ``idle``, plus ``clip``: a library skill played from its
+    first frame with its own root motion, after which the character holds where the clip ended."""
     walk: Segment
     stop: Segment
     idle: Segment
+    clip: Optional[Segment] = None
+    clip_name: str = ""
+    clip_loops: int = 1
+    clip_speed: float = 1.0
+    clip_cursor: float = 0.0
+    clip_done: bool = False
     arrival_radius: float = 0.3
     slow_radius: float = 1.2
     turn_rate: float = math.radians(120.0)        # rad/s, maximum heading change of the reference
@@ -234,6 +251,7 @@ class ReferenceWalker:
     def reset(self):
         self.phase, self.frame, self.destination = "idle", 0, None
         self.hold_xy = None
+        self.clip, self.clip_name, self.clip_cursor, self.clip_done = None, "", 0.0, False
         self.idle_direction = 1
         self.previous, self.blend_from, self.blend_left = None, None, 0
         self.history.clear()
@@ -248,6 +266,29 @@ class ReferenceWalker:
         self.hold_xy = None if hold_xy is None else hold_xy.clone()
         if self.phase == "walk":
             self._enter("stop", 0)
+        elif self.phase == "clip":
+            self._finish_clip(interrupted=True)
+
+    def play_clip(self, segment: Segment, loops: int = 1, speed: float = 1.0, name: str = ""):
+        """Play a library clip from its first frame; its root motion is integrated like the walk cycle."""
+        self.destination, self.hold_xy = None, None
+        self.clip, self.clip_name = segment, name or segment.name
+        self.clip_loops, self.clip_speed = max(1, int(loops)), max(0.25, min(2.0, float(speed)))
+        self.clip_cursor, self.clip_done = 0.0, False
+        self._enter("clip", 0)
+
+    def _finish_clip(self, interrupted: bool = False):
+        self.clip_done = True
+        if self.previous is not None:
+            self.hold_xy = self.previous.root_xy.clone()
+        self.clip = None
+        self._enter("idle", 0)
+
+    def clip_progress(self) -> Optional[dict]:
+        if self.phase != "clip" or self.clip is None:
+            return None
+        return {"name": self.clip_name, "frame": int(self.clip_cursor), "frames": self.clip.frames, "loops_left": self.clip_loops,
+                "speed": self.clip_speed}
 
     def _enter(self, phase: str, frame: int):
         if self.previous is not None:
@@ -255,7 +296,7 @@ class ReferenceWalker:
         self.phase, self.frame = phase, frame
 
     def _segment(self) -> Segment:
-        return {"walk": self.walk, "stop": self.stop, "idle": self.idle}[self.phase]
+        return {"walk": self.walk, "stop": self.stop, "idle": self.idle, "clip": self.clip}[self.phase]
 
     def _advance(self, distance: float):
         """Advance phase/frame for the next frame, deciding transitions from the current distance."""
@@ -269,6 +310,16 @@ class ReferenceWalker:
             self.frame += 1
             if self.frame >= self.stop.frames:
                 self._enter("idle", 0)
+        elif self.phase == "clip":
+            self.clip_cursor += self.clip_speed
+            if self.clip_cursor >= self.clip.frames:
+                self.clip_loops -= 1
+                if self.clip_loops <= 0:
+                    self._finish_clip()
+                    return
+                self.clip_cursor -= self.clip.frames        # loop: blend across the seam
+                self._enter("clip", int(self.clip_cursor))
+            self.frame = min(self.clip.frames - 1, int(self.clip_cursor))
         else:
             # Idle plays ping-pong (forward, then backward) so the loop has no seam: the clip's first
             # and last idle frames differ, and a jump there made the tracker lurch every loop.
@@ -295,6 +346,8 @@ class ReferenceWalker:
         segment = self._segment()
         f = self.frame
         forward, lateral, dyaw = float(segment.step_forward[f]), float(segment.step_lateral[f]), float(segment.step_yaw[f])
+        if self.phase == "clip":
+            forward, lateral, dyaw = forward * self.clip_speed, lateral * self.clip_speed, dyaw * self.clip_speed
         if self.phase == "walk" and self.destination is not None:
             desired = torch.atan2(self.destination[1] - actual_xy[1], self.destination[0] - actual_xy[0]) - self.travel_angle
             error = float(wrap_angle(desired - yaw))

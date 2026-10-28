@@ -339,4 +339,37 @@ def Xform "Workcell"
         custom string studio:kind = "post"
     }
 
+    def Xform "Props"
+    {
+        def Xform "cup"
+        {
+            double3 xformOp:translate = (-2.0, 3.0, 0.96)
+            quatd xformOp:orient = (1, 0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            custom string studio:kind = "prop"
+            def Cylinder "shape"
+            {
+                double radius = 0.04
+                double height = 0.1
+                uniform token axis = "Z"
+                color3f[] primvars:displayColor = [(0.92, 0.93, 0.9)]
+            }
+        }
+
+        def Xform "carton"
+        {
+            double3 xformOp:translate = (3.9, -3.4, 0.66)
+            quatd xformOp:orient = (1, 0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            custom string studio:kind = "prop"
+            def Cube "shape"
+            {
+                double size = 1
+                color3f[] primvars:displayColor = [(0.8, 0.66, 0.42)]
+                float3 xformOp:scale = (0.3, 0.24, 0.22)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+    }
 }

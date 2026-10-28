@@ -116,6 +116,8 @@ class TrackerController:
         self.env = get_class(env_cfg._target_)(config=env_cfg, robot_config=robot, device=device, terrain=components["terrain"],
                                                scene_lib=components["scene_lib"], motion_lib=components["motion_lib"], simulator=self.sim)
         base_lib = components["motion_lib"]
+        self.base_lib = base_lib
+        self.base_sha256 = sha256_of(Path(motion_file))
         self.walker, self.segments = build_default_walker(base_lib, walk_clip=args.walk_clip, stop_clip=args.stop_clip, idle_clip=args.idle_clip)
         self.reference = LiveReferenceLib(base_lib, self.walker, lambda: self.sim.get_robot_state(), device, base_lib.num_motions())
         self.env.motion_lib = self.reference
@@ -162,6 +164,27 @@ class TrackerController:
 
     def phase(self) -> Optional[str]:
         return self.walker.phase
+
+    # ---- library clips ------------------------------------------------------------------
+    def play_clip(self, segment, loops: int, speed: float, name: str):
+        self.destination = None
+        self.walker.play_clip(segment, loops=loops, speed=speed, name=name)
+
+    def clip_progress(self) -> Optional[dict]:
+        return self.walker.clip_progress()
+
+    def take_clip_done(self) -> bool:
+        done = self.walker.clip_done
+        self.walker.clip_done = False
+        return done
+
+    def reference_pose(self, step: int):
+        """Reference frame ``step`` (generated in order), for kinematic playback."""
+        self.reference._ensure(step)
+        return self.reference.frames[step]
+
+    def rebase_reference(self, root_xy: torch.Tensor):
+        self.reference.rebase(root_xy)
 
 
 def build_controller(kind: str, args, device, fabric, app, motion_file: str, after_sim=None):

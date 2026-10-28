@@ -9,3 +9,7 @@ __pycache__/
 !.env.example
 artifacts/
 vendor/
+# generated previews stay out of Git; thumbnails and metadata are committed
+skills/*/preview.gif
+skills/*/motion.pt
+skills/*/motion.npz

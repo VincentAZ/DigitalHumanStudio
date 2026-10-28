@@ -1,0 +1,4 @@
+{"cmd": "play_skill", "skill": "dance_hiphop_power_step_r01_m48", "loops": 1, "speed": 1.0, "issued_wall_time": 1793151163.0692585}
+{"cmd": "sequence", "name": "composed", "steps": [{"skill": "walk_to", "object": "cup"}, {"skill": "pocket_searching_r01_m07", "attach": {"object": "cup", "body": "RightHand", "at_frame": 60}}, {"skill": "walk_to", "x": 0, "y": 0, "frame": "spawn"}, {"skill": "release", "object": "cup"}], "issued_wall_time": 1793151172.2841241}
+{"cmd": "destination", "object": "carton", "frame": "spawn", "issued_wall_time": 1793151230.1949174}
+{"cmd": "quit", "issued_wall_time": 1793151243.3183267}

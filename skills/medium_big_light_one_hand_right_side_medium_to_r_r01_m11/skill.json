@@ -1,0 +1,57 @@
+{
+ "id": "medium_big_light_one_hand_right_side_medium_to_r_r01_m11",
+ "kind": "clip",
+ "name": "Medium big light one hand right side medium to right side medium",
+ "description": "Medium big light one hand right side medium to right side medium. 4.7 s, starts standing, ends standing. Right-side variant. BONES-SEED motion capture, actor A525.",
+ "category": "action",
+ "tags": [
+  "SOMA-23",
+  "action",
+  "big",
+  "in place",
+  "light",
+  "medium",
+  "mocap",
+  "standing"
+ ],
+ "loop": false,
+ "frames": 142,
+ "fps": 29.999998435378156,
+ "duration_s": 4.733,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 1.001,
+ "travel_m": 0.021,
+ "travel_direction_deg": 0.0,
+ "turn_deg": 0.7,
+ "mean_speed_mps": 0.041,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 11,
+  "clip": "medium_big_light_one_hand_right_side_medium_to_right_side_medium_R_001__A525.motion",
+  "frames": [
+   0,
+   142
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A525",
+  "take": 1,
+  "direction_token": null,
+  "right_side_variant": true,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

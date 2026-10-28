@@ -1,29 +1,43 @@
 #!/usr/bin/env bash
-# One recorded live-direction session with the trained walking adapter.
-# usage: run_milestone3_live.sh <controller_dir|tracker> [<commands.jsonl>] [--label name] [--interactive] [--preview WxH] [--scene name]
+# One recorded live-direction session (physical control or kinematic playback) with the skill library mounted.
+# usage: run_milestone3_live.sh <controller_dir|tracker> [<commands.jsonl>] [--label name] [--interactive] [--preview WxH] [--scene name] [--mode physical|kinematic] [--character id]
 #   --scene name: reference config/scenes/<name>.usda into the stage at the scene's spawn (from <name>.json) with
 #   static colliders, and use the scene's room size; the footprint is copied to the session for the room map.
 #   controller_dir: a trained adapter directory (inference_last.ckpt + resolved_configs_inference.pt), or the word
 #   "tracker" for the tracker-driven walker (Milestone 1 tracker following a reference composed from licensed clips).
 #   --interactive: the control center appends commands to <output>/commands.jsonl while the worker publishes
 #   preview frames to <output>/live/; the session pointer is written to .runtime/studio-live-current.json.
+#   --mode kinematic: the composed reference is written into the simulator every step (no tracking, no falls).
+#   --character id: render the skinned character .runtime/characters/<id>/ driven by the physical body.
+#   The skill library (skills/) is mounted read-only at /studio/skills so library clips can be played.
 set -euo pipefail
 # The whole launcher runs inside main() so bash parses the complete file before executing it:
 # editing this script while a session is running can then no longer corrupt that session.
 main() {
 project_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 controller_dir=${1:?controller_dir}; shift
-commands="$project_root/config/milestone3-live-script.jsonl"; label=""; interactive=0; preview="640x480"; scene=""
+commands="$project_root/config/milestone3-live-script.jsonl"; label=""; interactive=0; preview="640x480"; scene=""; mode="physical"; character=""
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --label) label=$2; shift 2 ;;
         --scene) scene=$2; shift 2 ;;
+        --mode) mode=$2; shift 2 ;;
+        --character) character=$2; shift 2 ;;
         --interactive) interactive=1; shift ;;
         --preview) preview=$2; shift 2 ;;
         *) commands=$1; shift ;;
     esac
 done
 [[ "$preview" =~ ^[0-9]+x[0-9]+$ ]] || { echo "Expected --preview WxH" >&2; exit 2; }
+[[ "$mode" == physical || "$mode" == kinematic ]] || { echo "Expected --mode physical|kinematic" >&2; exit 2; }
+character_args=(); character_mounts=()
+if [[ -n "$character" ]]; then
+    [[ "$character" =~ ^[A-Za-z0-9_-]+$ && -f "$project_root/.runtime/characters/$character/character.json" ]] \
+        || { echo "Unknown character $character (expected .runtime/characters/$character/character.json; run scripts/fetch_characters.py)" >&2; exit 2; }
+    character_args=(--character "/studio/characters/$character")
+    character_mounts=(--mount "type=bind,src=$project_root/.runtime/characters,dst=/studio/characters,readonly")
+fi
+[[ -d "$project_root/skills" ]] || mkdir -p "$project_root/skills"
 scene_args=(); scene_mounts=()
 if [[ -n "$scene" ]]; then
     [[ "$scene" =~ ^[A-Za-z0-9_-]+$ && -f "$project_root/config/scenes/$scene.usda" && -f "$project_root/config/scenes/$scene.json" ]] \
@@ -49,7 +63,9 @@ image=$(cat "$project_root/config/runtime-image.lock")
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
 name="live${label:+-$label}"; [[ $interactive == 1 ]] && name="live-interactive${label:+-$label}"
 [[ $controller == tracker ]] && name="${name/live/live-tracker}"
+[[ $mode == kinematic ]] && name="${name/live/live-kinematic}"
 [[ -n "$scene" ]] && name="$name-$scene"
+[[ -n "$character" ]] && name="$name-$character"
 evidence="$project_root/diagnostics/$stamp-milestone3-$name"
 output="$project_root/artifacts/milestone3/$name-$stamp"
 runtime_home="$project_root/.runtime/isaac-home"
@@ -64,8 +80,8 @@ exec > >(tee "$evidence/session.log") 2>&1
 trap 'result=$?; printf "%s\n" "$result" > "$evidence/exit-code.txt"' EXIT
 container_name="studio-m3-$name-$stamp"
 if [[ $interactive == 1 ]]; then
-    printf '{"output": "%s", "evidence": "%s", "container": "%s", "launcher_pid": %s, "controller_dir": "%s", "started_utc": "%s"}\n' \
-        "$output" "$evidence" "$container_name" "$$" "$controller_dir" "$stamp" > "$project_root/.runtime/studio-live-current.json"
+    printf '{"output": "%s", "evidence": "%s", "container": "%s", "launcher_pid": %s, "controller_dir": "%s", "started_utc": "%s", "mode": "%s", "scene": "%s", "character": "%s"}\n' \
+        "$output" "$evidence" "$container_name" "$$" "$controller_dir" "$stamp" "$mode" "$scene" "$character" > "$project_root/.runtime/studio-live-current.json"
 fi
 cp -r "$project_root/scripts/studio_walk" "$evidence/studio_walk"; rm -rf "$evidence/studio_walk/__pycache__"
 cp "$project_root/scripts/milestone3_live.py" "$project_root/scripts/run_milestone3_live.sh" "$commands" "$evidence/"
@@ -79,7 +95,7 @@ fi
 "$docker_cmd" ps --format '{{.Names}} {{.Status}}' > "$evidence/running-containers-before.txt"
 [[ ! -s "$evidence/running-containers-before.txt" ]] || { echo 'STOP: inspect running containers first.'; exit 2; }
 worker_args=(--max-session-seconds 120)
-controller_args=(--controller "$controller")
+controller_args=(--controller "$controller" --mode "$mode" --skills /studio/skills "${character_args[@]}")
 [[ $controller == adapter ]] && controller_args+=(--adapter-checkpoint /studio/controller/inference_last.ckpt)
 mounts=(--mount "type=bind,src=$commands,dst=/studio/commands.jsonl,readonly")
 commands_in_container=/studio/commands.jsonl
@@ -100,7 +116,8 @@ command=("$docker_cmd" run --name "$container_name" --gpus all --runtime=nvidia
     --mount "type=bind,src=$project_root/scripts,dst=/studio/scripts,readonly"
     --mount "type=bind,src=$assets,dst=/studio/assets,readonly"
     --mount "type=bind,src=$controller_dir,dst=/studio/controller,readonly"
-    "${mounts[@]}" "${scene_mounts[@]}"
+    --mount "type=bind,src=$project_root/skills,dst=/studio/skills,readonly"
+    "${mounts[@]}" "${scene_mounts[@]}" "${character_mounts[@]}"
     --mount "type=bind,src=$output,dst=/studio/output"
     "$image" /studio/scripts/milestone3_live.py --output /studio/output
     "${controller_args[@]}" "${scene_args[@]}" --commands "$commands_in_container"

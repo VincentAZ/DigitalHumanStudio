@@ -1,0 +1,35 @@
+{
+ "description": "Sources of the shipped skill library. Every entry records its licence before any import; the catalog builder (scripts/build_skill_catalog.sh) turns the licensed motion file into skill folders.",
+ "sources": [
+  {
+   "id": "bones-seed-mini",
+   "name": "BONES-SEED seed-mini (61 SOMA-23 clips shipped with ProtoMotions)",
+   "status": "imported",
+   "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+   "lock": "config/milestone1-assets.lock.json",
+   "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+   "licence": {"name": "BONES-SEED licence", "url": "https://bones.studio/info/seed-license", "record": "config/milestone1-license.json",
+               "attribution": "Motion Data by Bones Studio — https://bones.studio/"},
+   "catalog": "skills/shipped-catalog.json"
+  },
+  {
+   "id": "bones-seed-full",
+   "name": "BONES-SEED full dataset (142,220 motions, SOMA Uniform BVH)",
+   "status": "not imported: gated Hugging Face dataset (bones-studio/seed), 45 GB archive; the user must accept the licence on Hugging Face and download soma_uniform.tar.gz, then scripts/import_skill.py converts BVH clips",
+   "url": "https://huggingface.co/datasets/bones-studio/seed",
+   "licence": {"name": "BONES-SEED licence", "url": "https://bones.studio/info/seed-license", "record": "config/milestone1-license.json"}
+  },
+  {
+   "id": "protomotions-crouch",
+   "name": "ProtoMotions crouch_soma23.pt",
+   "status": "not imported: the clip's origin and licence are not documented in the ProtoMotions repository",
+   "file": "data/motion_for_trackers/crouch_soma23.pt"
+  },
+  {
+   "id": "kimodo-generated",
+   "name": "Clips generated locally with NVIDIA Kimodo-SOMA-RP-v1.2",
+   "status": "generated on demand by scripts/generate_skill.sh; each clip's skill.json records the prompt, seed, model revision and weights hash",
+   "licence": {"name": "NVIDIA Open Model License (model); generated output belongs to the user", "record": "config/kimodo.lock.json"}
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "id": "jog_start_r02_m55",
+ "kind": "clip",
+ "name": "Jog start",
+ "description": "Jog start. 3.7 s, starts standing, ends standing, travels 7.4 m. Right-side variant. BONES-SEED motion capture, actor A531.",
+ "category": "locomotion",
+ "tags": [
+  "SOMA-23",
+  "locomotion",
+  "mocap",
+  "standing",
+  "start",
+  "travels"
+ ],
+ "loop": false,
+ "frames": 110,
+ "fps": 29.999998435378156,
+ "duration_s": 3.667,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.901,
+ "travel_m": 7.425,
+ "travel_direction_deg": 3.9,
+ "turn_deg": 4.9,
+ "mean_speed_mps": 2.054,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 55,
+  "clip": "jog_ff_start_180_R_002__A531.motion",
+  "frames": [
+   0,
+   110
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A531",
+  "take": 2,
+  "direction_token": 180,
+  "right_side_variant": true,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

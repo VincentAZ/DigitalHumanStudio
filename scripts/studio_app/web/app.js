@@ -54,7 +54,7 @@ const ui = {
   session:{phase:'none'}, state:null, startedAt:0, lastJobLine:'',
   trail:[], commands:[], recordStart:null, mapCursor:{x:0,y:0}, lastPosition:null,
   provider:'', providerInfo:null, assistantBusy:false, pendingText:null, current:null, currentParagraph:null,
-  host:{}, skills:[], project:{}
+  host:{}, skills:[], project:{}, characters:[], composer:[], generation:null
 };
 const rpc=(name,...args)=>new Promise(resolve=>ui.bridge[name](...args,resolve));   // WebChannel slots return through a callback
 const running=()=>ui.session.phase==='running';
@@ -62,7 +62,9 @@ const starting=()=>ui.session.phase==='starting';
 const fallen=()=>!!(ui.state&&ui.state.fallen);
 
 // ---- scene / map ---------------------------------------------------------------------------
-function selectedScene(){const id=$('#scene-select').value;return (ui.boot?.scenes||[]).find(s=>s.id===id)||{name:'Flat floor',items:[],room_half_size:6};}
+function selectedScene(){const id=$('#scene-select').value;return (ui.boot?.scenes||[]).find(s=>s.id===id)||{name:'Flat floor',items:[],objects:[],room_half_size:6};}
+function activeObjects(){if((running()||starting())&&ui.session.scene_objects)return ui.session.scene_objects;return selectedScene().objects||[];}
+function objectPosition(o){const live=ui.state&&ui.state.objects&&ui.state.objects[o.name];const p=(live&&live.position)||o.center||[0,0,0];return {x:p[0],y:p[1],z:p[2]||0,attached:live?live.attached_to:null};}
 function activeSceneName(){if(running()||starting())return ui.session.scene?capitalize(ui.session.scene.replace(/_/g,' ')):'Flat floor';return selectedScene().name;}
 function activeItems(){if((running()||starting())&&ui.session.scene_items)return ui.session.scene_items;return selectedScene().items||[];}
 function activeHalf(){if(ui.state&&ui.state.room_half_size)return ui.state.room_half_size;return selectedScene().room_half_size||6;}
@@ -88,6 +90,7 @@ function renderMap(){
     const name=String(item.name||item.kind);
     if(!['wall','marking'].includes(item.kind)&&Math.min(sx,sy)>=0.7&&!/_(load|leg_[a-z])$/.test(name)){const [lx,ly]=mapPoint(item.center[0],item.center[1]);s+=`<text class="map-item-label" x="${lx}" y="${ly+2}">${escapeHtml(name.replace(/_/g,' '))}</text>`;}
   }
+  for(const o of activeObjects()){const p=objectPosition(o);const [ox,oy]=mapPoint(p.x,p.y);const [ax,ay]=mapPoint((o.approach||[p.x,p.y])[0],(o.approach||[p.x,p.y])[1]);s+=`<g class="map-object" data-object="${escapeHtml(o.name)}" style="cursor:pointer"><title>${escapeHtml(o.description||o.name)} — click to walk to it</title><circle cx="${ax}" cy="${ay}" r="2.2" fill="none" stroke="#d8b082" stroke-width=".6" stroke-dasharray="1.5 1.5"/><circle cx="${ox}" cy="${oy}" r="${p.attached?6:4.5}" fill="${p.attached?'#e8c58d':'#f0d9a8'}" stroke="#8f7a56" stroke-width=".8"/><text class="map-item-label" x="${ox}" y="${oy-7}">${escapeHtml(o.name)}${p.attached?' · in hand':''}</text></g>`;}
   const [sx,sy]=mapPoint(0,0);s+=`<path d="M${sx-5} ${sy}h10m-5-5v10" stroke="#6b808b" stroke-width=".7"/><text x="${sx-8}" y="${sy+13}" font-size="6" fill="#627983" font-family="Arial">SPAWN</text>`;
   s+=`<text class="map-bounds-note" x="${x1+6}" y="${y1-2}">±${half} m</text>`;
   if(ui.trail.length>1)s+=`<path d="${ui.trail.map((p,i)=>`${i?'L':'M'}${mapPoint(p.x,p.y).map(v=>v.toFixed(1)).join(' ')}`).join(' ')}" stroke="#93a49a" stroke-width="1" stroke-dasharray="3 3" fill="none"/>`;
@@ -121,13 +124,14 @@ function walkTo(x,y,frame='spawn'){
   if(frame==='spawn'){const half=activeHalf();if(Math.abs(x)>half||Math.abs(y)>half){addLog(label,false,'Out of bounds');toast(`Destination is outside the ±${half} m room.`);return false;}}
   return send({cmd:'destination',x:Number(x.toFixed(3)),y:Number(y.toFixed(3)),frame},label);
 }
+function walkToObject(name){const label=`walk to ${name}`;if(!canCommand(label))return false;if(ui.state&&ui.state.paused){toast('Resume the session first.');return false;}return send({cmd:'destination',object:name,frame:'spawn'},label);}
 function resetCharacter(){if(!canCommand('reset'))return;send({cmd:'reset'},'reset');}
 function stopWalking(){if(!canCommand('stop'))return;send({cmd:'stop'},'stop');}
 function togglePause(){if(!canCommand('pause'))return;const paused=!!(ui.state&&ui.state.paused);send({cmd:paused?'resume':'pause'},paused?'resume':'pause');}
 function toggleRecording(){if(!canCommand('record'))return;const active=!!(ui.state&&ui.state.recording);send({cmd:'record',action:active?'stop':'start',name:`segment-${Math.floor(Date.now()/1000)}`},active?'record stop':'record start');}
 function startSession(){
   if(running()||starting())return;
-  rpc('startSession',$('#controller-select').value,$('#scene-select').value,$('#resolution-select').value).then(error=>{
+  rpc('startSession',$('#controller-select').value,$('#scene-select').value,$('#resolution-select').value,$('#mode-select').value,$('#character-select').value).then(error=>{
     if(error){toast(error);return;}
     ui.trail=[];ui.state=null;ui.recordStart=null;ui.startedAt=Date.now();ui.lastJobLine='';
     addLog(`start session · ${activeSceneName()}`,true,'','—',true);
@@ -148,8 +152,12 @@ function updateUI(){
   $('#viewport-scene').textContent=scene;
   $('#viewport-empty').hidden=run||start;$('#startup-overlay').hidden=!start;$('#preview-frame').hidden=!run;
   $('#end-session').innerHTML=icon(run?'stop':'play')+(run?'End session':start?'Starting…':'Start session');$('#end-session').disabled=start;$('#force-stop').disabled=!run&&!start;
-  for(const id of ['scene-select','controller-select','resolution-select'])$('#'+id).disabled=run||start;
-  $('#scene-character-state').textContent=title;
+  for(const id of ['scene-select','controller-select','resolution-select','mode-select','character-select'])$('#'+id).disabled=run||start;
+  $('#scene-character-state').textContent=run&&state.skill?`Playing ${state.skill.name||state.skill.id}`:title;
+  const sk=run&&state.skill;const frames=sk&&sk.frames?sk.frames:0;const frame=sk?Math.min(frames,(sk.frame||0)+1):0;
+  $('#skill-chip').hidden=!sk;if(sk)$('#skill-chip').innerHTML=`<span class="status-dot"></span>${escapeHtml(sk.name||sk.id)} <span class="chip-progress"><span style="width:${frames?Math.round(frame/frames*100):0}%"></span></span>${frames?`${frame}/${frames}`:''}${sk.loops_left>1?` ×${sk.loops_left}`:''}`;
+  const sq=run&&state.sequence;$('#sequence-chip').hidden=!sq;if(sq)$('#sequence-chip').innerHTML=`<span class="status-dot"></span>${escapeHtml(sq.name||'sequence')} · step ${Math.max(0,sq.index)+1}/${sq.total}${sq.step?` · ${escapeHtml(String(sq.step).replace(/_/g,' '))}`:''}`;
+  $('#character-label').textContent=run&&ui.session.character?ui.session.character:'SOMA-23';
   const phase=state.phase?String(state.phase):'';
   $('#state-value').innerHTML=`<span class="status-dot" style="background:${fall?'var(--red)':run?'var(--mint)':'#7e8d94'}"></span>${title}<small>${escapeHtml(phase)}</small>`;$('#state-value').style.color=fall?'var(--red)':run?'var(--mint)':'#9aa5aa';
   $('#sim-time').textContent=timeText(state.sim_time||0,true);
@@ -161,7 +169,7 @@ function updateUI(){
   const rec=!!state.recording&&run;const recTime=rec&&ui.recordStart!=null?timeText(state.sim_time-ui.recordStart):'';
   $('#record-toggle').classList.toggle('recording',rec);$('#record-toggle').innerHTML=`<span class="record-dot" style="background:${rec?'#e2967f':'#859393'}"></span><span>${rec?'Recording':'Record'}</span>${rec?`<span class="record-time">${recTime}</span>`:''}`;
   $('#record-chip').hidden=!rec;$('#record-label').textContent=`REC ${recTime}`;
-  $('#fps-label').textContent=run?(state.paused?'PAUSED':`${(state.preview_size||[]).join('×')||'LIVE'}`):start?'STARTING':'OFFLINE';
+  $('#fps-label').textContent=run?(state.paused?'PAUSED':`${state.mode==='kinematic'?'KINEMATIC · ':''}${(state.preview_size||[]).join('×')||'LIVE'}`):start?'STARTING':'OFFLINE';
   $('#fall-banner').hidden=!fall||!run;
   for(const id of ['stop-walking','pause-session','reset-character','record-toggle','walk-relative','push-character'])$('#'+id).disabled=!run;
   $('#pause-session').disabled=!run||fall;$('#walk-relative').disabled=!run||fall;$('#push-character').disabled=!run||fall;
@@ -196,39 +204,123 @@ function tickStartup(){if(!starting())return;const elapsed=(Date.now()-(ui.start
 function onAck(record){
   if(record.event==='command'){
     const c=record.command||{};let label=c.cmd||'command';
-    if(c.cmd==='destination')label=`walk to (${Number(c.x).toFixed(2)}, ${Number(c.y).toFixed(2)}) ${c.frame||'spawn'}`;
+    if(c.cmd==='destination')label=c.object?`walk to ${c.object}`:`walk to (${Number(c.x).toFixed(2)}, ${Number(c.y).toFixed(2)}) ${c.frame||'spawn'}`;
     else if(c.cmd==='push')label=`push (${c.vx}, ${c.vy}) m/s`;
+    else if(c.cmd==='play_skill')label=`play ${skillTitle(c.skill)}${c.loops>1?` ×${c.loops}`:''}${c.speed&&c.speed!==1?` @${c.speed}`:''}`;
+    else if(c.cmd==='sequence')label=`sequence ${c.name||''} (${(c.steps||[]).length} steps)`;
+    else if(c.cmd==='attach')label=`attach ${c.object} to ${c.body||'RightHand'}`;
+    else if(c.cmd==='release')label=`release ${c.object}`;
+    else if(c.cmd==='place_object')label=`place ${c.object}`;
+    if(c.sequence_step!=null)label=`↳ ${label}`;
     else if(c.cmd==='record')label=`record ${c.action} ${c.name||''}`.trim();
     const ok=record.result==='accepted';
-    addLog(label,ok,ok?'':String(record.result||'rejected').replace(/^rejected_/,'').replace(/_/g,' '),record.ack_latency_ms!=null?`${Number(record.ack_latency_ms).toFixed(1)} ms`:'—');
+    addLog(label,ok,ok?'':`${String(record.result||'rejected').replace(/^rejected_/,'').replace(/_/g,' ')}${record.reason?` · ${record.reason}`:''}`,record.ack_latency_ms!=null?`${Number(record.ack_latency_ms).toFixed(1)} ms`:'—');
+    if(c.cmd==='play_skill'&&ok&&!c.sequence_step)toast(`Playing ${skillTitle(c.skill)} (${Number(record.duration_s||0).toFixed(1)} s).`);
+    if(c.cmd==='sequence'&&ok)toast(`Sequence started: ${(c.steps||[]).length} steps.`);
     return;
   }
-  const extras={fall_detected:'reset required',session_started:record.scene?`scene ${String(record.scene).split('/').pop()}`:'flat floor',paused:record.wall_seconds!=null?`${Number(record.wall_seconds).toFixed(1)} s`:'',segment_saved:record.name||''};
+  const extras={fall_detected:'reset required',session_started:record.scene?`scene ${String(record.scene).split('/').pop()}${record.mode==='kinematic'?' · kinematic':''}`:'flat floor',paused:record.wall_seconds!=null?`${Number(record.wall_seconds).toFixed(1)} s`:'',segment_saved:record.name||'',
+    skill_finished:`${skillTitle(record.skill)}${record.interrupted?' · interrupted':''}`,sequence_step_done:`${record.sequence||''} · ${String(record.skill||'').replace(/_/g,' ')}`,sequence_finished:`${record.sequence||''} · ${record.status||''}${record.reason?' · '+record.reason:''}`,attached:`${record.object} → ${record.body}`,released:record.object||''};
+  if(record.event==='sequence_finished')toast(`Sequence ${record.sequence||''} ${record.status}${record.reason?': '+record.reason:''}.`);
   addLog(`${String(record.event||'event').replace(/_/g,' ')}${extras[record.event]?' · '+extras[record.event]:''}`,record.event!=='fall_detected','', `t=${Number(record.sim_time||0).toFixed(1)}s`,true);
   if(record.event==='fall_detected')toast('The character has fallen. Reset to continue.');
 }
 
 // ---- views ---------------------------------------------------------------------------------
-function setView(view){if(!['live','skills','project'].includes(view))return;ui.view=view;$$('.view').forEach(el=>{const active=el.id===`${view}-view`;el.hidden=!active;el.classList.toggle('active',active);});$$('[data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);b.setAttribute('aria-current',b.dataset.view===view?'page':'false');});$('#breadcrumb-title').textContent={live:'Live scene',skills:'Skill library',project:'Project'}[view];try{history.replaceState(null,'',`#${view}`);}catch(e){}if(view==='skills')renderSkills();if(view==='project')renderProject();window.scrollTo({top:0,behavior:'instant'});}
+function setView(view){if(!['live','skills','characters','project'].includes(view))return;ui.view=view;$$('.view').forEach(el=>{const active=el.id===`${view}-view`;el.hidden=!active;el.classList.toggle('active',active);});$$('[data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);b.setAttribute('aria-current',b.dataset.view===view?'page':'false');});$('#breadcrumb-title').textContent={live:'Live scene',skills:'Skill library',characters:'Characters',project:'Project'}[view];try{history.replaceState(null,'',`#${view}`);}catch(e){}if(view==='skills')renderSkills();if(view==='characters')renderCharacters();if(view==='project')renderProject();window.scrollTo({top:0,behavior:'instant'});}
 
 // ---- skills --------------------------------------------------------------------------------
+const CATEGORY_NAMES={locomotion:'Locomotion',dance:'Dance',gesture:'Gestures',idle:'Idle',action:'Actions',floor:'Floor',generated:'Generated',sequence:'Sequences'};
+function skillTitle(id){const s=ui.skills.find(x=>x.id===id);return s?s.name:String(id||'').replace(/_/g,' ');}
 function mannequin(x,y,scale=1,pose='standing'){
-  const palette=['#c5cec2','#9daa9c','#6c7d70'];const moving=pose==='walking';
-  return `<g transform="translate(${x} ${y}) scale(${scale})"><ellipse cy="2" rx="23" ry="8" fill="#0b1415" opacity=".33"/><g><path d="M-10-47 ${moving?'Q-20-27-27-8':'Q-13-25-12-6'}" stroke="${palette[2]}" stroke-width="11" stroke-linecap="round"/><path d="M-10-47 ${moving?'Q-20-27-27-8':'Q-13-25-12-6'}" stroke="${palette[1]}" stroke-width="8" stroke-linecap="round"/><path d="M6-45 ${moving?'Q19-27 23-5':'Q11-23 10-3'}" stroke="${palette[0]}" stroke-width="10" stroke-linecap="round"/><path d="${moving?'M-31-4l-8 3q-4 4 2 5h15v-7':'M-15-3l-5 5q-1 3 5 3h9V0'}" fill="${palette[1]}"/><path d="${moving?'M21-2l-1 6 17 1q5-2 0-4l-8-4':'M6 0v5l14 1q5-1 1-4l-8-3'}" fill="${palette[0]}"/><path d="M-15-59q14-5 26 0l-3 17-18 1Z" fill="${palette[1]}" stroke="${palette[2]}" stroke-width="1"/><path d="M-18-90q15-8 29-1l3 19-5 15-22 1-6-17Z" fill="#aab8a6" stroke="${palette[1]}" stroke-width=".7"/><path d="M-18-85 ${moving?'Q-26-69-16-60':'Q-24-68-25-51'}" stroke="${palette[2]}" stroke-width="8" stroke-linecap="round"/><path d="M-18-85 ${moving?'Q-26-69-16-60':'Q-24-68-25-51'}" stroke="${palette[1]}" stroke-width="6" stroke-linecap="round"/><path d="M12-85 ${moving?'Q23-67 28-59':'Q20-67 19-50'}" stroke="${palette[0]}" stroke-width="8" stroke-linecap="round"/><ellipse cx="${moving?28:19}" cy="${moving?-56:-47}" rx="3.7" ry="6" fill="${palette[0]}"/><ellipse cx="${moving?-16:-25}" cy="${moving?-58:-48}" rx="3.2" ry="5.5" fill="${palette[1]}"/><path d="M-5-94v-8h9v8" fill="${palette[1]}"/><ellipse cx="-1" cy="-110" rx="10" ry="13" fill="${palette[0]}"/><path d="M4-121q9 8 3 18l-8 6q9-3 10-13 1-7-5-11" fill="${palette[1]}"/></g></g>`;
+  const s=scale;const walking=pose==='walking';
+  return `<g transform="translate(${x},${y}) scale(${s})" stroke="#bdd8c1" stroke-width="3" stroke-linecap="round" fill="none"><circle cx="0" cy="-118" r="9" fill="#bdd8c1" stroke="none"/><path d="M0-106v48"/><path d="M0-96l${walking?'-14 26':'-12 30'}"/><path d="M0-96l${walking?'15 24':'12 30'}"/><path d="M0-58l${walking?'-14 44 -3 14':'-8 44 -2 14'}"/><path d="M0-58l${walking?'16 40 8 18':'8 44 2 14'}"/></g>`;
 }
-function skillArt(skill){if(skill.thumbnail)return `<img src="${escapeHtml(skill.thumbnail)}" alt="" style="width:100%;height:100%;object-fit:cover">`;return `<svg viewBox="0 0 280 175" aria-hidden="true"><g opacity=".17" stroke="#b6c3b1" stroke-width=".5"><path d="M0 120 140 55 280 120M0 145 140 80 280 145M0 170 140 105 280 170M35 175 140 130 245 175M35 105 175 170M70 88 210 153M105 72 245 137M245 105 105 170M210 88 70 153M175 72 35 137" fill="none"/></g><ellipse cx="140" cy="152" rx="49" ry="12" stroke="#c6b293" stroke-width=".7" fill="#bdac820a"/>${mannequin(140,150,.95,skill.category==='locomotion'?'walking':'standing')}</svg>`;}
+function skillArt(skill){
+  if(skill.thumbnail)return `<img src="${escapeHtml(skill.thumbnail)}" data-preview="${escapeHtml(skill.preview||'')}" data-still="${escapeHtml(skill.thumbnail)}" alt="" loading="lazy">`;
+  if(skill.kind==='sequence')return `<svg viewBox="0 0 280 175" aria-hidden="true"><g opacity=".17" stroke="#b6c3b1" stroke-width=".5"><path d="M0 120 140 55 280 120M0 145 140 80 280 145M0 170 140 105 280 170" fill="none"/></g>${(skill.steps||[]).slice(0,4).map((st,i)=>`<g transform="translate(${60+i*55},150)">${mannequin(0,0,.55,st.skill==='walk_to'?'walking':'standing')}</g>`).join('')}${(skill.steps||[]).slice(0,3).map((st,i)=>`<path d="M${82+i*55} 118h20" stroke="#d8b082" stroke-width="1.2" stroke-dasharray="2 2"/>`).join('')}</svg>`;
+  return `<svg viewBox="0 0 280 175" aria-hidden="true"><g opacity=".17" stroke="#b6c3b1" stroke-width=".5"><path d="M0 120 140 55 280 120M0 145 140 80 280 145M0 170 140 105 280 170M35 175 140 130 245 175M35 105 175 170M70 88 210 153M105 72 245 137M245 105 105 170M210 88 70 153M175 72 35 137" fill="none"/></g><ellipse cx="140" cy="152" rx="49" ry="12" stroke="#c6b293" stroke-width=".7" fill="#bdac820a"/>${mannequin(140,150,.95,skill.category==='locomotion'?'walking':'standing')}</svg>`;
+}
+function poseBadge(skill){if(!skill.entry_pose)return '';const same=skill.entry_pose===skill.exit_pose;return `<span class="pose-badge" title="Starts ${skill.entry_pose}, ends ${skill.exit_pose}">${same?escapeHtml(skill.entry_pose):`${escapeHtml(skill.entry_pose)} → ${escapeHtml(skill.exit_pose)}`}</span>`;}
+function renderFilters(){
+  const counts={};for(const s of ui.skills)counts[s.category]=(counts[s.category]||0)+1;
+  const order=['locomotion','dance','gesture','idle','action','floor','generated','sequence'];const cats=order.filter(c=>counts[c]).concat(Object.keys(counts).filter(c=>!order.includes(c)));
+  $('#skill-filters').innerHTML=`<button data-filter="all" class="${ui.filter==='all'?'selected':''}">All skills</button>`+cats.map(c=>`<button data-filter="${escapeHtml(c)}" class="${ui.filter===c?'selected':''}">${escapeHtml(CATEGORY_NAMES[c]||capitalize(c))} <small>${counts[c]}</small></button>`).join('');
+  $$('#skill-filters [data-filter]').forEach(b=>b.onclick=()=>{ui.filter=b.dataset.filter;renderSkills();});
+}
 function renderSkills(){
+  renderFilters();
   const query=$('#skill-search').value.toLowerCase();
-  const filtered=ui.skills.filter(s=>(ui.filter==='all'||ui.filter===s.category)&&`${s.name} ${s.description} ${s.category} ${(s.tags||[]).join(' ')}`.toLowerCase().includes(query));
-  $('#skill-grid').innerHTML=filtered.map(s=>`<article class="skill-card"><div class="skill-art">${skillArt(s)}<span class="skill-preview-badge">${s.available?'CONTROLLER':'LIBRARY'}</span><span class="skill-duration">${escapeHtml(s.duration||'')}</span></div><div class="skill-card-content"><h3>${escapeHtml(s.name)}${s.available?'<span>● Ready</span>':''}</h3><p>${escapeHtml(s.description)}</p><div class="skill-tags">${(s.tags||[s.category]).map(t=>`<span>${escapeHtml(t)}</span>`).join('')}</div><div class="skill-bottom"><span title="${escapeHtml(s.licence||'')}">${escapeHtml(s.source||'')}</span><button class="button" data-skill="${escapeHtml(s.id)}"><i data-icon="play"></i>${s.available?'Try in scene':'Play in scene'}</button></div></div></article>`).join('');
+  const filtered=ui.skills.filter(s=>(ui.filter==='all'||ui.filter===s.category)&&`${s.name} ${s.description} ${s.category} ${(s.tags||[]).join(' ')} ${s.id}`.toLowerCase().includes(query));
+  $('#skill-grid').innerHTML=filtered.map(s=>`<article class="skill-card" data-card="${escapeHtml(s.id)}"><div class="skill-art">${skillArt(s)}<span class="skill-preview-badge">${s.available?'CONTROLLER':s.kind==='sequence'?'SEQUENCE':s.category==='generated'?'GENERATED':'CLIP'}</span><span class="skill-duration">${escapeHtml(s.duration||'')}${s.loop?' · loop':''}</span></div><div class="skill-card-content"><h3>${escapeHtml(s.name)}${s.available?'<span>● Ready</span>':''}</h3><p>${escapeHtml(s.description)}</p><div class="skill-tags">${poseBadge(s)}${(s.tags||[s.category]).filter(t=>!['SOMA-23','mocap','standing','crouching','floor','in place'].includes(t)).slice(0,4).map(t=>`<span>${escapeHtml(t)}</span>`).join('')}</div><div class="skill-bottom"><span title="${escapeHtml(s.licence||'')}${s.attribution?' · '+escapeHtml(s.attribution):''}"><i data-icon="shield"></i>${escapeHtml(s.licence||s.source||'')}</span><span class="skill-buttons">${s.available?'':`<button class="icon-button" data-details="${escapeHtml(s.id)}" title="Details" aria-label="Details"><i data-icon="info"></i></button><button class="icon-button" data-compose="${escapeHtml(s.id)}" title="Add to sequence" aria-label="Add to sequence"><i data-icon="plus"></i></button>`}<button class="button" data-skill="${escapeHtml(s.id)}"><i data-icon="play"></i>${s.available?'Try in scene':'Play'}</button></span></div></div></article>`).join('');
   $('#skill-empty').hidden=filtered.length>0;$('#skill-count').textContent=ui.skills.length;$('#nav-skill-count').textContent=ui.skills.length;hydrateIcons($('#skill-grid'));
   $$('[data-skill]').forEach(b=>b.onclick=()=>playSkill(b.dataset.skill));
+  $$('[data-details]').forEach(b=>b.onclick=()=>skillModal(b.dataset.details));
+  $$('[data-compose]').forEach(b=>b.onclick=()=>composerAdd({skill:b.dataset.compose}));
+  $$('.skill-art img[data-preview]').forEach(img=>{if(!img.dataset.preview)return;img.onmouseenter=()=>{img.src=img.dataset.preview;};img.onmouseleave=()=>{img.src=img.dataset.still;};});
+  renderComposer();
 }
-function playSkill(id){
+function playSkill(id,options={}){
   const skill=ui.skills.find(s=>s.id===id);if(!skill)return;
   if(skill.available){setView('live');if(running())walkTo(2,0,'local');else toast('Start a session, then click the map or use Walk relative to try the walker.');return;}
-  rpc('playSkill',id,'{}').then(json=>{const result=parse(json)||{};toast(result.error||JSON.stringify(result));});
+  if(!canCommand(`play ${skill.name}`))return;
+  if(skill.kind==='sequence'){rpc('runSequence',skill.id,JSON.stringify(skill.steps||[])).then(json=>{const r=parse(json)||{};if(r.error)toast(r.error);else setView('live');});return;}
+  rpc('playSkill',id,JSON.stringify({loops:options.loops||1,speed:options.speed||1})).then(json=>{const result=parse(json)||{};if(result.error){toast(result.error);return;}if(result.result&&result.result!=='accepted')toast(`Rejected: ${String(result.result).replace(/^rejected_/,'').replace(/_/g,' ')}${result.reason?' · '+result.reason:''}`);else setView('live');});
 }
+function skillModal(id){
+  const s=ui.skills.find(x=>x.id===id);if(!s)return;
+  const prov=s.provenance||{};
+  const rows=[['Category',CATEGORY_NAMES[s.category]||s.category],['Duration',s.duration_s?`${s.duration_s.toFixed(2)} s · ${s.frames||'?'} frames`:'—'],['Pose',s.entry_pose?`starts ${s.entry_pose}, ends ${s.exit_pose}`:'—'],['Travel',s.travel_m!=null?`${s.travel_m.toFixed(2)} m${s.turn_deg?`, turns ${s.turn_deg.toFixed(0)}°`:''}`:'—'],['Source',`${s.source||'—'}${s.clip?` · ${s.clip}`:''}`],['Licence',`${s.licence||'—'}${s.attribution?` · ${s.attribution}`:''}`],['Provenance',[prov.actor?`actor ${prov.actor}`:'',prov.protomotions_revision?`ProtoMotions ${prov.protomotions_revision.slice(0,10)}`:'',prov.model?`model ${prov.model}`:'',prov.prompt?`prompt “${prov.prompt}”`:'',prov.created_utc||''].filter(Boolean).join(' · ')||'—'],['Folder',s.folder||'']];
+  openModal(s.name,`<div class="skill-detail"><div class="skill-detail-art">${s.preview?`<img src="${escapeHtml(s.preview)}" alt="">`:skillArt(s)}</div><p>${escapeHtml(s.description)}</p>${s.kind==='sequence'?`<ol class="step-list">${(s.steps||[]).map(st=>`<li>${escapeHtml(stepLabel(st))}</li>`).join('')}</ol>`:''}<dl class="facts">${rows.map(([k,v])=>`<div><dt>${k}</dt><dd class="${k==='Folder'?'path':''}">${escapeHtml(v)}</dd></div>`).join('')}</dl><div class="modal-actions"><button class="button" data-open="path:${escapeHtml(s.folder||'')}">Open folder</button>${s.kind!=='sequence'?`<button class="button" id="play-slow">Play at half speed</button><button class="button" id="play-twice">Play twice</button>`:''}${s.category==='generated'||s.kind==='sequence'?`<button class="button" id="delete-skill">Remove from library</button>`:''}<button class="button primary" id="play-now"><i data-icon="play"></i>Play in scene</button></div></div>`);
+  $$('#modal-content [data-open]').forEach(b=>b.onclick=()=>rpc('openResource',b.dataset.open).then(error=>{if(error)toast(error);}));
+  $('#play-now').onclick=()=>{closeModal();playSkill(id);};
+  if($('#play-slow'))$('#play-slow').onclick=()=>{closeModal();playSkill(id,{speed:0.5});};
+  if($('#play-twice'))$('#play-twice').onclick=()=>{closeModal();playSkill(id,{loops:2});};
+  if($('#delete-skill'))$('#delete-skill').onclick=()=>{rpc('skillAction','delete',id).then(error=>{if(error)toast(error);else{closeModal();toast('Removed from the library.');}});};
+}
+// ---- sequence composer
+function stepLabel(st){if(st.skill==='walk_to')return st.object?`walk to ${st.object}`:`walk to (${st.x}, ${st.y})`;if(st.skill==='wait')return `wait ${st.seconds||1} s`;if(st.skill==='attach')return `attach ${st.object} to ${st.body||'RightHand'}`;if(st.skill==='release')return `release ${st.object}`;if(st.skill==='stand')return 'stand';let label=skillTitle(st.skill);if(st.loops>1)label+=` ×${st.loops}`;if(st.attach)label+=` (take ${st.attach.object})`;if(st.release)label+=` (put down ${st.release.object})`;return label;}
+function composerAdd(step){ui.composer.push(step);renderComposer();toast(`Added: ${stepLabel(step)}`);}
+function renderComposer(){
+  const bar=$('#composer');bar.hidden=ui.composer.length===0;$('#composer-count').textContent=`${ui.composer.length} step${ui.composer.length===1?'':'s'}`;
+  $('#composer-steps').innerHTML=ui.composer.map((st,i)=>`<span class="composer-step"><b>${i+1}</b>${escapeHtml(stepLabel(st))}${st.skill!=='walk_to'&&st.skill!=='wait'&&st.skill!=='stand'&&st.skill!=='attach'&&st.skill!=='release'?`<button data-grab="${i}" title="Take an object during this clip">✋</button>`:''}<button data-remove="${i}" aria-label="Remove step">×</button></span>`).join('');
+  $$('#composer-steps [data-remove]').forEach(b=>b.onclick=()=>{ui.composer.splice(Number(b.dataset.remove),1);renderComposer();});
+  $$('#composer-steps [data-grab]').forEach(b=>b.onclick=()=>grabModal(Number(b.dataset.grab)));
+  const objects=activeObjects();$('#composer-walk').innerHTML='<option value="">Add walk to…</option>'+objects.map(o=>`<option value="object:${escapeHtml(o.name)}">walk to ${escapeHtml(o.name)}</option>`).join('')+'<option value="spawn">walk back to the spawn</option>';
+}
+function grabModal(index){
+  const step=ui.composer[index];const objects=activeObjects();
+  openModal('Take or put down an object during this clip',`<p>${escapeHtml(stepLabel(step))}: the object snaps to the hand at the chosen frame and follows it until it is put down.</p><label class="modal-field">Take<select id="grab-object"><option value="">nothing</option>${objects.map(o=>`<option value="${escapeHtml(o.name)}" ${step.attach&&step.attach.object===o.name?'selected':''}>${escapeHtml(o.name)}</option>`).join('')}</select></label><div class="settings-row"><label class="modal-field">Hand<select id="grab-hand"><option>RightHand</option><option ${step.attach&&step.attach.body==='LeftHand'?'selected':''}>LeftHand</option></select></label><label class="modal-field">At frame<input id="grab-frame" type="number" min="0" value="${step.attach?step.attach.at_frame||0:30}"></label></div><label class="modal-field">Put down at the end<select id="grab-release"><option value="">keep holding</option>${objects.map(o=>`<option value="${escapeHtml(o.name)}" ${step.release&&step.release.object===o.name?'selected':''}>${escapeHtml(o.name)}</option>`).join('')}</select></label><div class="modal-actions"><button class="button primary" id="grab-save">Apply</button></div>`);
+  $('#grab-save').onclick=()=>{const obj=$('#grab-object').value;const rel=$('#grab-release').value;if(obj)step.attach={object:obj,body:$('#grab-hand').value,at_frame:Number($('#grab-frame').value)||0};else delete step.attach;if(rel)step.release={object:rel};else delete step.release;closeModal();renderComposer();};
+}
+function composerRun(){if(!ui.composer.length)return;if(!canCommand('sequence'))return;rpc('runSequence','composed',JSON.stringify(ui.composer)).then(json=>{const r=parse(json)||{};if(r.error)toast(r.error);else setView('live');});}
+function composerSave(){
+  if(!ui.composer.length)return;
+  openModal('Save the sequence as a skill',`<label class="modal-field">Name (letters, digits, underscores)<input id="seq-name" placeholder="fetch_the_cup" autocomplete="off"></label><label class="modal-field">Description<input id="seq-description" placeholder="Walks to the cup, picks it up and brings it back" autocomplete="off"></label><ol class="step-list">${ui.composer.map(st=>`<li>${escapeHtml(stepLabel(st))}</li>`).join('')}</ol><div class="modal-actions"><button class="button primary" id="seq-save">Save</button></div>`);
+  $('#seq-name').focus();
+  $('#seq-save').onclick=()=>{const name=$('#seq-name').value.trim().toLowerCase().replace(/[\s-]+/g,'_');const description=$('#seq-description').value.trim()||`Sequence of ${ui.composer.length} steps`;rpc('saveSequence',name,description,JSON.stringify(ui.composer)).then(json=>{const r=parse(json)||{};if(r.error){toast(r.error);return;}closeModal();ui.composer=[];toast(`Saved ${name} to the library.`);});};
+}
+// ---- text-to-motion generation
+function createSkillModal(){
+  const available=!!(ui.boot&&ui.boot.generation_available);
+  openModal('Create a skill',`<p>Describe a motion in plain words. ${available?'The local text-to-motion model (Kimodo, SOMA skeleton) generates it and the clip joins the library.':'Text-to-motion generation is not installed on this machine yet; the description goes to the assistant instead.'}</p><label class="modal-field">Motion description<input id="new-skill-description" placeholder="A person waves hello with the right hand" autocomplete="off"></label><div class="settings-row"><label class="modal-field">Seconds<input id="new-skill-seconds" type="number" min="1" max="10" step="0.5" value="4"></label><label class="modal-field">Name (optional)<input id="new-skill-name" placeholder="wave_hello" autocomplete="off"></label></div><div class="modal-info" id="generation-status">${available?'Generation takes one to three minutes. The physics session keeps running meanwhile.':'See docs/MOTION_GENERATION.md for the install steps.'}</div><div class="modal-actions">${available?'<button class="button primary" id="generate-skill"><i data-icon="sparkles"></i>Generate</button>':'<button class="button primary" id="preview-idea">Send to the assistant</button>'}</div>`);
+  $('#new-skill-description').focus();
+  if($('#generate-skill'))$('#generate-skill').onclick=()=>{const description=$('#new-skill-description').value.trim();if(!description){$('#new-skill-description').focus();return;}const name=$('#new-skill-name').value.trim().toLowerCase().replace(/[\s-]+/g,'_');rpc('generateSkill',description,Number($('#new-skill-seconds').value)||4,name,0).then(error=>{if(error){toast(error);return;}$('#generate-skill').disabled=true;$('#generate-skill').innerHTML='<span class="spinner small"></span>Generating…';$('#generation-status').textContent='Generating the motion… this takes one to three minutes.';});};
+}
+function onGeneration(p){
+  ui.generation=p;const status=$('#generation-status');
+  if(p.status==='running'){if(status)status.textContent=`Generating “${p.description}”…`;return;}
+  if(p.status==='failed'){toast(`Generation failed: ${p.error||'see .runtime/assistant-generate.log'}`);if(status)status.textContent=`Failed: ${p.error||''}`;const b=$('#generate-skill');if(b){b.disabled=false;b.innerHTML=icon('sparkles')+'Generate';}return;}
+  toast(`New skill ready: ${p.skill||p.name||'generated'}.`);if($('#modal').open&&status)closeModal();setView('skills');
+}
+// ---- characters
+function renderCharacters(){
+  const list=ui.characters||[];$('#character-count').textContent=list.length;$('#nav-character-count').textContent=list.length;
+  $('#character-grid').innerHTML=list.map(c=>`<article class="skill-card character-card"><div class="skill-art">${c.thumbnail?`<img src="${escapeHtml(c.thumbnail)}" alt="">`:`<svg viewBox="0 0 280 175" aria-hidden="true"><ellipse cx="140" cy="152" rx="49" ry="12" stroke="#c6b293" stroke-width=".7" fill="#bdac820a"/>${mannequin(140,150,.95)}</svg>`}<span class="skill-preview-badge">${c.id?'RIG':'BUILT IN'}</span></div><div class="skill-card-content"><h3>${escapeHtml(c.name)}</h3><p>${escapeHtml(c.description||'')}</p><div class="skill-tags">${c.vertices?`<span>${c.vertices} vertices</span>`:''}${c.joints?`<span>${c.joints} joints</span>`:''}${c.mapped?`<span>${c.mapped}/23 bodies mapped</span>`:''}${(c.unmapped||[]).length?`<span title="${escapeHtml(c.unmapped.join(', '))}">${c.unmapped.length} unmapped</span>`:''}</div><div class="skill-bottom"><span title="${escapeHtml(c.licence_url||'')}"><i data-icon="shield"></i>${escapeHtml(c.licence||'')}${c.source?` · ${escapeHtml(c.source)}`:''}</span><button class="button" data-character="${escapeHtml(c.id)}"><i data-icon="character"></i>Use next</button></div></div></article>`).join('');
+  hydrateIcons($('#character-grid'));
+  $$('[data-character]').forEach(b=>b.onclick=()=>{$('#character-select').value=b.dataset.character;setView('live');toast(`${b.dataset.character||'Mannequin'} will be used by the next session.`);});
+}
+function fillCharacters(){$('#character-select').innerHTML=(ui.characters||[]).map(c=>`<option value="${escapeHtml(c.id)}">${escapeHtml(c.id?c.name:'Mannequin')}</option>`).join('');}
 
 // ---- project -------------------------------------------------------------------------------
 function renderProject(){
@@ -319,7 +411,7 @@ function sessionModal(){
   }
   $$('#modal-content [data-open]').forEach(b=>b.onclick=()=>rpc('openResource',b.dataset.open).then(error=>{if(error)toast(error);}));
 }
-const showGuide=()=>openModal('A little direction goes a long way',`<p>Start a session, then direct the character by clicking the room map, with the manual controls, or by telling the assistant what to do.</p><div class="shortcut-row"><span>Click the room map</span><span>Walk to a destination</span></div><div class="shortcut-row"><span>Pause / resume</span><kbd>Space</kbd></div><div class="shortcut-row"><span>Reset character</span><kbd>R</kbd></div><div class="shortcut-row"><span>Record a segment</span><kbd>Shift R</kbd></div><div class="shortcut-row"><span>Send an assistant message</span><kbd>Ctrl Enter</kbd></div><div class="shortcut-row"><span>Search the skill library</span><kbd>/</kbd></div><p style="margin-top:18px">After a fall, destinations are rejected until Reset. One session runs at a time because the GPU is shared. End session saves the recording and evidence; force stop records a failed session.</p>`);
+const showGuide=()=>openModal('A little direction goes a long way',`<p>Start a session, then direct the character by clicking the room map, with the manual controls, or by telling the assistant what to do.</p><div class="shortcut-row"><span>Click the room map</span><span>Walk to a destination</span></div><div class="shortcut-row"><span>Pause / resume</span><kbd>Space</kbd></div><div class="shortcut-row"><span>Reset character</span><kbd>R</kbd></div><div class="shortcut-row"><span>Record a segment</span><kbd>Shift R</kbd></div><div class="shortcut-row"><span>Send an assistant message</span><kbd>Ctrl Enter</kbd></div><div class="shortcut-row"><span>Search the skill library</span><kbd>/</kbd></div><div class="shortcut-row"><span>Click an object on the map</span><span>Walk to it</span></div><div class="shortcut-row"><span>Skill card ＋</span><span>Add it to a sequence</span></div><p style="margin-top:18px">Physical mode lets physics decide (the character can fall); kinematic playback plays clips exactly. After a fall, destinations are rejected until Reset. One session runs at a time because the GPU is shared. End session saves the recording and evidence; force stop records a failed session.</p>`);
 
 // ---- wiring --------------------------------------------------------------------------------
 function wire(){
@@ -332,7 +424,7 @@ function wire(){
   $('#stop-walking').onclick=stopWalking;$('#pause-session').onclick=togglePause;$('#reset-character').onclick=resetCharacter;$('#fall-reset').onclick=resetCharacter;$('#record-toggle').onclick=toggleRecording;
   $('#walk-relative').onclick=()=>{const x=$('#walk-x').value,y=$('#walk-y').value;if(!x.trim()||!y.trim())return toast('Enter both walking distances.');walkTo(Number(x),Number(y),'local');};
   $('#push-character').onclick=()=>{if(!canCommand('push'))return;const vx=Number($('#push-x').value),vy=Number($('#push-y').value);if(!Number.isFinite(vx)||!Number.isFinite(vy)||Math.abs(vx)>6||Math.abs(vy)>6)return toast('Enter a velocity between −6 and 6 m/s for both axes.');if(ui.state&&ui.state.paused)return toast('Resume the session before applying a push.');send({cmd:'push',vx,vy},`push (${vx}, ${vy}) m/s`);};
-  $('#room-map').addEventListener('click',event=>{const p=mapCoords(event);walkTo(p.x,p.y,'spawn');});
+  $('#room-map').addEventListener('click',event=>{const g=event.target.closest&&event.target.closest('[data-object]');if(g){walkToObject(g.dataset.object);return;}const p=mapCoords(event);walkTo(p.x,p.y,'spawn');});
   $('#room-map').addEventListener('mousemove',e=>{const p=mapCoords(e);$('#map-coordinates').textContent=`x: ${p.x.toFixed(1)}   y: ${p.y.toFixed(1)}`;});
   $('#room-map').addEventListener('keydown',e=>{const delta={ArrowUp:[0,.5],ArrowDown:[0,-.5],ArrowLeft:[-.5,0],ArrowRight:[.5,0]}[e.key];const half=activeHalf();if(delta){e.preventDefault();ui.mapCursor.x=Math.max(-half,Math.min(half,ui.mapCursor.x+delta[0]));ui.mapCursor.y=Math.max(-half,Math.min(half,ui.mapCursor.y+delta[1]));$('#map-coordinates').textContent=`Target: ${ui.mapCursor.x.toFixed(1)}, ${ui.mapCursor.y.toFixed(1)} · Enter to walk`;}if(e.key==='Enter'||e.key===' '){e.preventDefault();walkTo(ui.mapCursor.x,ui.mapCursor.y,'spawn');}});
   $('#clear-trail').onclick=()=>{ui.trail=[];const pos=relativePosition();if(pos)ui.trail.push(pos);renderMap();};$('#clear-log').onclick=()=>{ui.commands=[];renderLog();};
@@ -341,8 +433,13 @@ function wire(){
   $('#chat-form').onsubmit=e=>{e.preventDefault();sendChat($('#chat-input').value);};$('#chat-input').onkeydown=e=>{if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)){e.preventDefault();sendChat($('#chat-input').value);}};
   $('#interrupt-assistant').onclick=()=>{ui.bridge.assistantStop();$('#assistant-working-text').textContent='Stopping…';};
   $$('[data-prompt]').forEach(b=>b.onclick=()=>sendChat(b.dataset.prompt));$('#new-chat').onclick=newConversation;
-  $('#skill-search').oninput=renderSkills;$$('[data-filter]').forEach(b=>b.onclick=()=>{ui.filter=b.dataset.filter;$$('[data-filter]').forEach(el=>el.classList.toggle('selected',el===b));renderSkills();});
-  $('#create-skill').onclick=()=>openModal('Create a skill',`<p>Describe a motion you would like to add to the repertoire.</p><label class="modal-field">Motion description<input id="new-skill-description" placeholder="A slow, friendly wave with the right hand"></label><div class="modal-info">Text-to-motion generation is a later stage of the plan (docs/DIRECTION.md, stage C). For now the description goes to the assistant, which can tell you what the studio can do today.</div><div class="modal-actions"><button class="button primary" id="preview-idea">Send to the assistant</button></div>`);
+  $('#skill-search').oninput=renderSkills;
+  $('#create-skill').onclick=createSkillModal;
+  $('#composer-run').onclick=composerRun;$('#composer-save').onclick=composerSave;$('#composer-clear').onclick=()=>{ui.composer=[];renderComposer();};
+  $('#composer-add-wait').onclick=()=>composerAdd({skill:'wait',seconds:1});
+  $('#composer-add-walk').onclick=()=>{const v=$('#composer-walk').value;if(!v)return toast('Choose where to walk.');if(v==='spawn')composerAdd({skill:'walk_to',x:0,y:0,frame:'spawn'});else composerAdd({skill:'walk_to',object:v.slice(7)});$('#composer-walk').value='';};
+  $('#refresh-characters').onclick=()=>rpc('listCharacters').then(json=>{ui.characters=parse(json)||ui.characters;fillCharacters();renderCharacters();toast('Characters refreshed.');});
+  $('#scene-select').addEventListener('change',renderComposer);
   $$('[data-resource]').forEach(b=>b.onclick=()=>rpc('openResource',b.dataset.resource).then(error=>{if(error)toast(error);}));
   $('#refresh-project').onclick=()=>ui.bridge.projectFacts(json=>{ui.project=parse(json)||ui.project;renderProject();toast('Project facts refreshed.');});
   $('#help-button').onclick=showGuide;$('#shortcuts-button').onclick=showGuide;$('#session-details').onclick=sessionModal;
@@ -361,6 +458,8 @@ function handleEvent(e){
   else if(e.kind==='job')jobLine(p.text||'');
   else if(e.kind==='assistant')onAssistantEvent(p);
   else if(e.kind==='models'&&ui.onModels)ui.onModels(p);
+  else if(e.kind==='skills'){ui.skills=p||[];if(ui.view==='skills')renderSkills();else{$('#nav-skill-count').textContent=ui.skills.length;}}
+  else if(e.kind==='generation')onGeneration(p);
 }
 // The page polls the bridge about 15 times a second; events come back numbered and in order.
 function pollTick(){
@@ -381,9 +480,11 @@ function init(boot){
   if(boot.scenes.some(s=>s.id==='workcell'))$('#scene-select').value='workcell';
   $('#controller-select').innerHTML=boot.controllers.map(c=>`<option value="${escapeHtml(c.id)}">${escapeHtml(c.name)}</option>`).join('');
   $('#resolution-select').innerHTML=boot.previews.map(p=>`<option value="${p}" ${p==='960x540'?'selected':''}>${p.replace('x',' × ')}</option>`).join('');
+  $('#mode-select').innerHTML=(boot.modes||[]).map(m=>`<option value="${escapeHtml(m.id)}" title="${escapeHtml(m.description)}">${escapeHtml(m.name)}</option>`).join('');
+  ui.characters=boot.characters||[];fillCharacters();
   $('#provider-select').innerHTML=boot.providers.map(p=>`<option value="${escapeHtml(p.id)}">${escapeHtml(p.title)}</option>`).join('');
   $('#profile-initial').textContent=(boot.user||'u')[0].toUpperCase();$('#profile-name').innerHTML=`${escapeHtml(boot.user||'user')}<small>Local workspace</small>`;$('#workspace-root').textContent=boot.root||'Local project';
-  wire();refreshProvider();renderSkills();renderProject();renderLog();renderHost();
+  wire();refreshProvider();renderSkills();renderCharacters();renderProject();renderLog();renderHost();
   $('#chat-messages').innerHTML='<div class="chat-day">TODAY</div>';appendNote('Tell me where she should go, what to record, or ask what the studio can do right now.');
   if(boot.session)onSession(boot.session);else updateUI();
   setView(location.hash.slice(1)||'live');

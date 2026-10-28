@@ -1,0 +1,265 @@
+{
+  "steps": 2250,
+  "sim_seconds": 75.0,
+  "frames": 2250,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 1.0,
+      "step": 30,
+      "wall_time": 1793150811.1709533,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "at": 1.0,
+        "cmd": "play_skill",
+        "skill": "dance_hiphop_power_step_r01_m48"
+      },
+      "result": "accepted",
+      "frames": 180,
+      "duration_s": 6.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 1.0685279994504526
+    },
+    {
+      "sim_time": 9.0,
+      "step": 270,
+      "wall_time": 1793150819.4793284,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "at": 9.0,
+        "cmd": "sequence",
+        "name": "fetch-cup",
+        "steps": [
+          {
+            "skill": "walk_to",
+            "object": "cup",
+            "_attached": false,
+            "_released": false
+          },
+          {
+            "skill": "pocket_searching_r01_m07",
+            "attach": {
+              "object": "cup",
+              "body": "RightHand",
+              "at_frame": 60
+            },
+            "_attached": true,
+            "_released": false
+          },
+          {
+            "skill": "walk_to",
+            "x": 0.0,
+            "y": 0.0,
+            "frame": "spawn",
+            "_attached": false,
+            "_released": false
+          },
+          {
+            "skill": "release",
+            "object": "cup",
+            "_attached": false,
+            "_released": false
+          },
+          {
+            "skill": "sending_kisses_r03_m06",
+            "_attached": false,
+            "_released": false
+          }
+        ]
+      },
+      "result": "accepted",
+      "steps": 5,
+      "name": "fetch-cup",
+      "ack_latency_ms": 1.7566480019013397
+    },
+    {
+      "sim_time": 9.0,
+      "step": 270,
+      "wall_time": 1793150819.480107,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "object": "cup",
+        "sequence_step": 0
+      },
+      "result": "accepted",
+      "world_xy": [
+        98.0,
+        102.25
+      ],
+      "ack_latency_ms": 0.7199210012913682
+    },
+    {
+      "sim_time": 13.1333,
+      "step": 394,
+      "wall_time": 1793150823.9136908,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "cmd": "play_skill",
+        "skill": "pocket_searching_r01_m07",
+        "loops": 1,
+        "speed": 1.0,
+        "sequence_step": 1
+      },
+      "result": "accepted",
+      "frames": 182,
+      "duration_s": 6.067,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 0.02365499676670879
+    },
+    {
+      "sim_time": 19.2,
+      "step": 576,
+      "wall_time": 1793150830.3133123,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 0.0,
+        "y": 0.0,
+        "frame": "spawn",
+        "sequence_step": 2
+      },
+      "result": "accepted",
+      "world_xy": [
+        100.0,
+        100.0
+      ],
+      "ack_latency_ms": 0.9335540016763844
+    },
+    {
+      "sim_time": 23.6667,
+      "step": 710,
+      "wall_time": 1793150835.0699987,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "release",
+        "object": "cup",
+        "sequence_step": 3
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.24268900597235188
+    },
+    {
+      "sim_time": 23.7,
+      "step": 711,
+      "wall_time": 1793150835.1054802,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "cmd": "play_skill",
+        "skill": "sending_kisses_r03_m06",
+        "loops": 1,
+        "speed": 1.0,
+        "sequence_step": 4
+      },
+      "result": "accepted",
+      "frames": 120,
+      "duration_s": 4.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 0.02654000127222389
+    },
+    {
+      "sim_time": 75.0,
+      "step": 2250,
+      "wall_time": 1793150889.7172654,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "at": 75.0,
+        "cmd": "quit"
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.008575996616855264
+    }
+  ],
+  "destinations": [
+    {
+      "sim_time": 9.0,
+      "xy": [
+        98.0,
+        102.25
+      ]
+    },
+    {
+      "sim_time": 19.2,
+      "xy": [
+        100.0,
+        100.0
+      ]
+    }
+  ],
+  "recording_segments": [],
+  "final_state": "standing",
+  "interactive": false,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "mode": "kinematic",
+  "skills_played": [
+    {
+      "id": "dance_hiphop_power_step_r01_m48",
+      "name": "Dance hiphop power step",
+      "frames": 180,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 30,
+      "started_sim_time": 1.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    },
+    {
+      "id": "pocket_searching_r01_m07",
+      "name": "Pocket searching",
+      "frames": 182,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 394,
+      "started_sim_time": 13.133333333333333,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    },
+    {
+      "id": "sending_kisses_r03_m06",
+      "name": "Sending kisses",
+      "frames": 120,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 711,
+      "started_sim_time": 23.7,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "fetch-cup",
+      "steps": 5,
+      "started_sim_time": 9.0,
+      "status": "finished",
+      "reason": "",
+      "ended_sim_time": 27.7
+    }
+  ],
+  "objects": {
+    "cup": [
+      -0.236,
+      -0.2052,
+      0.05
+    ],
+    "carton": [
+      3.9,
+      -3.4,
+      0.66
+    ]
+  },
+  "max_ack_latency_ms": 1.7566480019013397
+}

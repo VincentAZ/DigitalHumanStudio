@@ -1,0 +1,257 @@
+{
+  "steps": 4521,
+  "sim_seconds": 150.7,
+  "frames": 4521,
+  "paused_wall_seconds": 0.0,
+  "resets": 1,
+  "commands": [
+    {
+      "sim_time": 103.6667,
+      "step": 3110,
+      "wall_time": 1793151163.1228895,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "cmd": "play_skill",
+        "skill": "dance_hiphop_power_step_r01_m48",
+        "loops": 1,
+        "speed": 1.0,
+        "issued_wall_time": 1793151163.0692585
+      },
+      "result": "accepted",
+      "frames": 180,
+      "duration_s": 6.0,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 0.865014000737574
+    },
+    {
+      "sim_time": 109.0,
+      "step": 3270,
+      "wall_time": 1793151172.3409173,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "cmd": "sequence",
+        "name": "composed",
+        "steps": [
+          {
+            "skill": "walk_to",
+            "object": "cup",
+            "_attached": false,
+            "_released": false
+          },
+          {
+            "skill": "pocket_searching_r01_m07",
+            "attach": {
+              "object": "cup",
+              "body": "RightHand",
+              "at_frame": 60
+            },
+            "_attached": true,
+            "_released": false
+          },
+          {
+            "skill": "walk_to",
+            "x": 0,
+            "y": 0,
+            "frame": "spawn",
+            "_attached": false,
+            "_released": false
+          },
+          {
+            "skill": "release",
+            "object": "cup",
+            "_attached": false,
+            "_released": false
+          }
+        ],
+        "issued_wall_time": 1793151172.2841241
+      },
+      "result": "accepted",
+      "steps": 4,
+      "name": "composed",
+      "ack_latency_ms": 0.9360889962408692
+    },
+    {
+      "sim_time": 109.0,
+      "step": 3270,
+      "wall_time": 1793151172.34169,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "object": "cup",
+        "sequence_step": 0
+      },
+      "result": "accepted",
+      "world_xy": [
+        98.0,
+        102.25
+      ],
+      "ack_latency_ms": 0.7139490044210106
+    },
+    {
+      "sim_time": 115.0667,
+      "step": 3452,
+      "wall_time": 1793151182.5132816,
+      "state": "playing",
+      "event": "command",
+      "command": {
+        "cmd": "play_skill",
+        "skill": "pocket_searching_r01_m07",
+        "loops": 1,
+        "speed": 1.0,
+        "sequence_step": 1
+      },
+      "result": "accepted",
+      "frames": 182,
+      "duration_s": 6.067,
+      "entry_pose": "standing",
+      "exit_pose": "standing",
+      "ack_latency_ms": 0.029775997973047197
+    },
+    {
+      "sim_time": 121.1333,
+      "step": 3634,
+      "wall_time": 1793151193.0771775,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "x": 0,
+        "y": 0,
+        "frame": "spawn",
+        "sequence_step": 2
+      },
+      "result": "accepted",
+      "world_xy": [
+        100.0,
+        100.0
+      ],
+      "ack_latency_ms": 0.7263820007210597
+    },
+    {
+      "sim_time": 125.1667,
+      "step": 3755,
+      "wall_time": 1793151199.7065604,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "release",
+        "object": "cup",
+        "sequence_step": 3
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.4243419971317053
+    },
+    {
+      "sim_time": 142.8667,
+      "step": 4286,
+      "wall_time": 1793151230.2453675,
+      "state": "walking",
+      "event": "command",
+      "command": {
+        "cmd": "destination",
+        "object": "carton",
+        "frame": "spawn",
+        "issued_wall_time": 1793151230.1949174
+      },
+      "result": "accepted",
+      "world_xy": [
+        103.9000015258789,
+        97.44999694824219
+      ],
+      "ack_latency_ms": 0.8700739999767393
+    },
+    {
+      "sim_time": 150.7,
+      "step": 4521,
+      "wall_time": 1793151243.3719995,
+      "state": "standing",
+      "event": "command",
+      "command": {
+        "cmd": "quit",
+        "issued_wall_time": 1793151243.3183267
+      },
+      "result": "accepted",
+      "ack_latency_ms": 0.004819994501303881
+    }
+  ],
+  "destinations": [
+    {
+      "sim_time": 109.0,
+      "xy": [
+        98.0,
+        102.25
+      ]
+    },
+    {
+      "sim_time": 121.13333333333333,
+      "xy": [
+        100.0,
+        100.0
+      ]
+    },
+    {
+      "sim_time": 142.86666666666667,
+      "xy": [
+        103.9000015258789,
+        97.44999694824219
+      ]
+    }
+  ],
+  "recording_segments": [],
+  "final_state": "standing",
+  "interactive": true,
+  "adapter_sha256": "18faab26882b9273af74e6bae9ae4a2340bc9727a3e5a5ba1f3bfef19e63d307",
+  "controller": "tracker",
+  "mode": "physical",
+  "skills_played": [
+    {
+      "id": "dance_hiphop_power_step_r01_m48",
+      "name": "Dance hiphop power step",
+      "frames": 180,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 3110,
+      "started_sim_time": 103.66666666666667,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    },
+    {
+      "id": "pocket_searching_r01_m07",
+      "name": "Pocket searching",
+      "frames": 182,
+      "loops": 1,
+      "speed": 1.0,
+      "started_step": 3452,
+      "started_sim_time": 115.06666666666666,
+      "entry_pose": "standing",
+      "exit_pose": "standing"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "composed",
+      "steps": 4,
+      "started_sim_time": 109.0,
+      "status": "finished",
+      "reason": "",
+      "ended_sim_time": 125.2
+    }
+  ],
+  "objects": {
+    "cup": [
+      0.1674,
+      -0.3267,
+      0.05
+    ],
+    "carton": [
+      3.9,
+      -3.4,
+      0.66
+    ]
+  },
+  "max_ack_latency_ms": 0.9360889962408692
+}

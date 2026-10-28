@@ -1,0 +1,56 @@
+{
+ "id": "tired_combat_turn_walk_start_r01_m56",
+ "kind": "clip",
+ "name": "Tired combat turn walk start",
+ "description": "Tired combat turn walk start. 5.6 s, starts standing, ends standing, travels 6.9 m, turns -96\u00b0. Right-side variant. BONES-SEED motion capture, actor A374.",
+ "category": "locomotion",
+ "tags": [
+  "SOMA-23",
+  "locomotion",
+  "mocap",
+  "standing",
+  "start",
+  "tired",
+  "travels"
+ ],
+ "loop": false,
+ "frames": 167,
+ "fps": 29.999998435378156,
+ "duration_s": 5.567,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.879,
+ "travel_m": 6.874,
+ "travel_direction_deg": -67.9,
+ "turn_deg": -95.5,
+ "mean_speed_mps": 1.269,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 56,
+  "clip": "tired_combat_turn_walk_start_270_R_001__A374.motion",
+  "frames": [
+   0,
+   167
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A374",
+  "take": 1,
+  "direction_token": 270,
+  "right_side_variant": true,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

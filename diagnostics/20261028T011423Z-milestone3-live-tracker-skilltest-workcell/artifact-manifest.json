@@ -1,0 +1,77 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-tracker-skilltest-workcell-20261028T011423Z",
+  "files": {
+    "session-contract.json": {
+      "bytes": 1882,
+      "sha256": "f9ba24fa9e1ca04668e5c0eec005152d68f8971117160052a30a3f92ae4edcb7"
+    },
+    "performance.mp4": {
+      "bytes": 10910584,
+      "sha256": "a40fa03eb246145ae0f8acffe818074701133b8926c1c7e706a7baf1c66703aa"
+    },
+    "frame-01200.png": {
+      "bytes": 289750,
+      "sha256": "cd602ab99398966f12a5cc2748054efb753b0b37b5a42790e35c28ff96a5e730"
+    },
+    "result.json": {
+      "bytes": 335,
+      "sha256": "4ac5d3983f69eb9ce012cf9331a536ddb6900d6ddf44a29663df931b35670e0c"
+    },
+    "frame-00600.png": {
+      "bytes": 265999,
+      "sha256": "efa50ee33168f2d39a1e983c0177d7e738342cee2663c8d0d6de9420f18bd29d"
+    },
+    "topdown.png": {
+      "bytes": 14430,
+      "sha256": "da364b2c28cdec541399dc0caf78612ead8de41b49f3eebcaeae2ec1b836eb03"
+    },
+    "frame-02100.png": {
+      "bytes": 146094,
+      "sha256": "4af0fb988d5993e82736f09ff9c3f94f56344de37313cf205b8d6e6572b88c3e"
+    },
+    "frame-00300.png": {
+      "bytes": 326317,
+      "sha256": "7cb8ebd5e39ac893512c0369164ef125159c55a6383f200239f0aa63955e8ddc"
+    },
+    "final-scene.usda": {
+      "bytes": 188162,
+      "sha256": "fcc99e53f6754e2d0da4ae877748d1b875fe9bfe0c1da2370f0607a4b6173c27"
+    },
+    "kit.log": {
+      "bytes": 768605,
+      "sha256": "11f0a363d620398d91c079cb4735c871ccbfd19695729021fbbc442ab94ea43b"
+    },
+    "summary.json": {
+      "bytes": 5978,
+      "sha256": "e80e1154cedf07876fbed0bb1e828d850d564cd451ca76e620b7fbf11fd74256"
+    },
+    "frame-00900.png": {
+      "bytes": 312105,
+      "sha256": "a1ffe7953091f1d54045b4cdb817f45e6c8e72b14426446f0f88ae6be088f5aa"
+    },
+    "status.jsonl": {
+      "bytes": 4737,
+      "sha256": "454525066f04a6849d0cd9f72826612e33f03c813451aec36b4b377cd4e529fe"
+    },
+    "trace.jsonl": {
+      "bytes": 1885040,
+      "sha256": "15c89e73604b2d73e241ae032b0578c953cbf3de5df3fcc9c4c94e9204a18213"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "99ea88eefc90d07e846737ab3193d60f4658e402e0be96625f257540b16f4bd7"
+    },
+    "scene.json": {
+      "bytes": 7249,
+      "sha256": "b7f28477da64ef4338da789a0443354419e3a4ec2abac72426778445e391cb78"
+    },
+    "frame-01800.png": {
+      "bytes": 176121,
+      "sha256": "646c68cb6d3443efdfea82ba53e04b83f88a0132f01182f59a6d2a4dfc20a3f5"
+    },
+    "frame-01500.png": {
+      "bytes": 245748,
+      "sha256": "c0bfca455074d43857ef7e775fb20db3e36647e0eac2ff2e53368c20c428f8bb"
+    }
+  }
+}

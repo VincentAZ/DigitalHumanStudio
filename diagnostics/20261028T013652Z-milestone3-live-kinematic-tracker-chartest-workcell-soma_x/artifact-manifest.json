@@ -1,0 +1,13 @@
+{
+  "root": "/home/vincent/Repos/DigitalHumanStudio/artifacts/milestone3/live-kinematic-tracker-chartest-workcell-soma_x-20261028T013652Z",
+  "files": {
+    "kit.log": {
+      "bytes": 767135,
+      "sha256": "c430dc0622b794f87dc68fd3ba6df0c94d4319657ef4f590da5aac873556e318"
+    },
+    "resolved-configs.json": {
+      "bytes": 58425,
+      "sha256": "89fb0dd42ed77828cf4530402759989f5fa96b3a21b2ec225e3cb6eb226a472b"
+    }
+  }
+}

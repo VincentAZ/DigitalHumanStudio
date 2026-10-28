@@ -43,6 +43,12 @@ POSTS = [  # name, centre (x, y), radius, height, colour
     ("post_c", (1.0, -1.6), 0.06, 1.0, (0.95, 0.80, 0.10)),
     ("post_d", (4.4, -1.6), 0.06, 1.0, (0.95, 0.80, 0.10)),
 ]
+PROPS = [  # graspable props: name, shape, size (cylinder: radius, height; box: sx, sy, sz), centre, colour, approach point, hand, description
+    ("cup", "cylinder", (0.04, 0.10), (-2.0, 3.0, 0.96), (0.92, 0.93, 0.90), (-2.0, 2.25), "RightHand",
+     "A paper cup standing on the conveyor bed"),
+    ("carton", "box", (0.30, 0.24, 0.22), (3.9, -3.4, 0.66), (0.80, 0.66, 0.42), (3.9, -2.55), "RightHand",
+     "A small carton on top of the load on pallet B"),
+]
 ROUTE = [  # the comparison route: scene-relative destinations with a hold between legs
     (3.0, 0.3), (-2.3, 1.8), (-3.2, -1.3), (0.5, -2.2), (0.0, 0.0),
 ]
@@ -69,17 +75,39 @@ def usd_text() -> str:
                   f'        double3 xformOp:translate = ({x}, {y}, {height / 2})',
                   '        uniform token[] xformOpOrder = ["xformOp:translate"]',
                   '        custom string studio:kind = "post"', '    }', '']
-    lines += ['}', '']
+    # Props are visual-only prims (no collision) grouped under Props/<name>, each with translate + orient
+    # ops the live worker drives when a prop is attached to a hand.
+    lines += ['    def Xform "Props"', '    {']
+    for name, shape, size, (x, y, z), colour, _approach, _hand, _desc in PROPS:
+        lines += [f'        def Xform "{name}"', '        {',
+                  f'            double3 xformOp:translate = ({x}, {y}, {z})',
+                  '            quatd xformOp:orient = (1, 0, 0, 0)',
+                  '            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]',
+                  '            custom string studio:kind = "prop"']
+        if shape == "cylinder":
+            radius, height = size
+            lines += ['            def Cylinder "shape"', '            {', f'                double radius = {radius}', f'                double height = {height}',
+                      '                uniform token axis = "Z"', f'                color3f[] primvars:displayColor = [({colour[0]}, {colour[1]}, {colour[2]})]', '            }']
+        else:
+            sx, sy, sz = size
+            lines += ['            def Cube "shape"', '            {', '                double size = 1',
+                      f'                color3f[] primvars:displayColor = [({colour[0]}, {colour[1]}, {colour[2]})]',
+                      f'                float3 xformOp:scale = ({sx}, {sy}, {sz})', '                uniform token[] xformOpOrder = ["xformOp:scale"]', '            }']
+        lines += ['        }', '']
+    lines += ['    }', '}', '']
     return "\n".join(line for line in lines if line is not None)
 
 
 def footprint() -> dict:
-    items = [{"name": n, "kind": k, "center": [c[0], c[1]], "size": [s[0], s[1]], "height": s[2], "yaw_deg": yaw,
+    items = [{"name": n, "kind": k, "center": [c[0], c[1]], "size": [s[0], s[1]], "height": s[2], "top": round(c[2] + s[2] / 2, 4), "yaw_deg": yaw,
               "collision": col, "colour": list(colour)} for n, k, c, s, yaw, colour, col in BOXES]
-    items += [{"name": n, "kind": "post", "center": [c[0], c[1]], "size": [2 * r, 2 * r], "height": h, "yaw_deg": 0,
+    items += [{"name": n, "kind": "post", "center": [c[0], c[1]], "size": [2 * r, 2 * r], "height": h, "top": h, "yaw_deg": 0,
                "collision": True, "colour": list(colour)} for n, c, r, h, colour in POSTS]
-    return {"name": "workcell", "description": "Small industrial work cell: walls, a machine with its guarded zone, a conveyor, a rack, two loaded pallets, lane markings.",
-            "spawn_xy": [100.0, 100.0], "room_half_size": 5.2, "usd": "workcell.usda", "items": items,
+    objects = [{"name": n, "kind": "prop", "shape": shape, "size": list(size), "center": list(c), "colour": list(colour), "approach": list(approach),
+                "hand": hand, "attach_offset": [0.0, 0.0, 0.0], "graspable": True, "description": desc}
+               for n, shape, size, c, colour, approach, hand, desc in PROPS]
+    return {"name": "workcell", "description": "Small industrial work cell: walls, a machine with its guarded zone, a conveyor, a rack, two loaded pallets, lane markings, a cup on the conveyor and a carton on a pallet.",
+            "spawn_xy": [100.0, 100.0], "room_half_size": 5.2, "usd": "workcell.usda", "items": items, "objects": objects,
             "route": [{"x": x, "y": y} for x, y in ROUTE]}
 
 
@@ -96,7 +124,7 @@ def main():
     route.append({"at": round(t, 2), "cmd": "record", "action": "stop"})
     route.append({"at": round(t + 0.5, 2), "cmd": "quit"})
     (ROOT / "config" / "milestone3-compare-route.jsonl").write_text("".join(json.dumps(r) + "\n" for r in route))
-    print(f"wrote {OUT / 'workcell.usda'} ({len(BOXES)} boxes, {len(POSTS)} posts), {OUT / 'workcell.json'}, route of {len(ROUTE)} legs ending at t={t + 0.5:.1f}s")
+    print(f"wrote {OUT / 'workcell.usda'} ({len(BOXES)} boxes, {len(POSTS)} posts, {len(PROPS)} props), {OUT / 'workcell.json'}, route of {len(ROUTE)} legs ending at t={t + 0.5:.1f}s")
 
 
 if __name__ == "__main__":

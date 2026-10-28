@@ -1,0 +1,57 @@
+{
+ "id": "medium_big_heavy_one_hand_behind_high_to_behind_r01_m19",
+ "kind": "clip",
+ "name": "Medium big heavy one hand behind high to behind medium",
+ "description": "Medium big heavy one hand behind high to behind medium. 6.5 s, starts standing, ends standing. Right-side variant. BONES-SEED motion capture, actor A521_M.",
+ "category": "action",
+ "tags": [
+  "SOMA-23",
+  "action",
+  "big",
+  "heavy",
+  "in place",
+  "medium",
+  "mocap",
+  "standing"
+ ],
+ "loop": false,
+ "frames": 196,
+ "fps": 29.999998435378156,
+ "duration_s": 6.533,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.991,
+ "travel_m": 0.044,
+ "travel_direction_deg": 0.0,
+ "turn_deg": -0.9,
+ "mean_speed_mps": 0.101,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 19,
+  "clip": "medium_big_heavy_one_hand_behind_high_to_behind_medium_R_001__A521_M.motion",
+  "frames": [
+   0,
+   196
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A521_M",
+  "take": 1,
+  "direction_token": null,
+  "right_side_variant": true,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

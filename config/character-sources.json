@@ -1,0 +1,1087 @@
+{
+ "schema_version": 1,
+ "survey_date": "2026-10-27",
+ "generated_by": "scripts/characters/build_character_sources.py",
+ "download_root": ".runtime/downloads",
+ "target_skeleton": {
+  "mjcf": "vendor/ProtoMotions/protomotions/data/assets/mjcf/soma23_humanoid.xml",
+  "bodies": [
+   "Hips",
+   "Spine1",
+   "Spine2",
+   "Chest",
+   "Neck1",
+   "Neck2",
+   "Head",
+   "RightShoulder",
+   "RightArm",
+   "RightForeArm",
+   "RightHand",
+   "LeftShoulder",
+   "LeftArm",
+   "LeftForeArm",
+   "LeftHand",
+   "RightLeg",
+   "RightShin",
+   "RightFoot",
+   "RightToeBase",
+   "LeftLeg",
+   "LeftShin",
+   "LeftFoot",
+   "LeftToeBase"
+  ],
+  "up_axis": "Z",
+  "units": "metres",
+  "facing": "-Y",
+  "rest_positions_m": {
+   "Hips": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "Spine1": [
+    0.0,
+    0.0005,
+    0.05
+   ],
+   "Spine2": [
+    0.0,
+    0.0008,
+    0.1213
+   ],
+   "Chest": [
+    0.0,
+    0.009,
+    0.1968
+   ],
+   "Neck1": [
+    -0.0018,
+    0.0145,
+    0.4599
+   ],
+   "Neck2": [
+    -0.0018,
+    -0.0085,
+    0.537
+   ],
+   "Head": [
+    -0.0018,
+    -0.028,
+    0.5983
+   ],
+   "RightShoulder": [
+    -0.0138,
+    -0.0431,
+    0.4286
+   ],
+   "RightArm": [
+    -0.1642,
+    0.0124,
+    0.4286
+   ],
+   "RightForeArm": [
+    -0.4516,
+    0.0124,
+    0.4286
+   ],
+   "RightHand": [
+    -0.7229,
+    0.0124,
+    0.4286
+   ],
+   "LeftShoulder": [
+    0.0162,
+    -0.0421,
+    0.4292
+   ],
+   "LeftArm": [
+    0.1654,
+    0.0129,
+    0.4292
+   ],
+   "LeftForeArm": [
+    0.4528,
+    0.0129,
+    0.4292
+   ],
+   "LeftHand": [
+    0.7237,
+    0.0129,
+    0.4292
+   ],
+   "RightLeg": [
+    -0.1005,
+    -0.0262,
+    -0.083
+   ],
+   "RightShin": [
+    -0.1005,
+    -0.0181,
+    -0.5166
+   ],
+   "RightFoot": [
+    -0.1005,
+    0.0167,
+    -0.9378
+   ],
+   "RightToeBase": [
+    -0.1005,
+    -0.1161,
+    -0.9886
+   ],
+   "LeftLeg": [
+    0.1004,
+    -0.026,
+    -0.0843
+   ],
+   "LeftShin": [
+    0.1004,
+    -0.018,
+    -0.5165
+   ],
+   "LeftFoot": [
+    0.1004,
+    0.0168,
+    -0.9381
+   ],
+   "LeftToeBase": [
+    0.1004,
+    -0.1155,
+    -0.9887
+   ]
+  },
+  "segment_lengths_m": {
+   "upper_arm": 0.2874,
+   "forearm": 0.2713,
+   "thigh": 0.4337,
+   "shin": 0.4226,
+   "foot_to_toe": 0.1422,
+   "hips_to_head": 0.599,
+   "shoulder_width": 0.3296
+  },
+  "hips_height_m": 0.0,
+  "head_joint_height_m": 0.5983
+ },
+ "recommended_first_character": "soma-x",
+ "sources": [
+  {
+   "id": "soma-x",
+   "name": "NVIDIA SOMA-X template rig (SOMA neutral body)",
+   "status": "downloaded",
+   "url": "https://huggingface.co/nvidia/SOMA-X",
+   "source_urls": [
+    "https://github.com/NVlabs/SOMA-X",
+    "https://github.com/NVlabs/SOMA-X/releases/tag/v0.3.4"
+   ],
+   "pinned": {
+    "huggingface_revision": "f81a01796f652260ff930d5318d6c6b845a505ed",
+    "github_release": "v0.3.4",
+    "github_commit": "56a3d957a549c66425b500fddf7f3183bc6fbdff"
+   },
+   "licence": {
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "text_file": "characters/soma-x/LICENSE",
+    "attribution_required": "Retain the Apache-2.0 LICENSE and copyright notices (NVIDIA Corporation). Model card: 'ready for commercial use'. Optional SMPL/SMPL-X/MANO/MHR/Anny backends are NOT included and keep their own terms.",
+    "text_sha256": "d1a7d615ab8eff4de143b1456f46dabf232f54daf0fcf9a70442bb6f637a9e95",
+    "text_bytes": 11387
+   },
+   "format": "USDA (UsdSkel), Y-up, centimetres (metersPerUnit=0.01)",
+   "joint_map": {
+    "Hips": "Hips",
+    "Spine1": "Spine1",
+    "Spine2": "Spine2",
+    "Chest": "Chest",
+    "Neck1": "Neck1",
+    "Neck2": "Neck2",
+    "Head": "Head",
+    "RightShoulder": "RightShoulder",
+    "RightArm": "RightArm",
+    "RightForeArm": "RightForeArm",
+    "RightHand": "RightHand",
+    "LeftShoulder": "LeftShoulder",
+    "LeftArm": "LeftArm",
+    "LeftForeArm": "LeftForeArm",
+    "LeftHand": "LeftHand",
+    "RightLeg": "RightLeg",
+    "RightShin": "RightShin",
+    "RightFoot": "RightFoot",
+    "RightToeBase": "RightToeBase",
+    "LeftLeg": "LeftLeg",
+    "LeftShin": "LeftShin",
+    "LeftFoot": "LeftFoot",
+    "LeftToeBase": "LeftToeBase"
+   },
+   "joint_name_regex": "^Root/(?:[^/]+/)*(?P<name>[^/]+)$",
+   "notes": "The USD joints are paths under Root/Hips/...; the leaf names equal the SOMA-23 body names, so the map is the identity. 110 joints (fingers, twist bones, eyes, jaw) and 136,739 vertices (hi-res body + eye meshes); no textures. File hashes match SOMA-X-HF-MANIFEST.json.",
+   "files": [
+    {
+     "path": "characters/soma-x/LICENSE",
+     "sha256": "d1a7d615ab8eff4de143b1456f46dabf232f54daf0fcf9a70442bb6f637a9e95",
+     "bytes": 11387
+    },
+    {
+     "path": "characters/soma-x/README.md",
+     "sha256": "a799719b05779f38b79f4ab87856c1ef5eff53ea99036a855b54defcc1134407",
+     "bytes": 11019
+    },
+    {
+     "path": "characters/soma-x/SOMA-X-HF-MANIFEST.json",
+     "sha256": "286fad0be5719b5a74144d01d767f0283ac9089d953f4b4032daa11ffc6d1eb7",
+     "bytes": 6472
+    },
+    {
+     "path": "characters/soma-x/SOMA_procedural_transforms.json",
+     "sha256": "9853e19ab51625ffaa7d9e7ccf0e443272c2740837604e6bacd66604e8edf509",
+     "bytes": 20045
+    },
+    {
+     "path": "characters/soma-x/SOMA_template_rig.usda",
+     "sha256": "a952cb7bdf4ccd801e355d53122d395b985b69d0d9181439edad5081bb171856",
+     "bytes": 28306038
+    },
+    {
+     "path": "characters/soma-x/SOMA_neutral.npz",
+     "sha256": "5829af4a5333abdba5ad449360b868faacee99d395971e62f35c0e7169432b63",
+     "bytes": 26608121
+    },
+    {
+     "path": "characters/soma-x/example_animation.usd",
+     "sha256": "c09372492aaacdca3ca7ec5d737263d8e6042b66fdd29318d91848427fa40695",
+     "bytes": 6437887
+    }
+   ],
+   "total_bytes": 61400969,
+   "rig_file": "characters/soma-x/SOMA_template_rig.usda",
+   "rig_report": ".runtime/characters/reports/SOMA_template_rig_usda.json",
+   "joint_count": 110,
+   "mesh_vertex_count": 136739,
+   "has_skin_weights": true,
+   "has_textures": false,
+   "unmapped_soma_bodies": [],
+   "mapping_check": {
+    "missing_joints": [],
+    "segment_lengths_m": {
+     "upper_arm": 0.2891,
+     "forearm": 0.2703,
+     "thigh": 0.433,
+     "shin": 0.4243,
+     "foot_to_toe": 0.1413,
+     "hips_to_head": 0.5989,
+     "shoulder_width": 0.3277
+    },
+    "hips_height_m": 1.0121,
+    "head_joint_height_m": 1.6101
+   }
+  },
+  {
+   "id": "quaternius-universal-base-characters",
+   "name": "Quaternius Universal Base Characters (Standard/free tier)",
+   "status": "downloaded",
+   "url": "https://quaternius.com/packs/universalbasecharacters.html",
+   "source_urls": [
+    "https://quaternius.itch.io/universal-base-characters"
+   ],
+   "pinned": {
+    "itch_upload_id": "15861669",
+    "file_name": "Universal Base Characters[Standard].zip",
+    "itch_listed_size": "122 MB"
+   },
+   "licence": {
+    "name": "CC0 1.0 Universal",
+    "spdx": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "text_file": "characters/quaternius-universal-base-characters/extracted/Universal Base Characters[Standard]/License_Standard.txt",
+    "attribution_required": "None (CC0). Credit 'Models by Quaternius' is optional.",
+    "text_sha256": "0f4beaf0fe360a7732e58bbe3dbf60a2422367fbea60cb9ea4add968f383268e",
+    "text_bytes": 806
+   },
+   "format": "glTF 2.0 (.gltf + .bin + PNG textures); FBX duplicates for Unity; Y-up metres",
+   "joint_map": {
+    "Hips": "pelvis",
+    "Spine1": "spine_01",
+    "Spine2": "spine_02",
+    "Chest": "spine_03",
+    "Neck1": "neck_01",
+    "Neck2": null,
+    "Head": "Head",
+    "RightShoulder": "clavicle_r",
+    "RightArm": "upperarm_r",
+    "RightForeArm": "lowerarm_r",
+    "RightHand": "hand_r",
+    "LeftShoulder": "clavicle_l",
+    "LeftArm": "upperarm_l",
+    "LeftForeArm": "lowerarm_l",
+    "LeftHand": "hand_l",
+    "RightLeg": "thigh_r",
+    "RightShin": "calf_r",
+    "RightFoot": "foot_r",
+    "RightToeBase": "ball_r",
+    "LeftLeg": "thigh_l",
+    "LeftShin": "calf_l",
+    "LeftFoot": "foot_l",
+    "LeftToeBase": "ball_l"
+   },
+   "notes": "Free tier contains only the two Superhero bodies (male/female) plus hairstyles; Regular/Teen bodies are in the paid Source tier. Rig uses Unreal-mannequin names (pelvis, spine_01..03, neck_01, clavicle/upperarm/lowerarm/hand, thigh/calf/foot/ball) plus full fingers; 65 joints. The itch.io download was obtained with the free 'no thanks' flow (POST download_url, then POST file/<upload_id>).",
+   "files": [
+    {
+     "path": "characters/quaternius-universal-base-characters/Universal_Base_Characters_Standard.zip",
+     "sha256": "fdbf1804c90dfc1ea03e992bff7da2dfd1a79318e13270a660180f9308455f40",
+     "bytes": 128968391
+    }
+   ],
+   "total_bytes": 128968391,
+   "rig_file": "characters/quaternius-universal-base-characters/extracted/Universal Base Characters[Standard]/Base Characters/Godot - UE/Superhero_Male_FullBody.gltf",
+   "rig_report": ".runtime/characters/reports/Superhero_Male_FullBody_gltf.json",
+   "joint_count": 65,
+   "mesh_vertex_count": 8483,
+   "has_skin_weights": true,
+   "has_textures": true,
+   "unmapped_soma_bodies": [
+    "Neck2"
+   ],
+   "mapping_check": {
+    "missing_joints": [],
+    "segment_lengths_m": {
+     "upper_arm": 0.2511,
+     "forearm": 0.2436,
+     "thigh": 0.4288,
+     "shin": 0.4588,
+     "foot_to_toe": 0.1591,
+     "hips_to_head": 0.6512,
+     "shoulder_width": 0.424
+    },
+    "hips_height_m": 0.9491,
+    "head_joint_height_m": 1.5998
+   }
+  },
+  {
+   "id": "kaykit-adventurers",
+   "name": "KayKit Character Pack: Adventurers 1.0 (GitHub mirror of the free tier)",
+   "status": "downloaded",
+   "url": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0",
+   "source_urls": [
+    "https://kaylousberg.itch.io/kaykit-adventurers"
+   ],
+   "pinned": {
+    "github_commit": "672074b73ba276876a19e8816ecdc5241817ab47"
+   },
+   "licence": {
+    "name": "CC0 1.0 Universal",
+    "spdx": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "text_file": "characters/kaykit-adventurers/LICENSE.txt",
+    "attribution_required": "None (CC0); the pack asks not to resell unmodified copies. Credit 'Kay Lousberg, www.kaylousberg.com' is optional.",
+    "text_sha256": "ae322141814056dda0deea7540d74c41d87aee1da319977cd1bd84ee5a923629",
+    "text_bytes": 891
+   },
+   "format": "GLB (textures embedded), Y-up metres; 1.0 release (itch.io now lists 2.0)",
+   "joint_map": {
+    "Hips": "hips",
+    "Spine1": "spine",
+    "Spine2": null,
+    "Chest": "chest",
+    "Neck1": null,
+    "Neck2": null,
+    "Head": "head",
+    "RightShoulder": null,
+    "RightArm": "upperarm.r",
+    "RightForeArm": "lowerarm.r",
+    "RightHand": "wrist.r",
+    "LeftShoulder": null,
+    "LeftArm": "upperarm.l",
+    "LeftForeArm": "lowerarm.l",
+    "LeftHand": "wrist.l",
+    "RightLeg": "upperleg.r",
+    "RightShin": "lowerleg.r",
+    "RightFoot": "foot.r",
+    "RightToeBase": "toes.r",
+    "LeftLeg": "upperleg.l",
+    "LeftShin": "lowerleg.l",
+    "LeftFoot": "foot.l",
+    "LeftToeBase": "toes.l"
+   },
+   "notes": "41 joints: 23 deform bones plus IK/control bones (kneeIK, heelIK, handIK, control-*-roll). No clavicles, single spine+chest, no neck. Low-poly (5-7k vertices), gradient atlas texture. Includes 75 animations in the GLB.",
+   "files": [
+    {
+     "path": "characters/kaykit-adventurers/LICENSE.txt",
+     "sha256": "ae322141814056dda0deea7540d74c41d87aee1da319977cd1bd84ee5a923629",
+     "bytes": 891
+    },
+    {
+     "path": "characters/kaykit-adventurers/README.md",
+     "sha256": "ad13df6a5b31102f870d3165db796a641b8c1d93599547a84bb4575c8536c7f8",
+     "bytes": 2535
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/Barbarian.glb",
+     "sha256": "cefc311a0e10c7858b6141f5ada7e33268727564fb8ac1347aab97d000669cc6",
+     "bytes": 3613268
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/Knight.glb",
+     "sha256": "60428e3abc09ba83e595d256e3af8c5c976b46cdae599f0802fc82b4a3445168",
+     "bytes": 3659532
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/Mage.glb",
+     "sha256": "cf898585da33fab50c724d31605fb931eb2912e6d2280092141e98ca81ad507d",
+     "bytes": 3589240
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/Rogue.glb",
+     "sha256": "e825437cd4d2ee9c1960b517a74a69101e33eb409ae7fa8cedc7134a998fbb7d",
+     "bytes": 3616284
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/Rogue_Hooded.glb",
+     "sha256": "93e6e25213009952276d9cf34f5d96a243767334c66f280db0433ddfabb91545",
+     "bytes": 3597652
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/barbarian_texture.png",
+     "sha256": "7329b2ff9709e8d54c886d5ef49c08bd42b12be3bbb2facb1488a6b48b1e8a80",
+     "bytes": 15089
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/knight_texture.png",
+     "sha256": "5d250ccc5da020e6126bfa3839f83bd9a465a951ed223e4d13c08b1925e154d4",
+     "bytes": 14172
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/mage_texture.png",
+     "sha256": "ea49f094b960402635fe51db9f1864960c97271b17f2e3554e5aca1b2bbba144",
+     "bytes": 16311
+    },
+    {
+     "path": "characters/kaykit-adventurers/Characters/gltf/rogue_texture.png",
+     "sha256": "a4032e877c3b91939f5cdbb630349c1998fdbc3211bbd587c111125500fe4cc5",
+     "bytes": 16670
+    }
+   ],
+   "total_bytes": 18141644,
+   "rig_file": "characters/kaykit-adventurers/Characters/gltf/Knight.glb",
+   "rig_report": ".runtime/characters/reports/Knight_glb.json",
+   "joint_count": 41,
+   "mesh_vertex_count": 7024,
+   "has_skin_weights": true,
+   "has_textures": true,
+   "unmapped_soma_bodies": [
+    "Spine2",
+    "Neck1",
+    "Neck2",
+    "RightShoulder",
+    "LeftShoulder"
+   ],
+   "mapping_check": {
+    "missing_joints": [],
+    "segment_lengths_m": {
+     "upper_arm": 0.2419,
+     "forearm": 0.2601,
+     "thigh": 0.2271,
+     "shin": 0.1495,
+     "foot_to_toe": 0.1656,
+     "hips_to_head": 0.8357,
+     "shoulder_width": 0.424
+    },
+    "hips_height_m": 0.4057,
+    "head_joint_height_m": 1.2414
+   }
+  },
+  {
+   "id": "kenney-blocky-characters",
+   "name": "Kenney Blocky Characters 2.0 (OpenGameArt mirror)",
+   "status": "downloaded",
+   "url": "https://kenney.nl/assets/blocky-characters",
+   "source_urls": [
+    "https://opengameart.org/content/blocky-characters"
+   ],
+   "pinned": {
+    "mirror_file": "https://opengameart.org/sites/default/files/kenney_blocky-characters_2.0.zip"
+   },
+   "licence": {
+    "name": "CC0 1.0 Universal",
+    "spdx": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "text_file": "characters/kenney-blocky-characters/extracted/License.txt",
+    "attribution_required": "None (CC0). Credit 'Kenney' / www.kenney.nl is optional.",
+    "text_sha256": "610fec89c16826112e9d6b80497b726c43fea0e42c9cd9d7cb081f8ad550c0ec",
+    "text_bytes": 706
+   },
+   "format": "GLB/FBX/OBJ, Y-up metres",
+   "joint_map": {
+    "Hips": "root",
+    "Spine1": null,
+    "Spine2": null,
+    "Chest": "torso",
+    "Neck1": null,
+    "Neck2": null,
+    "Head": "head",
+    "RightShoulder": null,
+    "RightArm": "arm-right",
+    "RightForeArm": null,
+    "RightHand": null,
+    "LeftShoulder": null,
+    "LeftArm": "arm-left",
+    "LeftForeArm": null,
+    "LeftHand": null,
+    "RightLeg": "leg-right",
+    "RightShin": null,
+    "RightFoot": null,
+    "RightToeBase": null,
+    "LeftLeg": "leg-left",
+    "LeftShin": null,
+    "LeftFoot": null,
+    "LeftToeBase": null
+   },
+   "notes": "Not a skinned humanoid: 7 rigid part nodes (root, torso, head, arm-left/right, leg-left/right) with 27 animations, 143 vertices. Usable only as a stylised placeholder; most SOMA-23 bodies have no counterpart. kenney.nl's own download link rejected scripted fetches (HTTP 403 'Download link expired or invalid'), so the OpenGameArt mirror was used; the zip carries Kenney's own CC0 License.txt.",
+   "files": [
+    {
+     "path": "characters/kenney-blocky-characters/kenney_blocky-characters_2.0.zip",
+     "sha256": "5e123859aa0c1598342b600c6db197024a1d63eb9ec531398b310725f589887e",
+     "bytes": 2148510
+    }
+   ],
+   "total_bytes": 2148510,
+   "rig_file": "characters/kenney-blocky-characters/extracted/Models/GLB format/character-a.glb",
+   "rig_report": ".runtime/characters/reports/character-a_glb.json",
+   "joint_count": 8,
+   "mesh_vertex_count": 143,
+   "has_skin_weights": false,
+   "has_textures": true,
+   "unmapped_soma_bodies": [
+    "Spine1",
+    "Spine2",
+    "Neck1",
+    "Neck2",
+    "RightShoulder",
+    "RightForeArm",
+    "RightHand",
+    "LeftShoulder",
+    "LeftForeArm",
+    "LeftHand",
+    "RightShin",
+    "RightFoot",
+    "RightToeBase",
+    "LeftShin",
+    "LeftFoot",
+    "LeftToeBase"
+   ],
+   "mapping_check": {
+    "missing_joints": [],
+    "segment_lengths_m": {
+     "upper_arm": null,
+     "forearm": null,
+     "thigh": null,
+     "shin": null,
+     "foot_to_toe": null,
+     "hips_to_head": 1.9,
+     "shoulder_width": 0.8
+    },
+    "hips_height_m": 0.0,
+    "head_joint_height_m": 1.9
+   }
+  },
+  {
+   "id": "khronos-gltf-sample-assets",
+   "name": "Khronos glTF Sample Assets: CesiumMan, RiggedFigure, RiggedSimple",
+   "status": "downloaded",
+   "url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+   "source_urls": [
+    "https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/CesiumMan/README.md",
+    "https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/RiggedFigure/README.md"
+   ],
+   "pinned": {
+    "github_commit": "8f492390ddc7a2ae221a1369ef560589cf8c70fb"
+   },
+   "licence": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "text_file": "characters/khronos-gltf-sample-assets/CC-BY-4.0.txt",
+    "attribution_required": "'CesiumMan / RiggedFigure / RiggedSimple \u00a9 2017 Cesium, CC BY 4.0'. The Cesium logo texture inside CesiumMan is a trademark excluded from CC-BY (LicenseRef-LegalMark-Cesium).",
+    "text_sha256": "c8041334a99cb48852b2139253cbde5f8ac87e27f124aed51223e0d5bf0080eb",
+    "text_bytes": 13034
+   },
+   "format": "GLB, Y-up metres",
+   "joint_map": {
+    "Hips": "Skeleton_torso_joint_1",
+    "Spine1": "Skeleton_torso_joint_2",
+    "Spine2": null,
+    "Chest": "torso_joint_3",
+    "Neck1": "Skeleton_neck_joint_1",
+    "Neck2": null,
+    "Head": "Skeleton_neck_joint_2",
+    "RightShoulder": null,
+    "RightArm": "Skeleton_arm_joint_R",
+    "RightForeArm": "Skeleton_arm_joint_R__2_",
+    "RightHand": "Skeleton_arm_joint_R__3_",
+    "LeftShoulder": null,
+    "LeftArm": "Skeleton_arm_joint_L__4_",
+    "LeftForeArm": "Skeleton_arm_joint_L__3_",
+    "LeftHand": "Skeleton_arm_joint_L__2_",
+    "RightLeg": "leg_joint_R_1",
+    "RightShin": "leg_joint_R_2",
+    "RightFoot": "leg_joint_R_3",
+    "RightToeBase": "leg_joint_R_5",
+    "LeftLeg": "leg_joint_L_1",
+    "LeftShin": "leg_joint_L_2",
+    "LeftFoot": "leg_joint_L_3",
+    "LeftToeBase": "leg_joint_L_5"
+   },
+   "extra_joint_maps": {
+    "RiggedFigure.glb": {
+     "Hips": "torso_joint_1",
+     "Spine1": "torso_joint_2",
+     "Spine2": null,
+     "Chest": "torso_joint_3",
+     "Neck1": "neck_joint_1",
+     "Neck2": null,
+     "Head": "neck_joint_2",
+     "RightShoulder": null,
+     "RightArm": "arm_joint_R_1",
+     "RightForeArm": "arm_joint_R_2",
+     "RightHand": "arm_joint_R_3",
+     "LeftShoulder": null,
+     "LeftArm": "arm_joint_L_1",
+     "LeftForeArm": "arm_joint_L_2",
+     "LeftHand": "arm_joint_L_3",
+     "RightLeg": "leg_joint_R_1",
+     "RightShin": "leg_joint_R_2",
+     "RightFoot": "leg_joint_R_3",
+     "RightToeBase": "leg_joint_R_5",
+     "LeftLeg": "leg_joint_L_1",
+     "LeftShin": "leg_joint_L_2",
+     "LeftFoot": "leg_joint_L_3",
+     "LeftToeBase": "leg_joint_L_5"
+    }
+   },
+   "notes": "19-joint test rigs, about 1.2 m tall. Good for pipeline tests (skinning, animation playback), too crude for a shipped character. RiggedSimple is a 2-bone cylinder (no map). BrainStem (same repo) is excluded: LicenseRef-Poser-EULA.",
+   "files": [
+    {
+     "path": "characters/khronos-gltf-sample-assets/CC-BY-4.0.txt",
+     "sha256": "c8041334a99cb48852b2139253cbde5f8ac87e27f124aed51223e0d5bf0080eb",
+     "bytes": 13034
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/LicenseRef-LegalMark-Cesium.txt",
+     "sha256": "7bafc8dbff0b9d04297bced53a47809e3ab6721cb35b4a2d780533476b28ebd4",
+     "bytes": 625
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/CesiumMan/CesiumMan.glb",
+     "sha256": "b7001eaeea8254bd44773bcd247e78696d94169388fbb2a1800fc69434e777d9",
+     "bytes": 438044
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/CesiumMan/LICENSE.md",
+     "sha256": "709e02749c7c904c480d98f883cae63046f589031b5f22249544b13c159eedf6",
+     "bytes": 858
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/CesiumMan/metadata.json",
+     "sha256": "635ca496eafa7b82639b3b90f65e35beb9d0ac0d8721e6425a9471f08a9cc603",
+     "bytes": 971
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/RiggedFigure/RiggedFigure.glb",
+     "sha256": "d6be85417d3e256861ee733eea6916093a7af7c79c16366181fd8abcaeb38cf5",
+     "bytes": 50116
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/RiggedFigure/LICENSE.md",
+     "sha256": "afceec2b160486a648e06fe1b5ce0305fecff2980885618cd7591fc3d504ffe3",
+     "bytes": 781
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/RiggedFigure/metadata.json",
+     "sha256": "9ee417e4a2fd3710e3584abf96dfc7e6e6b770a7dc256c9b3cb994bda6584f1a",
+     "bytes": 618
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/RiggedSimple/RiggedSimple.glb",
+     "sha256": "3a79dabb67bb0cd598a18d08b954d9d357c27c30672f82ef5d3f4e7fe6ca3401",
+     "bytes": 15104
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/RiggedSimple/LICENSE.md",
+     "sha256": "4343fbd97e5ecfc4c872a85cb1d755a3006f8848e15135fd6c4534839909bdbb",
+     "bytes": 781
+    },
+    {
+     "path": "characters/khronos-gltf-sample-assets/RiggedSimple/metadata.json",
+     "sha256": "ba12c1f9a24124bdfbd171528db2eece6edbb7c75a7192dadfb043212067c664",
+     "bytes": 652
+    }
+   ],
+   "total_bytes": 521584,
+   "rig_file": "characters/khronos-gltf-sample-assets/CesiumMan/CesiumMan.glb",
+   "rig_report": ".runtime/characters/reports/CesiumMan_glb.json",
+   "joint_count": 19,
+   "mesh_vertex_count": 3273,
+   "has_skin_weights": true,
+   "has_textures": true,
+   "unmapped_soma_bodies": [
+    "Spine2",
+    "Neck2",
+    "RightShoulder",
+    "LeftShoulder"
+   ],
+   "mapping_check": {
+    "missing_joints": [],
+    "segment_lengths_m": {
+     "upper_arm": 0.242,
+     "forearm": 0.1878,
+     "thigh": 0.2661,
+     "shin": 0.2759,
+     "foot_to_toe": 0.0718,
+     "hips_to_head": 0.5111,
+     "shoulder_width": 0.182
+    },
+    "hips_height_m": 0.679,
+    "head_joint_height_m": 1.19
+   }
+  },
+  {
+   "id": "100avatars",
+   "name": "Polygonal Mind 100Avatars (VRM + FBX, Mixamo auto-rigged)",
+   "status": "downloaded",
+   "url": "https://github.com/PolygonalMind/100Avatars",
+   "source_urls": [],
+   "pinned": {
+    "github_commit": "ff07c2ad0017819c4e5366656ee1e5bcc4029bd4"
+   },
+   "licence": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "text_file": "characters/100avatars/CCLicense.md",
+    "attribution_required": "'100Avatars by Polygonal Mind (https://github.com/PolygonalMind/100Avatars), CC BY 4.0'. README asks not to sell the avatars without major modification (a request, not a licence term).",
+    "text_sha256": "0a54383c20db1700d6b6d2a1b4ce0811bc6120e58f01c37655f7fa6c377ed718",
+    "text_bytes": 13369
+   },
+   "format": "VRM 0.0 (glTF 2.0 binary with VRM humanoid extension) + FBX + PNG; Y-up metres",
+   "joint_map": {
+    "Hips": "vis_char_001_fbx:mixamorig:Hips",
+    "Spine1": "vis_char_001_fbx:mixamorig:Spine",
+    "Spine2": "vis_char_001_fbx:mixamorig:Spine1",
+    "Chest": "vis_char_001_fbx:mixamorig:Spine2",
+    "Neck1": "vis_char_001_fbx:mixamorig:Neck",
+    "Neck2": null,
+    "Head": "vis_char_001_fbx:mixamorig:Head",
+    "RightShoulder": "vis_char_001_fbx:mixamorig:RightShoulder",
+    "RightArm": "vis_char_001_fbx:mixamorig:RightArm",
+    "RightForeArm": "vis_char_001_fbx:mixamorig:RightForeArm",
+    "RightHand": "vis_char_001_fbx:mixamorig:RightHand",
+    "LeftShoulder": "vis_char_001_fbx:mixamorig:LeftShoulder",
+    "LeftArm": "vis_char_001_fbx:mixamorig:LeftArm",
+    "LeftForeArm": "vis_char_001_fbx:mixamorig:LeftForeArm",
+    "LeftHand": "vis_char_001_fbx:mixamorig:LeftHand",
+    "RightLeg": "vis_char_001_fbx:mixamorig:RightUpLeg",
+    "RightShin": "vis_char_001_fbx:mixamorig:RightLeg",
+    "RightFoot": "vis_char_001_fbx:mixamorig:RightFoot",
+    "RightToeBase": "vis_char_001_fbx:mixamorig:RightToeBase",
+    "LeftLeg": "vis_char_001_fbx:mixamorig:LeftUpLeg",
+    "LeftShin": "vis_char_001_fbx:mixamorig:LeftLeg",
+    "LeftFoot": "vis_char_001_fbx:mixamorig:LeftFoot",
+    "LeftToeBase": "vis_char_001_fbx:mixamorig:LeftToeBase"
+   },
+   "joint_name_regex": "^(?:.*mixamorig:)(?P<name>.+)$",
+   "notes": "Two of 200 avatars fetched (001 Crimsom, 002 CoolAlien; each zip 3-4 MB). Mixamo bone names with a per-file prefix (strip with joint_name_regex). The VRM 'humanoid.humanBones' block gives a second, standardised name map. Stylised ~1.2 m voxel-ish characters; FBX report shows the same skeleton.",
+   "files": [
+    {
+     "path": "characters/100avatars/CCLicense.md",
+     "sha256": "0a54383c20db1700d6b6d2a1b4ce0811bc6120e58f01c37655f7fa6c377ed718",
+     "bytes": 13369
+    },
+    {
+     "path": "characters/100avatars/README.md",
+     "sha256": "f75a6bf7ffabed17ee658f6bc290320916f6a32e60f444e77f2e83fa297b636e",
+     "bytes": 1951
+    },
+    {
+     "path": "characters/100avatars/100Avatars_001.zip",
+     "sha256": "76242dfdcc8bcca16408578c029e1a2a26b2e8a6253a1716ce18f6671be6dde6",
+     "bytes": 3070395
+    },
+    {
+     "path": "characters/100avatars/100Avatars_002.zip",
+     "sha256": "0a09d9d80f07576178d494439d47e2357ed46106b7d004442016abbe43a925bb",
+     "bytes": 4021014
+    }
+   ],
+   "total_bytes": 7106729,
+   "rig_file": "characters/100avatars/extracted/100Avatars_001/100Avatars_001_Crimsom.vrm",
+   "rig_report": ".runtime/characters/reports/100Avatars_001_Crimsom_vrm.json",
+   "joint_count": 65,
+   "mesh_vertex_count": 2786,
+   "has_skin_weights": true,
+   "has_textures": true,
+   "unmapped_soma_bodies": [
+    "Neck2"
+   ],
+   "mapping_check": {
+    "missing_joints": [],
+    "segment_lengths_m": {
+     "upper_arm": 0.3039,
+     "forearm": 0.2406,
+     "thigh": 0.3373,
+     "shin": 0.3175,
+     "foot_to_toe": 0.1354,
+     "hips_to_head": 0.4258,
+     "shoulder_width": 0.341
+    },
+    "hips_height_m": 0.7765,
+    "head_joint_height_m": 1.2011
+   }
+  },
+  {
+   "id": "microsoft-rocketbox",
+   "name": "Microsoft Rocketbox avatar library (Male_Adult_01 sample)",
+   "status": "downloaded",
+   "url": "https://github.com/microsoft/Microsoft-Rocketbox",
+   "source_urls": [
+    "https://www.frontiersin.org/articles/10.3389/frvir.2020.561558/abstract"
+   ],
+   "pinned": {
+    "github_commit": "0943055db6ec570bcef9f2c8b41c9e5467c808f9"
+   },
+   "licence": {
+    "name": "MIT License",
+    "spdx": "MIT",
+    "url": "https://opensource.org/license/mit",
+    "text_file": "characters/microsoft-rocketbox/LICENSE.md",
+    "attribution_required": "Retain 'Copyright (c) 2020 Microsoft' and the MIT licence text. Citation of the Frontiers paper is requested for research use (not a licence term).",
+    "text_sha256": "17474e386e0b9e1a700cc3d06b2b0882a2c376d9c6b49c7f8274409b8f8d2352",
+    "text_bytes": 1066
+   },
+   "format": "FBX binary 7.4 (3ds Max Biped 'Bip01' rig), Y-up, UnitScaleFactor 1 (cm); TGA textures",
+   "joint_map": {
+    "Hips": "Bip01 Pelvis",
+    "Spine1": "Bip01 Spine",
+    "Spine2": "Bip01 Spine1",
+    "Chest": "Bip01 Spine2",
+    "Neck1": "Bip01 Neck",
+    "Neck2": null,
+    "Head": "Bip01 Head",
+    "RightShoulder": "Bip01 R Clavicle",
+    "RightArm": "Bip01 R UpperArm",
+    "RightForeArm": "Bip01 R Forearm",
+    "RightHand": "Bip01 R Hand",
+    "LeftShoulder": "Bip01 L Clavicle",
+    "LeftArm": "Bip01 L UpperArm",
+    "LeftForeArm": "Bip01 L Forearm",
+    "LeftHand": "Bip01 L Hand",
+    "RightLeg": "Bip01 R Thigh",
+    "RightShin": "Bip01 R Calf",
+    "RightFoot": "Bip01 R Foot",
+    "RightToeBase": "Bip01 R Toe0",
+    "LeftLeg": "Bip01 L Thigh",
+    "LeftShin": "Bip01 L Calf",
+    "LeftFoot": "Bip01 L Foot",
+    "LeftToeBase": "Bip01 L Toe0"
+   },
+   "notes": "115 realistic adults/children/professions, 4k vertices each, 82 bones incl. facial bones. Only one avatar (4 GB repo) fetched. Biped topology differs: clavicles are children of Neck and thighs of Spine in this export; A-pose rest. FBX needs a converter (Blender or FBX SDK) to reach USD; normal/specular TGAs (12 MB each) not fetched.",
+   "files": [
+    {
+     "path": "characters/microsoft-rocketbox/LICENSE.md",
+     "sha256": "17474e386e0b9e1a700cc3d06b2b0882a2c376d9c6b49c7f8274409b8f8d2352",
+     "bytes": 1066
+    },
+    {
+     "path": "characters/microsoft-rocketbox/README.md",
+     "sha256": "bcf8013e3d5817a5dee5d1770b9943278189cd76b2d9b2abc243db99b703ecd6",
+     "bytes": 5345
+    },
+    {
+     "path": "characters/microsoft-rocketbox/Male_Adult_01/Male_Adult_01.fbx",
+     "sha256": "8d1edb51b4dc3427ae2456f4407fc105532c145dd019e53cd42bab31cc948a29",
+     "bytes": 521472
+    },
+    {
+     "path": "characters/microsoft-rocketbox/Male_Adult_01/Textures/m002_body_color.tga",
+     "sha256": "6a048a6b2140a1f5293798ca286be64fd0de6d79572e1273ff5765bd578f463f",
+     "bytes": 12582956
+    },
+    {
+     "path": "characters/microsoft-rocketbox/Male_Adult_01/Textures/m002_head_color.tga",
+     "sha256": "f5b64e4894930d438f7c419c3c9d0bba1f95fa4de9af078b762ea55bfca1ab85",
+     "bytes": 12582956
+    },
+    {
+     "path": "characters/microsoft-rocketbox/Male_Adult_01/Textures/m002_opacity_color.tga",
+     "sha256": "53818d3f45519451edd2bc60d6e59cd4057ecd381827463c5503da0439d0a5cf",
+     "bytes": 16777260
+    }
+   ],
+   "total_bytes": 42471055,
+   "rig_file": "characters/microsoft-rocketbox/Male_Adult_01/Male_Adult_01.fbx",
+   "rig_report": ".runtime/characters/reports/Male_Adult_01_fbx.json",
+   "joint_count": 82,
+   "mesh_vertex_count": 4025,
+   "has_skin_weights": true,
+   "has_textures": true,
+   "unmapped_soma_bodies": [
+    "Neck2"
+   ],
+   "mapping_check": {
+    "missing_joints": [],
+    "segment_lengths_m": {
+     "upper_arm": 0.2857,
+     "forearm": 0.2709,
+     "thigh": 0.3991,
+     "shin": 0.3967,
+     "foot_to_toe": 0.1699,
+     "hips_to_head": 0.6919,
+     "shoulder_width": 0.4208
+    },
+    "hips_height_m": 0.8952,
+    "head_joint_height_m": 1.5871
+   }
+  },
+  {
+   "id": "mixamo",
+   "name": "Adobe Mixamo characters",
+   "status": "excluded",
+   "exclusion_reason": "Adobe terms permit royalty-free use of characters/animations inside projects but the raw character files may not be redistributed; download needs an Adobe ID (web app only, no API). Documented for manual, user-local import only; nothing is shipped.",
+   "url": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+   "source_urls": [
+    "https://web.archive.org/web/20260105134624/https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+    "https://community.adobe.com/t5/mixamo-discussions/mixamo-faq-licensing-royalties-ownership-eula-and-tos/td-p/13234775",
+    "https://www.adobe.com/legal/terms.html"
+   ],
+   "licence": {
+    "name": "Adobe General Terms of Use (Mixamo FAQ)",
+    "spdx": "LicenseRef-Adobe-Mixamo",
+    "url": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+    "attribution_required": "None per the FAQ re-post ('not required to give credit to Adobe, Mixamo, or Fuse'); unverified against the live page (HTTP 403 from this host)."
+   },
+   "format": "FBX / Collada from the web app; Mixamo bone names (mixamorig:*)",
+   "joint_map": {
+    "Hips": "mixamorig:Hips",
+    "Spine1": "mixamorig:Spine",
+    "Spine2": "mixamorig:Spine1",
+    "Chest": "mixamorig:Spine2",
+    "Neck1": "mixamorig:Neck",
+    "Neck2": null,
+    "Head": "mixamorig:Head",
+    "RightShoulder": "mixamorig:RightShoulder",
+    "RightArm": "mixamorig:RightArm",
+    "RightForeArm": "mixamorig:RightForeArm",
+    "RightHand": "mixamorig:RightHand",
+    "LeftShoulder": "mixamorig:LeftShoulder",
+    "LeftArm": "mixamorig:LeftArm",
+    "LeftForeArm": "mixamorig:LeftForeArm",
+    "LeftHand": "mixamorig:LeftHand",
+    "RightLeg": "mixamorig:RightUpLeg",
+    "RightShin": "mixamorig:RightLeg",
+    "RightFoot": "mixamorig:RightFoot",
+    "RightToeBase": "mixamorig:RightToeBase",
+    "LeftLeg": "mixamorig:LeftUpLeg",
+    "LeftShin": "mixamorig:LeftLeg",
+    "LeftFoot": "mixamorig:LeftFoot",
+    "LeftToeBase": "mixamorig:LeftToeBase"
+   },
+   "joint_name_regex": "^(?:mixamorig\\d*:)?(?P<name>.+)$",
+   "manual_path": "Sign in at https://www.mixamo.com with an Adobe ID, pick a character, Download (FBX Binary, T-pose, with skin), save under .runtime/downloads/characters/mixamo/<name>/ with a SOURCE.txt; never commit or ship the files."
+  },
+  {
+   "id": "blender-studio-characters",
+   "name": "Blender Studio characters (Snow, Rain, Einar, ...)",
+   "status": "deferred",
+   "exclusion_reason": "Licence is CC-BY (permits use and redistribution with credit), but the downloads are .blend-only archives (Snow v2: 105.6 MB) with CloudRig rigs; no Blender is installed on this host, so the rig cannot be parsed or converted yet. Not downloaded.",
+   "url": "https://studio.blender.org/characters/",
+   "source_urls": [
+    "https://studio.blender.org/characters/snow/v2/"
+   ],
+   "licence": {
+    "name": "Creative Commons Attribution (CC-BY)",
+    "spdx": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution_required": "'Snow Rig \u00a9 Blender Foundation | studio.blender.org' (wording from the character page)."
+   },
+   "format": ".blend (CloudRig / Rigify-style), needs Blender export to glTF/USD"
+  },
+  {
+   "id": "sketchfab-cc0",
+   "name": "Sketchfab CC0 / CC-BY rigged humanoids",
+   "status": "deferred",
+   "exclusion_reason": "Downloads require a Sketchfab account and API token; not fetched. Licence must be checked per model.",
+   "url": "https://sketchfab.com/3d-models?features=downloadable&licenses=7c23a1ba438d4306920229c12afcb5f9",
+   "licence": {
+    "name": "per-model (CC0 filter)",
+    "spdx": null,
+    "url": "https://sketchfab.com/licenses"
+   }
+  },
+  {
+   "id": "opengameart-base-rigged-yw",
+   "name": "OpenGameArt 'Base Rigged Stylized Humanoid Character (YW)' by Girush",
+   "status": "deferred",
+   "exclusion_reason": "CC0 and a direct download exists (7z, 4.6 MB), but the model format inside the archive is not stated and no 7z extractor is installed; not fetched.",
+   "url": "https://opengameart.org/content/base-rigged-stylized-humanoid-character-yw",
+   "source_urls": [
+    "https://opengameart.org/sites/default/files/basemesh_a1_human_yw_by_girush_2.7z"
+   ],
+   "licence": {
+    "name": "CC0 1.0 Universal",
+    "spdx": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+   }
+  },
+  {
+   "id": "kenney-animated-characters",
+   "name": "Kenney Animated Characters (Protagonists / Retro / Survivors) and Mini Characters",
+   "status": "deferred",
+   "exclusion_reason": "CC0 per the pack pages, but kenney.nl's tokenised download URL returned HTTP 403 'Download link expired or invalid' to scripted requests; a manual browser download is needed. Not fetched; rig type unverified.",
+   "url": "https://kenney.nl/assets/animated-characters-protagonists",
+   "source_urls": [
+    "https://kenney.nl/assets/animated-characters-retro",
+    "https://kenney.nl/assets/animated-characters-survivors",
+    "https://kenney.nl/assets/mini-characters"
+   ],
+   "licence": {
+    "name": "CC0 1.0 Universal",
+    "spdx": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+   }
+  },
+  {
+   "id": "khronos-brainstem",
+   "name": "Khronos glTF Sample Assets: BrainStem",
+   "status": "excluded",
+   "exclusion_reason": "metadata.json declares LicenseRef-Poser-EULA (Smith Micro Software), not a free licence.",
+   "url": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/BrainStem",
+   "licence": {
+    "name": "Poser EULA",
+    "spdx": "LicenseRef-Poser-EULA",
+    "url": "https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/LICENSES/LicenseRef-Poser-EULA.txt"
+   }
+  },
+  {
+   "id": "smpl-family",
+   "name": "SMPL / SMPL-X / MANO body models (SOMA-X optional backends)",
+   "status": "excluded",
+   "exclusion_reason": "Non-commercial research licences that require registration; SOMA-X deliberately does not redistribute them. The studio uses only the native SOMA identity.",
+   "url": "https://smpl.is.tue.mpg.de/modellicense.html",
+   "licence": {
+    "name": "SMPL Model License (non-commercial)",
+    "spdx": "LicenseRef-SMPL",
+    "url": "https://smpl.is.tue.mpg.de/modellicense.html"
+   }
+  },
+  {
+   "id": "engine-bundled-mannequins",
+   "name": "Unreal Engine Mannequin / Unity sample characters / three.js Mixamo-derived demo models",
+   "status": "excluded",
+   "exclusion_reason": "Engine EULA content (Unreal, Unity Asset Store) is licensed for use with that engine only; three.js' Xbot/Ybot/Soldier/Michelle GLBs are Mixamo exports whose terms are Adobe's, not the repo's MIT. Not verified further in this session.",
+   "url": "https://www.unrealengine.com/en-US/eula/content",
+   "licence": {
+    "name": "engine-specific EULA",
+    "spdx": null,
+    "url": "https://www.unrealengine.com/en-US/eula/content"
+   }
+  }
+ ]
+}

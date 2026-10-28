@@ -35,3 +35,33 @@
 @media (min-width:1200px){.map-wrap{height:320px}}
 .workspace-switch small{display:block;max-width:118px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #fact-image{word-break:break-all;font-size:9px}
+
+/* ---- skill library, sequences, characters (stages B-F) ---- */
+.skill-art img{width:100%;height:100%;object-fit:cover;display:block}
+.pose-badge{background:#2a3338;color:#cfd8d2;border:1px solid #3a464c;border-radius:999px;padding:2px 8px;font-size:10px;letter-spacing:.3px;text-transform:uppercase}
+.skill-buttons{display:flex;gap:6px;align-items:center}
+.skill-bottom>span:first-child{display:inline-flex;align-items:center;gap:5px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:46%}
+.skill-bottom>span:first-child svg{width:12px;height:12px;flex:none}
+.filter-chips small{opacity:.6;margin-left:3px}
+.composer-bar{border:1px solid #3a464c;background:#1b2225;border-radius:14px;padding:12px 14px;margin:0 0 16px;display:flex;flex-direction:column;gap:10px}
+.composer-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#aab7b4}
+.composer-head strong{display:inline-flex;align-items:center;gap:7px;color:#e5ece6;font-size:13px}
+.composer-head svg{width:14px;height:14px}
+.composer-steps{display:flex;flex-wrap:wrap;gap:6px}
+.composer-step{display:inline-flex;align-items:center;gap:6px;background:#242d31;border:1px solid #3a464c;border-radius:999px;padding:4px 6px 4px 8px;font-size:12px;color:#dfe6e1}
+.composer-step b{background:#d8b082;color:#1a1d1f;border-radius:999px;width:16px;height:16px;font-size:10px;display:inline-grid;place-items:center}
+.composer-step button{background:none;border:0;color:#9aa5aa;cursor:pointer;font-size:13px;padding:0 2px}
+.composer-step button:hover{color:#fff}
+.composer-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.composer-actions .spacer{flex:1}
+.composer-actions select{background:#141a1c;color:#dfe6e1;border:1px solid #3a464c;border-radius:9px;padding:7px 9px;font:inherit;font-size:12px}
+.skill-chip{display:inline-flex;align-items:center;gap:7px;max-width:360px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.chip-progress{display:inline-block;width:70px;height:4px;background:#2d383d;border-radius:2px;overflow:hidden}
+.chip-progress span{display:block;height:100%;background:#bdd8c1}
+.legend-object{background:#f0d9a8}
+.map-object text{pointer-events:none}
+.skill-detail-art{border-radius:12px;overflow:hidden;background:#181e21;margin-bottom:12px;max-height:260px;display:grid;place-items:center}
+.skill-detail-art img,.skill-detail-art svg{max-width:100%;max-height:260px}
+.step-list{margin:8px 0 12px 18px;padding:0;color:#dfe6e1;font-size:13px;line-height:1.7}
+.character-card .skill-tags span{text-transform:none}
+.toolbar-field.mode-field select,.toolbar-field.character-field select{min-width:150px}

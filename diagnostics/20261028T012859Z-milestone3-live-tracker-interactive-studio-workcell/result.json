@@ -1,0 +1,16 @@
+{
+  "status": "checks_passed_shutdown_pending",
+  "frames": 4521,
+  "steps": 4521,
+  "commands": 8,
+  "physics_hz": 120,
+  "control_hz": 30,
+  "training_performed": false,
+  "mode": "physical",
+  "shutdown": {
+    "simulation_context_cleared": true,
+    "stage_closed": true,
+    "fast_shutdown": true,
+    "skip_cleanup": false
+  }
+}

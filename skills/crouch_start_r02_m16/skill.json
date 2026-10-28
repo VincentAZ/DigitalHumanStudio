@@ -1,0 +1,55 @@
+{
+ "id": "crouch_start_r02_m16",
+ "kind": "clip",
+ "name": "Crouch start",
+ "description": "Crouch start. 3.4 s, starts standing, ends standing, travels 2.6 m. Right-side variant. BONES-SEED motion capture, actor A195_M.",
+ "category": "action",
+ "tags": [
+  "SOMA-23",
+  "action",
+  "mocap",
+  "standing",
+  "start",
+  "travels"
+ ],
+ "loop": false,
+ "frames": 103,
+ "fps": 29.999998435378156,
+ "duration_s": 3.433,
+ "entry_pose": "standing",
+ "exit_pose": "standing",
+ "lowest_root_m": 0.839,
+ "travel_m": 2.636,
+ "travel_direction_deg": -175.6,
+ "turn_deg": -6.4,
+ "mean_speed_mps": 0.822,
+ "source": {
+  "kind": "motion_lib",
+  "asset_root": ".runtime/milestone1/assets",
+  "file": "data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "sha256": "81c4b09c393873e6f137ac471bcff63cc9237e757deedcc9718b6126916c12e6",
+  "motion_id": 16,
+  "clip": "crouch_ff_start_360_R_002__A195_M.motion",
+  "frames": [
+   0,
+   103
+  ]
+ },
+ "licence": {
+  "name": "BONES-SEED licence",
+  "url": "https://bones.studio/info/seed-license",
+  "record": "config/milestone1-license.json",
+  "eligibility": "confirmed_by_user",
+  "attribution": "Motion Data by Bones Studio \u2014 https://bones.studio/"
+ },
+ "provenance": {
+  "dataset": "BONES-SEED seed-mini subset shipped with ProtoMotions",
+  "protomotions_revision": "f69fdcaabff31846b4d2247207417b57dc788828",
+  "source_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/motion_for_trackers/soma23_bones_seed_mini.pt",
+  "actor": "A195_M",
+  "take": 2,
+  "direction_token": 360,
+  "right_side_variant": true,
+  "generated_by": "scripts/build_skill_catalog.py"
+ }
+}

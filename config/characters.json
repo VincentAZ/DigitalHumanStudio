@@ -1,0 +1,18 @@
+{
+ "description": "Characters the studio prepares from config/character-sources.json (scripts/fetch_characters.py). rig_file is relative to .runtime/downloads/; each prepared character lands in .runtime/characters/<id>/ with its licence copied in.",
+ "characters": [
+  {"id": "soma_x", "name": "SOMA-X neutral body", "source": "soma-x", "rig_file": "characters/soma-x/SOMA_template_rig.usda", "mesh": "c_skin_mid",
+   "joint_name_regex": "^Root/(?:[^/]+/)*(?P<name>[^/]+)$",
+   "description": "NVIDIA's SOMA neutral body: the skeleton the physics body was derived from, so every body maps one to one. Untextured skin."},
+  {"id": "superhero_male", "name": "Quaternius Superhero (male)", "source": "quaternius-universal-base-characters",
+   "rig_file": "characters/quaternius-universal-base-characters/extracted/Universal Base Characters[Standard]/Base Characters/Godot - UE/Superhero_Male_FullBody.gltf",
+   "description": "Stylised textured base character (CC0) on an Unreal-style rig, retargeted onto the physical body."},
+  {"id": "superhero_female", "name": "Quaternius Superhero (female)", "source": "quaternius-universal-base-characters",
+   "rig_file": "characters/quaternius-universal-base-characters/extracted/Universal Base Characters[Standard]/Base Characters/Godot - UE/Superhero_Female_FullBody.gltf",
+   "description": "Stylised textured base character (CC0) on an Unreal-style rig, retargeted onto the physical body."},
+  {"id": "kaykit_knight", "name": "KayKit Knight", "source": "kaykit-adventurers", "rig_file": "characters/kaykit-adventurers/Characters/gltf/Knight.glb",
+   "description": "Low-poly adventurer (CC0); its short rig has no shoulders or second spine joint, so those bodies are skipped."},
+  {"id": "cesium_man", "name": "Cesium Man", "source": "khronos-gltf-sample-assets", "rig_file": "characters/khronos-gltf-sample-assets/CesiumMan/CesiumMan.glb",
+   "description": "The Khronos glTF sample character (CC-BY 4.0, Cesium); a simple 19-joint rig."}
+ ]
+}
