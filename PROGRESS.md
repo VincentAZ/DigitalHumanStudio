@@ -317,3 +317,9 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - Mistake recorded: while testing, the control center was restarted by the developer during a session the user had started from the window (`diagnostics/20261028T024237Z-…`). The launcher died with the window, so that session lost its evidence gate; the worker was sent `quit` afterwards and finished cleanly (11,666 steps, final state fallen after a crawl clip), and the folder's `outcome.json` says `not_gated` with the reason. Fix: `scripts/studio_app/jobs.py` now starts launchers under `setsid --wait`, so a window crash or restart no longer takes a running session down, and the restarted window re-attaches to it.
 
 - 2026-10-28: the unused Argon design study (two untracked files, 80 KB) was deleted at the user's request.
+
+## 2026-10-29 UTC — Public repository presentation
+
+- At the user's request, rewrote the root README around the current director's studio: live direction, skills, composition, local motion generation, characters, and the interactive tutorial. Added three existing session screenshots under `docs/screenshots/` for stable README links.
+- Documented the prepared-runtime launch path, hardware/setup scope, external asset and model terms, and known behavior limits. No new runtime, GPU, dependency, or milestone-validation claim is made.
+- Checked README local links and screenshot files; `git diff --check` passed. A targeted history scan of 1,843 Git blobs found no matches for the checked private-key, GitHub-token, provider-key, Google-key, or AWS-access-key patterns; this is not a comprehensive security audit.
