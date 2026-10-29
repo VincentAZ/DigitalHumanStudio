@@ -323,3 +323,9 @@ Next: user runs `sudo bash scripts/install_host_tools.sh` in a local terminal. A
 - At the user's request, rewrote the root README around the current director's studio: live direction, skills, composition, local motion generation, characters, and the interactive tutorial. Added three existing session screenshots under `docs/screenshots/` for stable README links.
 - Documented the prepared-runtime launch path, hardware/setup scope, external asset and model terms, and known behavior limits. No new runtime, GPU, dependency, or milestone-validation claim is made.
 - Checked README local links and screenshot files; `git diff --check` passed. A targeted history scan of 1,843 Git blobs found no matches for the checked private-key, GitHub-token, provider-key, Google-key, or AWS-access-key patterns; this is not a comprehensive security audit.
+
+## 2026-10-29 UTC — Original code released under MIT
+
+- The user explicitly authorized MIT licensing for the original code. Added the standard MIT license with Vincent Serpico's copyright and linked it from the README badge and license section.
+- Clarified that third-party code, models, weights, motion data, rigs, textures, and other assets retain their separate terms; no third-party license acceptance or relicensing occurred.
+- Documentation/license-only change. Verified the license link and `git diff --check`; no runtime or GPU tests were needed or run.

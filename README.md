@@ -4,6 +4,7 @@
   <p><strong>Give your character a direction. Build a performance.</strong></p>
   <p>A local Linux studio for directing virtual humans with AI,<br>composing reusable skills, and turning words into motion.</p>
   <p>
+    <a href="LICENSE"><img alt="Original code: MIT" src="https://img.shields.io/badge/original_code-MIT-315c49?style=flat-square"></a>
     <img alt="Linux" src="https://img.shields.io/badge/platform-Linux-242a2d?style=flat-square&logo=linux&logoColor=white">
     <img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-315c49?style=flat-square&logo=python&logoColor=white">
     <img alt="Isaac Sim 6.0" src="https://img.shields.io/badge/Isaac_Sim-6.0-315c49?style=flat-square">
@@ -163,8 +164,8 @@ Keep credentials and large generated assets out of Git. Preserve source pins and
 
 ## Licenses and credits
 
-The repository currently does not declare a license for its original application code. Public visibility is not a blanket grant for commercial reuse.
+**The original application code is free and open source under the [MIT License](LICENSE).** Use it, modify it, share it, or build a business with it. Keep the copyright and permission notice with copies or substantial portions of that code.
 
-Models, motion data, rigs, and dependencies keep their own terms. BONES-SEED motion data has eligibility conditions, and Kimodo's text encoder uses the Meta Llama 3 Community License. Review the [component provenance](docs/PROVENANCE.md), [character credits](docs/CHARACTERS.md), [motion-generation notes](docs/MOTION_GENERATION.md), and each skill's source and license metadata before reuse or distribution.
+The MIT grant covers Vincent Serpico's original code and documentation; it does not relicense third-party code, models, model weights, motion data, character rigs, textures, or other assets, including those shown in screenshots. Those materials and dependencies keep their own terms and notices. BONES-SEED motion data has eligibility conditions, and Kimodo's text encoder uses the Meta Llama 3 Community License. Review the [component provenance](docs/PROVENANCE.md), [character credits](docs/CHARACTERS.md), [motion-generation notes](docs/MOTION_GENERATION.md), and each skill's source and license metadata before reuse or distribution.
 
 Built on the work of NVIDIA Isaac Sim, Isaac Lab, ProtoMotions, SOMA-X and Kimodo; Bones Studio; the credited character creators; and the Qt for Python ecosystem.
